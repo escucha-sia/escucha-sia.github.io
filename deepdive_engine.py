@@ -62,7 +62,7 @@ def build_deepdive_script(topic: str, thesis: str, technical_points: list, debat
     
     # Template estructurado para Jorge y Dalia
     script = f"""
-JORGE: ¡Hola Carlos! Bienvenidos a una edición especial de sIA Deep Dive, nuestro espacio de análisis técnico exhaustivo diseñado para esos momentos donde necesitamos ir mucho más allá del titular de las noticias. Soy Jorge.
+JORGE: ¡Hola a todos! Bienvenidos a una edición especial de sIA Deep Dive, nuestro espacio de análisis técnico exhaustivo diseñado para esos momentos donde necesitamos ir mucho más allá del titular de las noticias. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy nos tomamos el tiempo para desmenuzar un tema que está transformando radicalmente la industria y que está en el centro de todas las conversaciones de arquitectura: {topic}.
 JORGE: Así es Dalia. A diferencia de nuestros resúmenes matutinos de noticias diarias, en estas ediciones Deep Dive nos detenemos a examinar la anatomía del sistema, los trade-offs que nadie publica en las notas de prensa, y las implicaciones reales para quienes diseñamos software y datos en producción.
 DALIA: Y la tesis central con la que abrimos hoy es contundente: {thesis}. Parece una afirmación audaz, pero cuando analizamos cómo se están moviendo los estándares de la industria, las piezas empiezan a encajar con una precisión matemática.
@@ -83,8 +83,8 @@ JORGE: Por eso la regla de oro para el ingeniero senior hoy no es adoptar la her
 
 DALIA: Y para conectar con nuestra perspectiva reflexiva y geek en este Acto Cuatro: {geek_connection}.
 JORGE: Es fascinante ver cómo las obras de ciencia ficción que leíamos hace años anticiparon exactamente los dilemas éticos y arquitectónicos a los que nos enfrentamos hoy al construir sistemas autónomos.
-DALIA: Carlos, esperamos que esta inmersión profunda te brinde herramientas de pensamiento estratégico y criterio técnico sólido para tus proyectos y decisiones de arquitectura.
-JORGE: Recuerda que puedes consultar la bibliografía y notas completas de este episodio en tu repositorio local. ¡Nos escuchamos en la próxima inmersión profunda de sIA Deep Dive!
+DALIA: Esperamos que esta inmersión profunda les brinde a todos nuestros oyentes herramientas de pensamiento estratégico y criterio técnico sólido para sus proyectos y decisiones de arquitectura.
+JORGE: Recuerden que pueden consultar la bibliografía y notas completas de este episodio en nuestra revista digital sIA Journal y escucharnos directamente en Spotify. ¡Nos escuchamos en la próxima inmersión profunda de sIA Deep Dive!
 DALIA: ¡Hasta la próxima!
 """
     return script.strip()

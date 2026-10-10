@@ -361,6 +361,44 @@ audio {
   gap: 0.3rem;
 }
 
+.spotify-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #1db954;
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.spotify-badge-btn:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+}
+
+.card-spotify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #1db954 !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.card-spotify-btn:hover {
+  background: rgba(29, 185, 84, 0.1);
+  border-color: #1db954;
+}
+
 /* ARTICLE DETAIL VIEW */
 .article-container {
   max-width: 840px;
