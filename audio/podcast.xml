@@ -15,7 +15,7 @@
     <item>
       <title>sIA Deep Dive: Bambu Lab y la Revolución de la Impresión 3D: Visión por Computadora, LiDAR y el Ecosistema Maker</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/bambu-lab-impresion-3d-vision-lidar-maker.html</link>
-      <description>sIA Deep Dive: Análisis exhaustivo sobre Bambu Lab (X1C, P1S, AMS), visión por computadora en el borde para detección de fallas, micro-LiDAR, compensación de resonancia y el debate de código abierto vs jardín vallado.</description>
+      <description>sIA Deep Dive: Análisis exhaustivo sobre Bambu Lab (X1C, P1S, AMS), visión por computadora en el borde para detección de fallas, micro-LiDAR, compensación de resonancia y el debate de código abierto vs jardín vallado. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/bambu-lab-impresion-3d-vision-lidar-maker.html</description>
       <pubDate>Wed, 07 Oct 2026 08:04:45 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Bambu_Lab_Impresion_3D.mp3" length="6608413" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Bambu_Lab_Impresion_3D.mp3</guid>
@@ -26,7 +26,7 @@
     <item>
       <title>sIA Deep Dive: Inferencia en el Borde vs Nube: NPU del Galaxy S25 e Insta360 X4</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/edge-ai-galaxy-s25-insta360-silicio.html</link>
-      <description>sIA Deep Dive: Silicio NPU en Galaxy S25 (Snapdragon/Exynos), inferencia de SLMs locales en One UI 9, visión computacional 8K en Insta360 X4 y el Augma de Ordinal Scale.</description>
+      <description>sIA Deep Dive: Silicio NPU en Galaxy S25 (Snapdragon/Exynos), inferencia de SLMs locales en One UI 9, visión computacional 8K en Insta360 X4 y el Augma de Ordinal Scale. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/edge-ai-galaxy-s25-insta360-silicio.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:58 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3" length="3238777" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3</guid>
@@ -37,7 +37,7 @@
     <item>
       <title>sIA Deep Dive: Data Mesh en Retail Masivo: Contratos Semánticos y Streaming Continuo</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/data-mesh-retail-streaming-contratos.html</link>
-      <description>sIA Deep Dive: Descentralización de datos en retail de alta escala (estilo Walmart), Data Products con dbt y BigQuery, contratos semánticos en Kafka y economía de gremios.</description>
+      <description>sIA Deep Dive: Descentralización de datos en retail de alta escala (estilo Walmart), Data Products con dbt y BigQuery, contratos semánticos en Kafka y economía de gremios. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/data-mesh-retail-streaming-contratos.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:41 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.mp3" length="2825023" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.mp3</guid>
@@ -48,7 +48,7 @@
     <item>
       <title>sIA Deep Dive: El Fin de la Amnesia en LLMs: Context Caching y Memoria Persistente</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/context-caching-memoria-persistente-llms.html</link>
-      <description>sIA Deep Dive: Investigación profunda sobre Context Caching en Gemini, arquitecturas de memoria episódica jerárquica, aprendizaje anidado y el paralelismo con los Fluctlights de SAO.</description>
+      <description>sIA Deep Dive: Investigación profunda sobre Context Caching en Gemini, arquitecturas de memoria episódica jerárquica, aprendizaje anidado y el paralelismo con los Fluctlights de SAO. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/context-caching-memoria-persistente-llms.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:27 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.mp3" length="3023740" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.mp3</guid>
@@ -59,7 +59,7 @@
     <item>
       <title>sIA Deep Dive: BigQuery Gemini Cloud Assist y la Muerte de las Consultas Manuales</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/bigquery-gemini-cloud-assist-arquitectura.html</link>
-      <description>sIA Deep Dive: Análisis exhaustivo sobre cómo Gemini Cloud Assist en BigQuery y Dataplex desplaza el valor del Data Engineer del SQL manual a la modelación semántica y gobernanza.</description>
+      <description>sIA Deep Dive: Análisis exhaustivo sobre cómo Gemini Cloud Assist en BigQuery y Dataplex desplaza el valor del Data Engineer del SQL manual a la modelación semántica y gobernanza. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/bigquery-gemini-cloud-assist-arquitectura.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:12 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.mp3" length="3155739" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.mp3</guid>
@@ -70,7 +70,7 @@
     <item>
       <title>sIA Deep Dive: Model Context Protocol y Agentes Autónomos en Producción</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/mcp-model-context-protocol-agentes-produccion.html</link>
-      <description>Episodio Deep Dive de investigación exhaustiva: Model Context Protocol y Agentes Autónomos en Producción. Tesis: El protocolo MCP está reemplazando a las APIs REST tradicionales como el nuevo bus de integración estándar entre modelos de IA y herramientas del mundo real..</description>
+      <description>Episodio Deep Dive de investigación exhaustiva: Model Context Protocol y Agentes Autónomos en Producción. Tesis: El protocolo MCP está reemplazando a las APIs REST tradicionales como el nuevo bus de integración estándar entre modelos de IA y herramientas del mundo real.. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/mcp-model-context-protocol-agentes-produccion.html</description>
       <pubDate>Sun, 04 Oct 2026 11:17:42 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_MCP_Agentes_Produccion.mp3" length="5316211" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_DeepDive_MCP_Agentes_Produccion.mp3</guid>
@@ -81,7 +81,7 @@
     <item>
       <title>sIA #2: De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/de-plomeros-a-arquitectos-de-contexto-vibe-coding.html</link>
-      <description>sIA #2: Análisis sobre Vibe Coding vs Vibe Reviewing, la ilusión de competencia técnica, la metamorfosis del ingeniero de datos a arquitecto de contexto y el paralelismo con el Sistema Cardinal de SAO.</description>
+      <description>sIA #2: Análisis sobre Vibe Coding vs Vibe Reviewing, la ilusión de competencia técnica, la metamorfosis del ingeniero de datos a arquitecto de contexto y el paralelismo con el Sistema Cardinal de SAO. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/de-plomeros-a-arquitectos-de-contexto-vibe-coding.html</description>
       <pubDate>Sat, 03 Oct 2026 23:19:21 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Episodio_02_Arquitectos_de_Contexto.mp3" length="5495275" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Episodio_02_Arquitectos_de_Contexto.mp3</guid>
@@ -92,7 +92,7 @@
     <item>
       <title>sIA #1: Gemini 3.8, Agentic BigQuery, Android 17 y Sword Art Online</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/noticias-gemini-38-agentic-bigquery-android17-sao.html</link>
-      <description>Episodio diario de NoticIAs: IA Generativa, Google AI Studio, Data Engineering, Gadgets y Cultura Geek con el dúo Jorge y Dalia.</description>
+      <description>Episodio diario de NoticIAs: IA Generativa, Google AI Studio, Data Engineering, Gadgets y Cultura Geek con el dúo Jorge y Dalia. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/noticias-gemini-38-agentic-bigquery-android17-sao.html</description>
       <pubDate>Sat, 03 Oct 2026 22:40:55 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/NoticIAs_Duo_2026-10-03.mp3" length="6602157" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/NoticIAs_Duo_2026-10-03.mp3</guid>
@@ -103,7 +103,7 @@
     <item>
       <title>sIA: 5 claves que transforman la integración de datos</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-5-claves-que-transforman-la-integracion-de-datos.html</link>
-      <description>Capítulo histórico de sIA: 5 claves que transforman la integración de datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: 5 claves que transforman la integración de datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-5-claves-que-transforman-la-integracion-de-datos.html</description>
       <pubDate>Fri, 11 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_01_5_claves_que_transforman_la_integracion_de_datos.mp3" length="11286965" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_01_5_claves_que_transforman_la_integracion_de_datos.mp3</guid>
@@ -114,7 +114,7 @@
     <item>
       <title>sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA)</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-adios-tuberias-hola-ecosistema-vivo-los-5-frameworks-de-.html</link>
-      <description>Capítulo histórico de sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-adios-tuberias-hola-ecosistema-vivo-los-5-frameworks-de-.html</description>
       <pubDate>Sat, 12 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_02_Adios_Tuberias_Hola_Ecosistema_Vivo_Los_5_Frameworks_de_Inte.mp3" length="11450065" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_02_Adios_Tuberias_Hola_Ecosistema_Vivo_Los_5_Frameworks_de_Inte.mp3</guid>
@@ -125,7 +125,7 @@
     <item>
       <title>sIA: Antigravity La IA deja de ser copiloto</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-antigravity-la-ia-deja-de-ser-copiloto.html</link>
-      <description>Capítulo histórico de sIA: Antigravity La IA deja de ser copiloto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Antigravity La IA deja de ser copiloto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-antigravity-la-ia-deja-de-ser-copiloto.html</description>
       <pubDate>Sun, 13 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_03_Antigravity_La_IA_deja_de_ser_copiloto.mp3" length="10129939" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_03_Antigravity_La_IA_deja_de_ser_copiloto.mp3</guid>
@@ -136,7 +136,7 @@
     <item>
       <title>sIA: Arquitecto de Inteligencia vs El Fontanero de Datos</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-arquitecto-de-inteligencia-vs-el-fontanero-de-datos.html</link>
-      <description>Capítulo histórico de sIA: Arquitecto de Inteligencia vs El Fontanero de Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Arquitecto de Inteligencia vs El Fontanero de Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-arquitecto-de-inteligencia-vs-el-fontanero-de-datos.html</description>
       <pubDate>Mon, 14 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_04_Arquitecto_de_Inteligencia_vs_El_Fontanero_de_Datos.mp3" length="13553038" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_04_Arquitecto_de_Inteligencia_vs_El_Fontanero_de_Datos.mp3</guid>
@@ -147,7 +147,7 @@
     <item>
       <title>sIA: Convierte a Claude en tu empleado técnico</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-convierte-a-claude-en-tu-empleado-tecnico.html</link>
-      <description>Capítulo histórico de sIA: Convierte a Claude en tu empleado técnico. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Convierte a Claude en tu empleado técnico. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-convierte-a-claude-en-tu-empleado-tecnico.html</description>
       <pubDate>Tue, 15 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_05_Convierte_a_Claude_en_tu_empleado_tecnico.mp3" length="9814279" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_05_Convierte_a_Claude_en_tu_empleado_tecnico.mp3</guid>
@@ -158,7 +158,7 @@
     <item>
       <title>sIA: Data Mesh No Es Tecnología Es Gente y Estructura</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-data-mesh-no-es-tecnologia-es-gente-y-estructura.html</link>
-      <description>Capítulo histórico de sIA: Data Mesh No Es Tecnología Es Gente y Estructura. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Data Mesh No Es Tecnología Es Gente y Estructura. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-data-mesh-no-es-tecnologia-es-gente-y-estructura.html</description>
       <pubDate>Wed, 16 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_06_Data_Mesh_No_Es_Tecnologia_Es_Gente_y_Estructura.mp3" length="10198600" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_06_Data_Mesh_No_Es_Tecnologia_Es_Gente_y_Estructura.mp3</guid>
@@ -169,7 +169,7 @@
     <item>
       <title>sIA: De plomeros a arquitectos de contexto</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-de-plomeros-a-arquitectos-de-contexto.html</link>
-      <description>Capítulo histórico de sIA: De plomeros a arquitectos de contexto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: De plomeros a arquitectos de contexto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-de-plomeros-a-arquitectos-de-contexto.html</description>
       <pubDate>Thu, 17 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_07_De_plomeros_a_arquitectos_de_contexto.mp3" length="15869562" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_07_De_plomeros_a_arquitectos_de_contexto.mp3</guid>
@@ -180,7 +180,7 @@
     <item>
       <title>sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-deriva-semantica-y-modernizacion-como-rescatar-el-signif.html</link>
-      <description>Capítulo histórico de sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-deriva-semantica-y-modernizacion-como-rescatar-el-signif.html</description>
       <pubDate>Fri, 18 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_08_Deriva_Semantica_y_Modernizacion_Como_Rescatar_el_Significad.mp3" length="15990316" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_08_Deriva_Semantica_y_Modernizacion_Como_Rescatar_el_Significad.mp3</guid>
@@ -191,7 +191,7 @@
     <item>
       <title>sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-el-costo-invisible-de-big-data-ingenieria-de-datos-huell.html</link>
-      <description>Capítulo histórico de sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-el-costo-invisible-de-big-data-ingenieria-de-datos-huell.html</description>
       <pubDate>Sat, 19 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_09_El_Costo_Invisible_de_Big_Data_Ingenieria_de_Datos_Huella_En.mp3" length="9695226" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_09_El_Costo_Invisible_de_Big_Data_Ingenieria_de_Datos_Huella_En.mp3</guid>
@@ -202,7 +202,7 @@
     <item>
       <title>sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión)</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-el-dilema-de-big-data-de-la-arquitectura-lambda-a-kappa-.html</link>
-      <description>Capítulo histórico de sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-el-dilema-de-big-data-de-la-arquitectura-lambda-a-kappa-.html</description>
       <pubDate>Sun, 20 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_10_El_Dilema_de_Big_Data_De_la_Arquitectura_Lambda_a_Kappa_Velo.mp3" length="11055659" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_10_El_Dilema_de_Big_Data_De_la_Arquitectura_Lambda_a_Kappa_Velo.mp3</guid>
@@ -213,7 +213,7 @@
     <item>
       <title>sIA: El fin de la amnesia crónica en IA</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-el-fin-de-la-amnesia-cronica-en-ia.html</link>
-      <description>Capítulo histórico de sIA: El fin de la amnesia crónica en IA. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: El fin de la amnesia crónica en IA. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-el-fin-de-la-amnesia-cronica-en-ia.html</description>
       <pubDate>Mon, 21 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_11_El_fin_de_la_amnesia_cronica_en_IA.mp3" length="13403183" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_11_El_fin_de_la_amnesia_cronica_en_IA.mp3</guid>
@@ -224,7 +224,7 @@
     <item>
       <title>sIA: IA La burbuja financiera que se autoalimenta</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-ia-la-burbuja-financiera-que-se-autoalimenta.html</link>
-      <description>Capítulo histórico de sIA: IA La burbuja financiera que se autoalimenta. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: IA La burbuja financiera que se autoalimenta. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-ia-la-burbuja-financiera-que-se-autoalimenta.html</description>
       <pubDate>Tue, 22 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_12_IA_La_burbuja_financiera_que_se_autoalimenta.mp3" length="10923649" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_12_IA_La_burbuja_financiera_que_se_autoalimenta.mp3</guid>
@@ -235,7 +235,7 @@
     <item>
       <title>sIA: IA que razona antes de actuar</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-ia-que-razona-antes-de-actuar.html</link>
-      <description>Capítulo histórico de sIA: IA que razona antes de actuar. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: IA que razona antes de actuar. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-ia-que-razona-antes-de-actuar.html</description>
       <pubDate>Wed, 23 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_13_IA_que_razona_antes_de_actuar.mp3" length="10661887" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_13_IA_que_razona_antes_de_actuar.mp3</guid>
@@ -246,7 +246,7 @@
     <item>
       <title>sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿¿Velocidad Instantánea o Precisión Histórica?</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-lambda-vs-kappa-el-dilema-de-los-datos-en-mexico-velocid.html</link>
-      <description>Capítulo histórico de sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿¿Velocidad Instantánea o Precisión Histórica?. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿¿Velocidad Instantánea o Precisión Histórica?. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-lambda-vs-kappa-el-dilema-de-los-datos-en-mexico-velocid.html</description>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_14_Lambda_vs_Kappa_El_Dilema_de_los_Datos_en_Mexico_¿Velocidad_I.mp3" length="12192631" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_14_Lambda_vs_Kappa_El_Dilema_de_los_Datos_en_Mexico_¿Velocidad_I.mp3</guid>
@@ -257,7 +257,7 @@
     <item>
       <title>sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella)</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-maquina-del-tiempo-de-los-datos-simplifica-el-analisis-h.html</link>
-      <description>Capítulo histórico de sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-maquina-del-tiempo-de-los-datos-simplifica-el-analisis-h.html</description>
       <pubDate>Fri, 25 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_15_Maquina_del_Tiempo_de_los_Datos_Simplifica_el_Analisis_Histo.mp3" length="12066323" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_15_Maquina_del_Tiempo_de_los_Datos_Simplifica_el_Analisis_Histo.mp3</guid>
@@ -268,7 +268,7 @@
     <item>
       <title>sIA: Siete Métricas Post Lanzamiento para Confianza en Datos</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-siete-metricas-post-lanzamiento-para-confianza-en-datos.html</link>
-      <description>Capítulo histórico de sIA: Siete Métricas Post Lanzamiento para Confianza en Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Siete Métricas Post Lanzamiento para Confianza en Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-siete-metricas-post-lanzamiento-para-confianza-en-datos.html</description>
       <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_16_Siete_Metricas_Post_Lanzamiento_para_Confianza_en_Datos.mp3" length="18333137" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_16_Siete_Metricas_Post_Lanzamiento_para_Confianza_en_Datos.mp3</guid>
@@ -279,7 +279,7 @@
     <item>
       <title>sIA: Siete Métricas para Confiar en tus Datos</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-siete-metricas-para-confiar-en-tus-datos.html</link>
-      <description>Capítulo histórico de sIA: Siete Métricas para Confiar en tus Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Siete Métricas para Confiar en tus Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-siete-metricas-para-confiar-en-tus-datos.html</description>
       <pubDate>Sun, 27 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_17_Siete_Metricas_para_Confiar_en_tus_Datos.mp3" length="10825217" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_17_Siete_Metricas_para_Confiar_en_tus_Datos.mp3</guid>
@@ -290,7 +290,7 @@
     <item>
       <title>sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-tu-segundo-cerebro-digital-con-c-o-d-e-y-p-a-r-a.html</link>
-      <description>Capítulo histórico de sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-tu-segundo-cerebro-digital-con-c-o-d-e-y-p-a-r-a.html</description>
       <pubDate>Mon, 28 Sep 2026 08:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_18_Tu_Segundo_Cerebro_Digital_con_C_O_D_E_y_P_A_R_A.mp3" length="13032677" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_18_Tu_Segundo_Cerebro_Digital_con_C_O_D_E_y_P_A_R_A.mp3</guid>
@@ -301,7 +301,7 @@
     <item>
       <title>sIA: VSCode centro de mando para arquitectura viva</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-vscode-centro-de-mando-para-arquitectura-viva.html</link>
-      <description>Capítulo histórico de sIA: VSCode centro de mando para arquitectura viva. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: VSCode centro de mando para arquitectura viva. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-vscode-centro-de-mando-para-arquitectura-viva.html</description>
       <pubDate>Tue, 29 Sep 2026 09:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_19_VSCode_centro_de_mando_para_arquitectura_viva.mp3" length="8439092" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_19_VSCode_centro_de_mando_para_arquitectura_viva.mp3</guid>
@@ -312,7 +312,7 @@
     <item>
       <title>sIA: Vibe coding y la ilusión de competencia</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/sia-vibe-coding-y-la-ilusion-de-competencia.html</link>
-      <description>Capítulo histórico de sIA: Vibe coding y la ilusión de competencia. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona.</description>
+      <description>Capítulo histórico de sIA: Vibe coding y la ilusión de competencia. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-vibe-coding-y-la-ilusion-de-competencia.html</description>
       <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
       <enclosure url="https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3" length="17048837" type="audio/mpeg"/>
       <guid isPermaLink="true">https://charlycorona.github.io/noticias-podcast/audio/sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3</guid>

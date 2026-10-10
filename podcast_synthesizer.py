@@ -188,7 +188,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     rss_file = AUDIO_DIR / "podcast.xml"
     file_size = filepath.stat().st_size
     pub_date = datetime.now().strftime("%a, %d %b %Y %H:%M:%S GMT")
-    base_url = "https://charlycorona.github.io/noticias-podcast"
+    base_url = "https://escucha-sia.github.io"
     audio_url = f"{base_url}/audio/{filename}"
     cover_url = f"{base_url}/cover.jpg"
     desc_text = description or "sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia."

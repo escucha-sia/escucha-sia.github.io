@@ -22,8 +22,8 @@ AUDIO_XML_FILE = AUDIO_DIR / "podcast.xml"
 ARTICULOS_DIR.mkdir(parents=True, exist_ok=True)
 CSS_DIR.mkdir(parents=True, exist_ok=True)
 
-BASE_URL = "https://charlycorona.github.io/noticias-podcast"
-GITHUB_REPO_URL = "https://github.com/CharlyCorona/noticias-podcast"
+BASE_URL = "https://escucha-sia.github.io"
+GITHUB_REPO_URL = "https://github.com/escucha-sia/escucha-sia.github.io"
 SPOTIFY_SHOW_URL = "https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN"
 
 # ==============================================================================
