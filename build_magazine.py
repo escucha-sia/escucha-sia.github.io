@@ -462,6 +462,78 @@ En la arquitectura de software de 2026, Jev dota a los agentes de software de es
             "Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux. https://us.macmillan.com/books/9780374533557/thinkingfastandslow",
             "LeCun, Y. (2022). *A path towards autonomous machine intelligence*. OpenReview. https://openreview.net/forum?id=BZ5a1r-kVsf"
         ]
+    },
+
+    # 10. Laya: Centro de Comando Agéntico Open Source
+    "sIA_DeepDive_Laya_OpenSource_CommandCenter.mp3": {
+        "slug": "laya-open-source-ai-command-center-alternativa-jev",
+        "category": "Deep Dive",
+        "badge_color": "cyan",
+        "read_time": "11 min",
+        "title": "Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev",
+        "subtitle": "Cómo la orquestación local-first con Tauri v2, n8n, ChromaDB y Svelte 5 transforma notificaciones dispersas en Action Cards listas para ejecutar con un solo clic.",
+        "thesis": "Frente al paradigma de modelos de decisión propietarios como Jev, Laya demuestra que la verdadera soberanía técnica reside en la orquestación agéntica local-first. Al interceptar eventos de herramientas profesionales, resolver entidades cruzadas y pre-estadiar acciones antes de que el usuario abra la notificación, Laya redefine el flujo de trabajo moderno sin comprometer la privacidad ni depender de APIs cerradas.",
+        "nexo": "Complementa directamente el análisis de Jev de TypeSafe AI y profundiza en la evolución de los agentes autónomos de código abierto en 2026.",
+        "content_blocks": [
+            {
+                "title": "1. El Problema: El Infierno de las Notificaciones y la Sobrecarga Cognitiva",
+                "body": """
+En el entorno de desarrollo y gestión tecnológica actual, los ingenieros y líderes técnicos enfrentan una dispersión extrema de contexto: alertas en Slack, correos en Gmail y Outlook, incidencias en Jira y Linear, pull requests en GitHub y Bitbucket, y notas en Notion. Esta constante fragmentación no solo destruye los estados de flujo profundo, sino que obliga a alternar manualmente entre media docena de pestañas para investigar la causa raíz de un problema y responder con lentitud.
+
+Los intentos iniciales de resolver esto mediante bots de chat tradicionales fracasaron porque requerían que el usuario copiara y pegara información en una ventana conversacional para obtener un resumen genérico. La promesa de la IA agéntica en 2026 no es chatear más, sino eliminar la fricción operativa mediante acciones pre-estadiadas y contextualizadas de forma autónoma.
+"""
+            },
+            {
+                "title": "2. Arquitectura Local-First: La Ingeniería Bajo el Capó de Laya",
+                "body": """
+Creado por el desarrollador **Aayush Chawla** y publicado bajo código abierto en GitHub (`aayushch/laya`), **Laya** rompe radicalmente con las aplicaciones web pesadas mediante una arquitectura desacoplada, ultraligera y orientada a la privacidad total:
+
+* **Desktop Shell en Tauri v2 (Rust):** Sustituye el consumo excesivo de memoria de Electron por un binario compilado nativo en Rust con IPC seguro y mínimo impacto de CPU.
+* **Frontend Reactivo en Svelte 5 (Runes):** Interfaz ultrarrápida impulsada por el nuevo sistema de reactividad por señales de Svelte (`$state`, `$derived`, `$effect`), Tailwind CSS v4 y Skeleton UI.
+* **Motor Backend en Python (FastAPI / asyncio):** Servidor local sobre el puerto 8420 que ejecuta el ciclo de ingestión, clasificación multi-persona, enrutamiento semántico y aprendizaje continuo.
+* **Gateway de Integración con n8n Embebido:** Laya levanta un entorno local de n8n (Node.js en puerto 45678) con más de 20 flujos de trabajo preconfigurados para interceptar webhooks de Jira, Slack, Gmail y GitHub, y ejecutar las acciones salientes aprobadas.
+* **Recuperación Híbrida con RRF:** Almacenamiento estructurado en SQLite con modo WAL y búsqueda léxica BM25 sobre SQLite FTS5 (`cards_fts` / `events_fts`), fusionada con búsqueda vectorial densa mediante **ChromaDB embebido** a través de Reciprocal Rank Fusion (RRF).
+"""
+            },
+            {
+                "title": "3. Action Cards y Cerebro Multi-Persona: La Respuesta Antes de la Notificación",
+                "body": """
+El principio fundamental de Laya es radical: **la respuesta debe estar lista antes de que abras la notificación**. 
+
+Cuando ocurre un evento en una plataforma integrada:
+1. **Enrutamiento por Personas:** El motor evalúa la naturaleza del evento y lo envía al trabajador de IA especializado adecuado (Engineer, Comms, Ops, Sales, HR, Finance) con herramientas y prompts de dominio específico.
+2. **Resolución de Entidades Cruzadas (Coherence):** El sistema rastrea referencias cruzadas automáticamente, vinculando por ejemplo el ticket `BUG-1234` de Jira con el `PR-891` en GitHub y las conversaciones asociadas en Slack.
+3. **Generación de Action Cards:** Los agentes en segundo plano investigan el contexto, redactan la solución o respuesta y generan una tarjeta de acción lista para revisión humana.
+4. **Espacios de Trabajo y Backends Agénticos:** Para tareas de código complejas, Laya abre un *Card Workspace* colaborativo donde interactúas con agentes de codificación CLI instalados en tu sistema (Claude Code, Gemini CLI, OpenAI Codex CLI, Pi CLI o Cursor Agent), permitiendo incluso reutilizar las cuotas locales de estos agentes sin costo adicional de API tokens.
+"""
+            },
+            {
+                "title": "4. Laya vs Jev: Dos Filosofías Opuestas para la Era Agéntica",
+                "body": """
+La comparación entre **Jev** (de TypeSafe AI) y **Laya** sintetiza el gran dilema arquitectónico de 2026:
+
+* **Jev representa la optimización en la capa del modelo:** Una red neuronal discriminativa, propietaria y cerrada, diseñada para resolver el Sistema 1 (decisiones y clasificaciones discretas) en microsegundos y sin alucinaciones de tokens.
+* **Laya representa la soberanía en la capa de orquestación:** Un ecosistema de código abierto y local-first que combina modelos abiertos locales (vía Ollama o LM Studio) con n8n, bases de datos vectoriales locales y agentes CLI para estructurar flujos empresariales completos con control humano en el bucle (*human-in-the-loop*).
+
+Mientras Jev es el micro-reflejo a nivel de hardware, Laya es el centro de comando estratégico donde los agentes autónomos preparan el terreno y los humanos mantienen el control ejecutivo de las decisiones.
+"""
+            },
+            {
+                "title": "5. Conexión Geek: El LCARS del Enterprise y la Armadura de Iron Man",
+                "body": """
+En la cultura de la ciencia ficción, Laya encarna a la perfección la interfaz **LCARS del USS Enterprise en Star Trek**: la computadora central monitorea constantemente la telemetría de motores de curvatura, escudos y comunicaciones de la Flota Estelar, presentando al Capitán Picard en su panel táctil la maniobra lista para autorizar con un simple *'Engage'* ('Hágase').
+
+De igual forma, emula el HUD de **JARVIS y FRIDAY en la armadura de Iron Man**: millones de variables de satélites y comunicaciones se sintetizan en tiempo real para desplegar frente a Tony Stark la solución defensiva óptima, lista para ejecutarse con un parpadeo de confirmación. Laya traslada esa misma experiencia de comando al escritorio del ingeniero contemporáneo.
+"""
+            }
+        ],
+        "apa_references": [
+            "Chawla, A. (2026). *Laya: Open-source, local-first AI notification command center and autonomous action orchestration*. GitHub repository. https://github.com/aayushch/laya",
+            "TypeSafe AI. (2026). *Jev: The non-generative foundation model for structured decision making and low-latency system-1 classification*. TypeSafe AI Research. https://typesafe.ai",
+            "Fowler, M. (2023). *Event-Driven Architecture and Human-in-the-Loop workflows in enterprise software*. Martin Fowler's Bliki. https://martinfowler.com/articles/event-driven-architecture.html",
+            "Cormack, G. V., Clarke, C. L., & Buettcher, S. (2009). *Reciprocal rank fusion outperforms Condorcet and individual rank learning methods*. SIGIR '09, 758–759. https://doi.org/10.1145/1571941.1572114",
+            "Svelte Team. (2024). *Svelte 5: Runes, fine-grained reactivity and universal state management*. Svelte Documentation. https://svelte.dev/docs/svelte/runes"
+        ]
     }
 }
 

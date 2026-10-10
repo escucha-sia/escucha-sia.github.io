@@ -13,6 +13,17 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Deep Dive: Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev</title>
+      <link>https://escucha-sia.github.io/articulos/laya-open-source-ai-command-center-alternativa-jev.html</link>
+      <description>sIA Deep Dive: Análisis exhaustivo de Laya (aayushch/laya), la alternativa open source y local-first a los modelos privativos de decisión como Jev. Arquitectura en Tauri v2, Svelte 5, FastAPI, n8n embebido, recuperación híbrida ChromaDB + SQLite FTS5 (RRF), Action Cards y agentes CLI.</description>
+      <pubDate>Sat, 10 Oct 2026 10:21:45 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Laya_OpenSource_CommandCenter.mp3" length="7813180" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_Laya_OpenSource_CommandCenter.mp3</guid>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>sIA Deep Dive: Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</title>
       <link>https://escucha-sia.github.io/articulos/jev-typesafe-modelo-sistema-1-decisiones.html</link>
       <description>sIA Deep Dive: Análisis del nuevo modelo Jev de TypeSafe AI (analizado por DotCSV). Por qué los LLMs no deben usarse para tomar decisiones, tipado estricto (choice, score, boolean), la demo de DOOM y la arquitectura dual Sistema 1 + Sistema 2.</description>

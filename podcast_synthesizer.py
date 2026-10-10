@@ -64,6 +64,14 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bTypeSafe\b', 'Taip-Seif', t)
     t = re.sub(r'\bDotCSV\b', 'Dot C S V', t)
     t = re.sub(r'\bDOOM\b', 'Dum', t)
+    # Laya y Stack Agéntico Open Source
+    t = re.sub(r'\bn8n\b', 'ene ocho ene', t)
+    t = re.sub(r'\bChromaDB\b', 'Croma D B', t)
+    t = re.sub(r'\bSQLite\b', 'Es-Kiu-Lait', t)
+    t = re.sub(r'\bFTS5\b', 'F T S cinco', t)
+    t = re.sub(r'\bSvelte\b', 'Esvelt', t)
+    t = re.sub(r'\bLiteLLM\b', 'Lait L L M', t)
+    t = re.sub(r'\bBYOK\b', 'B Y O K', t)
     return t
 
 
