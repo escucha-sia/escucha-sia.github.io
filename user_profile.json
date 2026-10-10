@@ -6,35 +6,62 @@
     "ai_and_agents": {
       "weight": 1.0,
       "subreddits": ["r/google_antigravity", "r/Bard", "r/notebooklm", "r/ArtificialInteligence", "r/LocalLLaMA"],
-      "keywords": ["gemini", "antigravity", "notebooklm", "reasoning", "flash", "context caching", "agentic"]
+      "keywords": ["gemini", "antigravity", "notebooklm", "reasoning", "flash", "context caching", "agentic"],
+      "fuera_de_la_burbuja_vectors": [
+        "Computación termodinámica y probabilística en silicio",
+        "Spiking Neural Networks (SNN) y procesadores neuromórficos (Intel Loihi, BrainChip)",
+        "Modelos de Mundo no autoregresivos (JEPA y arquitecturas basadas en energía)",
+        "Inteligencia Colectiva de Enjambre (Swarm Intelligence) sin orquestador central"
+      ]
     },
     "data_and_sql_engineering": {
       "weight": 0.95,
       "subreddits": ["r/SQL", "r/dataengineering", "r/bigquery", "r/dbt"],
-      "keywords": ["query optimization", "join", "order by", "data mesh", "scd2", "streaming", "contracts"]
+      "keywords": ["query optimization", "join", "order by", "data mesh", "scd2", "streaming", "contracts"],
+      "fuera_de_la_burbuja_vectors": [
+        "Almacenamiento en cristales de cuarzo holográficos (Project Silica / 10,000 años)",
+        "Almacenamiento masivo en ADN sintético mediante síntesis enzimática",
+        "Computación en memoria con memristores analógicos (destrucción del cuello de botella Von Neumann)",
+        "Criptografía Homomórfica Completa (FHE) para consultas SQL sobre datos cifrados en memoria"
+      ]
     },
     "gadgets_hardware_and_wearables": {
       "weight": 0.90,
       "subreddits": ["r/SmartGlasses", "r/eink", "r/Calibre", "r/samsunggalaxy", "r/SamsungDex", "r/Dreame_Tech", "r/ToyotaSienna"],
-      "keywords": ["smart glasses", "e-ink", "koreader", "kobo", "dex", "npu", "slam", "robotics"]
+      "keywords": ["smart glasses", "e-ink", "koreader", "kobo", "dex", "npu", "slam", "robotics"],
+      "fuera_de_la_burbuja_vectors": [
+        "Pantallas reflectivas electroquímicas y electrohumectación a 60 fps bajo luz solar",
+        "Superficies hápticas microfluídicas con botones físicos que se inflan a demanda",
+        "Interfaces mioeléctricas (EMG) en muñeca para interacción por micromovimientos de tendones",
+        "Pantallas bistables Gallery 3 de pigmento electroforético puro de 4 partículas (ACeP)"
+      ]
     },
     "maker_and_3d_printing": {
       "weight": 0.85,
       "subreddits": ["r/3Dprinting", "r/BambuLab", "r/OrcaSlicer"],
-      "keywords": ["bambu lab", "fdm", "ams", "filaments", "orcaslicer", "lidar"]
+      "keywords": ["bambu lab", "fdm", "ams", "filaments", "orcaslicer", "lidar"],
+      "fuera_de_la_burbuja_vectors": [
+        "Impresión 4D con polímeros y metamateriales con memoria de forma térmica",
+        "Bio-fabricación aditiva con micelio de hongos y regolito basáltico para estructuras autorreparables",
+        "Fotopolimerización volumétrica continua (impresión 3D completa en segundos por haces de luz)",
+        "Metamateriales auxéticos con coeficiente de Poisson negativo para absorción de impacto"
+      ]
     },
     "geek_culture_anime_and_horror": {
       "weight": 0.85,
       "subreddits": ["r/anime", "r/manhwa", "r/horrorlit", "r/J_Horror", "r/swordartonline", "r/mushokutensei"],
-      "keywords": ["dr. stone", "terraforming", "sword art online", "manhwa", "horrorlit", "j-horror", "scifi"]
+      "keywords": ["dr. stone", "terraforming", "sword art online", "manhwa", "horrorlit", "j-horror", "scifi"],
+      "fuera_de_la_burbuja_vectors": [
+        "Neurociencia de la inmersión total (Full-Dive VR) y estimulación magnética transcraneal",
+        "Filosofía de la mente en Hard Sci-Fi: Greg Egan, Peter Watts y la consciencia post-biológica",
+        "Deconstrucción de la metaficción en narrativas de sistemas apocalípticos (ORV, The Tutorial is Too Hard)",
+        "Folclore arcaico japonés (ohaguro, yōkai) como alegoría del aislamiento y la pérdida de identidad digital"
+      ]
     }
   },
-  "serendipity_vectors": [
-    "Almacenamiento de datos en ADN sintético",
-    "Pantallas bistables E-Ink Gallery 3 y color reflectivo",
-    "Computación neuromórfica y Spiking Neural Networks (SNN)",
-    "Smart Glasses con micro-OLED y modelos multimodales en el marco",
-    "Impresión 4D con metamateriales térmicos",
-    "Full-Dive VR y háptica de microfluidos real"
-  ]
+  "format_rules": {
+    "structure": "Cada bloque temático debe contener una noticia práctica central + una subsección explícita 'Fuera de la Burbuja' que conecte con una frontera científica/disruptiva.",
+    "hosts": ["Jorge", "Dalia"],
+    "voice_tone": "Técnico, dinámico, riguroso, público, sin referencias directas a personas individuales."
+  }
 }

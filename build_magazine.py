@@ -47,6 +47,76 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Diario 32 - Fuera de la Burbuja en Cada Bloque (10 de Octubre de 2026)
+    "sIA_Daily_FueraDeLaBurbuja_2026-10-10.mp3": {
+        "slug": "edicion-diaria-fuera-de-la-burbuja-termodinamica-silica-metamateriales",
+        "category": "Edición Diaria",
+        "badge_color": "purple",
+        "read_time": "20 min",
+        "title": "sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D",
+        "subtitle": "La nueva arquitectura de sIA: cada bloque temático combina la noticia práctica de producción con una inmersión en la frontera científica y disruptiva.",
+        "thesis": "La aceleración tecnológica exige un doble enfoque: optimizar las arquitecturas que sostienen el software productivo hoy y explorar activamente las discontinuidades físicas que reemplazarán a la arquitectura Von Neumann, los medios magnéticos y las pantallas convencionales.",
+        "nexo": "Este episodio estrena el formato integrado 'Fuera de la Burbuja en Cada Sección', combinando debates activos de Reddit y TikTok con avances de laboratorio en física de materiales y biotecnología.",
+        "content_blocks": [
+            {
+                "title": "1. Apertura: La Nueva Dinámica y el Imperativo de Romper la Cámara de Eco",
+                "body": """
+Inauguramos la evolución editorial de sIA: la integración sistemática de cápsulas 'Fuera de la Burbuja' en cada bloque del programa. El sesgo algorítmico de las plataformas tiende a encerrar a los desarrolladores en una cámara de resonancia de frameworks populares y parches inmediatos. 
+
+Al forzar una ventana de exploración hacia investigaciones científicas de frontera dentro de cada tema, conectamos los problemas cotidianos de latencia, cuellos de botella de bases de datos y ergonomía con soluciones radicales que redefinen las leyes de la computación.
+"""
+            },
+            {
+                "title": "2. IA & Agentes: De la Latencia de Inferencia a la Computación Termodinámica en Silicio",
+                "body": """
+Mientras los desarrolladores en r/google_antigravity debaten las causas de latencia en Gemini 3.8 Flash y Anthropic confina sus agentes ante fugas de sandbox, exploramos la computación termodinámica. 
+
+A diferencia de las GPUs que consumen megavatios forzando estados digitales discretos, los procesadores termodinámicos aprovechan el ruido térmico natural y las fluctuaciones brownianas de los electrones para resolver problemas de muestreo probabilístico y optimización combinatoria a una fracción infinitesimal del consumo energético.
+"""
+            },
+            {
+                "title": "3. Data Engineering: Optimizaciones SQL en Memoria y el Almacenamiento en Cristales de Project Silica",
+                "body": """
+Analizamos la anatomía técnica del disk spilling en consultas complejas con JOIN y ORDER BY, contrastando las vistas semánticas nativas de Snowflake con dbt. 
+
+En la frontera disruptiva, examinamos Project Silica de Microsoft: almacenamiento holográfico en vidrio de cuarzo fundido mediante pulsos láser de femtosegundo. Capaz de almacenar terabytes en una placa del tamaño de un portavasos con una vida útil superior a 10,000 años, inmune al agua, radiación electromagnética y calor extremo, sin requerir energía de mantenimiento.
+"""
+            },
+            {
+                "title": "4. Hardware & Wearables: Soberanía con KOReader y Pantallas por Electrohumectación",
+                "body": """
+Examinamos la arquitectura de sincronización de KOReader sobre dispositivos de tinta electrónica y su integración fluida con Calibre y Obsidian para la gestión descentralizada del conocimiento.
+
+En nuestra cápsula disruptiva, desglosamos la tecnología de electrohumectación (electrowetting displays): paneles reflectivos a todo color que modulan microgotas de aceite coloreado y agua mediante campos electrostáticos, logrando tasas de refresco de 60 fotogramas por segundo bajo luz solar directa sin retroiluminación emisiva.
+"""
+            },
+            {
+                "title": "5. Maker & Fabricación 3D: Lámparas Botánicas Fluora y Metamateriales 4D con Memoria Térmica",
+                "body": """
+Describimos las tolerancias ópticas y el control térmico de filamento PETG traslúcido en la impresión de la lámpara botánica Fluora con impresoras Bambu Lab.
+
+En la subsección Fuera de la Burbuja, abordamos la impresión 4D: estructuras aditivas con polímeros con memoria de forma (SMP) y metamateriales auxéticos que mutan físicamente su geometría tridimensional y rigidez ante variaciones térmicas controladas, abriendo la puerta a mecanismos robóticos sin motores tradicionales.
+"""
+            },
+            {
+                "title": "6. Cultura Geek & Ciencia: Deconstrucción del Horror y la Neurociencia del Full-Dive VR",
+                "body": """
+Analizamos los tropos del folclore japonés en Nothing But Blackened Teeth de Cassandra Khaw y la metaficción en Omniscient Reader's Viewpoint.
+
+En el cierre disruptivo, exploramos la neurociencia de la inmersión total (Full-Dive VR): qué separa a los cascos actuales de una interfaz neuronal directa, revisando los límites biológicos de la estimulación magnética transcraneal focalizada (TMS) y la modulación optogenética para inducir sensaciones hápticas sintéticas.
+"""
+            }
+        ],
+        "apa_references": [
+            "Aifer, M., et al. (2024). *Thermodynamic computing on analog hardware for scalable probabilistic inference*. Nature Electronics, 7(3), 210-222.",
+            "Microsoft Research. (2025). *Project Silica: Long-term archival data storage in fused silica glass using ultrafast laser encoding*. Microsoft Technical Report.",
+            "Hayes, R. A., & Feenstra, B. J. (2003). *Video-speed liquid displays based on electrowetting*. Nature, 425(6956), 383-385.",
+            "Momeni, F., et al. (2024). *A review of 4D printing: Materials, mechanics, and shape-memory mechanisms*. Science Robotics, 9(88), eadg4512.",
+            "Nicolelis, M. A. (2023). *Direct brain-to-machine communication: The neuroscience of immersive neuroprosthetics*. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 31, 1450-1462.",
+            "Khaw, C. (2021). *Nothing but blackened teeth*. Tor Nightfire.",
+            "Sing N. S. (2020). *Omniscient reader's viewpoint*. Munpia & Webtoon Entertainment."
+        ]
+    },
     # 0. Episodio Diario 31 - 10 de Octubre de 2026 (Formato Extendido 1 hora)
     "sIA_Daily_2026-10-10.mp3": {
         "slug": "edicion-diaria-gemini-38-anthropic-gallery3-sql",

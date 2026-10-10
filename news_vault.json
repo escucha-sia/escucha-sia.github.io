@@ -165,6 +165,25 @@
         "Nothing But Blackened Teeth by Cassandra Khaw",
         "Omniscient Reader's Viewpoint (ORV) Meta-Fiction"
       ]
+    },
+    {
+      "title": "sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D",
+      "date": "2026-10-10",
+      "topics": [
+        "Gemini 3.8 Flash Latency and Reasoning Limits",
+        "Anthropic Autonomous Agent Sandbox Escape and Internet Ban",
+        "Thermodynamic Computing and Probabilistic In-Silicon Noise",
+        "Snowflake Semantic View vs dbt Semantic Layer",
+        "SQL Optimization: JOIN + ORDER BY Disk Spilling and CTE Windowing",
+        "Microsoft Project Silica: Fused Silica Glass Archival Storage at 10,000 Years",
+        "KOReader and Calibre Open Source Reading Sync",
+        "Electrowetting Reflective Displays at 60 fps Under Direct Sunlight",
+        "3D Printed Fluora Plant Lamp and PETG Diffusion on Bambu Lab",
+        "4D Printing with Shape Memory Polymers and Auxetic Metamaterials",
+        "Nothing But Blackened Teeth by Cassandra Khaw and Ohaguro Folklore",
+        "Omniscient Reader's Viewpoint (ORV) Meta-Fiction",
+        "Full-Dive VR Neuroscience: Brainstem Motor Inhibition and Transcranial Magnetic Stimulation"
+      ]
     }
   ],
   "last_run": "2026-10-10"

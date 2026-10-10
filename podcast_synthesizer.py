@@ -108,6 +108,17 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bCTE\b', 'C T E', t)
     t = re.sub(r'\bCTEs\b', 'C T Es', t)
     t = re.sub(r'\bEXPLAIN\b', 'Expléin', t)
+    # Nuevos términos Fuera de la Burbuja
+    t = re.sub(r'\bSNN\b', 'S N N', t)
+    t = re.sub(r'\bProject Silica\b', 'Próyect Sílica', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bBCI\b', 'B C I', t)
+    t = re.sub(r'\bEMG\b', 'E M G', t)
+    t = re.sub(r'\bLoihi\b', 'Lóiji', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bBrainChip\b', 'Brein-Chip', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bFHE\b', 'F H E', t)
+    t = re.sub(r'\bFull-Dive\b', 'Ful-Daiv', t, flags=re.IGNORECASE)
+    t = re.sub(r'\belectrohumectación\b', 'electro-umectación', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bauxéticos\b', 'auk-séticos', t, flags=re.IGNORECASE)
     return t
 
 

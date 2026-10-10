@@ -102,9 +102,14 @@ def fetch_reddit_feed():
     return candidates
 
 def generate_daily_lineup():
-    print("=" * 60)
-    print("ANALIZANDO FEED PERSONAL DE CARLOS & ARQUITECTANDO PARRILLA")
-    print("=" * 60)
+    print("=" * 65)
+    print("ARQUITECTURA DE PARRILLA: NOTICIA CENTRAL + FUERA DE LA BURBUJA")
+    print("=" * 65)
+    
+    profile = load_user_profile()
+    pillars = profile.get("pillars", {})
+    vault = load_news_vault()
+    all_covered_text = " ".join([item.get("title", "") + " " + " ".join(item.get("topics", [])) for item in vault.get("covered_items", [])]).lower()
     
     candidates = fetch_reddit_feed()
     print(f"\n[OK] Candidatos frescos recolectados de Reddit: {len(candidates)}")
@@ -114,12 +119,43 @@ def generate_daily_lineup():
         cat = c["category"]
         grouped.setdefault(cat, []).append(c)
         
-    for cat, items in grouped.items():
-        print(f"\n--- Categoría: {cat.upper()} ({len(items)} noticias) ---")
-        for it in items[:3]:
-            print(f"  • [{it['subreddit']}] {it['title']}")
-            
-    return grouped
+    pillar_mapping = {
+        "ai_and_agents": "ai_and_agents",
+        "data_engineering": "data_and_sql_engineering",
+        "hardware_and_wearables": "gadgets_hardware_and_wearables",
+        "maker_3d": "maker_and_3d_printing",
+        "geek_culture": "geek_culture_anime_and_horror"
+    }
+    
+    structured_blocks = []
+    
+    for cat_key, pillar_key in pillar_mapping.items():
+        pillar_info = pillars.get(pillar_key, {})
+        items = grouped.get(cat_key, [])
+        top_news = items[0] if items else {"title": "Tendencias del ecosistema", "subreddit": "Comunidad"}
+        
+        # Seleccionar vector Fuera de la Burbuja no cubierto recientemente
+        vectors = pillar_info.get("fuera_de_la_burbuja_vectors", [])
+        chosen_vector = vectors[0] if vectors else "Frontera disruptiva"
+        for v in vectors:
+            if v.lower() not in all_covered_text:
+                chosen_vector = v
+                break
+                
+        structured_blocks.append({
+            "block_id": cat_key,
+            "pillar_name": pillar_key,
+            "news": top_news,
+            "fuera_de_la_burbuja": chosen_vector
+        })
+        
+    print("\n--- ESTRUCTURA DE BLOQUES CON 'FUERA DE LA BURBUJA' INTEGRADO ---")
+    for b in structured_blocks:
+        print(f"\n[BLOQUE: {b['pillar_name'].upper()}]")
+        print(f"  • Noticia Central: [{b['news'].get('subreddit')}] {b['news'].get('title')}")
+        print(f"  • 🌌 Fuera de la Burbuja: {b['fuera_de_la_burbuja']}")
+        
+    return structured_blocks
 
 if __name__ == '__main__':
     generate_daily_lineup()
