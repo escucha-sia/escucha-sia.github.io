@@ -204,16 +204,32 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     tasks = [worker(cf, txt, v, spk) for cf, txt, v, spk, ch in chunks]
     await asyncio.gather(*tasks)
 
-    # Calculate chunk durations and chapters
-    print("Calculando duración exacta y marcadores de capítulos...")
+    # Generate subtitles (WebVTT y SRT) and calculate durations
+    print("Calculando duración exacta, marcadores de capítulos y subtítulos VTT/SRT...")
     chapter_spans = []
     current_ch_name = None
     ch_start_ms = 0
     current_time_ms = 0
 
+    vtt_lines = ["WEBVTT\nKind: captions\nLanguage: es\n\n"]
+    srt_lines = []
+    srt_idx = 1
+
+    def fmt_vtt(ms: int) -> str:
+        h, rem = divmod(ms, 3600000)
+        m, rem = divmod(rem, 60000)
+        s, millis = divmod(rem, 1000)
+        return f"{h:02d}:{m:02d}:{s:02d}.{millis:03d}"
+
+    def fmt_srt(ms: int) -> str:
+        h, rem = divmod(ms, 3600000)
+        m, rem = divmod(rem, 60000)
+        s, millis = divmod(rem, 1000)
+        return f"{h:02d}:{m:02d}:{s:02d},{millis:03d}"
+
     concat_list_file = TEMP_DIR / "concat_list.txt"
     with open(concat_list_file, 'w', encoding='utf-8') as f:
-        for chunk_file, _, _, _, ch_name in chunks:
+        for chunk_file, cleaned_text, _, speaker, ch_name in chunks:
             path_str = str(chunk_file).replace('\\', '/')
             f.write(f"file '{path_str}'\n")
 
@@ -224,6 +240,14 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
             except Exception:
                 dur_sec = 2.0
             dur_ms = int(dur_sec * 1000)
+
+            chunk_s_ms = current_time_ms
+            chunk_e_ms = current_time_ms + dur_ms
+
+            # Inyectar línea de subtítulo
+            vtt_lines.append(f"{fmt_vtt(chunk_s_ms)} --> {fmt_vtt(chunk_e_ms)}\n{speaker}: {cleaned_text}\n\n")
+            srt_lines.append(f"{srt_idx}\n{fmt_srt(chunk_s_ms)} --> {fmt_srt(chunk_e_ms)}\n{speaker}: {cleaned_text}\n\n")
+            srt_idx += 1
 
             if ch_name != current_ch_name:
                 if current_ch_name is not None:
@@ -255,8 +279,22 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     # Generate output filenames
     today_str = datetime.now().strftime("%Y-%m-%d")
     output_filename = custom_filename or f"sIA_{today_str}.mp3"
+    base_stem = Path(output_filename).stem
     final_output = AUDIO_DIR / output_filename
     spotify_output = SPOTIFY_DIR / output_filename
+
+    # Save subtitles to AUDIO_DIR and SPOTIFY_DIR
+    vtt_file = AUDIO_DIR / f"{base_stem}.vtt"
+    srt_file = AUDIO_DIR / f"{base_stem}.srt"
+    vtt_file.write_text("".join(vtt_lines), encoding='utf-8')
+    srt_file.write_text("".join(srt_lines), encoding='utf-8')
+
+    import shutil
+    shutil.copy2(vtt_file, SPOTIFY_DIR / f"{base_stem}.vtt")
+    shutil.copy2(srt_file, SPOTIFY_DIR / f"{base_stem}.srt")
+    print(f"[OK] Subtítulos WebVTT generados: {vtt_file}")
+    print(f"[OK] Subtítulos SRT generados: {srt_file}")
+    print(f"[OK] Subtítulos sincronizados en carpeta de Spotify: {SPOTIFY_DIR / f'{base_stem}.vtt'}")
 
     print("\nEnsamblando audio final con capítulos ID3v2 en ffmpeg...")
     cmd = [
@@ -278,7 +316,6 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
         raise RuntimeError("Fallo al ensamblar con ffmpeg")
 
     # Copy to Spotify local directory
-    import shutil
     shutil.copy2(final_output, spotify_output)
     print(f"\n[OK] Episodio master generado en: {final_output}")
     print(f"[OK] Sincronizado en carpeta de Spotify: {spotify_output}")
@@ -320,8 +357,15 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     audio_url = f"{base_url}/audio/{filename}"
     cover_url = f"{base_url}/cover.jpg"
     desc_text = description or "sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia."
-    dur_str = get_audio_duration_str(filepath)
-    
+    base_stem = Path(filename).stem
+    vtt_path = AUDIO_DIR / f"{base_stem}.vtt"
+    srt_path = AUDIO_DIR / f"{base_stem}.srt"
+    transcripts_block = ""
+    if vtt_path.exists():
+        transcripts_block += f'\n      <podcast:transcript url="{base_url}/audio/{base_stem}.vtt" type="text/vtt" language="es"/>'
+    if srt_path.exists():
+        transcripts_block += f'\n      <podcast:transcript url="{base_url}/audio/{base_stem}.srt" type="application/x-subrip" language="es"/>'
+
     new_item = f"""    <item>
       <title>{episode_title}</title>
       <description>{desc_text}</description>
@@ -331,7 +375,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
       <itunes:duration>{dur_str}</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="{cover_url}"/>
-      <itunes:explicit>no</itunes:explicit>
+      <itunes:explicit>no</itunes:explicit>{transcripts_block}
     </item>"""
 
     # Preserve existing items and position if updating
@@ -358,7 +402,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
       <itunes:duration>{dur_str}</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="{cover_url}"/>
-      <itunes:explicit>no</itunes:explicit>
+      <itunes:explicit>no</itunes:explicit>{transcripts_block}
     </item>"""
                     new_items_list.append(updated_it)
                     found_and_replaced = True
@@ -374,7 +418,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     items_block = "\n".join(all_items)
 
     rss_content = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0">
   <channel>
     <title>sIA</title>
     <link>{base_url}</link>

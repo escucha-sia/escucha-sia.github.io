@@ -1890,12 +1890,30 @@ def update_podcast_xml_with_links(catalog):
                     item_text
                 )
             
+        # 3. Inject <podcast:transcript> if .vtt or .srt exists on disk
+        base_stem = Path(filename).stem
+        vtt_file = AUDIO_DIR / f"{base_stem}.vtt"
+        srt_file = AUDIO_DIR / f"{base_stem}.srt"
+        if "<podcast:transcript" not in item_text:
+            trans_block = ""
+            if vtt_file.exists():
+                trans_block += f'\n      <podcast:transcript url="{BASE_URL}/audio/{base_stem}.vtt" type="text/vtt" language="es"/>'
+            if srt_file.exists():
+                trans_block += f'\n      <podcast:transcript url="{BASE_URL}/audio/{base_stem}.srt" type="application/x-subrip" language="es"/>'
+            if trans_block:
+                if "<itunes:explicit>" in item_text:
+                    item_text = re.sub(r'(<itunes:explicit>.*?</itunes:explicit>)', r'\1' + trans_block, item_text)
+                else:
+                    item_text = re.sub(r'(<enclosure\s+[^>]*?/>)', r'\1' + trans_block, item_text)
+            
         return item_text
         
     updated_xml = re.sub(r'<item>.*?</item>', replace_item, xml_content, flags=re.DOTALL)
+    if 'xmlns:podcast="https://podcastindex.org/namespace/1.0"' not in updated_xml:
+        updated_xml = updated_xml.replace('<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">', '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0">')
     XML_FILE.write_text(updated_xml, encoding='utf-8')
     AUDIO_XML_FILE.write_text(updated_xml, encoding='utf-8')
-    print(f"[OK] podcast.xml y audio/podcast.xml actualizados con duraciones, tamaños y enlaces a artículos web.")
+    print(f"[OK] podcast.xml y audio/podcast.xml actualizados con duraciones, tamaños, transcripciones y enlaces.")
 
 if __name__ == '__main__':
     build_all_articles()
