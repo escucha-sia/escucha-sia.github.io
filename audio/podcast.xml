@@ -2,16 +2,27 @@
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>sIA</title>
-    <link>https://charlycorona.github.io/noticias-podcast</link>
+    <link>https://escucha-sia.github.io</link>
     <language>es-mx</language>
     <itunes:author>Jorge y Dalia</itunes:author>
-    <itunes:image href="https://charlycorona.github.io/noticias-podcast/cover.jpg"/>
+    <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
     <itunes:category text="Technology"/>
     <itunes:owner>
       <itunes:name>Carlos Corona</itunes:name>
-      <itunes:email>charly.corona@gmail.com</itunes:email>
+      <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
+    <item>
+      <title>sIA Deep Dive: Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</title>
+      <link>https://escucha-sia.github.io/articulos/jev-typesafe-modelo-sistema-1-decisiones.html</link>
+      <description>sIA Deep Dive: Análisis del nuevo modelo Jev de TypeSafe AI (analizado por DotCSV). Por qué los LLMs no deben usarse para tomar decisiones, tipado estricto (choice, score, boolean), la demo de DOOM y la arquitectura dual Sistema 1 + Sistema 2.</description>
+      <pubDate>Sat, 10 Oct 2026 08:37:25 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3" length="7010156" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3</guid>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
     <item>
       <title>sIA Deep Dive: Bambu Lab y la Revolución de la Impresión 3D: Visión por Computadora, LiDAR y el Ecosistema Maker</title>
       <link>https://charlycorona.github.io/noticias-podcast/articulos/bambu-lab-impresion-3d-vision-lidar-maker.html</link>

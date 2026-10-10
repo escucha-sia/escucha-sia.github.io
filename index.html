@@ -40,7 +40,7 @@
             <p>Cada episodio de podcast se respalda en un artículo de investigación con análisis de arquitectura, trade-offs de producción y bibliografía en formato APA.</p>
             
             <div class="filter-bar">
-                <button class="filter-btn active" onclick="filterArticles('all')">Todos (28)</button>
+                <button class="filter-btn active" onclick="filterArticles('all')">Todos (29)</button>
                 <button class="filter-btn" onclick="filterArticles('deep-dive')">sIA Deep Dives</button>
                 <button class="filter-btn" onclick="filterArticles('noticias')">NoticIAs Daily</button>
                 <button class="filter-btn" onclick="filterArticles('maker-3d')">Impresión 3D & Maker</button>
@@ -52,6 +52,29 @@
     <main class="container" id="articulos">
         <div class="magazine-grid">
             
+        <div class="card badge-purple" data-category="deep-dive">
+            <div class="card-header">
+                <span class="badge badge-purple">Deep Dive</span>
+                <span class="card-meta">10 min • Sat, 10 Oct</span>
+            </div>
+            <h3>Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</h3>
+            <p>Por qué usar modelos de lenguaje para clasificar y elegir acciones es un error arquitectónico: redes discriminativas, tipado estricto y la demo de DOOM....</p>
+            
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 Audio Podcast:</span>
+                </div>
+                <audio controls preload="none">
+                    <source src="https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="card-footer">
+                <a href="articulos/jev-typesafe-modelo-sistema-1-decisiones.html" class="read-link">Leer artículo y APA &rarr;</a>
+                <a href="https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3" class="card-meta" download title="Descargar MP3">⬇ MP3</a>
+            </div>
+        </div>
+        
         <div class="card badge-amber" data-category="deep-dive maker-3d">
             <div class="card-header">
                 <span class="badge badge-amber">Deep Dive</span>

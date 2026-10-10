@@ -403,8 +403,68 @@ En el plano cultural, este salto tecnológico evoca la herrería de Lisbeth en e
             "Prusa, J. (2024). *The state of open source in 3D printing: Community innovation versus proprietary walled gardens*. Prusa Research Blog. https://blog.prusa3d.com",
             "IEEE Spectrum. (2024). *How AI computer vision stopped 3D print failures before they start*. IEEE Spectrum Robotics. https://spectrum.ieee.org/3d-printing-ai"
         ]
+    },
+
+    # 9. Jev de TypeSafe AI y Modelos de Decisión
+    "sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3": {
+        "slug": "jev-typesafe-modelo-sistema-1-decisiones",
+        "category": "Deep Dive",
+        "badge_color": "purple",
+        "read_time": "10 min",
+        "title": "Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1",
+        "subtitle": "Por qué usar modelos de lenguaje para clasificar y elegir acciones es un error arquitectónico: redes discriminativas, tipado estricto y la demo de DOOM.",
+        "thesis": "Durante años, la industria forzó a los LLMs generativos a realizar tareas de decisión y clasificación rápida, incurriendo en latencias intolerables, costos de tokens innecesarios y alucinaciones de formato. Jev, de TypeSafe AI, inaugura la categoría de modelos de 'Sistema 1': redes neuronales no generativas que evalúan estados en milisegundos y devuelven tipos de datos fuertemente tipados (choice, score, boolean). Esto libera a los modelos de razonamiento (Sistema 2) para enfocarse en la deliberación profunda, permitiendo que los agentes autónomos reaccionen en tiempo real.",
+        "nexo": "Responde directamente al debate arquitectónico planteado sobre modelos que toman decisiones en contraposición a modelos que generan prosa autorregresiva.",
+        "content_blocks": [
+            {
+                "title": "1. El Error Arquitectónico de Usar LLMs para Tomar Decisiones",
+                "body": """
+Durante la primera ola de la inteligencia artificial generativa, el enfoque estándar para automatizar flujos consistió en enviar un prompt masivo a un LLM (como GPT-4 o Claude) y pedirle que devolviera un JSON con una decisión binaria o una categoría. Este patrón es conceptualmente equivalente a contratar a un filósofo para que presione un botón de emergencia cada medio segundo: es absurdamente costoso, introduce segundos de latencia innecesaria y sufre de fragilidad sintáctica cuando el modelo 'alucina' un formato incorrecto.
+
+Los modelos autorregresivos predicen el siguiente token de texto a partir de una distribución de probabilidad sobre decenas de miles de palabras. Cuando el objetivo de un sistema de software no es conversar ni redactar un ensayo, sino elegir la mejor ruta entre cinco opciones posibles, generar palabras es un desperdicio computacional masivo.
+"""
+            },
+            {
+                "title": "2. Anatomía Técnica de Jev: El Modelo Discriminativo de TypeSafe AI",
+                "body": """
+Presentado por el laboratorio **TypeSafe AI** y analizado en profundidad por la comunidad técnica y divulgadores como **DotCSV**, **Jev** representa una ruptura radical con los LLMs tradicionales. No es un chatbot; es un **modelo discriminativo generalista de Sistema 1**.
+
+Jev recibe como entrada un estado o contexto (texto, variables de entorno o metadatos) y entrega directamente tipos de datos nativos sin pasar por la generación de cadenas de texto intermedias:
+* **Choice:** Evalúa un conjunto discreto de opciones predefinidas y asigna probabilidades normalizadas a cada una de forma determinista.
+* **Score:** Retorna un valor numérico escalar continuo para clasificación de riesgo, relevancia o prioridad.
+* **Boolean / Noul:** Resuelve preguntas de verdadero/falso con su intervalo de confianza matemático.
+
+Al eliminar por completo el bucle autorregresivo de generación de tokens, la inferencia de Jev ocurre en una fracción de milisegundo y a un costo que es órdenes de magnitud inferior al de cualquier LLM ligero.
+"""
+            },
+            {
+                "title": "3. La Demo de DOOM y la Dupla Sistema 1 + Sistema 2 en Agentes",
+                "body": """
+La validación más espectacular de esta arquitectura fue la demostración donde un agente impulsado por Jev jugó al legendario videojuego **DOOM** en tiempo real. En lugar de procesar fotogramas de video con modelos de visión pesados, Jev ingiere directamente el vector de estado del motor del juego (salud, coordenadas de enemigos, munición restante) y decide la acción inmediata (disparar, esquivar a la izquierda, cambiar a escopeta) a decenas de decisiones por segundo.
+
+Esta capacidad redefine la ingeniería de agentes autónomos en producción bajo la teoría de Daniel Kahneman (*Pensar rápido, pensar despacio*):
+* **Sistema 1 (Jev):** El reflejo incondicional. Enruta peticiones, filtra spam, valida condiciones de seguridad y selecciona herramientas a velocidad de hardware.
+* **Sistema 2 (LLMs de Razonamiento como Gemini Thinking / o1):** El estratega reflexivo. Se invoca únicamente cuando el Sistema 1 reporta una anomalía o una situación que exige planificación deliberativa de largo plazo.
+"""
+            },
+            {
+                "title": "4. Implicaciones Industriales y Conexión Geek: El Ultra Instinto",
+                "body": """
+En el anime y la ciencia ficción, la cúspide del dominio en combate (como el *Ultra Instinto* de Goku o los reflejos del Sistema Cardinal en *Sword Art Online*) se alcanza cuando el cuerpo reacciona antes de que la mente consciente termine de pensar. 
+
+En la arquitectura de software de 2026, Jev dota a los agentes de software de ese mismo instinto reflejo. Los sistemas empresariales dejan de congelarse esperando respuestas de 10 segundos de la nube para ejecutar decisiones operativas críticas.
+"""
+            }
+        ],
+        "apa_references": [
+            "TypeSafe AI. (2026). *Jev: The non-generative foundation model for structured decision making and low-latency system-1 classification*. TypeSafe AI Research. https://typesafe.ai",
+            "Santana Vega, C. [DotCSV]. (2026, 21 de septiembre). *¿Qué es Jev? El NUEVO MODELO GENERALISTA del que todos hablan* [Video]. YouTube. https://youtu.be/AwYYpXfFM9k",
+            "Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux. https://us.macmillan.com/books/9780374533557/thinkingfastandslow",
+            "LeCun, Y. (2022). *A path towards autonomous machine intelligence*. OpenReview. https://openreview.net/forum?id=BZ5a1r-kVsf"
+        ]
     }
 }
+
 
 
 # ==============================================================================

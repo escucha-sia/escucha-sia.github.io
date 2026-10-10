@@ -53,12 +53,18 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bPLA\b', 'P L A', t)
     t = re.sub(r'\bPETG\b', 'P E T G', t)
     t = re.sub(r'\bTPU\b', 'T P U', t)
-    # Modelos de Decisión y JEPA
+    # Modelos de Decisión y JEPA / Jev
     t = re.sub(r'\bJEPA\b', 'Yepa', t)
     t = re.sub(r'\bI-JEPA\b', 'I-Yepa', t)
     t = re.sub(r'\bV-JEPA\b', 'V-Yepa', t)
     t = re.sub(r'\bLeCun\b', 'LeCún', t)
+    t = re.sub(r'\bJev\b', 'Yev', t)
+    t = re.sub(r'\bTypeSafe AI\b', 'Taip-Seif A I', t)
+    t = re.sub(r'\bTypeSafe\b', 'Taip-Seif', t)
+    t = re.sub(r'\bDotCSV\b', 'Dot C S V', t)
+    t = re.sub(r'\bDOOM\b', 'Dum', t)
     return t
+
 
 
 async def process_dialogue(script_text: str, episode_title: str, custom_filename: str = None, episode_description: str = None) -> Path:
