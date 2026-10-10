@@ -7,4 +7,6 @@ __pycache__/
 *.log
 debug_page.png
 dashboard_screenshot.png
+cookies.txt
+inbox_processed.json
 

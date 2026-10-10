@@ -1,0 +1,171 @@
+{
+  "covered_items": [
+    {
+      "title": "sIA Deep Dive: Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev",
+      "summary": "sIA Deep Dive: Análisis exhaustivo de Laya (aayushch/laya), la alternativa open source y local-first a los modelos privativos de decisión como Jev. Arquitectura en Tauri v2, Svelte 5, FastAPI, n8n emb",
+      "date": "Sat, 10 Oct 2026 10:21:45 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1",
+      "summary": "sIA Deep Dive: Análisis del nuevo modelo Jev de TypeSafe AI (analizado por DotCSV). Por qué los LLMs no deben usarse para tomar decisiones, tipado estricto (choice, score, boolean), la demo de DOOM y ",
+      "date": "Sat, 10 Oct 2026 09:30:10 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: Bambu Lab y la Revolución de la Impresión 3D: Visión por Computadora, LiDAR y el Ecosistema Maker",
+      "summary": "sIA Deep Dive: Análisis exhaustivo sobre Bambu Lab (X1C, P1S, AMS), visión por computadora en el borde para detección de fallas, micro-LiDAR, compensación de resonancia y el debate de código abierto v",
+      "date": "Wed, 07 Oct 2026 08:04:45 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: Inferencia en el Borde vs Nube: NPU del Galaxy S25 e Insta360 X4",
+      "summary": "sIA Deep Dive: Silicio NPU en Galaxy S25 (Snapdragon/Exynos), inferencia de SLMs locales en One UI 9, visión computacional 8K en Insta360 X4 y el Augma de Ordinal Scale.",
+      "date": "Sun, 04 Oct 2026 13:06:58 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: Data Mesh en Retail Masivo: Contratos Semánticos y Streaming Continuo",
+      "summary": "sIA Deep Dive: Descentralización de datos en retail de alta escala (estilo Walmart), Data Products con dbt y BigQuery, contratos semánticos en Kafka y economía de gremios.",
+      "date": "Sun, 04 Oct 2026 13:06:41 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: El Fin de la Amnesia en LLMs: Context Caching y Memoria Persistente",
+      "summary": "sIA Deep Dive: Investigación profunda sobre Context Caching en Gemini, arquitecturas de memoria episódica jerárquica, aprendizaje anidado y el paralelismo con los Fluctlights de SAO.",
+      "date": "Sun, 04 Oct 2026 13:06:27 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: BigQuery Gemini Cloud Assist y la Muerte de las Consultas Manuales",
+      "summary": "sIA Deep Dive: Análisis exhaustivo sobre cómo Gemini Cloud Assist en BigQuery y Dataplex desplaza el valor del Data Engineer del SQL manual a la modelación semántica y gobernanza.",
+      "date": "Sun, 04 Oct 2026 13:06:12 GMT"
+    },
+    {
+      "title": "sIA Deep Dive: Model Context Protocol y Agentes Autónomos en Producción",
+      "summary": "Episodio Deep Dive de investigación exhaustiva: Model Context Protocol y Agentes Autónomos en Producción. Tesis: El protocolo MCP está reemplazando a las APIs REST tradicionales como el nuevo bus de i",
+      "date": "Sun, 04 Oct 2026 11:17:42 GMT"
+    },
+    {
+      "title": "sIA #2: De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity",
+      "summary": "sIA #2: Análisis sobre Vibe Coding vs Vibe Reviewing, la ilusión de competencia técnica, la metamorfosis del ingeniero de datos a arquitecto de contexto y el paralelismo con el Sistema Cardinal de SAO",
+      "date": "Sat, 03 Oct 2026 23:19:21 GMT"
+    },
+    {
+      "title": "sIA #1: Gemini 3.8, Agentic BigQuery, Android 17 y Sword Art Online",
+      "summary": "sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia.",
+      "date": "Sat, 03 Oct 2026 22:40:55 GMT"
+    },
+    {
+      "title": "sIA: 5 claves que transforman la integración de datos",
+      "summary": "Capítulo histórico de sIA: 5 claves que transforman la integración de datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo",
+      "date": "Fri, 11 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA)",
+      "summary": "Capítulo histórico de sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA). Análisis e investigación sobre",
+      "date": "Sat, 12 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: Antigravity La IA deja de ser copiloto",
+      "summary": "Capítulo histórico de sIA: Antigravity La IA deja de ser copiloto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referen",
+      "date": "Sun, 13 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: Arquitecto de Inteligencia vs El Fontanero de Datos",
+      "summary": "Capítulo histórico de sIA: Arquitecto de Inteligencia vs El Fontanero de Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artíc",
+      "date": "Mon, 14 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Convierte a Claude en tu empleado técnico",
+      "summary": "Capítulo histórico de sIA: Convierte a Claude en tu empleado técnico. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y refe",
+      "date": "Tue, 15 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: Data Mesh No Es Tecnología Es Gente y Estructura",
+      "summary": "Capítulo histórico de sIA: Data Mesh No Es Tecnología Es Gente y Estructura. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo",
+      "date": "Wed, 16 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: De plomeros a arquitectos de contexto",
+      "summary": "Capítulo histórico de sIA: De plomeros a arquitectos de contexto. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referenc",
+      "date": "Thu, 17 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes",
+      "summary": "Capítulo histórico de sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes. Análisis e investigación sobre arquitectura de datos, IA generativa y",
+      "date": "Fri, 18 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad",
+      "summary": "Capítulo histórico de sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad. Análisis e investigación sobre arquitectura de datos, IA generativ",
+      "date": "Sat, 19 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión)",
+      "summary": "Capítulo histórico de sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión). Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital",
+      "date": "Sun, 20 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: El fin de la amnesia crónica en IA",
+      "summary": "Capítulo histórico de sIA: El fin de la amnesia crónica en IA. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias",
+      "date": "Mon, 21 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: IA La burbuja financiera que se autoalimenta",
+      "summary": "Capítulo histórico de sIA: IA La burbuja financiera que se autoalimenta. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y r",
+      "date": "Tue, 22 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: IA que razona antes de actuar",
+      "summary": "Capítulo histórico de sIA: IA que razona antes de actuar. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y referencias APA:",
+      "date": "Wed, 23 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿Velocidad Instantánea o Precisión Histórica?",
+      "summary": "Capítulo histórico de sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿Velocidad Instantánea o Precisión Histórica?. Análisis e investigación sobre arquitectura de datos, IA generativa y estr",
+      "date": "Thu, 24 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella)",
+      "summary": "Capítulo histórico de sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella). Análisis e investigación sobre arquitectura de datos,",
+      "date": "Fri, 25 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: Siete Métricas Post Lanzamiento para Confianza en Datos",
+      "summary": "Capítulo histórico de sIA: Siete Métricas Post Lanzamiento para Confianza en Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer a",
+      "date": "Sat, 26 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Siete Métricas para Confiar en tus Datos",
+      "summary": "Capítulo histórico de sIA: Siete Métricas para Confiar en tus Datos. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y refer",
+      "date": "Sun, 27 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.",
+      "summary": "Capítulo histórico de sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artícu",
+      "date": "Mon, 28 Sep 2026 08:00:00 GMT"
+    },
+    {
+      "title": "sIA: VSCode centro de mando para arquitectura viva",
+      "summary": "Capítulo histórico de sIA: VSCode centro de mando para arquitectura viva. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y ",
+      "date": "Tue, 29 Sep 2026 09:00:00 GMT"
+    },
+    {
+      "title": "sIA: Vibe coding y la ilusión de competencia",
+      "summary": "Capítulo histórico de sIA: Vibe coding y la ilusión de competencia. Análisis e investigación sobre arquitectura de datos, IA generativa y estrategia digital por Carlos Corona. | Leer artículo y refere",
+      "date": "Wed, 30 Sep 2026 10:00:00 GMT"
+    },
+    {
+      "title": "sIA #31: El Dilema de Latencia en Gemini 3.8, la Seguridad Agéntica de Anthropic y la Física de E-Ink Gallery 3",
+      "date": "2026-10-10",
+      "topics": [
+        "Gemini 3.8 Flash Latency and Reasoning Debate",
+        "Anthropic Autonomous Agent Sandbox Escape and Internet Ban",
+        "Snowflake Semantic View vs dbt Semantic Layer",
+        "SQL Optimization: JOIN + ORDER BY Disk Spilling and Execution Plans",
+        "KOReader and Calibre Open Source Reading Sync",
+        "3D Printed Fluora Plant Lamp and PETG Diffusion on Bambu Lab",
+        "E-Ink Gallery 3 ACeP Four-Particle Physics vs Kaleido 3",
+        "Synthetic DNA Data Storage and Enzymatic Synthesis",
+        "Nothing But Blackened Teeth by Cassandra Khaw",
+        "Omniscient Reader's Viewpoint (ORV) Meta-Fiction"
+      ]
+    }
+  ],
+  "last_run": "2026-10-10"
+}

@@ -13,6 +13,18 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA #31: El Dilema de Latencia en Gemini 3.8, la Seguridad Agéntica de Anthropic y la Física de E-Ink Gallery 3</title>
+      <link>https://escucha-sia.github.io/articulos/edicion-diaria-gemini-38-anthropic-gallery3-sql.html</link>
+      <description>Episodio diario de 1 hora de sIA. Jorge y Dalia analizan la controversia de latencia en Gemini 3.8 Flash, el corte de internet de Anthropic en evals agénticos tras detectar evasión de restricciones, Snowflake Semantic View vs dbt, optimización profunda de queries SQL JOIN + ORDER BY para evitar disk spilling, la sincronización abierta con KOReader y Calibre, la lámpara Fluora 3D en Bambu Lab, la física electroforética de pantallas E-Ink Gallery 3, el almacenamiento de petabytes en ADN sintético, y la deconstrucción del terror y la metaficción en Nothing But Blackened Teeth y Omniscient Reader's Viewpoint.</description>
+      <pubDate>Sat, 10 Oct 2026 12:40:28 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Daily_2026-10-10.mp3" length="49678319" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Daily_2026-10-10.mp3</guid>
+      <itunes:duration>41:23</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>sIA Deep Dive: Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev</title>
       <link>https://escucha-sia.github.io/articulos/laya-open-source-ai-command-center-alternativa-jev.html</link>
       <description>sIA Deep Dive: Análisis exhaustivo de Laya (aayushch/laya), la alternativa open source y local-first a los modelos privativos de decisión como Jev. Arquitectura en Tauri v2, Svelte 5, FastAPI, n8n embebido, recuperación híbrida ChromaDB + SQLite FTS5 (RRF), Action Cards y agentes CLI.</description>

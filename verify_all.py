@@ -36,8 +36,8 @@ with open('index.html', 'r', encoding='utf-8') as f:
 assert 'charlycorona.github.io' not in idx_content, "URL obsoleta detectada en index.html"
 assert 'descargar mp3' not in idx_content.lower(), "Botón de descarga detectado en index.html"
 card_count = idx_content.count('class="card ')
-assert card_count == 30, f"Discrepancia en tarjetas: {card_count}"
-print("[OK] Portada index.html verificada: 30 tarjetas interactivas, 0 enlaces rotos, reproductor HTML5 integrado.")
+assert card_count == len(items), f"Discrepancia en tarjetas: {card_count} vs {len(items)}"
+print(f"[OK] Portada index.html verificada: {card_count} tarjetas interactivas, 0 enlaces rotos, reproductor HTML5 integrado.")
 
 # 3. Auditar artículos
 articulos = [f for f in os.listdir('articulos') if f.endswith('.html')]

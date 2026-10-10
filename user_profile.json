@@ -1,0 +1,40 @@
+{
+  "user": "Unhappy-Thought-4502",
+  "tiktok_user": "charly_corona",
+  "reddit_feed_url": "https://www.reddit.com/.rss?feed=591a175e41cc0bdd0057144423c81485fcb44c0c&user=Unhappy-Thought-4502",
+  "pillars": {
+    "ai_and_agents": {
+      "weight": 1.0,
+      "subreddits": ["r/google_antigravity", "r/Bard", "r/notebooklm", "r/ArtificialInteligence", "r/LocalLLaMA"],
+      "keywords": ["gemini", "antigravity", "notebooklm", "reasoning", "flash", "context caching", "agentic"]
+    },
+    "data_and_sql_engineering": {
+      "weight": 0.95,
+      "subreddits": ["r/SQL", "r/dataengineering", "r/bigquery", "r/dbt"],
+      "keywords": ["query optimization", "join", "order by", "data mesh", "scd2", "streaming", "contracts"]
+    },
+    "gadgets_hardware_and_wearables": {
+      "weight": 0.90,
+      "subreddits": ["r/SmartGlasses", "r/eink", "r/Calibre", "r/samsunggalaxy", "r/SamsungDex", "r/Dreame_Tech", "r/ToyotaSienna"],
+      "keywords": ["smart glasses", "e-ink", "koreader", "kobo", "dex", "npu", "slam", "robotics"]
+    },
+    "maker_and_3d_printing": {
+      "weight": 0.85,
+      "subreddits": ["r/3Dprinting", "r/BambuLab", "r/OrcaSlicer"],
+      "keywords": ["bambu lab", "fdm", "ams", "filaments", "orcaslicer", "lidar"]
+    },
+    "geek_culture_anime_and_horror": {
+      "weight": 0.85,
+      "subreddits": ["r/anime", "r/manhwa", "r/horrorlit", "r/J_Horror", "r/swordartonline", "r/mushokutensei"],
+      "keywords": ["dr. stone", "terraforming", "sword art online", "manhwa", "horrorlit", "j-horror", "scifi"]
+    }
+  },
+  "serendipity_vectors": [
+    "Almacenamiento de datos en ADN sintético",
+    "Pantallas bistables E-Ink Gallery 3 y color reflectivo",
+    "Computación neuromórfica y Spiking Neural Networks (SNN)",
+    "Smart Glasses con micro-OLED y modelos multimodales en el marco",
+    "Impresión 4D con metamateriales térmicos",
+    "Full-Dive VR y háptica de microfluidos real"
+  ]
+}

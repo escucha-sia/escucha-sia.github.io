@@ -92,6 +92,22 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bLLM\b', 'L L M', t)
     t = re.sub(r'\bRAG\b', 'Rag', t)
     t = re.sub(r'\bMCP\b', 'M C P', t)
+    # Hardware, E-Ink y Serendipia
+    t = re.sub(r'\bACeP\b', 'A C E P', t)
+    t = re.sub(r'\bGallery 3\b', 'Gálery tres', t)
+    t = re.sub(r'\bKaleido 3\b', 'Caleido tres', t)
+    t = re.sub(r'\bppi\b', 'P P I', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bADN\b', 'A D N', t)
+    t = re.sub(r'\bDNA\b', 'D N A', t)
+    t = re.sub(r'\bKOReader\b', 'Kei-Ou-Ríder', t)
+    t = re.sub(r'\bCalibre\b', 'Cálibre', t)
+    t = re.sub(r'\bgVisor\b', 'Yi-Váisor', t)
+    t = re.sub(r'\bFirecracker\b', 'Fáier-cráquer', t)
+    t = re.sub(r'\bAnthropic\b', 'Antrópic', t)
+    t = re.sub(r'\bClaude\b', 'Clod', t)
+    t = re.sub(r'\bCTE\b', 'C T E', t)
+    t = re.sub(r'\bCTEs\b', 'C T Es', t)
+    t = re.sub(r'\bEXPLAIN\b', 'Expléin', t)
     return t
 
 
@@ -110,6 +126,7 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
 
     current_speaker = None
     current_text = []
+    current_chapter = "Introducción"
 
     def commit_current_block():
         nonlocal chunk_index
@@ -118,8 +135,8 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
             if combined_text:
                 cleaned = clean_for_tts(combined_text)
                 voice = VOICE_MALE if current_speaker == "JORGE" else VOICE_FEMALE
-                chunk_file = TEMP_DIR / f"chunk_{chunk_index:03d}_{current_speaker.lower()}.mp3"
-                chunks.append((chunk_file, cleaned, voice, current_speaker))
+                chunk_file = TEMP_DIR / f"chunk_{chunk_index:04d}_{current_speaker.lower()}.mp3"
+                chunks.append((chunk_file, cleaned, voice, current_speaker, current_chapter))
                 chunk_index += 1
 
     for line in lines:
@@ -128,7 +145,13 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
             continue
             
         if line_s.startswith('[SFX:') or line_s.startswith('[sfx:'):
-            # Sound effect marker
+            continue
+
+        # Check for chapter marker
+        ch_match = re.match(r'^\[(?:CHAPTER|BLOQUE|ACTO)\s*:\s*(.*?)\]', line_s, re.IGNORECASE)
+        if ch_match:
+            commit_current_block()
+            current_chapter = ch_match.group(1).strip()
             continue
             
         # Detect speaker
@@ -152,20 +175,71 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     if not chunks:
         raise ValueError("No se encontraron intervenciones con formato 'JORGE:' o 'DALIA:' en el guion.")
 
-    print(f"Generando {len(chunks)} intervenciones de voz para el dúo...")
+    print(f"Generando {len(chunks)} intervenciones de voz para el dúo con concurrencia...")
     
-    # Synthesize each chunk
-    for idx, (chunk_file, text, voice, speaker) in enumerate(chunks, 1):
-        print(f"  [{idx}/{len(chunks)}] Sintetizando {speaker} ({voice}): \"{text[:40]}...\"")
-        await synthesize_chunk(text, voice, chunk_file)
+    # Synthesize chunks with concurrency limit
+    sem = asyncio.Semaphore(6)
+    completed_count = 0
+    total_chunks = len(chunks)
 
-    # Create concat list for ffmpeg
+    async def worker(chunk_file, text, voice, speaker):
+        nonlocal completed_count
+        async with sem:
+            await synthesize_chunk(text, voice, chunk_file)
+            completed_count += 1
+            if completed_count % 10 == 0 or completed_count == total_chunks:
+                print(f"  [{completed_count}/{total_chunks}] Sintetizado con éxito...")
+
+    tasks = [worker(cf, txt, v, spk) for cf, txt, v, spk, ch in chunks]
+    await asyncio.gather(*tasks)
+
+    # Calculate chunk durations and chapters
+    print("Calculando duración exacta y marcadores de capítulos...")
+    chapter_spans = []
+    current_ch_name = None
+    ch_start_ms = 0
+    current_time_ms = 0
+
     concat_list_file = TEMP_DIR / "concat_list.txt"
     with open(concat_list_file, 'w', encoding='utf-8') as f:
-        for chunk_file, _, _, _ in chunks:
-            # Escape path for ffmpeg concat
+        for chunk_file, _, _, _, ch_name in chunks:
             path_str = str(chunk_file).replace('\\', '/')
             f.write(f"file '{path_str}'\n")
+
+            dur_cmd = ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(chunk_file)]
+            dur_res = subprocess.run(dur_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            try:
+                dur_sec = float(dur_res.stdout.strip())
+            except Exception:
+                dur_sec = 2.0
+            dur_ms = int(dur_sec * 1000)
+
+            if ch_name != current_ch_name:
+                if current_ch_name is not None:
+                    chapter_spans.append((current_ch_name, ch_start_ms, current_time_ms))
+                current_ch_name = ch_name
+                ch_start_ms = current_time_ms
+
+            current_time_ms += dur_ms
+
+    if current_ch_name is not None:
+        chapter_spans.append((current_ch_name, ch_start_ms, current_time_ms))
+
+    # Generate FFMETADATA file with ID3v2 chapters
+    meta_lines = [
+        ";FFMETADATA1\n",
+        f"title={episode_title}\n",
+        "artist=Jorge y Dalia (sIA)\n",
+        "album=sIA\n",
+        "genre=Podcast\n",
+        f"date={datetime.now().strftime('%Y')}\n\n"
+    ]
+    if chapter_spans:
+        for ch_title, s_ms, e_ms in chapter_spans:
+            meta_lines.append(f"[CHAPTER]\nTIMEBASE=1/1000\nSTART={s_ms}\nEND={e_ms}\ntitle={ch_title}\n\n")
+
+    meta_file = TEMP_DIR / "chapters_metadata.txt"
+    meta_file.write_text("".join(meta_lines), encoding='utf-8')
 
     # Generate output filenames
     today_str = datetime.now().strftime("%Y-%m-%d")
@@ -173,20 +247,17 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     final_output = AUDIO_DIR / output_filename
     spotify_output = SPOTIFY_DIR / output_filename
 
-    print("\nEnsamblando audio con ffmpeg...")
-    # Concat and add ID3 metadata
+    print("\nEnsamblando audio final con capítulos ID3v2 en ffmpeg...")
     cmd = [
         "ffmpeg", "-y",
         "-f", "concat",
         "-safe", "0",
         "-i", str(concat_list_file),
+        "-i", str(meta_file),
+        "-map_metadata", "1",
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-metadata", f"title={episode_title}",
-        "-metadata", "artist=Jorge y Dalia (sIA)",
-        "-metadata", "album=sIA",
-        "-metadata", "genre=Podcast",
-        "-metadata", f"date={datetime.now().strftime('%Y')}",
+        "-id3v2_version", "3",
         str(final_output)
     ]
     
