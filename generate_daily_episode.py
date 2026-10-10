@@ -8,7 +8,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 # Script for Episode 01: 03 de Octubre de 2026
 EPISODE_SCRIPT = """
-JORGE: ¡Muy buenos días Carlos! Bienvenidos a sIA, tu espacio de análisis técnico y cultura tech diseñado para acompañarte en tu trayecto matutino. Soy Jorge.
+JORGE: ¡Muy buenos días a toda nuestra audiencia! Bienvenidos a sIA, tu espacio de análisis técnico y cultura tech diseñado para acompañarte en tu día. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy es sábado tres de octubre de dos mil veintiséis, y les traemos un episodio cargado de noticias clave: cambios importantes en Google A I Studio, la evolución hacia el Agentic Data Cloud en BigQuery, la llegada de Android diecisiete a la serie Galaxy ese veinticinco y novedades muy esperadas en el mundo de Sword Art Online y Mushoku Tensei.
 JORGE: Así es Dalia. Comencemos directo con el bloque de Inteligencia Artificial y herramientas para desarrolladores. Esta semana, Google implementó cuotas de uso diario dentro del playground de Google A I Studio. El objetivo principal es mantener la baja latencia y alta disponibilidad de la plataforma ante la enorme demanda de prototipado.
 DALIA: Una medida lógica, Jorge, considerando que los tiers de Google A I Pro y Ultra mantienen cuotas notablemente más altas. Además, se destacó la llegada de Gemini tres punto ocho Flash, posicionado como el nuevo caballo de batalla con razonamiento avanzado y soporte para SynthID Bio, que permite marcar con marcas de agua estructuras moleculares generadas por I A.
@@ -23,15 +23,19 @@ DALIA: Entre las novedades destacadas está My FanCam, una función de cámara q
 JORGE: Ideal para documentar trayectos o rodadas. Y para cerrar con broche de oro, entremos a nuestro bloque favorito: Cultura Geek, Anime y Literatura Fantástica.
 DALIA: ¡Grandes noticias para la comunidad! Reki Kawahara, el legendario creador de Sword Art Online, acaba de revelar nuevo tráiler y pósteres de combate para la adaptación al anime de Demons Crest, que estrena este seis de noviembre. Además, se confirmó oficialmente la producción de una nueva película original de la franquicia titulada Sword Art Online Integral Domain para dos mil veintiocho.
 JORGE: Y en el universo de Mushoku Tensei, tras el cierre de la primera parte de la tercera temporada, la comunidad ya debate los preparativos para la continuación en dos mil veintisiete. Además, en Japón arranca la gira Road to Macross Crossover dos mil veintiséis para celebrar el décimo aniversario de Macross Delta.
-DALIA: Una semana redonda para la tecnología, los datos y la cultura geek. Esperamos que este resumen te prepare con la mejor información para tu día y tu trayecto.
-JORGE: Recuerda que puedes consultar todos los detalles y scripts de este episodio directamente en tu estación de trabajo. ¡Maneja con cuidado, que tengas un excelente y productivo día, y nos escuchamos en la próxima edición de sIA!
-DALIA: ¡Hasta la próxima, Carlos!
+DALIA: Una semana redonda para la tecnología, los datos y la cultura geek. Esperamos que este resumen les prepare con la mejor información técnica.
+JORGE: Recuerda que puedes consultar todos los detalles, artículos y referencias de este episodio en nuestra revista digital sIA Journal. ¡Que tengan un excelente y productivo día, y nos escuchamos en la próxima edición de sIA!
+DALIA: ¡Hasta la próxima!
 """
 
 async def main():
     print("Iniciando generación completa del episodio sIA...")
     title = "sIA #1: Gemini 3.8, Agentic BigQuery, Android 17 y Sword Art Online"
-    output_file = await process_dialogue(EPISODE_SCRIPT, title)
+    output_file = await process_dialogue(
+        script_text=EPISODE_SCRIPT,
+        episode_title=title,
+        custom_filename="NoticIAs_Duo_2026-10-03.mp3"
+    )
     print(f"\n✅ ¡Episodio completo generado con éxito!\nArchivo: {output_file}")
 
 if __name__ == '__main__':

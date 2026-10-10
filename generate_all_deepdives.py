@@ -1,5 +1,5 @@
 """
-Generador Maestro de los 4 Episodios sIA Deep Dive solicitados por Carlos Corona.
+Generador Maestro de los 4 Episodios sIA Deep Dive.
 """
 
 import sys
@@ -14,7 +14,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 # EPISODIO 1: BigQuery Gemini Cloud Assist y la Muerte de las Consultas Manuales
 # ==============================================================================
 SCRIPT_EP_01 = """
-JORGE: ¡Hola Carlos! Bienvenidos a una nueva entrega de sIA Deep Dive. Soy Jorge.
+JORGE: ¡Hola a toda nuestra audiencia! Bienvenidos a una nueva entrega de sIA Deep Dive. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy nos sumergimos de lleno en el corazón de los almacenes de datos analíticos modernos: Google Cloud BigQuery y el impacto transformador de Gemini Cloud Assist.
 JORGE: Nuestra tesis de hoy es clara: la era en la que el analista o el ingeniero pasaba horas escribiendo consultas ese cu ele artesanales desde cero ha terminado. Con la integración de modelos de lenguaje directamente en el motor de ejecución, la analítica conversacional sobre grafos de metadatos se está convirtiendo en la interfaz por defecto.
 DALIA: Pero cuidado, Jorge, esto no significa que el trabajo del ingeniero de datos desaparezca. Al contrario: el foco de valor se desplaza de la sintaxis ese cu ele hacia la modelación semántica y la arquitectura de gobernanza. Si las tablas no tienen metadatos limpios en Dataplex, Gemini simplemente generará consultas sobre supuestos falsos.
@@ -22,7 +22,7 @@ JORGE: Exacto Dalia. Bajo el capó, BigQuery Studio ahora utiliza Gemini no solo
 DALIA: Y aquí viene el debate crítico que todo líder técnico debe enfrentar: el riesgo de las alucinaciones silenciosas en agregaciones financieras o métricas de negocio. Si le pides a Gemini "ventas netas del último trimestre", ¿sabe el modelo cómo se descuentan las devoluciones, las notas de crédito o los impuestos locales?
 JORGE: Si la empresa no definió un contrato de datos semántico o una métrica unificada en d b t, el modelo elegirá la columna que 'parezca' más lógica. Y el resultado numérico se verá impecable, pero estará financieramente equivocado. Por eso decimos que la IA no reemplaza el rigor del ingeniero; lo eleva a nivel de arquitectura y auditoría.
 DALIA: Y para nuestra conexión geek de hoy: esto me recuerda a los Archivos Akáshicos y a la biblioteca de Yggdrasil en la literatura fantástica. Tener acceso a toda la información del universo no te sirve de nada si no sabes formular la pregunta con los parámetros exactos.
-JORGE: Una analogía perfecta, Dalia. Carlos, en BigQuery el poder de cómputo ya es casi infinito; el verdadero reto es la precisión del contexto semántico. ¡Nos escuchamos en el siguiente acto!
+JORGE: Una analogía perfecta, Dalia. En BigQuery el poder de cómputo ya es casi infinito; el verdadero reto es la precisión del contexto semántico. ¡Nos escuchamos en el siguiente acto!
 DALIA: ¡Hasta pronto!
 """
 
@@ -30,7 +30,7 @@ DALIA: ¡Hasta pronto!
 # EPISODIO 2: El Fin de la Amnesia en LLMs: Context Caching y Memoria Persistente
 # ==============================================================================
 SCRIPT_EP_02 = """
-JORGE: ¡Saludos Carlos! Bienvenidos a sIA Deep Dive. Soy Jorge.
+JORGE: ¡Saludos a toda la comunidad tech! Bienvenidos a sIA Deep Dive. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy abordamos uno de los dolores de cabeza más grandes en la historia reciente de la inteligencia artificial: la amnesia crónica de los modelos de lenguaje y cómo finalmente la estamos superando.
 JORGE: La tesis central de este episodio es que la ventana de contexto estática y sin memoria ha quedado obsoleta. Con la llegada de Context Caching en Gemini y las arquitecturas de memoria episódica jerárquica, los agentes de software finalmente pueden aprender de interacciones pasadas y conservar experiencia acumulada.
 DALIA: Durante años, cada vez que abrías un chat o ejecutabas un pipeline con un LLM, el modelo sufría de amnesia total. Tenías que pagar y reenviar miles de tokens de contexto, documentación y código una y otra vez.
@@ -46,7 +46,7 @@ DALIA: Diseñar sistemas que recuerden lo esencial y descarten el ruido: esa es 
 # EPISODIO 3: Data Mesh en Retail Masivo: Contratos Semánticos y Streaming
 # ==============================================================================
 SCRIPT_EP_03 = """
-JORGE: ¡Hola Carlos! Bienvenidos a sIA Deep Dive. Soy Jorge.
+JORGE: ¡Hola a todos! Bienvenidos a sIA Deep Dive. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy nos adentramos en las trincheras de la alta concurrencia y el volumen masivo: Data Mesh en retail a escala global.
 JORGE: La tesis que defendemos hoy es que en empresas con millones de transacciones por segundo, los almacenes monolíticos centralizados fallan no por limitaciones de hardware, sino por la fricción organizacional. Data Mesh no es un framework tecnológico; es una transformación sociocultural que trata a los datos como un producto descentralizado con contratos semánticos estrictos.
 DALIA: En un gigante del retail tipo Walmart o comercio omnicanal, pretender que un solo equipo central de datos entienda la logística de almacenes, el inventario de última milla, la conciliación de pagos y los algoritmos de recomendación es una receta para el estancamiento.
@@ -62,7 +62,7 @@ DALIA: ¡Hasta la próxima!
 # EPISODIO 4: Inferencia en el Borde vs Nube: NPU del Galaxy S25 e Insta360 X4
 # ==============================================================================
 SCRIPT_EP_04 = """
-JORGE: ¡Qué tal Carlos! Bienvenidos a una nueva edición de sIA Deep Dive. Soy Jorge.
+JORGE: ¡Qué tal a toda nuestra audiencia! Bienvenidos a una nueva edición de sIA Deep Dive. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy miramos hacia el hardware que llevamos en la mano y en la mochila: el silicio de inferencia local en el Galaxy ese veinticinco y la captura espacial inmersiva con la Insta tres sesenta X cuatro.
 JORGE: Nuestra tesis es que la próxima frontera de la inteligencia artificial personal no se jugará en los macro centros de datos de la nube, sino en la unidad de procesamiento neuronal, la N P U, directamente en el silicio de nuestros dispositivos móviles.
 DALIA: Durante años dependíamos de enviar cada instrucción, audio o imagen a través de Internet para recibir una respuesta de la IA. Pero la latencia de red, la falta de cobertura y los riesgos de privacidad hacen que ese modelo sea insostenible para la asistencia en tiempo real.
@@ -71,8 +71,8 @@ DALIA: Y en movilidad, funciones como Now Brief y My FanCam en Uan U I nueve pro
 JORGE: Pero seamos honestos en el debate técnico, Dalia: el estrangulamiento térmico o thermal throttling sigue siendo una realidad física ineludible. Si pones a un teléfono delgado a inferir modelos pesados durante veinte minutos seguidos bajo el sol, la temperatura sube y el procesador baja drásticamente su frecuencia para proteger el silicio.
 DALIA: Totalmente. Por eso el futuro inmediato no es todo local ni todo en la nube, sino la arquitectura híbrida: inferencia rápida y privada en el borde para la interacción inmediata, y delegación inteligente a la nube solo cuando se requiere razonamiento ultra profundo.
 JORGE: Y como paralelismo geek: pensemos en el dispositivo Augma de Sword Art Online Ordinal Scale. La magia de la realidad aumentada radicaba en que el renderizado de combate ocurría al instante en la sien del jugador, sin el retraso de esperar paquetes de red desde un servidor remoto.
-DALIA: Procesar en el borde para vivir en tiempo real. Carlos, esperamos que disfrutes este análisis en tu trayecto. ¡Hasta la próxima edición de sIA Deep Dive!
-JORGE: ¡Hasta la próxima y excelente jornada!
+DALIA: Procesar en el borde para vivir en tiempo real. Esperamos que disfruten este análisis dondequiera que nos escuchen. ¡Hasta la próxima edición de sIA Deep Dive!
+JORGE: ¡Hasta la próxima y excelente jornada para todos!
 """
 
 DEEPDIVES_CONFIG = [

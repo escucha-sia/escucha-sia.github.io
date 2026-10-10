@@ -8,6 +8,7 @@ import re
 import os
 import json
 import unicodedata
+import subprocess
 from pathlib import Path
 from datetime import datetime
 
@@ -1491,7 +1492,7 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
             <div class="player-container">
                 <div class="player-label">
                     <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
-                    <a href="{spotify_url or SPOTIFY_SHOW_URL}" target="_blank" class="spotify-badge-btn">
+                    <a href="{spotify_url or SPOTIFY_SHOW_URL}" target="_blank" class="spotify-badge-btn" title="{'Escuchar directamente este capítulo en Spotify' if spotify_url else 'Ver en canal de Spotify (sincronizando catálogo)'}">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
                         {'Capítulo en Spotify' if spotify_url else 'Spotify Show'}
                     </a>
@@ -1561,7 +1562,9 @@ def render_magazine_index(catalog):
             
         cat_class_attr = " ".join(cat_classes)
         target_spotify_url = item.get("spotify_url") or SPOTIFY_SHOW_URL
-        spotify_card_label = "Capítulo Spotify" if item.get("spotify_url") else "Spotify Show"
+        spotify_card_label = "Capítulo en Spotify" if item.get("spotify_url") else "Spotify Show"
+        spotify_tooltip = "Escuchar directamente este capítulo en Spotify" if item.get("spotify_url") else "Ver podcast en Spotify (Capítulo en proceso de sync)"
+        spotify_btn_extra_class = "direct-episode" if item.get("spotify_url") else "pending-sync"
         
         grid_cards_html += f"""
         <div class="card badge-{item['badge_color']}" data-category="{cat_class_attr}">
@@ -1583,7 +1586,7 @@ def render_magazine_index(catalog):
 
             <div class="card-footer">
                 <a href="articulos/{item['filename']}" class="read-link">Leer artículo y APA &rarr;</a>
-                <a href="{target_spotify_url}" target="_blank" class="card-spotify-btn">
+                <a href="{target_spotify_url}" target="_blank" class="card-spotify-btn {spotify_btn_extra_class}" title="{spotify_tooltip}">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
                     {spotify_card_label}
                 </a>
@@ -1685,13 +1688,24 @@ def render_magazine_index(catalog):
     index_file.write_text(index_html, encoding='utf-8')
     print(f"\n[OK] Portada de revista digital generada: {index_file}")
 
+def get_audio_duration_str(filepath: Path) -> str:
+    try:
+        cmd = ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(filepath)]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        secs = float(res.stdout.strip())
+        m, s = divmod(int(secs), 60)
+        h, m = divmod(m, 60)
+        return f"{h:02d}:{m:02d}:{s:02d}" if h > 0 else f"{m:02d}:{s:02d}"
+    except Exception:
+        return "10:00"
+
 def update_podcast_xml_with_links(catalog):
     # Map audio filename to article url
     link_map = {item['audio_url'].split('/')[-1]: item['article_url'] for item in catalog}
     
     xml_content = XML_FILE.read_text(encoding='utf-8')
     
-    # Update each item to include <link> and anchor in description
+    # Update each item to include duration, correct length, <link> and anchor in description
     def replace_item(match):
         item_text = match.group(0)
         m_enc = re.search(r'<enclosure\s+url=[\"\'](.*?)[\"\']', item_text)
@@ -1699,33 +1713,49 @@ def update_podcast_xml_with_links(catalog):
             return item_text
         
         filename = m_enc.group(1).split('/')[-1]
-        article_url = link_map.get(filename)
-        if not article_url:
-            return item_text
         
-        # Inject <link> right after <title>
-        if "<link>" not in item_text:
-            item_text = re.sub(
-                r'(<title>.*?</title>)',
-                r'\1\n      <link>' + article_url + r'</link>',
-                item_text
-            )
+        # 1. Update file size and duration if file exists on disk
+        local_audio_path = AUDIO_DIR / filename
+        if local_audio_path.exists():
+            actual_size = local_audio_path.stat().st_size
+            item_text = re.sub(r'length="[0-9]+"', f'length="{actual_size}"', item_text)
             
-        # Enrich description with link to article and APA references
-        link_cta = f' | Leer artículo y referencias APA: {article_url}'
-        if article_url not in item_text:
-            item_text = re.sub(
-                r'(<description>)(.*?)(</description>)',
-                r'\1\2' + link_cta + r'\3',
-                item_text
-            )
+            dur_str = get_audio_duration_str(local_audio_path)
+            if "<itunes:duration>" in item_text:
+                item_text = re.sub(r'<itunes:duration>.*?</itunes:duration>', f'<itunes:duration>{dur_str}</itunes:duration>', item_text)
+            else:
+                item_text = re.sub(
+                    r'(<enclosure\s+[^>]*?/>)',
+                    r'\1\n      <itunes:duration>' + dur_str + r'</itunes:duration>',
+                    item_text
+                )
+
+        # 2. Inject <link> and article references if available
+        article_url = link_map.get(filename)
+        if article_url:
+            # Inject <link> right after <title>
+            if "<link>" not in item_text:
+                item_text = re.sub(
+                    r'(<title>.*?</title>)',
+                    r'\1\n      <link>' + article_url + r'</link>',
+                    item_text
+                )
+                
+            # Enrich description with link to article and APA references
+            link_cta = f' | Leer artículo y referencias APA: {article_url}'
+            if article_url not in item_text:
+                item_text = re.sub(
+                    r'(<description>)(.*?)(</description>)',
+                    r'\1\2' + link_cta + r'\3',
+                    item_text
+                )
             
         return item_text
         
     updated_xml = re.sub(r'<item>.*?</item>', replace_item, xml_content, flags=re.DOTALL)
     XML_FILE.write_text(updated_xml, encoding='utf-8')
     AUDIO_XML_FILE.write_text(updated_xml, encoding='utf-8')
-    print(f"[OK] podcast.xml y audio/podcast.xml actualizados con enlaces a artículos web.")
+    print(f"[OK] podcast.xml y audio/podcast.xml actualizados con duraciones, tamaños y enlaces a artículos web.")
 
 if __name__ == '__main__':
     build_all_articles()

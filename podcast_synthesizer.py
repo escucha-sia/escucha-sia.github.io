@@ -72,6 +72,26 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bSvelte\b', 'Esvelt', t)
     t = re.sub(r'\bLiteLLM\b', 'Lait L L M', t)
     t = re.sub(r'\bBYOK\b', 'B Y O K', t)
+    # Ecosistema Cloud, Datos y Modelos
+    t = re.sub(r'\bPostgreSQL\b', 'Postgres', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bPostgres\b', 'Postgres', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bMySQL\b', 'Mai-Es-Kiu-El', t)
+    t = re.sub(r'\bDocker\b', 'Dóquer', t)
+    t = re.sub(r'\bK8s\b', 'Ka ocho ese', t)
+    t = re.sub(r'\bPyTorch\b', 'Pai-Torch', t)
+    t = re.sub(r'\bHugging Face\b', 'Jaguíng Feis', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bLangChain\b', 'Lang-Chein', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bDatabricks\b', 'Data-briks', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bSnowflake\b', 'Snou-fleik', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bGitHub\b', 'Git-Jab', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bOpenAI\b', 'Open A I', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bFastAPI\b', 'Fast A P I', t)
+    t = re.sub(r'\bAirflow\b', 'Eir-flou', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bDagster\b', 'Dags-ter', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bLLMs\b', 'L L Ms', t)
+    t = re.sub(r'\bLLM\b', 'L L M', t)
+    t = re.sub(r'\bRAG\b', 'Rag', t)
+    t = re.sub(r'\bMCP\b', 'M C P', t)
     return t
 
 
@@ -197,6 +217,17 @@ def get_podcast_email() -> str:
             pass
     return ""
 
+def get_audio_duration_str(filepath: Path) -> str:
+    try:
+        cmd = ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(filepath)]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        secs = float(res.stdout.strip())
+        m, s = divmod(int(secs), 60)
+        h, m = divmod(m, 60)
+        return f"{h:02d}:{m:02d}:{s:02d}" if h > 0 else f"{m:02d}:{s:02d}"
+    except Exception:
+        return "05:00"
+
 def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_address: str = None, description: str = None):
     if not email_address:
         email_address = get_podcast_email() or "charly.corona@gmail.com"
@@ -207,6 +238,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     audio_url = f"{base_url}/audio/{filename}"
     cover_url = f"{base_url}/cover.jpg"
     desc_text = description or "sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia."
+    dur_str = get_audio_duration_str(filepath)
     
     new_item = f"""    <item>
       <title>{episode_title}</title>
@@ -214,24 +246,49 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
       <pubDate>{pub_date}</pubDate>
       <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
       <guid isPermaLink="true">{audio_url}</guid>
+      <itunes:duration>{dur_str}</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="{cover_url}"/>
       <itunes:explicit>no</itunes:explicit>
     </item>"""
 
-    # Preserve existing items
-    existing_items = []
+    # Preserve existing items and position if updating
+    found_and_replaced = False
+    new_items_list = []
     if rss_file.exists():
         try:
             content = rss_file.read_text(encoding='utf-8')
             items_found = re.findall(r'<item>.*?</item>', content, re.DOTALL)
             for it in items_found:
-                if audio_url not in it:
-                    existing_items.append(f"    {it.strip()}")
+                if audio_url in it:
+                    # Update in place, preserving existing pubDate and link
+                    m_date = re.search(r'<pubDate>(.*?)</pubDate>', it)
+                    orig_date = m_date.group(1) if m_date else pub_date
+                    m_link = re.search(r'<link>(.*?)</link>', it)
+                    link_line = f"\n      <link>{m_link.group(1)}</link>" if m_link else ""
+                    
+                    updated_it = f"""    <item>
+      <title>{episode_title}</title>{link_line}
+      <description>{desc_text}</description>
+      <pubDate>{orig_date}</pubDate>
+      <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
+      <guid isPermaLink="true">{audio_url}</guid>
+      <itunes:duration>{dur_str}</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="{cover_url}"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>"""
+                    new_items_list.append(updated_it)
+                    found_and_replaced = True
+                else:
+                    new_items_list.append(f"    {it.strip()}")
         except Exception as e:
             print(f"[WARN] Error leyendo items existentes de RSS: {e}")
 
-    all_items = [new_item] + existing_items
+    if not found_and_replaced:
+        new_items_list.insert(0, new_item)
+
+    all_items = new_items_list
     items_block = "\n".join(all_items)
 
     rss_content = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -266,7 +323,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
 if __name__ == '__main__':
     # Test script if executed directly
     sample_script = """
-    JORGE: ¡Hola Carlos! Bienvenidos a NoticIAs Dúo, tu dosis técnica diaria para el camino.
+    JORGE: ¡Hola a toda nuestra audiencia! Bienvenidos a sIA, tu dosis técnica diaria para el camino.
     DALIA: Hola a todos. Hoy tenemos noticias muy potentes en Google AI Studio, BigQuery y el despliegue de Android 17 en la serie S25 de Samsung.
     JORGE: Así es Dalia. En Google anunciaron la transición de los clásicos Gems hacia Skills modulares en Workspace y Gemini.
     DALIA: Y en el mundo geek, Reki Kawahara acaba de lanzar el tráiler de su nuevo anime y la próxima película de Sword Art Online. ¡Comencemos!

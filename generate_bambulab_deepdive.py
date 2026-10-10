@@ -12,7 +12,7 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 SCRIPT = """
-JORGE: ¡Hola Carlos! Bienvenidos a una edición muy especial de sIA Deep Dive, nuestro espacio de análisis técnico exhaustivo. Soy Jorge.
+JORGE: ¡Hola a toda nuestra audiencia! Bienvenidos a una edición muy especial de sIA Deep Dive, nuestro espacio de análisis técnico exhaustivo. Soy Jorge.
 DALIA: ¡Y yo soy Dalia! Hoy inauguramos formalmente un nuevo pilar temático en el podcast que nos apasiona profundamente y que está transformando la ingeniería de hardware: la impresión 3D, la fabricación digital distribuida y el impacto disruptivo de Bambu Lab.
 JORGE: Así es Dalia. Durante más de una década, la impresión 3D por deposición fundida, o FDM, estuvo confinada al territorio de los entusiastas del bricolaje extremo: pasar horas calibrando la cama con una hoja de papel, ajustando correas a oído y sufriendo una tasa de fallas frustrante. Pero la llegada de Bambu Lab cambió las reglas del juego para siempre.
 DALIA: La tesis central que sostenemos hoy es rotunda: Bambu Lab transformó la impresión 3D de un pasatiempo artesanal y frustrante en un electrodoméstico de alta precisión industrial. Al integrar sensores de bucle cerrado, micro-LiDAR, compensación activa de vibraciones y visión por computadora para detección de fallas, redefinió la frontera entre el prototipado rápido y la producción en masa.
@@ -28,9 +28,9 @@ JORGE: Y surgen dilemas legítimos de soberanía de datos y seguridad: ¿qué pa
 DALIA: Y hablemos también del sistema multi-material, el AMS. Es una maravilla técnica cambiar entre cuatro o dieciséis colores y soportes solubles en una misma pieza, pero el costo ambiental y económico en desperdicio de filamento de purga es un problema real que los algoritmos de corte en Bambu Studio y OrcaSlicer apenas están comenzando a optimizar.
 JORGE: Un debate vital entre conveniencia y sostenibilidad. Y para nuestra conexión geek en el Acto Cuatro: esto me transporta directo a la herrería de Lisbeth en el piso cuarenta y ocho de Aincrad en Sword Art Online. En el anime, los artesanos forjaban armas legendarias combinando lingotes raros con interfaces de precisión digital.
 DALIA: ¡O a los replicadores de materia de Star Trek! Bambu Lab nos acerca un paso más a esa utopía de ciencia ficción: presionar un botón desde tu teléfono y materializar en plástico de ingeniería o fibra de carbono un objeto físico útil para tu hogar o tu trabajo.
-JORGE: La convergencia entre silicio, visión artificial y manufactura aditiva está apenas comenzando. Carlos, esperamos que esta inmersión profunda en Bambu Lab y la impresión 3D enriquezca tus proyectos y tu visión técnica.
+JORGE: La convergencia entre silicio, visión artificial y manufactura aditiva está apenas comenzando. Esperamos que esta inmersión profunda en Bambu Lab y la impresión 3D enriquezca la visión técnica de toda nuestra comunidad.
 DALIA: Recuerda consultar el artículo completo y las referencias bibliográficas en estilo APA en la revista digital sIA Journal. ¡Nos escuchamos en el próximo episodio!
-JORGE: ¡Hasta la próxima y felices impresiones!
+JORGE: ¡Hasta la próxima y felices impresiones para todos!
 DALIA: ¡Hasta pronto!
 """
 
