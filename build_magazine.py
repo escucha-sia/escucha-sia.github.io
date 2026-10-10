@@ -26,6 +26,22 @@ BASE_URL = "https://escucha-sia.github.io"
 GITHUB_REPO_URL = "https://github.com/escucha-sia/escucha-sia.github.io"
 SPOTIFY_SHOW_URL = "https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN"
 
+# Mapeo a los IDs específicos de capítulos en Spotify (open.spotify.com/episode/<id>)
+SPOTIFY_EPISODES_MAP = {
+    "El_Dilema_de_Big_Data": "https://open.spotify.com/episode/6vniV0G6JKj18U6p4I6uFF",
+    "Lambda_vs_Kappa": "https://open.spotify.com/episode/1zB4GGJd0zUEXQoFcbEeL8",
+    "Maquina_del_Tiempo": "https://open.spotify.com/episode/0xhFJ1QkBEj6fvDJgCOYex",
+}
+
+def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
+    if meta and meta.get("spotify_url"):
+        return meta["spotify_url"]
+    fn_lower = filename.lower()
+    for key, url in SPOTIFY_EPISODES_MAP.items():
+        if key.lower() in fn_lower:
+            return url
+    return None
+
 # ==============================================================================
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
@@ -1280,6 +1296,9 @@ def build_all_articles():
         # Check if we have pre-configured in-depth research data
         meta = RESEARCH_DATABASE.get(filename)
         
+        # Determine specific Spotify episode URL if available
+        spotify_episode_url = get_spotify_episode_url(filename, meta)
+        
         if meta:
             slug = meta["slug"]
             category = meta["category"]
@@ -1333,7 +1352,8 @@ def build_all_articles():
             thesis=thesis,
             nexo=nexo,
             content_blocks=content_blocks,
-            apa_refs=apa_refs
+            apa_refs=apa_refs,
+            spotify_url=spotify_episode_url
         )
         
         article_path.write_text(html_content, encoding='utf-8')
@@ -1349,7 +1369,8 @@ def build_all_articles():
             "article_url": article_url,
             "slug": slug,
             "filename": article_filename,
-            "raw_title": raw_title
+            "raw_title": raw_title,
+            "spotify_url": spotify_episode_url
         })
         print(f"  -> Artículo generado: articulos/{article_filename}")
         
@@ -1359,7 +1380,7 @@ def build_all_articles():
     # Update podcast.xml with links
     update_podcast_xml_with_links(catalog)
 
-def render_article_html(title, subtitle, category, badge_color, pub_date, read_time, audio_url, thesis, nexo, content_blocks, apa_refs):
+def render_article_html(title, subtitle, category, badge_color, pub_date, read_time, audio_url, thesis, nexo, content_blocks, apa_refs, spotify_url=None):
     blocks_html = ""
     for block in content_blocks:
         body = block["body"].strip()
@@ -1470,9 +1491,9 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
             <div class="player-container">
                 <div class="player-label">
                     <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
-                    <a href="{SPOTIFY_SHOW_URL}" target="_blank" class="spotify-badge-btn">
+                    <a href="{spotify_url or SPOTIFY_SHOW_URL}" target="_blank" class="spotify-badge-btn">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-                        Escuchar en Spotify
+                        {'Capítulo en Spotify' if spotify_url else 'Spotify Show'}
                     </a>
                 </div>
                 <audio controls preload="metadata">
@@ -1539,6 +1560,9 @@ def render_magazine_index(catalog):
             cat_classes.append("maker-3d")
             
         cat_class_attr = " ".join(cat_classes)
+        target_spotify_url = item.get("spotify_url") or SPOTIFY_SHOW_URL
+        spotify_card_label = "Capítulo Spotify" if item.get("spotify_url") else "Spotify Show"
+        
         grid_cards_html += f"""
         <div class="card badge-{item['badge_color']}" data-category="{cat_class_attr}">
             <div class="card-header">
@@ -1559,9 +1583,9 @@ def render_magazine_index(catalog):
 
             <div class="card-footer">
                 <a href="articulos/{item['filename']}" class="read-link">Leer artículo y APA &rarr;</a>
-                <a href="{SPOTIFY_SHOW_URL}" target="_blank" class="card-spotify-btn">
+                <a href="{target_spotify_url}" target="_blank" class="card-spotify-btn">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-                    Spotify
+                    {spotify_card_label}
                 </a>
             </div>
         </div>
