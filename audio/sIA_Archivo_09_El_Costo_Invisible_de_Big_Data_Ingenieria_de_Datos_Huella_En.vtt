@@ -1,0 +1,433 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:07.140
+Hola, bienvenidos a esta exploración de un tema que francamente conecta puntos que quizá
+
+00:00:07.140 --> 00:00:13.560
+nos siempre consideramos juntos. La ingeniería de datos y su huella energética. Tenemos
+
+00:00:13.560 --> 00:00:19.460
+en nuestras manos una análisis que profundiza en cómo las decisiones que tomamos al diseñar
+
+00:00:19.460 --> 00:00:25.440
+sistemas para manejar información, bueno, como impactan directamente el consumo de energía,
+
+00:00:25.440 --> 00:00:30.960
+y por ende pues tienen consecuencias ambientales. Un tema que está ganando muchísima
+
+00:00:30.960 --> 00:00:37.359
+tracción, ¿y con razón la verdad? Exacto. Así que nuestra misión hoy es de centrañar
+
+00:00:37.359 --> 00:00:43.359
+esa conexión. Queremos entender cómo esos patrones de ingeniería, esas formas habituales
+
+00:00:43.359 --> 00:00:50.400
+de construir flujos de datos, pueden ser silenciosamente costosos, en términos energéticos,
+
+00:00:50.399 --> 00:00:56.000
+y también ver si la sostenibilidad debería ser un pilar fundamental en este campo. Claro.
+
+00:00:56.000 --> 00:01:03.000
+El punto de partida del material es bastante contundente. La energía no es un detalle menor.
+
+00:01:03.000 --> 00:01:07.519
+Es un ingrediente esencial en cualquier aplicación de software que existe.
+
+00:01:07.519 --> 00:01:15.200
+Es una verdad física, no, ineludible. Cada ciclo de CPU, cada byte que movemos, consume energía,
+
+00:01:15.280 --> 00:01:20.799
+simple. Totalmente. Y esto nos lleva directo a la pregunta central que plantea esta análisis.
+
+00:01:20.799 --> 00:01:26.000
+Estamos ya en el momento en que quienes desarrollan software, quienes se dedican a la ingeniería
+
+00:01:26.000 --> 00:01:34.800
+y ciencia de datos, deben considerar la eficiencia energética y la sostenibilidad no como un extra o algo
+
+00:01:34.800 --> 00:01:40.760
+optimizar si hay tiempo, sino como un requisito central, desde la concepción misma de un sistema.
+
+00:01:40.840 --> 00:01:47.719
+Ok, vamos a desempacar esto. Es una pregunta no solo pertinente, sino yo diría que urgente
+
+00:01:47.719 --> 00:01:57.000
+y la respuesta corta para mí es un sirrotundo. Pensemos un poco en el contexto. El volumen de datos global sigue creciendo, bueno,
+
+00:01:57.000 --> 00:02:03.719
+de forma exponencial. Exponencial si. Y a esto se suma una mayor con ciencia sobre el cambio climático
+
+00:02:03.719 --> 00:02:10.360
+y viendo lo desde una perspectiva puramente pragmática el aumento en los costos de la energía.
+
+00:02:10.360 --> 00:02:17.480
+O sea, continuar construyendo tecnología sin considerar activamente su consumo energético, pues ya no es viable,
+
+00:02:17.480 --> 00:02:26.360
+nieconómica ambientalmente. Tiene toda la lógica. Y el primer punto clave que el material subraya es precisamente
+
+00:02:26.360 --> 00:02:35.640
+ese que el alto consumo de energía en muchos sistemas de datos no es inevitable. Es una consecuencia directa de lo que
+
+00:02:35.640 --> 00:02:43.160
+podríamos llamar patrones de ingeniería pues no sostenibles. Así es, y es crucial entender que significa
+
+00:02:43.160 --> 00:02:49.720
+eso en la práctica, ¿no? Porque no se trata solo de decir mover datos gastaluz, eso como que es obvio.
+
+00:02:49.720 --> 00:02:58.040
+El análisis apunta a las decisiones estructurales, como se diseñan, como se construyen y operan esos sistemas.
+
+00:02:58.039 --> 00:03:06.120
+La arquitectura, los algoritmos que liges, la forma en que orquestas las tareas, ahí, ahí está la clave del consumo.
+
+00:03:06.120 --> 00:03:13.479
+Sí, y lo fascinante aquí es como elecciones hechas muy al inicio del desarrollo. A menudo bajo presión,
+
+00:03:13.479 --> 00:03:17.639
+para entregar rápido priorizando únicamente la funcionalidad inmediata.
+
+00:03:17.639 --> 00:03:25.239
+Lo que funciona ella. Exacto, terminan creando una especie de deuda técnica energética a largo plazo. Por ejemplo,
+
+00:03:25.560 --> 00:03:31.240
+un patrón insostenible muy común es diseñar un sistema que necesita reprocesar volúmenes en normes
+
+00:03:31.240 --> 00:03:37.159
+de datos históricos cada vez que necesita actualizarse. Aunque solo haya cambiado una pequeña parte de la información.
+
+00:03:37.159 --> 00:03:43.879
+Claro. Piencen regenerar repórtes completos de terabytes cada noche en lugar de no sé, implementar mecanismos
+
+00:03:43.879 --> 00:03:50.360
+para procesar solo los cambios, los incrementales. Eso es inerentemente un derrocho de recursos computacionales
+
+00:03:50.360 --> 00:03:56.280
+y, por lo tanto, de energía. Claro, vas por la solución más rápida de implementar en el momento,
+
+00:03:56.280 --> 00:04:02.520
+aunque sabes que no es la más eficiente energéticamente. Y la optimización se queda para después,
+
+00:04:02.520 --> 00:04:10.120
+o para nunca. Exacto, se pospone indefinidamente. Y en este contexto, en la análisis, como dice,
+
+00:04:10.120 --> 00:04:16.439
+pone la lupa sobre dos procesos particularmente críticos en el mundo de los datos. La ingesta,
+
+00:04:16.439 --> 00:04:25.079
+y la transformación. Son el corazón prácticamente de la mayoría de los pipelines de datos modernos. La ingesta es
+
+00:04:25.079 --> 00:04:31.879
+cómo traemos los datos crudos al sistema, desde distintas fuentes. Y la transformación es donde los limpiamos,
+
+00:04:31.879 --> 00:04:39.240
+los enriquecemos, les damos la estructura necesaria para usarlos después. Exacto, implican mover cantidades
+
+00:04:39.240 --> 00:04:45.800
+masivas de información a veces en tiempo real. Y luego aplicarles lógica de negocio o validaciones,
+
+00:04:45.800 --> 00:04:52.759
+conversiones de formato, operaciones que en entornos actuales, bueno, pueden ejecutarse millones de veces al día
+
+00:04:52.759 --> 00:05:01.000
+sobre petabytes de datos. Una locura. Y justo ahí es donde la ineficiencia puede escalar brutalmente. La ingesta
+
+00:05:01.000 --> 00:05:07.960
+puede volverse un cuello de botella energético, si, por ejemplo, les datos de ápis de forma ineficiente. No sé,
+
+00:05:07.959 --> 00:05:15.399
+haciendo llamadas redundantes. O si recibes formatos de archivo muy verbosos que exigen muchas se peú para interpretarlos.
+
+00:05:15.399 --> 00:05:21.879
+Y en la transformación, piensen unir tablas gigantesca sin usar indices adecuados. Uff sí.
+
+00:05:21.879 --> 00:05:29.000
+Lo que obliga la base de datos a escanear filas y filas y necesariamente. O aplicar agurismo del empieza
+
+00:05:29.000 --> 00:05:36.599
+complejos de forma poco optimizada sobre cada registro. Cada uno. Y aquí es donde se pone realmente interesante.
+
+00:05:36.600 --> 00:05:43.560
+La tesis central del material es que si estos procesos ingesta y transformación no se diseñan con la
+
+00:05:43.560 --> 00:05:50.760
+eficiencia energética en mente desde el principio. El desperdicio de energía puede ser masivo. Y no estamos hablando de
+
+00:05:50.760 --> 00:05:59.480
+pequeños ajustes marginales, ¿eh? No, para nada. Si no de ineficiencias fundamentales que multiplicadas por la escala operativa de
+
+00:05:59.480 --> 00:06:06.680
+hoy, tienen un impacto ambiental considerable. Precisamente. El análisis no sugieres simplemente afinar el código que
+
+00:06:06.680 --> 00:06:12.759
+ya existe, propone repensar estos flujos desde la base. Por ejemplo, estamos eligiendo el formato de
+
+00:06:12.759 --> 00:06:18.439
+serialización de datos mas compacto y rápido de procesar. Bueno, pregunta. Estamos aprovechando técnicas como el
+
+00:06:18.439 --> 00:06:24.600
+procesamiento particionado o vectorializado que usan mejor el hardware moderno, minimizamos el movimiento de datos
+
+00:06:24.600 --> 00:06:31.080
+entre diferentes sistemas o sonas de disponibilidad. Eso también consume energía. Si conectamos esto con el panorama
+
+00:06:31.080 --> 00:06:36.920
+general, cada pequeña decisión de diseño multiplicada por millones de ejecuciones en centros de datos por todo el
+
+00:06:36.920 --> 00:06:43.800
+mundo, suma una cantidad de energía y emisiones de carbono significativa. El mensaje es claro, hay una oportunidad de
+
+00:06:43.800 --> 00:06:51.720
+enorme de optimización ahí en las etapas fundamentales del manejo de datos. Ese efecto multiplicadores es impactante la
+
+00:06:51.720 --> 00:07:00.120
+verdad. Y quizá el elemento más revelador, el momento aja que resalte el análisis es cuando define el objetivo como
+
+00:07:00.120 --> 00:07:08.520
+atacar la magnitud de las implicaciones ambientales del manejo de datos. Esa frase atacar la magnitud me parece
+
+00:07:08.520 --> 00:07:15.880
+muy potente. No habla de mitigar o reducir un poquito. No, no, es un lenguaje que de nota intención urgencia,
+
+00:07:15.879 --> 00:07:21.800
+sugiere que no basta con medidas cosméticas digamos. Y propone un arsenal para este ataque
+
+00:07:21.800 --> 00:07:29.800
+que está directamente en manos de los profesionales de datos. El código eficiente o sea algoritmos bien pensados optimizados,
+
+00:07:29.800 --> 00:07:36.839
+el software inteligente que, bueno, podría referirse a sistemas capaces de auto ajustar su consumo de recursos,
+
+00:07:36.839 --> 00:07:43.319
+o elegir rutas de procesamiento más eficiente, es energéticamente, y la optimización versatile.
+
+00:07:43.319 --> 00:07:49.639
+Esta última me intrigó un poco como la interpretaría esto. Yo creo que optimización versatile se refiere a
+
+00:07:49.639 --> 00:07:56.839
+no enfocarse en una solarea, sino aplicar una mentalidad de eficiencia energética en todas las capas y decisiones.
+
+00:07:56.839 --> 00:08:02.680
+No es sólo el algoritmo principal. Están bien como gestiones la memoria, como paralelizar las tareas,
+
+00:08:02.680 --> 00:08:08.600
+como interactuas con el almacenamiento. ¿Cómo configuras dos servicios en la nube? Por ejemplo,
+
+00:08:08.600 --> 00:08:15.080
+eligiendo instancias de computos más eficiente energéticamente o aprovechando el scaling to 0 cuando no hay carga.
+
+00:08:15.080 --> 00:08:20.439
+Es mirar todo el ciclo de vida del dato y del procesamiento con... con lentes de eficiencia.
+
+00:08:20.439 --> 00:08:29.240
+Entendido. Entonces, la implicación poderosa de todo esto según el análisis es que la comunidad de ingeniería y ciencia de datos
+
+00:08:29.240 --> 00:08:37.600
+tiene una palanca considerable. Una capacidad real para influir en el consumo energético global y las emisiones asociadas.
+
+00:08:37.600 --> 00:08:44.480
+No necesitan ser expertos energías renovables, pueden contribuir significativamente desde su teclado,
+
+00:08:44.480 --> 00:08:50.560
+simplemente adoptando y promoviendo patrones y estrategias de diseño más eficiente.
+
+00:08:50.560 --> 00:08:58.080
+Exactamente. Atacar la magnitud significa reconocer que esto es un problema de ingeniería de sistemas
+
+00:08:58.080 --> 00:09:02.279
+a gran escala. Y que requiere un cambio cultural y también metodológico.
+
+00:09:02.480 --> 00:09:09.639
+Implica elevar la eficiencia energética al mismo nivel de importancia que otros atributos que tradicionalmente valoramos mucho,
+
+00:09:09.639 --> 00:09:14.079
+como la funcionalidad, la escalabilidad, la latencia, la resiliencia.
+
+00:09:14.079 --> 00:09:19.919
+Esa sumir una correspondsa habilidad en el impacto ambiental de la tecnología que creamos.
+
+00:09:19.919 --> 00:09:30.360
+Ahora, una pregunta que seguro podría surgir es, optimizar para la eficiencia energética no comprometen necesariamente el rendimiento o la velocidad de procesamiento,
+
+00:09:30.360 --> 00:09:34.320
+hay un troque inevitable ahí, una cosa por la otra.
+
+00:09:34.320 --> 00:09:43.960
+Este es una preocupación frecuente y es legítima, claro. Sin embargo, el análisis sugiere y la experiencia a menudo lo confirma que estos muchas veces es una falsa dichotomía.
+
+00:09:43.960 --> 00:09:49.360
+Fíjate que código que es eficiente energéticamente suele ser también código perforante.
+
+00:09:49.360 --> 00:09:56.519
+A mira, porque generalmente utiliza los recursos de hardware, se peúme, memoria, caché, de manera más efectiva.
+
+00:09:56.519 --> 00:10:01.519
+Realiza menos operaciones innecesarias, evita el movimiento redundante de datos.
+
+00:10:01.519 --> 00:10:06.519
+Todo eso se traduce tanto en menor consumo energético como en mayor velocidad.
+
+00:10:06.519 --> 00:10:12.519
+Pensemos en un algoritmo que evita escanear datos y relevantes, va a ser más rápido y va a consumir menos energía.
+
+00:10:12.519 --> 00:10:19.519
+O sea que buscar la eficiencia energética puede de hecho llevar asistemas mejores en general, no sólo más verdes.
+
+00:10:19.519 --> 00:10:27.519
+¿En muchos casos sí? Por supuesto, puede haber situaciones específicas donde exista un compromiso real, un tradeoff.
+
+00:10:27.519 --> 00:10:31.519
+Entredigamos mínima latencia y mínimo consumo energético.
+
+00:10:31.519 --> 00:10:38.519
+Pero el punto clave esto más decisión es conscientes, medir y entender esos tradeoffs en lugar de ignorar por completo la dimensión energética.
+
+00:10:38.519 --> 00:10:41.519
+Claro. Y esto plantea una pregunta importante.
+
+00:10:41.519 --> 00:10:46.519
+¿Cómo integramos de forma práctica estas consideraciones en los ciclos de desarrollo actuales?
+
+00:10:46.519 --> 00:10:48.519
+¿Qué suelen ser rápidos ágiles?
+
+00:10:48.519 --> 00:10:54.519
+¿Cómo hacemos para que medir y optimizar la huella energética de nuestro software se aparte del proceso estandar?
+
+00:10:54.519 --> 00:10:58.519
+Y no una iniciativa escepcional que se hace si sobra tiempo.
+
+00:10:58.519 --> 00:11:02.519
+¿Sión verdad? Que no sea una ocurrencia tardía como decíamos.
+
+00:11:02.519 --> 00:11:04.519
+Entonces, ¿qué significa todo esto?
+
+00:11:04.519 --> 00:11:07.519
+Si intentamos sintetizar lo que hemos explorado.
+
+00:11:07.519 --> 00:11:12.519
+El mensaje central parece ser que nuestras elecciones de diseño en ingeniería de datos,
+
+00:11:12.519 --> 00:11:15.519
+tienen un impacto ambiental tanjible, directo,
+
+00:11:15.519 --> 00:11:18.519
+cuantificable en el consumo de energía.
+
+00:11:18.519 --> 00:11:23.519
+No es algo éterio, sino una consecuencia de las prácticas y patrones que usamos día a día.
+
+00:11:23.519 --> 00:11:28.519
+Correcto. Y el mensaje subyacente del material es en el fondo optimista creoño.
+
+00:11:28.519 --> 00:11:34.519
+No os dice que no estamos condenados a elegir entre sistemas de datos potentes y sistemas sustentables.
+
+00:11:34.519 --> 00:11:38.519
+Es posible y de hecho cada vez más necesario,
+
+00:11:38.519 --> 00:11:42.519
+diseñar y construir arquitecturas de datos que sean robustas, escalables,
+
+00:11:42.519 --> 00:11:45.519
+rápidas y eficientes energéticamente.
+
+00:11:45.519 --> 00:11:49.519
+La transformación es esa área es más de mentalidad y de prioridades.
+
+00:11:49.519 --> 00:11:53.519
+Empezará considerar el consumo energético como un requisito no funcional crítico
+
+00:11:53.519 --> 00:11:56.519
+desde las etapas más tempranas del diseño,
+
+00:11:56.519 --> 00:11:59.519
+medirlo y tomar decisiones informadas al respecto.
+
+00:11:59.519 --> 00:12:02.519
+Me parece una perspectiva muy valiosa.
+
+00:12:02.519 --> 00:12:04.519
+No se limita a señalar un problema,
+
+00:12:04.519 --> 00:12:08.519
+sino que ilumina una vía para construir tecnología de forma más responsable.
+
+00:12:08.519 --> 00:12:11.519
+Se trata de ser conscientes de ese costo oculto,
+
+00:12:11.519 --> 00:12:13.519
+el costo energético y ambiental,
+
+00:12:13.519 --> 00:12:17.519
+que ha menido ignoramos en nuestro código y nuestras arquitecturas de datos.
+
+00:12:17.519 --> 00:12:21.519
+Precisamente, y para llevar la reflexión un poquito más lejos,
+
+00:12:21.519 --> 00:12:23.519
+podríamos lanzar una pregunta al aire.
+
+00:12:23.519 --> 00:12:28.519
+¿Qué ocurriría si la eficiencia energética se convirtiera en una métrica estandar?
+
+00:12:28.519 --> 00:12:30.519
+No sólo técnica, sino de negocio,
+
+00:12:30.519 --> 00:12:34.519
+para evaluar el éxito y el valor de las plataformas de datos.
+
+00:12:34.519 --> 00:12:36.519
+¿Interessante?
+
+00:12:36.519 --> 00:12:39.519
+Si las organizaciones comenzaran a medir, a reportar,
+
+00:12:39.519 --> 00:12:43.519
+y quizás hasta ser auditadas sobre la huella energética de su infraestructura tecnológica.
+
+00:12:43.519 --> 00:12:47.519
+¿Cómo cambiaría eso la forma en que se prioriza los proyectos de TEI?
+
+00:12:47.519 --> 00:12:49.519
+¿Cómo se diseñan las arquitecturas?
+
+00:12:49.519 --> 00:12:51.519
+¿Cómo se valoran la innovación?
+
+00:12:51.519 --> 00:12:55.519
+Podríamos ver emerger un nuevo foco en optimizaciones que hoy consideramos de nicho.
+
+00:12:55.519 --> 00:12:58.519
+O incluso el desarrollo de hardware y software,
+
+00:12:58.519 --> 00:13:02.519
+específicamente diseñado para la máxima eficiencia energética en tareas de datos.
+
+00:13:02.519 --> 00:13:05.519
+¿Impulsaría esto una nueva generación de tecnologías de datos
+
+00:13:05.519 --> 00:13:08.519
+que sean fundamentalmente más ostenibles?
+
+00:13:08.519 --> 00:13:12.519
+Una pregunta que sin duda invita a la reflexión sobre el futuro de la tecnología
+
+00:13:12.519 --> 00:13:14.519
+y su relación con el planeta.
+
+00:13:14.519 --> 00:13:19.519
+Hacido una inversión profunda y muy, muy reveladora.
+
+00:13:19.519 --> 00:13:22.519
+Muchas gracias por acompañarnos en este análisis.
+
+00:13:22.519 --> 00:13:26.519
+Esperamos que esta conversación haya sido de interés.
+
+00:13:26.519 --> 00:13:28.519
+Hasta la próxima.
+

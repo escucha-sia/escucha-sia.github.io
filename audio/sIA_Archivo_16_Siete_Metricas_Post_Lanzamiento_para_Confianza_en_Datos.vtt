@@ -1,0 +1,2314 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:07.000
+Bienvenidas y bienvenidos, hoy vamos a meternos de lleno en las ideas de un texto muy interesante.
+
+00:00:07.000 --> 00:00:13.000
+A bordo un momento súper común casi un clásico en el mundo de los datos.
+
+00:00:13.000 --> 00:00:16.000
+Justo el después de lanzar un proyecto grande.
+
+00:00:16.000 --> 00:00:17.000
+¿Ah-ha?
+
+00:00:17.000 --> 00:00:18.000
+¿Te imaginas la escena?
+
+00:00:18.000 --> 00:00:20.000
+El equipo de ingeniería, feliz, celebrando,
+
+00:00:20.000 --> 00:00:23.000
+la migración de datos no sea la nube,
+
+00:00:23.000 --> 00:00:26.000
+fue un éxito técnico, se apriete el botón de Go Life.
+
+00:00:26.000 --> 00:00:27.000
+¿Champanya?
+
+00:00:27.000 --> 00:00:29.000
+Sí, la celebración.
+
+00:00:29.000 --> 00:00:31.000
+Pero, y aquí viene lo bueno que dice el material,
+
+00:00:31.000 --> 00:00:34.000
+una semana después como que la fiesta se acaba.
+
+00:00:34.000 --> 00:00:37.000
+Empiezan a llegar preguntas de los que usan los datos.
+
+00:00:37.000 --> 00:00:38.000
+Uf, sí.
+
+00:00:38.000 --> 00:00:40.000
+Las preguntas difíciles.
+
+00:00:40.000 --> 00:00:41.000
+Exacto.
+
+00:00:41.000 --> 00:00:42.000
+Tipo, ¿Oigan?
+
+00:00:42.000 --> 00:00:44.000
+¿Por qué faltan datos de ventas del martes?
+
+00:00:44.000 --> 00:00:45.000
+O...
+
+00:00:45.000 --> 00:00:47.000
+Estos totales no me cuadran con el sistema viejo.
+
+00:00:47.000 --> 00:00:49.000
+Hay una diferencia aquí.
+
+00:00:49.000 --> 00:00:52.000
+Y ojo, el lanzamiento no es que haya fallado espectacularmente.
+
+00:00:52.000 --> 00:00:53.000
+Nada se cayó.
+
+00:00:53.000 --> 00:00:55.000
+No, no fue un desastre obvio.
+
+00:00:55.000 --> 00:00:56.000
+Simplemente.
+
+00:00:56.000 --> 00:00:58.000
+Las cosas, como que empiezan a desviarse,
+
+00:00:58.000 --> 00:01:00.000
+silenciosamente.
+
+00:01:00.000 --> 00:01:03.000
+Y la confianza pues se va amenando poco a poco.
+
+00:01:03.000 --> 00:01:04.000
+Precisamente.
+
+00:01:04.000 --> 00:01:09.000
+Y justo ahí, ese es el meollo de lo que vamos a explorar hoy,
+
+00:01:09.000 --> 00:01:11.000
+basándonos en este análisis.
+
+00:01:11.000 --> 00:01:16.000
+El verdadero reto, el desafío para que los datos sean fiable
+
+00:01:16.000 --> 00:01:18.000
+y sobre todo, para que la gente confía en ellas,
+
+00:01:18.000 --> 00:01:21.000
+empiezan justo después de ese Go Life.
+
+00:01:21.000 --> 00:01:23.000
+O sea, no basta con que los ingenieros digan,
+
+00:01:23.000 --> 00:01:25.000
+listo, corrió sin errores.
+
+00:01:25.000 --> 00:01:26.000
+Exacto.
+
+00:01:26.000 --> 00:01:29.000
+No es sólo revisar los lox técnicos.
+
+00:01:29.000 --> 00:01:32.000
+Se trata de asegurar que los datos que entregas sean útiles
+
+00:01:32.000 --> 00:01:37.000
+confiables consistentemente para la gente que toma decisiones con ellos.
+
+00:01:37.000 --> 00:01:39.000
+Hay que mantener esa confianza.
+
+00:01:39.000 --> 00:01:40.000
+Entendido.
+
+00:01:40.000 --> 00:01:45.000
+Entonces hoy vamos a desmen usar siete dimensiones o metricas clave
+
+00:01:45.000 --> 00:01:48.000
+que este texto identifica como cruciales.
+
+00:01:48.000 --> 00:01:52.000
+Justo para monitorear y mantener esa confianza intacta.
+
+00:01:52.000 --> 00:01:53.000
+Así es.
+
+00:01:53.000 --> 00:01:56.000
+No es nada más ver si el sistema funciona,
+
+00:01:56.000 --> 00:01:57.000
+técnicamente,
+
+00:01:57.000 --> 00:01:59.000
+sino si de verdad entrega el valor que prometió,
+
+00:01:59.000 --> 00:02:01.000
+con datos fiable.
+
+00:02:01.000 --> 00:02:04.000
+Vamos a ver cómo estas metricas ayudan a evitar esa
+
+00:02:04.000 --> 00:02:07.000
+de heriva silenciosa después del lanzamiento.
+
+00:02:07.000 --> 00:02:10.000
+A ver, empecemos con la primera que menciona el texto.
+
+00:02:10.000 --> 00:02:12.000
+La frescura de los datos.
+
+00:02:12.000 --> 00:02:13.000
+Correcto.
+
+00:02:13.000 --> 00:02:14.000
+La frescura.
+
+00:02:14.000 --> 00:02:16.000
+La pregunta aquí es básica.
+
+00:02:16.000 --> 00:02:20.000
+¿Qué tan actuales son los datos que estamos viendo usando?
+
+00:02:20.000 --> 00:02:21.000
+¿De cuántos son?
+
+00:02:21.000 --> 00:02:22.000
+Exacto.
+
+00:02:22.000 --> 00:02:26.000
+Y lo interesante que resulta el análisis es que esto no es un detallito
+
+00:02:26.000 --> 00:02:27.000
+técnico nada más.
+
+00:02:27.000 --> 00:02:32.000
+Es como una promesa implícita o a veces muy explícita que le hace
+
+00:02:32.000 --> 00:02:33.000
+el negocio.
+
+00:02:33.000 --> 00:02:34.000
+¿A ver cómo?
+
+00:02:34.000 --> 00:02:39.000
+Pues si ofrece un tablero un dashboard que vendes como en tiempo real.
+
+00:02:39.000 --> 00:02:42.000
+Pero la información en realidad tiene no sé.
+
+00:02:42.000 --> 00:02:45.000
+Varias horas o hasta un día de retraso,
+
+00:02:45.000 --> 00:02:47.000
+pues esa promesa ya no se cumplió.
+
+00:02:47.000 --> 00:02:48.000
+Claro.
+
+00:02:48.000 --> 00:02:50.000
+Es un tema de expectativas.
+
+00:02:50.000 --> 00:02:51.000
+Entiendo.
+
+00:02:51.000 --> 00:02:55.000
+Si por ejemplo el equipo de operaciones necesita ver el inventario actualizado
+
+00:02:55.000 --> 00:03:00.000
+cada 15 minutos para la logística y los datos les llegan cada seis horas.
+
+00:03:00.000 --> 00:03:04.000
+Pues están tomando decisiones con una foto vieja de la realidad.
+
+00:03:04.000 --> 00:03:06.000
+Ya no sirve igual.
+
+00:03:06.000 --> 00:03:09.000
+El texto menciona el ejemplo de un tablero de ventas, ¿no?
+
+00:03:09.000 --> 00:03:11.000
+Sí, sí lo menciona.
+
+00:03:11.000 --> 00:03:12.000
+Imagínate.
+
+00:03:12.000 --> 00:03:14.000
+Si ese tablero se supone que refleja ventas
+
+00:03:14.000 --> 00:03:18.000
+mi nuto a mi nuto para ajustar campañas de marketing digital.
+
+00:03:18.000 --> 00:03:21.000
+Pero en realidad tienen un retraso de tres horas.
+
+00:03:21.000 --> 00:03:26.000
+Pues las decisiones de dónde meterle dinero a la publicidad o se ajustar precios
+
+00:03:26.000 --> 00:03:28.000
+podrían estar súper mal.
+
+00:03:28.000 --> 00:03:30.000
+Completamente ronias.
+
+00:03:30.000 --> 00:03:33.000
+Estarías reaccionando algo que ya cambió.
+
+00:03:33.000 --> 00:03:38.000
+Las consecuencias bandes de oportunidades perdidas hasta gastar dinero a lo tonto.
+
+00:03:38.000 --> 00:03:39.000
+Tienes sentido.
+
+00:03:39.000 --> 00:03:42.000
+¿Y cómo sugiere el texto que se monitoree esto?
+
+00:03:42.000 --> 00:03:44.000
+De forma práctica.
+
+00:03:44.000 --> 00:03:47.000
+¿Algo dice de las marcas de tiempo, ¿no?
+
+00:03:47.000 --> 00:03:48.000
+¿Los timestamps?
+
+00:03:48.000 --> 00:03:49.000
+Sí.
+
+00:03:49.000 --> 00:03:50.000
+Dame todos concretos.
+
+00:03:50.000 --> 00:03:53.000
+Uno es, pues, revisar esas marcas de tiempo
+
+00:03:53.000 --> 00:03:56.000
+de los registros más recientes en las tablas clave.
+
+00:03:56.000 --> 00:03:59.000
+Si la tabla principal de transacciones,
+
+00:03:59.000 --> 00:04:01.000
+no tienen nada nuevo en la última hora
+
+00:04:01.000 --> 00:04:04.000
+y tú ves pelas datos cada minuto, pues algo en la mal.
+
+00:04:04.000 --> 00:04:05.000
+Ok.
+
+00:04:05.000 --> 00:04:07.000
+Una señal de alerta.
+
+00:04:07.000 --> 00:04:08.000
+Aja.
+
+00:04:08.000 --> 00:04:11.000
+Otro opción es usar las tablas de metadatos del sistema.
+
+00:04:11.000 --> 00:04:13.000
+La base de datos, o el dar a warehouse,
+
+00:04:13.000 --> 00:04:18.000
+ha menudo registran cuando fue la última carga o actualización de cada tabla.
+
+00:04:18.000 --> 00:04:21.000
+Es información que ya está ahí, solo hay que usarla.
+
+00:04:21.000 --> 00:04:24.000
+Y la clave me imagino es que esta revisión sea automática.
+
+00:04:24.000 --> 00:04:27.000
+No esperará que alguien levante la mano y se queje.
+
+00:04:27.000 --> 00:04:28.000
+Justamente.
+
+00:04:28.000 --> 00:04:32.000
+La recomendación es clarísima poner alertas automáticas.
+
+00:04:32.000 --> 00:04:36.000
+Si la tabla esx, que debe actualizarse cada hora.
+
+00:04:36.000 --> 00:04:38.000
+Llevan 90 minutos sin moverse.
+
+00:04:38.000 --> 00:04:39.000
+Pum.
+
+00:04:39.000 --> 00:04:40.000
+Una alerta.
+
+00:04:40.000 --> 00:04:42.000
+Pero para el equipo de datos, no para el usuario final.
+
+00:04:42.000 --> 00:04:43.000
+Exacto.
+
+00:04:43.000 --> 00:04:46.000
+Para que el equipo de datos investigue,
+
+00:04:46.000 --> 00:04:49.000
+proactivamente, antes de que le pegue al negocio.
+
+00:04:49.000 --> 00:04:53.000
+Es pasar de andar apagando fuego a prevenir que empiecen.
+
+00:04:53.000 --> 00:04:55.000
+Totalmente de acuerdo.
+
+00:04:55.000 --> 00:04:58.000
+Bueno, si la frescura es que los datos lleguen a tiempo,
+
+00:04:58.000 --> 00:05:00.000
+la siguiente métrica que analiza el texto,
+
+00:05:00.000 --> 00:05:05.000
+la completitud, parece ir por el lado de si llegaron todos los datos que esperábamos.
+
+00:05:05.000 --> 00:05:07.000
+¿Qué es algo?
+
+00:05:07.000 --> 00:05:08.000
+Precisamente.
+
+00:05:08.000 --> 00:05:11.000
+Están todos los registros que deberían estar.
+
+00:05:11.000 --> 00:05:15.000
+Y también están todas las colunas llenas, como esperamos.
+
+00:05:15.000 --> 00:05:18.000
+Aquí el texto nos da un ejemplo con números que la verdad
+
+00:05:18.000 --> 00:05:22.000
+y lustra muy bien ese peligro de la derivas silencios a que mencionaba.
+
+00:05:22.000 --> 00:05:25.000
+Ah, el de los 10 millones de registros, cierto.
+
+00:05:25.000 --> 00:05:26.000
+Ese mero.
+
+00:05:26.000 --> 00:05:28.000
+Imagínate un proceso diario.
+
+00:05:28.000 --> 00:05:32.000
+Normalmente ingere digamos 10 millones de registros de actividad de usuarios
+
+00:05:32.000 --> 00:05:34.000
+de una app móvil.
+
+00:05:34.000 --> 00:05:36.000
+Ok, es el volumen normal.
+
+00:05:36.000 --> 00:05:40.000
+Y un día por un cambio chiquito en la app de donde vienen los datos.
+
+00:05:40.000 --> 00:05:44.000
+O un error que pasa a veces si, a veces no en la carga,
+
+00:05:44.000 --> 00:05:47.000
+sólo se cargan 8.5 millones.
+
+00:05:47.000 --> 00:05:49.000
+O sea, falta un millón y medio.
+
+00:05:49.000 --> 00:05:53.000
+Un 15 por ciento menos, bastante.
+
+00:05:53.000 --> 00:05:54.000
+Muchísimo.
+
+00:05:54.000 --> 00:05:56.000
+Y el punto clave es,
+
+00:05:56.000 --> 00:06:00.000
+si no tienes un monitoreo específico para el volumen de datos,
+
+00:06:00.000 --> 00:06:03.000
+este problema podría pasar días o hasta semanas.
+
+00:06:03.000 --> 00:06:04.000
+Sin que nadie se de cuenta.
+
+00:06:04.000 --> 00:06:08.000
+Claro, porque los procesos técnicos a lo mejor corrieron.
+
+00:06:08.000 --> 00:06:09.000
+Sin errores, ¿no?
+
+00:06:09.000 --> 00:06:10.000
+Exacto.
+
+00:06:10.000 --> 00:06:12.000
+El sistema dice, ok.
+
+00:06:12.000 --> 00:06:14.000
+Pero te falta un pedazote de la realidad.
+
+00:06:14.000 --> 00:06:17.000
+Nadie se entera hasta que los reportes de usuarios activos mensuales
+
+00:06:17.000 --> 00:06:20.000
+se ven rarísimos con una caída que nadie explica.
+
+00:06:20.000 --> 00:06:24.000
+O hasta que una análisis de comportamiento de resultados extraños
+
+00:06:24.000 --> 00:06:26.000
+porque le falta un segmento entero de actividad.
+
+00:06:26.000 --> 00:06:28.000
+Y las implicaciones.
+
+00:06:28.000 --> 00:06:31.000
+Pues analisis esgados, pronósticos que nos sirven,
+
+00:06:31.000 --> 00:06:34.000
+una visión totalmente incompleta, terrible.
+
+00:06:34.000 --> 00:06:37.000
+Malísimo para la toma de decisiones.
+
+00:06:37.000 --> 00:06:40.000
+Y qué suger el material para cachar esto.
+
+00:06:40.000 --> 00:06:42.000
+Contar filas, así disimple.
+
+00:06:42.000 --> 00:06:45.000
+Principalmente sí, una técnica que funciona bien
+
+00:06:45.000 --> 00:06:48.000
+es comparar el número de filas que cargas te hoy,
+
+00:06:48.000 --> 00:06:50.000
+por ejemplo, con un promedio histórico.
+
+00:06:50.000 --> 00:06:53.000
+Ticamos de los últimos 7 o 14 días.
+
+00:06:53.000 --> 00:06:55.000
+Y si la diferencia es muy grande,
+
+00:06:55.000 --> 00:06:58.000
+si la desviación es mayor aún un braal que tú defines,
+
+00:06:58.000 --> 00:07:01.000
+no sé, más del 10% de diferencia, alerta.
+
+00:07:01.000 --> 00:07:04.000
+Es una forma simple, pero súper poderosa
+
+00:07:04.000 --> 00:07:06.000
+para detectar anomalías en el volumen.
+
+00:07:06.000 --> 00:07:10.000
+Ok, pero, ¿qué pasa con cosas como la estacionalidad?
+
+00:07:10.000 --> 00:07:13.000
+Si es fin de mes o el buen fin a quien México,
+
+00:07:13.000 --> 00:07:16.000
+pues es normal que el volumen cambia mucho respecto al promedio, ¿no?
+
+00:07:16.000 --> 00:07:18.000
+Excelente punto.
+
+00:07:18.000 --> 00:07:20.000
+Ahí es donde entra la inteligencia, digamos.
+
+00:07:20.000 --> 00:07:23.000
+Los un braales no pueden ser fijaos y tontos.
+
+00:07:23.000 --> 00:07:26.000
+Tienes que ajustarlos según la estacionalidad que ya conoces
+
+00:07:26.000 --> 00:07:30.000
+o usar métodos estadísticos un poquito más sofisticados
+
+00:07:30.000 --> 00:07:33.000
+que tomen en cuentas las variaciones que si esperas.
+
+00:07:33.000 --> 00:07:36.000
+Entiendo, la meta no es que no haya alertas
+
+00:07:36.000 --> 00:07:40.000
+sino detectar las desviaciones que de verdad son inesperadas.
+
+00:07:40.000 --> 00:07:41.000
+Justo eso.
+
+00:07:41.000 --> 00:07:46.000
+Y ojo, el texto también menciona que no sólo es el número de filas.
+
+00:07:46.000 --> 00:07:49.000
+También importa los valores dentro de las filas, ¿no?
+
+00:07:49.000 --> 00:07:50.000
+¿Cierto cierto?
+
+00:07:50.000 --> 00:07:51.000
+Así es.
+
+00:07:51.000 --> 00:07:56.000
+Otro aspecto súper importante de la completitud es revisar columnas clave.
+
+00:07:56.000 --> 00:08:00.000
+Versí de repente aumentan muchos los valores nulos o vacíos.
+
+00:08:00.000 --> 00:08:03.000
+Podría tener tus 10 millones de filas, perfecto.
+
+00:08:03.000 --> 00:08:08.000
+Pero si una columna vital como aire de producto o monto de transacción
+
+00:08:08.000 --> 00:08:13.000
+de repente tienes 50% de nulos cuando normalmente tienen menos de 1%
+
+00:08:13.000 --> 00:08:18.000
+pues esos datos ya no sirven para mucho, aunque el contigo de filas es este bien.
+
+00:08:18.000 --> 00:08:24.000
+Exacto, los datos están ahí, presentas, pero inútiles para ciertos análisis.
+
+00:08:24.000 --> 00:08:28.000
+Así que la completitud tiene esas dos caras, el volumen de registros
+
+00:08:28.000 --> 00:08:31.000
+y qué tan llenos están los campos importantes.
+
+00:08:31.000 --> 00:08:32.000
+Clarísimo.
+
+00:08:32.000 --> 00:08:35.000
+Entonces ya chechamos que llegan a tiempo, frescura
+
+00:08:35.000 --> 00:08:38.000
+y que no falten pedazos importantes.
+
+00:08:38.000 --> 00:08:39.000
+Completitud.
+
+00:08:39.000 --> 00:08:43.000
+Ahora llegamos a una metrica que hijole me parece básica para la confianza.
+
+00:08:43.000 --> 00:08:45.000
+La exactitud.
+
+00:08:45.000 --> 00:08:49.000
+Aquí la pregunta es la más directa y quizá la que más le preocupa a la gente
+
+00:08:49.000 --> 00:08:51.000
+de negocio.
+
+00:08:51.000 --> 00:08:53.000
+Los números cuadran.
+
+00:08:53.000 --> 00:08:57.000
+Lo que veo en mi sistema nuevo, el datagurjaoso o el lago de datos,
+
+00:08:57.000 --> 00:09:00.000
+coincide con el sistema de origen con la fuente de verdad.
+
+00:09:00.000 --> 00:09:02.000
+Esta es la prueba de fuego.
+
+00:09:02.000 --> 00:09:06.000
+La que mencionaba Salinicio con el ejemplo de los totales que no cuadraban.
+
+00:09:06.000 --> 00:09:08.000
+El texto es muy enfático en esta verdad.
+
+00:09:08.000 --> 00:09:11.000
+Dice que cualquier diferencia por chiquita que sea,
+
+00:09:11.000 --> 00:09:14.000
+le pega durísimo a la credibilidad.
+
+00:09:14.000 --> 00:09:15.000
+Totalmente.
+
+00:09:15.000 --> 00:09:16.000
+A ver.
+
+00:09:16.000 --> 00:09:18.000
+Si tu nuevo hay flamante almacen de datos centralizado,
+
+00:09:18.000 --> 00:09:20.000
+dice que los ingresos de ayer fueron,
+
+00:09:20.000 --> 00:09:23.000
+no sé, un millón y medio de pesos.
+
+00:09:23.000 --> 00:09:25.000
+Pero el sistema fuente original,
+
+00:09:25.000 --> 00:09:28.000
+el Rp, la plataforma de e-commerce,
+
+00:09:28.000 --> 00:09:31.000
+registra un millón 485.000 pesos.
+
+00:09:31.000 --> 00:09:34.000
+Aunque sean solo 15.000 pesos de diferencia,
+
+00:09:34.000 --> 00:09:36.000
+un 1 por ciento.
+
+00:09:36.000 --> 00:09:38.000
+Tiene un problema grave de confianza.
+
+00:09:38.000 --> 00:09:41.000
+La pregunta y mediata de cualquiera va a ser.
+
+00:09:41.000 --> 00:09:44.000
+¿Y en qué otros números tampoco puedo confiar?
+
+00:09:44.000 --> 00:09:45.000
+Se rompe todo.
+
+00:09:45.000 --> 00:09:46.000
+Sí.
+
+00:09:46.000 --> 00:09:49.000
+Es como un efecto dominó en la desconfianza.
+
+00:09:49.000 --> 00:09:53.000
+Y la tentación supongo podría ser a ser revisiones manuales de vez en cuando.
+
+00:09:53.000 --> 00:09:56.000
+Sacar un reporte de aquí otro de allá,
+
+00:09:56.000 --> 00:09:57.000
+compararlos en Excel.
+
+00:09:57.000 --> 00:10:00.000
+Pero el texto advierte que eso no es buena idea.
+
+00:10:00.000 --> 00:10:02.000
+Sí, totalmente.
+
+00:10:02.000 --> 00:10:05.000
+Porque es lento, fácil equivocarse como humano.
+
+00:10:05.000 --> 00:10:07.000
+Y sobre todo, no es cala.
+
+00:10:07.000 --> 00:10:09.000
+No puedes hacer eso todos los días
+
+00:10:09.000 --> 00:10:11.000
+para todas las métricas importantes.
+
+00:10:11.000 --> 00:10:14.000
+La recomendación de la análisis es muy clara.
+
+00:10:14.000 --> 00:10:16.000
+Construye procesos automatizados.
+
+00:10:16.000 --> 00:10:19.000
+A veces les llaman jobs de reconciliación.
+
+00:10:19.000 --> 00:10:21.000
+Jobs de reconciliación?
+
+00:10:21.000 --> 00:10:24.000
+Sí, son procesos que comparan activamente
+
+00:10:24.000 --> 00:10:27.000
+y de forma regular, diario, por hora, lo que necesites,
+
+00:10:27.000 --> 00:10:31.000
+las cifras agregadas clave, sumas, contéos, promedios,
+
+00:10:31.000 --> 00:10:34.000
+entre el sistema de origen y el destino.
+
+00:10:34.000 --> 00:10:35.000
+¿Y cómo funcionen?
+
+00:10:35.000 --> 00:10:38.000
+Comparan cada registro 1 por 1?
+
+00:10:38.000 --> 00:10:40.000
+No necesariamente.
+
+00:10:40.000 --> 00:10:42.000
+Eso sería muy pesado, mucho computo.
+
+00:10:42.000 --> 00:10:45.000
+Lo más común es compararlos agregados.
+
+00:10:45.000 --> 00:10:49.000
+Por ejemplo, calculas la suma total de ventas del día en el origen
+
+00:10:49.000 --> 00:10:52.000
+y la suma total en el datauerdos para el mismo día.
+
+00:10:52.000 --> 00:10:54.000
+Deberían ser idénticas.
+
+00:10:54.000 --> 00:10:57.000
+O el número total de clientes nuevos, por ejemplo.
+
+00:10:57.000 --> 00:10:58.000
+Exacta.
+
+00:10:58.000 --> 00:11:00.000
+La meta es que esas cifras críticas,
+
+00:11:00.000 --> 00:11:03.000
+las que usan negocio para medirse, sean iguales.
+
+00:11:03.000 --> 00:11:07.000
+¿Cuál quiere discrepancia que detecte el proceso automático
+
+00:11:07.000 --> 00:11:09.000
+hay que investigar la devolada?
+
+00:11:09.000 --> 00:11:10.000
+Entendido.
+
+00:11:10.000 --> 00:11:13.000
+Automatizar esa reconciliación es clave.
+
+00:11:13.000 --> 00:11:16.000
+Ok, hasta ahora, las métricas han sido bastante...
+
+00:11:16.000 --> 00:11:18.000
+Quantitativas.
+
+00:11:18.000 --> 00:11:20.000
+Tiempo, con teos, sumas.
+
+00:11:20.000 --> 00:11:22.000
+Pero el texto dice que las que siguen
+
+00:11:22.000 --> 00:11:25.000
+entra en un terreno quizá un poco más útil.
+
+00:11:25.000 --> 00:11:29.000
+Algo que ver con la coherencia interna y el significado de los datos.
+
+00:11:29.000 --> 00:11:31.000
+La número 4 es...
+
+00:11:31.000 --> 00:11:33.000
+La consistencia.
+
+00:11:33.000 --> 00:11:34.000
+Exacto.
+
+00:11:34.000 --> 00:11:36.000
+Aquí la pregunta clave es.
+
+00:11:36.000 --> 00:11:39.000
+Estamos todos hablando del mismo idioma.
+
+00:11:39.000 --> 00:11:42.000
+Las definiciones de los conceptos importantes son las mismas
+
+00:11:42.000 --> 00:11:46.000
+en diferentes sistemas, reportes, equipos.
+
+00:11:46.000 --> 00:11:50.000
+Este es un problema superclásico y que muchas veces no se le da la importancia
+
+00:11:50.000 --> 00:11:51.000
+que tiene.
+
+00:11:51.000 --> 00:11:54.000
+El ejemplo que del texto sobre usuario activo es perfecto.
+
+00:11:54.000 --> 00:11:56.000
+Lo he visto pasar mil veces.
+
+00:11:56.000 --> 00:11:58.000
+Es de libro de texto, verdad?
+
+00:11:58.000 --> 00:11:59.000
+Imagínate.
+
+00:11:59.000 --> 00:12:02.000
+El equipo de marketing define usuario activo mensual
+
+00:12:02.000 --> 00:12:07.000
+como alguien que hizo login al menos una vez en los últimos 30 días.
+
+00:12:07.000 --> 00:12:08.000
+Ok, login.
+
+00:12:08.000 --> 00:12:13.000
+Pero el equipo de producto lo define como alguien que completó una acción clave.
+
+00:12:13.000 --> 00:12:16.000
+Como hacer una compra o ver un video en ese mismo periodo.
+
+00:12:16.000 --> 00:12:18.000
+Ah, diferente.
+
+00:12:18.000 --> 00:12:21.000
+Y ventas chanse, tiene su propia definición basada
+
+00:12:21.000 --> 00:12:23.000
+en si interactúa con un vendedor.
+
+00:12:23.000 --> 00:12:25.000
+Y el resultado es que llegan a una junta,
+
+00:12:25.000 --> 00:12:28.000
+presentan tres números diferentes para usuarios activos.
+
+00:12:28.000 --> 00:12:30.000
+Y nadie entiende nada.
+
+00:12:30.000 --> 00:12:33.000
+Se pierdo un montón de tiempo discutiendo cuál es el número real.
+
+00:12:33.000 --> 00:12:37.000
+Justamente, el lugar de analizar la tendencia o tomar decisiones.
+
+00:12:37.000 --> 00:12:43.000
+El análisis señal a que esto generalmente no es un problema técnico de los datos en sí.
+
+00:12:43.000 --> 00:12:47.000
+Es más bien un problema semanthico de organización.
+
+00:12:47.000 --> 00:12:50.000
+Falta una definición común acordada por todos.
+
+00:12:50.000 --> 00:12:54.000
+Y la solución que propone el texto algo de una capa semanthica?
+
+00:12:54.000 --> 00:12:55.000
+Sí.
+
+00:12:55.000 --> 00:12:59.000
+La solución al largo plazo es implementar lo que llama una capa semanthica.
+
+00:12:59.000 --> 00:13:02.000
+Suena medioobstracto eso de capa semanthica.
+
+00:13:02.000 --> 00:13:04.000
+¿Qué es en la práctica?
+
+00:13:04.000 --> 00:13:08.000
+Pienzan lo como un diccionario de negocio pero centralizado y activo.
+
+00:13:08.000 --> 00:13:13.000
+Es un lugar puede ser un herramiento específica o parte del Data Warehouse,
+
+00:13:13.000 --> 00:13:16.000
+donde define los términos clave del negocio una sola vez.
+
+00:13:16.000 --> 00:13:20.000
+Como usuario activo ingresoneto, cliente nuevo.
+
+00:13:20.000 --> 00:13:21.000
+Exacto.
+
+00:13:21.000 --> 00:13:25.000
+Incluyendo la lógica precisa para calcularlos.
+
+00:13:25.000 --> 00:13:27.000
+Y lo más importante.
+
+00:13:27.000 --> 00:13:30.000
+Todos los sistemas que hacen reportes o análisis,
+
+00:13:30.000 --> 00:13:34.000
+como los tableros de VIAI, consume en la métrica desde esa capa central.
+
+00:13:34.000 --> 00:13:36.000
+Ah, ya veo.
+
+00:13:36.000 --> 00:13:42.000
+O sea, el lugar de que cada reporte recalcule usuario activo a su manera con su propia lógica.
+
+00:13:42.000 --> 00:13:46.000
+Todos toman la definición y el cálculo del mismo lugar.
+
+00:13:46.000 --> 00:13:48.000
+Eso seguraría la consistencia.
+
+00:13:48.000 --> 00:13:50.000
+¿Qué todos estén mediendo lo mismo?
+
+00:13:50.000 --> 00:13:52.000
+Esa es la idea central.
+
+00:13:52.000 --> 00:13:56.000
+Asegura que usuario activo significa lo mismo para todos,
+
+00:13:56.000 --> 00:13:59.000
+sin importar quien haga el reporte o con que herramienta.
+
+00:13:59.000 --> 00:14:01.000
+Si es una inversión importante,
+
+00:14:01.000 --> 00:14:04.000
+requiere que la organización se ponga de acuerdo,
+
+00:14:04.000 --> 00:14:07.000
+pero los beneficios en claridad y confianza son enormes.
+
+00:14:07.000 --> 00:14:09.000
+Muy, muy interesante.
+
+00:14:09.000 --> 00:14:11.000
+Y ligado a la consistencia pero distinto,
+
+00:14:11.000 --> 00:14:13.000
+está la quinta métrica,
+
+00:14:13.000 --> 00:14:14.000
+la unicidad.
+
+00:14:14.000 --> 00:14:18.000
+O como yo le digo, la métrica antiduplicados.
+
+00:14:18.000 --> 00:14:20.000
+La pregunta aquí es simple.
+
+00:14:20.000 --> 00:14:23.000
+¿Estamos contando las cosas una sola vez?
+
+00:14:23.000 --> 00:14:24.000
+Sí.
+
+00:14:24.000 --> 00:14:26.000
+Y el texto es bastante directo.
+
+00:14:26.000 --> 00:14:29.000
+Los duplicados pueden ser devastadores para la credibilidad.
+
+00:14:29.000 --> 00:14:31.000
+Y pues, tiene lógica.
+
+00:14:31.000 --> 00:14:34.000
+Imagina que por un error en el PIB de datos, no sé.
+
+00:14:34.000 --> 00:14:37.000
+Una venta importante de 10.000 pesos,
+
+00:14:37.000 --> 00:14:40.000
+se carga 2 veces en la tabla final de ventas.
+
+00:14:40.000 --> 00:14:44.000
+Automáticamente todos tus reportes de ingresos van a estar inflados en 10.000 pesos.
+
+00:14:44.000 --> 00:14:47.000
+Si eso pasa con muchas transacciones,
+
+00:14:47.000 --> 00:14:49.000
+el error se puede volver millonario.
+
+00:14:49.000 --> 00:14:50.000
+Exacto.
+
+00:14:50.000 --> 00:14:52.000
+Y no sólo afecta las finanzas,
+
+00:14:52.000 --> 00:14:54.000
+piensen duplicados de clientes.
+
+00:14:54.000 --> 00:14:57.000
+Si tienes el mismo cliente registrado dos veces,
+
+00:14:57.000 --> 00:15:00.000
+chanse con una pequeña variación en el nombre o la dirección.
+
+00:15:00.000 --> 00:15:03.000
+Le mandas correos dobles, lo molestas,
+
+00:15:03.000 --> 00:15:06.000
+lo molestas, calculas mal cuanto vale ese cliente
+
+00:15:06.000 --> 00:15:08.000
+a lo largo del tiempo,
+
+00:15:08.000 --> 00:15:10.000
+tienes una visión partida de su historial,
+
+00:15:10.000 --> 00:15:12.000
+escriticuendatos financieros,
+
+00:15:12.000 --> 00:15:15.000
+de inventario, de clientes, en casi todo.
+
+00:15:15.000 --> 00:15:17.000
+¿Y cómo se detectan?
+
+00:15:17.000 --> 00:15:20.000
+El texto menciona las claves primarias, ¿no?
+
+00:15:20.000 --> 00:15:21.000
+Sí.
+
+00:15:21.000 --> 00:15:23.000
+Esa es la primera línea de defensa.
+
+00:15:23.000 --> 00:15:25.000
+Verificar que las claves primarias
+
+00:15:25.000 --> 00:15:28.000
+esos identificadores que se suponen son únicos
+
+00:15:28.000 --> 00:15:31.000
+para cada registro como una y de transacción,
+
+00:15:31.000 --> 00:15:34.000
+una y de cliente, una combinación de campos,
+
+00:15:34.000 --> 00:15:37.000
+de verdad se anunicos dentro de la tabla.
+
+00:15:37.000 --> 00:15:40.000
+Una consulta simple que busca claves primarias repetidas.
+
+00:15:40.000 --> 00:15:41.000
+Exacto.
+
+00:15:41.000 --> 00:15:44.000
+Esa consulta debería devolver 0 resultados,
+
+00:15:44.000 --> 00:15:48.000
+si no, algo falló en la carga o en cómo definiste la clave.
+
+00:15:48.000 --> 00:15:50.000
+Pero, a ver,
+
+00:15:50.000 --> 00:15:52.000
+y si no hay una clave primaria clara,
+
+00:15:52.000 --> 00:15:54.000
+o si el duplicado es más útil,
+
+00:15:54.000 --> 00:15:56.000
+como dos registros casi identicos,
+
+00:15:56.000 --> 00:15:57.000
+pero con hay diferentes.
+
+00:15:57.000 --> 00:15:58.000
+Bueno, pregunta.
+
+00:15:58.000 --> 00:16:01.000
+El texto también sugiere buscar duplicados
+
+00:16:01.000 --> 00:16:03.000
+no solo por la clave primaria,
+
+00:16:03.000 --> 00:16:06.000
+sino usando un conjunto de otras columnas importantes.
+
+00:16:06.000 --> 00:16:09.000
+Por ejemplo, buscar filas que tengan
+
+00:16:09.000 --> 00:16:11.000
+un mismo nombre de cliente,
+
+00:16:11.000 --> 00:16:13.000
+misma fecha de nacimiento,
+
+00:16:13.000 --> 00:16:15.000
+mismo correo electrónico.
+
+00:16:15.000 --> 00:16:17.000
+Ah, para encontrar duplicados semánticos,
+
+00:16:17.000 --> 00:16:18.000
+por así decirlo.
+
+00:16:18.000 --> 00:16:19.000
+Exacto.
+
+00:16:19.000 --> 00:16:22.000
+Los que chances el escaparon a la restricción de clave única.
+
+00:16:22.000 --> 00:16:25.000
+Hay técnicas y herramientas específicas para esto
+
+00:16:25.000 --> 00:16:27.000
+para la deduplicación
+
+00:16:27.000 --> 00:16:29.000
+que buscan estos patrones.
+
+00:16:29.000 --> 00:16:30.000
+Entendido.
+
+00:16:30.000 --> 00:16:32.000
+Es como una vigilancia constante
+
+00:16:32.000 --> 00:16:35.000
+para que los datos no se inflen o se partan.
+
+00:16:35.000 --> 00:16:37.000
+Esto nos lleva a la sexta metrica.
+
+00:16:37.000 --> 00:16:39.000
+Que el texto describe de una forma muy gráfica.
+
+00:16:39.000 --> 00:16:41.000
+La balidez.
+
+00:16:41.000 --> 00:16:42.000
+Aquí la pregunta es,
+
+00:16:42.000 --> 00:16:44.000
+¿Los datos tienen sentido común?
+
+00:16:44.000 --> 00:16:46.000
+Respetan las reglas lógicas
+
+00:16:46.000 --> 00:16:48.000
+o físicas que conocemos del mundo real.
+
+00:16:48.000 --> 00:16:51.000
+Sí, me gusta mucho como lo plantea la análisis.
+
+00:16:51.000 --> 00:16:53.000
+Habla de hechos de hierro.
+
+00:16:53.000 --> 00:16:55.000
+Coses que simplemente no pueden ser verdad
+
+00:16:55.000 --> 00:16:56.000
+de nuestro mundo.
+
+00:16:56.000 --> 00:16:59.000
+Son validaciones basadas en sentido común
+
+00:16:59.000 --> 00:17:02.000
+o erribulas de negocio que todos conocemos.
+
+00:17:02.000 --> 00:17:04.000
+Los ejemplos que das son clarísimos.
+
+00:17:04.000 --> 00:17:06.000
+¿Nos puedes recordar algunos?
+
+00:17:06.000 --> 00:17:07.000
+Claro.
+
+00:17:07.000 --> 00:17:09.000
+Por ejemplo, encontrar un código
+
+00:17:09.000 --> 00:17:11.000
+postal aquí en México que tengan letras.
+
+00:17:11.000 --> 00:17:12.000
+Sabemos que son puros números.
+
+00:17:12.000 --> 00:17:13.000
+¿Sierto?
+
+00:17:13.000 --> 00:17:15.000
+O registrar un número de teléfono
+
+00:17:15.000 --> 00:17:17.000
+con sólo tres digitos
+
+00:17:17.000 --> 00:17:19.000
+o tener una fecha de nacimiento
+
+00:17:19.000 --> 00:17:22.000
+que implique que el cliente tiene 190 años.
+
+00:17:22.000 --> 00:17:25.000
+O peor, una edad negativa, como,
+
+00:17:25.000 --> 00:17:26.000
+menos 5.
+
+00:17:26.000 --> 00:17:29.000
+Un campo de país que diga México de F
+
+00:17:29.000 --> 00:17:31.000
+cuando ya debería ser solo México.
+
+00:17:31.000 --> 00:17:34.000
+Exacto, esos son datos invalidos.
+
+00:17:34.000 --> 00:17:36.000
+No son errores útiles de cálculo
+
+00:17:36.000 --> 00:17:37.000
+como en la exactitud.
+
+00:17:37.000 --> 00:17:40.000
+Son datos fundamentalmente ilógicos.
+
+00:17:40.000 --> 00:17:42.000
+No pasa en una prueba básica de coherencia
+
+00:17:42.000 --> 00:17:43.000
+con la realidad.
+
+00:17:43.000 --> 00:17:45.000
+Y aunque parezca nobios,
+
+00:17:45.000 --> 00:17:47.000
+si no los buscas activamente.
+
+00:17:47.000 --> 00:17:48.000
+Se pueden colar.
+
+00:17:48.000 --> 00:17:50.000
+Se cualan en los análisis
+
+00:17:50.000 --> 00:17:52.000
+distorsionan resultados o simplemente
+
+00:17:52.000 --> 00:17:55.000
+generan ruido y hacen que la gente desconfié.
+
+00:17:55.000 --> 00:17:56.000
+La propuesta del texto
+
+00:17:56.000 --> 00:17:58.000
+es definir reglas de validación
+
+00:17:58.000 --> 00:18:00.000
+claras y automáticas basadas
+
+00:18:00.000 --> 00:18:02.000
+en estas expectativas del mundo real.
+
+00:18:02.000 --> 00:18:05.000
+Y cómo se definen esas reglas en la práctica.
+
+00:18:05.000 --> 00:18:06.000
+De varias formas,
+
+00:18:06.000 --> 00:18:08.000
+puedes poner rangos esperados
+
+00:18:08.000 --> 00:18:09.000
+para números.
+
+00:18:09.000 --> 00:18:10.000
+Por ejemplo,
+
+00:18:10.000 --> 00:18:12.000
+la edad tiene que estar entre 0 y 120.
+
+00:18:12.000 --> 00:18:13.000
+Lógico.
+
+00:18:13.000 --> 00:18:15.000
+Puedes definir formatos específicos
+
+00:18:15.000 --> 00:18:17.000
+usando expresiones regulares
+
+00:18:17.000 --> 00:18:19.000
+que son como patrones de texto
+
+00:18:19.000 --> 00:18:20.000
+muy potentes.
+
+00:18:20.000 --> 00:18:22.000
+Si pueden para validar el formato
+
+00:18:22.000 --> 00:18:26.000
+de un curp, un RFC, un correo, un código postal.
+
+00:18:26.000 --> 00:18:28.000
+Ok, patrones.
+
+00:18:28.000 --> 00:18:30.000
+Y también puedes usar listas
+
+00:18:30.000 --> 00:18:32.000
+de valores permitidos.
+
+00:18:32.000 --> 00:18:34.000
+Por ejemplo, el campo estados
+
+00:18:34.000 --> 00:18:36.000
+sólo puede tener uno de los 32
+
+00:18:36.000 --> 00:18:38.000
+estados oficiales de México.
+
+00:18:38.000 --> 00:18:39.000
+Y ya?
+
+00:18:39.000 --> 00:18:41.000
+Y la idea es que el sistema solito
+
+00:18:41.000 --> 00:18:42.000
+marque cualquier registro
+
+00:18:42.000 --> 00:18:43.000
+que viole estas reglas.
+
+00:18:43.000 --> 00:18:44.000
+Correcto.
+
+00:18:44.000 --> 00:18:46.000
+El sistema de monitoreo de calidad
+
+00:18:46.000 --> 00:18:48.000
+de datos debería identificar
+
+00:18:48.000 --> 00:18:50.000
+y reportar estos registros inbalidos.
+
+00:18:50.000 --> 00:18:52.000
+Ojo, no siempre significa
+
+00:18:52.000 --> 00:18:54.000
+que el dato esté mal.
+
+00:18:54.000 --> 00:18:56.000
+Podría haber un caso raro
+
+00:18:56.000 --> 00:18:57.000
+o un error en la regla.
+
+00:18:57.000 --> 00:18:58.000
+Pero sí indica que ese
+
+00:18:58.000 --> 00:19:00.000
+dato necesita que le he hecho en un ojo.
+
+00:19:00.000 --> 00:19:02.000
+Que se revise, se corriga en el origen
+
+00:19:02.000 --> 00:19:03.000
+o al menos se quite
+
+00:19:03.000 --> 00:19:06.000
+de ciertos análisis para que no contaminé.
+
+00:19:06.000 --> 00:19:07.000
+Exacto.
+
+00:19:07.000 --> 00:19:09.000
+Es como un filtro de sanidad básica
+
+00:19:09.000 --> 00:19:10.000
+para los datos.
+
+00:19:10.000 --> 00:19:12.000
+Tiene todo el sentido.
+
+00:19:12.000 --> 00:19:14.000
+Bueno, finalmente,
+
+00:19:14.000 --> 00:19:15.000
+llegamos a la séptima
+
+00:19:15.000 --> 00:19:18.000
+y última dimensión que destaca el texto.
+
+00:19:18.000 --> 00:19:20.000
+El linaje de datos.
+
+00:19:20.000 --> 00:19:22.000
+La analogía que usa es buenísima,
+
+00:19:22.000 --> 00:19:24.000
+la de jugar a donde está Wally,
+
+00:19:24.000 --> 00:19:25.000
+pero con los datos.
+
+00:19:26.000 --> 00:19:28.000
+Así es un excelente analogía.
+
+00:19:28.000 --> 00:19:30.000
+La pregunta fundamental aquí es
+
+00:19:30.000 --> 00:19:33.000
+si alguien señala un número específico
+
+00:19:33.000 --> 00:19:34.000
+en un reporte final,
+
+00:19:34.000 --> 00:19:35.000
+en un tablero
+
+00:19:35.000 --> 00:19:36.000
+y pregunta,
+
+00:19:36.000 --> 00:19:37.000
+oye,
+
+00:19:37.000 --> 00:19:39.000
+¿de dónde salió exactamente este numerito?
+
+00:19:39.000 --> 00:19:40.000
+¿Cómo se calculó?
+
+00:19:40.000 --> 00:19:41.000
+Podemos responder.
+
+00:19:41.000 --> 00:19:43.000
+Podemos rastrear su origen
+
+00:19:43.000 --> 00:19:45.000
+y todas las transformaciones que tuvo.
+
+00:19:45.000 --> 00:19:46.000
+Exacto.
+
+00:19:46.000 --> 00:19:48.000
+Esa es la transabilidad completa.
+
+00:19:48.000 --> 00:19:50.000
+Poder seguirle la pista
+
+00:19:50.000 --> 00:19:51.000
+un dato hacia atrás.
+
+00:19:51.000 --> 00:19:53.000
+El linaje de datos
+
+00:19:53.000 --> 00:19:55.000
+es esa capacidad de documentar
+
+00:19:55.000 --> 00:19:56.000
+y,
+
+00:19:56.000 --> 00:19:57.000
+idealmente,
+
+00:19:57.000 --> 00:19:59.000
+visualizar cómo fluyen los datos.
+
+00:19:59.000 --> 00:20:01.000
+Desde su sistema original,
+
+00:20:01.000 --> 00:20:03.000
+la base de datos transaccional
+
+00:20:03.000 --> 00:20:05.000
+un archivo USB que alguien subió.
+
+00:20:05.000 --> 00:20:06.000
+¿Aja?
+
+00:20:06.000 --> 00:20:10.000
+Pasando por todas las capas de procesamiento.
+
+00:20:10.000 --> 00:20:11.000
+Limpieza,
+
+00:20:11.000 --> 00:20:13.000
+transformaciones,
+
+00:20:13.000 --> 00:20:14.000
+uniones,
+
+00:20:14.000 --> 00:20:15.000
+agregaciones.
+
+00:20:15.000 --> 00:20:16.000
+Hasta que llega
+
+00:20:16.000 --> 00:20:18.000
+a su destino final en un reporte
+
+00:20:18.000 --> 00:20:20.000
+un modelo de Machine Learning
+
+00:20:20.000 --> 00:20:22.000
+o un tablero de BI.
+
+00:20:22.000 --> 00:20:24.000
+Me imagino que esto es super valioso
+
+00:20:24.000 --> 00:20:26.000
+pero también debe ser complicado
+
+00:20:26.000 --> 00:20:27.000
+de implementar.
+
+00:20:27.000 --> 00:20:28.000
+Lo es,
+
+00:20:28.000 --> 00:20:29.000
+Lo es.
+
+00:20:29.000 --> 00:20:30.000
+Como dice la análisis,
+
+00:20:30.000 --> 00:20:31.000
+esta trasabilidad
+
+00:20:31.000 --> 00:20:33.000
+es invaluable por varias razones.
+
+00:20:33.000 --> 00:20:34.000
+Primero,
+
+00:20:34.000 --> 00:20:37.000
+aumenta muchísimo la confianza.
+
+00:20:37.000 --> 00:20:39.000
+De muestra transparencia,
+
+00:20:39.000 --> 00:20:41.000
+permite auditar los cálculos.
+
+00:20:41.000 --> 00:20:42.000
+Si le puedes mostrar
+
+00:20:42.000 --> 00:20:44.000
+a un usuario exactamente
+
+00:20:44.000 --> 00:20:45.000
+cómo llegaste a una cifra
+
+00:20:45.000 --> 00:20:48.000
+es mucho más probable que confie.
+
+00:20:48.000 --> 00:20:49.000
+Claro, no es una caja negra.
+
+00:20:49.000 --> 00:20:50.000
+Exacto.
+
+00:20:50.000 --> 00:20:51.000
+Y segundo,
+
+00:20:51.000 --> 00:20:52.000
+es quizás le herramienta
+
+00:20:52.000 --> 00:20:53.000
+más poderosa
+
+00:20:53.000 --> 00:20:55.000
+para depurar cuando algo
+
+00:20:55.000 --> 00:20:56.000
+sale mal.
+
+00:20:56.000 --> 00:20:57.000
+Si un número en un reporte
+
+00:20:57.000 --> 00:20:58.000
+se verraró,
+
+00:20:58.000 --> 00:21:00.000
+el inagete permita encontrar
+
+00:21:00.000 --> 00:21:01.000
+rapidísimo
+
+00:21:01.000 --> 00:21:02.000
+en qué paso del proceso,
+
+00:21:02.000 --> 00:21:04.000
+en qué transformación,
+
+00:21:04.000 --> 00:21:05.000
+en qué filtro,
+
+00:21:05.000 --> 00:21:06.000
+se metió el error
+
+00:21:06.000 --> 00:21:07.000
+o la lógica rara.
+
+00:21:07.000 --> 00:21:08.000
+El lugar de tener
+
+00:21:08.000 --> 00:21:09.000
+que revisar manualmente
+
+00:21:09.000 --> 00:21:11.000
+quién sabe cuántos pasos de código
+
+00:21:11.000 --> 00:21:13.000
+es como tener el mapa
+
+00:21:13.000 --> 00:21:14.000
+del tesoro
+
+00:21:14.000 --> 00:21:15.000
+para encontrar donde es
+
+00:21:15.000 --> 00:21:16.000
+el problema.
+
+00:21:16.000 --> 00:21:17.000
+Algo así,
+
+00:21:17.000 --> 00:21:18.000
+exactamente.
+
+00:21:18.000 --> 00:21:20.000
+Y también es cada vez más
+
+00:21:20.000 --> 00:21:21.000
+importante por temas
+
+00:21:21.000 --> 00:21:22.000
+de cumplimiento
+
+00:21:22.000 --> 00:21:23.000
+de regulación
+
+00:21:23.000 --> 00:21:24.000
+en muchas industrias.
+
+00:21:24.000 --> 00:21:25.000
+Te exigen
+
+00:21:25.000 --> 00:21:26.000
+poder demostrar
+
+00:21:26.000 --> 00:21:27.000
+de dónde vienen
+
+00:21:27.000 --> 00:21:28.000
+ciertos datos
+
+00:21:28.000 --> 00:21:29.000
+en síbles.
+
+00:21:29.000 --> 00:21:30.000
+Y cómo se logra?
+
+00:21:30.000 --> 00:21:31.000
+Pues mira,
+
+00:21:31.000 --> 00:21:32.000
+lograr un linaje
+
+00:21:32.000 --> 00:21:33.000
+completo
+
+00:21:33.000 --> 00:21:34.000
+y automatizado
+
+00:21:34.000 --> 00:21:35.000
+generalmente
+
+00:21:35.000 --> 00:21:36.000
+requiere herramientas
+
+00:21:36.000 --> 00:21:37.000
+especializadas
+
+00:21:37.000 --> 00:21:39.000
+o una disciplina
+
+00:21:39.000 --> 00:21:40.000
+muy muy rigurosa
+
+00:21:40.000 --> 00:21:41.000
+en como documentas
+
+00:21:41.000 --> 00:21:42.000
+y desarrollas
+
+00:21:42.000 --> 00:21:43.000
+tus procesos de datos.
+
+00:21:43.000 --> 00:21:44.000
+Pero el valor
+
+00:21:44.000 --> 00:21:45.000
+que aporta
+
+00:21:45.000 --> 00:21:46.000
+según el texto
+
+00:21:46.000 --> 00:21:47.000
+justifica el esfuerzo.
+
+00:21:47.000 --> 00:21:48.000
+Muy bien,
+
+00:21:48.000 --> 00:21:49.000
+pues recorrimos
+
+00:21:49.000 --> 00:21:50.000
+las siete dimensiones.
+
+00:21:50.000 --> 00:21:51.000
+A ver,
+
+00:21:51.000 --> 00:21:52.000
+repasando rápido
+
+00:21:52.000 --> 00:21:53.000
+lo que exploramos
+
+00:21:53.000 --> 00:21:54.000
+del texto.
+
+00:21:54.000 --> 00:21:55.000
+Hablamos de la frescura
+
+00:21:55.000 --> 00:21:56.000
+que tan actuales
+
+00:21:56.000 --> 00:21:57.000
+son los datos
+
+00:21:57.000 --> 00:21:58.000
+aja el tiempo.
+
+00:21:58.000 --> 00:21:59.000
+La competitud
+
+00:21:59.000 --> 00:22:00.000
+si falta algo
+
+00:22:00.000 --> 00:22:01.000
+ya se afila
+
+00:22:01.000 --> 00:22:02.000
+los datos en campos clave.
+
+00:22:02.000 --> 00:22:03.000
+El volumen
+
+00:22:03.000 --> 00:22:04.000
+y el llenado.
+
+00:22:04.000 --> 00:22:05.000
+La exactitud
+
+00:22:05.000 --> 00:22:06.000
+si los números
+
+00:22:06.000 --> 00:22:08.000
+cuadran con la fuente original.
+
+00:22:08.000 --> 00:22:09.000
+La reconciliación
+
+00:22:09.000 --> 00:22:11.000
+La consistencia.
+
+00:22:11.000 --> 00:22:12.000
+Si las definiciones
+
+00:22:12.000 --> 00:22:13.000
+de negocios
+
+00:22:13.000 --> 00:22:14.000
+son las mismas para todos.
+
+00:22:14.000 --> 00:22:16.000
+El diccionario de negocio.
+
+00:22:16.000 --> 00:22:17.000
+La unicidad.
+
+00:22:17.000 --> 00:22:18.000
+Si hay duplicado
+
+00:22:18.000 --> 00:22:19.000
+sin flando
+
+00:22:19.000 --> 00:22:20.000
+o partiendo los datos.
+
+00:22:20.000 --> 00:22:22.000
+No contar doble.
+
+00:22:22.000 --> 00:22:23.000
+La validez.
+
+00:22:23.000 --> 00:22:24.000
+Si los datos
+
+00:22:24.000 --> 00:22:25.000
+tienen sentido común
+
+00:22:25.000 --> 00:22:27.000
+y respetan reglas básicas.
+
+00:22:27.000 --> 00:22:28.000
+El filtro del lógica.
+
+00:22:28.000 --> 00:22:29.000
+Y finalmente,
+
+00:22:29.000 --> 00:22:30.000
+el inaje.
+
+00:22:30.000 --> 00:22:32.000
+Si podemos rastrear el origen
+
+00:22:32.000 --> 00:22:34.000
+y las transformaciones de un dato.
+
+00:22:34.000 --> 00:22:35.000
+La trasabilidad.
+
+00:22:35.000 --> 00:22:37.000
+Y lo que es fascinante
+
+00:22:37.000 --> 00:22:39.000
+y que el material resulta
+
+00:22:39.000 --> 00:22:40.000
+como conclusión principal
+
+00:22:40.000 --> 00:22:41.000
+es esa frase.
+
+00:22:41.000 --> 00:22:43.000
+No puedes gestionar
+
+00:22:43.000 --> 00:22:44.000
+lo que no mides.
+
+00:22:44.000 --> 00:22:45.000
+La propuesta
+
+00:22:45.000 --> 00:22:47.000
+central no es sólo conocer
+
+00:22:47.000 --> 00:22:48.000
+estas dimensiones
+
+00:22:48.000 --> 00:22:49.000
+sino monitorear
+
+00:22:49.000 --> 00:22:50.000
+las activamente.
+
+00:22:50.000 --> 00:22:52.000
+Y realmente
+
+00:22:52.000 --> 00:22:53.000
+de forma automatizada.
+
+00:22:53.000 --> 00:22:54.000
+Claro.
+
+00:22:54.000 --> 00:22:55.000
+El texto
+
+00:22:55.000 --> 00:22:56.000
+realmente impulsa
+
+00:22:56.000 --> 00:22:57.000
+en la idea
+
+00:22:57.000 --> 00:22:58.000
+de consolidar los resultados
+
+00:22:58.000 --> 00:22:59.000
+de todas estas revisiones
+
+00:22:59.000 --> 00:23:00.000
+en un solo lugar.
+
+00:23:00.000 --> 00:23:01.000
+Un panel
+
+00:23:01.000 --> 00:23:02.000
+de salud de datos.
+
+00:23:02.000 --> 00:23:04.000
+Me imagino ese panel
+
+00:23:04.000 --> 00:23:05.000
+como el tablero del coche
+
+00:23:05.000 --> 00:23:06.000
+pero para los datos.
+
+00:23:06.000 --> 00:23:08.000
+Luzes verdes
+
+00:23:08.000 --> 00:23:09.000
+por todos lados y todo
+
+00:23:09.000 --> 00:23:10.000
+va bien.
+
+00:23:10.000 --> 00:23:11.000
+Datos frescos,
+
+00:23:11.000 --> 00:23:12.000
+completos
+
+00:23:12.000 --> 00:23:13.000
+exactos.
+
+00:23:13.000 --> 00:23:14.000
+Y los esces rojas
+
+00:23:14.000 --> 00:23:15.000
+o marillas
+
+00:23:15.000 --> 00:23:16.000
+parpadiendo donde algo
+
+00:23:16.000 --> 00:23:17.000
+necesita atención.
+
+00:23:17.000 --> 00:23:18.000
+Te permitiría
+
+00:23:18.000 --> 00:23:19.000
+de un solo vistazo
+
+00:23:19.000 --> 00:23:20.000
+a ver si la salud
+
+00:23:20.000 --> 00:23:21.000
+de tus datos críticos
+
+00:23:21.000 --> 00:23:22.000
+está bien
+
+00:23:22.000 --> 00:23:23.000
+o sea algún problema escondido
+
+00:23:23.000 --> 00:23:24.000
+por ahí.
+
+00:23:24.000 --> 00:23:25.000
+Exactamente
+
+00:23:25.000 --> 00:23:26.000
+esa es la visión.
+
+00:23:26.000 --> 00:23:27.000
+Un lugar centralizado
+
+00:23:27.000 --> 00:23:28.000
+donde el equipo
+
+00:23:28.000 --> 00:23:29.000
+de datos
+
+00:23:29.000 --> 00:23:31.000
+y quizá hasta algunos usuarios
+
+00:23:31.000 --> 00:23:32.000
+clave del negocio
+
+00:23:32.000 --> 00:23:33.000
+pueden ver
+
+00:23:33.000 --> 00:23:34.000
+el estado
+
+00:23:34.000 --> 00:23:35.000
+de la calidad
+
+00:23:35.000 --> 00:23:36.000
+de los datos casi
+
+00:23:36.000 --> 00:23:37.000
+en tiempo real.
+
+00:23:37.000 --> 00:23:38.000
+Deja de ser
+
+00:23:38.000 --> 00:23:39.000
+una caja negra
+
+00:23:39.000 --> 00:23:40.000
+y se vuelve un sistema
+
+00:23:40.000 --> 00:23:41.000
+transparente
+
+00:23:41.000 --> 00:23:42.000
+y el estado
+
+00:23:42.000 --> 00:23:43.000
+el texto hasta lo llama
+
+00:23:43.000 --> 00:23:44.000
+una máquina
+
+00:23:44.000 --> 00:23:45.000
+del tiempo.
+
+00:23:45.000 --> 00:23:46.000
+Me gusta
+
+00:23:46.000 --> 00:23:47.000
+esa metáfora.
+
+00:23:47.000 --> 00:23:48.000
+¿Por qué
+
+00:23:48.000 --> 00:23:50.000
+automatizar estas
+
+00:23:50.000 --> 00:23:51.000
+verificaciones
+
+00:23:51.000 --> 00:23:52.000
+de vuelve horas?
+
+00:23:52.000 --> 00:23:53.000
+Día,
+
+00:23:53.000 --> 00:23:54.000
+semanas de tiempo.
+
+00:23:54.000 --> 00:23:55.000
+Muchísimo tiempo.
+
+00:23:55.000 --> 00:23:56.000
+Tiempo
+
+00:23:56.000 --> 00:23:57.000
+que,
+
+00:23:57.000 --> 00:23:58.000
+el equipo de datos
+
+00:23:58.000 --> 00:23:59.000
+de la paz apagando
+
+00:23:59.000 --> 00:24:00.000
+fuego
+
+00:24:00.000 --> 00:24:01.000
+respondiendo
+
+00:24:01.000 --> 00:24:03.000
+esas preguntas
+
+00:24:03.000 --> 00:24:05.000
+reactivas de
+
+00:24:05.000 --> 00:24:06.000
+porque faltan datos
+
+00:24:06.000 --> 00:24:08.000
+o porque no me cuadra
+
+00:24:08.000 --> 00:24:09.000
+esto.
+
+00:24:09.000 --> 00:24:10.000
+¿Presisamente?
+
+00:24:10.000 --> 00:24:11.000
+Y como reflexión
+
+00:24:11.000 --> 00:24:12.200
+final que se
+
+00:24:12.200 --> 00:24:13.000
+desprende
+
+00:24:13.000 --> 00:24:14.000
+de este análisis
+
+00:24:14.000 --> 00:24:15.000
+y que el propio texto
+
+00:24:15.000 --> 00:24:16.000
+subrá ya mucho
+
+00:24:16.000 --> 00:24:17.000
+la calidad
+
+00:24:17.000 --> 00:24:18.000
+y la confianza en los datos
+
+00:24:18.000 --> 00:24:19.000
+no son
+
+00:24:19.000 --> 00:24:20.000
+una meta a la
+
+00:24:20.000 --> 00:24:21.000
+que llega a una vez
+
+00:24:21.000 --> 00:24:22.000
+y ya.
+
+00:24:22.000 --> 00:24:23.000
+No es como que el
+
+00:24:23.000 --> 00:24:24.000
+lanzas el proyecto
+
+00:24:24.000 --> 00:24:25.000
+el listo
+
+00:24:25.000 --> 00:24:26.000
+mición cumplida.
+
+00:24:26.000 --> 00:24:27.000
+Es un
+
+00:24:27.000 --> 00:24:28.000
+viaje
+
+00:24:28.000 --> 00:24:29.000
+continuo.
+
+00:24:29.000 --> 00:24:30.000
+Un proceso constante
+
+00:24:30.000 --> 00:24:31.000
+de vigilar
+
+00:24:31.000 --> 00:24:32.000
+mediríme
+
+00:24:32.000 --> 00:24:33.000
+mejorar.
+
+00:24:33.000 --> 00:24:36.000
+Hay que pensar en
+
+00:24:36.000 --> 00:24:37.000
+estas siete
+
+00:24:37.000 --> 00:24:38.000
+dimensiones
+
+00:24:38.000 --> 00:24:39.000
+de un punto.
+
+00:24:39.000 --> 00:24:40.000
+Entonces, la pregunta
+
+00:24:40.000 --> 00:24:41.000
+para quienes nos escuchan
+
+00:24:41.000 --> 00:24:42.000
+y trabajan
+
+00:24:42.000 --> 00:24:43.000
+con datos podrías
+
+00:24:43.000 --> 00:24:44.000
+ser
+
+00:24:44.000 --> 00:24:45.000
+¿Cómo se ve su
+
+00:24:45.000 --> 00:24:46.000
+realidad hoy
+
+00:24:46.000 --> 00:24:47.000
+comparada
+
+00:24:47.000 --> 00:24:48.000
+con este ideal?
+
+00:24:48.000 --> 00:24:49.000
+¿Cuántas de estas
+
+00:24:49.000 --> 00:24:50.000
+dimensiones
+
+00:24:50.000 --> 00:24:51.000
+realmente están
+
+00:24:51.000 --> 00:24:53.000
+monitoreando
+
+00:24:53.000 --> 00:24:54.000
+activamente?
+
+00:24:54.000 --> 00:24:56.000
+Y quizá una reflexión
+
+00:24:56.000 --> 00:24:58.000
+todavía más profunda.
+
+00:24:58.000 --> 00:25:00.000
+¿Cómo podrían cambiar
+
+00:25:00.000 --> 00:25:01.000
+la dinámica
+
+00:25:01.000 --> 00:25:02.000
+la cultura del equipo
+
+00:25:02.000 --> 00:25:04.000
+si empezaron a implementar
+
+00:25:04.000 --> 00:25:05.000
+aunque sea de
+
+00:25:05.000 --> 00:25:06.000
+poquito al principio
+
+00:25:06.000 --> 00:25:07.000
+y el sistema.
+
+00:25:07.000 --> 00:25:09.000
+¿Cuánto tiempo
+
+00:25:09.000 --> 00:25:10.000
+se liberaría?
+
+00:25:10.000 --> 00:25:12.000
+¿Cómo se fortale
+
+00:25:12.000 --> 00:25:13.000
+sería la credibilidad
+
+00:25:13.000 --> 00:25:14.000
+de la información
+
+00:25:14.000 --> 00:25:15.000
+que comparten tanto
+
+00:25:15.000 --> 00:25:16.000
+adentro
+
+00:25:16.000 --> 00:25:17.000
+como afuera del empresa?
+
+00:25:17.000 --> 00:25:18.000
+El análisis
+
+00:25:18.000 --> 00:25:19.000
+sugiere que es
+
+00:25:19.000 --> 00:25:21.000
+una inversión fundamental.
+
+00:25:21.000 --> 00:25:22.000
+No tanto en la
+
+00:25:22.000 --> 00:25:23.000
+tecnología por sí misma
+
+00:25:23.000 --> 00:25:25.000
+sino en la confianza.
+
+00:25:25.000 --> 00:25:26.000
+Y la confianza
+
+00:25:26.000 --> 00:25:27.000
+pues es la base
+
+00:25:27.000 --> 00:25:28.000
+de cualquier organización
+
+00:25:28.000 --> 00:25:29.000
+que de verdad
+
+00:25:29.000 --> 00:25:30.000
+quiera tomar decisiones
+
+00:25:30.000 --> 00:25:31.000
+vasadas en datos.
+

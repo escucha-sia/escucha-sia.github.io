@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:02.399
+o la toda nuestra audiencia.
+
+00:00:02.399 --> 00:00:06.100
+Bienvenidos a una nueva entrega de Asa etiptad.
+
+00:00:06.100 --> 00:00:07.799
+Soy Jorge.
+
+00:00:07.799 --> 00:00:09.800
+Y yo soy Dalia.
+
+00:00:09.800 --> 00:00:14.500
+Hoy nos sumergimos de lleno en el corazón de los almacenes de datos analíticos modernos.
+
+00:00:14.500 --> 00:00:19.400
+Google Cloud B. Carey y el impacto transformador de llamen a Cloud Assist.
+
+00:00:19.400 --> 00:00:24.260
+Nuestra tesis de hoy es clara, la era en la que la analista o el ingeniero pasaba ahora
+
+00:00:24.260 --> 00:00:29.300
+se escribiendo consultas es el sillio el artesanal es desde cero a terminado.
+
+00:00:29.400 --> 00:00:34.399
+Con la integración de modelos del lenguaje directamente en el motor de ejecución, la analítica
+
+00:00:34.399 --> 00:00:39.899
+conversacional sobre grafos de metadatos está convirtiendo en la interfaz por defecto.
+
+00:00:39.899 --> 00:00:46.100
+Pero cuidado, Jorge, esto nos significa que el trabajo del ingeniero de datos de saparezca.
+
+00:00:46.100 --> 00:00:51.200
+Al contrario, el foco de valor se desplaza de la sintaxis es si lluele hacia la modelación
+
+00:00:51.200 --> 00:00:54.400
+semántica y la arquitectura de gobernanza.
+
+00:00:54.399 --> 00:00:59.659
+Si las tablas no tienen metadatos limpios en dataplex, llemen a simplemente generar a consulta
+
+00:00:59.659 --> 00:01:02.199
+sobre su puestos falsos.
+
+00:01:02.199 --> 00:01:04.200
+Exacto Dalia.
+
+00:01:04.200 --> 00:01:10.039
+bajo el capo, de carresturio ahora utiliza llemen a inoso no para autocompletar código, sino para
+
+00:01:10.039 --> 00:01:15.000
+inferir la intención del usuario a partir del esquema y del inaje de datos.
+
+00:01:15.000 --> 00:01:20.239
+Puede recomendar particionamiento por fecha, sugerir Cluster Soptimos para reducir el escaneo
+
+00:01:20.239 --> 00:01:25.319
+de Pikes y explicar cuayos de botella en el plan de ejecución de la consulta.
+
+00:01:25.319 --> 00:01:30.039
+Y aquí viene el debate crítico que todo líder técnico debe enfrentar, el riesgo de las
+
+00:01:30.039 --> 00:01:35.000
+alucinaciones silenciosas en agregaciones financieras o métricas de negocio.
+
+00:01:35.000 --> 00:01:39.799
+Si le pides a llemen a chventas netas del último trimestre, sabe el modelo como se descuenta
+
+00:01:39.799 --> 00:01:44.759
+las evoluciones, las notas de crédito o los impuestos locales.
+
+00:01:44.760 --> 00:01:50.120
+Si la empresa no definió un contrato de datos semántico o una métrica unificada en debate,
+
+00:01:50.120 --> 00:01:54.520
+el modelo elegirá la columna que, parezca, más lógica.
+
+00:01:54.520 --> 00:02:00.280
+Y el resultado numérico se verá impecable, pero estará financieramente equivocado.
+
+00:02:00.280 --> 00:02:05.160
+Por eso decimos que la Ia no reemplaza el rigor del ingeniero, no eleva a nivel de arquitectura
+
+00:02:05.160 --> 00:02:06.000
+y auditoría.
+
+00:02:06.000 --> 00:02:12.000
+Y para nuestra conexión dig de hoy, esto me recuerda a los archivos acácicos que a la biblioteca
+
+00:02:12.000 --> 00:02:15.319
+de Igrasile en la literatura fantástica.
+
+00:02:15.319 --> 00:02:19.719
+Tener acceso a toda la información del universo no te sirve de nada si no sabes formular la
+
+00:02:19.719 --> 00:02:22.919
+pregunta con los parámetros exactos.
+
+00:02:22.919 --> 00:02:25.800
+Una analogía perfecta, daña.
+
+00:02:25.800 --> 00:02:31.400
+Anpeca real poder de computo ya es casi infinito, el verdadero reto es la precisión del contexto
+
+00:02:31.400 --> 00:02:33.159
+semántico.
+
+00:02:33.159 --> 00:02:36.800
+Nos escuchamos en el siguiente acto.
+

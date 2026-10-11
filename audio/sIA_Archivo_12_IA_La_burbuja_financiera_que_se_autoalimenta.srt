@@ -1,0 +1,1184 @@
+1
+00:00:00,000 --> 00:00:05,160
+Bienvenidos a un nuevo análisis, hoy nos metemos de lleno en un tema que sinceramente
+
+2
+00:00:05,160 --> 00:00:08,080
+a mí me vuela la cabeza cada vez que le olo titulares.
+
+3
+00:00:08,080 --> 00:00:09,519
+¿Es que es para eso, eh?
+
+4
+00:00:09,519 --> 00:00:15,839
+Ves empresas de inteligencia artificial con valoraciones astronómicas, pero luego le es la letra
+
+5
+00:00:15,839 --> 00:00:19,120
+pequeña y resulta que pierden millones cada mes.
+
+6
+00:00:19,120 --> 00:00:20,120
+millones.
+
+7
+00:00:20,120 --> 00:00:23,359
+La pregunta es casi obligada, ¿cómo se sostiene esto?
+
+8
+00:00:23,359 --> 00:00:28,320
+Es una burbucha, hay algo que no estamos viendo, porque una de las fuentes que hemos revisado
+
+9
+00:00:28,320 --> 00:00:33,560
+habla de una especie de economía circular muy particular que está, bueno, que está inflando
+
+10
+00:00:33,560 --> 00:00:34,560
+todo el sector.
+
+11
+00:00:34,560 --> 00:00:35,560
+¿Ah-huh?
+
+12
+00:00:35,560 --> 00:00:39,359
+Y no, no tiene nada que ver con clientes pagando por un servicio.
+
+13
+00:00:39,359 --> 00:00:40,560
+Es algo mucho más...
+
+14
+00:00:40,560 --> 00:00:41,560
+Endogámico.
+
+15
+00:00:41,560 --> 00:00:43,320
+Es la palabra perfecta.
+
+16
+00:00:43,320 --> 00:00:44,560
+Endogámico.
+
+17
+00:00:44,560 --> 00:00:49,320
+Para visualizarlo, hay que pensar en un ecosistema con tres grandes protagonistas.
+
+18
+00:00:49,320 --> 00:00:50,320
+A ver.
+
+19
+00:00:50,320 --> 00:00:53,120
+Primero, tienes a los que crean los módelos de ella.
+
+20
+00:00:53,120 --> 00:00:55,960
+El nombre que a todos nos viene a la cabeza es OpenE.
+
+21
+00:00:55,960 --> 00:01:02,240
+Claro, luego necesitas a los que les proporcionan la potencia de cálculo bruta, una infraestructura
+
+22
+00:01:02,240 --> 00:01:03,240
+monstruosa.
+
+23
+00:01:03,240 --> 00:01:06,599
+Hay entran gigantes como Microsoft o Oracle.
+
+24
+00:01:06,599 --> 00:01:08,000
+Los dueños de la nube?
+
+25
+00:01:08,000 --> 00:01:09,000
+Exacto.
+
+26
+00:01:09,000 --> 00:01:14,200
+Y en la base de todo, sosteniendo la pirámide, está el que fabrica el hardware.
+
+27
+00:01:14,200 --> 00:01:15,200
+Los chips.
+
+28
+00:01:15,200 --> 00:01:18,040
+Que son el cerebro y el músculo de todo esto.
+
+29
+00:01:18,040 --> 00:01:19,040
+En vidía.
+
+30
+00:01:19,040 --> 00:01:23,319
+La clave para entender esas valoraciones de las que hablas está en seguir el camino que hace
+
+31
+00:01:23,319 --> 00:01:25,920
+el dinero entre estos tres actores.
+
+32
+00:01:25,920 --> 00:01:30,439
+Entiendo el mapa de actores, pero el diablo está en los detalles de cómo se pasa en el dinero
+
+33
+00:01:30,439 --> 00:01:31,439
+entre ellos.
+
+34
+00:01:31,439 --> 00:01:34,599
+La fuente de escribe un ciclo muy concreto, ¿verdad?
+
+35
+00:01:34,599 --> 00:01:36,519
+Casi como un baile choreografiado.
+
+36
+00:01:36,519 --> 00:01:37,519
+Totalmente.
+
+37
+00:01:37,519 --> 00:01:39,320
+Imagina el primer paso.
+
+38
+00:01:39,320 --> 00:01:42,560
+Microsoft decidió invertir y no hablamos de poco dinero.
+
+39
+00:01:42,560 --> 00:01:43,560
+No, no.
+
+40
+00:01:43,560 --> 00:01:46,359
+Una cantidad masiva en OpenEI.
+
+41
+00:01:46,359 --> 00:01:48,879
+Los informes hablan de miles de millones.
+
+42
+00:01:48,879 --> 00:01:53,560
+Desde fuera, parece una posta estratégica clara por el futuro de la ella.
+
+43
+00:01:53,560 --> 00:01:55,640
+Pero ¿dónde empieza el círculo?
+
+44
+00:01:55,640 --> 00:01:56,920
+Esto ahora.
+
+45
+00:01:56,920 --> 00:01:57,920
+Paso dos.
+
+46
+00:01:57,920 --> 00:02:03,879
+OpenEI, con sus arcas recién llenas de dinero de Microsoft, se da la vuelta y le paga una enorme
+
+47
+00:02:03,879 --> 00:02:06,680
+porción de ese mismo dinero a Microsoft.
+
+48
+00:02:06,680 --> 00:02:07,680
+¿A sí mismo?
+
+49
+00:02:07,680 --> 00:02:09,759
+A otra división de la empresa.
+
+50
+00:02:09,759 --> 00:02:15,000
+Lo hace a cambio del uso de su plataforma en la nube, azure, necesitan esa capacidad de
+
+51
+00:02:15,000 --> 00:02:18,680
+computación para entrenar sus modelos y es increíblemente cara.
+
+52
+00:02:18,680 --> 00:02:22,960
+Cosa que en la práctica una gran parte de la inversión vuelve casi mediatamente
+
+53
+00:02:22,960 --> 00:02:23,960
+aquí en la puso.
+
+54
+00:02:23,960 --> 00:02:24,960
+Un momento.
+
+55
+00:02:25,400 --> 00:02:31,080
+El dinero sale de un bolsillo de Microsoft para entrar en otro, pero por el camino ha servido
+
+56
+00:02:31,080 --> 00:02:34,360
+para que OpenEI declaré una inversión gigantesca.
+
+57
+00:02:34,360 --> 00:02:37,560
+E, Microsoft declaré ingresos por sus servicios en la nube.
+
+58
+00:02:37,560 --> 00:02:38,560
+Exactamente.
+
+59
+00:02:38,560 --> 00:02:40,400
+Y el ciclo no termina ahí.
+
+60
+00:02:40,400 --> 00:02:41,439
+Paso tres.
+
+61
+00:02:41,439 --> 00:02:47,240
+Microsoft con esos nuevos ingresos necesitan pliar y mantener su infraestructura.
+
+62
+00:02:47,240 --> 00:02:48,240
+¿Qué hace?
+
+63
+00:02:48,240 --> 00:02:51,840
+Comprama si mas chips de altísimo rendimiento.
+
+64
+00:02:51,840 --> 00:02:53,439
+Y ahí entra en vidia.
+
+65
+00:02:53,560 --> 00:02:57,800
+Ahí entra en vidia que es el principal proveedor casi monopolístico.
+
+66
+00:02:57,800 --> 00:03:01,439
+Así que el dinero ahora fluye de Microsoft a en vidia.
+
+67
+00:03:01,439 --> 00:03:04,400
+Y supongo que en vidia no guarda el dinero de bajo del colchón.
+
+68
+00:03:04,400 --> 00:03:05,400
+Para nada.
+
+69
+00:03:05,400 --> 00:03:09,599
+Para cerrar el bucle, en vidia que está teniendo unos beneficios record,
+
+70
+00:03:09,599 --> 00:03:14,840
+tiene su propio brazo de capital riesgo e invierte parte de esas ganancias en, bueno,
+
+71
+00:03:14,840 --> 00:03:18,280
+en las startups de inteligencia artificial mas prometedoras.
+
+72
+00:03:18,280 --> 00:03:21,159
+Como la propia OpenEI y sus competidores.
+
+73
+00:03:21,159 --> 00:03:22,319
+Precisamente.
+
+74
+00:03:22,319 --> 00:03:26,400
+De esta forma, el dinero que empezó en Microsoft ha dado toda la vuelta,
+
+75
+00:03:26,400 --> 00:03:30,639
+inflando las valoraciones y los ingresos de todos los participantes en el camino,
+
+76
+00:03:30,639 --> 00:03:32,319
+y vuelve a empezar.
+
+77
+00:03:32,319 --> 00:03:35,439
+Pero para que nos hagamos una idea de lo abstracto que sona,
+
+78
+00:03:35,439 --> 00:03:38,479
+una de las fuentes proponía una analogía muy simple.
+
+79
+00:03:38,479 --> 00:03:40,479
+La de acabar un ollo.
+
+80
+00:03:40,479 --> 00:03:45,400
+Sí, es brutalmente efectiva para entender la lógica que hay debajo.
+
+81
+00:03:45,400 --> 00:03:50,120
+Imagina que yo te pagó a ti, mil euros por acabar un ollo en el jardino.
+
+82
+00:03:50,120 --> 00:03:51,520
+¿Tu realiza el trabajo?
+
+83
+00:03:51,520 --> 00:03:52,480
+Yo te pagó?
+
+84
+00:03:52,480 --> 00:03:55,080
+Hasta ahí, una transacción económica normal.
+
+85
+00:03:55,080 --> 00:03:58,759
+De acuerdo, tengo mil euros en el bolsillo y tú tienes un ollo en tu jardino.
+
+86
+00:03:58,759 --> 00:03:59,879
+Exacto.
+
+87
+00:03:59,879 --> 00:04:01,800
+Pero ahora viene la segunda parte.
+
+88
+00:04:01,800 --> 00:04:05,280
+Tú, con los mil euros que te acabo de dar, me los devuelves a mí,
+
+89
+00:04:05,280 --> 00:04:08,159
+a cambio de que rellene se lo yo que acabas de acabar.
+
+90
+00:04:08,159 --> 00:04:11,159
+Al final del día, el jardino está como el principio.
+
+91
+00:04:11,159 --> 00:04:13,000
+El dinero vuelve a mi bolsillo.
+
+92
+00:04:13,000 --> 00:04:16,160
+Pero, contablemente, ha pasado algo muy interesante.
+
+93
+00:04:16,160 --> 00:04:17,920
+Ostras, ya lo veo.
+
+94
+00:04:18,000 --> 00:04:21,879
+Tú puedes declarar ingresos de mil euros por servicios de relleno de hoyos.
+
+95
+00:04:21,879 --> 00:04:22,680
+¿Ah?
+
+96
+00:04:22,680 --> 00:04:27,160
+Y yo puedo declarar ingresos de mil euros por servicios de excavación.
+
+97
+00:04:27,160 --> 00:04:29,520
+Ambos hemos facturado mil euros.
+
+98
+00:04:29,520 --> 00:04:32,680
+Desde fuera, parece que tenemos un negocio próspero.
+
+99
+00:04:32,680 --> 00:04:34,800
+Esa es la esencia.
+
+100
+00:04:34,800 --> 00:04:40,759
+Lo fascinante aquí es que aunque los libros de comptabilidad reflejan actividad económica,
+
+101
+00:04:40,759 --> 00:04:44,879
+no se ha generado ningún valor real y tangible para el mundo exterior.
+
+102
+00:04:44,879 --> 00:04:45,759
+¿Niguno?
+
+103
+00:04:45,759 --> 00:04:49,039
+El dinero solo ha hecho un viaje de hida y vuelta.
+
+104
+00:04:49,039 --> 00:04:51,279
+Entendere esto es fundamental para comprender
+
+105
+00:04:51,279 --> 00:04:53,560
+por qué las valoraciones de estas empresas
+
+106
+00:04:53,560 --> 00:04:57,519
+parecen tan desconectadas de su capacidad para generar beneficios,
+
+107
+00:04:57,519 --> 00:05:00,120
+a partir de clientes que están fuera de este círculo.
+
+108
+00:05:00,120 --> 00:05:03,079
+Es una analogía potente, casi cínica.
+
+109
+00:05:03,079 --> 00:05:05,000
+Pero no es un poco simplista.
+
+110
+00:05:05,000 --> 00:05:08,639
+Al final cabo, OpenAI está construyendo tecnología real,
+
+111
+00:05:08,639 --> 00:05:10,759
+no solo acabando y rellenando hoyos.
+
+112
+00:05:10,759 --> 00:05:12,399
+¿Dónde se rompe la analogía?
+
+113
+00:05:12,399 --> 00:05:14,199
+Es una opjeción muy buena.
+
+114
+00:05:14,199 --> 00:05:18,399
+La analogía se rompe o más bien se matiza en la expectativa.
+
+115
+00:05:18,399 --> 00:05:19,519
+La expectativa.
+
+116
+00:05:19,519 --> 00:05:25,959
+En el caso de Lollo, no hay ningún expectativa de que ese ojo va a producir oro.
+
+117
+00:05:25,959 --> 00:05:32,919
+En el caso de la Ia, todo el sistema se sostiene sobre la creencia de que aunque ahora mismo,
+
+118
+00:05:32,919 --> 00:05:39,480
+el valor generado es interno en el futuro esa tecnología se va a encontrar oro.
+
+119
+00:05:39,480 --> 00:05:41,279
+Y en cantidad de masiva supongo.
+
+120
+00:05:41,279 --> 00:05:42,879
+En cantidad de masivas.
+
+121
+00:05:42,959 --> 00:05:46,159
+La analogía no describe el valor de la tecnología,
+
+122
+00:05:46,159 --> 00:05:51,399
+sino el flujo de capital actual que inflan las métricas financieras en el presente.
+
+123
+00:05:51,399 --> 00:05:54,879
+Vale, la analogía de Lollo es genial para entender la teoría.
+
+124
+00:05:54,879 --> 00:05:56,600
+Pero suena casi a caricatura.
+
+125
+00:05:56,600 --> 00:06:00,399
+Hasta qué puntos refleja esto en las cifras reales de una empresa como OpenAI.
+
+126
+00:06:00,399 --> 00:06:02,639
+Porque los números que da la fuente son de vertigo.
+
+127
+00:06:02,639 --> 00:06:03,920
+Y tanto que los son,
+
+128
+00:06:03,920 --> 00:06:06,560
+hablemos de la valoración de OpenAI.
+
+129
+00:06:06,560 --> 00:06:10,959
+Las fuentes las situan en unos 500 mil millones de dólares.
+
+130
+00:06:10,959 --> 00:06:14,159
+Un momento, 500 mil millones.
+
+131
+00:06:14,159 --> 00:06:17,279
+A veces decimos estas cifras tan rápido que pierden sus significados.
+
+132
+00:06:17,279 --> 00:06:18,959
+Es que es difícil de procesar.
+
+133
+00:06:18,959 --> 00:06:24,560
+Estamos hablando de una valoración en nivel de gigantes consolidados como Visa o Johnson & Johnson.
+
+134
+00:06:24,560 --> 00:06:29,319
+Pero para una empresa que, como hemos dicho, pierde dinero, es alicinante.
+
+135
+00:06:29,319 --> 00:06:33,759
+Pues pones a cifra en contraste con sus ingresos reportados.
+
+136
+00:06:33,759 --> 00:06:36,120
+Uno es 12 mil millones.
+
+137
+00:06:36,120 --> 00:06:40,919
+Y el dato clave, el que desafía toda lógica empresarial tradicional,
+
+138
+00:06:40,920 --> 00:06:43,920
+es que la operación y el mantener todo eso funcionando.
+
+139
+00:06:43,920 --> 00:06:44,879
+Exacto.
+
+140
+00:06:44,879 --> 00:06:49,199
+Esta encara, que a pesar de esos ingresos, la compañía no es rentable.
+
+141
+00:06:49,199 --> 00:06:52,560
+Aquí es donde la analogía del ollo vuelve con toda su fuerza.
+
+142
+00:06:52,560 --> 00:06:53,680
+Totalmente.
+
+143
+00:06:53,680 --> 00:07:00,040
+La fuente menciona que OpenAI se valoró un múltiplo de aproximadamente 40 veces sus ingresos.
+
+144
+00:07:00,040 --> 00:07:00,879
+40 veces.
+
+145
+00:07:00,879 --> 00:07:02,560
+Si aplicamos esa misma lógica,
+
+146
+00:07:02,560 --> 00:07:05,759
+nuestro pequeño negocio de cabari rellenarollos,
+
+147
+00:07:05,759 --> 00:07:08,759
+que generó mil euros de ingresos,
+
+148
+00:07:08,759 --> 00:07:11,879
+tendría una valoración teorica de 40 mil euros.
+
+149
+00:07:11,879 --> 00:07:15,519
+Un negocio que no produce absolutamente nada de valor real.
+
+150
+00:07:15,519 --> 00:07:16,360
+Exacto.
+
+151
+00:07:16,360 --> 00:07:19,560
+Esto nos da una idea de la escala de la especulación
+
+152
+00:07:19,560 --> 00:07:23,519
+y como el valor se construye sobre la base de los ingresos declarados,
+
+153
+00:07:23,519 --> 00:07:27,279
+sin importar si vienen de un cliente externo o del propio inversor.
+
+154
+00:07:27,279 --> 00:07:32,120
+Para describir todo este panorama, las fuentes usan otra metafora muy potente.
+
+155
+00:07:32,120 --> 00:07:33,560
+La fiebre del oro.
+
+156
+00:07:33,560 --> 00:07:35,319
+Me parece muy acertada.
+
+157
+00:07:35,319 --> 00:07:37,199
+Es que es perfecta.
+
+158
+00:07:37,240 --> 00:07:41,240
+Hay una promesa de riqueza descomunal y todo el mundo corre hacia el mismo sitio.
+
+159
+00:07:41,240 --> 00:07:44,159
+Es la metafora perfecta para el momento actual.
+
+160
+00:07:44,159 --> 00:07:46,079
+Y en esta fiebre del oro moderna,
+
+161
+00:07:46,079 --> 00:07:48,079
+los roles están clarísimos.
+
+162
+00:07:48,079 --> 00:07:51,039
+Y coinciden con los actores que definimos al principio.
+
+163
+00:07:51,039 --> 00:07:52,879
+A ver, desglosemos eso.
+
+164
+00:07:52,879 --> 00:07:54,719
+¿Quién vendé las palas en esta historia?
+
+165
+00:07:54,719 --> 00:07:56,319
+Sin duda, en vídeo.
+
+166
+00:07:56,319 --> 00:07:59,959
+En una fiebre del oro, el negocio más seguro y rentable,
+
+167
+00:07:59,959 --> 00:08:01,480
+nunca fue buscar oro.
+
+168
+00:08:01,480 --> 00:08:01,919
+No.
+
+169
+00:08:01,919 --> 00:08:03,120
+Era vender las palas.
+
+170
+00:08:03,120 --> 00:08:07,159
+Si no vender las palas, los picos y los vaqueros.
+
+171
+00:08:07,160 --> 00:08:10,240
+En vídeo, fabrica las herramientas indispensables
+
+172
+00:08:10,240 --> 00:08:13,480
+que todos los demás necesitan para acabar.
+
+173
+00:08:13,480 --> 00:08:15,920
+Su negocio increíblemente rentable,
+
+174
+00:08:15,920 --> 00:08:18,880
+porque no depende de si sus clientes encuentran oro o no.
+
+175
+00:08:18,880 --> 00:08:21,600
+Mientras la gente siga acabando, ellos siguen vendiendo.
+
+176
+00:08:21,600 --> 00:08:24,560
+Y vendiendo palas a precios cada vez más altos.
+
+177
+00:08:24,560 --> 00:08:26,360
+Un negocio redondo.
+
+178
+00:08:26,360 --> 00:08:29,120
+¿Y quiénes serían los dueños de la tierra?
+
+179
+00:08:29,120 --> 00:08:31,720
+Eso son Microsoft y Oracle.
+
+180
+00:08:31,720 --> 00:08:35,320
+Ellos poseen el terreno, la infraestructura en la nube,
+
+181
+00:08:35,320 --> 00:08:38,600
+donde todos los buscadores de oro tienen que ir a acabar.
+
+182
+00:08:38,600 --> 00:08:42,600
+Alquilan las parcelas, por así decirlo, y cobran por el acceso.
+
+183
+00:08:42,600 --> 00:08:44,960
+También es un modelo de negocio muy solido.
+
+184
+00:08:44,960 --> 00:08:46,160
+Entiendo los roles.
+
+185
+00:08:46,160 --> 00:08:49,520
+En vídeo, vendé las palas Microsoft es el terrateniente.
+
+186
+00:08:49,520 --> 00:08:51,920
+Pero ¿qué pasa con los que caban?
+
+187
+00:08:51,920 --> 00:08:53,800
+OpenAI y las demás.
+
+188
+00:08:53,800 --> 00:08:55,600
+¿Encuentran algo?
+
+189
+00:08:55,600 --> 00:08:57,560
+O es la partirónica de la metafora.
+
+190
+00:08:57,560 --> 00:08:58,840
+Has dado en el clavo.
+
+191
+00:08:58,840 --> 00:09:00,840
+Ellos son los buscadores de oro.
+
+192
+00:09:00,840 --> 00:09:03,440
+Su función ahora mismo no es tanto extraer oro.
+
+193
+00:09:03,440 --> 00:09:08,040
+No es decir generar beneficios como cabarollos de forma muy espectacular.
+
+194
+00:09:08,040 --> 00:09:09,760
+De mostrar que se puede acabar.
+
+195
+00:09:09,760 --> 00:09:13,080
+De muestran que es posible acabar muy rápido, muy profundo.
+
+196
+00:09:13,080 --> 00:09:18,160
+Y eso atrae a más inversores a más gente que quiere comprar palas y alquilar terrenos.
+
+197
+00:09:18,160 --> 00:09:19,400
+General la fiebre.
+
+198
+00:09:19,400 --> 00:09:20,400
+Ah, claro.
+
+199
+00:09:20,400 --> 00:09:24,840
+Pero la conclusión que su braya la fuente es tan simple como contundente.
+
+200
+00:09:24,840 --> 00:09:27,560
+El oro, el de verdad, todavía no se ha encontrado.
+
+201
+00:09:27,560 --> 00:09:31,240
+O sea que el valor actual de los que caban no se base en el oro que han sacado.
+
+202
+00:09:31,240 --> 00:09:35,440
+Si no en la creencia colectiva de que están a punto de encontrar la beta madre.
+
+203
+00:09:35,440 --> 00:09:36,440
+Exacto.
+
+204
+00:09:36,440 --> 00:09:41,399
+El valor no reside en la realidad financiera del presente, si no en la expectativa del futuro.
+
+205
+00:09:41,399 --> 00:09:46,360
+Si aceptamos esta premisa, que gran parte del valor es una promesa construida sobre este circuito
+
+206
+00:09:46,360 --> 00:09:49,519
+cerrado, la pregunta de millones evidente.
+
+207
+00:09:49,519 --> 00:09:54,519
+¿Cuál es el plan para romper el círculo y empezar a sacar dinero del mundo real?
+
+208
+00:09:54,519 --> 00:09:56,879
+Claro, ¿cómo se monetiza esto?
+
+209
+00:09:56,879 --> 00:09:59,519
+¿Cómo se supone que van a encontrar ese oro?
+
+210
+00:09:59,519 --> 00:10:02,279
+Ahí es donde se juega el futuro de todo esto.
+
+211
+00:10:02,279 --> 00:10:08,159
+Las fuentes sugieren que el plan al largo plazo pasa por activar una serie de palancas de monetización
+
+212
+00:10:08,159 --> 00:10:10,759
+que todavía no hemos visto en acción a gran escala.
+
+213
+00:10:10,759 --> 00:10:11,759
+¿Cómo cuál es?
+
+214
+00:10:11,759 --> 00:10:13,600
+Hay varias ideas sobre la mesa.
+
+215
+00:10:13,600 --> 00:10:16,559
+La primera, la masovia, es la publicidad.
+
+216
+00:10:16,559 --> 00:10:22,079
+Publicidad dentro de mis conversaciones con chatGPT, eso suena increíblemente molesto.
+
+217
+00:10:22,079 --> 00:10:25,360
+De verdad, creen que ese es una idea multimillonaria?
+
+218
+00:10:25,360 --> 00:10:26,559
+Podría hacerlo.
+
+219
+00:10:26,559 --> 00:10:29,120
+Pienza en el modelo de negocio de Google.
+
+220
+00:10:29,120 --> 00:10:31,879
+La fuente utiliza un ejemplo muy gráfico.
+
+221
+00:10:31,879 --> 00:10:38,600
+Imagina, asam Altsman, el CEO de OpenAI vendiendo espacios publicitarios en las respuestas.
+
+222
+00:10:38,600 --> 00:10:44,919
+A ver, preguntas por el mejor restaurante de tu ciudad y la primera opción es un resultado patrocinado.
+
+223
+00:10:44,919 --> 00:10:50,000
+O pides que te escriban correo y te sugiero usar un software de gestión de proyectos de pago.
+
+224
+00:10:50,000 --> 00:10:56,759
+Es integrar el modelo de los buscadores de internet que es enormemente lucrativo directamente en la AIA conversacional.
+
+225
+00:10:56,759 --> 00:10:58,159
+¡Vale!
+
+226
+00:10:58,159 --> 00:11:02,720
+Visto así, tiene sentido económico, aunque la experiencia de usuario pueda sufrir.
+
+227
+00:11:02,720 --> 00:11:04,200
+¿Qué más hay en la recámara?
+
+228
+00:11:04,200 --> 00:11:09,879
+Otra vía que se menciona bastante más controvertida es la de permitir el contenido para adultos.
+
+229
+00:11:09,879 --> 00:11:11,319
+Esa es interesante.
+
+230
+00:11:11,319 --> 00:11:13,879
+Es un mercado gigantesco, obviamente.
+
+231
+00:11:13,879 --> 00:11:18,240
+Pero no chocaría frontalmente con la imagen pública que estas empresas intentan proyectar.
+
+232
+00:11:18,240 --> 00:11:19,240
+Totalmente.
+
+233
+00:11:19,240 --> 00:11:23,799
+La de estar creando una tecnología para el bien de la humanidad, y todo eso.
+
+234
+00:11:23,800 --> 00:11:26,880
+Sujieren las fuentes que estarían dispuestas a sumir ese riesgo.
+
+235
+00:11:26,880 --> 00:11:28,200
+Es la gran pregunta.
+
+236
+00:11:28,200 --> 00:11:32,920
+Actualmente, los grandes modelos tienen restricciones muy severas en este ámbito.
+
+237
+00:11:32,920 --> 00:11:39,320
+Pero la fuente plantea que levantar esas barreras podría desbloquear un flujo de ingresos nuevo y potentísimo.
+
+238
+00:11:39,320 --> 00:11:41,800
+Un mercado que pagaría mucho seguro.
+
+239
+00:11:41,800 --> 00:11:46,880
+Un mercado que estaría dispuesto a pagar mucho por servicios de IA sin esas limitaciones.
+
+240
+00:11:46,880 --> 00:11:49,400
+Sería una decisión puramente pragmática,
+
+241
+00:11:49,399 --> 00:11:54,039
+sopesar el golpe a la reputación contra los miles de millones en ingresos potenciales.
+
+242
+00:11:54,039 --> 00:12:01,919
+Publicidad, contenido para adultos, parecen vías de negocio, pero no sé si justifican valoraciones de medio billón de dólares.
+
+243
+00:12:01,919 --> 00:12:06,240
+Hay alguna puesta más grande, la que de verdad podría ser la beta madre.
+
+244
+00:12:06,240 --> 00:12:07,240
+Sí.
+
+245
+00:12:07,240 --> 00:12:11,679
+Y es la estrategia más ambiciosa, y para muchos, la más preocupante.
+
+246
+00:12:11,679 --> 00:12:12,679
+Me lo imagino.
+
+247
+00:12:12,679 --> 00:12:16,600
+La gran apuesta es la sustitución laboral, la gran está la.
+
+248
+00:12:16,600 --> 00:12:20,399
+El objetivo final no sería vender un producto a un servicio.
+
+249
+00:12:20,399 --> 00:12:25,840
+Si no desarrollar sistemas de IA tan eficientes y sobre todo tan baratos de operar,
+
+250
+00:12:25,840 --> 00:12:30,600
+que puedan reemplazar másivamente el trabajo humano en decenas de sectores.
+
+251
+00:12:30,600 --> 00:12:35,200
+O sea que el verdadero plan no es vender un CHDGPT mejorado a los usuarios.
+
+252
+00:12:35,200 --> 00:12:35,560
+No.
+
+253
+00:12:35,560 --> 00:12:41,040
+Si no vender a las empresas una forma de reducir drásticamente su mayor coste, los salarios.
+
+254
+00:12:41,040 --> 00:12:42,200
+Precisamente.
+
+255
+00:12:42,200 --> 00:12:45,519
+Desde atención al cliente, redacción de informes,
+
+256
+00:12:45,519 --> 00:12:49,799
+con tabilidad hasta programación de software o análisis de datos.
+
+257
+00:12:49,799 --> 00:12:54,120
+Si una empresa puede sustituir a 100 empleados que cuesta en millones al año,
+
+258
+00:12:54,120 --> 00:12:57,319
+por un servicio de IA, que cuesta una fracción de eso.
+
+259
+00:12:57,319 --> 00:13:02,000
+El mercado potencial es prácticamente toda la economía global.
+
+260
+00:13:02,000 --> 00:13:05,240
+Es ese el oro que justificaría las valoraciones actuales.
+
+261
+00:13:05,240 --> 00:13:08,480
+Esto planteó una pregunta importante sobre el objetivo final.
+
+262
+00:13:08,480 --> 00:13:11,639
+No se trata solo de ofrecer una herramienta útil, ¿verdad?
+
+263
+00:13:11,639 --> 00:13:17,120
+No. El fin último que sugiere la fuente es generar una dependencia total.
+
+264
+00:13:17,120 --> 00:13:19,360
+Crear una nueva infraestructura crítica.
+
+265
+00:13:19,360 --> 00:13:20,960
+¿Cómo le electricidad o internet?
+
+266
+00:13:20,960 --> 00:13:21,960
+Exacto.
+
+267
+00:13:21,960 --> 00:13:28,360
+Una vez que las empresas y las industrias reorganizan todos sus procesos para funcionar sobre esta IA,
+
+268
+00:13:28,360 --> 00:13:30,840
+se vuelven completamente dependientes.
+
+269
+00:13:30,840 --> 00:13:36,080
+En ese punto, los creadores de la tecnología tienen un poder de mercado casi absoluto.
+
+270
+00:13:36,080 --> 00:13:37,879
+¿Pueden poner el precio que quieran?
+
+271
+00:13:37,879 --> 00:13:41,320
+¿Pueden fijar los precios establecer las condiciones?
+
+272
+00:13:41,320 --> 00:13:43,279
+El plan no es vender un producto.
+
+273
+00:13:43,279 --> 00:13:48,120
+Es convertirse en el sistema operativo sobre el que funciona la economía del siglo XXI.
+
+274
+00:13:48,120 --> 00:13:51,960
+En resumen, si unimos todos las piezas, el panorama es fascinante.
+
+275
+00:13:51,960 --> 00:13:55,279
+Tenemos un valor inmenso que no se basen la rentabilidad actual,
+
+276
+00:13:55,279 --> 00:13:59,840
+sino en una fe casi religiosa en que la aceleración tecnológica es imparable.
+
+277
+00:13:59,840 --> 00:14:01,919
+¿Y que el oro está a la vuelta de la esquina?
+
+278
+00:14:01,919 --> 00:14:02,840
+Exacto.
+
+279
+00:14:02,840 --> 00:14:07,600
+Y mientras tanto, este valor se sostiene con una ingeniosa economía circular,
+
+280
+00:14:07,600 --> 00:14:12,759
+como la analogía del ollo, donde el dinero de los grandes jugadores se mueve entre ellos,
+
+281
+00:14:12,759 --> 00:14:16,519
+inflando las métricas de todos y manteniendo la fiebre viva.
+
+282
+00:14:16,519 --> 00:14:19,960
+Y eso nos deja con la reflexión final que proponen las fuentes.
+
+283
+00:14:19,960 --> 00:14:22,280
+Una pregunta que lo cuestiona todo.
+
+284
+00:14:22,280 --> 00:14:27,440
+Este enorme castillo financiero se sostiene sobre una única vigama extra.
+
+285
+00:14:27,440 --> 00:14:31,400
+La creencia en un progreso tecnológico constante y acelerado.
+
+286
+00:14:31,400 --> 00:14:32,440
+¿Y si no es así?
+
+287
+00:14:32,440 --> 00:14:34,960
+Esa es la pregunta que queda en el aire.
+
+288
+00:14:34,960 --> 00:14:40,040
+¿Qué pasaría con toda esta estructura si ese ritmo de progreso se estanca?
+
+289
+00:14:40,040 --> 00:14:43,160
+Y si la tecnología choca contra un muro inesperado,
+
+290
+00:14:43,160 --> 00:14:45,840
+ya sea por los límites físicos de los chips,
+
+291
+00:14:45,840 --> 00:14:48,880
+por un consumo energético que se vuelve insostenible,
+
+292
+00:14:48,880 --> 00:14:54,840
+o simplemente porque la inteligencia artificial general resulta ser un problema mucho más difícil de lo que se pensaba.
+
+293
+00:14:54,840 --> 00:14:56,120
+Es una buena pregunta.
+
+294
+00:14:56,120 --> 00:15:01,760
+Si resulta que el oro está mucho más profundo de lo que se creía,
+
+295
+00:15:01,759 --> 00:15:05,439
+o si quizá no hay tanto como se esperaba,
+
+296
+00:15:05,439 --> 00:15:10,000
+¿quién se quedará al final con la pala en la mano mirando no yo vacío?
+

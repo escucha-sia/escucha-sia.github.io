@@ -1,0 +1,288 @@
+1
+00:00:00,000 --> 00:00:03,000
+Muy buenos días a toda nuestra audiencia.
+
+2
+00:00:03,000 --> 00:00:05,799
+Bienvenidos a una nueva entrega de SEGA,
+
+3
+00:00:05,799 --> 00:00:09,800
+tu espacio de análisis técnico y pensamiento estratégico.
+
+4
+00:00:09,800 --> 00:00:11,599
+Soy Jorge.
+
+5
+00:00:11,599 --> 00:00:13,400
+Y yo soy Dalia.
+
+6
+00:00:13,400 --> 00:00:16,000
+Hoy ponemos sobre la mesa un debate que está incendiendo
+
+7
+00:00:16,000 --> 00:00:19,000
+foros de arquitectura y salas de juntas técnicas.
+
+8
+00:00:19,000 --> 00:00:22,000
+Estamos presentando la muerte de la programación tradicional
+
+9
+00:00:22,000 --> 00:00:23,400
+a manos del vape Corem,
+
+10
+00:00:23,400 --> 00:00:27,600
+o estamos cayendo en una peligrosa trampa de deuda técnica.
+
+11
+00:00:27,600 --> 00:00:30,200
+Y para darle contexto a quienes nos escuchan,
+
+12
+00:00:30,200 --> 00:00:34,200
+hagamos una obligada consulta a nuestra vida core histórica.
+
+13
+00:00:34,200 --> 00:00:37,240
+Hace unos episodios discutíamos como las bases de datos
+
+14
+00:00:37,240 --> 00:00:39,800
+vectoriales traducían el caos del mundo real
+
+15
+00:00:39,800 --> 00:00:43,200
+para modelos como chatGPT y Gemini.
+
+16
+00:00:43,200 --> 00:00:48,600
+Y también vimos a Gemini 3.0 ganar pruebas de lógica a ciegas.
+
+17
+00:00:48,600 --> 00:00:53,000
+Pero hoy, la conversación ya no es sobre si el modelo puede escribir código,
+
+18
+00:00:53,000 --> 00:00:57,200
+sino sobre quien tiene el criterio para auditar lo que genera.
+
+19
+00:00:57,200 --> 00:00:59,400
+Exactamente Jorge.
+
+20
+00:00:59,400 --> 00:01:02,200
+Android Carpe Tip Popularizó el término vape Corem,
+
+21
+00:01:02,200 --> 00:01:05,840
+esa idea se doctora de programar únicamente dictando la intención o la
+
+22
+00:01:05,840 --> 00:01:08,799
+vibra de lo que quieres, dejando que el modelo de lenguajes
+
+23
+00:01:08,799 --> 00:01:12,200
+cupacientos delineas de código en segundos.
+
+24
+00:01:12,200 --> 00:01:15,000
+Suena a su perpoder, verdad.
+
+25
+00:01:15,000 --> 00:01:18,000
+Pues según las investigaciones recientes de Microsoft Research y
+
+26
+00:01:18,000 --> 00:01:20,400
+el análisis de Boláia, Baudera e Engine Event,
+
+27
+00:01:20,400 --> 00:01:24,000
+estamos ante el fenómeno de la ilusión de competencia.
+
+28
+00:01:24,200 --> 00:01:28,200
+Es un concepto fascinante y a la vez aterrador, Dalia.
+
+29
+00:01:28,200 --> 00:01:31,560
+La ilusión de competencia ocurre cuando el código generado luce
+
+30
+00:01:31,560 --> 00:01:36,200
+elegante tiene sangrías perfectas y pasa pruebas unitarias superficiales,
+
+31
+00:01:36,200 --> 00:01:39,000
+pero colapsa miserablemente en casos de borde,
+
+32
+00:01:39,000 --> 00:01:43,200
+en concurrencia masiva o enfugas de memoria silenciosas.
+
+33
+00:01:43,200 --> 00:01:46,359
+Por eso la verdadera disciplina que están haciendo no explicar
+
+34
+00:01:46,359 --> 00:01:50,799
+código por vibras, sino lo que la industria ya llamaba Reviewing.
+
+35
+00:01:50,799 --> 00:01:54,399
+Es decir, auditar holísticamente el sistema.
+
+36
+00:01:54,399 --> 00:01:57,599
+Ya no te pagan por recordar las intáxias de un foder popular
+
+37
+00:01:57,599 --> 00:02:00,439
+con un punto y coma, tu valor real como ingeniero
+
+38
+00:02:00,439 --> 00:02:03,000
+senioro y radica en entender la arquitectura,
+
+39
+00:02:03,000 --> 00:02:07,400
+los límites de seguridad y el comportamiento emergente del sistema.
+
+40
+00:02:07,400 --> 00:02:10,800
+Y esto conecta directamente con la transformación más profunda
+
+41
+00:02:10,800 --> 00:02:14,800
+en nuestro campo, la metamorfosis del equipo de datos.
+
+42
+00:02:14,800 --> 00:02:18,000
+Durante una década nos llamaron los fontaneros de datos,
+
+43
+00:02:18,000 --> 00:02:21,800
+porque nuestro trabajo era conectar tuberías rígidas entre Apeis,
+
+44
+00:02:21,800 --> 00:02:26,000
+bases de datos relacionales y almacenes analíticos.
+
+45
+00:02:26,000 --> 00:02:30,800
+Adiós al fontanero de datos, bienvenido el arquitecto de contexto.
+
+46
+00:02:30,800 --> 00:02:36,400
+Con entornos como Google Antagabri y las capacidades agénticas de BKAEI de BTC con MSP,
+
+47
+00:02:36,400 --> 00:02:40,800
+los agentes de software ya pueden generar y reparar consultas solos.
+
+48
+00:02:40,800 --> 00:02:47,800
+Pero ojo, una gente autónomos en contexto de negocio es una máquina de cometer errores a escala industrial.
+
+49
+00:02:48,000 --> 00:02:49,600
+Así es.
+
+50
+00:02:49,600 --> 00:02:53,200
+Si tus tablas en el almacen de datos sufren de derivas semántica,
+
+51
+00:02:53,200 --> 00:02:59,600
+o si tus definiciones de clientes activos y ventas netas no están formalizadas en un contrato semántico claro,
+
+52
+00:02:59,600 --> 00:03:04,400
+el agente va a alucinar métricas falsas con una seguridad pasmosa.
+
+53
+00:03:04,400 --> 00:03:08,000
+El trabajo del ingeniero de datos moderno es curar el contexto,
+
+54
+00:03:08,000 --> 00:03:15,000
+diseñar los esquemas de verdad, proteger la gobernanza y alimentar a la gente con metadatos intechables.
+
+55
+00:03:15,000 --> 00:03:20,400
+Eres el director de Orquesta que le da la partitura afinada a la inteligencia artificial.
+
+56
+00:03:20,400 --> 00:03:25,400
+Y cambiando un poco de lente hacia nuestro rincón geek favorito, de asfijado, Jorge,
+
+57
+00:03:25,400 --> 00:03:32,800
+en cómo esta arquitectura de agentes autónomos y gobernanza se parece cada vez más al sistema cardinal de software online.
+
+58
+00:03:32,800 --> 00:03:34,400
+Totalmente.
+
+59
+00:03:34,400 --> 00:03:38,800
+En en clad, cardinal era ese motor autónomo que balanceaba misiones,
+
+60
+00:03:38,800 --> 00:03:44,800
+ajustaba la dificulta y corregía a cliches en tiempo real sin intervención humana directa.
+
+61
+00:03:44,800 --> 00:03:49,000
+Hoy, con la orquestación multiagente en herramientas como Antigrabiti,
+
+62
+00:03:49,000 --> 00:03:52,400
+donde tiene suvagentes especializados auditándose entre sí,
+
+63
+00:03:52,400 --> 00:03:57,600
+estamos empezando a construir los primeros embriones de esos sistemas vivos.
+
+64
+00:03:57,600 --> 00:04:00,000
+Fascinante paralelismo.
+
+65
+00:04:00,000 --> 00:04:03,800
+Y antes de cerrar, un títemovilidad para toda la comunidad.
+
+66
+00:04:03,800 --> 00:04:08,400
+Si ya tienen la actualización de guano y nueve en la serie Gavax CS25,
+
+67
+00:04:08,400 --> 00:04:13,600
+aproveché in the brief para que procesé de forma local en la NPU sus recordatorios del día,
+
+68
+00:04:13,599 --> 00:04:17,000
+sin enviarte la metría inesesaria a la Nube.
+
+69
+00:04:17,000 --> 00:04:19,399
+Excelente recomendación.
+
+70
+00:04:19,399 --> 00:04:23,000
+Que toda nuestra audiencia tenga una jornada somamente productiva,
+
+71
+00:04:23,000 --> 00:04:28,199
+llena de decisiones arquitectónica solidas y seruillusiones de competencia.
+
+72
+00:04:28,199 --> 00:04:32,000
+Nos escuchamos en el próximo episodio de SEIA.
+

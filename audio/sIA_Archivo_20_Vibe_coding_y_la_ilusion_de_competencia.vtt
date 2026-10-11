@@ -1,0 +1,1156 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:12.759
+Imagina que la próxima pieza de software, que revolucione por completo el sistema financiero mundial o digamos el algoritmo que de codifique patrones médicos super complejos,
+
+00:00:12.759 --> 00:00:17.320
+pues no va a tener a un ser humano escribiendo una sola línea de código fundamental.
+
+00:00:17.320 --> 00:00:19.080
+¿Cero? ¿Cero absoluto, ¿eh?
+
+00:00:19.080 --> 00:00:26.359
+O sea, nadie va a estar tecleando febrilmente en la madrugada frente a una pantalla negra llena de texto de colores.
+
+00:00:26.359 --> 00:00:33.079
+En su lugar, el código va a ser digamos sentido, o más bien guiado puramente por intenciones de alto nivel.
+
+00:00:33.079 --> 00:00:35.560
+Es un concepto que suena de ciencia ficción, la verdad.
+
+00:00:35.560 --> 00:00:46.439
+Totalmente. Y bueno, bienvenidas y bienvenidos a este nuevo análisis a fondo. Hoy tenemos sobre la mesa unos materiales super interesantes que provienen del sitio reliable de era engineering.
+
+00:00:46.439 --> 00:00:52.239
+Especificamente, vamos a estar desmenosando un artículo que se llama Vipe Coding Vipe Reviewing.
+
+00:00:52.239 --> 00:01:03.399
+Y fíjate que lo estamos cruzando también con un registro de una habitación analítica que rastrea toda esta evolución de la programación asistida por inteligencia artificial.
+
+00:01:03.399 --> 00:01:10.039
+Exacto. Así que, a ver, vamos a desempacar esto, porque la premisa central, o sea, el punto clave aquí,
+
+00:01:10.040 --> 00:01:19.840
+apunta a que la época dorada de ser un experto absoluto memorizando sin taxis estructural, pues está desapareciendo a una velocidad absurda.
+
+00:01:19.840 --> 00:01:27.640
+Absurda. Y lo fascinante aquí, desde el mismo primer para rafo de esta fuente, es como ilustra un desplazamiento histórico del rolo humano, ¿no?
+
+00:01:27.640 --> 00:01:34.520
+¿Por qué, históricamente, la disciplina de la ingeniería de software ha estado superfundamentada en la escritura manual,
+
+00:01:34.719 --> 00:01:39.519
+meticulosa, este línea por línea, el desarrollador era el creador directo.
+
+00:01:39.519 --> 00:01:49.519
+El que ponía los manos en la masa. Exactamente, el humano ocupaba la silla de gamos de la arquitecto que pone el adrillo por ladrillo y se asegura de que el cemento sé que correctamente.
+
+00:01:49.519 --> 00:01:55.519
+Pero lo que la investigación plantea es un desplazamiento inegable hacia la silla del curador.
+
+00:01:55.519 --> 00:01:57.519
+Del curador, wow.
+
+00:01:57.519 --> 00:02:03.920
+Sí, o sea, ya no construyes la logica base, sino que selecciona si validas los resultados de un modelo.
+
+00:02:03.920 --> 00:02:10.920
+Es un cambio de enfoque interesantísimo. Yo lo veo hace cuentas como si pasáramos de ser el carpintero clásico.
+
+00:02:10.920 --> 00:02:20.920
+Este el artesano que se llena las manos de hacer rin, que lija la madera y talla cada milímetro de una silla para asegurarse de que las patas estén supermiveladas.
+
+00:02:20.920 --> 00:02:21.920
+¿Aja?
+
+00:02:21.920 --> 00:02:28.920
+A convertirnos de repente en un director creativo. Un director que simplemente se para frente a una máquina mágica, el edice hoy es,
+
+00:02:28.920 --> 00:02:35.920
+es decir, necesito algo con una vibraminimalista que se asegura para sentarse y que conviene con roble.
+
+00:02:35.920 --> 00:02:38.920
+Claro, y la máquina materializa la siguiente en tres segundos.
+
+00:02:38.920 --> 00:02:44.920
+Lícral, pero a ver a nivel puramente técnico para quienes nos escuchan y les guste el detalle,
+
+00:02:44.920 --> 00:02:53.920
+que significa exactamente operar bajo esto que la fuente llama un ingeniería de software post syntactica.
+
+00:02:53.920 --> 00:02:57.920
+Pues mira, el término post syntactico es la clave de todo esto.
+
+00:02:57.920 --> 00:03:02.920
+significa que el valor de entender el idioma exacto de la máquina ha llegado prácticamente a 0.
+
+00:03:02.920 --> 00:03:03.920
+A 0, orale.
+
+00:03:03.920 --> 00:03:04.920
+Sí, a 0.
+
+00:03:04.920 --> 00:03:12.920
+Porque a ver, durante décadas, la barrera de entrada para crear tecnología, era hablar en lenguaje de las computadoras sin cometer ni un solo erro gramatical.
+
+00:03:12.920 --> 00:03:21.920
+Claro, un punto icoma que te faltara un espacio mal puesto y este un programa de un millón de dólares con la psaba por completo.
+
+00:03:21.920 --> 00:03:22.920
+totalmente.
+
+00:03:22.920 --> 00:03:25.920
+La computadora era un ente de rígido o superestricto.
+
+00:03:25.920 --> 00:03:28.920
+Pero hoy, la computadora habla nuestra idioma.
+
+00:03:28.920 --> 00:03:35.920
+Por lo tanto, el trabajo pesado, la talacha, de traducir una idea conceptual a un código estructurado, pues ya no es el cuello de botella.
+
+00:03:35.920 --> 00:03:41.920
+Y justo aquí es donde entra este famoso concepto del vibe con dingueble el artículo, ¿verdad?
+
+00:03:41.920 --> 00:03:42.920
+Exactamente.
+
+00:03:42.920 --> 00:03:44.920
+El vibe coding.
+
+00:03:44.920 --> 00:03:50.920
+Que básicamente es este nuevo modelo operativo donde se programa utilizando modelos del lenguaje de gran escala.
+
+00:03:50.920 --> 00:03:52.920
+O sea, los L, L, M.
+
+00:03:52.920 --> 00:04:02.920
+En este esquema, el desarrollador ya no se sienta a escribir bucle es lógico o es de sentencias condicionales paso a paso en su lugar comunica una vibra.
+
+00:04:02.920 --> 00:04:05.920
+Una vibra que es una superinformal, ¿no?
+
+00:04:05.920 --> 00:04:06.920
+Suena casi místico, sí.
+
+00:04:06.920 --> 00:04:13.920
+Pero en este contexto técnico, una vibra es un patrón de comportamiento, o sea, una intención o un estado final de ciado.
+
+00:04:13.920 --> 00:04:20.920
+El humano comunica el que, y la inteligencia artificial se encarga de implementar todo el cómodo, desde cómo guardar los dapos hasta,
+
+00:04:20.920 --> 00:04:23.920
+este como se ve el botón en la pantalla de la aplicación.
+
+00:04:23.920 --> 00:04:24.920
+Espera, es pero un momento.
+
+00:04:24.920 --> 00:04:31.920
+Porque esto suena idéntico a lo que hemos estado escuchando los últimos, que se yo, dos años con el Prompt Engineering.
+
+00:04:31.920 --> 00:04:32.920
+¡Aja, claro!
+
+00:04:32.920 --> 00:04:39.920
+Ya sabes, esta idea de que la habilidad del futuro era saber escribir buenas instrucciones para chatGPT.
+
+00:04:39.920 --> 00:04:49.920
+Entonces, mi duda es, es realmente diferente el VipCoding o este simplemente le estamos poniendo un nombre nuevo y más fresa
+
+00:04:49.920 --> 00:04:51.920
+a saber darle ordenes a la máquina.
+
+00:04:51.920 --> 00:04:53.920
+Es un excelente pregunta.
+
+00:04:53.920 --> 00:04:57.920
+Y no, hay una distinción técnica fundamental.
+
+00:04:57.920 --> 00:05:04.920
+El Prompt Engineering tradicionalmente assume que le estás pidiendo a la máquina que ejecuto una tarea super discreta y específica.
+
+00:05:04.920 --> 00:05:07.920
+Tipo, escribe un correo o algo así.
+
+00:05:07.920 --> 00:05:08.920
+Exacto.
+
+00:05:08.920 --> 00:05:12.920
+O en código, escribe esta función en lenguaje Python que ordene una lista.
+
+00:05:12.920 --> 00:05:16.920
+O, encuentra el error en este parrafo.
+
+00:05:16.920 --> 00:05:18.920
+Siegues mi cogestionando el proceso.
+
+00:05:18.920 --> 00:05:20.920
+Ok, ya veo.
+
+00:05:20.920 --> 00:05:24.920
+Pero el VipCoding operé en un nivel de abstracción muchísimo más alto.
+
+00:05:24.920 --> 00:05:28.920
+De hecho, para respaldar esto, el artículo de reliable data engineering
+
+00:05:28.920 --> 00:05:32.920
+cita un ensayo histórico de André Carpathi del 2023.
+
+00:05:32.920 --> 00:05:34.920
+Ah, claro, Carpathi.
+
+00:05:34.920 --> 00:05:38.920
+Sí, sobre el software 2.0 que explique exactamente este salto.
+
+00:05:38.920 --> 00:05:42.920
+Carpathi es una figura enorme en el mundo de la inteligencia artificial,
+
+00:05:42.920 --> 00:05:46.920
+así que si él ya prevé ya esto, pues tiene un peso brutal.
+
+00:05:46.920 --> 00:05:49.920
+¿Qué plantea exactamente es ensayo para nuestra audiencia?
+
+00:05:49.920 --> 00:05:54.920
+Pues Carpathi explicaba que el software 1.0 es el código tradicional,
+
+00:05:54.920 --> 00:05:58.920
+o sea, instrucciones deterministas y explícitas escritas por un humano.
+
+00:05:58.920 --> 00:06:04.920
+Mientras que el software 2.0 es el código que se deriva de la optimización de redes neuronales.
+
+00:06:04.920 --> 00:06:05.920
+Hora, le.
+
+00:06:05.920 --> 00:06:10.920
+En este paradigua 2.0 ya no le dices a la computadora cómo resolver el problema.
+
+00:06:10.920 --> 00:06:16.920
+Le define el objetivo final y dejas que la red encuentra el camino óptimo por si sola.
+
+00:06:16.920 --> 00:06:21.920
+Ok, entonces el VipCoding es, digamos, la materialización de esto en el día a día.
+
+00:06:21.920 --> 00:06:27.920
+Exactamente, ya no le pide salaía una función chiquita para procesar tarjetas de crédito.
+
+00:06:27.920 --> 00:06:29.920
+Le pasas la vibra completa del sistema.
+
+00:06:29.920 --> 00:06:35.920
+Le dices algo como, necesito un flujo de comercio electrónico donde el usuario no sienta fricción al comprar.
+
+00:06:35.920 --> 00:06:41.920
+Y la máquina genera éste dosenas de archivos interactuando entre sí para lograr esa sensación exacta.
+
+00:06:41.920 --> 00:06:50.920
+Ya veo, o sea, en el software 1.0 eres un micro gestor super controlador dictando cada movimiento del teclado.
+
+00:06:50.920 --> 00:06:55.920
+Y en el paradigma actual de legas la operación entera de la infraestructura.
+
+00:06:55.920 --> 00:06:58.920
+La máquina se avienta la talacha.
+
+00:06:58.920 --> 00:06:59.920
+Sí, tal cual.
+
+00:06:59.920 --> 00:07:02.920
+Pero a ver, aquí es donde se pone muy interesante.
+
+00:07:02.920 --> 00:07:09.920
+Porque si la barrera de las syntaxes desaparece por completo y el modelo general código basándose en una intención general.
+
+00:07:09.920 --> 00:07:15.920
+O sea, en una vibra, esto democratiza la creación de una forma super radical.
+
+00:07:15.920 --> 00:07:23.920
+¿Alguien si en estudios formales en informática podría no ser lanzar una plataforma de logística complejísima,
+
+00:07:23.920 --> 00:07:25.920
+solo explicando su intención?
+
+00:07:25.920 --> 00:07:28.920
+Y la democratización en esa etapa de generación es innegable.
+
+00:07:28.920 --> 00:07:35.920
+O sea, generar la primera versión de un programa complejo nunca jamás en la historia había sido tan accesible.
+
+00:07:35.920 --> 00:07:42.920
+Pero, y aquí viene mi pero, conociendo cómo opera las inteligencias artificiales bajo la superficie.
+
+00:07:42.920 --> 00:07:49.920
+Me imagino que debe haber una trampa enorme en dejar que la máquina tomé el volante absoluto basándose solo en intenciones.
+
+00:07:49.920 --> 00:07:50.920
+Claro.
+
+00:07:50.920 --> 00:07:54.920
+¿Qué pasa cuando la red neuronal mal interpreta esa famosa vibra?
+
+00:07:54.920 --> 00:07:56.920
+Pues, dizten el clavo.
+
+00:07:56.920 --> 00:07:59.920
+Y es precisamente la medula del problema que plantea la investigación.
+
+00:07:59.920 --> 00:08:05.920
+Si conectamos esto con el panorama general, generar el código se vuelto la parte trivial del proceso.
+
+00:08:05.920 --> 00:08:06.920
+Lo fácil, digamos.
+
+00:08:06.920 --> 00:08:08.920
+Exacto, lo fácil.
+
+00:08:08.920 --> 00:08:15.920
+El verdadero, monumental dolor de cabeza para la industria de la tecnología actual es la revisión de ese código.
+
+00:08:15.920 --> 00:08:22.920
+Y ahí es donde la artículo introduce el verdadero cuello de botella de la heramoderna, que es el vibe reviewing.
+
+00:08:22.920 --> 00:08:27.920
+By reviewing, o sea, revisarla vibra.
+
+00:08:27.920 --> 00:08:29.920
+Suena este super abstracto.
+
+00:08:29.920 --> 00:08:37.920
+Casi como si en lugar de ingenieros estuvieramos hablando de críticos de arte analizando un lienzo en una galería.
+
+00:08:37.919 --> 00:08:43.919
+Pues puede sonar abstracto, pero creme que la diferencia mecánica es brutal cuando lo comparas con el code review tradicional.
+
+00:08:43.919 --> 00:08:46.919
+A ver, cuentanos como era el tradicional.
+
+00:08:46.919 --> 00:08:54.919
+Pues antes, en una revisión de código, un desarrollador le enviaba a su compañero un archivo con no sé, 20 o 30 líneas de código nuevas.
+
+00:08:54.919 --> 00:09:00.919
+Y el compañero se sentaba, leí el texto de arriba abajo buscando fallas explícitas y lógicas.
+
+00:09:00.919 --> 00:09:03.919
+Claro, como una falta de ortografía matemática.
+
+00:09:03.919 --> 00:09:04.919
+Exacto.
+
+00:09:04.919 --> 00:09:06.919
+¿Qué hable que no se inicializó?
+
+00:09:06.919 --> 00:09:08.919
+Una fuga de memoria super evidente.
+
+00:09:08.919 --> 00:09:11.919
+Un condicional que estaba puesto al revés.
+
+00:09:11.919 --> 00:09:15.919
+Básicamente buscabas errores deterministas en un entorno super controlado.
+
+00:09:15.919 --> 00:09:20.919
+O sea, revisaba pieza por pieza del motor antes de encender el coche.
+
+00:09:20.919 --> 00:09:21.919
+Tal cual?
+
+00:09:21.919 --> 00:09:26.919
+Pero ahora, con el vibe coding, el modelo del lenguaje no te arroja 20 líneas.
+
+00:09:26.919 --> 00:09:33.919
+Desculpe este 5.000 líneas de código distribuidas en 10 archivos diferentes en cuestión de segundos.
+
+00:09:33.919 --> 00:09:34.919
+¿Qué es lo cura?
+
+00:09:34.919 --> 00:09:39.919
+Y claro, el vibe reviewing ya no se trata de leer código línea por línea.
+
+00:09:39.919 --> 00:09:43.919
+Porque su manamento imposible mantener ese ritmo de lectura y comprensión.
+
+00:09:43.919 --> 00:09:48.919
+Se trata de evaluar lo que llaman el comportamiento emergente del sistema.
+
+00:09:48.919 --> 00:09:50.919
+Comportamiento emergente.
+
+00:09:50.919 --> 00:09:55.919
+Sí, y aquí hay que entender porque los LMS fallan de la manera tan particular en que lo hacen.
+
+00:09:55.919 --> 00:10:02.919
+A ver, explica no sé su adecaye, porque estoy segura de que ese es la clave para entender el riesgo real de todo esto.
+
+00:10:02.919 --> 00:10:06.919
+Pues mira, los modelos del lenguaje de gran escala no son motores lógicos.
+
+00:10:06.919 --> 00:10:10.919
+O sea, no piensan mediante reglas matemáticas inmutables como una calculadora.
+
+00:10:10.919 --> 00:10:13.919
+Son motores probabilísticos.
+
+00:10:13.919 --> 00:10:17.919
+Funcionan prediciendo cuál es la siguiente porción de texto más probable basándose en.
+
+00:10:17.919 --> 00:10:21.919
+Bueno, terabytes y terabytes de información con la que fueron entrenados.
+
+00:10:21.919 --> 00:10:23.919
+Ok, probabilidad pura.
+
+00:10:23.919 --> 00:10:24.919
+Exacto.
+
+00:10:24.919 --> 00:10:29.919
+Entonces, cuando le pide su sistema de comercio electrónico, el modelo no razona la arquitectura.
+
+00:10:29.919 --> 00:10:35.919
+Simplemente evoca estadísticamente la secuencia de texto que suele representar un sistema de comercio electrónico
+
+00:10:35.919 --> 00:10:38.919
+en toda su base de datos de entrenamiento.
+
+00:10:38.919 --> 00:10:46.919
+Usted que, si la IA, sólo está divinando estadísticamente cuál es la siguiente palabra que suena más lógica,
+
+00:10:46.919 --> 00:10:53.919
+es de eso significa que el código que produce es sólo una muy buena imitación del código real.
+
+00:10:53.919 --> 00:10:57.919
+Bum, es el a base de uno de los conceptos más duros del artículo.
+
+00:10:57.919 --> 00:11:03.919
+Lo que denominan la ilusión de competencia y ilusión de competencia suena peligroso.
+
+00:11:03.919 --> 00:11:06.919
+Es el riesgo sistémico más documentado en toda esta transición.
+
+00:11:06.919 --> 00:11:13.919
+Esta ilusión ocurre porque la IA fue entrenada con repositorios de código escrito por los mejores ingenieros de planeta.
+
+00:11:13.919 --> 00:11:16.919
+Claro, se le yo el trabajo de los genios.
+
+00:11:16.919 --> 00:11:21.919
+Así es, por lo tanto, el código que genera imita ese formato de genio a la perfección.
+
+00:11:21.919 --> 00:11:26.919
+Usan hombres de variables super elegantes, aline los margenes maravillosamente,
+
+00:11:26.919 --> 00:11:29.919
+deja comentarios explicativos y impecables en cada función.
+
+00:11:29.919 --> 00:11:35.919
+O sea, te presenta un documento que visualmente parece redactado por un ingeniero en jefe
+
+00:11:35.919 --> 00:11:38.919
+con 20 años de experiencia en Silicon Valley.
+
+00:11:38.919 --> 00:11:40.919
+Visualmente es imita chable.
+
+00:11:40.919 --> 00:11:43.919
+Entonces, el desarrollador humano lo observa,
+
+00:11:43.919 --> 00:11:48.919
+ve todas esas buenas prácticas de formato se confía y, pues, baja la guardia.
+
+00:11:48.919 --> 00:11:52.919
+Piensa, ah, esto está el estísimo para enviarse a producción.
+
+00:11:52.919 --> 00:11:54.919
+Claro, se va con la finta.
+
+00:11:54.919 --> 00:11:55.919
+Se va con la finta.
+
+00:11:55.919 --> 00:12:00.919
+Porque la fachada estética en más cara por completo la falta de razonamiento lógico profundo.
+
+00:12:00.919 --> 00:12:04.919
+El código sí va a funcionar para los escenarios estadísticamente más comunes.
+
+00:12:04.919 --> 00:12:05.919
+Claro.
+
+00:12:05.919 --> 00:12:06.919
+El camino feliz.
+
+00:12:06.919 --> 00:12:08.919
+Exacto, el camino feliz.
+
+00:12:08.919 --> 00:12:12.919
+Pero fracasará de manera estrepitosa en lo que llamamos los casos de borde.
+
+00:12:12.919 --> 00:12:14.919
+Esas situaciones atípicas.
+
+00:12:14.919 --> 00:12:17.919
+A ver, para te risarlo para la audiencia,
+
+00:12:17.919 --> 00:12:23.919
+danos un ejemplo súper tangible de cómo se vería un fallo en un caso de borde provocado por esta ilusión de competencia.
+
+00:12:23.919 --> 00:12:24.919
+Va.
+
+00:12:24.919 --> 00:12:30.919
+Imagina que utiliza el vibe coding para generar un sistema de asignación de asientos para una herolina.
+
+00:12:30.919 --> 00:12:32.919
+Ok, clásico.
+
+00:12:32.919 --> 00:12:34.919
+¿Le das la vibra general?
+
+00:12:34.919 --> 00:12:35.919
+¿No?
+
+00:12:35.919 --> 00:12:40.919
+Le dice es que era un flujo de compra rápido, procesamiento de tarjetas seguro y selección de asiento visual.
+
+00:12:40.919 --> 00:12:43.919
+Laía te genera miles de líneas en un par padeo.
+
+00:12:43.919 --> 00:12:44.919
+Padrísimo.
+
+00:12:44.919 --> 00:12:53.919
+Lo pruebas y funciona perfectamente para el 95% de los usuarios que compra en un boleto de manera normal, un martes por la tarde con buen internet.
+
+00:12:53.919 --> 00:12:55.919
+Todo en orden, basta ahí.
+
+00:12:55.919 --> 00:12:58.919
+Pero el caso de borde ocurre en una fracción de segundo.
+
+00:12:58.919 --> 00:13:03.919
+Imagina que un usuario tiene mala conexión internet y por la desesperación,
+
+00:13:03.919 --> 00:13:08.919
+la aplicación enviera solicitud de compra dos veces exactamente en el mismo milí segundo.
+
+00:13:08.920 --> 00:13:11.920
+Y el temido doble clic.
+
+00:13:11.920 --> 00:13:12.920
+El doble clic.
+
+00:13:12.920 --> 00:13:17.920
+Y simultáneamente el banco rechaza la tarjeta por fondos insufficientes en el segundo intento.
+
+00:13:17.920 --> 00:13:23.920
+Pero el sistema ya había marcado el asiento como temporalmente ocupado en el primer intento que quedó colgado.
+
+00:13:23.920 --> 00:13:28.920
+O sea, un verdadero choque de trenes de sincronización de datos.
+
+00:13:28.920 --> 00:13:29.920
+Un desastre.
+
+00:13:29.920 --> 00:13:31.920
+Y es justo ahí donde el sistema colapsa.
+
+00:13:31.920 --> 00:13:36.920
+Mira, un ingeniero humano veterano piensa defensivamente, porque tiene cicatrices de batallas pasadas
+
+00:13:36.920 --> 00:13:40.920
+donde los servidores se le callaron a las tres de la mañana por problemas de red.
+
+00:13:40.920 --> 00:13:41.920
+Claro, ya se las sabe.
+
+00:13:41.920 --> 00:13:42.920
+Ya se las sabe.
+
+00:13:42.920 --> 00:13:45.920
+Por lo tanto, el humano habría construido defensas lógicas,
+
+00:13:45.920 --> 00:13:47.920
+explícitas, contra esos casos atípicos,
+
+00:13:47.920 --> 00:13:51.920
+como bloqueos en la base de datos para evitar doble solicitudes.
+
+00:13:51.920 --> 00:13:55.920
+Pero como esos casos atípicos no estaban explícitos en tu vibra general que le pediste.
+
+00:13:55.920 --> 00:14:00.920
+Y aparte no son el texto estadísticamente más común en el entrenamiento del modelo,
+
+00:14:00.920 --> 00:14:02.920
+pues la máquina simplemente lo somite.
+
+00:14:02.920 --> 00:14:03.920
+No los pone.
+
+00:14:03.920 --> 00:14:08.920
+No, fíjate que eso es súper revelador, porque o sea, en la programación tradicional,
+
+00:14:08.920 --> 00:14:12.920
+si cometías un error en las intaxis, digamos, un error typográfico,
+
+00:14:12.920 --> 00:14:14.920
+el compilador te gritaba.
+
+00:14:14.920 --> 00:14:16.920
+Te marcaba el error en rojo, sí.
+
+00:14:16.920 --> 00:14:19.920
+Exacto, el programa se negaba a arrancar y te decía,
+
+00:14:19.920 --> 00:14:22.920
+oye, aquí este error en la línea 40.
+
+00:14:22.920 --> 00:14:26.920
+Pero con la IA, el programa compila a arranca, se ve hermoso,
+
+00:14:26.920 --> 00:14:31.920
+procesa ventas normales y este error es completamente silencioso.
+
+00:14:31.920 --> 00:14:34.920
+Completamente invisible a simple vista.
+
+00:14:34.920 --> 00:14:38.920
+Este es condido en la arquitectura profunda de la lógica comercial.
+
+00:14:38.920 --> 00:14:44.920
+De hecho, el artículo usa una frase para describir esto que me pareció de verdad brillante.
+
+00:14:44.920 --> 00:14:48.920
+Habla de el peligro de construir un castillo de nipes digital.
+
+00:14:48.920 --> 00:14:50.920
+Es una analogía precisa.
+
+00:14:50.920 --> 00:14:54.920
+Es perfecta para explicar el problema del comportamiento emergente.
+
+00:14:54.920 --> 00:14:55.920
+Porque a ver, piensa lo.
+
+00:14:55.920 --> 00:14:58.920
+Un castillo de nipes es súper simétrico.
+
+00:14:58.920 --> 00:15:02.920
+Si tú no miras de lejos, parece una estructura resolida,
+
+00:15:02.920 --> 00:15:04.920
+perfectamente balanceada.
+
+00:15:04.920 --> 00:15:06.920
+Te deja llevar por la estética.
+
+00:15:06.920 --> 00:15:09.920
+Pero si intentas mover una sola cartela en la base,
+
+00:15:09.920 --> 00:15:12.920
+o si de repente soplan poquito de viento,
+
+00:15:12.920 --> 00:15:15.920
+no se cae solo una parte cita.
+
+00:15:15.920 --> 00:15:17.920
+O sea, colapsa la estructura entera.
+
+00:15:17.920 --> 00:15:18.920
+Se viene todo abajo.
+
+00:15:18.920 --> 00:15:21.920
+Es como contratar a una analista financiero,
+
+00:15:21.920 --> 00:15:24.920
+hace cuenta que tiene una caligrafia inmaculada.
+
+00:15:24.920 --> 00:15:27.920
+Usa palabras domingeras de diccionario.
+
+00:15:27.920 --> 00:15:30.920
+Y te entrega sus reportes en cuadernados en cuero fino.
+
+00:15:30.920 --> 00:15:32.920
+Suena como un super analista.
+
+00:15:32.920 --> 00:15:35.920
+Pero, cuando revisas con lupalos anexos,
+
+00:15:35.920 --> 00:15:39.920
+te das cuenta de que el tipo alucinó en la mitad de las formulas matemáticas.
+
+00:15:39.920 --> 00:15:41.920
+Te vendió por afachada.
+
+00:15:41.920 --> 00:15:43.920
+Me encanta esa comparación.
+
+00:15:43.920 --> 00:15:45.920
+Y el problema es calada de una forma absurda
+
+00:15:45.920 --> 00:15:50.920
+cuando ese analista te entrega un reporte de 10.000 páginas generado en un solo parpadeo.
+
+00:15:50.920 --> 00:15:53.920
+Auditar ese volumen masivo de información asimétrica
+
+00:15:53.920 --> 00:15:56.920
+es una labor de verdad titánica.
+
+00:15:56.920 --> 00:16:00.920
+Entonces, si el riesgo de estos castillos de nites digitales
+
+00:16:00.920 --> 00:16:04.920
+están alto y revisar la lógica oculta es tan pero tan difícil.
+
+00:16:04.920 --> 00:16:08.920
+¿Cómo rayos se adapta la industria de software en la vida real?
+
+00:16:08.920 --> 00:16:12.920
+Porque apagar la IA y volver a escribir todo carácter
+
+00:16:12.920 --> 00:16:14.920
+por carácter, pues no va a pasar.
+
+00:16:14.920 --> 00:16:16.920
+O sea, el genio ya salió de la lámpara.
+
+00:16:16.920 --> 00:16:18.920
+No, no hay marcha atrás.
+
+00:16:18.920 --> 00:16:21.920
+Y aquí es justo donde las conclusiones estratégicas de nuestras fuentes
+
+00:16:21.920 --> 00:16:24.920
+nos muestran una reconfiguración total de lo que significa
+
+00:16:24.920 --> 00:16:27.920
+la ventaja competitiva en el mercado tecnológico.
+
+00:16:27.920 --> 00:16:28.920
+A ver, explica, no sé eso.
+
+00:16:28.920 --> 00:16:33.920
+Pues el análisis incluye datos super duro de un informe de Microsoft Research
+
+00:16:33.920 --> 00:16:35.920
+del año 2024.
+
+00:16:35.920 --> 00:16:40.920
+Este estudio se dedicó a medir el impacto real en el campo de batalla
+
+00:16:40.920 --> 00:16:43.920
+de la IA en la productividad de los desarrolladores
+
+00:16:43.920 --> 00:16:46.920
+y en la calidad del código a nivel corporativo.
+
+00:16:46.920 --> 00:16:50.920
+¿Y qué encontraron exactamente al medir a estos equipos en el mundo real?
+
+00:16:50.920 --> 00:16:53.920
+¿Por qué una cosa es la teoría y otra es el día a día?
+
+00:16:53.920 --> 00:16:54.920
+Totalmente.
+
+00:16:54.920 --> 00:16:58.920
+Y los hallazgos muestran una dichotomía super profunda.
+
+00:16:58.920 --> 00:17:02.920
+Por un lado, la IA dispara a la productividad en las fases iniciales
+
+00:17:02.920 --> 00:17:04.920
+a niveles estratosfericos.
+
+00:17:04.920 --> 00:17:07.920
+Un equipo de digamos 3 personas,
+
+00:17:07.920 --> 00:17:10.920
+ahora puede generar la infraestructura base que antes requería
+
+00:17:10.920 --> 00:17:13.920
+30 desarrolladores trabajando durante 6 meses.
+
+00:17:13.920 --> 00:17:16.920
+O sea, la velocidad para obtener un primer borrador
+
+00:17:16.920 --> 00:17:18.920
+funcional está resuelta.
+
+00:17:18.920 --> 00:17:19.920
+Exacto.
+
+00:17:19.920 --> 00:17:21.920
+La velocidad se volvió prácticamente infinita.
+
+00:17:21.920 --> 00:17:24.920
+Pero, pero, exacto, el volverse infinita,
+
+00:17:24.920 --> 00:17:26.920
+la velocidad se volvió un cómodit.
+
+00:17:26.920 --> 00:17:29.920
+O sea, cualquiera empresa sea gigante o un startup chiquita
+
+00:17:29.920 --> 00:17:31.920
+tiene acceso a esa misma velocidad.
+
+00:17:31.920 --> 00:17:32.920
+Claro.
+
+00:17:32.920 --> 00:17:35.920
+Por el tanto entregar código rápido ya no te ha llegado en el mercado.
+
+00:17:35.920 --> 00:17:36.920
+Ya no es tu diferenciador.
+
+00:17:36.920 --> 00:17:38.920
+La ventaja competitiva real,
+
+00:17:38.920 --> 00:17:40.920
+el diferenciador de su previvencia hoy en día,
+
+00:17:40.920 --> 00:17:45.920
+y en la capacidad de auditar y estabilizar ese volumen masivo de código
+
+00:17:45.920 --> 00:17:48.920
+generado de manera probabilística.
+
+00:17:48.920 --> 00:17:52.920
+Básicamente, si hace 5 años el héroe de la oficina era
+
+00:17:52.920 --> 00:17:57.920
+el ingeniero que podía te cliar como rayo y subir a producción
+
+00:17:57.920 --> 00:18:00.920
+3 nuevas funcionalidades un viernes por la noche.
+
+00:18:00.920 --> 00:18:02.920
+El rockstar de la oficina.
+
+00:18:02.920 --> 00:18:03.920
+Exacto, el rockstar.
+
+00:18:03.920 --> 00:18:07.920
+Pues hoy el héroe es el inspector de calidad mas para noico
+
+00:18:07.920 --> 00:18:09.920
+iméticuloso del edificio.
+
+00:18:09.920 --> 00:18:13.920
+El que dice hoyan no vamos a lanzar esto hasta que yo golpeé
+
+00:18:13.920 --> 00:18:16.920
+el estructura con un martillo por todos lados.
+
+00:18:16.920 --> 00:18:18.920
+Es un replanteamiento absoluto de la profesión.
+
+00:18:18.920 --> 00:18:22.920
+El ingeniero post sin táctico se convierte en la práctica
+
+00:18:22.920 --> 00:18:25.920
+en un detective de sistemas de alta complejidad.
+
+00:18:25.920 --> 00:18:27.920
+Un detective, me gusta eso.
+
+00:18:27.920 --> 00:18:30.920
+Sí, porque ya no pasa tu jornada redactando bucle repetitivo
+
+00:18:30.920 --> 00:18:33.920
+o declarando variables de una en una.
+
+00:18:33.920 --> 00:18:37.920
+Pasa tu jornada aplicando ingeniería inversa a la salida gigantesca
+
+00:18:37.920 --> 00:18:38.920
+que te dio el modelo.
+
+00:18:38.920 --> 00:18:41.920
+¿Tienes que diseñar pruebas de estrés masivas?
+
+00:18:41.920 --> 00:18:44.920
+Inyectar caos controlado en el sistema y observar ese comportamiento
+
+00:18:44.920 --> 00:18:47.920
+emergente del que hablábamos, todo para detectar donde están las
+
+00:18:47.920 --> 00:18:50.920
+alucinaciones probabilísticas que el modelo es con dio debajo de la
+
+00:18:50.920 --> 00:18:51.920
+alfórmara.
+
+00:18:51.920 --> 00:18:55.920
+Ahora, pero fíjate que eso requiere un nivel de maestría técnica
+
+00:18:55.920 --> 00:19:00.920
+que paradoxicamente parece muchísimo más alto que el de un programador
+
+00:19:00.920 --> 00:19:01.920
+tradicional.
+
+00:19:01.920 --> 00:19:02.920
+Totalmente.
+
+00:19:02.920 --> 00:19:06.920
+Porque haber para detectar una falla arquitectónica silenciosa
+
+00:19:06.920 --> 00:19:10.920
+en un módulo de seguridad bancaria un módulo que tú ni siquiera
+
+00:19:10.920 --> 00:19:14.920
+construiste desde cero, pues necesitas entender los fundamentos
+
+00:19:14.920 --> 00:19:17.920
+computacionales que hacía un nivel filosófico.
+
+00:19:17.920 --> 00:19:18.920
+Sí, sí.
+
+00:19:18.920 --> 00:19:22.920
+Tienes que saber cómo fluye la memoria ram como peran los protocolos de red
+
+00:19:22.920 --> 00:19:24.920
+bajo muchísima presión esté.
+
+00:19:24.920 --> 00:19:28.920
+Un montón de cosas que la máquina simplemente asumió por ti.
+
+00:19:28.920 --> 00:19:29.920
+Exactamente.
+
+00:19:29.920 --> 00:19:31.920
+El vibre vio en requiere un conocimiento estructural
+
+00:19:31.920 --> 00:19:34.920
+súper profundo de todo el ecosistema digital.
+
+00:19:34.920 --> 00:19:37.920
+Ya no estás revisando el ortografía del código.
+
+00:19:37.920 --> 00:19:41.920
+Estás literalmente sometiéndola y pote si es un sistema automatizado
+
+00:19:41.920 --> 00:19:43.920
+al método científico riguroso.
+
+00:19:43.920 --> 00:19:45.920
+Formular escenarios de desastre.
+
+00:19:45.920 --> 00:19:47.920
+General es barato.
+
+00:19:47.920 --> 00:19:50.920
+Validar es extremadamente caro y complejo.
+
+00:19:50.920 --> 00:19:54.920
+Y entonces, que significa todo esto para el ecosistema general.
+
+00:19:54.920 --> 00:19:56.920
+Porque es fascinante.
+
+00:19:56.920 --> 00:20:00.920
+O sea, cambia por completo la narrativa pública que hemos tenido en los últimos años.
+
+00:20:00.920 --> 00:20:02.920
+En qué sentido lo dices.
+
+00:20:02.920 --> 00:20:06.920
+Pues todos pensábamos que la inteligencia artificial nos iba a liberar
+
+00:20:06.920 --> 00:20:08.920
+del trabajo pesado intelectual.
+
+00:20:08.920 --> 00:20:09.920
+No.
+
+00:20:09.920 --> 00:20:13.920
+Como para dejarnos ser puramente creativos y estar relajados tomando café.
+
+00:20:13.920 --> 00:20:15.920
+El sueño autópico.
+
+00:20:15.920 --> 00:20:16.920
+Andale.
+
+00:20:16.920 --> 00:20:21.920
+Pero lo que la investigación de Belaya Baudera Engineering expone es que sí.
+
+00:20:21.920 --> 00:20:25.920
+Laía nos quitó la parte mecánica y rutinaria del tecleo.
+
+00:20:25.920 --> 00:20:30.920
+Pero, al cambio, nos dejó con la pesadilla operativa de ser auditores microcopicos.
+
+00:20:30.920 --> 00:20:34.920
+Super responsables de que el castillo de Nipes no se desplome.
+
+00:20:34.920 --> 00:20:38.920
+Y es justo ahí donde cerramos el arco conceptual de este evolución me parece.
+
+00:20:38.920 --> 00:20:43.920
+El valor principal que rescatamos de estas fuentes y distilando ambas perspectivas,
+
+00:20:43.920 --> 00:20:49.920
+es que ironicamente el pensamiento crítico estructural es muchísimo más valioso hoy
+
+00:20:49.920 --> 00:20:52.920
+que cuando teníamos que escribir a mano la lógica binaria.
+
+00:20:52.920 --> 00:20:54.920
+Totalmente de acuerdo.
+
+00:20:54.920 --> 00:20:58.920
+En un entorno que está saturado de automatización inmediata y de sistemas estadísticos
+
+00:20:58.920 --> 00:21:03.920
+que imitan la perpección visual, la capacidad de estrictamente humana de dudar de forma metodica,
+
+00:21:03.920 --> 00:21:06.920
+de prever el error en el límite y de validar con rigor,
+
+00:21:06.920 --> 00:21:11.920
+pues es el único corta fuego que va a mantener en pie nuestra infraestructura tecnológica.
+
+00:21:11.920 --> 00:21:15.920
+Es una reflexión que, en la verdad, cruza muchísimas fronteras.
+
+00:21:15.920 --> 00:21:21.920
+Porque la relevancia de este cambio no se queda solo encerrada en los departamentos de ingeniería de software.
+
+00:21:21.920 --> 00:21:22.920
+Para nada.
+
+00:21:22.920 --> 00:21:25.920
+Para cualquier persona gestionando proyectos,
+
+00:21:25.920 --> 00:21:27.920
+este evaluando información financiera o,
+
+00:21:27.920 --> 00:21:32.920
+bueno, simplemente tomando decisiones basadas en herramientas de nueva generación,
+
+00:21:32.920 --> 00:21:34.920
+la lección es súper transparente.
+
+00:21:34.920 --> 00:21:38.920
+Producir volumen de trabajo ya no tiene un méritu intrínseco.
+
+00:21:38.920 --> 00:21:39.920
+Ya no impresiona Ana Nanny.
+
+00:21:39.920 --> 00:21:40.920
+Exacto.
+
+00:21:40.920 --> 00:21:42.920
+El talento verdaderamente es caso.
+
+00:21:42.920 --> 00:21:48.920
+El diferenciador de oro estén en el rigor para detectar cuando una herramienta probabilística
+
+00:21:48.920 --> 00:21:51.920
+te estén entregando un espejismo súper convincente.
+
+00:21:51.920 --> 00:21:52.920
+Totalmente.
+
+00:21:52.920 --> 00:21:53.920
+Y, a ver,
+
+00:21:53.920 --> 00:21:57.920
+si conectamos todas estas piezas con el horizonte a largo plazo,
+
+00:21:57.920 --> 00:22:00.920
+surge un interrogante que a mí me parece inevitable.
+
+00:22:00.920 --> 00:22:01.920
+A ver, suelta la.
+
+00:22:01.920 --> 00:22:04.920
+Es una pregunta que se desprende de la lógica de estas fuentes,
+
+00:22:04.920 --> 00:22:07.920
+y que resulta pues imperativa para el futuro.
+
+00:22:07.920 --> 00:22:08.920
+Piénsalo.
+
+00:22:08.920 --> 00:22:13.920
+Si la máquina se va a encargar describir el 100% de las intaxis estructural basándose únicamente
+
+00:22:13.920 --> 00:22:14.920
+nuestras vibras.
+
+00:22:14.920 --> 00:22:19.920
+¿Qué sucederán un par de décadas cuando la memoria muscular colectiva de cómo construir
+
+00:22:19.920 --> 00:22:22.920
+código base comiencia desaparecer por completo?
+
+00:22:22.920 --> 00:22:23.920
+¡Oh, y qué fuerte!
+
+00:22:23.920 --> 00:22:28.920
+Si las próximas generaciones de ingenieros no lidian desde cero con la frección del cemento y los ladrillos
+
+00:22:28.920 --> 00:22:32.920
+digitales, van a tener la profundidad estructural necesaria para auditar y reparar los
+
+00:22:32.920 --> 00:22:35.920
+ecosistemas probabilísticos masivos del futuro.
+
+00:22:35.920 --> 00:22:36.920
+¿Te pone a pensar cañón?
+
+00:22:36.920 --> 00:22:40.920
+Podríamos estar en riesgo de delegar, no solo la creación sino la comprensión fundamental
+
+00:22:40.920 --> 00:22:42.920
+de cómo se sostiene el mundo que habitamos.
+
+00:22:42.920 --> 00:22:48.920
+Ah, es una pregunta espectacular y súper provocativa para cerrar.
+
+00:22:48.920 --> 00:22:52.920
+¿Por qué le enfocarnos tan frenéticamente en la velocidad de creación?
+
+00:22:52.920 --> 00:22:58.420
+Pues podríamos estar soltando, de manera muy silenciosa, los cimientos del conocimiento que
+
+00:22:58.420 --> 00:23:02.920
+sostienen nuestra propia tecnología de la que dependemos todos los días.
+
+00:23:02.920 --> 00:23:04.920
+Es una idea para llevarse a la almoda.
+
+00:23:04.920 --> 00:23:06.920
+Definitivamente.
+
+00:23:06.920 --> 00:23:10.920
+Una idea profunda para llevarnos a casa y darle un buen par de vueltas.
+
+00:23:10.920 --> 00:23:15.920
+Así que, para quienes nos escuchen, la próxima vez que utilicen un sistema digital
+
+00:23:15.920 --> 00:23:20.920
+impecable que procese todos sus datos en segundos, es que preguntense que tan sólido
+
+00:23:20.920 --> 00:23:24.920
+es el castillo de naipes probabilístico que corre ahí bajo la superficie.
+
+00:23:24.920 --> 00:23:29.920
+¿Y si alguien realmente revisó los cimientos o solo confió en la vibra?
+
+00:23:29.920 --> 00:23:30.920
+Tal cual?
+
+00:23:30.920 --> 00:23:34.920
+Bueno, muchísimas gracias por acompañarnos en este análisis a fondo,
+
+00:23:34.920 --> 00:23:39.920
+sigan cuestionando, sigan analizando todo a detalle y nos escuchamos en la próxima.
+

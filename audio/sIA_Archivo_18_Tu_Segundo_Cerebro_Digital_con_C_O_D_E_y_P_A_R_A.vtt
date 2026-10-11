@@ -1,0 +1,973 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:06.879
+Hay días en que siento que me cabeza es como una de esas pestañas del navegador con un número infinito.
+
+00:00:06.879 --> 00:00:14.280
+Abron artículo, escucho un dato, me llegó un reporte y puf, todo se va acumulando.
+
+00:00:14.280 --> 00:00:20.280
+La sensación no es de estar más informada, sino de estar auga de la información.
+
+00:00:20.280 --> 00:00:23.600
+La famosa infoxicación y es agotador.
+
+00:00:23.600 --> 00:00:30.200
+Totalmente, es que seamos honestos, biólogicamente no estamos hechos para eso, es como intentar
+
+00:00:30.200 --> 00:00:35.400
+usar una tasa de café para vaciar una alberca.
+
+00:00:35.400 --> 00:00:40.079
+Y justo de eso vamos a hablar hoy, de cómo construir, digamos, un botes salvavidas para
+
+00:00:40.079 --> 00:00:42.079
+esa inundación del atos.
+
+00:00:42.079 --> 00:00:46.960
+Vamos a hacer una análisis profundo del concepto del cerebro digital, o segundo cerebro.
+
+00:00:46.960 --> 00:00:47.960
+Exacto.
+
+00:00:47.960 --> 00:00:53.520
+Y para guiarnos tenemos un documento de investigación muy completo que va desde la neurociencia
+
+00:00:53.520 --> 00:00:57.480
+de por qué nuestra memoria biológica simplemente no daba esto.
+
+00:00:57.480 --> 00:00:58.480
+¿Qué no daba?
+
+00:00:58.480 --> 00:01:01.560
+Hasta los planos para construir este sistema.
+
+00:01:01.560 --> 00:01:09.079
+Las metodologías, C o D e y P a e R e A y las herramientas clave como No Ocean o Obsidian.
+
+00:01:09.079 --> 00:01:11.159
+Pero ¿A ver qué que de claro algo?
+
+00:01:11.159 --> 00:01:14.760
+La misión aquí no es volverse a un archivista digital obsesivo.
+
+00:01:14.760 --> 00:01:16.079
+No, para nada.
+
+00:01:16.079 --> 00:01:22.359
+El objetivo es mucho más profundo, es transformar esos cementarios de archivos que todos tenemos
+
+00:01:22.359 --> 00:01:27.480
+en un ecosistema vivo, un jardín de ideas, que de verdad potencia la creatividad y el
+
+00:01:27.480 --> 00:01:28.480
+pensamiento.
+
+00:01:28.480 --> 00:01:35.000
+Me encanta esa idea de jardín de ideas, y bueno, empecemos por la tierra, por el fundamento.
+
+00:01:35.000 --> 00:01:39.760
+La investigación arranca con una idea que aunque parece obvia, lo cambia todo.
+
+00:01:39.760 --> 00:01:42.439
+Nuestro cerebro no es un disco duro.
+
+00:01:42.439 --> 00:01:47.719
+Para nada, es una rora fundamental pensar en el cerebro como un dispositivo de almacenamiento.
+
+00:01:47.719 --> 00:01:50.359
+La neurociencia moderna lo deja clarísimo.
+
+00:01:50.359 --> 00:01:53.480
+La memoria no es un archivo que abre y está intacto.
+
+00:01:53.480 --> 00:01:55.079
+Es un proceso reconstruptivo.
+
+00:01:55.079 --> 00:01:56.079
+Espera.
+
+00:01:56.079 --> 00:01:57.079
+Reconstruptivo.
+
+00:01:57.079 --> 00:01:59.879
+¿Qué significa eso exactamente?
+
+00:01:59.879 --> 00:02:05.719
+Significa que cada vez que recuerda salgo, tu cerebro no va a un cajón y saca el recuerdo.
+
+00:02:05.719 --> 00:02:11.360
+Literalmente lo vuelve a construir en ese momento, conectando fragmentos neuronales.
+
+00:02:11.360 --> 00:02:12.360
+Wow.
+
+00:02:12.360 --> 00:02:19.000
+Y en esa reconstrucción influye tu estado de ánimo, la nueva información que tienes, el contexto,
+
+00:02:19.000 --> 00:02:20.000
+todo.
+
+00:02:20.000 --> 00:02:24.759
+Corte, o sea, que cada vez que cuento una negrota de mi infancia en realidad, la estoy
+
+00:02:24.759 --> 00:02:28.520
+como editando un poquito sin darme cuenta.
+
+00:02:28.520 --> 00:02:30.919
+Eso es fascinante y hasta un poco inquietante.
+
+00:02:30.919 --> 00:02:33.439
+Justo así, no es una fotografía.
+
+00:02:33.439 --> 00:02:37.680
+Es más bien una pintura que retoca su tílmente cada vez que la miras.
+
+00:02:37.680 --> 00:02:42.800
+Y por eso somos tan buenos para crear para conectar ideas que no parece entender relación
+
+00:02:42.800 --> 00:02:44.360
+para la innovación.
+
+00:02:44.360 --> 00:02:47.000
+Nuestra memoria es plástica, es asociativa.
+
+00:02:47.000 --> 00:02:48.000
+Claro.
+
+00:02:48.000 --> 00:02:52.400
+A la fidelidad de los datos, para recordar el nombre exacto de un autor o una cifra
+
+00:02:52.400 --> 00:02:55.599
+de un reporte de hace seis meses, somos terrible.
+
+00:02:55.599 --> 00:02:56.599
+Claro.
+
+00:02:56.599 --> 00:03:00.360
+Hay es donde la memoria digital nos gana por goleada.
+
+00:03:00.360 --> 00:03:03.080
+La investigación lo resube perfecto.
+
+00:03:03.080 --> 00:03:07.400
+La memoria biológica es para la cintesis y la innovación.
+
+00:03:07.400 --> 00:03:11.080
+La digital es para el archivo y la organización precisa.
+
+00:03:11.080 --> 00:03:15.000
+Son dos herramientas distintas para trabajos distintos.
+
+00:03:15.000 --> 00:03:20.000
+Y ahí es donde entra este concepto de cognición extendida, no se trapa de reemplazar nuestro
+
+00:03:20.000 --> 00:03:22.240
+cerebro, sino de aumentarlo.
+
+00:03:22.240 --> 00:03:23.639
+De expandirlo.
+
+00:03:23.639 --> 00:03:24.639
+Exacto.
+
+00:03:24.639 --> 00:03:30.520
+Al delegar la tarea de recordar con precisión a un sistema digital confiable, liberamos ha hecho
+
+00:03:30.520 --> 00:03:32.080
+de banda mental.
+
+00:03:32.080 --> 00:03:37.439
+Dejamos de usar nuestra energía en tratar de no olvidar y empezamos a usarla para lo que realmente
+
+00:03:37.439 --> 00:03:38.439
+importa.
+
+00:03:38.439 --> 00:03:41.360
+Pensar, crear resolver problemas.
+
+00:03:41.360 --> 00:03:44.319
+Entendido, liberar la mente.
+
+00:03:44.319 --> 00:03:47.280
+Pero aquí viene la parte que siempre me ha frenado.
+
+00:03:47.280 --> 00:03:50.959
+Tengo no-ion, tengo Google Drive, tengo mil herramientas.
+
+00:03:50.959 --> 00:03:51.959
+Pero...
+
+00:03:51.959 --> 00:03:53.439
+Todo es un caos.
+
+00:03:53.439 --> 00:03:56.000
+Tener el software no es suficiente, ¿verdad?
+
+00:03:56.000 --> 00:03:58.400
+Para nada, se necesita un método.
+
+00:03:58.400 --> 00:03:59.400
+Uf, sí.
+
+00:03:59.400 --> 00:04:01.039
+Esta es el mío yo de la asunto.
+
+00:04:01.039 --> 00:04:05.519
+La tecnología, sin un ametodoología, es solo un archivoero más ofisticado.
+
+00:04:05.519 --> 00:04:09.400
+La investigación se enfoca en dos sistemas que funcionan en conjunto.
+
+00:04:09.400 --> 00:04:12.159
+C, o, de, como el flujo de trabajo.
+
+00:04:12.159 --> 00:04:14.520
+Y, P, a, R, a como la estructura.
+
+00:04:14.520 --> 00:04:18.480
+Ok, a ver, desempaquetemos C o D, E.
+
+00:04:18.480 --> 00:04:23.800
+E, es el acronimo de capturar, organizar, destilar y expresar.
+
+00:04:23.800 --> 00:04:25.959
+Empecemos por capturar.
+
+00:04:25.959 --> 00:04:30.399
+Mi instinto es guardar todo lo que me parece remotamente interesante.
+
+00:04:30.399 --> 00:04:31.639
+Voy por mal camino.
+
+00:04:31.639 --> 00:04:33.160
+E, es el impulso de todos.
+
+00:04:33.160 --> 00:04:35.199
+Pero sí, es una trampa.
+
+00:04:35.199 --> 00:04:37.439
+El primer paso es cambiar de mentalidad.
+
+00:04:37.439 --> 00:04:41.480
+Decer un consumidor pasivo de información a un curador activo.
+
+00:04:41.480 --> 00:04:43.480
+Me gusta eso, curador activo.
+
+00:04:43.480 --> 00:04:44.680
+La regla es simple.
+
+00:04:44.680 --> 00:04:47.759
+No guardes algo solo porque es interesante.
+
+00:04:47.759 --> 00:04:50.360
+Cuártalo porque resuena contigo.
+
+00:04:50.360 --> 00:04:55.439
+Porque te genera una idea una pregunta, una conexión con algo en lo que estás trabajando.
+
+00:04:55.439 --> 00:04:59.199
+La selectividad es tu primer filtro contra la infoxicación.
+
+00:04:59.199 --> 00:05:04.959
+Porque en dito, ser una curadora no una acumuladora.
+
+00:05:04.959 --> 00:05:06.920
+Luego viene organizar.
+
+00:05:06.920 --> 00:05:11.240
+Porque aquí el documento dice algo que de verdad me voló la cabeza.
+
+00:05:11.240 --> 00:05:14.960
+No organizar por tema, sino para la acción.
+
+00:05:14.960 --> 00:05:17.879
+Esta es la joya de la corona del método.
+
+00:05:17.879 --> 00:05:20.280
+Llevamos toda la vida organizando por tema.
+
+00:05:20.280 --> 00:05:24.319
+Una carpeta para marketing, otra para finanzas, otra para recetas.
+
+00:05:24.319 --> 00:05:26.639
+Sí, literal, así está mi computadora.
+
+00:05:26.639 --> 00:05:30.400
+El problema es que la vida real no funciona en cilos temáticos.
+
+00:05:30.400 --> 00:05:34.560
+Un proyecto puede tocar marketing, finanzas y recursos humanos a la vez.
+
+00:05:34.560 --> 00:05:35.560
+Totalmente.
+
+00:05:35.560 --> 00:05:38.560
+Entonces, cuál es la pregunta que debemos hacernos.
+
+00:05:38.560 --> 00:05:41.879
+La pregunta cambia de qué trata esta información.
+
+00:05:41.879 --> 00:05:44.360
+¿A para qué voy a usar esta información?
+
+00:05:44.360 --> 00:05:45.120
+Ah, claro.
+
+00:05:45.120 --> 00:05:48.399
+No la guardas en la carpeta inteligencia artificial.
+
+00:05:48.399 --> 00:05:52.680
+La guarda se en la carpeta proyecto presentación para el cliente X.
+
+00:05:52.680 --> 00:05:58.040
+Al organizar por el contexto de uso, la información se vuelve inmediatamente accionable.
+
+00:05:58.040 --> 00:06:02.600
+Y esto nos lleva directo al sistema para que es la arquitectura de esas carpetas.
+
+00:06:02.600 --> 00:06:03.600
+Perfecto.
+
+00:06:03.600 --> 00:06:10.040
+Pero antes de llegar a para falta la década de Coth, de Stilar, este es mi gran problema.
+
+00:06:10.040 --> 00:06:15.360
+Mi no-usión está lleno de artículos que guardé para después, pero se siente como una tarea
+
+00:06:15.360 --> 00:06:16.360
+volver a leerlos.
+
+00:06:16.360 --> 00:06:19.000
+Se ha convertido en un cementerio digital.
+
+00:06:19.000 --> 00:06:23.080
+Ese es exactamente el problema que la resumisión progresiva resuelve.
+
+00:06:23.080 --> 00:06:24.800
+No se trata solo de archivar.
+
+00:06:24.800 --> 00:06:29.480
+Se trata de preparar tu conocimiento para tuyo del futuro, que no va a tener tiempo ni paciencia.
+
+00:06:29.480 --> 00:06:31.960
+Jaja, millo del futuro te lo agradece.
+
+00:06:31.960 --> 00:06:34.680
+El proceso es como un embudo.
+
+00:06:34.680 --> 00:06:36.920
+Primero guarda el artículo.
+
+00:06:36.920 --> 00:06:42.000
+En una segunda pasada, pones en negrita las frases y para rafos más potentes.
+
+00:06:42.000 --> 00:06:45.600
+Tiempo después, vuelves a leer solo lo que está en negrita.
+
+00:06:45.600 --> 00:06:48.720
+Y subrayas las juejas, las ideas centrales.
+
+00:06:48.720 --> 00:06:54.320
+Y el último paso es escribir un resumen con tus propias palabras al inicio de la nota, ¿no?
+
+00:06:54.320 --> 00:06:55.320
+Exacto.
+
+00:06:55.320 --> 00:06:59.920
+Así la próxima vez que abra se sanota, no tienes que volver a leer las 10 páginas.
+
+00:06:59.920 --> 00:07:05.520
+En 30 segundos, tuyo del futuro pueda absorber la esencia del artículo a través de tu propio
+
+00:07:05.520 --> 00:07:08.040
+resumen y los puntos más destacados.
+
+00:07:08.040 --> 00:07:13.720
+Hace hecho el trabajo pesado una vez para beneficiarte de él dosenas de veces después.
+
+00:07:13.720 --> 00:07:15.439
+Eso tiene muchísimo sentido.
+
+00:07:15.439 --> 00:07:18.920
+Y finalmente, la E. Expressar.
+
+00:07:18.920 --> 00:07:21.240
+Porque lo objetivo es crear algo.
+
+00:07:21.240 --> 00:07:26.639
+Claro, porque un segundo cerebro no es un museo de conocimiento, es un taller.
+
+00:07:26.639 --> 00:07:29.919
+Y aquí el concepto clave es el de paquetes intermedios.
+
+00:07:29.919 --> 00:07:32.719
+Piencen ellos como legos de conocimiento.
+
+00:07:32.719 --> 00:07:38.479
+Un parrafo bien escrito, una cita que te impactó con tu comentario, un diagrama que hiciste,
+
+00:07:38.479 --> 00:07:42.120
+un pequeño esquema, son unidades de trabajo ya terminadas.
+
+00:07:42.120 --> 00:07:48.360
+Y la idea es que cuando empieza un proyecto nuevo, no te enfrentas a la temida página en blanco.
+
+00:07:48.360 --> 00:07:49.360
+Correcto.
+
+00:07:49.360 --> 00:07:54.519
+En lugar de eso, abre estutayer y empiezas a ensamblar estos legos que ya has creado.
+
+00:07:54.519 --> 00:07:58.399
+En estos revolucionarios para el trabajo moderno que está lleno de interrupciones.
+
+00:07:58.399 --> 00:07:59.399
+Uf sí.
+
+00:07:59.399 --> 00:08:02.079
+Quizás sólo tienes 15 minutos entre reuniones.
+
+00:08:02.079 --> 00:08:07.279
+No es suficiente para escribir un capítulo, pero si para crear un pequeño paquet de intermedio.
+
+00:08:07.279 --> 00:08:11.759
+Con el tiempo acumulas tantos de estos paquetes que armaron un borrador completo se vuelve
+
+00:08:11.759 --> 00:08:14.759
+una tarea de ensamblaje, no de creación desde cero.
+
+00:08:14.759 --> 00:08:18.799
+Ok, sé o de, me queda claro como el como.
+
+00:08:18.799 --> 00:08:24.159
+Ahora necesito el donde, y ahí es donde entra para la estructura de carpetas.
+
+00:08:24.160 --> 00:08:27.439
+proyectos, áreas, recursos y archivos.
+
+00:08:27.439 --> 00:08:33.600
+Exacto, es la implementación práctica de la fase de organizar para la acción.
+
+00:08:33.600 --> 00:08:39.399
+Los proyectos son la prioridad, tienen un objetivo concreto y una fecha límite, lanzar campaña
+
+00:08:39.399 --> 00:08:46.080
+de marketing 2, planificar viaja japon, son activos y de corta duración.
+
+00:08:46.080 --> 00:08:47.080
+Vale.
+
+00:08:47.080 --> 00:08:52.840
+Luego están las áreas, son tus responsabilidades continuas, los estandares que quieres mantener,
+
+00:08:52.840 --> 00:08:56.920
+tienen fin, salud, finanzas personales, gestión de equipo.
+
+00:08:56.920 --> 00:09:01.720
+Ah, ya veo, la distinción clave que menciona el documento me parece genial.
+
+00:09:01.720 --> 00:09:05.920
+Correr un maraton es un proyecto, salud física es un área.
+
+00:09:05.920 --> 00:09:06.920
+Eses la clave.
+
+00:09:06.920 --> 00:09:13.360
+Entendido, pero espera, eso no es increíblemente rígido, ¿qué pasa si un proyecto no sé,
+
+00:09:13.360 --> 00:09:19.800
+una consultoria para un cliente, toca mi área de finanzas y también mi área de desarrollo profesional,
+
+00:09:19.800 --> 00:09:20.920
+donde lo pongo?
+
+00:09:20.920 --> 00:09:23.760
+¿No se rompe el sistema con algo así de complejo?
+
+00:09:23.760 --> 00:09:28.880
+Esa es una excelente pregunta y es la prueba de fuego de cualquier sistema de organización.
+
+00:09:28.880 --> 00:09:32.160
+La respuesta de para es simple y la verdad muy elegante.
+
+00:09:32.160 --> 00:09:36.200
+La información vive en la carpeta del proyecto mientras el proyecto esté activo.
+
+00:09:36.200 --> 00:09:37.200
+Ah, ok.
+
+00:09:37.200 --> 00:09:41.040
+Así que esa consultoria tendría su propia carpeta en proyectos.
+
+00:09:41.040 --> 00:09:46.520
+Y dentro de esa carpeta puede estender subcarpetas de finanzas del proyecto o investigación.
+
+00:09:46.519 --> 00:09:51.000
+Lo importante es que todo lo relacionado con ese objetivo acciónable está en un solo lugar.
+
+00:09:51.000 --> 00:09:53.159
+¿Y qué pasa cuando el proyecto termina?
+
+00:09:53.159 --> 00:09:57.559
+Cuando entregas la consultoria, la carpeta entera del proyecto se mueve a archivos.
+
+00:09:57.559 --> 00:09:59.279
+Pero, y esto es importante.
+
+00:09:59.279 --> 00:10:04.439
+Si durante ese proyecto creaste notas o documentos que son valiosos a largo plazo para tus áreas,
+
+00:10:04.439 --> 00:10:07.559
+¿cómo una plantilla de presupuesto o una análisis de mercado?
+
+00:10:07.559 --> 00:10:08.559
+Exacto.
+
+00:10:08.559 --> 00:10:11.559
+Mueves esas piezas específicas a áreas o recursos.
+
+00:10:11.559 --> 00:10:14.559
+El proyecto actúa como una incubadora de conocimiento.
+
+00:10:14.560 --> 00:10:19.280
+Y recursos es para mis intereses generales, ¿no?
+
+00:10:19.280 --> 00:10:22.280
+Como diseño gráfico o historia del esto y sísmo.
+
+00:10:22.280 --> 00:10:26.080
+Y archivos es el congelador para todo lo que ya no está activo.
+
+00:10:26.080 --> 00:10:27.280
+Justamente.
+
+00:10:27.280 --> 00:10:31.520
+Y lo más potente de para y esto es crucial es universidad.
+
+00:10:31.520 --> 00:10:36.920
+Para que funciones infricción, esta misma estructura de 4 carpetas, P, A, R, R,
+
+00:10:36.920 --> 00:10:38.920
+debe replicarse en todos lados.
+
+00:10:38.920 --> 00:10:43.240
+En tu computadora, en tu Google Drive, en tu Dropbox y en tu app de notas.
+
+00:10:43.240 --> 00:10:44.240
+En todo.
+
+00:10:44.240 --> 00:10:49.279
+En todo, esta cimetría elimina la carga cognitiva de decidir donde guardar algo.
+
+00:10:49.279 --> 00:10:52.600
+La respuesta es siempre la misma sin importar la plataforma.
+
+00:10:52.600 --> 00:10:55.919
+La metodología para me queda clara como estructura.
+
+00:10:55.919 --> 00:10:58.399
+Pero me abruma pensar en donde implementarla.
+
+00:10:58.399 --> 00:11:02.480
+O sea, hablamos de No-Shown Obsidian por donde se empieza.
+
+00:11:02.480 --> 00:11:04.919
+Porque la herramienta define mucho la experiencia.
+
+00:11:04.919 --> 00:11:05.960
+Totalmente.
+
+00:11:05.960 --> 00:11:09.279
+Y la investigación es muy sabia en este punto.
+
+00:11:09.279 --> 00:11:14.039
+No existe la herramienta perfecta, existe la herramienta perfecta para ti.
+
+00:11:14.039 --> 00:11:17.360
+Propone tres arquétipos de usuario que ayudan mucho a decidir.
+
+00:11:17.360 --> 00:11:20.279
+El arquitecto, el jardinero y el bibliotecario.
+
+00:11:20.279 --> 00:11:23.439
+Me suena a que soy una arquitecta frustrada.
+
+00:11:23.439 --> 00:11:28.360
+Me encanta la idea de diseñar sistemas bases de datos flujos de trabajo.
+
+00:11:28.360 --> 00:11:33.240
+Aunque, a veces, me paso más tiempo construyendo el sistema que usándolo.
+
+00:11:33.240 --> 00:11:36.919
+Ha ha, esa es la descripción perfecta de el arquitecto.
+
+00:11:36.919 --> 00:11:39.360
+Y su herramienta por excelencia es No-Shown.
+
+00:11:39.360 --> 00:11:42.079
+Se describe como un sistema operativo todo en uno,
+
+00:11:42.080 --> 00:11:44.280
+porque puedes construir casi cualquier cosa.
+
+00:11:44.280 --> 00:11:45.800
+Sí, es impresionante.
+
+00:11:45.800 --> 00:11:49.759
+Y para la gestión de archivos, su fortaleza es la integración contextual.
+
+00:11:49.759 --> 00:11:55.639
+Puedes tener el PDF de un estudio científico adjunto justo al lado de las notas que estás tomando sobre él,
+
+00:11:55.639 --> 00:11:56.920
+todo en la misma página.
+
+00:11:56.920 --> 00:12:00.400
+Se acabó el saltar entre el visor de PDF y el editor de texto.
+
+00:12:00.400 --> 00:12:02.680
+Pero, tienes sus contras.
+
+00:12:02.680 --> 00:12:06.600
+Requiera internet casi siempre y lo que más me preocupa,
+
+00:12:06.600 --> 00:12:09.360
+mis datos están en los servidores de No-Shown.
+
+00:12:09.360 --> 00:12:11.080
+Si un día cierran.
+
+00:12:11.080 --> 00:12:12.800
+Es el gran pero.
+
+00:12:12.800 --> 00:12:15.160
+Y es lo que nos lleva al segundo arquetypo.
+
+00:12:15.160 --> 00:12:16.280
+El jardinero.
+
+00:12:16.280 --> 00:12:19.920
+El jardinero no quiere diseñar un sistema rígido desde el principio.
+
+00:12:19.920 --> 00:12:22.120
+Prefiere plantar ideas como semillas
+
+00:12:22.120 --> 00:12:25.040
+y ver cómo las conexiones crecen orgánicamente.
+
+00:12:25.040 --> 00:12:26.840
+Su herramienta es Obsidian.
+
+00:12:26.840 --> 00:12:29.560
+Obsidian y su famosa vista de grafo.
+
+00:12:29.560 --> 00:12:31.960
+Que parece una constelación de ideas.
+
+00:12:31.960 --> 00:12:33.160
+Es hermosa.
+
+00:12:33.160 --> 00:12:34.160
+Exacto.
+
+00:12:34.160 --> 00:12:37.160
+La filosofía de Obsidian es Local First.
+
+00:12:37.159 --> 00:12:41.360
+Eso significa que todas tus notas son simples archivos de texto plano.
+
+00:12:41.360 --> 00:12:44.399
+En formato Markdown, guardados en tu disco duro.
+
+00:12:44.399 --> 00:12:47.199
+Tiene soberanía total sobre tus datos.
+
+00:12:47.199 --> 00:12:49.399
+Si Obsidian desaparece mañana,
+
+00:12:49.399 --> 00:12:52.319
+tus notas siguen ahí perfectamente legibles.
+
+00:12:52.319 --> 00:12:56.319
+Yo personalmente me identifico como jardinera.
+
+00:12:56.319 --> 00:13:01.959
+Empecé a conectar notas su altas sobre esto y sísmo y productividad,
+
+00:13:01.959 --> 00:13:03.399
+sin un plan.
+
+00:13:03.399 --> 00:13:05.919
+Y de repente, en la vista de grafo,
+
+00:13:05.919 --> 00:13:08.919
+vi un cumulo de conexiones que yo no había notado.
+
+00:13:08.919 --> 00:13:09.519
+Ajá.
+
+00:13:09.519 --> 00:13:13.240
+Ese patrón se convirtió en la base de un artículo que escribi.
+
+00:13:13.240 --> 00:13:15.360
+La idea no estaba planeada.
+
+00:13:15.360 --> 00:13:18.120
+Creció de forma natural en el jardín.
+
+00:13:18.120 --> 00:13:20.159
+Es el poder del jardinero.
+
+00:13:20.159 --> 00:13:23.079
+El estructura emerge, no se impone.
+
+00:13:23.079 --> 00:13:27.720
+La desventaja, claro, es que tiene una curva de aprendizaje un poco más técnica
+
+00:13:27.720 --> 00:13:31.399
+y la synchronización entre dispositivos no están automática como en Nausion.
+
+00:13:31.399 --> 00:13:34.519
+Y nos cada el tercer arque tipo, el bibliotecario,
+
+00:13:34.519 --> 00:13:39.240
+que en el documento original se menciona muy de pasada, casi como un extra.
+
+00:13:39.240 --> 00:13:40.959
+¿Tiene realmente su lugar?
+
+00:13:40.959 --> 00:13:42.159
+Absolutamente.
+
+00:13:42.159 --> 00:13:48.039
+El bibliotecario valora la velocidad de captura y la potencia de búsqueda por encima de todo lo demás.
+
+00:13:48.039 --> 00:13:51.480
+Suelema es captura lo ahora en cuenta lo después.
+
+00:13:51.480 --> 00:13:54.000
+La herramienta clásica aquí es Evernote.
+
+00:13:54.000 --> 00:13:56.840
+Oh, el clásico Evernote.
+
+00:13:56.840 --> 00:13:59.759
+Su superboder histórico es su ocean.
+
+00:13:59.840 --> 00:14:05.360
+La capacidad de buscar texto dentro de imágenes, PDF es escaneados, incluso fotos de una
+
+00:14:05.360 --> 00:14:06.360
+pizarra.
+
+00:14:06.360 --> 00:14:10.720
+Ahora le es un ocean y obsidian, no lo hacen también.
+
+00:14:10.720 --> 00:14:15.039
+Puedo ver el valor, por ejemplo, para digitalizar receptas viejas de la abuela.
+
+00:14:15.039 --> 00:14:16.039
+Escritazamano.
+
+00:14:16.039 --> 00:14:18.559
+¿O para guardar tarjetas de presentación?
+
+00:14:18.559 --> 00:14:20.639
+Justo para eso es invatible.
+
+00:14:20.639 --> 00:14:25.799
+O para un arquitecto que toma fotos de planos en una obra y luego necesita buscar un término específico
+
+00:14:25.799 --> 00:14:27.639
+dentro de esas fotos.
+
+00:14:27.639 --> 00:14:32.279
+El contra de estas herramientas como OneNote de Microsoft que también se menciona es
+
+00:14:32.279 --> 00:14:34.279
+a menudo el vendor locking.
+
+00:14:34.279 --> 00:14:39.039
+Usan formatos propietarios que hacen muy difícil sacartos datos y mudarte a otros sistemas en
+
+00:14:39.039 --> 00:14:40.039
+el futuro.
+
+00:14:40.039 --> 00:14:44.360
+Ok, hemos hablado del porqué, el cómo y el conqué.
+
+00:14:44.360 --> 00:14:47.319
+Pero hay un problema práctico que me sigue molestando.
+
+00:14:47.319 --> 00:14:54.879
+La fragmentación entre los archivos duros, PDFs, Word y las notas suaves, mis ideas.
+
+00:14:54.879 --> 00:14:57.639
+Felen en mundos separados, ¿cómo se une?
+
+00:14:57.639 --> 00:15:02.759
+La investigación describe dos estrategias, cada una con sus pros y contras.
+
+00:15:02.759 --> 00:15:06.759
+Puedes incrustar el archivo en la nota como Azenotion.
+
+00:15:06.759 --> 00:15:11.960
+Ventaja, todo en un solo lugar, desventaja, creas duplicados.
+
+00:15:11.960 --> 00:15:17.200
+Si editas el PDF original en tu computadora, la copia en Notion queda desactualizada.
+
+00:15:17.200 --> 00:15:19.759
+Y la otra opción es vincular.
+
+00:15:19.759 --> 00:15:25.720
+O en es un enlace en tu nota que apunta el archivo en su carpeta original de Dropbox o Google Drive.
+
+00:15:25.720 --> 00:15:31.439
+Mas limpio, una sola fuente de la verdad, pero si mueves el archivo, el enlace se rompe.
+
+00:15:31.439 --> 00:15:33.200
+Es un dilema constante.
+
+00:15:33.200 --> 00:15:37.080
+Y pues, parece que ninguna de las dos soluciones es perfecta.
+
+00:15:37.080 --> 00:15:41.360
+No hay una tecnología que esté resolviendo esta fragmentación de forma más inteligente.
+
+00:15:41.360 --> 00:15:44.439
+Digo, parece que la IA debería poder ayudar aquí.
+
+00:15:44.439 --> 00:15:47.399
+¿Has abierto la puerta a la siguiente frontera?
+
+00:15:47.399 --> 00:15:51.559
+La investigación apunta que la inteligencia artificial es la pieza que unificará estos dos
+
+00:15:51.559 --> 00:15:52.559
+mundos.
+
+00:15:52.559 --> 00:15:55.919
+Ya hay herramientas como Boys Notes que hacen cosas increíbles.
+
+00:15:55.919 --> 00:15:56.919
+Boys Notes?
+
+00:15:56.919 --> 00:16:02.439
+Sí, y no solo transcriben o querices, sino que te permiten tener una conversación con tus propias
+
+00:16:02.439 --> 00:16:04.639
+notas a través de un chat?
+
+00:16:04.639 --> 00:16:06.039
+A ver, ¿cómo?
+
+00:16:06.039 --> 00:16:07.720
+Imagina el potencial.
+
+00:16:07.720 --> 00:16:10.840
+Esto va más allá de buscar por palabras clave.
+
+00:16:10.840 --> 00:16:15.199
+Es poder hacerle preguntas complejas a tu propio conocimiento curado.
+
+00:16:15.200 --> 00:16:19.040
+¿El documento propone un ejemplo que es alucinante?
+
+00:16:19.040 --> 00:16:23.140
+Por ya se preguntará tu segundo cerebro, vasado en mis lecturas sobre arquitecturas
+
+00:16:23.140 --> 00:16:28.400
+ostenible y mis notas sobre economía circular, ¿qué tres enfoces debería considerar para este
+
+00:16:28.400 --> 00:16:29.840
+nuevo proyecto?
+
+00:16:29.840 --> 00:16:35.879
+Y la IA no te daría una lista de enlaces de Google, sintetizaría una respuesta original.
+
+00:16:35.879 --> 00:16:41.960
+Una nueva idea basada exclusivamente en el conocimiento que tú has capturado y vestilado
+
+00:16:41.960 --> 00:16:43.759
+a lo largo de los años.
+
+00:16:43.759 --> 00:16:48.720
+Se convierte en un socio de pensamiento proactivo, uno que conoce tu contexto, tus intereses
+
+00:16:48.720 --> 00:16:50.240
+y tus proyectos.
+
+00:16:50.240 --> 00:16:54.360
+Es el salto de un archivo digital a una inteligencia digital personalizada.
+
+00:16:54.360 --> 00:16:58.679
+Entonces, si damos un paso atrás, que significa todo esto.
+
+00:16:58.679 --> 00:17:04.680
+Hemos ido de las limitaciones de nuestra memoria biológica a un futuro con socios de IA.
+
+00:17:04.680 --> 00:17:09.559
+Me queda claro que un cerebro digital no es una simple técnica de organización.
+
+00:17:09.559 --> 00:17:10.559
+No.
+
+00:17:10.559 --> 00:17:13.919
+Una reingeniería de nuestros flujos de trabajo cognitivos.
+
+00:17:13.919 --> 00:17:16.759
+Es la habilidad fundamental para la era de la información.
+
+00:17:16.759 --> 00:17:19.559
+La conclusión del documento es contundente.
+
+00:17:19.559 --> 00:17:24.079
+Al cominar una metodología disciplinada como para, con una herramienta que resuene con nuestro
+
+00:17:24.079 --> 00:17:27.839
+estilo de pensar, nuestros archivos dejan de ser mausoleos.
+
+00:17:27.839 --> 00:17:30.440
+Y se convierten en fuentes vivas de creatividad.
+
+00:17:30.440 --> 00:17:31.440
+Exacto.
+
+00:17:31.440 --> 00:17:37.440
+El éxito ya no depende de quién consume más información, sino de quién la gestiona, la conecta
+
+00:17:37.440 --> 00:17:40.159
+y la expresa de forma más efectiva.
+
+00:17:40.160 --> 00:17:41.160
+Esto es eso.
+
+00:17:41.160 --> 00:17:45.040
+Pasamos de ser consumidores a ser arquitectos de nuestro propio conocimiento.
+
+00:17:45.040 --> 00:17:48.680
+A habilidades cognitivas podríamos estar dejando de ejercitar.
+
+00:17:48.680 --> 00:17:49.680
+¡Mmm!
+
+00:17:49.680 --> 00:17:50.680
+Bueno, pregunta.
+
+00:17:50.680 --> 00:17:56.320
+Existe el riesgo de que, al optimizar tanto la eficiencia, atrofíamos esa capacidad biológica
+
+00:17:56.320 --> 00:17:58.040
+para la serem dipia.
+
+00:17:58.040 --> 00:18:04.040
+Para ese recuerda sociativo que, aunque imperfecto y caótico, a menudo es la cuna de la creatividad
+
+00:18:04.040 --> 00:18:05.600
+más inesperada y humana.
+

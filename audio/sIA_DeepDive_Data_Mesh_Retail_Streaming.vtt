@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:06.000
+o la a todos. Bienvenidos a Asa etiptar. Soy Jorge.
+
+00:00:06.000 --> 00:00:11.759
+Y yo soy Dalia. Hoy nos adentramos en las trincheras de la alta concurrencia y el volumen
+
+00:00:11.759 --> 00:00:15.480
+masivo, Dere Mesh Envite a Escala Global.
+
+00:00:15.480 --> 00:00:21.120
+La Tesis que defendemos hoy es que en empresas con millones de transacciones por segundo, los almacenes
+
+00:00:21.120 --> 00:00:27.640
+monolíticos centralizados fallan no por limitaciones de hardware, sino por la fricción organizacional.
+
+00:00:27.640 --> 00:00:33.399
+Dere Mesh no es un framwork tecnológico, es una transformación socio-cultural que trata a los datos
+
+00:00:33.399 --> 00:00:38.120
+como un producto descentralizado con contratosemánticos estrictos.
+
+00:00:38.120 --> 00:00:43.200
+En un gigante del video tipo BOMAR o comercio unicana, pretender que un solo equipo central
+
+00:00:43.200 --> 00:00:48.359
+de datos sentiendas a la logística de almacenes, el inventario de última mía, la conciliación
+
+00:00:48.359 --> 00:00:53.480
+de pagos y los algoritmos de recomendaciones una receta para el estancamiento.
+
+00:00:53.480 --> 00:00:58.080
+En la arquitectura Dara Mesh, cada dominio de negocio es dueño de su propio producto
+
+00:00:58.080 --> 00:00:59.760
+de datos.
+
+00:00:59.760 --> 00:01:04.880
+El equipo de inventario expone un deraproar conformalizado mediante contratos en debate y esquemas
+
+00:01:04.880 --> 00:01:11.640
+estrictos de eventos en Kafka o PubSub, garantizando niveles de servicio y calidad acordados.
+
+00:01:11.640 --> 00:01:16.040
+Pero entremos al debate de la realidad, ¿qué pasa cuando los dominios operativos no tienen
+
+00:01:16.040 --> 00:01:19.040
+cultura de ingeniería de software?
+
+00:01:19.040 --> 00:01:23.760
+Y dejas que cada departamento creta a las asuant ojos y no un plano de control unificado,
+
+00:01:23.760 --> 00:01:29.280
+en seis meses no tienes un dermesh, tienes un pantano de datos fragmentado y costos de almacenamiento
+
+00:01:29.280 --> 00:01:31.680
+duplicados por 10.
+
+00:01:31.680 --> 00:01:35.840
+Por eso la figura del ingeniero de plataforma de datos es vital.
+
+00:01:35.840 --> 00:01:40.960
+La plataforma debe ofrecer herramientas de autoservicio para que crear un patlan, aplicar pruebas
+
+00:01:40.960 --> 00:01:45.800
+de calidad con creer expectections y publicar métricas en BKRC a tan sencillo como
+
+00:01:45.799 --> 00:01:48.119
+hacer un camé de enjíth.
+
+00:01:48.119 --> 00:01:52.840
+Y para nuestra mirada geek, esto funciona identico a la economía de gremios en lockbás en o
+
+00:01:52.840 --> 00:01:56.359
+los MMAORPGS complejos.
+
+00:01:56.359 --> 00:02:01.200
+Si la facción de erroros cambia la aleación sin avisar al gremio de comerciantes, toda la cadena
+
+00:02:01.200 --> 00:02:04.519
+de suministro del servidor entra en caos.
+
+00:02:04.519 --> 00:02:08.599
+Los contratos de datos son las leyes inmutables del mercado.
+
+00:02:08.599 --> 00:02:12.879
+Sin contratos claros, no hay interoperabilidad posible.
+
+00:02:12.879 --> 00:02:16.560
+No es una elección fundamental para la arquitectura moderna.
+
+00:02:16.560 --> 00:02:19.359
+Nos vemos en el siguiente análisis.
+
+00:02:19.359 --> 00:02:20.359
+Hasta la próxima.
+

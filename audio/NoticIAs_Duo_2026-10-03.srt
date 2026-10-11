@@ -1,0 +1,212 @@
+1
+00:00:00,000 --> 00:00:06,919
+muy buenos días a toda nuestra audiencia. Bienvenidos a ese día, tu espacio de análisis técnico y cultura
+
+2
+00:00:06,919 --> 00:00:11,439
+te hech diseñado para acompañarte en tu día. Soy Jorge.
+
+3
+00:00:11,439 --> 00:00:19,160
+Y yo soy Dalia. Hoy es sábado 3 de octubre de 1226 y les traemos un episodio cargado de noticias
+
+4
+00:00:19,160 --> 00:00:25,039
+clave, cambios importantes en Google AI Studio, revolución hacia el e-gente que era clad en Dequehory,
+
+5
+00:00:25,039 --> 00:00:31,119
+la llegada de Android 17 a la serie Gavax y S25 y novedades muy esperadas en el mundo de
+
+6
+00:00:31,119 --> 00:00:38,960
+SOR AR-APANIMOS O-CUTENSI. Así es Dalia. Comencemos directo con el bloque de inteligencia artificial y
+
+7
+00:00:38,960 --> 00:00:45,359
+herramientas para desarrolladores. Esta semana, Google implementó cutas de uso diario dentro del
+
+8
+00:00:45,359 --> 00:00:52,000
+Plagrán de Google a Studio. El objetivo principal es mantener la baja latencia y alta disponibilidad
+
+9
+00:00:52,000 --> 00:00:58,560
+de la plataforma ante la enorme demanda de prototipado. Una medida lógica, Jorge, considerando
+
+10
+00:00:58,560 --> 00:01:05,480
+que los Tirs de Google de AI, y ultra-mantienen cutas notablemente más altas. Además, se destacó la
+
+11
+00:01:05,480 --> 00:01:11,599
+llegada de Yemen a y 3.8 Flash, posicionado como el nuevo caballo de batalla con razonamiento avanzado
+
+12
+00:01:11,599 --> 00:01:17,120
+y soporte para sentar y vajo, que permite marcar con marcas de agua estructuras moleculares generadas
+
+13
+00:01:17,120 --> 00:01:23,280
+por ya. Pero, ojo, el cambio de fondo que todos los desarrolladores debemos tener en el radar
+
+14
+00:01:23,280 --> 00:01:28,800
+es la transición estratégica de Yemen a y, el paso de los clásicos James hacia que os modulares
+
+15
+00:01:28,800 --> 00:01:36,400
+y reutilizables. Este despiegue inicia en Workspace este 5 de octubre y en la aplicación general el 13 de octubre.
+
+16
+00:01:36,400 --> 00:01:43,040
+Google está empujando fuerte la integración con Google a integrar y su entorno centrado en agentes para
+
+17
+00:01:43,040 --> 00:01:49,480
+llevar código directamente de la prueba a producción. Un movimiento muy acertado para profesionalizar
+
+18
+00:01:49,480 --> 00:01:57,240
+los flujos de agentes. Y hablando de flujos y arquitecturas robustas, Jorge, pasemos al bloque 2, ingeniería
+
+19
+00:01:57,240 --> 00:02:04,080
+de datos, Claudia Nalítica empresarial, porque el ecosistema de VKB debete y Apache AirFlau está viviendo
+
+20
+00:02:04,079 --> 00:02:12,079
+una auténtica era de automatización agéntica. Totalmente, Dalia. En Google Cloud, BKB
+
+21
+00:02:12,079 --> 00:02:17,079
+carea consolidado llaman a Cloud asist para generar y optimizar consultas en lenguaje natural junto
+
+22
+00:02:17,079 --> 00:02:22,759
+al Dera en Genere in Agent. Ahora es posible hacer analítica conversacional interactuando con
+
+23
+00:02:22,759 --> 00:02:27,960
+gráficos de datos y tablas consolidadas, respaldado por el nuevo BKB que arresequió reiscentro para
+
+24
+00:02:27,960 --> 00:02:34,360
+gobernanza granular. Y para los ingenieros que vivimos en el código, debete a integrado el servidor
+
+25
+00:02:34,360 --> 00:02:41,840
+de Maro Context Quarco o MSP, directamente en su extensión oficial de Bejoos Jerio Core. Esto permite
+
+26
+00:02:41,840 --> 00:02:47,600
+compilar, probar y verificar métricas sin salir del editor, reduciendo drásticamente la ficción entre
+
+27
+00:02:47,600 --> 00:02:54,439
+la capa semántica y la transformación. Y la regla de oro de la industria para este 2020 y se mantiene
+
+28
+00:02:54,439 --> 00:03:00,439
+más vigente que nunca, el flow por qué está mediante el Taskflow API y debete transforma.
+
+29
+00:03:00,439 --> 00:03:07,159
+Cero scripts gigantesco y cero de sorden en operadores paz. Mantenerla frontera lín que entre
+
+30
+00:03:07,159 --> 00:03:13,039
+orquestación y transformación sigue siendo el mejor antido tocontra el código espagueti.
+
+31
+00:03:13,039 --> 00:03:19,919
+Sabías palabras, colega. Ahora cambiamos de marcha hacia nuestro tercer bloque, Gaetz, movilidad
+
+32
+00:03:19,920 --> 00:03:26,760
+y hardware personal. Si lleva a un Galaxy en el bolsillo, hay excelentes noticias.
+
+33
+00:03:26,760 --> 00:03:33,160
+Y vaya que sí. Samsung comenzó el despiego oficial y estable de Guanú y 9.0, basado
+
+34
+00:03:33,160 --> 00:03:40,480
+en Android 17 para toda la familia Galaxy S25, S25 Plus y Ultra.
+
+35
+00:03:40,480 --> 00:03:45,240
+Entre las novedades destacadas está mafentia, una función de cámara que rastrea y mantiene
+
+36
+00:03:45,240 --> 00:03:50,280
+centrada a una persona específica automáticamente mientras grabas video. También
+
+37
+00:03:50,280 --> 00:03:56,400
+llegan called BrieGina a BrieF para resumir llamadas y notificaciones claves indistracciones.
+
+38
+00:03:56,400 --> 00:04:02,480
+Y en cámara de acción, Insta360 ha reforzado la estabilidad de firmware para la décima 4, asegurando
+
+39
+00:04:02,480 --> 00:04:07,879
+que las tomas de 360 grados no sufran de desorientación giroscópica.
+
+40
+00:04:07,879 --> 00:04:14,040
+Ideal para documentar trayectos orodadas. Y para cerrar con Proche de oro, entremos a nuestro
+
+41
+00:04:14,039 --> 00:04:19,480
+bloque favorito, cultura geek, anime y literatura fantástica.
+
+42
+00:04:19,480 --> 00:04:25,800
+grandes noticias para la comunidad. Réquicabara, el engendario creador de SORR ARTANMA, acaba
+
+43
+00:04:25,800 --> 00:04:31,079
+de revelar nuevo trailer y postgres de combate para la adaptación a la nime de Dimence Cast, que
+
+44
+00:04:31,079 --> 00:04:36,879
+estrena este 6 de noviembre. Además, se confirmó oficialmente la producción de una nueva
+
+45
+00:04:36,879 --> 00:04:43,360
+película original de la franquicia titulada SORR ARTANMA en 1228.
+
+46
+00:04:43,360 --> 00:04:48,879
+En el universo de Musocutensei, tras el cierre de la primera parte de la tercera temporada,
+
+47
+00:04:48,879 --> 00:04:55,420
+la comunidad ya debate los preparativos para la continuación en 2027. Además, en Japón
+
+48
+00:04:55,420 --> 00:05:01,040
+arranca la Gida Rotomacros Cross Over 2020 y para celebrar el décimo aniversario de Macros
+
+49
+00:05:01,040 --> 00:05:07,840
+Delta. Una semana redoma para la tecnología, los datos y la cultura geek. Esperamos
+
+50
+00:05:07,840 --> 00:05:13,600
+que este resumen les piper con la mejor información técnica. Recuerda que puedes consultar
+
+51
+00:05:13,600 --> 00:05:19,800
+todos los detalles, artículos y referencias de este episodio en nuestra revista digitala SAH Echorno.
+
+52
+00:05:19,800 --> 00:05:24,900
+¿Qué tengan un excelente y productivo día, y nos escuchamos en la próxima edición de
+
+53
+00:05:24,900 --> 00:05:27,540
+ese día? Hasta la próxima.
+

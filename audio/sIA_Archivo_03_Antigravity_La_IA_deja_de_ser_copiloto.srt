@@ -1,0 +1,556 @@
+1
+00:00:00,000 --> 00:00:06,480
+oye, una pregunta rápida. ¿Te acuerdas de ese truco creó que de 2009 que buscabas Google
+
+2
+00:00:06,480 --> 00:00:13,480
+Gravity y púm, de repente toda la página se caía. Los botones, el logo, todo rebotando
+
+3
+00:00:13,480 --> 00:00:15,000
+por ahí, un clásico.
+
+4
+00:00:15,000 --> 00:00:21,679
+¿Qué claro? ¿Cómo olvidarlo? El experimento de Mr. Dub, una joya de la cultura de Internet
+
+5
+00:00:21,679 --> 00:00:24,000
+de esa época, porque lo preguntas.
+
+6
+00:00:24,000 --> 00:00:31,379
+Porque hoy, 22 de noviembre de 2025, si buscas lo puesto Google Anti-Grabby, ya no te sale
+
+7
+00:00:31,379 --> 00:00:38,200
+nada de eso. Lo que aparece es algo hijole mucho más serio y te deja pensando, ¿no?
+
+8
+00:00:38,200 --> 00:00:43,240
+O sea, estos no más un guino, Mr. Egg, para los nostálgicos, o de plano estamos hablando de
+
+9
+00:00:43,240 --> 00:00:45,920
+algo que va a cambiar las reglas del juego por completo.
+
+10
+00:00:45,920 --> 00:00:52,159
+Es justo la pregunta del millón para arrancar. Y sí, aunque el experimento de Mr. Dub,
+
+11
+00:00:52,160 --> 00:00:58,880
+merece todo nuestro respeto, la conversación de hoy va sobre esa cosa seria que encontraste.
+
+12
+00:00:58,880 --> 00:01:05,480
+La nueva plataforma de desarrollo que Google lanzó hace apenas unos días el 18 de noviembre.
+
+13
+00:01:05,480 --> 00:01:11,240
+Nuestra misión, digamos, con los análisis que tenemos, es desmenuzar que es como funciona
+
+14
+00:01:11,240 --> 00:01:17,600
+y, sobre todo, si esa promesa de revolucionar la creación de software es real o puro marketing.
+
+15
+00:01:17,600 --> 00:01:23,160
+Exacto, porque hay que dejarlo plalo desde ahora. Los documentos insisten mucho en que esto
+
+16
+00:01:23,160 --> 00:01:27,960
+no es una simple actualización de asistentes como GitHub, Copilot, que te autocompletan el código.
+
+17
+00:01:27,960 --> 00:01:32,600
+No, esto se vende como un cambio de paradigma total. Así que la pregunta que a mí me interesa
+
+18
+00:01:32,600 --> 00:01:38,240
+exploraré es, ¿qué onda cuando la inteligencia artificial deja de ser tu copiloto y de plano te pide
+
+19
+00:01:38,240 --> 00:01:40,080
+las llaves del coche para manejar sola?
+
+20
+00:01:40,080 --> 00:01:46,720
+Ok, entonces, a ver, vamos a desempacar esto. ¿Qué es exactamente Google Anti-Grabby
+
+21
+00:01:46,719 --> 00:01:54,439
+en 2025? A nivel técnico, las fuentes lo describen como un ID, un entorno de desarrollo integrado.
+
+22
+00:01:54,439 --> 00:02:00,959
+Básicamente, es una derivación un fork del popularísimo Visual Studio Code, pero aquí viene
+
+23
+00:02:00,959 --> 00:02:06,799
+el giro que lo cambia todo. No está pensado para que un humano se siente a escribir líneas
+
+24
+00:02:06,799 --> 00:02:12,520
+de código. Está diseñado para dirigir agentes de inteligencia artificial que programan de
+
+25
+00:02:12,520 --> 00:02:19,400
+forma autónoma. Ese es el corazón del asunto. Google llama una arquitectura Agent First y el
+
+26
+00:02:19,400 --> 00:02:26,080
+motor de todo es una nueva familia de modelos Gemini 3. Para entender el salto hay que pensar en la
+
+27
+00:02:26,080 --> 00:02:32,200
+diferencia. El modelo anterior era un asistente. Tu escribes y el te sugiere la siguiente palabra
+
+28
+00:02:32,200 --> 00:02:36,560
+o la siguiente línea. Era como un soplón, pero glorificado.
+
+29
+00:02:36,560 --> 00:02:45,280
+Sí, un soplón muy listo, pero soplón al fin. Exacto. En cambio, Anti-Grabby propone un actor autónomo.
+
+30
+00:02:45,280 --> 00:02:51,439
+Le das una misión. Por ejemplo, crea un sistema de login con autenticación de dos factores.
+
+31
+00:02:51,439 --> 00:02:58,240
+Y el agente, planifica los pasos, escribel código, busca documentación en internet si algo no lo sabe,
+
+32
+00:02:58,240 --> 00:03:04,439
+ejecuta comandos en la terminal para instalar dependencias, prueba lo que hizo y al final te lo entrega.
+
+33
+00:03:04,439 --> 00:03:11,359
+O sea, la premisa oficial que sitan en los papeles de lanzamiento es de legar flujos de trabajo
+
+34
+00:03:11,359 --> 00:03:17,359
+completos. Y eso suena a que yo le doy la idea y me voy por un café mientras la ya se toda la chamba.
+
+35
+00:03:17,359 --> 00:03:24,039
+¿Qué tan real es eso? Bueno, la interfaz misma está diseñada para reforzar esa idea.
+
+36
+00:03:24,039 --> 00:03:30,759
+Lo primero que salta a la vista en las reseñas es que la pantalla principal ya no es un editor de texto.
+
+37
+00:03:30,759 --> 00:03:35,079
+Ya no es esa página en blanco que a veces intimida, ¿no?
+
+38
+00:03:35,079 --> 00:03:41,079
+¿Cierto? Le pusieron de nombre Mission Control, el control de Mission. La analogía es perfecta.
+
+39
+00:03:41,079 --> 00:03:47,879
+Ya no eres el que pica la piedra. Eres el arquitecto en la obra con los planos en la mano dirigiendo a las cuadrillas.
+
+40
+00:03:47,879 --> 00:03:54,280
+Es un tablero desde donde asignas tareas a diferentes agentes de ya que pueden trabajar en paralelo.
+
+41
+00:03:54,280 --> 00:04:00,120
+Me guste esa imagen, no es una ogen blanco, es el puente de mando de lenter price. Pero claro,
+
+42
+00:04:00,120 --> 00:04:07,879
+si le vas a dar tanta autonomía una ya, el potencial para un desastre es gigantesco. Como manejaron el riesgo.
+
+43
+00:04:07,879 --> 00:04:13,319
+Ahí es donde se pone muy interesante porque es una cuestión de confianza y control.
+
+44
+00:04:13,319 --> 00:04:19,079
+Implementaron tres niveles de permisos de ejecución. El más básico es el modo of.
+
+45
+00:04:19,879 --> 00:04:25,159
+Aquí no hay sorpresas. El agente te tiene que pedir permiso explicito para cada comando que
+
+46
+00:04:25,159 --> 00:04:29,879
+quieras ejecutar en la terminal. Cada git push, cada NPM install.
+
+47
+00:04:29,879 --> 00:04:35,240
+Para todo. Es el modo más lento pero el más seguro. El sin turón de seguridad bien abrochado.
+
+48
+00:04:35,240 --> 00:04:41,959
+El modo para paranoicos. Como yo, probablemente. O para tareas muy, muy delicadas. Luego sube
+
+49
+00:04:41,959 --> 00:04:48,120
+un nivel al modo auto. Y aquí es donde la cosa se complico un poco. En este modo, el agente usa
+
+50
+00:04:48,120 --> 00:04:55,719
+lo que llaman una evaluación de riesgo contextual. ¿E evaluación de riesgo contextual? Sí, o sea, el mismo
+
+51
+00:04:55,719 --> 00:05:03,639
+decide si el comando que va a ejecutar es debajo riesgo como listar archivos o de alto riesgo. Como no sé,
+
+52
+00:05:03,639 --> 00:05:11,560
+sudo rm menos rf. Si determina que el riesgo es alto te pide permiso. Si no, lo ejecutas sin más.
+
+53
+00:05:11,959 --> 00:05:19,560
+A ver, espera. ¿La ya decide solas y algo riesgo? ¿No es como dejar que el sorro se autueba
+
+54
+00:05:19,560 --> 00:05:24,359
+luea antes de entrar al gallinero? ¿Me suena que esa definición de riesgo contextual puede ser
+
+55
+00:05:24,359 --> 00:05:31,959
+bastante flexible? ¿Y que algo podría salir muy, muy mal? Es un riesgo real. Y es precisamente el
+
+56
+00:05:31,959 --> 00:05:38,199
+punto que más debate ha generado. Estás confiando en el posible culpable para que se juste
+
+57
+00:05:38,199 --> 00:05:44,199
+que así mismo antes de cometer el crimen. Y me imagino que justo por esa atención existe el tercer
+
+58
+00:05:44,199 --> 00:05:51,399
+nivel, el que está en boca de todos. El famoso modo Turbo. El modo Turbo. Suena, peligro y a velocidad.
+
+59
+00:05:51,399 --> 00:05:59,240
+Mi lo es. En modo Turbo, la autonomía es prácticamente total. En la gente ejecuta lo que necesita
+
+60
+00:05:59,240 --> 00:06:05,959
+cuando lo necesite sin pedir permiso. La única red de seguridad es una lista negra que tú configuras
+
+61
+00:06:05,959 --> 00:06:12,439
+previamente con comandos prohibidos. ¿A, ok, al menos, a algo? Sí, por ejemplo, puedes prohibir
+
+62
+00:06:12,439 --> 00:06:19,159
+explicitamente cualquier comando que contenga drop de ir a base. Pero fuera de eso, tiene carta blanca.
+
+63
+00:06:19,159 --> 00:06:26,039
+Es la máxima velocidad a cambio del máximo riesgo. Entonces, tu chamba como desarrollador ya no es solo
+
+64
+00:06:26,039 --> 00:06:32,120
+diseñar. Si no también ser una especie de gestor de riesgos, decidir que tan larga quieres la
+
+65
+00:06:32,120 --> 00:06:37,079
+correa del perro o si de plano los sueltas se encorrea en el parque. Hay una cita en analytics
+
+66
+00:06:37,079 --> 00:06:43,639
+video que lo claba. Dice, tú diríjes la misión, los agentes ejecutan la táctica. Y para que esa táctica
+
+67
+00:06:43,639 --> 00:06:51,199
+sea efectiva y no un desastre necesita su motor muy potente. En lanzamiento de Antigrabbit y no fue casual.
+
+68
+00:06:51,199 --> 00:06:59,079
+Se coordinó con la llegada de Gemini 3. La integración nativa es la que le da todo el poder. El componente
+
+69
+00:06:59,079 --> 00:07:05,560
+clave es algo que llaman una ventana de contexto masiva. Lo que significa en español que puede
+
+70
+00:07:05,560 --> 00:07:11,399
+leer y entender de un solo golpe proyectos de código en normes. Y eso es un cambio brutal. Porque uno
+
+71
+00:07:11,399 --> 00:07:17,000
+de los peores dolores de cabeza con los modelos anteriores eran las alucinaciones, ¿no? Exacto. Se
+
+72
+00:07:17,000 --> 00:07:22,680
+acabaron esas pesabillas en las que el asistente pesejiero usar una función que depende de una variable
+
+73
+00:07:22,680 --> 00:07:27,919
+que fue eliminada a 6 meses en otra parte del código. Quiera que haya perdido una tarde
+
+74
+00:07:27,920 --> 00:07:33,640
+entera, depurando una sugerencia sin sentido de una hija, sabe lo valioso que es esto. Al tener
+
+75
+00:07:33,640 --> 00:07:39,480
+el contexto completo del repositorio, el agente entiende la arquitectura, las dependencias, el estilo,
+
+76
+00:07:39,480 --> 00:07:45,200
+no solo bel árbol, bel bosque completo. Y ese es a visión del bosque la que permite que pasen cosas
+
+77
+00:07:45,200 --> 00:07:50,759
+que suenan a película. Porque el ejemplo que comparte a Analytics Video es lo que realmente te huela la
+
+78
+00:07:50,759 --> 00:07:57,360
+cabeza. Cuéntan que como prueba le dieron a Antigrabbit y una sola instrucción. Una construye una
+
+79
+00:07:57,360 --> 00:08:00,560
+réplica funcional de la interfaz de usuario de un iPhone.
+
+80
+00:08:00,560 --> 00:08:07,120
+¿Y en cuestión de segundos la plataforma no solo generó todo el código HTML y CSS para
+
+81
+00:08:07,120 --> 00:08:13,280
+el cascarón para la parte visual, sino que, y esto es lo más impresionante, también gestionó
+
+82
+00:08:13,280 --> 00:08:19,680
+de forma autónoma toda la lógica de estado subyacente. O sea, no solo dibujó los botones.
+
+83
+00:08:19,680 --> 00:08:25,000
+No, no solo dibujó los botones, programó lo que pasa cuando los presiones. Planificó
+
+84
+00:08:25,000 --> 00:08:31,360
+la estructura. Escribió el código, lo probó y lo entregó funcional. Aíte das cuenta de que
+
+85
+00:08:31,360 --> 00:08:38,039
+no es un generador de código. Es un creador de funcionalidades. Es que eso suena magia. Construiron
+
+86
+00:08:38,039 --> 00:08:44,440
+UI completa con una sola instrucción. Me hace pensar en el nombre Antigrabbit. Parece que lo eligieron
+
+87
+00:08:44,440 --> 00:08:50,559
+a propósito. Para evocar esa sensación de que las viejas reglas ya no aplican. Hay alguna conexión
+
+88
+00:08:50,560 --> 00:08:56,280
+con el original de Mr. Du. Totalmente. Y fíjate que la conexión es más profunda de lo que
+
+89
+00:08:56,280 --> 00:09:02,920
+parece. La historia original es de 2009. Un desarrollador y artista digital increíble.
+
+90
+00:09:02,920 --> 00:09:09,160
+Ricardo Cabello, Alias Mr. Dub. El creó Google Gravity como un experimento para el navegador
+
+91
+00:09:09,160 --> 00:09:16,000
+Chrome. Era una demostración técnica de un motor de física para llavescript, que se llama Box 2D.
+
+92
+00:09:16,000 --> 00:09:21,600
+Lo que hizo fue tomar todos los elementos de la página de Google y aplicarles leyes de física.
+
+93
+00:09:21,600 --> 00:09:26,799
+Y eso que cayeran que chocaran fue una forma de decir, Miren, una página web no tiene
+
+94
+00:09:26,799 --> 00:09:31,960
+por qué ser estatica ya burrida. Rompió la física de cómo se suponía que debía comportarse
+
+95
+00:09:31,960 --> 00:09:38,000
+una página web. Precisamente. Y aunque Google ahora reutiliza el nombre para algo completamente
+
+96
+00:09:38,000 --> 00:09:44,000
+distinto, el espíritu es el mismo. Es una declaración de intenciones. Lo que Mr. Dub
+
+97
+00:09:44,000 --> 00:09:50,120
+es hizo con la física visual, Google intenta hacerlo ahora con lo que podríamos llamar la física
+
+98
+00:09:50,120 --> 00:09:55,840
+del flujo de trabajo de software. Están desafiando la gravedad del proceso tradicional.
+
+99
+00:09:55,840 --> 00:10:02,200
+Esa fuerza que nos ancla a la idea que el desarrollo es un proceso manual, lineal, donde un
+
+100
+00:10:02,200 --> 00:10:04,919
+humano tiene que escribir cada punto y coma.
+
+101
+00:10:04,919 --> 00:10:11,440
+MENCANTE SANALOGIA. Están aplicando una fuerza antigravitatoria para que el proceso se lebe.
+
+102
+00:10:11,440 --> 00:10:16,160
+No esto nos lleva inevitablemente a la pregunta que todo el mundo está siendo. Vamos a lo que
+
+103
+00:10:16,160 --> 00:10:19,880
+todos les preocupa. Esto significa que me voy a quedar sin chamba.
+
+104
+00:10:19,880 --> 00:10:24,840
+Sobre todo si eres un Programador Junior, ¿no? Cuí yo trabajo es justamente picar el código
+
+105
+00:10:24,840 --> 00:10:28,040
+táctico que ahora una idea puede hacer en segundos.
+
+106
+00:10:28,040 --> 00:10:36,000
+Es la pregunta del millón. Y las fuentes proponen una respuesta que no es un si o un no. La conclusión
+
+107
+00:10:36,000 --> 00:10:42,720
+general es que el objetivo no es eliminar al desarrollador, sino transformar su rol de una
+
+108
+00:10:42,720 --> 00:10:50,120
+manera radical. La verdadera disrupción no es que la idea escriba código. Es que nos obliga de
+
+109
+00:10:50,120 --> 00:10:53,679
+dejar de pensar en linias y empezar a pensar en sistemas.
+
+110
+00:10:53,679 --> 00:11:00,360
+O sea, el valor ya no está en la sintaxis perfecta, sino en la visión arquitectónica. Antigraritino
+
+111
+00:11:00,360 --> 00:11:05,320
+Reemplaza el Programador. Reemplaza el teclado como herramienta principal y lo cambia por un
+
+112
+00:11:05,320 --> 00:11:11,279
+pizarrón de estrategia. Exactamente, el trabajo si esta promesa se cumple pasa de ser el de
+
+113
+00:11:11,279 --> 00:11:17,360
+un escritor de código a ser el de un arquitecto de sistemas. ¿Y qué hace un arquitecto en este nuevo
+
+114
+00:11:17,360 --> 00:11:24,560
+mundo? Primero, diseñé el plano maestro. Define la estructura, los componentes, como se van a comunicar.
+
+115
+00:11:24,560 --> 00:11:30,400
+Segundo, se convierte en un experto en traducir esa visión en misiones claras y bien definidas
+
+116
+00:11:30,400 --> 00:11:37,040
+para los agentes de IA y tercero y quizás lo más importante, se vuelve el supervisor, el auditor de
+
+117
+00:11:37,040 --> 00:11:42,920
+calidad y el depurador de alto nivel. Revisse el trabajo de los agentes y identifica fallos en la
+
+118
+00:11:42,920 --> 00:11:49,280
+lógica global y toma las decisiones estratégicas que la IA aún no puede tomar. Suena bien en teoría,
+
+119
+00:11:49,279 --> 00:11:55,120
+pero también detect un riesgo. Si las nuevas generaciones de desarrolladores crecen usando estas
+
+120
+00:11:55,120 --> 00:12:01,279
+herramientas y nunca prenden a picar piedra desde cero, no corremos el riesgo de perder una comprensión
+
+121
+00:12:01,279 --> 00:12:06,839
+fundamental de cómo funcionan las cosas por debajo. ¿No nos volvemos peligrosamente dependientes de una
+
+122
+00:12:06,839 --> 00:12:12,319
+caja negra mágica que resuelve todo? Es un debate completamente valido y una preocupación
+
+123
+00:12:12,320 --> 00:12:19,400
+legítima. La dependencia tecnológica es un riesgo real en cualquier campo. La clave probablemente estará
+
+124
+00:12:19,400 --> 00:12:25,879
+en la educación. La idea no es volverse ignorante de los fundamentos, sino aplicar esos fundamentos
+
+125
+00:12:25,879 --> 00:12:33,080
+a un nivel de abstracción más alto. Es como pasar de construir un motor pieza por pieza a diseñar un coche completo.
+
+126
+00:12:33,080 --> 00:12:39,560
+Sigue necesitando saber de mecánica, pero tu enfoque está en el sistema no en el torniño individual.
+
+127
+00:12:39,560 --> 00:12:45,800
+¿Cókey tiene sentido? Entonces, para ir a utilizando las ideas clave de hoy, Google Antigravity no es
+
+128
+00:12:45,800 --> 00:12:51,960
+un asistente de código con esteroides. Es una plataforma nueva, para gestionar equipos de programadores de
+
+129
+00:12:51,960 --> 00:12:58,040
+IA que son autónomos. Su poder viene de la combinación de la interfaz mission control que te pone en el
+
+130
+00:12:58,040 --> 00:13:03,720
+rol de director y el motor geminitriz con su capacidad masiva de contexto que le permite entender proyectos
+
+131
+00:13:03,720 --> 00:13:09,399
+completos. Y la consecuencia más grande es este cambio de rol, de táctico a estratega.
+
+132
+00:13:09,399 --> 00:13:16,840
+Así es, y todo esto nos regresa al punto que te inquieto antes, el de la confianza. La discusión sobre
+
+133
+00:13:16,840 --> 00:13:23,960
+el modo auto y el modo turbo es el centro de todo. Si el poder de la IA se vuelve tan grande y autónomo,
+
+134
+00:13:23,960 --> 00:13:30,320
+la pregunta importante ya no es técnica, ya no es si puede hacer el trabajo. La pregunta se desplaza
+
+135
+00:13:30,320 --> 00:13:37,360
+un terreno mucho más filosófico y humano. El debate ya no es sobre capacidad, sino sobre control y confianza.
+
+136
+00:13:37,360 --> 00:13:45,600
+Exacto. Por eso, el pensamiento final que me gustaría dejar flotando para que cada quien lo reflexione es este.
+
+137
+00:13:45,600 --> 00:13:53,680
+Ya vimos que la IA puede ser un herramienta increíblemente poderosa, pero ese poder viene con una autonomía
+
+138
+00:13:53,680 --> 00:14:01,600
+sin precedentes. Así que la verdadera pregunta es, le entregarían las llaves de su servidor a una inteligencia
+
+139
+00:14:01,600 --> 00:14:03,600
+artificial operando en modo turbo.
+

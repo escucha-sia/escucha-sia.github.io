@@ -1,0 +1,1324 @@
+1
+00:00:00,000 --> 00:00:06,080
+A ver una pregunta, ¿qué pasaría si cada noche a lirnos a dormir, se nos borrará por completo
+
+2
+00:00:06,080 --> 00:00:08,040
+todo lo que aprendimos en el día?
+
+3
+00:00:08,040 --> 00:00:10,480
+Uf, sería una pesadilla.
+
+4
+00:00:10,480 --> 00:00:15,839
+Pero en serio, todo, y que la única forma de guardar un recuerdo nuevo fuera, no sé, con una
+
+5
+00:00:15,839 --> 00:00:19,640
+especie de cirurgía cerebral manual, súper complicada.
+
+6
+00:00:19,640 --> 00:00:22,039
+Suena, a ciencia ficción, la verdad.
+
+7
+00:00:22,039 --> 00:00:26,519
+Pues hace cuenta que así, en esencia, es como han funcionado los grandes modelos de inteligencia
+
+8
+00:00:26,519 --> 00:00:28,320
+artificial hasta ahora.
+
+9
+00:00:28,320 --> 00:00:30,320
+Exactamente.
+
+10
+00:00:30,320 --> 00:00:35,719
+Hoy vamos a analizar a fondo un cambio que podría ser fundamental en la inteligencia artificial,
+
+11
+00:00:35,719 --> 00:00:38,960
+algo que viene de investigación es de finales de 2025.
+
+12
+00:00:38,960 --> 00:00:41,679
+El concepto clame de ese aprendizaje han idado.
+
+13
+00:00:41,679 --> 00:00:43,520
+¿On es de learning?
+
+14
+00:00:43,520 --> 00:00:49,039
+Y la promesa es, vaya ese enorme, dicen que podría ser la cura para esta, pues esta
+
+15
+00:00:49,039 --> 00:00:51,039
+amnesia crónica de las máquinas.
+
+16
+00:00:51,039 --> 00:00:52,039
+¿El?
+
+17
+00:00:52,039 --> 00:00:54,920
+O sea, porque es una solución tan radical.
+
+18
+00:00:54,920 --> 00:00:55,920
+¿OK?
+
+19
+00:00:55,920 --> 00:01:00,880
+Vamos a basarnos en un informe de investigación bastante denso que conecta a jazgos
+
+20
+00:01:00,880 --> 00:01:07,840
+de Google Research de la conferencia Nourips 2025, con teorías de sistemas complejos que
+
+21
+00:01:07,840 --> 00:01:10,480
+fíjate llevan de cadas en otros campos.
+
+22
+00:01:10,480 --> 00:01:11,480
+¿Cómo cuáles?
+
+23
+00:01:11,480 --> 00:01:13,640
+Como la biología o la sociología.
+
+24
+00:01:13,640 --> 00:01:19,159
+La misión es entender si de verdad estamos a punto de pasar de días estáticas congeladas
+
+25
+00:01:19,159 --> 00:01:22,960
+en el tiempo, hayas que aprenden y maduran de verdad.
+
+26
+00:01:22,960 --> 00:01:23,960
+Perfecto.
+
+27
+00:01:23,960 --> 00:01:28,440
+Pues, a ver, vamos a entrarle, para entender la solución, creo que primero hay que entender
+
+28
+00:01:28,440 --> 00:01:30,440
+muy muy bien el problema.
+
+29
+00:01:30,440 --> 00:01:31,440
+Totalmente.
+
+30
+00:01:31,440 --> 00:01:35,560
+El término que se usa es olvido catastrófico, suena muy dramático, ¿no?
+
+31
+00:01:35,560 --> 00:01:39,320
+Suena dramático, pero es que es bastante literal.
+
+32
+00:01:39,320 --> 00:01:42,440
+La analogía que usen en el informe es muy clara.
+
+33
+00:01:42,440 --> 00:01:47,680
+¿Has de cuenta que para poder aprender francés tuvieras que olvidar por completo el
+
+34
+00:01:47,680 --> 00:01:48,680
+español?
+
+35
+00:01:48,680 --> 00:01:52,640
+Vaya, o sea, no se suma, se remplaza.
+
+36
+00:01:52,640 --> 00:01:58,760
+¿O qué para aprender a tocar el piano se te borrará como andar en bicicleta?
+
+37
+00:01:58,760 --> 00:02:03,760
+Los modelos de Ia que usamos hoy en su gran mayoría están congelados.
+
+38
+00:02:03,760 --> 00:02:05,960
+Congelados, me gusta esa palabra.
+
+39
+00:02:05,960 --> 00:02:09,920
+Saben muchísimos sobre la montaña de datos con la que fueron entrenados.
+
+40
+00:02:09,920 --> 00:02:17,159
+Pero integrar conocimiento nuevo fresco, sin dañarlo que ya saben, es un desafío técnico gigantesco.
+
+41
+00:02:17,159 --> 00:02:20,120
+Es como si su conocimiento fuera un estatu a de hielo.
+
+42
+00:02:20,120 --> 00:02:25,159
+De esa mirarla, claro, pero no puedes añadirle nada sin derretir una parte.
+
+43
+00:02:25,159 --> 00:02:28,000
+Esa es una analogía perfecta.
+
+44
+00:02:28,000 --> 00:02:34,520
+Y la investigación lleva a esto un paso más allá con una analogía clínica que es muy potente.
+
+45
+00:02:34,520 --> 00:02:41,159
+A ver, dicen que los grandes modelos del lenguaje, los LMS, se comportan como un paciente
+
+46
+00:02:41,159 --> 00:02:43,159
+con amnesia enterograda.
+
+47
+00:02:43,479 --> 00:02:46,240
+Ok, esa es una condición neurológica real, ¿no?
+
+48
+00:02:46,240 --> 00:02:48,479
+Sí, y es muy seria.
+
+49
+00:02:48,479 --> 00:02:55,199
+Es cuando una persona es incapaz de formar nuevos recuerdos a largo plazo después de una lesión.
+
+50
+00:02:55,199 --> 00:02:56,199
+fuerte.
+
+51
+00:02:56,199 --> 00:03:00,719
+¿Y cómo se traduce eso a un modelo de Ia o a dónde está la lesión?
+
+52
+00:03:00,719 --> 00:03:03,519
+Lo fascinante es como lo desglosa.
+
+53
+00:03:03,519 --> 00:03:06,599
+Pienzan la memoria a largo plazo de la Ia.
+
+54
+00:03:06,599 --> 00:03:09,319
+Eso son sus pesos pre entrenados.
+
+55
+00:03:09,319 --> 00:03:11,960
+Todo el conocimiento con el que se cargo inicialmente.
+
+56
+00:03:11,960 --> 00:03:17,879
+Exacto, todo lo que se le dio en su entrenamiento, que puede durarse en manas o meses.
+
+57
+00:03:17,879 --> 00:03:22,280
+Es como los recuerdos de un paciente de toda su vida antes de la lesión.
+
+58
+00:03:22,280 --> 00:03:27,319
+Esta memoria está ahí intacta, pero es estática, no puede crecer.
+
+59
+00:03:27,319 --> 00:03:29,640
+Y por otro lado tienes la memoria corto plazo.
+
+60
+00:03:29,640 --> 00:03:33,879
+justo, que sería la ventana de contexto en una conversación.
+
+61
+00:03:33,879 --> 00:03:37,280
+Claro, lo que recuerda de nuestra charla actual.
+
+62
+00:03:37,280 --> 00:03:41,919
+Si le pregunto algo y cinco minutos después le pido que el abore, sabe a qué me refiero.
+
+63
+00:03:41,919 --> 00:03:42,919
+Correcto?
+
+64
+00:03:42,919 --> 00:03:47,960
+Puede recordar lo que se ha dicho en la sesión actual, pero una vez que esa ventana de contexto
+
+65
+00:03:47,960 --> 00:03:50,599
+se llena o simplemente la sesión termina.
+
+66
+00:03:50,599 --> 00:03:51,599
+Puf, se va.
+
+67
+00:03:51,599 --> 00:03:53,639
+Se desban ese por completo.
+
+68
+00:03:53,639 --> 00:03:56,280
+No dejaní un solo rastro permanente.
+
+69
+00:03:56,280 --> 00:04:00,240
+El puente entre la memoria de corto plazo y la del largo plazo está roto.
+
+70
+00:04:00,240 --> 00:04:02,800
+Y ahí es donde entra esta nueva idea.
+
+71
+00:04:02,800 --> 00:04:04,280
+Exactamente.
+
+72
+00:04:04,280 --> 00:04:10,960
+En la aprendizaje anidados se propone y lo dicen casi literalmente así como una protesis cognitiva
+
+73
+00:04:10,960 --> 00:04:13,400
+diseñada para reconstruir ese puente.
+
+74
+00:04:13,400 --> 00:04:16,079
+Ok, protesis cognitiva, entiendo.
+
+75
+00:04:16,079 --> 00:04:21,480
+Entonces el gran cambio de paradigma lo que propone no es, no es un nuevo chip, ni una nueva capa
+
+76
+00:04:21,480 --> 00:04:22,879
+de software, o sea.
+
+77
+00:04:22,879 --> 00:04:25,439
+No, y eso es lo más interesante.
+
+78
+00:04:25,439 --> 00:04:29,920
+No es un componente físico, es una redefinición conceptual.
+
+79
+00:04:29,920 --> 00:04:33,759
+La idea es que la arquitectura de un modelo y su método de aprendizaje.
+
+80
+00:04:33,759 --> 00:04:36,279
+Se ha su estructura y como aprende.
+
+81
+00:04:36,279 --> 00:04:43,839
+Justo, su estructura y su optimización, no son dos cosas separadas, son el mismo proceso, pero
+
+82
+00:04:43,839 --> 00:04:46,240
+operando a diferentes velocidades.
+
+83
+00:04:46,240 --> 00:04:49,000
+¿A ver, a ver, diferentes velocidades?
+
+84
+00:04:49,000 --> 00:04:50,000
+¿Cómo es eso?
+
+85
+00:04:50,000 --> 00:04:53,399
+Piencen unas muñecas rusas o en capas.
+
+86
+00:04:53,399 --> 00:04:58,279
+Las capas externas, las más superficiales, son el nivel rápido.
+
+87
+00:04:58,279 --> 00:05:00,560
+Las capas nerviosas, como decían?
+
+88
+00:05:00,560 --> 00:05:05,399
+¿Cuándales las nerviosas reacciona en el instante, procesan los datos crudos, lo que
+
+89
+00:05:05,399 --> 00:05:07,240
+estamos diciendo ahora mismo?
+
+90
+00:05:07,240 --> 00:05:11,439
+Su función es la adaptación inmediata, como nuestra memoria de trabajo.
+
+91
+00:05:11,439 --> 00:05:13,319
+Ok, lo del momento.
+
+92
+00:05:13,319 --> 00:05:15,720
+Pero luego tienes el nivel lento.
+
+93
+00:05:15,720 --> 00:05:18,360
+Las capas internas, las más profundas.
+
+94
+00:05:18,360 --> 00:05:19,360
+El optimizador.
+
+95
+00:05:19,360 --> 00:05:20,639
+Las capas sabias.
+
+96
+00:05:20,639 --> 00:05:22,240
+Las capas sabias.
+
+97
+00:05:22,240 --> 00:05:28,000
+Estas no reacciona en adatos aislados y ruidosos, procesan el historial de errores y los patrones
+
+98
+00:05:28,000 --> 00:05:29,879
+a lo largo del tiempo.
+
+99
+00:05:29,879 --> 00:05:34,680
+Eso lo modifican la estructura profunda, el conocimiento fundamental, si una tendencia se
+
+100
+00:05:34,680 --> 00:05:36,920
+repite, consistentemente.
+
+101
+00:05:36,920 --> 00:05:40,680
+O sea, no se dejan llevar por la primera impresión.
+
+102
+00:05:40,680 --> 00:05:45,759
+Para nada, esa nalogua a la consolidación de la memoria durante el sueño.
+
+103
+00:05:45,759 --> 00:05:51,000
+No guardas cada detalle trivial del día, solo lo que tu cerebro considera relevante.
+
+104
+00:05:51,000 --> 00:05:54,399
+Era el informe daban un ejemplo buenísimo de esto, de una empresa.
+
+105
+00:05:54,399 --> 00:05:56,040
+Sí, el delgerente.
+
+106
+00:05:56,080 --> 00:06:01,560
+Exacto, un buen gerente que sería el optimizador lento, no cambia la estrategia de toda la empresa
+
+107
+00:06:01,560 --> 00:06:03,160
+por un solo maldiad eventas.
+
+108
+00:06:03,160 --> 00:06:04,160
+Seria un caos.
+
+109
+00:06:04,160 --> 00:06:07,439
+Claro, porque ese maldiap puede ser ruido.
+
+110
+00:06:07,439 --> 00:06:08,439
+Una anomalia.
+
+111
+00:06:08,439 --> 00:06:14,439
+Pero si la tendencia a la baja persiste durante meses, entonces sí, ahí si se sienta a redefinir
+
+112
+00:06:14,439 --> 00:06:15,439
+la estrategia.
+
+113
+00:06:15,439 --> 00:06:20,160
+Eso es, eso en esencia es el aprendizaje anidado o en acción.
+
+114
+00:06:20,160 --> 00:06:24,840
+El sistema lento aprendiendo del patron consistent del sistema rápido.
+
+115
+00:06:24,840 --> 00:06:30,120
+Entiendo la teoría de las capas lentas y rápidas, la analogía delgerente es perfecta,
+
+116
+00:06:30,120 --> 00:06:33,000
+pero suena increíblemente abstracto.
+
+117
+00:06:33,000 --> 00:06:36,400
+¿Alguien ha logrado construir algo así o es pura teoría?
+
+118
+00:06:36,400 --> 00:06:43,320
+Me encanta esa pregunta, porque nos saca de la filosofía y nos mete de lleno a la ingeniería.
+
+119
+00:06:43,320 --> 00:06:45,040
+Y la respuesta es sí.
+
+120
+00:06:45,040 --> 00:06:48,480
+Aquí entra la materialización de todo esto.
+
+121
+00:06:48,480 --> 00:06:51,520
+Un modelo de Google Research llamado Hope.
+
+122
+00:06:51,520 --> 00:06:52,520
+Hope.
+
+123
+00:06:52,519 --> 00:06:53,519
+¡Para nada!
+
+124
+00:06:53,519 --> 00:07:04,759
+Es un acronimo de High-Rarquical Optimization-Based Plasticity Engine, o sea, motor de plasticidad
+
+125
+00:07:04,759 --> 00:07:07,000
+basado en optimización gerarquica.
+
+126
+00:07:07,000 --> 00:07:08,000
+Ok, Hope.
+
+127
+00:07:08,000 --> 00:07:12,240
+¿Y qué hace este motor de la esperanza para laía?
+
+128
+00:07:12,240 --> 00:07:15,959
+Su mecanismo clave es monitorear la sorpresa.
+
+129
+00:07:15,959 --> 00:07:16,959
+La sorpresa?
+
+130
+00:07:16,959 --> 00:07:17,959
+Sí.
+
+131
+00:07:17,959 --> 00:07:20,680
+El informe lo cita casi textual.
+
+132
+00:07:20,680 --> 00:07:26,079
+Un información es consistentemente sorprendente, el nivel de meta aprendizaje en la marca
+
+133
+00:07:26,079 --> 00:07:28,720
+para su consolidación en capas profundas.
+
+134
+00:07:28,720 --> 00:07:32,079
+O sea que el sistema no trata todos los datos por igual.
+
+135
+00:07:32,079 --> 00:07:33,079
+Exacto.
+
+136
+00:07:33,079 --> 00:07:39,360
+Una pregunta común o un dato que confirma lo que ya sabe, es procesado por las capas rápidas
+
+137
+00:07:39,360 --> 00:07:41,360
+y no deja huella.
+
+138
+00:07:41,360 --> 00:07:47,720
+Pero, si el modelo se topa con algo que contradice una y otra vez lo que creía saber,
+
+139
+00:07:47,720 --> 00:07:49,800
+algo que lo sorprende repetidamente.
+
+140
+00:07:49,800 --> 00:07:53,520
+¿Una capa superior lo identifica y dice?
+
+141
+00:07:53,520 --> 00:07:55,520
+Ojo, esto es importante.
+
+142
+00:07:55,520 --> 00:08:00,120
+Parece que nuestra comprensión del mundo está incompleta o equivocada en este punto.
+
+143
+00:08:00,120 --> 00:08:03,120
+Hay que integrar esto en nuestro conocimiento base.
+
+144
+00:08:03,120 --> 00:08:08,800
+Espera, la analogía con el cerebro que mencionaba es potente, pero que tan literal es.
+
+145
+00:08:08,800 --> 00:08:13,519
+Estamos hablando de que los ingenieros realmente mapearon la corteza y el hipocampo a capas
+
+146
+00:08:13,519 --> 00:08:16,519
+de código o es más una inspiración.
+
+147
+00:08:16,519 --> 00:08:18,480
+Es un excelente pregunta.
+
+148
+00:08:18,480 --> 00:08:21,000
+No es un mapeo o uno a uno, claro.
+
+149
+00:08:21,000 --> 00:08:24,960
+Pero la inspiración funcional es directa y es explicita.
+
+150
+00:08:24,960 --> 00:08:28,960
+El modelo hope tiene tres niveles jerárquicos definidos.
+
+151
+00:08:28,960 --> 00:08:29,960
+OK.
+
+152
+00:08:29,960 --> 00:08:32,759
+El nivel uno es el de adquisición.
+
+153
+00:08:32,759 --> 00:08:36,720
+Processa los datos inmediatos, nuestra corteza sensorial.
+
+154
+00:08:36,720 --> 00:08:44,200
+El nivel 2, el de meta aprendizaje, es el que evalua esa sorpresa y decide que guardar.
+
+155
+00:08:44,200 --> 00:08:45,680
+La función del hipocampo?
+
+156
+00:08:45,680 --> 00:08:46,680
+Exacto.
+
+157
+00:08:46,680 --> 00:08:51,280
+Que etiqueta las experiencias del día como potencialmente importantes.
+
+158
+00:08:51,280 --> 00:08:57,160
+Y luego está el nivel 3 de estrategia, que optimiza cómo aprende el sistema en general.
+
+159
+00:08:57,160 --> 00:08:59,680
+Es una especie de meta-cognición.
+
+160
+00:08:59,680 --> 00:09:04,600
+Como nuestros lobulos frontales, que nos permiten pensar sobre cómo pensamos?
+
+161
+00:09:04,600 --> 00:09:06,640
+Justo es la analogía que usan.
+
+162
+00:09:06,640 --> 00:09:10,160
+Un momento, esto es fascinante.
+
+163
+00:09:10,160 --> 00:09:15,060
+Entonces hope es como si la idea tuviera un gerente interno que decide qué recuerdos
+
+164
+00:09:15,060 --> 00:09:16,420
+valen la pena guardar.
+
+165
+00:09:16,420 --> 00:09:17,740
+¿Se podría ver así?
+
+166
+00:09:17,740 --> 00:09:23,020
+Significa que dos modelos hope idénticos, si los exponemos a experiencias radicalmente distintas
+
+167
+00:09:23,020 --> 00:09:29,060
+durante un año podrían desarrollar, no sé, personalidades o bases de conocimiento completamente
+
+168
+00:09:29,060 --> 00:09:30,060
+diferentes.
+
+169
+00:09:30,060 --> 00:09:31,540
+Haz dado en el clavo.
+
+170
+00:09:31,540 --> 00:09:35,260
+Esa es exactamente la implicación más profunda de esto.
+
+171
+00:09:35,260 --> 00:09:39,820
+Dejáríamos de tener millones de copias idénticas de un modelo.
+
+172
+00:09:39,820 --> 00:09:41,700
+Para tener instancia sunicas.
+
+173
+00:09:41,700 --> 00:09:46,259
+Estáncias únicas que han sido moldeadas por sus interacciones particulares.
+
+174
+00:09:46,259 --> 00:09:47,820
+Dos modelos hope.
+
+175
+00:09:47,820 --> 00:09:53,460
+Uno que pasa 6 meses ayudando a programadores y otro que pasa el mismo tiempo conversando con
+
+176
+00:09:53,460 --> 00:09:54,620
+historiadores.
+
+177
+00:09:54,620 --> 00:09:56,340
+No solo sabrían cosas distintas.
+
+178
+00:09:56,340 --> 00:10:00,379
+Es que fundamentalmente aprenderían de forma distinta.
+
+179
+00:10:00,379 --> 00:10:06,340
+Sus optimizadores lentos habrían adaptado la estructura para priorizar diferentes tipos de información.
+
+180
+00:10:06,340 --> 00:10:12,019
+Se desarrollarían, en efecto, un especialización y una identidad acumulativa.
+
+181
+00:10:12,019 --> 00:10:14,259
+Vaya, eso ya es un salto cuántico.
+
+182
+00:10:14,259 --> 00:10:15,740
+Pero me surgeó otra duda.
+
+183
+00:10:15,740 --> 00:10:19,100
+Esa jerarquía de tres niveles fue una muy bien, muy ordenada.
+
+184
+00:10:19,100 --> 00:10:24,259
+Pero ¿qué pasa si el propio problema cambia tanto que esa estructura ya no es la ideal?
+
+185
+00:10:24,259 --> 00:10:25,259
+Excelente punto.
+
+186
+00:10:25,259 --> 00:10:30,460
+O si la tarea es tan compleja que necesita más niveles y análisis, se queda atorado en esos
+
+187
+00:10:30,460 --> 00:10:31,460
+tres niveles.
+
+188
+00:10:31,540 --> 00:10:33,540
+Esa es la siguiente frontera.
+
+189
+00:10:33,540 --> 00:10:36,540
+Nos lleva a la evolución del concepto.
+
+190
+00:10:36,540 --> 00:10:41,220
+Las jerarquías anidadas dinámicas o de NH.
+
+191
+00:10:41,220 --> 00:10:48,139
+Mientras que hope tiene una jerarquía pre definida como un organigrama fijo, los sistemas
+
+192
+00:10:48,139 --> 00:10:50,940
+de NH son mucho más radicales.
+
+193
+00:10:50,940 --> 00:10:55,580
+Permíten que el modelo modifique su propia estructura en tiempo real.
+
+194
+00:10:55,580 --> 00:10:58,139
+¿Cómo que modifique su propia estructura?
+
+195
+00:10:58,220 --> 00:11:03,340
+Puede añadir o quitar niveles de optimización según la complejidad de la tarea o del
+
+196
+00:11:03,340 --> 00:11:04,980
+entorno al que se enfrenta.
+
+197
+00:11:04,980 --> 00:11:08,259
+Es una IA que no sólo aprende sobre el mundo.
+
+198
+00:11:08,259 --> 00:11:09,939
+Sino que aprende a aprender.
+
+199
+00:11:09,939 --> 00:11:13,139
+Y sea autor restructura para hacerlo mejor.
+
+200
+00:11:13,139 --> 00:11:14,779
+Es un cambio de juego.
+
+201
+00:11:14,779 --> 00:11:20,059
+Lo que me voló la cabeza a leer las fuentes no fue solo la solución de IA, que ya de
+
+202
+00:11:20,059 --> 00:11:21,819
+por si es increíble.
+
+203
+00:11:21,820 --> 00:11:28,120
+Si no darme cuenta de que este patrón, este anidamiento de capas rápidas y lentas está en todas
+
+204
+00:11:28,120 --> 00:11:29,120
+partes.
+
+205
+00:11:29,120 --> 00:11:33,960
+Totalmente, de repente vi la colección con un libro de psicología educativa que le ya se
+
+206
+00:11:33,960 --> 00:11:40,540
+años y no me hizo mucho sentido en su momento, pero resulta que esta idea existía, pero en otro
+
+207
+00:11:40,540 --> 00:11:41,540
+contexto.
+
+208
+00:11:41,540 --> 00:11:47,700
+Es que si conecta esto con el panorama general, las conexiones son las sombrosas, es un principio
+
+209
+00:11:47,700 --> 00:11:51,540
+fundamental de los sistemas complejos y resilientes.
+
+210
+00:11:51,540 --> 00:11:52,820
+A ver, explica que no se hizo.
+
+211
+00:11:52,820 --> 00:11:58,100
+En neurobiología, como ya decíamos, es casi una imitación directa de la consolidación
+
+212
+00:11:58,100 --> 00:11:59,340
+de la memoria.
+
+213
+00:11:59,340 --> 00:12:03,540
+El hipocampo, la capa rápida, captura experiencias episodicas.
+
+214
+00:12:03,540 --> 00:12:05,740
+¿Qué desayuné hoy en ese café nuevo?
+
+215
+00:12:05,740 --> 00:12:06,740
+Justo.
+
+216
+00:12:06,740 --> 00:12:12,020
+Y durante el sueño, las reproducen lentamente hacia el neocortex, la capalenta.
+
+217
+00:12:12,020 --> 00:12:14,940
+Para integrarlas en el conocimiento semanthico general.
+
+218
+00:12:14,940 --> 00:12:18,300
+Los chilaciles son un desayunotípico y delicioso.
+
+219
+00:12:18,300 --> 00:12:19,300
+Exactamente.
+
+220
+00:12:19,300 --> 00:12:25,020
+El aprendizaje anidado es en gran medida la ingeniería inversa de ese proceso biológico.
+
+221
+00:12:25,020 --> 00:12:27,180
+Pero no se queden el cerebro.
+
+222
+00:12:27,180 --> 00:12:30,340
+También se aplica a cómo nos organizamos como sociedad.
+
+223
+00:12:30,340 --> 00:12:37,080
+Así es, el informe hace referencia a la psicóloga educativa Laura Enresnic, quien décadas antes
+
+224
+00:12:37,080 --> 00:12:40,860
+ya hablaba de sistemas de aprendizaje anidados.
+
+225
+00:12:40,860 --> 00:12:44,420
+Para explicar por qué fracasan tantas reformas educativas.
+
+226
+00:12:44,419 --> 00:12:45,620
+¿Y qué decía?
+
+227
+00:12:45,620 --> 00:12:48,379
+Para ella, el aula es el nivel rápido.
+
+228
+00:12:48,379 --> 00:12:53,500
+El lugar de la acción, donde ocurre la aprendizaje directo, entre maestros y alumnos.
+
+229
+00:12:53,500 --> 00:12:58,379
+Pero el distrito escolar o la secretaria de educación, es el optimizador lento.
+
+230
+00:12:58,379 --> 00:13:01,939
+El que establece políticas detecta patrones a largo plazo.
+
+231
+00:13:01,939 --> 00:13:03,699
+Y distribuye recursos.
+
+232
+00:13:03,699 --> 00:13:09,219
+Y las lecciones que si esos dos niveles están desconectados, la reforma está destinada al fracaso.
+
+233
+00:13:09,219 --> 00:13:14,259
+Un directivo no puede imponer políticas desde una oficina sin entender la realidad caótica
+
+234
+00:13:14,259 --> 00:13:21,620
+y diaria de la aula, precisamente, y un maestro no puede inovar si el sistema no le da soporte.
+
+235
+00:13:21,620 --> 00:13:25,659
+La falla ocurre cuando esos niveles no se comunican.
+
+236
+00:13:25,659 --> 00:13:30,899
+Cuando peran a velocidades totalmente distintas y sin un acoplamiento.
+
+237
+00:13:30,899 --> 00:13:33,340
+Igual que la hay a conolvido catastrófico.
+
+238
+00:13:33,340 --> 00:13:35,179
+Es la misma lógica.
+
+239
+00:13:35,179 --> 00:13:41,980
+El informe también menciona de pasada el trabajo de Chris Argeris sobre la aprendizaje de bucle doble
+
+240
+00:13:41,980 --> 00:13:44,179
+en las organizaciones.
+
+241
+00:13:44,180 --> 00:13:46,060
+¿Cómo funciona eso del bucle doble?
+
+242
+00:13:46,060 --> 00:13:47,900
+Es una idea muy potente.
+
+243
+00:13:47,900 --> 00:13:52,540
+El bucle simple es corregir errores sin cambiar las reglas.
+
+244
+00:13:52,540 --> 00:13:57,780
+La temperatura de la oficina está muy alta, así que ajusta el termostato.
+
+245
+00:13:57,780 --> 00:14:00,700
+En laía es standard, esto es lo que se hace.
+
+246
+00:14:00,700 --> 00:14:04,140
+Se ajusta en los parámetros para minimizar un error.
+
+247
+00:14:04,140 --> 00:14:05,140
+Entendido.
+
+248
+00:14:05,140 --> 00:14:06,140
+Y el doble.
+
+249
+00:14:06,140 --> 00:14:09,620
+El bucle doble es mucho más profundo.
+
+250
+00:14:09,620 --> 00:14:15,419
+Enplica a cuestionar y cambiar las reglas subyacentes que causaron el error.
+
+251
+00:14:15,419 --> 00:14:18,179
+No es solo ajustar el termostato.
+
+252
+00:14:18,179 --> 00:14:22,299
+Es preguntar ¿por qué el termostato está programado así?
+
+253
+00:14:22,299 --> 00:14:23,700
+¿Quién lo decidió?
+
+254
+00:14:23,700 --> 00:14:26,980
+Son nuestras reglas sobre el confort las correctas.
+
+255
+00:14:26,980 --> 00:14:29,500
+¿Os apara ponerlo en términos sencillos?
+
+256
+00:14:29,500 --> 00:14:31,700
+El bucle simple es jugar el juego mejor.
+
+257
+00:14:31,700 --> 00:14:32,700
+¿Ah-huh?
+
+258
+00:14:32,700 --> 00:14:37,200
+El bucle doble es cambiar las reglas del juego porque te das cuenta de que el juego en sí
+
+259
+00:14:37,200 --> 00:14:39,280
+está mal planteado o ya no sirve.
+
+260
+00:14:39,280 --> 00:14:42,400
+¿Ascaptado el esencia perfectamente?
+
+261
+00:14:42,400 --> 00:14:47,040
+Y estaía de NH sería la primera en poder hacer eso por sí misma.
+
+262
+00:14:47,040 --> 00:14:53,440
+Los modelos de NH al poder reestructurarse son la primera encarnación teórica de unaía capaz
+
+263
+00:14:53,440 --> 00:14:56,560
+de realizar este aprendizaje de bucle doble.
+
+264
+00:14:56,560 --> 00:15:00,879
+Unaía que no sólo se pregunta cuál es la respuesta correcta.
+
+265
+00:15:00,879 --> 00:15:04,600
+Si no también, estoy haciendo la pregunta correcta.
+
+266
+00:15:04,600 --> 00:15:10,879
+Entonces, si intentamos resumir la idea central, el aprendizaje han idado parece marcar el
+
+267
+00:15:10,879 --> 00:15:15,639
+fin de la era de los modelos de IA, estáticos monolíticos.
+
+268
+00:15:15,639 --> 00:15:16,639
+Sindo da.
+
+269
+00:15:16,639 --> 00:15:21,840
+Estamos viendo el comienzo de sistemas que pueden desarrollar una identidad acumulativa que maduran
+
+270
+00:15:21,840 --> 00:15:26,840
+con la experiencia en lugar de ser simplemente reemplazados por una versión 2.0.
+
+271
+00:15:26,840 --> 00:15:28,240
+Absolutamente.
+
+272
+00:15:28,240 --> 00:15:32,399
+Esto nos acerca a lo que el informe llama inteligencia de vida larga.
+
+273
+00:15:32,399 --> 00:15:34,639
+Es un cambio de paradigma.
+
+274
+00:15:34,639 --> 00:15:35,639
+Sin embargo.
+
+275
+00:15:35,639 --> 00:15:37,639
+Siempre hay un sin embargo.
+
+276
+00:15:37,639 --> 00:15:38,639
+Siempre.
+
+277
+00:15:38,639 --> 00:15:44,240
+Como toda tecnología poderosa abre la puerta a nuevos y complejos desafíos que apenas empezamos
+
+278
+00:15:44,240 --> 00:15:45,240
+a imaginar.
+
+279
+00:15:45,240 --> 00:15:46,600
+¿Cómo cuál es?
+
+280
+00:15:46,600 --> 00:15:47,600
+A ver cuéntame.
+
+281
+00:15:47,600 --> 00:15:50,720
+Por un lado está el riesgo del envenenamiento lento.
+
+282
+00:15:50,720 --> 00:15:52,120
+Envenenamiento lento?
+
+283
+00:15:52,120 --> 00:15:58,879
+Si un modelo puede consolidar conocimiento a lo largo del tiempo, un actor malicio so podría alimentar
+
+284
+00:15:58,879 --> 00:16:04,679
+los utilmente con información sesgada o falsa, durante semanas o meses.
+
+285
+00:16:04,679 --> 00:16:10,120
+Para manipular su conocimiento profundo de una manera casi indetectable a corto plazo.
+
+286
+00:16:10,120 --> 00:16:13,679
+Sería como una erosión gradual de su visión del mundo.
+
+287
+00:16:13,679 --> 00:16:14,679
+Exacto.
+
+288
+00:16:14,679 --> 00:16:18,320
+No una ta que frontal, sino una manipulación si jilosa.
+
+289
+00:16:18,320 --> 00:16:21,960
+Pero un momento, no es un riesgo que ya existe.
+
+290
+00:16:21,960 --> 00:16:25,600
+Ya se habla mucho del envenenamiento de los datos de entrenamiento.
+
+291
+00:16:25,600 --> 00:16:28,519
+¿Qué lo hace fundamentalmente más peligroso aquí?
+
+292
+00:16:28,519 --> 00:16:30,879
+Es una opjeción muy valida.
+
+293
+00:16:30,879 --> 00:16:35,120
+La diferencia clave es la sutileza y la permanencia.
+
+294
+00:16:35,120 --> 00:16:40,159
+En los modelos actuales, si descubres que tus datos están envenenados, puedes limpiarlos
+
+295
+00:16:40,159 --> 00:16:42,439
+y re entrenar el modelo desde cero.
+
+296
+00:16:42,439 --> 00:16:45,439
+Es un reset, aunque sea muy costoso.
+
+297
+00:16:45,439 --> 00:16:46,439
+Exacto.
+
+298
+00:16:46,439 --> 00:16:52,439
+Con el aprendización idado, el conocimiento se esgado, no estaría en una base de datos externas,
+
+299
+00:16:52,439 --> 00:16:57,120
+sino que ya habría sido asimilado en la estructura profunda del modelo.
+
+300
+00:16:57,120 --> 00:16:58,799
+Esos capas sabias.
+
+301
+00:16:58,799 --> 00:17:00,240
+Ya sería parte del.
+
+302
+00:17:00,240 --> 00:17:05,680
+Desenredar eso sin causar un daño con la terála todo el conocimiento legítivo que ha adquirido,
+
+303
+00:17:05,680 --> 00:17:08,880
+sería inmensamente más difícil.
+
+304
+00:17:08,880 --> 00:17:14,039
+Es la diferencia entre alimpiar una mancha en una foto y tratar de eliminar un mal recuerdo
+
+305
+00:17:14,039 --> 00:17:15,039
+de un cerebro.
+
+306
+00:17:15,039 --> 00:17:20,079
+Entiendo, el otro gran problema que mencionan es la supervisión, cierto, la auditoría.
+
+307
+00:17:20,079 --> 00:17:21,079
+Exacto.
+
+308
+00:17:21,079 --> 00:17:26,720
+Como supervisas y auditas un sistema cuyo comportamiento y estructura interna, están en
+
+309
+00:17:26,720 --> 00:17:27,720
+un constante cambio.
+
+310
+00:17:27,720 --> 00:17:28,720
+Bueno, pregunta.
+
+311
+00:17:28,720 --> 00:17:34,480
+La congelación de los modelos actuales, aunque es una limitación, también es una garantía
+
+312
+00:17:34,480 --> 00:17:36,680
+de seguridad y previsibilidad.
+
+313
+00:17:36,680 --> 00:17:40,319
+Sabemos cómo se va a comportar hoy, mañana y en un año.
+
+314
+00:17:40,319 --> 00:17:41,680
+Hay certidumbra.
+
+315
+00:17:41,680 --> 00:17:43,440
+Cierta certidumbre.
+
+316
+00:17:43,440 --> 00:17:50,000
+Con un sistema que evoluciona, que se restructura, necesitaremos métodos completamente nuevos
+
+317
+00:17:50,000 --> 00:17:56,680
+de auditoria continua para asegurarnos de que su desarrollo no se desvía hacia caminos, peligrosos,
+
+318
+00:17:56,680 --> 00:17:57,680
+intereseados.
+
+319
+00:17:57,680 --> 00:18:01,640
+Lo que nos deja con una reflexión final bastante.
+
+320
+00:18:01,640 --> 00:18:02,640
+Seria.
+
+321
+00:18:02,640 --> 00:18:06,840
+Las fuentes sugieren que no estamos hablando solo de construir máquinas que recuerdan.
+
+322
+00:18:06,840 --> 00:18:08,440
+No, para nada.
+
+323
+00:18:08,440 --> 00:18:10,880
+Estamos hablando de máquinas que evolucionen.
+
+324
+00:18:10,880 --> 00:18:16,440
+Y si de verdad estamos en el umbral de una hija que puede literalmente cambiar de opinión,
+
+325
+00:18:16,440 --> 00:18:21,480
+reescribir sus propias reglas y modificar su estructura basándose en su experiencia.
+
+326
+00:18:21,480 --> 00:18:23,360
+La pregunta ya no es solo técnica.
+
+327
+00:18:23,360 --> 00:18:24,840
+Se vuelve filosófica.
+
+328
+00:18:24,839 --> 00:18:29,079
+Totalmente, estamos realmente preparados para lo que eso significa.
+
+329
+00:18:29,079 --> 00:18:30,720
+Y más importante aún.
+
+330
+00:18:30,720 --> 00:18:35,639
+Como podemos asegurar que esa evolución, que esa maduración digital, se aline con nuestros
+
+331
+00:18:35,639 --> 00:18:36,519
+propios valores.
+

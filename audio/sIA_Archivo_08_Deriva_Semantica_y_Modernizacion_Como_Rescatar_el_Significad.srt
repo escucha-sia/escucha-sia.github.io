@@ -1,0 +1,2024 @@
+1
+00:00:00,000 --> 00:00:04,000
+Bienvenida o bienvenido a esta nueva exploración.
+
+2
+00:00:04,000 --> 00:00:11,000
+Hoy, nos metemos de lleno con un tema que, bueno, a primera vista, puede sonar super técnico, ¿no?
+
+3
+00:00:11,000 --> 00:00:13,000
+Sí, un poco harido, quizás.
+
+4
+00:00:13,000 --> 00:00:17,000
+Sacado de un artículo sobre modernización de sistemas que se llama,
+
+5
+00:00:17,000 --> 00:00:21,000
+la deriva semántica y la modernización de datos.
+
+6
+00:00:21,000 --> 00:00:24,000
+Pero, creanme, esto toca una fibra sensible.
+
+7
+00:00:24,000 --> 00:00:29,000
+Un problema yo diría fundamental, y que muchas veces ni vemos.
+
+8
+00:00:29,000 --> 00:00:32,000
+En cualquier organización que ya tiene su tiempo operando.
+
+9
+00:00:32,000 --> 00:00:35,000
+Un problema silencioso, pero con impacto.
+
+10
+00:00:35,000 --> 00:00:36,000
+Exacto.
+
+11
+00:00:36,000 --> 00:00:41,000
+El cómo casi sin querer se va perdiendo el significado de sus propios datos.
+
+12
+00:00:41,000 --> 00:00:45,000
+A ver, ubica en el juego del teléfono descompuesto.
+
+13
+00:00:45,000 --> 00:00:49,000
+¿Qué empieza con una frase y puf, termina siendo algo que nada que ver?
+
+14
+00:00:49,000 --> 00:00:51,000
+Claro, que se deforma totalmente.
+
+15
+00:00:51,000 --> 00:00:56,000
+Pues algo muy parecido, pero a escala de empresa y a lo largo de años,
+
+16
+00:00:56,000 --> 00:00:59,000
+o de cada, le pasa la información.
+
+17
+00:00:59,000 --> 00:01:02,000
+O sea, llegó un punto en que los datos que tienes ahí guardados,
+
+18
+00:01:02,000 --> 00:01:05,000
+pues ya no significan lo que originalmente representaban.
+
+19
+00:01:05,000 --> 00:01:08,000
+Y las consecuencias pueden ser tremenda, ¿eh?
+
+20
+00:01:08,000 --> 00:01:09,000
+Uf, ni me digas.
+
+21
+00:01:09,000 --> 00:01:11,000
+Pensemos en eso.
+
+22
+00:01:11,000 --> 00:01:13,000
+Reporte financieros que no más no cuadran.
+
+23
+00:01:13,000 --> 00:01:16,000
+Campañas de marketing que le llegan a quien no deben.
+
+24
+00:01:16,000 --> 00:01:20,000
+Decisiones estratégicas que se basan en, pues, en fantasmas de datos, ¿no?
+
+25
+00:01:20,000 --> 00:01:21,000
+Exacto.
+
+26
+00:01:21,000 --> 00:01:24,000
+Todo, porque la empresa, sin d'or se cuenta,
+
+27
+00:01:24,000 --> 00:01:27,000
+olvidó que quería decir su propia información.
+
+28
+00:01:27,000 --> 00:01:31,000
+Es como si la organización es de ya no se entendiera si misma.
+
+29
+00:01:31,000 --> 00:01:33,000
+Se vuelve un poco esquizofrenico, no crez.
+
+30
+00:01:33,000 --> 00:01:34,000
+Totalmente.
+
+31
+00:01:34,000 --> 00:01:39,000
+Y fíjate que el artículo le pone un nombre bastante gráfico a esto.
+
+32
+00:01:39,000 --> 00:01:41,000
+Deriva se mantica cristalizada.
+
+33
+00:01:41,000 --> 00:01:43,000
+Me gusta cómo suena.
+
+34
+00:01:43,000 --> 00:01:44,000
+cristalizada.
+
+35
+00:01:44,000 --> 00:01:47,000
+Como que ya se quedó así, no dura exacto.
+
+36
+00:01:47,000 --> 00:01:50,000
+Como que ese solidificó esa confusión.
+
+37
+00:01:50,000 --> 00:01:53,000
+Se refiere a cómo esos sistemas informáticos viejos.
+
+38
+00:01:53,000 --> 00:01:54,000
+Los famosos legas sí.
+
+39
+00:01:54,000 --> 00:01:58,000
+Que a veces llevan décadas, se es siendo como el corazón de la operación.
+
+40
+00:01:58,000 --> 00:02:00,000
+El motorcito que sigan dando.
+
+41
+00:02:00,000 --> 00:02:01,000
+Ese mero.
+
+42
+00:02:01,000 --> 00:02:03,000
+Pues se van quedando atrás.
+
+43
+00:02:03,000 --> 00:02:06,000
+Y no solo tecnologicamente que eso es obvio,
+
+44
+00:02:06,000 --> 00:02:09,000
+sino que se desconectan de cómo funciona el negocio hoy.
+
+45
+00:02:09,000 --> 00:02:12,000
+La operación cambia, el mercado cambia.
+
+46
+00:02:12,000 --> 00:02:13,000
+Pero el sistema?
+
+47
+00:02:13,000 --> 00:02:14,000
+Se quedan el pasado.
+
+48
+00:02:14,000 --> 00:02:15,000
+Justo.
+
+49
+00:02:15,000 --> 00:02:19,000
+Y el resultado es que el significador original de los datos que maneja,
+
+50
+00:02:19,000 --> 00:02:20,000
+por ejemplo.
+
+51
+00:02:20,000 --> 00:02:21,000
+No sé.
+
+52
+00:02:21,000 --> 00:02:24,000
+¿Qué definía un cliente prioritario hace 15 años?
+
+53
+00:02:24,000 --> 00:02:28,000
+Pues se vuelve obsoleto y relevante o peor.
+
+54
+00:02:28,000 --> 00:02:30,000
+Se pierde por completo.
+
+55
+00:02:30,000 --> 00:02:31,000
+Se olvida.
+
+56
+00:02:31,000 --> 00:02:32,000
+Sí, se olvida.
+
+57
+00:02:32,000 --> 00:02:35,000
+Los datos siguen ahí, influyendo en los sistemas.
+
+58
+00:02:35,000 --> 00:02:37,000
+Pero su definición original ya no aplica.
+
+59
+00:02:37,000 --> 00:02:38,000
+O.
+
+60
+00:02:38,000 --> 00:02:40,000
+Y esto pasa muchísimo.
+
+61
+00:02:40,000 --> 00:02:42,000
+Nadie en la organización actual.
+
+62
+00:02:42,000 --> 00:02:43,000
+Recuerda con precisión.
+
+63
+00:02:43,000 --> 00:02:44,000
+¿Qué?
+
+64
+00:02:44,000 --> 00:02:46,000
+¿Qué diablos representaba ese campo llamado?
+
+65
+00:02:46,000 --> 00:02:47,000
+No sé.
+
+66
+00:02:47,000 --> 00:02:50,000
+Blackref, Custey, X en la base de datos principal.
+
+67
+00:02:50,000 --> 00:02:51,000
+Claro.
+
+68
+00:02:51,000 --> 00:02:53,000
+Me imagino perfecto la escena.
+
+69
+00:02:53,000 --> 00:02:57,000
+Es como tener un diccionario viejísimo en casa, sabes?
+
+70
+00:02:57,000 --> 00:03:00,000
+Las palabras ahí están, pero las definiciones como que ya no.
+
+71
+00:03:00,000 --> 00:03:02,000
+Ya no checan con como hablamos hoy.
+
+72
+00:03:02,000 --> 00:03:04,000
+Exactamente es la analogía.
+
+73
+00:03:04,000 --> 00:03:08,000
+Entonces, la misión que nos planteamos hoy basándonos en este material,
+
+74
+00:03:08,000 --> 00:03:13,000
+es entender porque modernizar sistemas no es nada más cambiar fierrososo software nuevo.
+
+75
+00:03:13,000 --> 00:03:16,000
+Es algo mucho más profundo diría yo.
+
+76
+00:03:16,000 --> 00:03:18,000
+Vamos allá de la tecnología.
+
+77
+00:03:18,000 --> 00:03:24,000
+De actualizar y sobre todo de mantener vivo el significado de la información que se supone
+
+78
+00:03:24,000 --> 00:03:27,000
+es lo que impulsa al negocio.
+
+79
+00:03:27,000 --> 00:03:31,000
+Así que la misión es casi archiológica, ¿no?
+
+80
+00:03:31,000 --> 00:03:37,000
+¿Cómo desenterramos ese significado perdido y sobre todo cómo evitamos que los nuevos sistemas
+
+81
+00:03:37,000 --> 00:03:40,000
+eres de esa confusión?
+
+82
+00:03:40,000 --> 00:03:41,000
+Son interesantes, ¿no?
+
+83
+00:03:41,000 --> 00:03:44,000
+Suena un reto mayúsculo pero necesario.
+
+84
+00:03:44,000 --> 00:03:45,000
+Vamos a desmenuzarlo.
+
+85
+00:03:45,000 --> 00:03:50,000
+La pregunta claro que para mí se desprende de la artículo es,
+
+86
+00:03:50,000 --> 00:03:51,000
+es tromenda.
+
+87
+00:03:51,000 --> 00:03:56,000
+¿Cómo le hacemos para no construir los flamantes sistemas nuevos con inteligencia artificial,
+
+88
+00:03:56,000 --> 00:03:58,000
+nube todo lo moderno que quieras?
+
+89
+00:03:58,000 --> 00:04:00,000
+Lo último en tecnología.
+
+90
+00:04:00,000 --> 00:04:01,000
+Exacto.
+
+91
+00:04:01,000 --> 00:04:06,000
+sobre una base de significados rotos, ambiguos o de plano anticuados.
+
+92
+00:04:06,000 --> 00:04:08,000
+Piesa lo bien.
+
+93
+00:04:08,000 --> 00:04:12,000
+De qué sirve tener la plataforma más rápida y escalable del mundo.
+
+94
+00:04:12,000 --> 00:04:15,000
+Si la información que corre por ella se interpreta mal.
+
+95
+00:04:15,000 --> 00:04:19,000
+O peor, si significa cosas distintas para diferentes áreas, ¿no?
+
+96
+00:04:19,000 --> 00:04:20,000
+Eso.
+
+97
+00:04:20,000 --> 00:04:25,000
+Que ventas entienda a cliente de una forma marketing de otras finanzas de otras,
+
+98
+00:04:25,000 --> 00:04:28,000
+como construir un rascas hielo sobre...
+
+99
+00:04:28,000 --> 00:04:29,000
+¿No sé?
+
+100
+00:04:29,000 --> 00:04:30,000
+Arenas movedizas.
+
+101
+00:04:30,000 --> 00:04:31,000
+Jelatina.
+
+102
+00:04:31,000 --> 00:04:34,000
+Si es un riesgo altísimo, totalmente de acuerdo.
+
+103
+00:04:34,000 --> 00:04:38,000
+Es el riesgo latente en muchísimas iniciativas de modernización que se ven por ahí.
+
+104
+00:04:38,000 --> 00:04:40,000
+¿Y qué a veces no se habla tanto de él?
+
+105
+00:04:40,000 --> 00:04:41,000
+No.
+
+106
+00:04:41,000 --> 00:04:43,000
+Se enfoca mucho en la tecnología perce.
+
+107
+00:04:43,000 --> 00:04:46,000
+Y aquí es donde el texto se pone interesante, fíjate.
+
+108
+00:04:46,000 --> 00:04:50,000
+Propone una solución que, bueno, no es que invente el hilo negro, ¿eh?
+
+109
+00:04:50,000 --> 00:04:54,000
+Toma un concepto ya conocido en el mundo del diseño dirigido por dominio.
+
+110
+00:04:54,000 --> 00:04:57,000
+El famoso Dídy por sus siglas en inglés.
+
+111
+00:04:57,000 --> 00:04:58,000
+Dídy?
+
+112
+00:04:58,000 --> 00:04:59,000
+Sí.
+
+113
+00:04:59,000 --> 00:05:00,000
+Lo he oído mencionar.
+
+114
+00:05:00,000 --> 00:05:04,000
+Pues Toma un concepto de ahí, pero le da una vuelta de tuerca, como que lo actualiza.
+
+115
+00:05:04,000 --> 00:05:07,000
+Habla del anticorrupción layer o a cele.
+
+116
+00:05:07,000 --> 00:05:10,000
+Capanticorrupción sería la traducción.
+
+117
+00:05:10,000 --> 00:05:11,000
+Suena.
+
+118
+00:05:11,000 --> 00:05:13,000
+Intensa.
+
+119
+00:05:13,000 --> 00:05:14,000
+Anticorrupción.
+
+120
+00:05:14,000 --> 00:05:15,000
+Sí.
+
+121
+00:05:15,000 --> 00:05:16,000
+Suena fuerte, verdad?
+
+122
+00:05:16,000 --> 00:05:18,000
+Tradicionalmente, este hace él.
+
+123
+00:05:18,000 --> 00:05:19,000
+Funciona como un traductor.
+
+124
+00:05:19,000 --> 00:05:23,000
+Pienza lo como un adaptador o un intermediario entre sistemas.
+
+125
+00:05:23,000 --> 00:05:24,000
+Ok.
+
+126
+00:05:24,000 --> 00:05:28,000
+Imagina lo común interpreté que se pone entre el sistema viejo.
+
+127
+00:05:28,000 --> 00:05:31,000
+Con su lenguaje y su lógica, a veces medio orcaica.
+
+128
+00:05:31,000 --> 00:05:32,000
+Medio rara así.
+
+129
+00:05:32,000 --> 00:05:34,000
+Y el sistema nuevo que queremos construir.
+
+130
+00:05:34,000 --> 00:05:38,000
+Y la idea es proteger al nuevo de la contaminación del modelo viejo.
+
+131
+00:05:38,000 --> 00:05:40,000
+Que no eres de sus problemas de significado.
+
+132
+00:05:40,000 --> 00:05:41,000
+Ok.
+
+133
+00:05:41,000 --> 00:05:43,000
+Entiendo la idea del traductor.
+
+134
+00:05:43,000 --> 00:05:45,000
+¿Cómo un filtro para que el lo viejo no...
+
+135
+00:05:45,000 --> 00:05:47,000
+Pues no en su cielo nuevo?
+
+136
+00:05:47,000 --> 00:05:49,000
+Suena lógico.
+
+137
+00:05:49,000 --> 00:05:52,000
+Pero ¿Cuál es el problema con ese enfoque tradicional?
+
+138
+00:05:52,000 --> 00:05:55,000
+¿Por qué dice el artículo que hay que darle una vuelta?
+
+139
+00:05:55,000 --> 00:05:58,000
+El problema según apunta el material no es el concepto en sí.
+
+140
+00:05:58,000 --> 00:05:59,000
+Que es bueno.
+
+141
+00:05:59,000 --> 00:06:01,000
+Si no como simplemente.
+
+142
+00:06:01,000 --> 00:06:02,000
+Pues casi siempre.
+
+143
+00:06:02,000 --> 00:06:04,000
+Esa lógica de traducción.
+
+144
+00:06:04,000 --> 00:06:10,000
+Esas reglas de cómo convierte su un dato del sistema viejo al formato o al significado del nuevo.
+
+145
+00:06:10,000 --> 00:06:13,000
+Casi siempre terminen terrada en el código.
+
+146
+00:06:13,000 --> 00:06:14,000
+Enescript super complejos.
+
+147
+00:06:14,000 --> 00:06:17,000
+A veces en procedimientos almacenados en las bases de datos.
+
+148
+00:06:17,000 --> 00:06:19,000
+El punto es que queda oculta.
+
+149
+00:06:19,000 --> 00:06:21,000
+Se vuelve una caja negra.
+
+150
+00:06:21,000 --> 00:06:22,000
+Una caja negra.
+
+151
+00:06:22,000 --> 00:06:23,000
+Sí.
+
+152
+00:06:23,000 --> 00:06:28,000
+Es difícil de entender para alguien que no sea un programador muy, muy clavado en ese código específico.
+
+153
+00:06:28,000 --> 00:06:30,000
+Es complicado de mantener.
+
+154
+00:06:30,000 --> 00:06:34,000
+Porque si cambia algo en el negocio, tienes que ir a buscar donde diáblos estavesalógica.
+
+155
+00:06:34,000 --> 00:06:37,000
+Y resar para no romper otra cosa al cambiarlo.
+
+156
+00:06:37,000 --> 00:06:38,000
+Exacto.
+
+157
+00:06:38,000 --> 00:06:39,000
+Y sobre todo.
+
+158
+00:06:39,000 --> 00:06:40,000
+Y esto es crucial.
+
+159
+00:06:40,000 --> 00:06:44,000
+Es casi imposible de validar por la gente que realmente sabe del negocio.
+
+160
+00:06:44,000 --> 00:06:49,000
+O sea, el experto en marketing no puede ir a leer ese código para saber si su definición de campaña exitosa
+
+161
+00:06:49,000 --> 00:06:51,000
+se está traduciendo bien desde el sistema viejo.
+
+162
+00:06:51,000 --> 00:06:52,000
+No tiene forma.
+
+163
+00:06:52,000 --> 00:06:53,000
+Ahí esté yetalle.
+
+164
+00:06:53,000 --> 00:06:57,000
+O sea, la lógica de traducción se vuelve como un secreto técnico.
+
+165
+00:06:57,000 --> 00:06:58,000
+Es condido.
+
+166
+00:06:58,000 --> 00:07:02,000
+Y aquí es donde, según entiendo el artículo propone el cambio de enfoque,
+
+167
+00:07:02,000 --> 00:07:06,000
+cierto, cómo se reimagina este traducctor este a cele.
+
+168
+00:07:06,000 --> 00:07:07,000
+Exacto.
+
+169
+00:07:07,000 --> 00:07:11,000
+La propuesta es, digamos darle una nueva vida a ese a cele,
+
+170
+00:07:11,000 --> 00:07:15,000
+hacerlo más inteligente y, sobre todo, muchísimo más transparente.
+
+171
+00:07:15,000 --> 00:07:20,000
+Y el primer paso clave según el artículo es definir algo que llama la capa de integración común.
+
+172
+00:07:20,000 --> 00:07:22,000
+Sile por sus siglas en inglés.
+
+173
+00:07:22,000 --> 00:07:24,000
+Comon Integration Layer.
+
+174
+00:07:24,000 --> 00:07:26,000
+Capa de integración común.
+
+175
+00:07:26,000 --> 00:07:27,000
+Sí, ele.
+
+176
+00:07:27,000 --> 00:07:29,000
+A ver, explica Melo.
+
+177
+00:07:29,000 --> 00:07:31,000
+A ver, se lo explico claro.
+
+178
+00:07:31,000 --> 00:07:35,000
+Si el diccionario viejo o sea el sistema legasi, ya no nos sirve bien
+
+179
+00:07:35,000 --> 00:07:39,000
+y el nuevo sistema necesita hablar un lenguaje coherente y actual,
+
+180
+00:07:39,000 --> 00:07:40,000
+que hacemos.
+
+181
+00:07:40,000 --> 00:07:45,000
+Pues necesitamos crear un nuevo diccionario oficial para el negocio de hoy.
+
+182
+00:07:45,000 --> 00:07:47,000
+Ok, un diccionario nuevo.
+
+183
+00:07:47,000 --> 00:07:48,000
+Es la silt.
+
+184
+00:07:48,000 --> 00:07:51,000
+Es como si estableciéramos una pierra roceta interna,
+
+185
+00:07:51,000 --> 00:07:55,000
+un modelo semántico que todos acuerdan y que está explicito.
+
+186
+00:07:55,000 --> 00:07:56,000
+Que dice.
+
+187
+00:07:56,000 --> 00:08:01,000
+Para nosotros, hoy en esta empresa, un cliente activo significa esto.
+
+188
+00:08:01,000 --> 00:08:03,000
+Una ventaneta se calcula así.
+
+189
+00:08:03,000 --> 00:08:06,000
+Una región geográfica se define de esta manera.
+
+190
+00:08:06,000 --> 00:08:10,000
+Es el lenguaje común actual del negocio definido y compartido.
+
+191
+00:08:10,000 --> 00:08:11,000
+Entendido.
+
+192
+00:08:11,000 --> 00:08:14,000
+La silt es como el nuevo diccionario oficial.
+
+193
+00:08:14,000 --> 00:08:19,000
+La versión actualizada y que todos aceptan de los términos clave del negocio
+
+194
+00:08:19,000 --> 00:08:21,000
+tiene mucho sentido a la verdad.
+
+195
+00:08:21,000 --> 00:08:23,000
+¿Y cuál es el siguiente paso?
+
+196
+00:08:23,000 --> 00:08:26,000
+¿Cómo se conecta esto con la traducción desde los sistemas viejos?
+
+197
+00:08:26,000 --> 00:08:27,000
+La que hace el artículo.
+
+198
+00:08:27,000 --> 00:08:33,000
+Que las traducciones, los mapeos, entre el sistema antiguo con su lenguaje
+
+199
+00:08:33,000 --> 00:08:35,000
+obsoleto, digamos.
+
+200
+00:08:35,000 --> 00:08:39,000
+Y este nuevo idioma oficial que definimos en la silt,
+
+201
+00:08:39,000 --> 00:08:43,000
+que esas traducciones se han impulsadas por metadatos.
+
+202
+00:08:43,000 --> 00:08:44,000
+Metadatos?
+
+203
+00:08:44,000 --> 00:08:45,000
+Sí.
+
+204
+00:08:45,000 --> 00:08:47,000
+Metadatos no por código escondido.
+
+205
+00:08:47,000 --> 00:08:49,000
+¿Qué significa esto en la práctica?
+
+206
+00:08:49,000 --> 00:08:52,000
+¿Qué en lugar de tener las reglas de mapeo?
+
+207
+00:08:52,000 --> 00:08:55,000
+Esas instrucciones tipo el campo X del sistema viejo
+
+208
+00:08:55,000 --> 00:08:57,000
+significa LIE en la silt.
+
+209
+00:08:57,000 --> 00:08:59,000
+Enterradas en programas o scripts.
+
+210
+00:08:59,000 --> 00:09:01,000
+En esa caja negra que decías.
+
+211
+00:09:01,000 --> 00:09:02,000
+Exacto.
+
+212
+00:09:02,000 --> 00:09:06,000
+El lugar de eso se documentan y se almacenan de forma separada.
+
+213
+00:09:06,000 --> 00:09:07,000
+Explícita.
+
+214
+00:09:07,000 --> 00:09:08,000
+Como datos sobre los datos.
+
+215
+00:09:08,000 --> 00:09:10,000
+O sea, como metadatos.
+
+216
+00:09:10,000 --> 00:09:14,000
+Como información estructurada sobre cómo se relacionan los significados.
+
+217
+00:09:14,000 --> 00:09:18,000
+Espera, eso de manejarlo como código versos metadatos
+
+218
+00:09:18,000 --> 00:09:20,000
+suena medio técnico.
+
+219
+00:09:20,000 --> 00:09:24,000
+Pero me estás diciendo que ahí está toda la diferencia según el artículo.
+
+220
+00:09:24,000 --> 00:09:27,000
+Porque ese cambio de código ametadatos
+
+221
+00:09:27,000 --> 00:09:31,000
+están tan crucial que lo hace tan especial.
+
+222
+00:09:31,000 --> 00:09:33,000
+¿Cuál es el truco?
+
+223
+00:09:33,000 --> 00:09:34,000
+Exacto.
+
+224
+00:09:34,000 --> 00:09:36,000
+Podría aparecer un detalle de implementación, verdad.
+
+225
+00:09:36,000 --> 00:09:39,000
+Pero las implicaciones son enormes.
+
+226
+00:09:39,000 --> 00:09:41,000
+Y aquí está el giro que propone el artículo.
+
+227
+00:09:41,000 --> 00:09:44,000
+Algo que de verdad cambia las reglas del juego.
+
+228
+00:09:44,000 --> 00:09:48,000
+Dice que cuando estos mapeos de significado estas reglas de traducción
+
+229
+00:09:48,000 --> 00:09:50,000
+se gestiona en como metadatos explícitos,
+
+230
+00:09:50,000 --> 00:09:53,000
+de repente adquieren como 3 superpoderes.
+
+231
+00:09:53,000 --> 00:09:54,000
+Superpoderes?
+
+232
+00:09:54,000 --> 00:09:56,000
+¿A ver cuenta, me?
+
+233
+00:09:56,000 --> 00:09:57,000
+Sí, superpoderes.
+
+234
+00:09:57,000 --> 00:10:01,000
+El código oculto simplemente no ofrece de manera accesible.
+
+235
+00:10:01,000 --> 00:10:03,000
+Primero, son legibles por máquinas.
+
+236
+00:10:03,000 --> 00:10:05,000
+Legibles por máquinas?
+
+237
+00:10:05,000 --> 00:10:06,000
+O sea, por otras computadoras.
+
+238
+00:10:06,000 --> 00:10:07,000
+Es o mismo.
+
+239
+00:10:07,000 --> 00:10:09,000
+Y esto es potentísimo.
+
+240
+00:10:09,000 --> 00:10:13,000
+Significa que otros sistemas herramientas automatizadas
+
+241
+00:10:13,000 --> 00:10:16,000
+pueden leer directamente estas reglas de mapeo
+
+242
+00:10:16,000 --> 00:10:20,000
+para hacer cosas como generar automáticamente el código
+
+243
+00:10:20,000 --> 00:10:24,000
+ejecueles que necesitas para mover y transformar los datos entre sistemas.
+
+244
+00:10:24,000 --> 00:10:27,000
+Ah, mira, crear los scripts para los procesos de ETL.
+
+245
+00:10:27,000 --> 00:10:32,000
+Esos de extracción, transformación y carga que mueven datos por todos lados.
+
+246
+00:10:32,000 --> 00:10:35,000
+O construir modelos de datos para herramientas de business intelligence,
+
+247
+00:10:35,000 --> 00:10:40,000
+de análisis, incluso configurar partes del nuevo sistema de forma automática.
+
+248
+00:10:40,000 --> 00:10:44,000
+La automatización de la integración se vuelve mucho mucho más factible.
+
+249
+00:10:44,000 --> 00:10:46,000
+¿Eso es una bien más eficiente?
+
+250
+00:10:46,000 --> 00:10:48,000
+¿Cuál es el segundo?
+
+251
+00:10:48,000 --> 00:10:50,000
+Segundo, y para mí, este es el más.
+
+252
+00:10:50,000 --> 00:10:52,000
+Revolucionario.
+
+253
+00:10:52,000 --> 00:10:53,000
+El que más me gustó.
+
+254
+00:10:53,000 --> 00:10:56,000
+Son legibles por humanos.
+
+255
+00:10:56,000 --> 00:10:57,000
+Por humanos?
+
+256
+00:10:57,000 --> 00:11:00,000
+Pero el código también lo le en los humanos, los programadores.
+
+257
+00:11:00,000 --> 00:11:02,000
+Sí, pero aquí está la clave.
+
+258
+00:11:02,000 --> 00:11:04,000
+No sólo por técnicos.
+
+259
+00:11:04,000 --> 00:11:08,000
+La idea es que estos metadatos de mapeo se definen
+
+260
+00:11:08,000 --> 00:11:11,000
+y se almacen en de una forma tan clara,
+
+261
+00:11:11,000 --> 00:11:14,000
+quizás usando tablas, ya gramas, alguna herramienta visual.
+
+262
+00:11:14,000 --> 00:11:15,000
+No sé.
+
+263
+00:11:15,000 --> 00:11:17,000
+Que las personas del negocio,
+
+264
+00:11:17,000 --> 00:11:21,000
+los analistas, los duenes de los procesos, los expertos en el dominio,
+
+265
+00:11:21,000 --> 00:11:24,000
+puedan sentarse revisarlos y decir,
+
+266
+00:11:24,000 --> 00:11:25,000
+¿A ver?
+
+267
+00:11:25,000 --> 00:11:28,000
+Sí, esta es la forma correcta en que entendemos clienta activa ahora
+
+268
+00:11:28,000 --> 00:11:31,000
+y así es como se mapea desde el campo ceta del sistema antiguulo.
+
+269
+00:11:31,000 --> 00:11:32,000
+Estoy de acuerdo.
+
+270
+00:11:32,000 --> 00:11:33,000
+Wow.
+
+271
+00:11:33,000 --> 00:11:37,000
+O sea que la gente del negocio puede validar directamente
+
+272
+00:11:37,000 --> 00:11:39,000
+el significado, un secreto a la tecnología
+
+273
+00:11:39,000 --> 00:11:41,000
+y de volverse al negocio.
+
+274
+00:11:41,000 --> 00:11:43,000
+Que ellos puedan ver y decir, sí o no.
+
+275
+00:11:43,000 --> 00:11:46,000
+Eso si suena revolucionario,
+
+276
+00:11:46,000 --> 00:11:48,000
+quita esa dependencia total del programador
+
+277
+00:11:48,000 --> 00:11:52,000
+para entender que está pasando con el significado totalmente.
+
+278
+00:11:52,000 --> 00:11:53,000
+Y el tercero?
+
+279
+00:11:53,000 --> 00:11:54,000
+Son gobernables.
+
+280
+00:11:54,000 --> 00:11:56,000
+Gobernables, como así?
+
+281
+00:11:56,000 --> 00:11:59,000
+Como ya no son código oscuro perdido por ahí,
+
+282
+00:11:59,000 --> 00:12:02,000
+sino metadatos bien definidos bien estructurados
+
+283
+00:12:02,000 --> 00:12:05,000
+pues se les puede aplicar disciplina de gestión.
+
+284
+00:12:05,000 --> 00:12:08,000
+Gobernanzas de datos, pero aplicada al significado.
+
+285
+00:12:08,000 --> 00:12:09,000
+Ok.
+
+286
+00:12:09,000 --> 00:12:13,000
+O sea, los cambios en los significados o en las reglas de mapeo
+
+287
+00:12:13,000 --> 00:12:15,000
+se pueden controlar mucho mejor.
+
+288
+00:12:15,000 --> 00:12:19,000
+Se pueden versionar, guardar un historial de quién cambió qué,
+
+289
+00:12:19,000 --> 00:12:20,000
+cuando y por qué.
+
+290
+00:12:20,000 --> 00:12:22,000
+Se pueden probar de forma islada,
+
+291
+00:12:22,000 --> 00:12:24,000
+sin afectar todo el sistema.
+
+292
+00:12:24,000 --> 00:12:26,000
+Se puede rastrear qué sistema
+
+293
+00:12:26,000 --> 00:12:29,000
+su que reportes dependen de un mapeo específico.
+
+294
+00:12:29,000 --> 00:12:31,000
+Si cambia la definición de ingreso,
+
+295
+00:12:31,000 --> 00:12:34,000
+puedes saber qué reportes se van a ver afectados.
+
+296
+00:12:34,000 --> 00:12:36,000
+No tienes trasabilidad.
+
+297
+00:12:36,000 --> 00:12:37,000
+Exacto.
+
+298
+00:12:37,000 --> 00:12:41,000
+Si introduce una gobernanza real sobre el propio significado de los datos,
+
+299
+00:12:41,000 --> 00:12:44,000
+algo que es muy, muy difícil de hacer cuando la lógica
+
+300
+00:12:44,000 --> 00:12:47,000
+está perdida en miles de líneas de código por todos lados.
+
+301
+00:12:47,000 --> 00:12:48,000
+Wow.
+
+302
+00:12:48,000 --> 00:12:49,000
+Ok.
+
+303
+00:12:49,000 --> 00:12:51,000
+A ver si voy juntando las piezas.
+
+304
+00:12:51,000 --> 00:12:53,000
+Definimos un lenguaje como un actual,
+
+305
+00:12:53,000 --> 00:12:54,000
+¿verdad?
+
+306
+00:12:54,000 --> 00:12:55,000
+Ah, el diccionario nuevo.
+
+307
+00:12:55,000 --> 00:12:59,000
+Y las reglas para traducir lo viejo a ese lenguaje común
+
+308
+00:12:59,000 --> 00:13:01,000
+se guardan como un metadatos.
+
+309
+00:13:01,000 --> 00:13:03,000
+Metadatos con esos tres superpoderes.
+
+310
+00:13:03,000 --> 00:13:05,000
+¿Ese es un significado?
+
+311
+00:13:05,000 --> 00:13:08,000
+Es un significado que el LCLS,
+
+312
+00:13:08,000 --> 00:13:09,000
+traductor,
+
+313
+00:13:09,000 --> 00:13:12,000
+ya deja de ser esa caja negra
+
+314
+00:13:12,000 --> 00:13:13,000
+impenetrable misteriosa.
+
+315
+00:13:13,000 --> 00:13:16,000
+Se convierte en algo más parecido
+
+316
+00:13:16,000 --> 00:13:18,000
+a lo que el artículo llama un
+
+317
+00:13:18,000 --> 00:13:20,000
+contrato semántico.
+
+318
+00:13:20,000 --> 00:13:21,000
+Es así.
+
+319
+00:13:21,000 --> 00:13:22,000
+Precisamente así lo llama.
+
+320
+00:13:22,000 --> 00:13:24,000
+Un contrato semántico explícito.
+
+321
+00:13:24,000 --> 00:13:26,000
+Una cuerda visible transparente
+
+322
+00:13:26,000 --> 00:13:30,000
+sobre qué significan las cosas y cómo se transforman
+
+323
+00:13:30,000 --> 00:13:32,000
+de un poco.
+
+324
+00:13:32,000 --> 00:13:35,000
+¿Exactamente?
+
+325
+00:13:35,000 --> 00:13:38,000
+Ya no es algo oculto en esos complejos
+
+326
+00:13:38,000 --> 00:13:39,000
+y, a menudo,
+
+327
+00:13:39,000 --> 00:13:42,000
+superfragile scripts de TL que mencionaba
+
+328
+00:13:42,000 --> 00:13:44,000
+¿Qué falla ni nadie sabe?
+
+329
+00:13:44,000 --> 00:13:45,000
+¿Por qué?
+
+330
+00:13:45,000 --> 00:13:46,000
+Esos meros.
+
+331
+00:13:46,000 --> 00:13:47,000
+¿Qué falla en misteriosamente?
+
+332
+00:13:47,000 --> 00:13:48,000
+Ahora, esa traducción
+
+333
+00:13:48,000 --> 00:13:50,000
+de significado puede visualizarse.
+
+334
+00:13:50,000 --> 00:13:52,000
+El artículo incluso sugere
+
+335
+00:13:52,000 --> 00:13:53,000
+que podrías verlo común,
+
+336
+00:13:53,000 --> 00:13:55,000
+gráfico del inaje de datos semántico.
+
+337
+00:13:55,000 --> 00:13:57,000
+L'inaje de datos.
+
+338
+00:13:57,000 --> 00:13:59,000
+Pero enfocado en el significado.
+
+339
+00:13:59,000 --> 00:14:00,000
+Exacto.
+
+340
+00:14:00,000 --> 00:14:02,000
+Es decir que te muestra claramente cómo un concepto
+
+341
+00:14:02,000 --> 00:14:05,000
+no sé cómo ingreso recurrente mensual,
+
+342
+00:14:05,000 --> 00:14:07,000
+evoluciona y se transforma a medida que
+
+343
+00:14:07,000 --> 00:14:09,000
+pasa del sistema viejo a,
+
+344
+00:14:09,000 --> 00:14:11,000
+luego se mapea a la cil
+
+345
+00:14:11,000 --> 00:14:14,000
+y de ahí se va al nuevo sistema b o al reporte c.
+
+346
+00:14:14,000 --> 00:14:16,000
+La transparencia puede ser total.
+
+347
+00:14:16,000 --> 00:14:18,000
+Y si pensamos en el reto inicial
+
+348
+00:14:18,000 --> 00:14:20,000
+el de la modernización,
+
+349
+00:14:20,000 --> 00:14:21,000
+cómo cambia esto el juego,
+
+350
+00:14:21,000 --> 00:14:23,000
+porque modernizar siempre
+
+351
+00:14:23,000 --> 00:14:25,000
+se ve como un proyecto gigantesco,
+
+352
+00:14:25,000 --> 00:14:27,000
+carísimo, lleno de riesgos.
+
+353
+00:14:27,000 --> 00:14:29,000
+Esto lo hace más fácil o diferente.
+
+354
+00:14:29,000 --> 00:14:31,000
+Y potencialmente más manejable y exitoso a largo plazo.
+
+355
+00:14:31,000 --> 00:14:33,000
+Cambia la naturaleza del problema
+
+356
+00:14:33,000 --> 00:14:35,000
+y, por lo tanto, de la solución.
+
+357
+00:14:35,000 --> 00:14:37,000
+Pasamos de pensar en la modernización
+
+358
+00:14:37,000 --> 00:14:39,000
+principalmente como un ejercicio de replata formar.
+
+359
+00:14:39,000 --> 00:14:42,000
+De mover código y datos de un lado a otro.
+
+360
+00:14:42,000 --> 00:14:44,000
+Si, mover código y datos,
+
+361
+00:14:44,000 --> 00:14:49,000
+cursar los dedos y esperar que funcionen
+
+362
+00:14:49,000 --> 00:14:51,000
+más o menos igual, pero en la noveno.
+
+363
+00:14:51,000 --> 00:14:54,000
+Pasamos de eso a un enfoque más estratégico,
+
+364
+00:14:54,000 --> 00:14:55,000
+yo diría.
+
+365
+00:14:55,000 --> 00:14:56,000
+Y contino,
+
+366
+00:14:56,000 --> 00:14:58,000
+se convierte en un proceso de
+
+367
+00:14:58,000 --> 00:15:00,000
+descubrir documentar y mantener activamente
+
+368
+00:15:00,000 --> 00:15:03,000
+el significado de los activos de información.
+
+369
+00:15:03,000 --> 00:15:04,000
+Que al final del día,
+
+370
+00:15:04,000 --> 00:15:06,000
+esos datos son el conocimiento acumulado
+
+371
+00:15:06,000 --> 00:15:09,000
+de la empresa hecho, pues, datos.
+
+372
+00:15:09,000 --> 00:15:11,000
+El conocimiento del negocio.
+
+373
+00:15:11,000 --> 00:15:12,000
+Exacto.
+
+374
+00:15:12,000 --> 00:15:14,000
+Ya no es solo mover bits y bytes,
+
+375
+00:15:14,000 --> 00:15:16,000
+es gestionar el conocimiento,
+
+376
+00:15:16,000 --> 00:15:17,000
+asegurar que ese conocimiento
+
+377
+00:15:17,000 --> 00:15:19,000
+siga siendo valido y útil.
+
+378
+00:15:19,000 --> 00:15:22,000
+Suena mucho más inteligente la verdad.
+
+379
+00:15:22,000 --> 00:15:25,000
+Y esto me lleva a otra idea que mencionaba el texto
+
+380
+00:15:25,000 --> 00:15:28,000
+que sonaba un poco no se futurista,
+
+381
+00:15:28,000 --> 00:15:31,000
+la arquitectura de conocimiento adaptativo.
+
+382
+00:15:31,000 --> 00:15:33,000
+¿Cómo encaja eso aquí?
+
+383
+00:15:33,000 --> 00:15:35,000
+Pues, fíjate que no es tan futurista,
+
+384
+00:15:35,000 --> 00:15:38,000
+si lo piensas como la consecuencia lógica
+
+385
+00:15:38,000 --> 00:15:41,000
+de tener esos metadatosemánticos
+
+386
+00:15:41,000 --> 00:15:44,000
+que son gobernables y legibles por máquina.
+
+387
+00:15:44,000 --> 00:15:46,000
+Ok, si ya tienes las reglas de significado
+
+388
+00:15:46,000 --> 00:15:48,000
+explícitas y una máquina,
+
+389
+00:15:48,000 --> 00:15:49,000
+las puede leer,
+
+390
+00:15:49,000 --> 00:15:52,000
+puedes empezar a combinar las con herramientas más avanzadas.
+
+391
+00:15:52,000 --> 00:15:54,000
+Pienzan inteligencia artificial en Machine Learning.
+
+392
+00:15:54,000 --> 00:15:56,000
+Ah, claro.
+
+393
+00:15:56,000 --> 00:15:59,000
+Imagina una plataforma que usando esos metadatos
+
+394
+00:15:59,000 --> 00:16:00,000
+como base,
+
+395
+00:16:00,000 --> 00:16:03,000
+pueden pesar a ser cosas como uno,
+
+396
+00:16:03,000 --> 00:16:06,000
+detectar la derivación semántica de forma proactiva.
+
+397
+00:16:06,000 --> 00:16:08,000
+Que el sistema te viga.
+
+398
+00:16:08,000 --> 00:16:10,000
+Oye, están llegando datos del sistema viejo
+
+399
+00:16:10,000 --> 00:16:14,000
+que ya no encajan bien con la definición actual que tienes en la cil.
+
+400
+00:16:14,000 --> 00:16:18,000
+Algo cambió en la fuente o nuestra definición ya no aplica.
+
+401
+00:16:18,000 --> 00:16:20,000
+Te avisa antes de que sea un problema.
+
+402
+00:16:20,000 --> 00:16:21,000
+Exacto,
+
+403
+00:16:21,000 --> 00:16:24,000
+podrías sugerir nuevos mapeos o adaptaciones.
+
+404
+00:16:24,000 --> 00:16:25,000
+Podría decir,
+
+405
+00:16:25,000 --> 00:16:28,000
+oye, parece que el concepto de lit calificado
+
+406
+00:16:28,000 --> 00:16:30,000
+ha evolucionado en cómo lo usa el negocio,
+
+407
+00:16:30,000 --> 00:16:31,000
+basado en estos patrones.
+
+408
+00:16:31,000 --> 00:16:33,000
+¿Quieres actualizar el mapeo de esta forma?
+
+409
+00:16:33,000 --> 00:16:34,000
+Que aprenda del uso.
+
+410
+00:16:34,000 --> 00:16:36,000
+Sí, que aprenda y sujera.
+
+411
+00:16:36,000 --> 00:16:37,000
+Y tres.
+
+412
+00:16:37,000 --> 00:16:40,000
+Podría ayudar a mantener la coherencia
+
+413
+00:16:40,000 --> 00:16:44,000
+del significado a lo largo del tiempo de forma más automática.
+
+414
+00:16:44,000 --> 00:16:45,000
+Es decir,
+
+415
+00:16:45,000 --> 00:16:47,000
+la arquitectura no sólo traduce una vez
+
+416
+00:16:47,000 --> 00:16:49,000
+sino que ayuda activamente a mantener
+
+417
+00:16:49,000 --> 00:16:52,000
+la coherencia semántica conforme en negocio cambia
+
+418
+00:16:52,000 --> 00:16:53,000
+se adapta al cambio.
+
+419
+00:16:53,000 --> 00:16:55,000
+Por eso lo de adaptativo.
+
+420
+00:16:55,000 --> 00:16:59,000
+Oye, oye, oye, ahora me olá conexión mucho más clara.
+
+421
+00:16:59,000 --> 00:17:01,000
+No es sólo traducir una vezilla
+
+422
+00:17:01,000 --> 00:17:05,000
+sino crear un sistema que mantenga esa traducción actualizada
+
+423
+00:17:05,000 --> 00:17:06,000
+y cuarenta con el tiempo.
+
+424
+00:17:06,000 --> 00:17:09,000
+Casi como un común organismo vivo
+
+425
+00:17:09,000 --> 00:17:11,000
+que aprende y se va ajustando.
+
+426
+00:17:11,000 --> 00:17:13,000
+Facinante, la verdad.
+
+427
+00:17:13,000 --> 00:17:15,000
+Sí, es un cambio de paradigma.
+
+428
+00:17:15,000 --> 00:17:17,000
+Y esto nos lleva una frase del artículo
+
+429
+00:17:17,000 --> 00:17:19,000
+que me impactó mucho,
+
+430
+00:17:19,000 --> 00:17:20,000
+decía que el mapeo de datos
+
+431
+00:17:20,000 --> 00:17:22,000
+deja de ser una tarea técnica
+
+432
+00:17:22,000 --> 00:17:24,000
+así medio te diosa
+
+433
+00:17:24,000 --> 00:17:26,000
+y se convierte en cómo era.
+
+434
+00:17:26,000 --> 00:17:28,000
+Algo del significado compartido.
+
+435
+00:17:28,000 --> 00:17:31,000
+Una declaración de significado compartido.
+
+436
+00:17:31,000 --> 00:17:34,000
+A mí también me parece una frase muy poderosa.
+
+437
+00:17:34,000 --> 00:17:36,000
+Una declaración de significado compartido.
+
+438
+00:17:36,000 --> 00:17:38,000
+Suena importante.
+
+439
+00:17:38,000 --> 00:17:41,000
+Y refleja justo ese cambio de perspectiva.
+
+440
+00:17:41,000 --> 00:17:43,000
+Mapea de datos ya no es sólo
+
+441
+00:17:43,000 --> 00:17:45,000
+que suaves conectar cajitas y flechas
+
+442
+00:17:45,000 --> 00:17:47,000
+en una pantalla de una herramienta de TL.
+
+443
+00:17:47,000 --> 00:17:49,000
+Sí, la tarea técnica.
+
+444
+00:17:49,000 --> 00:17:51,000
+Se convierte en un acto de liberado de la organización
+
+445
+00:17:51,000 --> 00:17:54,000
+para decir esto es lo que nosotros entendemos
+
+446
+00:17:54,000 --> 00:17:56,000
+por nuestros conceptos clave
+
+447
+00:17:56,000 --> 00:17:59,000
+así es como aseguramos que ese entendimiento
+
+448
+00:17:59,000 --> 00:18:01,000
+se aconcistenta a través de nuestros sistemas
+
+449
+00:18:01,000 --> 00:18:02,000
+y nuestra historia.
+
+450
+00:18:02,000 --> 00:18:05,000
+Es poner el significado en el centro de la arquitectura
+
+451
+00:18:05,000 --> 00:18:07,000
+no como algo secundario.
+
+452
+00:18:07,000 --> 00:18:09,000
+Tiene todo el sentido del mundo.
+
+453
+00:18:09,000 --> 00:18:11,000
+El lugar de estar siempre apagando fuego
+
+454
+00:18:11,000 --> 00:18:19,400
+No, corrigiéndola derivas se mantiga después de que ya causó problemas, reporte estuecos, clientes malsegmentados, decisiones erronias.
+
+455
+00:18:19,400 --> 00:18:21,000
+Reaccionando tarde.
+
+456
+00:18:21,000 --> 00:18:27,799
+Exacto, en lugar de eso buscas crear lo que el artículo llama Convergencia Semántica por diseño.
+
+457
+00:18:27,799 --> 00:18:35,000
+O sea, integras la gestión del significado desde el principio, como parte fundamental de tu arquitectura.
+
+458
+00:18:35,000 --> 00:18:37,799
+Previene el problema en lugar de curarlo.
+
+459
+00:18:37,799 --> 00:18:44,000
+Bueno, hagamos una recapitulación rápida de este recorrido que ha estado intenso, pero súper interesante.
+
+460
+00:18:44,000 --> 00:18:50,000
+Partimos de ese problema silencioso, pero bien crítico, de la deriva semántica cristalizada.
+
+461
+00:18:50,000 --> 00:18:52,000
+El teléfono descompuesto de los datos.
+
+462
+00:18:52,000 --> 00:18:53,000
+Es, emero.
+
+463
+00:18:53,000 --> 00:18:58,000
+El teléfono descompuesto empresarial que complica enormemente la modernización,
+
+464
+00:18:58,000 --> 00:19:04,000
+vimos que construir sobre significados rotos o viejos es, pues una receta para el desastre.
+
+465
+00:19:04,000 --> 00:19:07,000
+Luego exploramos la solución que propone el material fuente.
+
+466
+00:19:07,000 --> 00:19:14,000
+Esto de reimaginar el anti-corruption layer, el ASEL, y vimos que los ingredientes claves de esta nueva receta son.
+
+467
+00:19:14,000 --> 00:19:20,000
+Primero, crear esa capa de integración común, la sil, el biccionario oficial actualizado.
+
+468
+00:19:20,000 --> 00:19:25,000
+Exacto, el diccionario oficial y actualizado del lenguaje del negocio.
+
+469
+00:19:25,000 --> 00:19:33,000
+Y, segundo, el punto que creo que es crucial gestionar las traducciones entre lo viejo y este nuevo lenguaje no como código oscuro y escondido.
+
+470
+00:19:34,000 --> 00:19:40,000
+Si no como metadatos explícitos, metadatos que tienen esos tres superpoderes que mencionaste.
+
+471
+00:19:40,000 --> 00:19:47,000
+Que son legibles por máquinas, que son validables por humanos y clave, incluyendo a la gente del negocio,
+
+472
+00:19:47,000 --> 00:19:50,000
+y que son gobernables a lo largo del tiempo.
+
+473
+00:19:50,000 --> 00:19:56,000
+Y como discutimos, esta forma de ver las cosas tiene el potencial de transformar la modernización.
+
+474
+00:19:56,000 --> 00:20:02,000
+O sea, deja de ser solo un cambio tecnológico titánico, costosísimo y lleno de miedo.
+
+475
+00:20:02,000 --> 00:20:09,000
+Y se convierte en un proceso más estratégico, probablemente más continuo también, enfocado en mantener la vida,
+
+476
+00:20:09,000 --> 00:20:14,000
+la relevancia y la coherencia del activo quizá más importante de la empresa.
+
+477
+00:20:14,000 --> 00:20:18,000
+El significado de su información, que al final es conocimiento.
+
+478
+00:20:18,000 --> 00:20:26,000
+Es conocimiento puro, y el objetivo final como mencionamos, es poder evolucionar hacia un arquitectura de conocimiento adaptativo.
+
+479
+00:20:26,000 --> 00:20:34,000
+Un sistema que activamente cuida y gestiones significado compartido, previniendo la deriva de ese diseño no como una ocurrencia tardía.
+
+480
+00:20:34,000 --> 00:20:40,000
+Y para ir cerrando, les dejo una reflexión final que en la verdad me surgió de todo esto.
+
+481
+00:20:40,000 --> 00:20:48,000
+En la artículo se enfoca mucho y con razón, en la deriva semántica que ocurre dentro de una misma organización a lo largo de su propia historia.
+
+482
+00:20:48,000 --> 00:20:50,000
+Si el problema interno.
+
+483
+00:20:50,000 --> 00:20:51,000
+Exacto.
+
+484
+00:20:51,000 --> 00:20:54,000
+Si mantener un significado cuarente, puertas adentro.
+
+485
+00:20:54,000 --> 00:20:58,000
+Ya es este desafío tan complejo que acabamos de explorar.
+
+486
+00:20:58,000 --> 00:21:03,000
+Con sistemas legas y cambios en el negocio, gente nueva que llega.
+
+487
+00:21:03,000 --> 00:21:04,000
+Que ya de por si es un lío.
+
+488
+00:21:04,000 --> 00:21:05,000
+Exacto.
+
+489
+00:21:05,000 --> 00:21:12,000
+Si esto ya es un lío, ¿qué nos dice eso sobre la complicidad que se dispara exponencialmente?
+
+490
+00:21:12,000 --> 00:21:17,000
+Cuando intentamos que los datos tengan un significado común entre diferentes organizaciones.
+
+491
+00:21:17,000 --> 00:21:19,000
+Ahí se complica todavía más.
+
+492
+00:21:19,000 --> 00:21:22,000
+Ensemos en ecosistemas de datos compartidos.
+
+493
+00:21:22,000 --> 00:21:27,000
+En cadenas de su ministro donde varias empresas tienen que intercambiar información crítica.
+
+494
+00:21:27,000 --> 00:21:32,000
+En plataformas industriales donde colaboran competidores incluso.
+
+495
+00:21:32,000 --> 00:21:38,000
+En cualquier tipo de colaboración donde los datos tienen que fluir entre fronteras corporativas.
+
+496
+00:21:38,000 --> 00:21:41,000
+¿Dónde cada quien tiene su propio diccionario?
+
+497
+00:21:41,000 --> 00:21:42,000
+Exacto.
+
+498
+00:21:42,000 --> 00:21:44,000
+Cada quien con su diccionario y su historia.
+
+499
+00:21:44,000 --> 00:21:50,000
+La fragilidad del significado y la necesidad crítica de establecer y mantenerle
+
+500
+00:21:50,000 --> 00:21:55,000
+en guaje semánticos compartidos se vuelven órdenes de magnitud más difíciles.
+
+501
+00:21:55,000 --> 00:21:58,000
+Y probablemente mucho más importantes.
+
+502
+00:21:58,000 --> 00:22:01,000
+Un reto gigantesco para la colaboración basada en datos.
+
+503
+00:22:01,000 --> 00:22:03,000
+Ahí queda.
+
+504
+00:22:03,000 --> 00:22:06,000
+Un punto para seguir pensando y explorando en el futuro.
+
+505
+00:22:06,000 --> 00:22:09,000
+La semántica no es sólo un problema interno.
+
+506
+00:22:09,000 --> 00:22:12,000
+Es fundamental para cómo nos conectamos.
+

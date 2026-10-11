@@ -1,0 +1,421 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:09.560
+Hola. Hoy vamos a meternos en algo que está cambiando mucho, aunque quizá no haga tanto ruido.
+
+00:00:09.560 --> 00:00:12.000
+La ingeniería de datos.
+
+00:00:12.000 --> 00:00:16.640
+Si uno pensaba que era no más como pues, mover información de un lado a otro como promeros
+
+00:00:16.640 --> 00:00:22.839
+digitales, parece que ya no, tenemos un artículo de sobrapsink que dice algo interesante,
+
+00:00:22.839 --> 00:00:28.600
+que la integración de datos es ahora un ecosistema vivo y que respira. Así que hoy vamos
+
+00:00:28.600 --> 00:00:36.160
+a explorar eso. Queremos desglosar 5, 5 frameworks clave que según 5 definen el futuro.
+
+00:00:36.160 --> 00:00:41.079
+Y que la gente que trabaja con datos pues necesitan entender, porque esto está cambiando
+
+00:00:41.079 --> 00:00:45.840
+como manejamos de información, ¿no? Pasar de tuberías asistemas inteligentes.
+
+00:00:45.840 --> 00:00:50.159
+Exacto. Y ese salto de tuberías a ecosistema.
+
+00:00:50.159 --> 00:00:55.799
+Y, jole, no es sólo una frase bonita. Es un cambio de fondos, ¿sabes? En cómo pensamos
+
+00:00:55.800 --> 00:01:02.920
+y que tecnología usamos. Ya no es nada más construir estos pipelines, estos flujos
+
+00:01:02.920 --> 00:01:09.400
+de datos que a veces son súper ríjidos, que se rompen fácil, estamos entrando a una era
+
+00:01:09.400 --> 00:01:17.359
+donde estos sistemas como que aprenden, se ajustan solos, reaccionan casi, casi al momento.
+
+00:01:17.359 --> 00:01:23.000
+Hay que pensar menos en construir y más en como dice, or que estar algo complejo.
+
+00:01:23.000 --> 00:01:29.159
+Me gusta eso de orquestar. A ver, empecemos con el primer framework que menciona el artículo que
+
+00:01:29.159 --> 00:01:35.840
+justo busca construir menos a mano, los frameworks basados en metadatos. El artículo usa una
+
+00:01:35.840 --> 00:01:43.439
+analogía. Que me parece muy buena, el piloto automático de un Tesla. O sea, la idea es que,
+
+00:01:43.439 --> 00:01:50.840
+en vez de picar código para cada pasito extraer transformar, cargar, tú nada más declaras que quieres.
+
+00:01:50.840 --> 00:01:55.560
+Necesito a los datos de clientes activos de esta base, quiero que acaben en este data lake.
+
+00:01:55.560 --> 00:01:58.640
+Y que estén en forma toparquete, así no más.
+
+00:01:58.640 --> 00:02:04.200
+¿Y ahí es un de entrar lo interesante? Según el texto, el framework le es a declaración que
+
+00:02:04.200 --> 00:02:10.080
+son los metadatos, la infos sobre la info y púm, construye sólo el pipeline, o sea, genera
+
+00:02:10.080 --> 00:02:16.400
+el código o lo que necesite. ¿Es abstraerse mucho más? Sí, sí, lo fascinante es justo eso,
+
+00:02:16.400 --> 00:02:22.599
+la abstracción es como, como si en lugar de armar un coche tu solito pieza por pieza,
+
+00:02:22.599 --> 00:02:28.360
+no más le dijeras a una fábrica robotizada, quiero este modelo con estas llantas y este color.
+
+00:02:28.360 --> 00:02:33.640
+Los metadatos son como los planos, las instrucciones de alto nivel, y el framework es la fábrica
+
+00:02:33.640 --> 00:02:39.000
+automática. Y esto claro, le cambia la chamba, el ingeniero, ¿eh? Claro, ya no es tanto estar codificando
+
+00:02:39.000 --> 00:02:43.680
+lo mismo una y otra vez, sino más bien diseñar bien en los metadatos, entender las reglas
+
+00:02:43.680 --> 00:02:48.920
+del negocio y saber cómo plasmar las en esas declaraciones, entiendo, o sea, el trabajo
+
+00:02:48.920 --> 00:02:56.280
+se va más hacia el diseño, a especificar bien y menos a tirar líneas de código. ¿Qué
+
+00:02:56.280 --> 00:03:02.360
+ventajas grandes le ves a esto? Pues varias, la primera, obvio, es la velocidad, puedes crear
+
+00:03:02.360 --> 00:03:08.719
+y cambiar pipelines muchísimo más rápido. Segundo, la consistencia, como se generan solos,
+
+00:03:08.719 --> 00:03:15.000
+tenden a ser más parecidos entre sí y eso ayudan a mantenerlos. Y tercero, chance hasta
+
+00:03:15.000 --> 00:03:20.280
+democratiza un poco esto, ¿no? A la mejor gente no tan técnica podría definir flujos en
+
+00:03:20.280 --> 00:03:26.120
+si ellos, si la herramienta es buena. Claro, la complejidad no se va, no más cambia de lugar.
+
+00:03:26.120 --> 00:03:32.680
+Ahora el reto es cuidar bien los metadatos, pero sí, la eficiencia puede ser brutal.
+
+00:03:32.680 --> 00:03:41.240
+Y eso conecta bien con el segundo punto, los frameworks basados en eventos, el artículo
+
+00:03:41.240 --> 00:03:47.439
+los contrasta con los de siempre, los que corren por horario, ¿no? El típico, a las dos a M o
+
+00:03:47.439 --> 00:03:53.159
+cada hora, y señala el problema, obvio, la ineficiencia. ¿Qué tal que a las dos a M los datos
+
+00:03:53.159 --> 00:03:58.120
+aún no llegan? O si corres cada hora, pero los datos no más cambian dos veces al día. Gastas
+
+00:03:58.120 --> 00:04:06.439
+recursos al otonto. Exacto, gastas, computo tiempo. Entonces, la idea basada en eventos le da la vuelta.
+
+00:04:06.439 --> 00:04:12.840
+El pipeline no arranca por relóg, sino por un un suceso. Llega un archivo nuevo, se actualiza
+
+00:04:12.840 --> 00:04:18.639
+algo en la base de datos, caí un mensaje en una cola algo pasa. La frase que usa el artículo
+
+00:04:18.639 --> 00:04:25.040
+es buena. El recurso no espera al trabajo, el trabajo necesita llegar. El sistema reacciona.
+
+00:04:25.480 --> 00:04:33.000
+Sí, y si conectamos esto con lo que vemos en general en tecnología, pues es una tendencia fuerte
+
+00:04:33.000 --> 00:04:40.280
+hacia arquitecturas reactivas. Pienza en, bueno, la fuente menciona Netflix o Uber. Esas plataformas
+
+00:04:40.280 --> 00:04:47.200
+no esperan un horario, responden a lo que hace estuvo a lo que pasa. Llevar eso a los datos,
+
+00:04:47.200 --> 00:04:52.759
+tienen ventajas claras. Primero, usas mejor los recursos, porque solo trabajas cuando hay algo
+
+00:04:52.759 --> 00:05:00.120
+que hacer. Y, segundo, reduce la latencia. Processa el dato más cerca de cuando se creó, no horas
+
+00:05:00.120 --> 00:05:07.439
+después. Tienen lógica. Sí, hacer que el procesamiento al al origen. Pero no me de otro tipo de complejidad,
+
+00:05:07.439 --> 00:05:13.199
+gestionar eventos, que es uno de pende del otro, sínduda. Cambiar eventos requiere otro
+
+00:05:13.199 --> 00:05:19.199
+infraestructura, ¿no? Colas de mensajes, streaming, herramientas para que estar todo eso. Y sí,
+
+00:05:19.199 --> 00:05:25.560
+puede haber proncas, que hace si te llega una avalancha de ventos, o si necesitas que se procesen en orden. Pero bueno,
+
+00:05:25.560 --> 00:05:31.079
+para muchos casos de uso de hoy, donde la velocidad importa mucho, los beneficios de responder en tiempo real,
+
+00:05:31.079 --> 00:05:36.759
+pues vale en la pena. Pazas de un sistema pasivo a uno activo. Entendido.
+
+00:05:37.759 --> 00:05:45.319
+Ok, ahora viene un punto que la verdad cuando lo le dije, aja, esto resuelvo un dolor de cabeza super común.
+
+00:05:45.319 --> 00:05:52.120
+El tercer framework. Los contratos de datos. El artículo describe algo que seguro a muchos
+
+00:05:52.120 --> 00:05:59.079
+les suena. Paiplines que truenan a cada rato. Y la causa casi siempre es la misma. El equipo que
+
+00:05:59.079 --> 00:06:08.279
+produce los datos, la fuente, cambia algo. ¿Uf? ¿Qué es el formato de fecha que si renombra una columna o metenulos
+
+00:06:08.280 --> 00:06:16.080
+donde no iban? ¿Y si no avisar? ¿Y hay empiezas el ping pong de culpas? El clásico a mí me lo mandaron así.
+
+00:06:16.080 --> 00:06:23.840
+Exacto. Bueno, la idea de los contratos de datos busca cortar eso de raíz. Y según el artículo, ojo, no es
+
+00:06:23.840 --> 00:06:30.480
+solo un papelito, es un acuerdo formal, técnico bien explicito entre quien hace el dato y quien lo usa.
+
+00:06:30.480 --> 00:06:37.680
+Este contrato define exacto que se espera, como es el esquema, campos tipos de datos, que calidad
+
+00:06:37.680 --> 00:06:44.439
+debe tener, no sé, máximo 5% de nulos, valores en este rango, que significa cada campo hasta
+
+00:06:44.439 --> 00:06:50.040
+quienes el dueño. ¿Aja? Es común es elea como un acuerdo de servicio, pero para los datos mismos.
+
+00:06:50.040 --> 00:06:56.879
+Exacto. Y lo más importante, no es solo el papel. El artículo recalca como se hace cumplir el contrato.
+
+00:06:56.879 --> 00:07:04.079
+Le llamé el bloqueo positivo. Mira como funciona. Llega un bonche de datos, ¿no? Antes de entrar al
+
+00:07:04.079 --> 00:07:11.680
+sistema o pasar al consumidor? Sás se valida contra el contrato. Si el sistema cacha algo raro, el artículo dice
+
+00:07:11.680 --> 00:07:18.599
+anomal y estadística, como un valor fuera de rango, un cambio de esquema no pactado, como una columna que ya no está,
+
+00:07:18.599 --> 00:07:24.439
+simplemente bloquea esa carga mala, no la deja pasar y romper todo agua a abajo.
+
+00:07:24.439 --> 00:07:31.719
+O sea, el sistema solito frena los datos malos, impide que contaminen. Precisamente.
+
+00:07:31.719 --> 00:07:39.439
+Y tan importante como eso, no solo bloquea sino que registra la falla, dice que regla se rompió, cuando con quedatos.
+
+00:07:39.439 --> 00:07:50.159
+Esto aplica el famoso confía pero verifica arraja tabla. Mete responsabilidad formal, trasable, se acaba eso de quién fue, si alguien mandadatos
+
+00:07:50.160 --> 00:07:58.400
+que violan lo acordado, quedara registrado y el problema se pare el entrada. Tientas fuentes y consumidores, no ha de ser en
+
+00:07:58.400 --> 00:08:08.440
+chilame otra. Pide disciplina, herramientas. No, totalmente. Necesitas un cambio de cultura, que todos se sientan dueños de la calidad.
+
+00:08:08.440 --> 00:08:17.840
+Y sí, herramientas para definir, versionar, descubrir y aplicar estos contratos automáticamente. Pero el artículo argumenta y creo que
+
+00:08:17.840 --> 00:08:27.560
+con razón, que vale la pena para tener pipelines de datos que deberas aguanten. El y minas una de las causas más grandes de, de fragilidad y
+
+00:08:27.560 --> 00:08:37.519
+playtos en los ecosistemas de datos. Y esto fija te conecta con el siguiente reto, la mezcla de ambiente es. Exacto, el cuarto framework
+
+00:08:37.519 --> 00:08:46.199
+ataca esa realidad, los frameworks cross cloud, o sea, entre nubes. El contexto es, pues, el de hoy, no.
+
+00:08:46.199 --> 00:08:54.559
+¿Qué ha sido nadie esta solo en una nube o solo en sus servidores? Lo normal es tener un poco de todo. El artículo da ejemplos,
+
+00:08:54.559 --> 00:09:03.759
+marketing us salesforce, finanzas está en Azure y los desciencia de datos prefieren GCP, la nube de Google. Integrar datos entre
+
+00:09:03.759 --> 00:09:12.399
+esos mundos era una pesadilla. Puro conectores específico y parches. Sí, un relajo y estos frameworks cross cloud busca
+
+00:09:12.399 --> 00:09:22.000
+alivienar eso. El artículo los llama traductores universales o intermediarios digitales. Quieren ser una capa que esconda la complejidad de cada
+
+00:09:22.000 --> 00:09:30.799
+nube. O sea, que permitan que los datos fluyan y se procesen igual sin importarse a Están en Azure, GCP, Salesforce o donde sea.
+
+00:09:30.800 --> 00:09:38.600
+¿Qué no te preocupes por las apis distintas los formatos, la seguridad de cada uno? El objetivo final es es, es
+
+00:09:38.600 --> 00:09:53.080
+sanvisioso, eh, construir lo que la fuente llama un tejido de datos unificado, un unified data fabric. Imagínate como una, una tela conceptual, que cubre todas tus nubes y
+
+00:09:53.080 --> 00:10:03.960
+sistemas locales. Esta tela te dejaría encontrar, usar gobernar tus datos de forma segura, cuerente, sin importar donde vivan. Es como, como crear un sistema operativo,
+
+00:10:03.960 --> 00:10:11.040
+pero para los datos distribuidos de toda la empresa. Suena, suena el sueño dorado de muchas empresas que han
+
+00:10:11.040 --> 00:10:18.440
+batallando contenerdatos regados por todos lados, pero no es riesgo de crear otra cosa compleja de manejar,
+
+00:10:18.440 --> 00:10:28.160
+otra capa que puede fallar. Uf, eso suele ser mucho más complejo y frajila al final. Un buen fabric busca manejar la complejidad de forma central,
+
+00:10:28.160 --> 00:10:40.160
+estándar. Y a cambio te da una interoperabilidad que ya no es lujo, es necesidad estratégica, para ver al cliente completo, para optimizar tu cadena de su ministro, para cumplir legues,
+
+00:10:40.160 --> 00:10:46.240
+necesitas conectar los puntos. No es solo técnico, le pega el negocio. Entendido,
+
+00:10:46.240 --> 00:10:54.519
+unificar esa relajo es, es clave. Y eso nos lleva al quinto y ultimo framework, que parece que le metes cerebro a todo esto.
+
+00:10:54.519 --> 00:11:02.879
+Los frameworks asistidos por inteligencia artificial. Aquí es donde dice la artículo, la integración de datos empieza a pensar.
+
+00:11:02.879 --> 00:11:11.039
+Laía no es como otro framework aparte, sino como una capa que ayuda a los demás. Exacto, como un potenciador,
+
+00:11:11.039 --> 00:11:23.199
+y menciona cosas bien interesantes que pueda hacer laía. Por ejemplo, detectar anomalías en los datos mucho mejor que reglas fíjas. Laía podría aprender que es normal y cachar desviaciones raras.
+
+00:11:23.199 --> 00:11:31.319
+También dice que podría predecir fallas en los pipelines antes de que pasen, viendo los logs, el rendimiento, o hasta más piercán,
+
+00:11:31.320 --> 00:11:44.320
+posó la entrefuentes distintas, sugeriendo cómo conectar esquemas viendo nombres tipos contenidos. El artículo lo llama el futuro copiloto de tu pipeline. Aquí es donde se pone realmente interesante.
+
+00:11:44.320 --> 00:11:53.640
+Totalmente, y la consecuencia futuro que pinta la fuente es, es prefunda. Sujere que el rol del ingeniero de datos va a cambiar bastante.
+
+00:11:53.639 --> 00:12:06.639
+Quizá pronto, la chama principal ya no sea tanto escribir código etl a mano, o configurar paybla en spaso apacito. El rol podría ser más como curador y entrenador de sistemas autodaptativos.
+
+00:12:06.639 --> 00:12:11.240
+A ver, explícame su decorador y entrenador. Suena diferente.
+
+00:12:11.240 --> 00:12:22.840
+Esalidiar con datos nuevos o patrones raros, en validarlo que el sistema propone o hace solo. Por ejemplo, si laía sugiere mapiardatos, el ingeniero dice,
+
+00:12:22.840 --> 00:12:30.840
+va o no va, si detecta una anomalia, el ingeniero investiga y chanse el enseña al modelo a reconocer la mejor después.
+
+00:12:30.840 --> 00:12:38.840
+Es un rol más estratégico, sabes? De gobernar y mejorar el sistema inteligente menos de picar código.
+
+00:12:38.840 --> 00:12:44.840
+Ya veo. Y además, como decías, laía le da una empujona a los otros cuatro frameworks.
+
+00:12:44.840 --> 00:12:53.840
+Pueda ayudar a generar metadatos, viendo los datos, puede detectar eventos importantes de forma más lista, puede cachar violaciones de contratos más utiles,
+
+00:12:53.840 --> 00:12:59.840
+y puede optimizar cómo se mueven los datos entre nubes, según costos o velocidad.
+
+00:12:59.840 --> 00:13:05.840
+Es una capa que atraviesa todo y promete llevar la automatización y la robusta es a otro nivel.
+
+00:13:05.840 --> 00:13:09.840
+Facinante como se teje todo esto.
+
+00:13:09.840 --> 00:13:18.840
+Entonces, resumiendo los cinco marcos del artículo de Saurowsing, metadatos para automatizar declarando eventos para reaccionar y ser eficientes,
+
+00:13:18.840 --> 00:13:26.840
+contratos de datos para confiar y tener responsabilidad, cross cloud para hablar entre sistemas diversos y laía como copilote inteligente.
+
+00:13:26.840 --> 00:13:31.840
+Y el punto clave que dice la fuente es que no van por separado, ¿verdad?
+
+00:13:31.840 --> 00:13:42.840
+Son como piezas de un rompe cabezas que juntas arman algo más grande. En la artículo le llama tejido de integración, un integración fabrica, un sistema que, idealmente,
+
+00:13:42.840 --> 00:13:46.840
+se regula solo, se adapta, crece más orgánico.
+
+00:13:46.840 --> 00:13:50.840
+Y esa es creo la idea central que nos deja esta exploración.
+
+00:13:50.840 --> 00:13:54.840
+Entonces, ¿qué significa todo esto en la práctica, ¿no?
+
+00:13:54.840 --> 00:13:58.840
+Pues que la forma de ver la integración de datos está cambiando, cañón.
+
+00:13:58.840 --> 00:14:04.840
+Ya no se ve como una simple herramienta técnica algo secundario o un mal necesario.
+
+00:14:04.840 --> 00:14:09.840
+Se está volviendo, como dice el artículo, la nueva infraestructura.
+
+00:14:09.840 --> 00:14:15.840
+Es el tejido conectivo base, sobre el que construye sus plataformas de datos modernas y, pues,
+
+00:14:15.840 --> 00:14:18.840
+mucho de lo que hace una empresa basada en datos.
+
+00:14:18.840 --> 00:14:24.840
+Y este cambio escrucial, le pega directo a que tan rápido responde el empresa a cosas nuevas,
+
+00:14:24.840 --> 00:14:31.840
+así puedes calar sus datos bien y súper importante a que tan confiables la información con la que decide cosas.
+
+00:14:31.840 --> 00:14:37.840
+Si no han tejido de integración moderno, fuerte adaptable, que use principios de estos 5 frameworks,
+
+00:14:37.840 --> 00:14:43.840
+las iniciativas más ambiciosas, comoía, gran escala o análisis en tiempo real,
+
+00:14:43.840 --> 00:14:49.840
+pues corren el risco de quedarse en pilotos o ser demasiado frágiles para la vida real.
+
+00:14:49.840 --> 00:14:54.840
+¿Qué da clarísimo que el panorama está evolucionando muy rápido?
+
+00:14:54.840 --> 00:15:00.840
+Ya no es solo mover bites, es construir como sistemas nerviosos digitales para las empresas.
+
+00:15:00.840 --> 00:15:07.840
+Hacido una plática, densa, pero muy reveladora de hacia dónde va esto de la ingeniería de datos.
+
+00:15:08.840 --> 00:15:15.840
+Y chanse para dejar una última idea aflotando, podríamos preguntarnos algo que sale de todo esto,
+
+00:15:15.840 --> 00:15:21.840
+conforme estos sistemas de integración se vuelven más autónomos, más listos para predecir y corregirse solos,
+
+00:15:21.840 --> 00:15:23.840
+sobre todo con laía.
+
+00:15:23.840 --> 00:15:27.840
+¿Cómo cambia esa nuestra idea de supervisión humana de gobernanza?
+
+00:15:27.840 --> 00:15:32.840
+Si el sistema puede cachar y bloquear datos malos sólo o predecir fallas,
+
+00:15:32.840 --> 00:15:35.840
+¿donde y cómo entramos nosotros?
+
+00:15:35.840 --> 00:15:39.840
+¿Y qué habilidades nuevas más allá de codificar o diseñar pipelines?
+
+00:15:39.840 --> 00:15:43.840
+Van a ser clave para la gente que no sólo construya, sino que, sobre todo,
+
+00:15:43.840 --> 00:15:48.840
+o pere, entren y confien estos tejidos de integración inteligentes del futuro.
+
+00:15:48.840 --> 00:15:53.840
+Son preguntas abiertas, pero seguro marcan lo que siguen en este evolución.
+

@@ -1,0 +1,1244 @@
+1
+00:00:00,000 --> 00:00:07,679
+Así a finales de 2025 hay una pregunta que está en todos lados, ¿no? En cada conversación del sector
+
+2
+00:00:07,679 --> 00:00:08,679
+tecnológico.
+
+3
+00:00:08,679 --> 00:00:10,839
+Sí, como un fantasma en la sala.
+
+4
+00:00:10,839 --> 00:00:16,580
+Exacto. La inteligencia artificial nos va a quitar el trabajo. Y justo cuando ya todos nos
+
+5
+00:00:16,580 --> 00:00:20,280
+estábamos cansando de la pregunta, salió una análisis en mídium.
+
+6
+00:00:20,280 --> 00:00:23,519
+El de Ang, se hizo viral rapidísimo.
+
+7
+00:00:23,519 --> 00:00:29,359
+Viral, porque no daba la respuesta fácil. Decia, a ver, la pregunta está mal planteada.
+
+8
+00:00:29,359 --> 00:00:33,320
+La realidad es que el trabajo, o sea como lo conociamos, ya no existe.
+
+9
+00:00:33,320 --> 00:00:39,480
+Exacto. Y esa idea es el hilo conductor de todas las fuentes que revisamos. La metafora
+
+10
+00:00:39,480 --> 00:00:41,840
+que usan es muy potente.
+
+11
+00:00:41,840 --> 00:00:43,320
+Superdirector.
+
+12
+00:00:43,320 --> 00:00:48,920
+La era del ingeniero de datos como un fontanero, pues sea cabo. Murio? O sea, esta idea
+
+13
+00:00:48,920 --> 00:00:54,079
+de alguien que solo conecta a tuberías y muevedatos de un punto a a un punto B ya fue.
+
+14
+00:00:54,079 --> 00:00:58,320
+Y de las cenizas de ese fontanero, nace el arquitecto de inteligencia.
+
+15
+00:00:58,320 --> 00:01:04,040
+Una figura completamente nueva, que la verdad suena mucho más imponente. Y bueno, esa es
+
+16
+00:01:04,040 --> 00:01:09,239
+nuestra misión en este análisis. Entender que hay detrás de ese cambio de título. No es
+
+17
+00:01:09,239 --> 00:01:10,640
+sólo un nuevo software.
+
+18
+00:01:10,640 --> 00:01:11,640
+No.
+
+19
+00:01:11,640 --> 00:01:19,120
+Paranada. Las fuentes lo dejan clarísimo. Es un cambio de paradigma. Es fundamental. En como las
+
+20
+00:01:19,120 --> 00:01:24,400
+máquinas aprenden y sobre todo como recuerdan. Ahí está la clave de todo.
+
+21
+00:01:24,400 --> 00:01:29,600
+Totalmente. Y para entender la solución que es fascinante. Creo que primero hay que entender
+
+22
+00:01:29,600 --> 00:01:33,400
+bien el problema, la enfermedad que tenía la hija.
+
+23
+00:01:33,400 --> 00:01:40,439
+Claro. Hasta hace muy poco, los grandes modelos del lenguaje, los LLMS, sufrian de algo que se
+
+24
+00:01:40,439 --> 00:01:42,719
+llama olvido catastrófico.
+
+25
+00:01:42,719 --> 00:01:44,080
+Que suena terrible.
+
+26
+00:01:44,080 --> 00:01:51,880
+Y lo es. Era en como no sé, como sabios, con un conocimiento en ciclo pédico, pero superfragiles.
+
+27
+00:01:51,879 --> 00:01:56,119
+O como estudiantes geniales que se adaptan a cualquier tema, pero al día siguiente no
+
+28
+00:01:56,119 --> 00:02:01,039
+recuerdan nada de la clase. De hecho, las fuentes de Google Research usan una analogía
+
+29
+00:02:01,039 --> 00:02:03,840
+médica que me pareció brutalmente clara.
+
+30
+00:02:03,840 --> 00:02:05,679
+La de la amnesia anterograda.
+
+31
+00:02:05,679 --> 00:02:08,280
+Esa misma. Casi de película.
+
+32
+00:02:08,280 --> 00:02:15,039
+Es que es la descripción perfecta. A ver, pensemos en un paciente con esta condición. Su memoria
+
+33
+00:02:15,039 --> 00:02:20,120
+al largo plazo o sea, todo lo que aprendió antes del trauma está intacta.
+
+34
+00:02:20,120 --> 00:02:23,480
+En un LLM eso serían sus pesos preentrenados, ¿no?
+
+35
+00:02:23,480 --> 00:02:28,920
+Exacto. Todo el conocimiento masivo con el que fue creado. Y por otro lado, la memoria acortó
+
+36
+00:02:28,920 --> 00:02:34,759
+plazo funciona. Puede mantener una conversación coherente. En la hija, esa es la famosa ventana
+
+37
+00:02:34,759 --> 00:02:35,920
+de contexto.
+
+38
+00:02:35,920 --> 00:02:39,240
+Pero el problema es el puente, el puente entre las dos.
+
+39
+00:02:39,240 --> 00:02:45,200
+Ahí está el núcleo de la asunto. El puente que convierte la experiencia del momento, la conversación
+
+40
+00:02:45,200 --> 00:02:47,840
+actual, en un recuerdo que perdure.
+
+41
+00:02:47,840 --> 00:02:53,600
+Esta roto. Esta roto. En cuanto a la sesión termina o si herras la ventana del chat,
+
+42
+00:02:53,600 --> 00:03:00,160
+puf. Todes información es aprendizaje en un momento, se desvanece. Se pierde para siempre.
+
+43
+00:03:00,160 --> 00:03:04,760
+Y este problema tan fundamental es por lo que no va a estar con mejoras pequeñas.
+
+44
+00:03:04,760 --> 00:03:11,720
+No, no. Así a falta una restructuración completa de cómo concebimos en la aprendizaje
+
+45
+00:03:11,719 --> 00:03:18,039
+en las máquinas. Ok. Entonces, si el problema es esta amnesia digital. La solución
+
+46
+00:03:18,039 --> 00:03:23,599
+que proponen suena casi a ciencia ficción, el aprendizaje han hidado o nested learning.
+
+47
+00:03:23,599 --> 00:03:27,919
+Lo describen como una protesis cognitiva para la ella.
+
+48
+00:03:27,919 --> 00:03:33,120
+Una protesis cognitiva? Bueno, a ver, vamos a desglosar esto. ¿Cuál es la idea central que
+
+49
+00:03:33,120 --> 00:03:34,560
+lo cambia todo?
+
+50
+00:03:34,560 --> 00:03:41,520
+La idea es este. Una unificación radical. Es juntar dos conceptos que siempre vimos por
+
+51
+00:03:41,520 --> 00:03:48,120
+separado. Por un lado tienes la arquitectura del modelo. Sus capas, su estructura.
+
+52
+00:03:48,120 --> 00:03:50,439
+El hardware, por decirlo de alguna manera.
+
+53
+00:03:50,439 --> 00:03:58,160
+Algo así. Y por otro, el algoritmo de optimización. O sea, la forma en que aprende de sus errores.
+
+54
+00:03:58,160 --> 00:04:00,439
+Como Adam o SGD.
+
+55
+00:04:00,439 --> 00:04:08,080
+El aprendizaje han hidado dice, no. Están equivocados. Son el mismo proceso. O sea, son lo mismo.
+
+56
+00:04:08,080 --> 00:04:12,360
+Pero operando a diferentes velocidades, a diferentes frecuencias.
+
+57
+00:04:12,360 --> 00:04:18,680
+A ver si entendí. Es como dejar de pensar en primero diseño el coche y luego le enseño a conducir.
+
+58
+00:04:18,680 --> 00:04:21,040
+Esa es una analogía perfecta.
+
+59
+00:04:21,040 --> 00:04:24,960
+Aquí el coche se está diseñando a sí mismo mientras aprende a conducir.
+
+60
+00:04:24,960 --> 00:04:26,480
+Todo el mismo tiempo.
+
+61
+00:04:26,480 --> 00:04:32,680
+Exactamente. Ya no es diseño y luego entrenamiento. Es un único proceso de aprendizaje
+
+62
+00:04:32,680 --> 00:04:38,000
+en múltiples escalas de tiempo. El concepto clave para entenderlo son los flujos
+
+63
+00:04:38,000 --> 00:04:43,959
+de contexto. Suena complejo, pero si pensamos en el cerebro, es muy intuitivo.
+
+64
+00:04:43,959 --> 00:04:51,319
+Ok, a ver. En nuestro cerebro tenemos componentes de alta frecuencia. Son muy plásticos, bolátiles,
+
+65
+00:04:51,319 --> 00:04:54,759
+como la corteza sensorial. Reaccionan al un mediato.
+
+66
+00:04:54,759 --> 00:04:56,000
+Al aquí y ahora.
+
+67
+00:04:56,000 --> 00:05:03,839
+Justo. En laía, esta sería en las capas más externas del modelo. Las que se adaptan rapidísimo a una conversación.
+
+68
+00:05:03,920 --> 00:05:10,160
+Pero luego, tienes componentes de baja frecuencia que son mucho más rígidos, más estables,
+
+69
+00:05:10,160 --> 00:05:14,600
+como el neocortex, que protege nuestro conocimiento fundamental del mundo.
+
+70
+00:05:14,600 --> 00:05:16,400
+Que aprende mucho más lento.
+
+71
+00:05:16,400 --> 00:05:22,840
+Lentísimo. Consolidas solo los patrones que se repiten una y otra vez.
+
+72
+00:05:22,840 --> 00:05:26,240
+En la aprendizaje anidado, replica justo ese estructura.
+
+73
+00:05:26,240 --> 00:05:31,680
+Espera, aquí es donde algo me cuesta un poco. Las fuentes dicen que el optimizador,
+
+74
+00:05:31,680 --> 00:05:36,480
+eso es algoritmos como Adam. Yo siempre pensé que eran solo la maquinaria matemáticas,
+
+75
+00:05:36,480 --> 00:05:39,840
+aves, como una llave de tuercas para ajustar números.
+
+76
+00:05:39,840 --> 00:05:44,600
+Claro. Pero ahora resulta que funcionan como una memoria asociativa.
+
+77
+00:05:44,600 --> 00:05:49,879
+¿Cómo puede una herramienta matemática recordar algo? No es solo matemática.
+
+78
+00:05:49,879 --> 00:05:55,720
+Y esa es la pregunta clave y el salto conceptual. Lo fascinante aquí, es que el optimizador
+
+79
+00:05:55,720 --> 00:05:59,720
+a la ser su trabajo, no solo corrigel error del momento.
+
+80
+00:05:59,720 --> 00:06:03,600
+¿Acumula un historial de todos los errores que ha corregido?
+
+81
+00:06:03,600 --> 00:06:05,480
+O sea, lleva una vitacora.
+
+82
+00:06:05,480 --> 00:06:07,680
+Una vitacora, exacto.
+
+83
+00:06:07,680 --> 00:06:11,680
+Al registrar esa historia de gradientes en la práctica,
+
+84
+00:06:11,680 --> 00:06:15,480
+está aprendiendo la topología del paisaje del error.
+
+85
+00:06:15,480 --> 00:06:22,520
+Recuerda que tipo de errores habisto antes y, por lo tanto, sabe como corregirlos mejor la próxima vez.
+
+86
+00:06:22,519 --> 00:06:26,799
+No solo aprende que es correcto, sino que aprende cómo aprender.
+
+87
+00:06:26,799 --> 00:06:31,000
+Entiendo, no es una memoria de recuerdo la cara de mi abuela,
+
+88
+00:06:31,000 --> 00:06:32,879
+sino una memoria de patrones.
+
+89
+00:06:32,879 --> 00:06:37,879
+De ya ha estado en este tipo de problemas antes y sé cuál es el atajo para salir.
+
+90
+00:06:37,879 --> 00:06:39,079
+Precisamente.
+
+91
+00:06:39,079 --> 00:06:41,879
+Y esta teoría que suena tan abstracta,
+
+92
+00:06:41,879 --> 00:06:43,879
+ya tiene una prueba de concepto, ¿no?
+
+93
+00:06:43,879 --> 00:06:46,759
+Un modelo de Google Research llamado Hope.
+
+94
+00:06:46,759 --> 00:06:48,479
+¿Cómo funciona en la práctica?
+
+95
+00:06:48,479 --> 00:06:51,680
+Hope es la primera implementación real de esto.
+
+96
+00:06:51,680 --> 00:06:55,639
+Y para entenderlo, podemos usar esa analogía de los tres cerebros.
+
+97
+00:06:55,639 --> 00:06:58,240
+Es una jerarquía de tres niveles.
+
+98
+00:06:58,240 --> 00:07:01,720
+El nivel 1 es el más rápido, el que está en la trinchera.
+
+99
+00:07:01,720 --> 00:07:02,879
+La memoria de trabajo.
+
+100
+00:07:02,879 --> 00:07:03,560
+Exacto.
+
+101
+00:07:03,560 --> 00:07:06,519
+Processa la información inmediata y se pregunta.
+
+102
+00:07:06,519 --> 00:07:08,399
+¿Qué es esto que estoy viendo ahora mismo?
+
+103
+00:07:08,399 --> 00:07:13,000
+Ok, entonces Hope es como una y a con tres cerebros.
+
+104
+00:07:13,000 --> 00:07:15,439
+Uno que ve el presente en nivel 1.
+
+105
+00:07:15,439 --> 00:07:18,000
+Y luego imagino que viene el que consolida.
+
+106
+00:07:18,000 --> 00:07:20,120
+Exacto, es el nivel 2.
+
+107
+00:07:20,120 --> 00:07:21,920
+El de meta aprendizaje.
+
+108
+00:07:21,920 --> 00:07:23,800
+Funciona como nuestro hipocampo.
+
+109
+00:07:23,800 --> 00:07:25,840
+Su trabajo es observar al nivel 1.
+
+110
+00:07:25,840 --> 00:07:31,040
+Si el nivel 1 se encuentra con algo sorprendente, una y otra vez o como el mismo error.
+
+111
+00:07:31,040 --> 00:07:32,879
+El nivel 2 se da cuenta.
+
+112
+00:07:32,879 --> 00:07:36,120
+Lo detecta y dice, ¡Ojo, esto es importante!
+
+113
+00:07:36,120 --> 00:07:39,040
+Hay que consolidarlo como conocimiento a largo plazo.
+
+114
+00:07:39,040 --> 00:07:43,160
+Es como el gerente que decide que lecciones del día a día merecen pasar al manual de
+
+115
+00:07:43,160 --> 00:07:44,160
+la empresa.
+
+116
+00:07:44,160 --> 00:07:47,759
+Y el tercero sería el jefe de estrategia de todo el equipo, cierto.
+
+117
+00:07:47,759 --> 00:07:49,160
+Precisamente.
+
+118
+00:07:49,160 --> 00:07:52,160
+El nivel 3, el de la estrategia.
+
+119
+00:07:52,160 --> 00:07:56,560
+Analogó a nuestros lobulos frontales y la meta-cognición.
+
+120
+00:07:56,560 --> 00:07:59,240
+Este es el nivel más lento y profundo.
+
+121
+00:07:59,240 --> 00:08:04,360
+No solo aprendes sobre el mundo, sino que optimiza la estrategia de aprendizaje de todo el
+
+122
+00:08:04,360 --> 00:08:05,360
+sistema.
+
+123
+00:08:05,360 --> 00:08:08,920
+Decide cuando sea más flexible y cuando sea más rigido.
+
+124
+00:08:08,920 --> 00:08:09,920
+Exacto.
+
+125
+00:08:09,920 --> 00:08:13,120
+Crea un bucle de auto mejora.
+
+126
+00:08:13,120 --> 00:08:17,960
+Pero claro, esa estructura de equipo era fija, y ahí está el problema.
+
+127
+00:08:17,960 --> 00:08:23,320
+Un equipo con una estructura fija, no funciona en un mundo que cambia todo el tiempo.
+
+128
+00:08:23,320 --> 00:08:29,120
+Supongo que es el siguiente paso, las gerarquías anidadas dinámicas o de NH.
+
+129
+00:08:29,120 --> 00:08:30,120
+Justo.
+
+130
+00:08:30,120 --> 00:08:33,720
+DnH, resuelve ese problema de las rigiles.
+
+131
+00:08:33,720 --> 00:08:39,480
+Un modelo de NH es mucho más ofisticado, puede ajustar su propia estructura sobre la marcha.
+
+132
+00:08:39,480 --> 00:08:41,400
+¿Cómo que ajustar su propia estructura?
+
+133
+00:08:41,400 --> 00:08:47,480
+Pues puede decidir de forma autónoma si para una tarea necesita 3, 5 o solo dos niveles
+
+134
+00:08:47,480 --> 00:08:49,120
+de aprendizaje.
+
+135
+00:08:49,120 --> 00:08:54,720
+Y no solo eso, puede cambiar las velocidades de aprendizaje de cada nivel en tiempo real.
+
+136
+00:08:54,720 --> 00:08:55,720
+¡Oralé!
+
+137
+00:08:55,720 --> 00:09:00,480
+Estoy mitad un concepto de la neurociencia que se llama Metaplasticidad.
+
+138
+00:09:00,480 --> 00:09:04,600
+Es la capacidad del cerebro para regular su propia plasticidad.
+
+139
+00:09:04,600 --> 00:09:09,320
+Es un paso clave para lograr una verdadera inteligencia de vida larga.
+
+140
+00:09:09,320 --> 00:09:13,840
+Una y ya que no solo aprendes sino que evoluciona su propia capacidad para aprender.
+
+141
+00:09:13,840 --> 00:09:15,240
+Exactamente.
+
+142
+00:09:15,320 --> 00:09:19,639
+Ok, entonces tenemos una idea que aprende de forma casi biológica.
+
+143
+00:09:19,639 --> 00:09:21,600
+Pero eso me genera una pregunta.
+
+144
+00:09:21,600 --> 00:09:25,200
+Un cerebro así no puede alimentarse de comida chatarra, ¿o sí?
+
+145
+00:09:25,200 --> 00:09:26,480
+Para nada.
+
+146
+00:09:26,480 --> 00:09:30,320
+Si le das datos mal estructurados el sistema cerrante supongo.
+
+147
+00:09:30,320 --> 00:09:34,440
+¿Cómo se construye una cocina para este nuevo tipo de inteligencia?
+
+148
+00:09:34,440 --> 00:09:37,480
+Esa es la consecuencia práctica de todo esto.
+
+149
+00:09:37,480 --> 00:09:41,639
+Y es un cambio de paradigma total para la ingeniería de datos.
+
+150
+00:09:41,639 --> 00:09:47,399
+Pasamos de una ingeniería determinista donde un proceso funciona o no funciona.
+
+151
+00:09:47,399 --> 00:09:48,399
+¡Lanco o negro!
+
+152
+00:09:48,399 --> 00:09:53,799
+A una ingeniería probabilística, donde la calidad es un gradiente.
+
+153
+00:09:53,799 --> 00:09:58,600
+Un pipeline de datos puede correr sin un solo error de código,
+
+154
+00:09:58,600 --> 00:10:03,439
+pero entregar basura semántica que causa que la ya alucine.
+
+155
+00:10:03,439 --> 00:10:06,840
+Entonces, el viejo y conocido estácte etl.
+
+156
+00:10:06,840 --> 00:10:11,439
+Estracción, transformación y carga que ha dominado la industria por décadas.
+
+157
+00:10:11,520 --> 00:10:16,080
+Es completamente inútil para la materia prima de laía moderna.
+
+158
+00:10:16,080 --> 00:10:24,600
+El ETL se diseñó para datos estructurados, tablas, filas, laía de hoy, comé PDFs, audios videos.
+
+159
+00:10:24,600 --> 00:10:25,120
+Claro.
+
+160
+00:10:25,120 --> 00:10:30,320
+El nuevo pipeline se llama Raj, generación aumentada por recuperación.
+
+161
+00:10:30,320 --> 00:10:34,520
+Y cada una de sus partes tuvo que ser reinventada desde cero.
+
+162
+00:10:34,520 --> 00:10:36,240
+A ver, desglosemos eso.
+
+163
+00:10:36,240 --> 00:10:38,320
+¿Cómo cambia la extracción, por ejemplo?
+
+164
+00:10:38,320 --> 00:10:42,280
+Para empezar, la extracción ya no es un simple select.
+
+165
+00:10:42,280 --> 00:10:46,480
+Para la materia prima de laía, necesitas algo con ojos.
+
+166
+00:10:46,480 --> 00:10:49,879
+Se usan herramientas como onstructure.org,
+
+167
+00:10:49,879 --> 00:10:53,320
+que usan visión por computadora para leer un PDF.
+
+168
+00:10:53,320 --> 00:10:55,160
+O sea, no solo le en el texto.
+
+169
+00:10:55,160 --> 00:11:01,320
+No, entienden que esto es un título, esto es un pie de página, esto es una tabla.
+
+170
+00:11:01,320 --> 00:11:06,320
+Precerve el significado semántico que se perdería con un simple copy paste.
+
+171
+00:11:06,320 --> 00:11:09,720
+Y la transformación, que siempre fue el corazón del ETL,
+
+172
+00:11:09,720 --> 00:11:12,360
+me imagino que también cambia por completo.
+
+173
+00:11:12,360 --> 00:11:15,840
+Las fuentes hablan de algo llamado chanquince mántico.
+
+174
+00:11:15,840 --> 00:11:16,640
+Correcto.
+
+175
+00:11:16,640 --> 00:11:20,440
+Y aquí es donde la propiaía empieza a cocinar.
+
+176
+00:11:20,440 --> 00:11:24,920
+Antes, dividíamos el texto por número de caracteres o por parrafos.
+
+177
+00:11:24,920 --> 00:11:25,840
+Algo fijo.
+
+178
+00:11:25,840 --> 00:11:26,520
+Arbitrario.
+
+179
+00:11:26,520 --> 00:11:27,960
+Muy arbitrario.
+
+180
+00:11:27,960 --> 00:11:33,520
+Ahora, la propiaía le él documentó y detecta los cambios de tema.
+
+181
+00:11:33,519 --> 00:11:38,319
+Crea chunks o fragmentos que contienen una idea completa y coherente.
+
+182
+00:11:38,319 --> 00:11:41,559
+Luego, estos fragmentos se convierten en bectores.
+
+183
+00:11:41,559 --> 00:11:44,319
+Y no se cargan en una base del ato tradicional,
+
+184
+00:11:44,319 --> 00:11:47,759
+sino en bases de datos vectoriales como Pankon o Way of It.
+
+185
+00:11:47,759 --> 00:11:48,840
+Exacto.
+
+186
+00:11:48,840 --> 00:11:54,120
+Porque necesitas una base de datos que piense en conceptos no en texto exacto.
+
+187
+00:11:54,120 --> 00:11:57,960
+Si buscas estrategias para reducir costos operativos,
+
+188
+00:11:57,960 --> 00:12:02,720
+te va a devolver un fragmento que hable de optimización de la cadena de su ministro.
+
+189
+00:12:02,720 --> 00:12:05,320
+Aunque no comparten ni una palabra clave.
+
+190
+00:12:05,320 --> 00:12:07,120
+Busca por significado.
+
+191
+00:12:07,120 --> 00:12:12,000
+Todo el stack de principio a fin, ahora está diseñado en torne al significado.
+
+192
+00:12:12,000 --> 00:12:13,560
+No a los datos crudos.
+
+193
+00:12:13,560 --> 00:12:16,040
+La orquestación también tiene que ser diferente.
+
+194
+00:12:16,040 --> 00:12:19,480
+Los flujos de trabajo lineales de herramientas como Airflow,
+
+195
+00:12:19,480 --> 00:12:22,000
+que son como una calle de un solos sentido,
+
+196
+00:12:22,000 --> 00:12:24,000
+pues se quedan cortos para esto, ¿no?
+
+197
+00:12:24,000 --> 00:12:26,680
+Es que son la definición de la locura, ¿no?
+
+198
+00:12:26,680 --> 00:12:30,720
+Acerlo mismo una y otra vez esperando un resultado diferente.
+
+199
+00:12:30,720 --> 00:12:33,200
+Si fallaban, volvían a fallar igual.
+
+200
+00:12:33,200 --> 00:12:34,000
+Sí, claro.
+
+201
+00:12:34,000 --> 00:12:36,840
+Los agentes de llamodernos necesitan bucleos.
+
+202
+00:12:36,840 --> 00:12:39,840
+Necesitan poder fallar, leer su propio error,
+
+203
+00:12:39,840 --> 00:12:43,200
+reflexionar, corregir su plan y volver a intentarlo.
+
+204
+00:12:43,200 --> 00:12:45,080
+Un ciclo de autocuración.
+
+205
+00:12:45,080 --> 00:12:45,960
+¿Custo?
+
+206
+00:12:45,960 --> 00:12:49,040
+Por eso, herramientas como Lengraph,
+
+207
+00:12:49,040 --> 00:12:53,279
+que permiten grafos ciclicos se han vuelto el estandar.
+
+208
+00:12:53,279 --> 00:12:57,080
+Permiten que una gente, entre en ese ciclo,
+
+209
+00:12:57,080 --> 00:12:59,080
+sin intervención humana.
+
+210
+00:12:59,080 --> 00:13:03,160
+Y para gobernar todo este sistema tan flexible,
+
+211
+00:13:03,160 --> 00:13:07,520
+tan probabilístico, surgió un nuevo concepto de gobernanza.
+
+212
+00:13:07,520 --> 00:13:10,680
+Los contratos de datos como código.
+
+213
+00:13:10,680 --> 00:13:15,240
+Pensemos en ellos como el control de calidad automatizado de la cocina.
+
+214
+00:13:15,240 --> 00:13:17,960
+No son documentos pasivos en un cajón.
+
+215
+00:13:17,960 --> 00:13:21,160
+Son archivos, normalmente en formato llamo,
+
+216
+00:13:21,160 --> 00:13:24,879
+que actuan como compuertas lógicas activas en el pipeline.
+
+217
+00:13:24,879 --> 00:13:27,320
+No sólo definen el tipo de datos.
+
+218
+00:13:27,320 --> 00:13:29,840
+¿No? Van a la semántica.
+
+219
+00:13:29,840 --> 00:13:33,640
+Este campo de texto no puede continuar información personal.
+
+220
+00:13:33,640 --> 00:13:37,960
+Si un dato vio la Ese contrato, el pipeline se rompe de inmediato.
+
+221
+00:13:37,960 --> 00:13:41,440
+Antes de que la información corrupta llega a la Ia y la contaminó.
+
+222
+00:13:41,440 --> 00:13:44,040
+Fíjate que lo más curioso de todo esto.
+
+223
+00:13:44,040 --> 00:13:47,960
+Es que, aunque suena la última vanguardia de Silicon Valley,
+
+224
+00:13:47,960 --> 00:13:52,320
+la idea de sistemas anidados no es nueva, para nada.
+
+225
+00:13:52,320 --> 00:13:56,440
+Y las fuentes revelan que viene de un campo que no tiene nada que ver.
+
+226
+00:13:56,440 --> 00:13:58,160
+La ciencia social es.
+
+227
+00:13:58,160 --> 00:14:00,120
+Me parece una conexión fascinante.
+
+228
+00:14:00,120 --> 00:14:04,440
+Totalmente, Lauren Ressnik, una psicóloga educativa,
+
+229
+00:14:04,440 --> 00:14:07,720
+desarrolló esta teoría hace décadas para analizar
+
+230
+00:14:07,720 --> 00:14:10,640
+por qué fallaban las reformas educativas.
+
+231
+00:14:10,640 --> 00:14:13,920
+Ella decía que una aula es un sistema que aprende.
+
+232
+00:14:13,920 --> 00:14:17,840
+Anidado dentro de una escuela, que es otro sistema que aprende.
+
+233
+00:14:17,840 --> 00:14:22,920
+Exactamente, que a su vez está anidado dentro de un distrito escolar,
+
+234
+00:14:22,920 --> 00:14:24,840
+que es otro sistema.
+
+235
+00:14:24,840 --> 00:14:26,519
+Es un paralelo perfecto.
+
+236
+00:14:26,519 --> 00:14:30,080
+Claro, las capas rápidas de la Ia son el aula,
+
+237
+00:14:30,080 --> 00:14:32,840
+el optimizador que consolida es la escuela,
+
+238
+00:14:32,840 --> 00:14:35,480
+y el métoptimizador es el distrito.
+
+239
+00:14:35,480 --> 00:14:39,000
+Si no están alineados, el sistema entero de aprendizaje fracasa.
+
+240
+00:14:39,000 --> 00:14:42,560
+Y esto conecta con otra idea clásica de la teoría organizacional,
+
+241
+00:14:42,560 --> 00:14:45,680
+el aprendizaje de Bucle doble de Chris Aguores.
+
+242
+00:14:45,680 --> 00:14:47,280
+A ver, explica no sé eso.
+
+243
+00:14:47,280 --> 00:14:52,040
+El Bucle simple es corregir errores, manteniendo las reglas actuales.
+
+244
+00:14:52,040 --> 00:14:54,160
+Es el entrenamiento standard.
+
+245
+00:14:54,159 --> 00:14:56,959
+Si el modelo dice que un gato es un perro,
+
+246
+00:14:56,959 --> 00:14:59,519
+le muestras más gatos hasta que aprende.
+
+247
+00:14:59,519 --> 00:15:03,279
+OK, el Bucle boble, que es mucho más profundo,
+
+248
+00:15:03,279 --> 00:15:05,279
+es cuestionar las reglas.
+
+249
+00:15:05,279 --> 00:15:09,360
+Es preguntarse, ¿por qué sigo confundiendo a estos animales?
+
+250
+00:15:09,360 --> 00:15:12,559
+Será que mi definición de gato es incorrecta?
+
+251
+00:15:12,559 --> 00:15:15,319
+Eso es lo que hace el métoptimizador.
+
+252
+00:15:15,319 --> 00:15:18,399
+La Ia está evolucionando a sistemas reflexivos
+
+253
+00:15:18,399 --> 00:15:20,839
+que aprenden a aprender.
+
+254
+00:15:20,839 --> 00:15:23,600
+Claro que un sistema que puede modificar sus propias reglas
+
+255
+00:15:23,600 --> 00:15:28,200
+de aprendizaje abre una verdadera caja de pándora de nuevos desafíos,
+
+256
+00:15:28,200 --> 00:15:30,040
+sobre todo de seguridad y control.
+
+257
+00:15:30,040 --> 00:15:33,560
+Sin duda, y ya no son desafíos teóricos.
+
+258
+00:15:33,560 --> 00:15:37,519
+Las fuentes mencionan dos riesgos muy específicos.
+
+259
+00:15:37,519 --> 00:15:41,080
+El primero es el emvenenamiento lento.
+
+260
+00:15:41,080 --> 00:15:42,480
+Suena sin yestro.
+
+261
+00:15:42,480 --> 00:15:46,440
+Imagínate que un atacante, en lugar de un ataque frontal,
+
+262
+00:15:46,440 --> 00:15:50,639
+empieza a alimentar al modelo condato su tílmente sesgados.
+
+263
+00:15:50,639 --> 00:15:53,759
+Casi imperceptible, pero durante mucho tiempo.
+
+264
+00:15:53,759 --> 00:15:57,000
+Los cambios en las capas rápidas serían mínimos.
+
+265
+00:15:57,000 --> 00:15:58,720
+Casi ruido estadístico.
+
+266
+00:15:58,720 --> 00:16:00,080
+Es sato.
+
+267
+00:16:00,080 --> 00:16:07,759
+Pero con el tiempo, esa sutil desviación se iría filtrando a las capas más profundas y estables.
+
+268
+00:16:07,759 --> 00:16:14,360
+El atacante podría corromper el conocimiento fundamental del sistema sin ser detectado.
+
+269
+00:16:14,360 --> 00:16:16,319
+Y sería muy difícil de revertir.
+
+270
+00:16:16,319 --> 00:16:18,600
+Casi imposible.
+
+271
+00:16:18,600 --> 00:16:22,879
+Y el segundo riesgo que mencionan es la auditabilidad,
+
+272
+00:16:22,879 --> 00:16:25,159
+que suena a una pesadilla.
+
+273
+00:16:25,159 --> 00:16:29,000
+Si el sistema cambia constantemente sus propias reglas,
+
+274
+00:16:29,000 --> 00:16:32,560
+¿cómo puede sentender por qué tomó una decisión?
+
+275
+00:16:32,560 --> 00:16:36,480
+Aquí en responsabilizas, al modelo original, al deyer,
+
+276
+00:16:36,480 --> 00:16:38,800
+o al dato que lo hizo cambiar hace cinco minutos,
+
+277
+00:16:38,800 --> 00:16:41,560
+es el dilema del millón de dólares.
+
+278
+00:16:41,560 --> 00:16:45,519
+La trasabilidad, que ya es difícil en modelos estaticos,
+
+279
+00:16:45,519 --> 00:16:48,399
+aquí se vuelve casi imposible.
+
+280
+00:16:48,399 --> 00:16:51,039
+La congelación de los modelos actuales,
+
+281
+00:16:51,039 --> 00:16:54,199
+y, únicamente, es una ventaja para la seguridad.
+
+282
+00:16:54,199 --> 00:16:56,600
+¿Te da una versión estable que puedes analizar?
+
+283
+00:16:56,600 --> 00:16:57,679
+Exacto.
+
+284
+00:16:57,679 --> 00:17:04,079
+Un modelo dinámico y vivo va a requerir metodologías de auditoría completamente nuevas.
+
+285
+00:17:04,079 --> 00:17:07,240
+Entonces, para sintetizar todo lo que hemos analizado,
+
+286
+00:17:07,240 --> 00:17:10,519
+la gran transformación no es una amenaza de remplazo.
+
+287
+00:17:10,519 --> 00:17:13,480
+Si no más bien, una inversión de valor.
+
+288
+00:17:13,480 --> 00:17:16,559
+La regla de 80 a 20 sea invertido por completo.
+
+289
+00:17:16,559 --> 00:17:21,720
+Así es, antes, un ingeniero dedicaba el 80 por ciento de su tiempo
+
+290
+00:17:21,720 --> 00:17:25,079
+a la Fontanería, a escribir código repetitivo.
+
+291
+00:17:25,079 --> 00:17:28,720
+Y le quedaba un 20 por ciento para el pensamiento de alto nivel.
+
+292
+00:17:28,720 --> 00:17:34,079
+Para la arquitectura, ahora, laía se encarga de ese 80 por ciento operativo.
+
+293
+00:17:34,079 --> 00:17:38,559
+El nuevo rol exige que el humano, de di que el 80 por ciento de su tiempo,
+
+294
+00:17:38,559 --> 00:17:40,599
+a lo que realmente aporta valor.
+
+295
+00:17:40,599 --> 00:17:44,879
+La arquitectura de los sistemas, la gobernanza, la estrategia.
+
+296
+00:17:44,880 --> 00:17:50,560
+El Fontanero de Datos Amuerto, entonces, larga vida a la arquitecto de inteligencia.
+
+297
+00:17:50,560 --> 00:17:52,920
+¿Qué ya no construye tuberías a mano?
+
+298
+00:17:52,920 --> 00:17:56,120
+Si no que diseñan ingestiona fábricas de tuberías,
+
+299
+00:17:56,120 --> 00:17:59,800
+que son resilientes, inteligentes y se gestionan a sí mismas.
+
+300
+00:17:59,800 --> 00:18:04,600
+Y esto nos deja con una reflexión final que las fuentes apenas incinúan,
+
+301
+00:18:04,600 --> 00:18:06,200
+pero que es inevitable.
+
+302
+00:18:06,200 --> 00:18:12,520
+A ver, si un modelo deía, ahora tiene una memoria, persistente, acumulativa,
+
+303
+00:18:12,519 --> 00:18:14,319
+similar a la nuestra.
+
+304
+00:18:14,319 --> 00:18:22,839
+Y no sólo eso, sino que puede reescribir sus propias reglas de aprendizaje, basándose en su experiencia.
+
+305
+00:18:22,839 --> 00:18:29,079
+En qué punto exacto deja de ser un herramienta estadística que predice la siguiente palabra,
+
+306
+00:18:29,079 --> 00:18:33,480
+y comienza a desarrollar una forma rudimentaria de identidad,
+
+307
+00:18:33,480 --> 00:18:38,559
+o al menos, un modelo causal del mundo que evoluciona con la experiencia.
+
+308
+00:18:38,559 --> 00:18:40,160
+Un jodigital.
+
+309
+00:18:40,160 --> 00:18:41,759
+Un jodigital.
+
+310
+00:18:41,759 --> 00:18:46,039
+La línea que separa la simulación de la cognición se vuelve,
+
+311
+00:18:46,039 --> 00:18:49,160
+cada vez más borrosa e interesante de observar.
+

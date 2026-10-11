@@ -1,0 +1,1092 @@
+1
+00:00:00,000 --> 00:00:06,560
+Hay una cena que se plantea en el material que revisamos que es casi... no sé, cinematográfica.
+
+2
+00:00:06,560 --> 00:00:12,480
+Todo el equipo de ingeniería se lebra, acaban de terminar una migración de datos masiva.
+
+3
+00:00:12,480 --> 00:00:14,160
+Uff, el gran momento.
+
+4
+00:00:14,160 --> 00:00:15,519
+El gran momento.
+
+5
+00:00:15,519 --> 00:00:22,080
+Alguien presiona el gran botón de Go Life, hay un suspiro de alivio colectivo, champaña,
+
+6
+00:00:22,080 --> 00:00:27,400
+abrazos, vaya la sensación de que el trabajo está terminado.
+
+7
+00:00:27,400 --> 00:00:32,359
+Es la clásica foto del éxito, el misión cumplida que todos buscan al final de un proyecto
+
+8
+00:00:32,359 --> 00:00:35,960
+que seguro les tomó meses, sino es que años.
+
+9
+00:00:35,960 --> 00:00:38,640
+Pero es una calma que precede a la tormenta, ¿no?
+
+10
+00:00:38,640 --> 00:00:41,680
+Totalmente, porque ahí viene la ironía.
+
+11
+00:00:41,680 --> 00:00:44,640
+Una semana después se acaba la celebración.
+
+12
+00:00:44,640 --> 00:00:50,520
+La gente de negocios, los que realmente usan esos datos para su día a día, empiezan a aparecer
+
+13
+00:00:50,520 --> 00:00:51,520
+con preguntas.
+
+14
+00:00:51,520 --> 00:00:52,520
+¡Ay!
+
+15
+00:00:52,520 --> 00:00:53,520
+Las preguntas.
+
+16
+00:00:53,920 --> 00:00:56,160
+Y son preguntas que llelen las angre.
+
+17
+00:00:56,160 --> 00:00:59,320
+Oye, ¿por qué faltan los datos de ventas de ayer?
+
+18
+00:00:59,320 --> 00:01:04,640
+O, ¿por qué los totales de este nuevo tablero no coinciden con nuestro sistema antiguo?
+
+19
+00:01:04,640 --> 00:01:10,079
+De repente, esa sensación de misión cumplida se convierte en una angustia terrible.
+
+20
+00:01:10,079 --> 00:01:12,439
+A todo mundo se le viene el mundo encima.
+
+21
+00:01:12,439 --> 00:01:13,439
+Exacto.
+
+22
+00:01:13,439 --> 00:01:18,680
+Y lo que es fascinante de este punto es que no se trata de una falla catastrófica.
+
+23
+00:01:18,680 --> 00:01:23,359
+El sistema no se cayó, no hay una alerta roja parpadiendo en un servidor.
+
+24
+00:01:23,359 --> 00:01:26,640
+El artículo lo llama una desviación silenciosa.
+
+25
+00:01:26,640 --> 00:01:28,280
+Me encanta ese término.
+
+26
+00:01:28,280 --> 00:01:34,200
+Es una erosión lenta y gradual de lo más valioso que tiene un sistema de datos.
+
+27
+00:01:34,200 --> 00:01:39,840
+La confianza de sus usuarios empieza como una pequeña duda y termina con la gente creando
+
+28
+00:01:39,840 --> 00:01:44,079
+sus propios reportes en Excel, porque ya no creen en la fuente oficial.
+
+29
+00:01:44,079 --> 00:01:44,920
+Exacto.
+
+30
+00:01:44,920 --> 00:01:46,640
+Se cae todo el teatro.
+
+31
+00:01:46,640 --> 00:01:49,599
+Y esas la idea central que queremos desmenuzar hoy.
+
+32
+00:01:49,600 --> 00:01:54,080
+El verdadero trabajo de fiabilidad y confianza no termina con el lanzamiento.
+
+33
+00:01:54,080 --> 00:01:56,080
+Ahora sí que apenas comienza.
+
+34
+00:01:56,080 --> 00:02:00,600
+No se trata de registros técnicos, sino de que la gente pueda postar su trabajo a los números
+
+35
+00:02:00,600 --> 00:02:01,600
+que ve.
+
+36
+00:02:01,600 --> 00:02:02,600
+Claro.
+
+37
+00:02:02,600 --> 00:02:08,040
+Nuestra misión entonces es explorar las siete metricas esenciales que el texto propone.
+
+38
+00:02:08,040 --> 00:02:10,600
+Para construir y mantener esa confianza.
+
+39
+00:02:10,600 --> 00:02:14,680
+Así es, el objetivo no es sólo tener un sistema que funciona.
+
+40
+00:02:14,680 --> 00:02:19,640
+Si no, un sistema en el que la gente confie para tomar decisiones críticas.
+
+41
+00:02:19,640 --> 00:02:24,439
+Aquí es donde estas metricas dejan de ser un tema de ingeniería y se convierten en un pilar,
+
+42
+00:02:24,439 --> 00:02:27,439
+pero fundamental para el estrategia del negocio.
+
+43
+00:02:27,439 --> 00:02:29,840
+Ok, vamos a desglosar esto.
+
+44
+00:02:29,840 --> 00:02:33,760
+Empecemos con las metricas que son como los cimientos de una casa.
+
+45
+00:02:33,760 --> 00:02:36,600
+La primera es la frescura de los datos.
+
+46
+00:02:36,600 --> 00:02:38,879
+La pregunta clave es super simple.
+
+47
+00:02:38,879 --> 00:02:41,879
+¿Cuán actualizado se estamos realmente?
+
+48
+00:02:41,879 --> 00:02:44,280
+Una pregunta que todos deberían hacerse.
+
+49
+00:02:44,280 --> 00:02:47,360
+El texto usa una analogía que me parece potentísima.
+
+50
+00:02:47,360 --> 00:02:49,360
+Es una promesa rota.
+
+51
+00:02:49,360 --> 00:02:53,520
+Si le vende sato equipo de ventas, un tablero que supuestamente en tiempo real.
+
+52
+00:02:53,520 --> 00:02:55,920
+Pero los datos tienen un retrato de tres horas.
+
+53
+00:02:55,920 --> 00:02:59,639
+Las decisiones que tomen se basaran en una realidad que ya no existe.
+
+54
+00:02:59,639 --> 00:03:01,120
+Están operando a ciegas.
+
+55
+00:03:01,120 --> 00:03:05,080
+Y el problema, fíjate, no es necesariamente el retrato de tres horas en sí.
+
+56
+00:03:05,080 --> 00:03:10,280
+Si la promesa es datos hasta el día de ayer, un retrato de tres horas es ir relevante.
+
+57
+00:03:10,280 --> 00:03:11,280
+Claro.
+
+58
+00:03:11,280 --> 00:03:15,280
+Veneno está en la discrepancia entre la expectativa y la realidad.
+
+59
+00:03:15,280 --> 00:03:21,120
+Cuando se rompe esa promesa de tiempo real, cada número en ese tablero se vuelve sus pechoso.
+
+60
+00:03:21,120 --> 00:03:24,039
+La credibilidad del equipo de datos se va por el caño.
+
+61
+00:03:24,039 --> 00:03:27,039
+Y recuperarles difícilísimo.
+
+62
+00:03:27,039 --> 00:03:28,759
+Increíblemente difícil.
+
+63
+00:03:28,759 --> 00:03:30,879
+Es una herida que tarda mucho en sanar.
+
+64
+00:03:30,879 --> 00:03:35,319
+Claro, y la solución que se propone es bastante práctica.
+
+65
+00:03:35,319 --> 00:03:38,159
+No se trata de magia, sino de monitorear.
+
+66
+00:03:38,159 --> 00:03:43,400
+Para estrear las marcas de tiempo, revisar las tablas de metadatos del sistema, y lo más
+
+67
+00:03:43,400 --> 00:03:45,759
+importante, configurar alertas.
+
+68
+00:03:45,759 --> 00:03:51,719
+Algo sencillo, algo tan sencillo como, habísame si la tabla principal de ventas no se ha actualizado
+
+69
+00:03:51,719 --> 00:03:53,280
+en la última hora.
+
+70
+00:03:53,280 --> 00:03:55,519
+Es un seguro contra esa promesa rota.
+
+71
+00:03:55,519 --> 00:03:59,479
+Es la forma proactiva de decirle al negocio, confía en los otros.
+
+72
+00:03:59,479 --> 00:04:00,479
+Estamos vigilando.
+
+73
+00:04:00,479 --> 00:04:05,919
+Totalmente, ahora la segunda metrica de estos cimientos es la completitud.
+
+74
+00:04:05,920 --> 00:04:08,640
+La pregunta aquí es, ¿no os falta algo?
+
+75
+00:04:08,640 --> 00:04:09,640
+Otra pregunta clave.
+
+76
+00:04:09,640 --> 00:04:12,880
+El ejemplo numerico del texto es clarísimo.
+
+77
+00:04:12,880 --> 00:04:18,680
+Imagino un proceso que normalmente carga a no sé, 10 millones de filas de datos cada día.
+
+78
+00:04:18,680 --> 00:04:23,600
+Pero hoy, por alguna razón, sólo carga 8.5 millones.
+
+79
+00:04:23,600 --> 00:04:25,879
+Es una caída del 15%.
+
+80
+00:04:25,879 --> 00:04:28,560
+Es una bandera roja gigantesca.
+
+81
+00:04:28,560 --> 00:04:33,120
+Lo interesante es cómo se monitorea esto de forma inteligente.
+
+82
+00:04:33,120 --> 00:04:35,680
+No es sólo un conteo de filas absoluto.
+
+83
+00:04:35,680 --> 00:04:37,720
+¿Por qué los negocios tienen ciclos, ¿no?
+
+84
+00:04:37,720 --> 00:04:39,720
+Claro, no todos los días oniguales.
+
+85
+00:04:39,720 --> 00:04:40,720
+Exacto.
+
+86
+00:04:40,720 --> 00:04:46,280
+La práctica recomendada es comparar el conteo de hoy contra un promedio histórico, digamos,
+
+87
+00:04:46,280 --> 00:04:48,639
+de los últimos 7 o 14 días.
+
+88
+00:04:48,639 --> 00:04:53,280
+Si la desviación por centual supera un umbral que tú defines, se dispara una alerta.
+
+89
+00:04:53,280 --> 00:04:55,720
+Ok, eso tiene mucho sentido.
+
+90
+00:04:55,720 --> 00:04:58,879
+Y hay un matí es importante que el artículo añade.
+
+91
+00:04:58,879 --> 00:05:00,879
+No sólo hay que contar filas.
+
+92
+00:05:00,879 --> 00:05:06,480
+También hay que vigilar el aumento subito de valores nulos en colunas clave.
+
+93
+00:05:06,480 --> 00:05:08,120
+Eso es muy interesante.
+
+94
+00:05:08,120 --> 00:05:12,680
+Porque a primera vista, una pensaría que con contar las filas es suficiente.
+
+95
+00:05:12,680 --> 00:05:17,040
+Pero lo que dice es implica que una tabla puede estar completo en volumen, pero vacía
+
+96
+00:05:17,040 --> 00:05:18,040
+en valor.
+
+97
+00:05:18,040 --> 00:05:21,600
+Justo es una forma de engaño mucho más útil.
+
+98
+00:05:21,600 --> 00:05:25,199
+Mucho más, puedes tener tus 10 millones de filas.
+
+99
+00:05:25,199 --> 00:05:30,079
+Pero si a la mitad le falta el dato del monto de venta, tu reporte de ingresos de
+
+100
+00:05:30,079 --> 00:05:32,439
+ese día es una ficción.
+
+101
+00:05:32,439 --> 00:05:35,599
+Es una forma silenciosa de corrupción de datos.
+
+102
+00:05:35,599 --> 00:05:39,919
+Y eso nos conecta perfectamente con el tercer pilar de estos cimientos.
+
+103
+00:05:39,919 --> 00:05:41,479
+La esactitud.
+
+104
+00:05:41,479 --> 00:05:44,279
+La pregunta es la más directa de todas.
+
+105
+00:05:44,279 --> 00:05:46,120
+¿Suman bien los números?
+
+106
+00:05:46,120 --> 00:05:47,639
+La prueba de fuego.
+
+107
+00:05:47,639 --> 00:05:49,680
+Esto es la reconciliación puraidura.
+
+108
+00:05:49,680 --> 00:05:51,839
+El texto lo dice sin rodeos.
+
+109
+00:05:51,839 --> 00:05:57,079
+Si tu nuevo inflamante data warehouse dice que los ingresos de ayer fueron de 1.5 millones
+
+110
+00:05:57,079 --> 00:05:58,079
+de dólares.
+
+111
+00:05:58,120 --> 00:06:05,039
+La fuente original, como Salesforce, dice que fueron 1.48 millones, adiós confianza.
+
+112
+00:06:05,039 --> 00:06:07,839
+La confianza se evapora en ese instante.
+
+113
+00:06:07,839 --> 00:06:10,439
+Y no es solo que no crean en el nuevo sistema.
+
+114
+00:06:10,439 --> 00:06:11,800
+Es solo peor.
+
+115
+00:06:11,800 --> 00:06:16,360
+La gente empieza a crear sus propios sistemas de la verdad en hojas de cálculo.
+
+116
+00:06:16,360 --> 00:06:17,719
+El negocio se fractura.
+
+117
+00:06:17,719 --> 00:06:19,799
+Claro, cada quien con sus datos.
+
+118
+00:06:19,799 --> 00:06:22,120
+Era equipo de financias sopera con un número.
+
+119
+00:06:22,120 --> 00:06:23,519
+Marque ti en con otro.
+
+120
+00:06:23,519 --> 00:06:27,399
+Se gasta en horas en reuniones discutiendo cuál es el número real.
+
+121
+00:06:27,400 --> 00:06:31,600
+En lugar de decidir que hacer con el número, esa es la verdadera muerte por mil
+
+122
+00:06:31,600 --> 00:06:33,640
+cortes de la mala exactitud.
+
+123
+00:06:33,640 --> 00:06:36,640
+Entonces, ¿cómo se evita esa catástrofe?
+
+124
+00:06:36,640 --> 00:06:40,640
+Porque no puede ser alguien revisando manualmente los números cada mañana.
+
+125
+00:06:40,640 --> 00:06:41,640
+Imposible.
+
+126
+00:06:41,640 --> 00:06:43,040
+No es escalable.
+
+127
+00:06:43,040 --> 00:06:48,600
+La solución robusta, la que realmente construye confianza, es construir jobs de reconciliación
+
+128
+00:06:48,600 --> 00:06:49,960
+automatizados.
+
+129
+00:06:49,960 --> 00:06:54,760
+Son pequeños programas que corren constantemente comparando las sumas agregadas de métricas
+
+130
+00:06:54,760 --> 00:06:57,240
+clave entre el sistema de origen y el de destino.
+
+131
+00:06:57,240 --> 00:06:58,240
+Siempre corriendo.
+
+132
+00:06:58,240 --> 00:06:59,240
+Siempre.
+
+133
+00:06:59,240 --> 00:07:02,759
+La meta es que sean idénticos, todo el tiempo.
+
+134
+00:07:02,759 --> 00:07:07,360
+Qualquier desviación por mínima que sea, debe generar una alerta inmediata para que el equipo
+
+135
+00:07:07,360 --> 00:07:10,199
+le investigue antes de que llega a los ojos del negocio.
+
+136
+00:07:10,199 --> 00:07:11,199
+Perfecto.
+
+137
+00:07:11,199 --> 00:07:16,720
+Entonces, ya cubrimos los cimientos, sabemos que los datos están ahí, completitud, que
+
+138
+00:07:16,720 --> 00:07:20,960
+llegaron a tiempo, frescura y que las sumas cuadran, exactitud.
+
+139
+00:07:20,960 --> 00:07:24,160
+Ahora la conversación se pone más profunda.
+
+140
+00:07:24,160 --> 00:07:25,759
+La pregunta cambia a.
+
+141
+00:07:25,759 --> 00:07:29,399
+¿Ok, pero ¿tienen sentido estos datos?
+
+142
+00:07:29,399 --> 00:07:34,480
+Es el siguiente nivel de madurez en la calidad de datos, pasar de la validación quantitativea
+
+143
+00:07:34,480 --> 00:07:36,240
+a la cualitativa y lógica.
+
+144
+00:07:36,240 --> 00:07:37,240
+Exacto.
+
+145
+00:07:37,240 --> 00:07:39,439
+Y aquí entra la cuarta métrica.
+
+146
+00:07:39,439 --> 00:07:40,439
+Consistencia.
+
+147
+00:07:40,439 --> 00:07:45,560
+La pregunta es, ¿todas las definiciones significan lo mismo en todas partes?
+
+148
+00:07:45,560 --> 00:07:48,240
+El ejemplo de los usuarios activos simplemente perfecto.
+
+149
+00:07:48,240 --> 00:07:49,560
+Uf, el clásico.
+
+150
+00:07:49,560 --> 00:07:55,240
+¿Qué pasa si el nuevo tablero define un usuario activo como alguien que inició sesión en
+
+151
+00:07:55,240 --> 00:07:57,040
+los últimos 7 días?
+
+152
+00:07:57,040 --> 00:08:01,960
+El sistema de VIA y lo define como alguien que realiza una de la compra en los últimos 30, y el
+
+153
+00:08:01,960 --> 00:08:05,079
+reporte en TIGOL lo definía de una tercera forma.
+
+154
+00:08:05,079 --> 00:08:10,600
+Es el clásico, síndrome de la torre de Babel de los Gatos, pero lo que me parece más peligroso,
+
+155
+00:08:10,600 --> 00:08:13,960
+es que a menudo nadie se da cuenta hasta que es demasiado tarde.
+
+156
+00:08:13,960 --> 00:08:15,519
+Como en una Junta importante.
+
+157
+00:08:15,519 --> 00:08:16,519
+Justo.
+
+158
+00:08:16,519 --> 00:08:22,000
+En una Junta Directiva, cuando 3 vicepresidentes presentan 3 números distintos para el mismo indicador
+
+159
+00:08:22,000 --> 00:08:23,000
+clave.
+
+160
+00:08:23,000 --> 00:08:28,120
+Es una humillación pública para el equipo de datos y peor, paraliza la toma de decisiones.
+
+161
+00:08:28,120 --> 00:08:29,120
+Es una pesadilla.
+
+162
+00:08:29,120 --> 00:08:35,919
+Y me pregunto, es esto un problema puramente técnico, porque la solución que propone el texto,
+
+163
+00:08:35,919 --> 00:08:40,039
+la capa se mantiga, suena más a un cambio de cultura y gobernanza.
+
+164
+00:08:40,039 --> 00:08:46,000
+Es que lo es, totalmente, no es un arreglo técnico rápido, es una solución estratégica.
+
+165
+00:08:46,000 --> 00:08:50,320
+Se trata de crear un lugar centralizado, una especie de diccionario de negocio, donde
+
+166
+00:08:50,320 --> 00:08:51,320
+las definiciones clave.
+
+167
+00:08:51,640 --> 00:08:54,440
+Como usuario activo ingreso neto.
+
+168
+00:08:54,440 --> 00:09:00,720
+Ingrreso neto, cliente nuevo, exacto, se establecen una sola vez, acordadas por todos los líderes
+
+169
+00:09:00,720 --> 00:09:01,720
+de negocio.
+
+170
+00:09:01,720 --> 00:09:07,480
+A partir de ahí todos los sistemas tableros y reportes, con suena la definición de esa fuente única.
+
+171
+00:09:07,480 --> 00:09:09,720
+Se elimina la ambiguidad de raíz.
+
+172
+00:09:09,720 --> 00:09:12,280
+Es más un tratado de paz que un pedazo de código.
+
+173
+00:09:12,280 --> 00:09:17,440
+MENCANTES A VICIÓN, la siguiente, la número 5, es la unicidad.
+
+174
+00:09:17,440 --> 00:09:19,840
+El artículo usa una frase que se me quedó grabada.
+
+175
+00:09:19,840 --> 00:09:22,040
+Esto, mata la credibilidad.
+
+176
+00:09:22,040 --> 00:09:23,760
+Durísimo, pero cierto.
+
+177
+00:09:23,760 --> 00:09:25,360
+Y es muy fácil de entender.
+
+178
+00:09:25,360 --> 00:09:30,760
+Si una sola entrada de ingresos de mil dólares por un error en el proceso aparece duplicada,
+
+179
+00:09:30,760 --> 00:09:33,520
+tu reporte de ingresos totales está inflado.
+
+180
+00:09:33,520 --> 00:09:34,760
+Es incorrecto.
+
+181
+00:09:34,760 --> 00:09:40,240
+Y si eso pasa una vez, como puedes confiar en que no está pasando con cientos y otras entradas.
+
+182
+00:09:40,240 --> 00:09:42,240
+La detección aquí tiene dos capas.
+
+183
+00:09:42,240 --> 00:09:44,120
+La primera es la obia.
+
+184
+00:09:44,120 --> 00:09:47,120
+Verificar que las claves primarias de tus tablas,
+
+185
+00:09:47,120 --> 00:09:52,240
+eso se identificadores que se supone son únicos, realmente lo sean, lo básico.
+
+186
+00:09:52,240 --> 00:09:55,919
+Pero la segunda capa es más útil y a menuvo más importante.
+
+187
+00:09:55,919 --> 00:10:00,679
+Se trata de buscar filas que son duplicadas basándose no en una sola clave, sino en un subconjunto
+
+188
+00:10:00,679 --> 00:10:04,480
+de columnas que, en conjunto, deberían ser únicas.
+
+189
+00:10:04,480 --> 00:10:05,840
+A ver, ¿cómo sería eso?
+
+190
+00:10:05,840 --> 00:10:11,159
+Por ejemplo, el mismo cliente comprando el mismo producto en el mismo segundo.
+
+191
+00:10:11,159 --> 00:10:17,080
+Eso es muy sospechoso y probablemente un duplicado que una simple clave primaria no detectaría.
+
+192
+00:10:17,280 --> 00:10:23,160
+Esa segunda capa es la que da miedo, la que se puede esconder a plena vista durante meses.
+
+193
+00:10:23,160 --> 00:10:29,120
+Y eso nos lleva a la sexta metrica, que admito que es mi favorita por su lógica implacable.
+
+194
+00:10:29,120 --> 00:10:30,440
+La validez.
+
+195
+00:10:30,440 --> 00:10:32,440
+Jaja, ¿por qué tu favorita?
+
+196
+00:10:32,440 --> 00:10:36,879
+Porque se base en lo que el texto llama a los hechos de hierro del mundo real.
+
+197
+00:10:36,879 --> 00:10:40,280
+Hay cosas que simplemente no pueden ser verdad.
+
+198
+00:10:40,280 --> 00:10:42,240
+Los ejemplos son memorables.
+
+199
+00:10:42,240 --> 00:10:46,879
+Un código postal de Estados Unidos que contenga letras o la edad de un usuario registrada
+
+200
+00:10:46,879 --> 00:10:49,120
+como 999.
+
+201
+00:10:49,120 --> 00:10:52,320
+Claro, son errores que rompen la lógica del mundo.
+
+202
+00:10:52,320 --> 00:10:57,200
+Recuerda un caso en una empresa de rite el donde, por un errore de carga, miles de órdenes
+
+203
+00:10:57,200 --> 00:11:01,000
+aparecieron con fecha del año 1970.
+
+204
+00:11:01,000 --> 00:11:03,039
+El inicio del tiempo de unix.
+
+205
+00:11:03,039 --> 00:11:08,200
+Exacto, el sistema de vía intentó calcular la antigüedad del cliente.
+
+206
+00:11:08,200 --> 00:11:10,399
+Y los resultados fueron absurdos.
+
+207
+00:11:10,399 --> 00:11:13,120
+Teníamos clientes de 50 años.
+
+208
+00:11:13,120 --> 00:11:18,120
+Fue gracioso por un momento, pero paralizó la análisis de la alta por una semana.
+
+209
+00:11:18,120 --> 00:11:19,120
+Valla.
+
+210
+00:11:19,120 --> 00:11:21,559
+Ahí tienes la importancia de la validez.
+
+211
+00:11:21,559 --> 00:11:23,759
+Estos no son errores sutiles de cálculo.
+
+212
+00:11:23,759 --> 00:11:29,240
+Son datos fundamentalmente inválidos que indican un problema grave en el proceso.
+
+213
+00:11:29,240 --> 00:11:31,079
+¿Y cómo se ataca eso?
+
+214
+00:11:31,079 --> 00:11:34,639
+Las soluciones definir reglas de negocio muy claras y codificarlas.
+
+215
+00:11:34,639 --> 00:11:40,360
+Por ejemplo, definir que el campo edad solo pueda aceptar valores en un rango de 0 a 120.
+
+216
+00:11:41,279 --> 00:11:42,759
+Limites lógicos.
+
+217
+00:11:42,759 --> 00:11:44,320
+Limites lógicos.
+
+218
+00:11:44,320 --> 00:11:49,480
+O que un campo de código postal debe coincidir con un formato específico, lo que se puede
+
+219
+00:11:49,480 --> 00:11:52,840
+verificar con una expresión regular o reggues.
+
+220
+00:11:52,840 --> 00:11:57,600
+Cuálquier dato que rompa esas reglas se marca automáticamente como inválido y se saca
+
+221
+00:11:57,600 --> 00:12:00,600
+de la análisis hasta que se corriga en la fuente.
+
+222
+00:12:00,600 --> 00:12:03,000
+Llegamos a la última, la número 7.
+
+223
+00:12:03,000 --> 00:12:04,480
+Linaje de datos.
+
+224
+00:12:04,480 --> 00:12:06,399
+La analogía de la artículo es brillante.
+
+225
+00:12:06,399 --> 00:12:09,519
+La describe como él, ¿dónde está gualdo de los datos?
+
+226
+00:12:09,519 --> 00:12:11,519
+Me parece perfecta zanalogía.
+
+227
+00:12:11,519 --> 00:12:15,639
+Y se resumen la pregunta que todo analista o ingeniero de datos teme.
+
+228
+00:12:15,639 --> 00:12:19,639
+Alguien de alto rango señala un número en un tablero final y pregunta.
+
+229
+00:12:19,639 --> 00:12:21,639
+¿Dónde salió esto exactamente?
+
+230
+00:12:21,639 --> 00:12:24,879
+Si no puedes responder, la confianza se tambalea.
+
+231
+00:12:24,879 --> 00:12:26,159
+Se desploma.
+
+232
+00:12:26,159 --> 00:12:29,919
+El linaje es la herramienta de depuración y trasabilidad definitiva.
+
+233
+00:12:29,919 --> 00:12:34,759
+Es la capacidad de rastrear un dato específico un número en un tablero hacia atrás.
+
+234
+00:12:34,759 --> 00:12:35,759
+Todo al camino.
+
+235
+00:12:35,759 --> 00:12:40,759
+Todo el camino hacia atrás, a través de todas sus transformaciones, filtros, uniones y
+
+236
+00:12:40,759 --> 00:12:46,480
+agregaciones hasta llegar a la tabla y fila de origen exacta de dónde provino.
+
+237
+00:12:46,480 --> 00:12:50,120
+No es solo crucial para resolver problemas cuando algo sale mal.
+
+238
+00:12:50,120 --> 00:12:54,759
+El simple hecho de tener esa capacidad construy una confianza profundísima.
+
+239
+00:12:54,759 --> 00:12:57,919
+Es como poder mostrarle a alguien el motor de la auto.
+
+240
+00:12:57,919 --> 00:13:02,120
+Justo para que vea que todo este orden y sepa de dónde viene cada pieza.
+
+241
+00:13:02,120 --> 00:13:06,000
+Entonces, si juntamos todo esto, ¿cuál es la gran conclusión?
+
+242
+00:13:06,000 --> 00:13:08,600
+El artículo resumen una frase clásica.
+
+243
+00:13:08,600 --> 00:13:13,600
+No puedes gestionar lo que no mides y la propuesta final que unifica todo.
+
+244
+00:13:13,600 --> 00:13:17,759
+Es crear un único panel de salud de datos o data gel dashboard.
+
+245
+00:13:17,759 --> 00:13:18,759
+La pieza central.
+
+246
+00:13:18,759 --> 00:13:25,759
+Un solo lugar donde esta 7 métricas se visualizan con un simple check verde de todo bien o una
+
+247
+00:13:25,759 --> 00:13:28,240
+ex-roja de hay un problema.
+
+248
+00:13:28,240 --> 00:13:30,919
+El poder de ese panel es inmenso.
+
+249
+00:13:30,920 --> 00:13:34,880
+Forma la calidad de los datos de un concepto abstracto y técnico en algo tangible y
+
+250
+00:13:34,880 --> 00:13:36,880
+visible para toda la organización.
+
+251
+00:13:36,880 --> 00:13:41,840
+De un solo vistazo, cualquiera, desde un ingeniero hasta la directora general, puede confirmar
+
+252
+00:13:41,840 --> 00:13:43,280
+la salud del sistema.
+
+253
+00:13:43,280 --> 00:13:45,880
+Democratiza la confianza en los datos.
+
+254
+00:13:45,880 --> 00:13:46,880
+Exacto.
+
+255
+00:13:46,880 --> 00:13:50,040
+Y aquí es donde entra el concepto final de la artículo.
+
+256
+00:13:50,040 --> 00:13:55,000
+La automatización de todas estas revisiones es una máquina del tiempo.
+
+257
+00:13:55,000 --> 00:14:00,040
+De vuelve al equipo las horas y horas que de otro modo pasarían apagando incendios.
+
+258
+00:14:00,039 --> 00:14:04,919
+Y les permite usar ese tiempo para construir más valor y sobre todo más confianza.
+
+259
+00:14:04,919 --> 00:14:08,679
+Me quedo con una de las frases finales de la autor para cerrar.
+
+260
+00:14:08,679 --> 00:14:12,079
+La calidad de datos es un viaje no un destino.
+
+261
+00:14:12,079 --> 00:14:16,959
+No es un proyecto con un inicio y un fin como esa migración con la que empezamos.
+
+262
+00:14:16,959 --> 00:14:22,959
+Es un proceso contino, una disciplina pro-activa para mantener un sistema de datos saludable.
+
+263
+00:14:22,959 --> 00:14:26,159
+Y para dejar una idea final para la reflexión.
+
+264
+00:14:26,159 --> 00:14:31,879
+Si este panel de salud de datos fuera público y visible para toda una organización, proyectado
+
+265
+00:14:31,879 --> 00:14:36,600
+en las pantallas de las oficinas, como cambiaría la forma en que se usan y se habla de
+
+266
+00:14:36,600 --> 00:14:37,600
+los datos.
+
+267
+00:14:37,600 --> 00:14:40,959
+¿Y es una pregunta muy interesante?
+
+268
+00:14:40,959 --> 00:14:45,919
+¿Qué conversaciones iniciarían si la métrica de Exactitud de repente pasara de verde
+
+269
+00:14:45,919 --> 00:14:46,919
+a rojo?
+
+270
+00:14:46,919 --> 00:14:51,199
+Incluso solo por una hora, justo antes de una reunión importante de estrategia.
+
+271
+00:14:51,200 --> 00:14:55,560
+Se puede cambiar fundamentalmente la cultura de datos de una empresa, forzado a todos
+
+272
+00:14:55,560 --> 00:14:57,400
+a tomarse la calidad en serio.
+
+273
+00:14:57,400 --> 00:15:01,680
+No como un problema de los desistemas, sino por una responsabilidad de todos.
+

@@ -1,0 +1,1036 @@
+1
+00:00:00,000 --> 00:00:05,120
+Oye, te ha pasado que trabajas en un empresa grande, necesita un dato, uno solo, para un
+
+2
+00:00:05,120 --> 00:00:11,800
+reporte y la respuesta es. Claro, levanto un ticket y entresemanas el equipo de datos de contesta.
+
+3
+00:00:11,800 --> 00:00:14,560
+Uf, sí, la historia de siempre.
+
+4
+00:00:14,560 --> 00:00:19,480
+Es de las cosas más frustrantes que hay. Y bueno, mientras más grande la compañía,
+
+5
+00:00:19,480 --> 00:00:20,320
+peor se pone.
+
+6
+00:00:20,320 --> 00:00:21,320
+Totalmente.
+
+7
+00:00:21,320 --> 00:00:27,120
+De atrás de esa espera, infinita hay un problema estructural. Pues gigantesco. Y justo
+
+8
+00:00:27,120 --> 00:00:32,520
+por eso, últimamente no paro de escuchar un término en todos lados. Maya de datos,
+
+9
+00:00:32,520 --> 00:00:33,920
+o data mesh.
+
+10
+00:00:33,920 --> 00:00:35,320
+Esta por todos lados, sí.
+
+11
+00:00:35,320 --> 00:00:40,120
+La misión de hoy es entender si esto es pura humo o sea, otra palabra de moda, o
+
+12
+00:00:40,120 --> 00:00:44,439
+si de verdad hay algo de fondo. Para eso, nos vamos a clavar en una análisis que nos
+
+13
+00:00:44,439 --> 00:00:47,320
+llegó y que trae una sorpresa desde el principio.
+
+14
+00:00:47,320 --> 00:00:53,680
+¿Cuál? Que la solución no es comprar más tecnología. Si no algo mucho más, profundo.
+
+15
+00:00:53,679 --> 00:01:00,799
+Es que justo allí está el meollo de la Sunto. La fuente lo define como un paradigma sociotechnico.
+
+16
+00:01:00,799 --> 00:01:03,119
+Suena muy rimbombante.
+
+17
+00:01:03,119 --> 00:01:07,120
+Y lo es. Pero esas dos palabras son la clave de todo.
+
+18
+00:01:07,120 --> 00:01:12,400
+Técnico por la arquitectura, claro. Pero socio por la gente, por la estructura de organización.
+
+19
+00:01:12,400 --> 00:01:13,400
+Entiendo.
+
+20
+00:01:13,400 --> 00:01:18,200
+Lo que vamos a ver es que la forma en que una empresa organiza sus datos es un espejo perfecto
+
+21
+00:01:18,200 --> 00:01:22,719
+de cómo está organizada la empresa misma. Si uno de los dos está roto, el otro simplemente
+
+22
+00:01:22,719 --> 00:01:23,719
+no puede funcionar.
+
+23
+00:01:23,719 --> 00:01:28,760
+A ver, para entender la solución, creo que primero tenemos que entender bien el problema.
+
+24
+00:01:28,760 --> 00:01:33,879
+O sea, ¿por qué mi reporte tarde a tres semanas? ¿Cómo funcionan las cosas ahora en la mayoría
+
+25
+00:01:33,879 --> 00:01:36,599
+de las empresas para que todo sea tan lento?
+
+26
+00:01:36,599 --> 00:01:41,159
+Pues el modelo que predomina hoy es lo que llamamos una arquitectura monolítica.
+
+27
+00:01:41,159 --> 00:01:42,159
+Monolítica.
+
+28
+00:01:42,159 --> 00:01:49,159
+Sí. Imagina que todos los datos de la empresa. Absolutamente todos. Ventas, marketing, operaciones,
+
+29
+00:01:49,159 --> 00:01:54,560
+financias se mandan a un solo lugar. Un repositorio central gigante.
+
+30
+00:01:54,560 --> 00:01:57,959
+Un data lake o data warehouse, de esos.
+
+31
+00:01:57,959 --> 00:02:03,159
+Exacto. Y ahí, en el centro, hay un equipo especializado de datos que se encarga.
+
+32
+00:02:03,159 --> 00:02:04,159
+Pues de todo.
+
+33
+00:02:04,159 --> 00:02:09,960
+Ah, claro. El análisis que le ímos usa una analogía que me pareció buenísima para explicar
+
+34
+00:02:09,960 --> 00:02:10,960
+eso.
+
+35
+00:02:10,960 --> 00:02:11,960
+La de la biblioteca?
+
+36
+00:02:11,960 --> 00:02:17,960
+Esa misma. Decía que es como tener una biblioteca gigantesca. Con libros de todos los temas
+
+37
+00:02:17,960 --> 00:02:23,960
+posibles. Física cuántica repostería francesa y historia del imperio romano.
+
+38
+00:02:23,960 --> 00:02:25,560
+Y un solo bibliotecario.
+
+39
+00:02:25,560 --> 00:02:28,159
+Pero con un solo bibliotecario para todo.
+
+40
+00:02:28,159 --> 00:02:33,280
+Exactamente es la imagen. Y ese pobre bibliotecario no solo tiene que recibir los libros.
+
+41
+00:02:33,280 --> 00:02:38,240
+Tiene que leerlos, entenderlos, clasificarlos, ponerlos en el estante correcto.
+
+42
+00:02:38,240 --> 00:02:44,680
+Y luego, cuando alguien pina algo, tiene que saber exactamente dónde encontrar la página 34
+
+43
+00:02:44,680 --> 00:02:51,080
+del libro de Repostería y la fórmula del libro de Física para combinarlas en un nuevo reporte.
+
+44
+00:02:51,080 --> 00:02:53,080
+Es humanamente imposible.
+
+45
+00:02:53,080 --> 00:02:54,080
+Imposible.
+
+46
+00:02:54,080 --> 00:02:59,240
+Se vuelve en cuello de botella monumental. Por más brillante que sea el equipo central de datos,
+
+47
+00:02:59,240 --> 00:03:04,120
+no pueden ser expertos en la logística de la cadena de su ministro y al mismo tiempo en las
+
+48
+00:03:04,120 --> 00:03:07,560
+sutilesas de una campaña de marketing en redes sociales.
+
+49
+00:03:07,560 --> 00:03:09,680
+El contexto se pierde por completo.
+
+50
+00:03:09,680 --> 00:03:10,680
+Claro.
+
+51
+00:03:10,680 --> 00:03:13,719
+Y ese es el punto fundamental que subrá ya la análisis.
+
+52
+00:03:13,719 --> 00:03:18,639
+Este modelo ya no es cala. Pero lo más interesante es que no es por una limitación
+
+53
+00:03:18,639 --> 00:03:19,840
+tecnológica.
+
+54
+00:03:19,840 --> 00:03:21,439
+No es que falten computadoras.
+
+55
+00:03:21,439 --> 00:03:24,439
+Para nada, el poder de computo es casi infinito.
+
+56
+00:03:24,439 --> 00:03:30,400
+Hoy es por una limitación organizacional. La complejidad del negocio moderno simplemente reba
+
+57
+00:03:30,400 --> 00:03:33,759
+sola capacidad de un equipo central para entenderlo todo.
+
+58
+00:03:33,759 --> 00:03:39,199
+Ok, entiendo el cuello de botella. Pero lo que no me cuadra es que todas las empresas
+
+59
+00:03:39,200 --> 00:03:41,720
+hoy dicen que quieren ser ágiles.
+
+60
+00:03:41,720 --> 00:03:42,720
+Todas.
+
+61
+00:03:42,720 --> 00:03:48,040
+Que quieren moverse rápido con equipos autónomos que tomen decisiones y al mismo tiempo tienen
+
+62
+00:03:48,040 --> 00:03:51,560
+esta ancla gigantesca y burocrática en sus datos.
+
+63
+00:03:51,560 --> 00:03:53,760
+Es una contradicción total.
+
+64
+00:03:53,760 --> 00:03:56,040
+Como llegamos a este desajuste.
+
+65
+00:03:56,040 --> 00:04:01,960
+Para explicar ese desajuste, la fuente introduce una idea de los años 60 que es sorprendentemente
+
+66
+00:04:01,960 --> 00:04:02,960
+vigente.
+
+67
+00:04:02,960 --> 00:04:04,960
+La ley de Conway.
+
+68
+00:04:04,960 --> 00:04:05,960
+La ley de Conway?
+
+69
+00:04:05,960 --> 00:04:06,960
+Sí.
+
+70
+00:04:06,960 --> 00:04:11,760
+Resumen, lo que dice es que una organización inevitablemente diseña sistemas que son un
+
+71
+00:04:11,760 --> 00:04:14,040
+reflejo de su propia estructura de comunicación.
+
+72
+00:04:14,040 --> 00:04:18,079
+O sea, dime como te comunicas y te diré como estos software.
+
+73
+00:04:18,079 --> 00:04:19,079
+Básicamente.
+
+74
+00:04:19,079 --> 00:04:20,639
+Bien se listoria.
+
+75
+00:04:20,639 --> 00:04:23,439
+Por décadas, las empresas fueron pirámides.
+
+76
+00:04:23,439 --> 00:04:27,759
+Gerárgicas, centralizadas, con la información fluyendo de arriba para abajo.
+
+77
+00:04:27,759 --> 00:04:29,040
+Muy rígidas.
+
+78
+00:04:29,040 --> 00:04:30,439
+Super rígidas.
+
+79
+00:04:30,439 --> 00:04:33,759
+Y qué tipo de arquitecturas de datos construimos.
+
+80
+00:04:33,759 --> 00:04:35,759
+Es monolitos centralizados.
+
+81
+00:04:35,759 --> 00:04:38,639
+Quieran un espejo perfecto de esa pirámide.
+
+82
+00:04:38,639 --> 00:04:40,279
+Tenía lógica en su momento.
+
+83
+00:04:40,279 --> 00:04:42,439
+Claro, el sistema reflejaba la empresa.
+
+84
+00:04:42,439 --> 00:04:45,159
+El problema es que la organización cambió.
+
+85
+00:04:45,159 --> 00:04:50,039
+Hoy se habla de equipos multidisciplinarios de operar en red, de autonomía.
+
+86
+00:04:50,039 --> 00:04:52,879
+La empresa quiere ser una flotilla de lanchas rápidas.
+
+87
+00:04:52,879 --> 00:04:56,959
+Pero su sistema de datos sigue siendo un búque petrolero lento y pesado.
+
+88
+00:04:56,959 --> 00:04:57,959
+Justo.
+
+89
+00:04:57,959 --> 00:05:01,519
+La maia de datos surge precisamente para resolver esa atención.
+
+90
+00:05:01,519 --> 00:05:06,240
+Para alinear por fin la arquitectura de los datos con esta nueva realidad organizacional,
+
+91
+00:05:06,240 --> 00:05:07,240
+que opera en red.
+
+92
+00:05:07,240 --> 00:05:08,240
+Un momento.
+
+93
+00:05:08,240 --> 00:05:13,399
+Si el problema es la centralización y la solución es una descentralización radical.
+
+94
+00:05:13,399 --> 00:05:15,680
+A mí eso me suena volver al caos de antes.
+
+95
+00:05:15,680 --> 00:05:17,680
+Es la primera reacción de todo el mundo.
+
+96
+00:05:17,680 --> 00:05:23,000
+Me imagino a cada departamento con sus propios archivos de excel, sus bases de datos secretas
+
+97
+00:05:23,000 --> 00:05:24,839
+y en compartir nada.
+
+98
+00:05:24,839 --> 00:05:29,599
+No estamos simplemente cambiando un gran cuello de botella por cientos de pequeños cilos
+
+99
+00:05:29,600 --> 00:05:31,080
+de información aislados.
+
+100
+00:05:31,080 --> 00:05:32,800
+Es la pregunta del millón.
+
+101
+00:05:32,800 --> 00:05:34,920
+¿Qué lo hace diferente esta vez?
+
+102
+00:05:34,920 --> 00:05:38,200
+Es la crítica más inteligente que se le puede hacer al concepto.
+
+103
+00:05:38,200 --> 00:05:43,200
+Y la respuesta es que no es una descentralización caótica de salves de quien pueda.
+
+104
+00:05:43,200 --> 00:05:45,960
+El paradigma se sostiene sobre cuatro pilares.
+
+105
+00:05:45,960 --> 00:05:48,560
+Pero hay dos que son el corazón cultural de la idea,
+
+106
+00:05:48,560 --> 00:05:52,680
+y que están diseñados específicamente para evitar que se creen esos cilos.
+
+107
+00:05:52,680 --> 00:05:54,080
+¿O qué? ¿Cuál es son?
+
+108
+00:05:54,080 --> 00:05:57,080
+El primero es la propiedad de los datos orientada al dominio.
+
+109
+00:05:57,080 --> 00:05:58,280
+Suena complicado.
+
+110
+00:05:58,280 --> 00:06:00,240
+Pero la idea es muy simple.
+
+111
+00:06:00,240 --> 00:06:04,640
+El equipo que genera y entiende los datos se hace responsable de ellos de principio
+
+112
+00:06:04,640 --> 00:06:05,640
+a fin.
+
+113
+00:06:05,640 --> 00:06:07,080
+El equipo de marketing, por ejemplo.
+
+114
+00:06:07,080 --> 00:06:08,080
+OK.
+
+115
+00:06:08,080 --> 00:06:11,240
+Ellos son los expertos en los datos de sus campañas.
+
+116
+00:06:11,240 --> 00:06:16,440
+Tienen el contexto para saber si un dato es de buena calidad que significa cadamétrica
+
+117
+00:06:16,440 --> 00:06:18,400
+como se debe interpretar.
+
+118
+00:06:18,400 --> 00:06:23,400
+Entonces se les da la autonomía, pero también la responsabilidad total sobre sus datos.
+
+119
+00:06:23,400 --> 00:06:25,480
+Bien, eso tiene sentido.
+
+120
+00:06:25,480 --> 00:06:28,840
+Los expertos se hacen cargo de sus propios datos.
+
+121
+00:06:28,840 --> 00:06:32,360
+Pero eso no resuelve mi duda de cómo se comparten.
+
+122
+00:06:32,360 --> 00:06:36,560
+¿Cómo se evita que el equipo de marketing guardes sus datos bajo llave?
+
+123
+00:06:36,560 --> 00:06:40,520
+Hay un de entra el segundo pilar que es el verdadero cambio de juego.
+
+124
+00:06:40,520 --> 00:06:43,120
+El principio de datos como producto.
+
+125
+00:06:43,120 --> 00:06:44,680
+Datos como producto.
+
+126
+00:06:44,680 --> 00:06:46,760
+Esto es un cambio de mentalidad radical.
+
+127
+00:06:46,760 --> 00:06:50,760
+Y es lo que funciona como el contrato social de todo el sistema.
+
+128
+00:06:50,760 --> 00:06:52,760
+A ver, detengan uno a ahí.
+
+129
+00:06:52,759 --> 00:06:56,399
+Datos como producto suena a la típica jerga corporativa.
+
+130
+00:06:56,399 --> 00:06:57,399
+Un poco.
+
+131
+00:06:57,399 --> 00:07:02,240
+La práctica que significa eso para ese equipo de marketing de ejemplo.
+
+132
+00:07:02,240 --> 00:07:07,680
+De repente tienen que pensar como si fueran una start-up que vende un producto de software?
+
+133
+00:07:07,680 --> 00:07:09,240
+De cierta manera sí.
+
+134
+00:07:09,240 --> 00:07:12,399
+Significa que su trabajo ya no es solo generar y almacenardatos.
+
+135
+00:07:12,399 --> 00:07:17,000
+Ahora, su responsabilidad principal es servir esos datos como un producto de altísima
+
+136
+00:07:17,000 --> 00:07:19,120
+calidad a sus consumidores internos.
+
+137
+00:07:19,120 --> 00:07:22,399
+Con sumidores como el equipo de ventas o el de finanzas.
+
+138
+00:07:22,399 --> 00:07:23,399
+Exacto.
+
+139
+00:07:23,399 --> 00:07:24,840
+¿Cuál quiere a que los necesite?
+
+140
+00:07:24,840 --> 00:07:28,199
+Y como cualquier buen producto tiene que cumplir con ciertos estandares.
+
+141
+00:07:28,199 --> 00:07:29,639
+¿Qué tipo de estandares?
+
+142
+00:07:29,639 --> 00:07:33,800
+Tiene que ser fácil de descubrir o sea que la gente sepa que existe.
+
+143
+00:07:33,800 --> 00:07:35,879
+Tiene que ser accesible y seguro.
+
+144
+00:07:35,879 --> 00:07:38,480
+Tiene que ser confiable que la gente crea en él.
+
+145
+00:07:38,480 --> 00:07:39,720
+Y documentado.
+
+146
+00:07:39,720 --> 00:07:40,720
+Me imagínino.
+
+147
+00:07:40,720 --> 00:07:41,720
+Muy importante.
+
+148
+00:07:41,720 --> 00:07:45,600
+Tiene que estar perfectamente documentado para que cualquier pueda entenderlo y usarlo sin tener
+
+149
+00:07:45,600 --> 00:07:48,800
+que mandar 20 correos para preguntar qué significa cada columna.
+
+150
+00:07:48,800 --> 00:07:54,240
+Si acabó lo de aventarlos datos crudos por encima de la barra y decir, ahí están.
+
+151
+00:07:54,240 --> 00:07:55,639
+Areglense como puedan.
+
+152
+00:07:55,639 --> 00:07:57,160
+Se acabó por completo.
+
+153
+00:07:57,160 --> 00:07:59,480
+Hay que entregar los listos para consumir.
+
+154
+00:07:59,480 --> 00:08:02,400
+Lo fascinante de esto es el efecto que genera.
+
+155
+00:08:02,400 --> 00:08:06,160
+El análisis habla de crear una economía de datos interna.
+
+156
+00:08:06,160 --> 00:08:07,879
+Una economía interna.
+
+157
+00:08:07,879 --> 00:08:08,879
+Pienza lo así.
+
+158
+00:08:08,879 --> 00:08:13,800
+Si el producto de datos que ofrece el equipo de marketing es malo, es difícil de usar,
+
+159
+00:08:13,800 --> 00:08:16,680
+o sus números no son confiables, ¿qué va a pasar?
+
+160
+00:08:16,680 --> 00:08:18,639
+Es que nadie lo va a usar.
+
+161
+00:08:18,639 --> 00:08:24,280
+El equipo de ventas va a decir, esos datos nos sirven y van a crear los suyos o simplemente
+
+162
+00:08:24,280 --> 00:08:26,439
+van a dejar de confiar en marketing.
+
+163
+00:08:26,439 --> 00:08:31,960
+Exacto, esa presión de mercado interna se convierte en un motor de calidad infinitamente más
+
+164
+00:08:31,960 --> 00:08:34,919
+poderoso que cualquier orden que venga de un director de datos.
+
+165
+00:08:34,919 --> 00:08:35,919
+Claro.
+
+166
+00:08:35,919 --> 00:08:36,919
+Ya no es una obligación.
+
+167
+00:08:36,919 --> 00:08:39,720
+Es una necesidad para ser relevante.
+
+168
+00:08:39,720 --> 00:08:45,080
+Ose equipo se ven incentivados a crear buenos productos de datos, porque su reputación,
+
+169
+00:08:45,080 --> 00:08:49,800
+influencia y su relevancia dentro de la organización dependente de ello.
+
+170
+00:08:49,800 --> 00:08:53,960
+Es un mecanismo de control de calidad que sea autorregula por la demanda interna.
+
+171
+00:08:53,960 --> 00:08:57,240
+Ok, la teoría es muy elegante.
+
+172
+00:08:57,240 --> 00:09:02,480
+La idea de una economía interna, la presión de mercado, suena muy bien en un pizarrón.
+
+173
+00:09:02,480 --> 00:09:03,800
+Suena bien, sí.
+
+174
+00:09:03,800 --> 00:09:06,320
+Pero la prueba de fuego está en la realidad.
+
+175
+00:09:06,320 --> 00:09:11,200
+Hay empresas que de verdad lo estén haciendo y que tengan resultados tan quibles.
+
+176
+00:09:11,200 --> 00:09:15,560
+Por qué honestamente, suena un bronco de coordinación y de cambio cultural.
+
+177
+00:09:15,560 --> 00:09:19,000
+Sí, y es la parte que han clato todo esto en la realidad.
+
+178
+00:09:19,000 --> 00:09:24,240
+El informe que analizamos si tacaso específicos, uno muy claro es intuit.
+
+179
+00:09:24,240 --> 00:09:26,759
+La de QuickBooks es amisma.
+
+180
+00:09:26,759 --> 00:09:31,280
+Ellos se tomaron el tiempo de medir el impacto en las áreas donde implementaron la maya.
+
+181
+00:09:31,280 --> 00:09:36,040
+El resultado fue una mejora del 26 por ciento en la productividad de los equipos para
+
+182
+00:09:36,040 --> 00:09:39,680
+descubrir, entender y finalmente usar los datos.
+
+183
+00:09:39,680 --> 00:09:45,560
+Un 26 por ciento es un número enorme, pero ¿qué significa en el día a día?
+
+184
+00:09:45,560 --> 00:09:51,520
+¿Qué una analista que antes tardaba una semana en hacer un informe ahora lo hacen menos de 4 días?
+
+185
+00:09:51,520 --> 00:09:53,680
+Significa menos tiempo perdido.
+
+186
+00:09:53,680 --> 00:09:59,120
+Menos tiempo perseguiendo al víbido tecario central, menos horas tratando de desifrar tablas de datos
+
+187
+00:09:59,120 --> 00:10:04,280
+y documentación, menos reuniones para preguntar ¿este dato está actualizado?
+
+188
+00:10:04,280 --> 00:10:06,400
+Y todo ese tiempo recuperado.
+
+189
+00:10:06,400 --> 00:10:08,800
+Se invierten lo que de verdad genera valor.
+
+190
+00:10:08,800 --> 00:10:12,280
+Alizar la información y tomar mejores decisiones de negocio.
+
+191
+00:10:12,280 --> 00:10:16,040
+Es pasar de la cacería de datos a la generación de insights.
+
+192
+00:10:16,040 --> 00:10:22,000
+Entiendo, y hay algún otro ejemplo que muestre como funciona en un entorno diferente, porque
+
+193
+00:10:22,000 --> 00:10:26,720
+intuit es una empresa de tecnología, uno esperaría que fueran buenos en esto.
+
+194
+00:10:26,720 --> 00:10:30,720
+Claro, un caso aún más interesante es el de JP Morgan Chase.
+
+195
+00:10:30,720 --> 00:10:31,720
+Un banco.
+
+196
+00:10:31,720 --> 00:10:37,520
+Y no cualquiera, uno de los más grandes del mundo, un entorno y perregulado, donde la seguridad
+
+197
+00:10:37,519 --> 00:10:39,480
+y el control son lo más importante.
+
+198
+00:10:39,480 --> 00:10:40,480
+Exacto.
+
+199
+00:10:40,480 --> 00:10:45,679
+Me cuesta creer que un banco con la cantidad de regulaciones que tiene se arriesgaría un modelo
+
+200
+00:10:45,679 --> 00:10:50,000
+descentralizado, suena que los auditores odiarían perder esa visión central.
+
+201
+00:10:50,000 --> 00:10:52,720
+Es que ahí está lo interesante.
+
+202
+00:10:52,720 --> 00:10:57,759
+Ellos usan la maja para un concepto que llaman compartir no copiar datos.
+
+203
+00:10:57,759 --> 00:10:59,439
+Compartir no copiar.
+
+204
+00:10:59,439 --> 00:11:04,120
+En el modelo tradicional, si finanzas necesitan datos de riesgos, lo comunes que riesgos
+
+205
+00:11:04,120 --> 00:11:06,879
+haga una copia de su base de datos y se la mande.
+
+206
+00:11:06,879 --> 00:11:11,720
+Y en el momento en que hace esa copia pierde totalmente el control sobre ella.
+
+207
+00:11:11,720 --> 00:11:15,519
+No sabes quién más la va a ver si la van a modificar nada.
+
+208
+00:11:15,519 --> 00:11:17,720
+Es un no yo negro de seguridad.
+
+209
+00:11:17,720 --> 00:11:18,720
+Totalmente.
+
+210
+00:11:18,720 --> 00:11:23,879
+Con el enfoque de datos como producto, el equipo de riesgos, como dueño del producto, nunca
+
+211
+00:11:23,879 --> 00:11:25,360
+pierde el control.
+
+212
+00:11:25,360 --> 00:11:30,480
+Ellos publican su producto de datos y pueden definir con una granularidad increíble, quien
+
+213
+00:11:30,480 --> 00:11:32,720
+accede que puede ver y para qué.
+
+214
+00:11:32,720 --> 00:11:35,600
+Sin que el dato original salga de su dominio.
+
+215
+00:11:35,600 --> 00:11:36,600
+Justo.
+
+216
+00:11:36,600 --> 00:11:39,879
+Esto para un regulador es música para sus oídos.
+
+217
+00:11:39,879 --> 00:11:45,399
+Porque la gobernanza, el inaje del dato y el control de acceso son mucho más robustos que
+
+218
+00:11:45,399 --> 00:11:47,960
+en el modelo de copias por todos lados.
+
+219
+00:11:47,960 --> 00:11:52,960
+Demuestra que el modelo bien implementado puede aumentar el control no disminuirlo.
+
+220
+00:11:52,960 --> 00:11:53,960
+A ver.
+
+221
+00:11:53,960 --> 00:11:59,399
+Entonces, si juntamos todas las piezas, la teoría, los pilares, los casos de éxito,
+
+222
+00:11:59,399 --> 00:12:03,639
+me queda claro que esto no es un proyecto de fin de semana.
+
+223
+00:12:03,639 --> 00:12:04,639
+Para nada.
+
+224
+00:12:04,639 --> 00:12:10,319
+Si tuvieramos que aterrizar la conclusión principal de todo este análisis, cual dirías que
+
+225
+00:12:10,319 --> 00:12:13,360
+es el verdadero mensaje que nos tenemos que llevar.
+
+226
+00:12:13,360 --> 00:12:19,759
+Que el mayor riesgo de fracaso al implementar una mayadeda de datos es subestimar el cambio cultural
+
+227
+00:12:19,759 --> 00:12:21,240
+que requiere.
+
+228
+00:12:21,240 --> 00:12:25,240
+Es muy fácil para un empresa emocionarse y enfocarse en la parte técnica.
+
+229
+00:12:25,240 --> 00:12:26,759
+Un construir la plataforma.
+
+230
+00:12:26,759 --> 00:12:27,759
+Sí.
+
+231
+00:12:27,759 --> 00:12:33,000
+Pero si la organización no está dispuesta a desentralizar de verdad la responsabilidad, a impoderar
+
+232
+00:12:33,000 --> 00:12:38,000
+a los equipos para que sean dueños de sus datos y adoptar esta mentalidad de producto,
+
+233
+00:12:38,000 --> 00:12:40,440
+el proyecto está destinado a fracasar antes de empezar.
+
+234
+00:12:40,440 --> 00:12:42,720
+No es un proyecto de tecnología.
+
+235
+00:12:42,720 --> 00:12:46,720
+Es una transformación organizacional en toda regla.
+
+236
+00:12:46,720 --> 00:12:47,720
+En toda regla.
+
+237
+00:12:47,720 --> 00:12:50,320
+Y eso nos lleva la pregunta final que plantea el documento.
+
+238
+00:12:50,320 --> 00:12:53,399
+¿Qué creo que es la que cualquier líder debería hacerse?
+
+239
+00:12:53,399 --> 00:12:54,399
+¿Cuáles?
+
+240
+00:12:54,399 --> 00:12:59,000
+La pregunta no es, puedes construir tecnológicamente una mayadeda de datos.
+
+241
+00:12:59,000 --> 00:13:02,519
+La tecnología existe y es cada vez más accesible.
+
+242
+00:13:02,519 --> 00:13:05,600
+La verdadera pregunta, la más difíciles.
+
+243
+00:13:05,600 --> 00:13:10,959
+Estás dispuesto a convertirte en la organización desentralizada, autónoma y centrada en el producto
+
+244
+00:13:10,959 --> 00:13:13,759
+que la mayadeda de datos exige para funcionar.
+
+245
+00:13:13,759 --> 00:13:16,199
+Es una pregunta muy potente.
+
+246
+00:13:16,199 --> 00:13:18,679
+¿Qué da claro que no es una solución mágica?
+
+247
+00:13:18,679 --> 00:13:23,919
+Si no un espejo que obliga a las organizaciones a mirarse y decidir qué tipo de empresa
+
+248
+00:13:23,920 --> 00:13:26,280
+quiere encer en la era de los datos.
+
+249
+00:13:26,280 --> 00:13:27,280
+Exactamente.
+
+250
+00:13:27,280 --> 00:13:30,480
+Oye, me quedo pensando en algo para cerrar.
+
+251
+00:13:30,480 --> 00:13:35,840
+Si de verdad lleváramos esta idea de datos como producto al extremo y queda conjunto de datos
+
+252
+00:13:35,840 --> 00:13:39,440
+de un organización se gestionara como una línea de producto.
+
+253
+00:13:39,440 --> 00:13:42,560
+Con su propio estado de perdida sigan ansias interno.
+
+254
+00:13:42,560 --> 00:13:49,720
+Anale, ¿Cuáles de esos productos de datos serían las superestrellas, los más rentables?
+
+255
+00:13:49,720 --> 00:13:54,920
+Y más interesante aún, ¿Cuáles tendrían que ser discontinuados por su baja calidad,
+
+256
+00:13:54,920 --> 00:13:59,360
+su boca confiabilidad o su simple falta de demanda interna?
+
+257
+00:13:59,360 --> 00:14:01,560
+¿Sería una radiografía brutal?
+
+258
+00:14:01,560 --> 00:14:07,440
+Pensar en eso podría revelar muchísimo sobre dónde está el verdadero valor y el verdadero
+
+259
+00:14:07,440 --> 00:14:09,480
+desperdicio en los datos de una empresa.
+

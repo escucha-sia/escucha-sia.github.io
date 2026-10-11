@@ -1,0 +1,1144 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:04.799
+Pues existe esta imagen, es de fascinante, ¿no?
+
+00:00:04.799 --> 00:00:09.599
+¿Casi de ciencia ficción que hoy en día está dominando el mundo corporativo?
+
+00:00:09.599 --> 00:00:11.000
+Sí, totalmente.
+
+00:00:11.000 --> 00:00:16.260
+Se hace ver las empresas más grandes del mundo en una especie de carrera amamentista, gastando
+
+00:00:16.260 --> 00:00:22.320
+presupuestos astronómicos para acaparar miles y miles de tarjetas gráficas.
+
+00:00:22.320 --> 00:00:26.800
+Las famosas GPUs, exacto, las GPUs de última generación.
+
+00:00:26.800 --> 00:00:31.839
+Como si el simple acto de no se acumular silicio en un cuarto frío conservadores,
+
+00:00:31.839 --> 00:00:36.600
+básicamente fuera transformar a un organización tradicional en un gigante de la inteligencia
+
+00:00:36.600 --> 00:00:37.600
+artificial.
+
+00:00:37.600 --> 00:00:41.799
+Ah, pero la realidad de las trincheras es otra muy distinta.
+
+00:00:41.799 --> 00:00:45.400
+O sea, comprar poder de computos no convierte en la bien un líder tecnológico.
+
+00:00:45.400 --> 00:00:51.400
+Siempre siento, es una edigamos una ilusión nóptica en la que caen muchísimos ejecutivos.
+
+00:00:51.399 --> 00:00:58.199
+Se assume de manera automática que el músculo técnico, los clusters de servidores,
+
+00:00:58.199 --> 00:01:04.000
+los modelos del lenguaje, van a resolver problemas que en realidad son extremamente estructurales.
+
+00:01:04.000 --> 00:01:05.000
+Claro.
+
+00:01:05.000 --> 00:01:09.000
+Es muy reconfortante pensar que firmar un cheque grande solución en el futuro.
+
+00:01:09.000 --> 00:01:10.000
+No.
+
+00:01:10.000 --> 00:01:16.079
+Pues si es la salida fácil, pero hace cuenta que si vemos a la tecnología actual como un motor de
+
+00:01:16.079 --> 00:01:21.679
+fórmula uno, lo que está pasando es que están intentando montar ese motor en el chasis
+
+00:01:21.679 --> 00:01:25.079
+de un coche compacto que fue diseñado hace 15 años.
+
+00:01:25.079 --> 00:01:26.280
+Oí, sí.
+
+00:01:26.280 --> 00:01:32.079
+La fricción es brutal y todo el sistema colapsa mucho antes de llegar a la primera curva.
+
+00:01:32.079 --> 00:01:37.079
+Y precisamente de esa fricción trata nuestra inversión profunda de hoy.
+
+00:01:37.079 --> 00:01:44.079
+Vamos a cruzar información de tres fuentes que, cuando las pones juntas, explican perfectamente
+
+00:01:44.079 --> 00:01:49.079
+¿Por qué tantos proyectos de ella están fracasando estrapítosamente?
+
+00:01:49.079 --> 00:01:50.480
+Ajá y ojo.
+
+00:01:50.480 --> 00:01:52.079
+Esto no es teoría abstracta.
+
+00:01:52.079 --> 00:01:58.200
+Pluca al pasancar acaba de publicar un análisis exhaustivo que se titula, scaling de AI Nights
+
+00:01:58.200 --> 00:01:59.480
+of Daira Team.
+
+00:01:59.480 --> 00:02:01.680
+Muy bon artículo por cierto.
+
+00:02:01.680 --> 00:02:02.680
+Buenísimo.
+
+00:02:02.680 --> 00:02:07.680
+Y cuando contrastamos sus hallazgos empíricos con los marcos de trabajo sobre arquitecturas
+
+00:02:07.680 --> 00:02:13.360
+emergentes de la firma Andres en Horwiss a 167 y las tendencias de gobernanza de Gardner,
+
+00:02:13.360 --> 00:02:14.360
+el panorama es clarísimo.
+
+00:02:14.360 --> 00:02:15.360
+Sí, no hay pierde.
+
+00:02:15.360 --> 00:02:21.360
+El 90% de las empresas están intentando escalar sus iniciativas de ella usando organigramas e
+
+00:02:21.360 --> 00:02:23.360
+incentivos de la década pasada.
+
+00:02:23.360 --> 00:02:28.920
+Y el fracaso del que hablamos no es su tile o sea, no estamos hablando de un tablero de métricas
+
+00:02:28.920 --> 00:02:34.360
+que cargado según dos más lento o un proyecto que se retrasa un trimestre.
+
+00:02:34.360 --> 00:02:36.360
+Claro, no es una molestia menor.
+
+00:02:36.360 --> 00:02:42.400
+En infraestructura que termina en produciendo modelos que alucinen respuestas críticas o peor que
+
+00:02:42.400 --> 00:02:44.400
+exporen información confidential.
+
+00:02:44.400 --> 00:02:51.080
+O que simplemente son ignorados por los empleados porque no entienden el contexto del negocio.
+
+00:02:51.080 --> 00:02:56.960
+O sea, la lleno solo cambia la herramienta de software, que abrimosa las nueve de la mañana.
+
+00:02:56.960 --> 00:03:01.759
+Cambia drásticamente la topología de quien hace que he deembro de la empresa.
+
+00:03:01.759 --> 00:03:06.200
+Y creo que para cualquiera que esté prestando atención a cómo la ella está describiendo en las
+
+00:03:06.200 --> 00:03:11.560
+reglas del juego, ya sea, no sé, por curiosidad intelectual o porque de verdad está liderando
+
+00:03:11.560 --> 00:03:17.240
+la implementación de estas herramientas, pues hay que entender dónde se rompió el modelo tradicional.
+
+00:03:17.240 --> 00:03:18.240
+Totalmente.
+
+00:03:18.240 --> 00:03:23.360
+Porque, históricamente, en el mundo de los datos, el gran cuello de botellas siempre fue la logística
+
+00:03:23.360 --> 00:03:24.360
+digital, cierto?
+
+00:03:24.360 --> 00:03:25.360
+Sí, la tubería.
+
+00:03:25.360 --> 00:03:32.719
+Exacto, mover terabytes de información, optimizar los procesos etl a asegurarse de que el servidor
+
+00:03:32.719 --> 00:03:35.879
+no se callera durante una carga masiva en la madrugada.
+
+00:03:35.879 --> 00:03:41.400
+¿Qué era, o sea, el ecosistema entero de ingeniería de datos, durante los últimos
+
+00:03:41.400 --> 00:03:47.080
+veinte años, se construyó alrededor de la escasez de almacenamiento y la fragilidad del
+
+00:03:47.080 --> 00:03:48.080
+conjunto.
+
+00:03:48.080 --> 00:03:49.080
+Ajá.
+
+00:03:49.080 --> 00:03:53.840
+El trabajo era, básicamente, mover la información del punto A al punto B y limpiarle
+
+00:03:53.840 --> 00:03:54.840
+en el camino.
+
+00:03:54.840 --> 00:03:56.319
+Sí, la talacha digamos.
+
+00:03:56.319 --> 00:03:57.319
+Exacto.
+
+00:03:57.319 --> 00:04:01.800
+Pero la tesis central de Sancar es que ese paradigma ya caducó.
+
+00:04:01.800 --> 00:04:06.640
+El almacenamiento o y es baratísimo y el conjunto en la nube es superelástico.
+
+00:04:06.640 --> 00:04:07.640
+Claro.
+
+00:04:07.640 --> 00:04:13.440
+Entonces el nuevo imasivo cuello de botellas en esta era, no es mover los datos.
+
+00:04:13.440 --> 00:04:19.800
+Es la capacidad de injectar el contexto específico del negocio dentro de los modelos del
+
+00:04:19.800 --> 00:04:20.800
+lenguaje.
+
+00:04:20.800 --> 00:04:25.560
+Lo cual nos pone en un escenario donde el rol tradicional del ingeniero de datos está bajo
+
+00:04:25.560 --> 00:04:28.160
+una amenaza de extinción inminente, ¿no?
+
+00:04:28.160 --> 00:04:29.160
+Sí, está cañol.
+
+00:04:29.160 --> 00:04:34.879
+O sea, si una persona pase el 80% de su jornada laboral, escribiendo scripts para, no
+
+00:04:34.879 --> 00:04:40.399
+sé, limpiar valores nulos o manteniendo tuberías de datos, pues esencialmente está trabajando
+
+00:04:40.399 --> 00:04:42.120
+para un mundo que dejo de existir.
+
+00:04:42.120 --> 00:04:49.519
+100% Si su métrica de éxito es mantener la tubería fluyendo sin errores, sí, su rol va
+
+00:04:49.519 --> 00:04:50.519
+desaparecer.
+
+00:04:50.519 --> 00:04:52.800
+Sancar es muy claro con los datos aquí.
+
+00:04:52.800 --> 00:04:54.120
+¿Qué dice exactamente?
+
+00:04:54.120 --> 00:04:59.839
+Pues ella dice que las tareas que denomina de nivel 1, o sea, la limpieza básica, la transformación
+
+00:04:59.840 --> 00:05:04.800
+está andard, el mapeo de esquemas repetitivos, están siendo devoradas por la propio
+
+00:05:04.800 --> 00:05:06.440
+automatización de laía.
+
+00:05:06.440 --> 00:05:08.720
+O sea, laía hace el trabajo sucio.
+
+00:05:08.720 --> 00:05:09.720
+Exacto.
+
+00:05:09.720 --> 00:05:15.320
+Un LLM moderno puede escribir y corregir un script de transformación en segundos, entonces
+
+00:05:15.320 --> 00:05:22.040
+el 70% del tiempo de un equipo que verdaderamente sean nativo enía tiene que migrar.
+
+00:05:22.040 --> 00:05:26.720
+Sí, deben dejar de ser los concerjes de la base de datos y convertirse en gestores
+
+00:05:26.720 --> 00:05:27.720
+de contexto.
+
+00:05:27.720 --> 00:05:32.440
+Fíjate que he estado dándole vueltas a cómo aterizar esta idea para visualizar el cambio.
+
+00:05:32.440 --> 00:05:33.440
+A ver.
+
+00:05:33.440 --> 00:05:38.280
+Y creo que la mejor manera de entenderlo es viendo la ingeniería de datos clásica como un trabajo
+
+00:05:38.280 --> 00:05:39.880
+de plomería pura.
+
+00:05:39.880 --> 00:05:40.880
+Aja, me gusta.
+
+00:05:40.880 --> 00:05:45.400
+Su misión era asegurarse de que el agua llegara de la represa las casas sin fugas y con buena
+
+00:05:45.400 --> 00:05:46.400
+presión.
+
+00:05:46.400 --> 00:05:47.400
+Exacto.
+
+00:05:47.400 --> 00:05:51.360
+Pero hoy, laía ya tendió toda la red de tuberías, funciona sola.
+
+00:05:51.360 --> 00:05:55.720
+Entonces el nuevo rol humano es mucho más parecido al de un somelier o un bibliotecario
+
+00:05:55.720 --> 00:05:57.200
+y perespecializado.
+
+00:05:57.199 --> 00:06:03.360
+O sea, la inteligencia artificial es el cliente que llega y pide una recomendación y el humano
+
+00:06:03.360 --> 00:06:08.560
+es que en cura exactamente que información con que matices y de qué departamento es la
+
+00:06:08.560 --> 00:06:11.120
+de cuada para responder a esa petición específica.
+
+00:06:11.120 --> 00:06:16.240
+Es una imagen súper útil para entender el cambio de mentalidad, la verdad.
+
+00:06:16.240 --> 00:06:22.000
+Pero te digo algo, la realidad técnica es muchísimo más compleja que la de un somelier.
+
+00:06:22.000 --> 00:06:23.000
+Sí.
+
+00:06:23.000 --> 00:06:24.000
+En qué sentido.
+
+00:06:24.079 --> 00:06:30.480
+Pues un somelier en un restaurante, Lidia con no se digamos 500 botellas y un menú fijo.
+
+00:06:30.480 --> 00:06:32.680
+Claro, es un universo controlado.
+
+00:06:32.680 --> 00:06:33.680
+Exacto.
+
+00:06:33.680 --> 00:06:39.279
+Pero una corporación de tamaño medio tiene miles de millones de puntos de datos.
+
+00:06:39.279 --> 00:06:45.600
+Vases de datos estructuradas, documentos en pede, feyenos de políticas que no están estructuradas,
+
+00:06:45.600 --> 00:06:48.040
+historiales de chat de servicio al cliente.
+
+00:06:48.040 --> 00:06:49.519
+Una locura de información.
+
+00:06:49.519 --> 00:06:54.639
+Finalmente, un ser humano no puede curar eso manualmente cada vez que el modelo necesita
+
+00:06:54.639 --> 00:06:56.599
+responder una pregunta.
+
+00:06:56.599 --> 00:07:00.199
+La broncarchitectónica no es como el humano elige la botella.
+
+00:07:00.199 --> 00:07:01.199
+Ah, ha.
+
+00:07:01.199 --> 00:07:07.159
+Es matemáticamente, como codificamos todo ese contexto de negocio en un sistema automatizado para
+
+00:07:07.159 --> 00:07:10.199
+que el LLM lo entienda en mil y segundos.
+
+00:07:10.199 --> 00:07:15.120
+Claro, es la transición clave, porque no estamos hablando de sentar a un ingeniero a platicar
+
+00:07:15.120 --> 00:07:18.639
+con chatGPT explicándole cómo funciona la empresa.
+
+00:07:18.639 --> 00:07:19.639
+No, para nada.
+
+00:07:19.639 --> 00:07:22.079
+Tiene que haber una arquitectura subyacente.
+
+00:07:22.079 --> 00:07:27.319
+Y aquí es donde los marcos de trabajo de A16 y introducen un concepto que me parece brillante.
+
+00:07:27.319 --> 00:07:30.800
+Sí, la transición hacia las semáticas sobre el código.
+
+00:07:30.800 --> 00:07:34.199
+Exactamente, los ingenieros de datos más avanzados hoy.
+
+00:07:34.199 --> 00:07:38.399
+Están evolucionando hacia un rol que le industria empieza a llamar arquitectos de contexto.
+
+00:07:38.399 --> 00:07:39.399
+¿No?
+
+00:07:39.399 --> 00:07:41.599
+La hiberianza de contexte en inglés.
+
+00:07:41.599 --> 00:07:46.399
+Sí, y su principal herramienta ya no es escribir rutinas interminables de código en Python para
+
+00:07:46.399 --> 00:07:47.599
+mover columnas.
+
+00:07:47.680 --> 00:07:50.240
+Su trabajo es estructurar la capasemática.
+
+00:07:50.240 --> 00:07:53.080
+¿Qué es un cambio de paradigma brutal?
+
+00:07:53.080 --> 00:07:54.080
+Totalmente.
+
+00:07:54.080 --> 00:07:58.520
+Porque ya no basta a tener un catálogo de datos pasivo, donde un humano puede leer que la columna
+
+00:07:58.520 --> 00:08:00.600
+ve significa, no sé, ingresos.
+
+00:08:00.600 --> 00:08:02.240
+Sí, eso ya no sirve.
+
+00:08:02.240 --> 00:08:08.080
+Ahora, esos metadatos tienen que ser el tejido conectivo activo para el modelo de lenguaje.
+
+00:08:08.080 --> 00:08:10.560
+Y hay que profundizar en el mecanismo de esto.
+
+00:08:10.560 --> 00:08:15.520
+Porque para que no se escuche la palabra metadatos puede sonar a un concepto aburridísimo
+
+00:08:15.520 --> 00:08:16.520
+de los 90.
+
+00:08:16.520 --> 00:08:19.160
+Sí, suena la simple etiqueta de un archivo de worth.
+
+00:08:19.160 --> 00:08:20.160
+Exacto.
+
+00:08:20.160 --> 00:08:23.760
+Pero en este nuevo paradigma, es el combustible puro.
+
+00:08:23.760 --> 00:08:29.120
+Si pensamos en las arquitecturas rach, o sea, la generación aumentada por recuperación, que
+
+00:08:29.120 --> 00:08:32.320
+se le está en el de oro actual para que la hiha no alucine.
+
+00:08:32.320 --> 00:08:33.320
+¿Ah?
+
+00:08:33.320 --> 00:08:36.759
+Pues resulta que el rach depende 100% de la semántica.
+
+00:08:36.759 --> 00:08:39.840
+A ver, explica que no es un poco más como funciona eso en la práctica.
+
+00:08:39.840 --> 00:08:45.040
+Pues en términos simples, el rach es obligar al modelo de lenguaje a leer los documentos
+
+00:08:45.039 --> 00:08:48.559
+internos de la empresa antes de atreverse a formular una respuesta.
+
+00:08:48.559 --> 00:08:49.559
+¿O qué?
+
+00:08:49.559 --> 00:08:53.399
+Pero ¿cómo sabe el modelo que documentos buscar en una fracción de segundo?
+
+00:08:53.399 --> 00:08:55.639
+Se va a ser envectores y similitud semántica.
+
+00:08:55.639 --> 00:08:56.639
+Ya.
+
+00:08:56.639 --> 00:09:03.719
+Si el arquitecto de contexto no definió explicitamente en la capa semántica, la diferencia brutal que
+
+00:09:03.719 --> 00:09:07.519
+hay entre ingreso bruto, en gresoneto, parece en present particular.
+
+00:09:07.519 --> 00:09:08.519
+Se equivoca de datos.
+
+00:09:08.519 --> 00:09:09.519
+Exacto.
+
+00:09:09.519 --> 00:09:13.719
+La búsqueda vectoria el rach baja el l número equivocado.
+
+00:09:13.720 --> 00:09:19.120
+Y entonces el modelo va a redactar una respuesta perfecta, con excelente gramática, pero
+
+00:09:19.120 --> 00:09:20.680
+vas a den el dato en correcto.
+
+00:09:20.680 --> 00:09:25.480
+Y el usuario final que confie en el sistema tomará una decisión financiera desastrosa.
+
+00:09:25.480 --> 00:09:26.480
+Precisamente.
+
+00:09:26.480 --> 00:09:31.480
+Entonces el trabajo ya no es que el dato existe en la tabla, sino modelar como la máquina
+
+00:09:31.480 --> 00:09:34.840
+interpreta la relación entre ese dato y la realidad del negocio.
+
+00:09:34.840 --> 00:09:40.040
+Así es, lo cual esté empata perfectamente con lo que garner señal en sus reportes sobre
+
+00:09:40.039 --> 00:09:44.679
+de gobernanza proactiva, ellos argumentan que ya no es suficiente tener paneles de control
+
+00:09:44.679 --> 00:09:49.120
+que digan nuestros datos están a un 99% o limpios.
+
+00:09:49.120 --> 00:09:51.480
+Sí, eso ya es lo mínimo esperado.
+
+00:09:51.480 --> 00:09:52.480
+Claro.
+
+00:09:52.480 --> 00:09:58.559
+Ahora, la exigencia técnica es observar, medir y auditar lo que llaman la calidad del resonamiento
+
+00:09:58.559 --> 00:09:59.559
+de laía.
+
+00:09:59.559 --> 00:10:00.839
+Pero haber un momento.
+
+00:10:00.839 --> 00:10:01.839
+Dime.
+
+00:10:01.839 --> 00:10:07.079
+Aquí quiero empujar fuertemente contra esta idea, porque ve un choque de realidad es la verdad.
+
+00:10:07.080 --> 00:10:08.080
+¿A ver?
+
+00:10:08.080 --> 00:10:09.080
+¿Por qué?
+
+00:10:09.080 --> 00:10:14.080
+Pues porque la ingeliría tradicional es determinista y objetivo, un código postal tiene 5
+
+00:10:14.080 --> 00:10:16.480
+digitos o los tiene o no los tiene.
+
+00:10:16.480 --> 00:10:19.080
+Una selva vacía, esta vacía.
+
+00:10:19.080 --> 00:10:20.080
+Es blanco negro.
+
+00:10:20.080 --> 00:10:21.080
+Aha.
+
+00:10:21.080 --> 00:10:26.800
+Pero auditarla entre comillas calidad del razonamiento de un modelo estochástico, suena un ejercicio
+
+00:10:26.800 --> 00:10:31.600
+filosófico increíblemente subjetivo, o sea, no estamos pidiendo lo imposible.
+
+00:10:31.600 --> 00:10:33.640
+Es un punto superbalido.
+
+00:10:33.639 --> 00:10:37.879
+¿Cómo se supone que un equipo de ingenieros de datos codifique y mida algo tan abstracto
+
+00:10:37.879 --> 00:10:40.480
+como el buen razonamiento?
+
+00:10:40.480 --> 00:10:43.279
+Ahora necesitan contratar filósofos en el equipo o como.
+
+00:10:43.279 --> 00:10:50.039
+Es el desafío técnico más grande de esta década, y no te aseguro que no necesitan filósofos.
+
+00:10:50.039 --> 00:10:53.000
+Necesita nuevos marcos de evaluación de software.
+
+00:10:53.000 --> 00:10:58.480
+¿Tienes toda la razón en que pasamos de un mundo determinista o uno probabilístico?
+
+00:10:58.480 --> 00:11:03.159
+No puedes escribir una prueba unitaria clásica que diga si la entrada es a la salida
+
+00:11:03.159 --> 00:11:04.159
+siempre será b.
+
+00:11:04.159 --> 00:11:07.959
+Claro, porque el LLM te responde con palabras diferentes cada vez.
+
+00:11:07.959 --> 00:11:08.959
+Exacto.
+
+00:11:08.959 --> 00:11:15.120
+Entonces, lo que los arquitectos de contexto construyen hoy son sistemas de evaluación automatizados.
+
+00:11:15.120 --> 00:11:20.039
+Usan modelos del lenguaje secundarios más pequeños y altamente calibrados.
+
+00:11:20.039 --> 00:11:21.039
+¿Pero qué?
+
+00:11:21.039 --> 00:11:24.439
+Pues su único trabajo es auditar la respuesta del modelo principal.
+
+00:11:24.439 --> 00:11:29.120
+Aosa poner a una inteligencia artificial a vigilar a otra inteligencia artificial antes de
+
+00:11:29.120 --> 00:11:30.519
+que el usuario ve a la respuesta.
+
+00:11:30.519 --> 00:11:31.519
+Sí, tal cual.
+
+00:11:31.519 --> 00:11:37.840
+Lo que en la industria se conoce como LLM a Sajoch, o sea, LLM como juez.
+
+00:11:37.840 --> 00:11:42.919
+Pero ojo, el humano es quien define las reglas incabrantables de ese juez.
+
+00:11:42.919 --> 00:11:44.879
+Dame un ejemplo de cómo se vería eso.
+
+00:11:44.879 --> 00:11:49.279
+Imagínate que un usuario del equipo de ventas le pide a laía una estrategia para liquida
+
+00:11:49.279 --> 00:11:50.279
+alimentario.
+
+00:11:50.279 --> 00:11:55.559
+Y el modelo sugiero ofrecer un descuento del 90% en todos los productos estrella.
+
+00:11:55.559 --> 00:11:56.960
+¡Oi, fatal!
+
+00:11:56.960 --> 00:12:00.559
+A nivel matemático puro el razonamiento de la máquina es impecable.
+
+00:12:00.560 --> 00:12:04.920
+O sea, si bajas del precio a casi cero, el inventario se va a mover, lógico.
+
+00:12:04.920 --> 00:12:06.640
+Lójico pero quibras a la empresa.
+
+00:12:06.640 --> 00:12:07.640
+Exacto.
+
+00:12:07.640 --> 00:12:11.160
+La calidad del razonamiento de negocio es desastrosa.
+
+00:12:11.160 --> 00:12:16.120
+Entonces, el equipo de datos tiene que codificar directrices sistémicas, donde la evaluación
+
+00:12:16.120 --> 00:12:23.680
+automática detecte que sugerir descuentos mayores al 20% sin aprobación del CFO, viola las
+
+00:12:23.680 --> 00:12:25.560
+políticas semáticas de riesgo.
+
+00:12:25.560 --> 00:12:26.560
+Wow.
+
+00:12:26.560 --> 00:12:30.280
+Esto cambia por completo el perfil del talento que se busca.
+
+00:12:30.279 --> 00:12:31.279
+Totalmente.
+
+00:12:31.279 --> 00:12:35.600
+Si yo dirijo un equipo de tecnología, ya no me sirve contratar un excelente programador que
+
+00:12:35.600 --> 00:12:39.519
+quiere vivir aislado en un reencon optimizando bases de datos sin hablar con nadie.
+
+00:12:39.519 --> 00:12:41.759
+Para nada, ese perfil ya no encaja.
+
+00:12:41.759 --> 00:12:45.759
+Necesito alguien que entienda profundamente las dinámicas de poder de la empresa.
+
+00:12:45.759 --> 00:12:49.480
+Este es los margenes de ganancia, las sensibilidades regulatorias.
+
+00:12:49.480 --> 00:12:50.480
+Sí.
+
+00:12:50.480 --> 00:12:55.899
+Y que además tenga la capacidad de traducir todo ese alma corporativa, a parámetros
+
+00:12:55.899 --> 00:13:00.299
+matemáticos que un sistema de evaluación secundaria pueda auditar en mil y segundos.
+
+00:13:00.299 --> 00:13:06.159
+Es que se vuelve en traducteres entre la estrategia de la Junta Directiva y el espacio latente
+
+00:13:06.159 --> 00:13:07.659
+de la red neuronal.
+
+00:13:07.659 --> 00:13:08.659
+Esta cañón.
+
+00:13:08.659 --> 00:13:13.659
+Y esto nos lleva a la parte más crítica de la análisis de Sancar, porque una vez que tiene
+
+00:13:13.659 --> 00:13:19.059
+esa capa semática y tiene estos sistemas de evaluación intentando medir la calidad del
+
+00:13:19.060 --> 00:13:23.380
+resonamiento, pues se abre la puerta a la adopción masiva.
+
+00:13:23.380 --> 00:13:27.220
+Y ahí es donde el riesgo se multiplica exponencialmente.
+
+00:13:27.220 --> 00:13:28.220
+Claro.
+
+00:13:28.220 --> 00:13:31.980
+Entramos al gran sueño prometido del inteligencia artificial.
+
+00:13:31.980 --> 00:13:34.420
+La descentralización asistida, ¿no?
+
+00:13:34.420 --> 00:13:35.420
+Exactamente.
+
+00:13:35.420 --> 00:13:39.780
+Le de autópica de que cualquiera analista Junior de marketing o o no sé, alguien de recursos
+
+00:13:39.780 --> 00:13:45.140
+humanos pueda hacerle preguntas complejísimas a la base de datos central usando lenguaje
+
+00:13:45.140 --> 00:13:46.140
+natural.
+
+00:13:46.139 --> 00:13:52.299
+Saber una zona línea de ese cuel, es un poder transformador, porque en el modelo viejo
+
+00:13:52.299 --> 00:13:57.179
+se alguien de ventas quería cruzar el comportamiento de compra regional con el gasto publicitario
+
+00:13:57.179 --> 00:13:58.620
+de los últimos cinco años.
+
+00:13:58.620 --> 00:14:00.340
+Uff, levantaba un ticket.
+
+00:14:00.340 --> 00:14:05.000
+Sí, levantaba un ticket con el equipo de datos esperaba tres semanas y recibió un reporte
+
+00:14:05.000 --> 00:14:06.000
+estático.
+
+00:14:06.000 --> 00:14:10.580
+Y hoy escriben la pregunta en un chat y el rach les devuelve la análisis con gráficas
+
+00:14:10.580 --> 00:14:12.259
+en 10 segundos.
+
+00:14:12.259 --> 00:14:15.340
+La velocidad de iteración de la empresa se dispara.
+
+00:14:15.340 --> 00:14:22.259
+Suena mágico en papel, pero, pues, conociendo cómo funciona la curiosidad humana y los sistemas
+
+00:14:22.259 --> 00:14:28.100
+corporativos, democratizar el acceso directo al cerebro analítico de la empresa, tiene que venir
+
+00:14:28.100 --> 00:14:30.740
+con un nivel de peligrosy sistémico brutal.
+
+00:14:30.740 --> 00:14:36.700
+Riesgos que pueden destruir la reputación o las finanzas de una compañía en una sola tarde,
+
+00:14:36.700 --> 00:14:37.700
+no es exageración.
+
+00:14:37.700 --> 00:14:38.700
+Claro.
+
+00:14:38.700 --> 00:14:44.620
+Cuando roles no técnicos, hacen consultas abiertas y ambigas, la probabilidad de generar
+
+00:14:44.620 --> 00:14:47.500
+alucinaciones costosas es altísima.
+
+00:14:47.500 --> 00:14:49.900
+Sí, porque no saben cómo preguntar.
+
+00:14:49.900 --> 00:14:50.900
+Exacto.
+
+00:14:50.900 --> 00:14:56.780
+Si el sistema no entiende el matí de la pregunta o el usuario assume que la IA es infalible y toma una
+
+00:14:56.780 --> 00:15:01.020
+decisión de inversión basada en un curse de datos erróneo que la máquina inventó para
+
+00:15:01.020 --> 00:15:02.460
+sonar convincente.
+
+00:15:02.460 --> 00:15:05.060
+El impacto ya no es un errorcito en un reporte.
+
+00:15:05.060 --> 00:15:06.460
+Es capital destruido.
+
+00:15:06.460 --> 00:15:07.460
+Siempre siento.
+
+00:15:07.460 --> 00:15:11.940
+Y aquí es donde la misión del equipo de datos se vuelve literalmente una función de
+
+00:15:11.940 --> 00:15:13.540
+protección corporativa.
+
+00:15:13.540 --> 00:15:19.139
+Retomando la analogía de la automobilismo que decía al principio, antes la inteligencia artificial
+
+00:15:19.139 --> 00:15:23.780
+nos permitía darle un coche de formos la uno, alguien que apenas acoso licencia de conducir,
+
+00:15:23.780 --> 00:15:24.780
+¿no?
+
+00:15:24.780 --> 00:15:29.060
+Ah, pero el equipo de datos solía hacer el piloto profesional.
+
+00:15:29.060 --> 00:15:32.700
+Ellos manejaban y los demás solo pedían a donde querían ir.
+
+00:15:32.700 --> 00:15:36.060
+Ahora la empresa entera está al volante.
+
+00:15:36.060 --> 00:15:37.060
+Todos manejan.
+
+00:15:37.060 --> 00:15:40.140
+Así que el trabajo del ingeniero ya no es conducir.
+
+00:15:40.140 --> 00:15:45.260
+Su trabajo exclusivo es construir los muros de contención y rompibles en la pista, para que
+
+00:15:45.260 --> 00:15:48.540
+este conductor no va a tomar la primera curva.
+
+00:15:48.540 --> 00:15:54.860
+Mira, el coche de formos la uno funciona para ilustrar la velocidad, pero la realidad del riesgo
+
+00:15:54.860 --> 00:15:55.860
+es mucho peor.
+
+00:15:55.860 --> 00:15:56.860
+¿Pero?
+
+00:15:56.860 --> 00:16:02.100
+Sí, porque en un coche de carreras, si te estrellas, pues solo destruyes tu propio vehículo, ¿no?
+
+00:16:02.100 --> 00:16:09.340
+En una infraestructura empresarial de IAMO de Erna, un usuario haciendo una consulta malformulada,
+
+00:16:09.340 --> 00:16:14.379
+o un modelo alucinando podría llegar a disparar integraciones automáticas.
+
+00:16:14.379 --> 00:16:16.180
+Claro, está todo conectado.
+
+00:16:16.180 --> 00:16:21.860
+Podría enviar correos a miles de clientes con precios equivocados, o alterar modelos de prevision
+
+00:16:21.860 --> 00:16:23.899
+de la cadena de suministro.
+
+00:16:23.899 --> 00:16:30.180
+Por eso San Harry a 16 y 7, enfatizan tanto la construcción de lo que llaman Guard Rails,
+
+00:16:30.180 --> 00:16:31.899
+o varandillas de seguridad.
+
+00:16:31.899 --> 00:16:36.500
+Si hay que desempacar cómo funcionan exactamente estas varandillas a nivel técnico, porque no
+
+00:16:36.500 --> 00:16:41.299
+estamos hablando de un simple letrero que diga por favor verifique esta información, verdad?
+
+00:16:41.299 --> 00:16:42.740
+No, para nada.
+
+00:16:42.740 --> 00:16:47.179
+Estamos hablando de arquitectura dura, arquitectura de intercepción.
+
+00:16:47.179 --> 00:16:49.579
+A ver, explica no sé eso de la intercepción.
+
+00:16:49.579 --> 00:16:55.379
+Los Guard Rails son capas de software que se situan entre el usuario y el modelo del lenguaje,
+
+00:16:55.379 --> 00:16:58.620
+y también entre el modelo del lenguaje y la base de datos.
+
+00:16:58.620 --> 00:17:01.899
+Por ejemplo, un encrotador semántico.
+
+00:17:01.899 --> 00:17:07.900
+Cuando el usuario escribe una pregunta, antes de que llegue a LLM principal, un sistema
+
+00:17:07.900 --> 00:17:10.220
+clasifica la intención de la pregunta.
+
+00:17:10.220 --> 00:17:15.859
+Si detecta que la pregunta involucra información de identificación personal, como números
+
+00:17:15.859 --> 00:17:21.700
+de tarjetas de crédito o algo así, el guard del corta la conexión con esa base de datos instantáneamente.
+
+00:17:21.700 --> 00:17:25.220
+O sea, el modelo ni siquiera tiene la oportunidad de ver esos datos.
+
+00:17:25.220 --> 00:17:27.579
+Exacto, no llegan y aprocesarlo.
+
+00:17:27.579 --> 00:17:32.659
+Es decir, no confían en pedirle al modelo oye por favor no muestres datos sensibles.
+
+00:17:32.659 --> 00:17:36.819
+Le cortan el acceso físico esa memoria en tiempo real dependiendo de quién está haciendo
+
+00:17:36.819 --> 00:17:38.059
+la pregunta.
+
+00:17:38.059 --> 00:17:39.059
+Precisamente.
+
+00:17:39.059 --> 00:17:43.299
+Esa es la diferencia entre un prototipo ingeno y un sistema nivel empresarial.
+
+00:17:43.299 --> 00:17:47.819
+El talento humano más brillante dentro de un equipo de datos verdaderamente nativo enía
+
+00:17:47.819 --> 00:17:51.539
+está dedicando sus días a diseñar estos corta fuego semánticos.
+
+00:17:51.539 --> 00:17:54.220
+Están construyendo arquitecturas de confianza.
+
+00:17:54.220 --> 00:18:00.380
+Sí, se aseguran de que las respuestas pasen por detectores de toxicidad, detectores de
+
+00:18:00.380 --> 00:18:06.740
+alucinaciones que comproven las citas contra los documentos fuente del rach y filtros de alinaciones
+
+00:18:06.740 --> 00:18:07.740
+estratégicas.
+
+00:18:07.740 --> 00:18:08.740
+Claro.
+
+00:18:08.740 --> 00:18:13.980
+Es la única manera en que la descentralización de la información no termine en una energía corporativa.
+
+00:18:13.980 --> 00:18:18.660
+Y la verdad es que, al escuchar cómo se conectan todas estas piezas, la evolución se vuelve
+
+00:18:18.660 --> 00:18:19.660
+muy evidente.
+
+00:18:19.660 --> 00:18:21.180
+Sí, el panorama cambia.
+
+00:18:21.180 --> 00:18:28.180
+Si sintetizamos el valor real de lo que plantean, plucal pasan cara, Andres en Horowitz y Gardner,
+
+00:18:28.180 --> 00:18:31.779
+vemos que la era de la fuerza bruto operacional, pues terminó.
+
+00:18:31.779 --> 00:18:33.019
+Totalmente terminada.
+
+00:18:33.019 --> 00:18:37.779
+El valor ya no está en contratar pequeños ejércitos de programadores para mantener flujos de datos
+
+00:18:37.779 --> 00:18:38.779
+manuales.
+
+00:18:38.779 --> 00:18:40.779
+Todo ese nivel uno se comoditiza.
+
+00:18:40.779 --> 00:18:46.019
+Sí, la tecnología assume la carga del nivel básico y eso obliga a los humanos a subir
+
+00:18:46.019 --> 00:18:49.340
+al nivel de abstracción a finar la capa semántica.
+
+00:18:49.339 --> 00:18:54.859
+Y señar sistemas de evaluación deterministas para auditar razonamientos probabilísticos.
+
+00:18:54.859 --> 00:18:58.819
+Y levantar varandillas de seguridad invisibles, pero de hacer.
+
+00:18:58.819 --> 00:19:00.419
+De acero, es acto.
+
+00:19:00.419 --> 00:19:03.899
+Esas el nuevo chasis que puede soportar el motor de laía.
+
+00:19:03.899 --> 00:19:08.619
+Y creo que esto es vital para que nos escucha sin importar el nitro del que opere su negocio.
+
+00:19:08.619 --> 00:19:13.019
+Porque esto no es un fenómeno exclusivo de las estartoops de Silicon Valley o de las gigantes
+
+00:19:13.019 --> 00:19:14.259
+tecnológicas, cierto?
+
+00:19:14.259 --> 00:19:16.539
+No, para nada, apliquen todos lados.
+
+00:19:16.539 --> 00:19:22.339
+Esto aplica si se está en el sector humano facturero, en finanzas, en salud o en logística.
+
+00:19:22.339 --> 00:19:28.779
+Si la mesa directiva a prueba presupuestos masivos para comprar licencias deía o hardware avanzado,
+
+00:19:28.779 --> 00:19:33.940
+pero sigue midiendo y contratando su equipo de tecnología bajo los estandares de hace 10 años,
+
+00:19:33.940 --> 00:19:37.220
+pues están construyendo un fracaso carísimo.
+
+00:19:37.220 --> 00:19:41.180
+Siempre siento, estirar el dinero a la basura.
+
+00:19:41.180 --> 00:19:45.220
+La inteligencia artificial no llega para reemplazar a los equipos de datos.
+
+00:19:45.220 --> 00:19:50.860
+Se llega para obligarlos a mutar así en generos de estrategia, confianza y contexto.
+
+00:19:50.860 --> 00:19:57.019
+Es que la tecnología, por su propia naturaleza, es un amplificador de la estructura subiacente.
+
+00:19:57.019 --> 00:20:02.500
+Si tienes un equipo ágil enfocado en el contexto y la seguridad, laía amplificará esa
+
+00:20:02.500 --> 00:20:03.500
+hilidad.
+
+00:20:03.500 --> 00:20:09.660
+Pero si tienes un órgano fragmentado, procesos manuales fragiles y falta de gobernanza proactima,
+
+00:20:09.660 --> 00:20:14.660
+pues la inteligencia artificial simplemente va a amplificar ese caos a una velocidad que le
+
+00:20:14.660 --> 00:20:17.460
+empresa nunca antes había experimentado.
+
+00:20:17.460 --> 00:20:22.700
+Y para cerrar, creo que todo esto nos deja con una reflexión bastante provocadora sobre el futuro
+
+00:20:22.700 --> 00:20:23.700
+mediano plazo.
+
+00:20:23.700 --> 00:20:24.700
+¿No te parece?
+
+00:20:24.700 --> 00:20:25.700
+A ver, cuéntame.
+
+00:20:25.700 --> 00:20:29.940
+Pues hemos establecido que las herramientas actuales están automatizando las tareas operativas
+
+00:20:29.940 --> 00:20:35.980
+de nivel 1 y que el valor humano sea desplazado hacia definirse contexto de negocio, auditar
+
+00:20:35.980 --> 00:20:39.259
+el razonamiento y construir los muros de seguridad.
+
+00:20:39.259 --> 00:20:42.220
+O sea, el humano es hoy el guardián de la semántica.
+
+00:20:42.220 --> 00:20:43.660
+Hasta ahí estamos de acuerdo.
+
+00:20:43.660 --> 00:20:48.500
+Pero si observamos la curva de aprendizaje de estos sistemas, le doy vueltas a que va a
+
+00:20:48.500 --> 00:20:50.140
+pasar entre esos cuatro años.
+
+00:20:50.140 --> 00:20:51.140
+¿En qué sentido?
+
+00:20:51.140 --> 00:20:56.860
+Cuando la próxima generación de modelos de inteligencia artificial, desarrolla la capacidad de observar
+
+00:20:56.860 --> 00:21:04.220
+el comportamiento en pírico de la empresa por sí sola, o sea, leer cada correo, cada transacción,
+
+00:21:04.220 --> 00:21:07.980
+cada éxito y fracaso y infira su propia capa semántica.
+
+00:21:07.980 --> 00:21:08.980
+¿Wow?
+
+00:21:08.980 --> 00:21:09.980
+¿Ok?
+
+00:21:09.980 --> 00:21:14.420
+¿Qué pasará cuando el modelo aprenda a codificar y a auditar sus propias varandillas
+
+00:21:14.420 --> 00:21:20.019
+matemáticas, basándose en observar las operaciones corporativas sin necesidad de que un humano
+
+00:21:20.019 --> 00:21:21.019
+se las define?
+
+00:21:21.019 --> 00:21:24.980
+Esa es la pregunta existencial de la industria, la verdad.
+
+00:21:24.980 --> 00:21:29.500
+Si el sistema aprende a autogobernarse con un nivel de precisión matemática superior al
+
+00:21:29.500 --> 00:21:31.220
+nuestro, exacto.
+
+00:21:31.220 --> 00:21:35.980
+¿Será entonces el arquitecto de contexto el próximo rol en la lista de especies en peligro
+
+00:21:35.980 --> 00:21:36.980
+de exicción?
+
+00:21:36.980 --> 00:21:39.099
+Está cañón, pensarlo así.
+
+00:21:39.100 --> 00:21:45.180
+Es una perspectiva fascinante, y quizá un poco vertiginosa para llevarnos de tarea y cuestionar
+
+00:21:45.180 --> 00:21:48.980
+hacia dónde se dirige realmente el trabajo del conocimiento.
+
+00:21:48.980 --> 00:21:54.500
+Pero bueno, por ahora el toque humano para definir que es un buen razonamiento y proteger el
+
+00:21:54.500 --> 00:22:00.780
+alma del negocio sigue siendo el activo más valioso e irreemplazable de cualquier corporación.
+
+00:22:00.780 --> 00:22:02.380
+Hasta la próxima inversión profunda.
+

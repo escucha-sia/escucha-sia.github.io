@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:07.000
+Saludos a toda la comunidad tech. Bienvenidos a Asa etitath. Soy Jorge.
+
+00:00:07.000 --> 00:00:15.000
+Y yo soy Dalia. Hoy abordamos uno de los dolores de cabeza más grandes en la historia reciente de la interigencia artificial,
+
+00:00:15.000 --> 00:00:20.000
+la amnesia crónica de los modelos del lenguaje y como finalmente le estamos superando.
+
+00:00:20.000 --> 00:00:26.000
+La tesis central de este episodio es que la ventana de contexto estática y sin memoria ha quedado oxoleta.
+
+00:00:26.000 --> 00:00:32.000
+Con la llegada de Kant Exchange en Yemen ahí y las arquitecturas de memoria episodica jerárquica,
+
+00:00:32.000 --> 00:00:39.000
+los agentes de software finalmente pueden aprender de interacciones pasadas y conservar experiencia acumulada.
+
+00:00:39.000 --> 00:00:47.000
+Durante años, cada vez que habría un chato ejecutaba su papá en con un llm, el modelo sufría de amnesia total.
+
+00:00:47.000 --> 00:00:53.000
+Tenías que pagar y rendir miles de tokens de contexto, documentación y código una y otra vez.
+
+00:00:53.000 --> 00:00:59.000
+Con Kant Exchange, la memoria de inferencias se preserva en los servidores de la nube.
+
+00:00:59.000 --> 00:01:07.000
+Puedes fijar un repositorio completo de código, las especificaciones de tu empresa o la habitadora de incidentes por una fracción mínima del costo
+
+00:01:07.000 --> 00:01:11.000
+y con una latencia de respuesta reducida a hasta en un 80%.
+
+00:01:11.000 --> 00:01:16.000
+Pero el verdadero salto conceptual es el aprendizaje anidado o neste learning.
+
+00:01:16.000 --> 00:01:23.000
+No se trata solo de almacenar texto, sino destructurar la memoria en capas, memoria de trabajo para la tarea inmediata,
+
+00:01:23.000 --> 00:01:31.000
+memoria episodica para recordar errores y soluciones previas y memoria semanthica para los principios inmutables de arquitectura.
+
+00:01:31.000 --> 00:01:38.000
+Claro, dália, pero ablemos de los peligros reales, la contaminación de contexto o Kant Exchange puestan en.
+
+00:01:38.000 --> 00:01:45.000
+Si una gente almacena una reducción errone en su memoria persistente y no tienes mecanismos de poda y verificación,
+
+00:01:45.000 --> 00:01:49.000
+ese errore contaminará todas las decisiones futuras del sistema.
+
+00:01:49.000 --> 00:01:51.000
+Exacto.
+
+00:01:51.000 --> 00:01:55.000
+Y aquí la conexión con la cultura geek es inevitable.
+
+00:01:55.000 --> 00:02:04.000
+En el arco de licización de su orarcan online, las almacen artificiales llamadas Flupclicks tenían un límite biológico de memoria de aproximadamente 150 años,
+
+00:02:04.000 --> 00:02:10.000
+más allá de eso, la acumulación de memoria saturaba el núcleo y colapsaba la personalidad.
+
+00:02:10.000 --> 00:02:13.000
+Que gran referencia, dália.
+
+00:02:13.000 --> 00:02:20.000
+En los agentes de soft por de 1226, diseñarlas políticas de olvido y consolidación de memoria es tan crítico como diseñar
+
+00:02:20.000 --> 00:02:22.000
+el almacenamiento mismo.
+
+00:02:22.000 --> 00:02:26.000
+Diceñarlas sistemas que recuerden lo esencial y descarten el ruido.
+
+00:02:26.000 --> 00:02:29.000
+Esa es la verdadera maestría técnica.
+
+00:02:29.000 --> 00:02:31.000
+Hasta el próximo episodio.
+

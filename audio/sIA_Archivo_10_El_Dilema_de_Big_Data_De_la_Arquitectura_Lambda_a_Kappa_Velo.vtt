@@ -1,0 +1,484 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:05.879
+Bienvenidos a esta exploración a fondo, hoy nos metemos con un tema tecnológico que
+
+00:00:05.879 --> 00:00:10.839
+segura mucho de saca usado curiosidad. ¿Cómo es posible que veamos? No sé, un contador
+
+00:00:10.839 --> 00:00:16.240
+de likes subir en tiempo real en una plataforma así al segundo. ¿Y qué es la misma plataforma
+
+00:00:16.240 --> 00:00:21.120
+a algunos de un resumen anual superpreciso de todo lo que hicimos? A primera vista parece
+
+00:00:21.120 --> 00:00:23.760
+en cosas, pues, contradictorias ¿no?
+
+00:00:23.760 --> 00:00:28.520
+Totalmente, una necesidad velocidad así instantánea.
+
+00:00:28.520 --> 00:00:33.320
+Exacto. Y la otra, la otra pide una exactitud histórica, pero impecable.
+
+00:00:33.320 --> 00:00:38.840
+¿Aja? ¿Cómo se concilia eso? Especialmente con la cantidad brutal de datos que se generan
+
+00:00:38.840 --> 00:00:44.359
+hoy en día. Tenemos algunas pistas hoy. Unos diagramas que muestra unas capas llamadas
+
+00:00:44.359 --> 00:00:48.960
+Bach, Speed, Serving y también textos claves sobre Big Data.
+
+00:00:48.960 --> 00:00:53.759
+Esta misión digamos es, de centrañar esta solución que es bastante ingeniosa la verdad.
+
+00:00:53.759 --> 00:00:57.000
+Una solución que se conoce como arquitectura lambda.
+
+00:00:57.000 --> 00:01:02.960
+Para empezar, pongamos el problema en contexto. Antes de estas arquitecturas más modernas, en el
+
+00:01:02.960 --> 00:01:07.960
+mundo de los datos masivos ¿eh? Pues seguido había que tomar una decisión. Una decisión
+
+00:01:07.960 --> 00:01:12.280
+un poco difícil. Sí, era como un o esto o aquello.
+
+00:01:12.280 --> 00:01:18.280
+Exacto. O tenías datos muy, muy preciso, pero bueno, llegaban tarde con retraso. O tenías
+
+00:01:18.280 --> 00:01:23.200
+datos casi al instante, pero tenías que aceptar que igual no eran las cifres actas, sino una
+
+00:01:23.200 --> 00:01:30.519
+aproximación. Claro, lo que se conoce como procesamiento por lotus o Bach, para lo preciso,
+
+00:01:30.519 --> 00:01:35.760
+pero lento. Y el procesamiento en tiempo real o streaming, para lo rápido, pero quizás no tan
+
+00:01:35.760 --> 00:01:41.640
+exacto. ¡Aja! Hay una analogía que ayuda a entenderlo creo. Imagina una tubería enorme por la
+
+00:01:41.640 --> 00:01:47.599
+que no deja de pasar agua. Esa aguas son los datos. Cliques, vistas, mensajes, todo.
+
+00:01:47.600 --> 00:01:52.760
+¿Y quieres saber exactamente cuánta agua pasó en un día completo? Lo más seguro es esperar
+
+00:01:52.760 --> 00:01:57.080
+del final, cerrar la llave y medirlo que se juntó en un tanque.
+
+00:01:57.080 --> 00:02:02.920
+¡Súper preciso, pero hasta el día siguiente! Exacto. Siempre siento preciso, pero lento. Eso
+
+00:02:02.920 --> 00:02:07.880
+sería como el Bach. Pero, y si necesita saber, cuánta agua está pasando ahora mismo.
+
+00:02:07.880 --> 00:02:11.800
+¡Ah, bueno, ahí pone un medidor de flujo en la tubería, ¿no?
+
+00:02:12.000 --> 00:02:17.800
+Te da la lectura del instante. Pero, a lo mejor, tiene un pequeño margen de error. No es el tanque
+
+00:02:17.800 --> 00:02:22.280
+medido al final. Es rápido, pero quizá no perfecto. ¿Cómo el streaming?
+
+00:02:22.280 --> 00:02:28.200
+Y por mucho tiempo parecía que esa era la elección o la precisión lenta del tanque o la rapidez aproximada
+
+00:02:28.200 --> 00:02:32.320
+del medidor. La pregunta era, ¿se podía tener las dos cosas?
+
+00:02:32.320 --> 00:02:39.200
+Y fíjate que es justo la pregunta que la arquitectura lambda vino a responder. Propone, pues un enfoque
+
+00:02:39.200 --> 00:02:44.280
+híbrido, una forma de combinar lo mejor de esos dos mundos que mencionabas.
+
+00:02:44.280 --> 00:02:51.360
+O sea, no elegir si no sumar. Exacto, sumar. Y para entender cómo funciona, la analogía
+
+00:02:51.360 --> 00:02:57.000
+de la sala de redacción de un periódico es bastante buena. No os ayuda a ver qué hacen esas capas
+
+00:02:57.000 --> 00:03:01.120
+del diagrama. Bach, Speed, Serving. A ver cuéntanos.
+
+00:03:01.120 --> 00:03:07.160
+Bueno, primero está la capa Bach. Pensemos en ella como la ruta fría. Imagina el equipo de
+
+00:03:07.159 --> 00:03:11.879
+periodistas de investigación del periódico. Ok, y los que hacen los reportajes a fondo.
+
+00:03:11.879 --> 00:03:17.280
+Eso es mismos. Son los que, por ejemplo, preparan el anuario del año su trabajo es
+
+00:03:17.280 --> 00:03:23.639
+súper meticuloso, ¿sabes? Verifican todo, cruzan fuentes, no dejanada a la sara.
+
+00:03:23.639 --> 00:03:31.159
+¿El resultado es la verdad histórica? La versión definitiva, consolidada. En datos, esta capa
+
+00:03:31.159 --> 00:03:37.439
+procesa todo el histórico acumulado. Quizá una vez al día o cada ciertas horas, aquí se
+
+00:03:37.439 --> 00:03:44.879
+usan tecnologías como Spark, Hadub, cosas así. Entiendo, la prioridad es que sea exacto, aunque tarde.
+
+00:03:44.879 --> 00:03:52.960
+Exacto. Precision total. Aunque sea alento. Como el anuario de 2024, que por muy perfecto que sea,
+
+00:03:52.960 --> 00:03:59.519
+pues al drapubblicado ya habían entrado el 2025. Vale, esa es la parte de la precisión histórica.
+
+00:03:59.520 --> 00:04:05.719
+Hubo el pasado perfectamente, aunque no al instante. Justo. Luego viene la capa Speed,
+
+00:04:05.719 --> 00:04:11.160
+la que podríamos llamar la ruta caliente. Este es el reportero que está en la calle, cubriendo
+
+00:04:11.160 --> 00:04:17.040
+la noticia de última hora. El que manda el Twitter rápido. Ese, en cuanto pasa algo, oigan,
+
+00:04:17.040 --> 00:04:22.680
+hay un incendio en el centro, lo comunica de volada. Quizás por red es una alerta, lo importante
+
+00:04:22.680 --> 00:04:28.800
+es la inmediatez. Claro. Ahora, esta primera información, pues, puede tener detalles por confirmar,
+
+00:04:28.800 --> 00:04:33.600
+o quizás alguna pequeña imprescición inicial, a lo mejor primero dijo que eran tres camiones de
+
+00:04:33.600 --> 00:04:38.360
+bomberos y luego corriguados. Normal, la situación está pasando.
+
+00:04:38.360 --> 00:04:44.639
+La información va llegando. Y además, esta capa se enfoca en lo más reciente, en los datos que
+
+00:04:44.639 --> 00:04:51.040
+acaban de llegar. Aquí es donde entran tecnologías de streaming, como Kafka, Spark Streaming.
+
+00:04:51.040 --> 00:04:56.600
+El énfasis total es la velocidad, aunque la precisión inicial no sea del 100%.
+
+00:04:56.600 --> 00:05:01.680
+Tiene todo el sentido. Es la capa que nos da esa sensación de ahora mismo, aunque se
+
+00:05:01.680 --> 00:05:07.640
+pamos que luego, podrá ver ajustes. Pero entonces, ¿cómo se juntan? ¿Cómo se unen la visión
+
+00:05:07.640 --> 00:05:15.200
+histórica superprecisa con la instantánea? Ah, pues ahí entra la tercera pieza. Es la capa de servicio
+
+00:05:15.200 --> 00:05:22.840
+o serving layer. Aquí es donde pasa la, pues la magia. Dilamos. La integración. Exacto. Imagina el
+
+00:05:22.840 --> 00:05:27.920
+selector que quieren tender bien lo del incendio. ¿Qué hace? Primero consulta el anuario.
+
+00:05:27.920 --> 00:05:34.200
+O sea, la capa vach. Para tener el contexto histórico confiable hasta ayer. Y luego, mira
+
+00:05:34.200 --> 00:05:40.120
+los tuis recientes, las actualizaciones, la capa speed, para saber que está pasando ahorita
+
+00:05:40.120 --> 00:05:45.280
+mismo. Mentalmente, combina las dos fuentes. Vale, tiene lógica.
+
+00:05:45.280 --> 00:05:51.360
+Bueno, pues, técnicamente, la capa de servicio hace algo parecido. Es un sistema muchas veces
+
+00:05:51.360 --> 00:05:57.120
+una base de datos optimizada para consultas muy rápidas que guarda dos cosas. Los resultados
+
+00:05:57.120 --> 00:06:02.600
+ya consolidados de la capa vach, la verdad completa hasta ayer. Y también los resultados más
+
+00:06:02.600 --> 00:06:07.400
+recientes quizás parciales de la capa speed, la verdad de los últimos minutos.
+
+00:06:07.400 --> 00:06:14.199
+Ah, ok, almacen ambos resultados. Exacto. Y cuando una aplicación pregunta algo como, ¿cuántos
+
+00:06:14.199 --> 00:06:19.840
+la ex tiene esta foto ahora? La capa de servicio va, consulta esas dos vistas, las mezcla de
+
+00:06:19.840 --> 00:06:24.440
+forma inteligente y te da una respuesta que combina la solides histórica con lo más fresco
+
+00:06:24.440 --> 00:06:30.280
+del momento. Wow, es el componente que realmente permite esa dualidad que al principio parecía
+
+00:06:30.280 --> 00:06:38.200
+imposible. Justo ahí está el troco, digamos. Es una solución super ingeniosa. Y fíjate, revisando
+
+00:06:38.200 --> 00:06:44.800
+las fuentes que tenemos mencionan a Nathan Mars, el autor del libro Big Dyera. Él es reconocido
+
+00:06:44.800 --> 00:06:51.000
+como el creador de esta arquitectura. Sí, es una figura clave en esto. Y aparentemente,
+
+00:06:51.000 --> 00:06:56.800
+la desarrollo para resolver problemas bien concretos en Twitter, allá por principios de la década
+
+00:06:56.800 --> 00:07:02.840
+de 2010. Algo así sea. Necesitaban por un lado, contar retuids con precisión total, algo
+
+00:07:02.840 --> 00:07:09.240
+muy bach y al mismo tiempo mostrar qué temas serán tendencia casi en vivo. Algo muy speed,
+
+00:07:09.240 --> 00:07:14.759
+lambda fue su respuesta. Así es, y fue una innovación con un impacto enorme porque resolvió
+
+00:07:14.759 --> 00:07:20.560
+un problema muy real, muy urgente, en plane explosión del Big Data. Pero bueno, como pasa
+
+00:07:20.560 --> 00:07:26.600
+menudo con las soluciones, por elegantes que sean. Siempre hay un pero, ¿no? Pues sí, suelen
+
+00:07:26.600 --> 00:07:33.040
+traer sus propios retos y la crítica principal que se le hace a lambda, algo que autores como Martin
+
+00:07:33.040 --> 00:07:40.840
+Clayman explican muy bien en designing data intensiva aplications, es su complejidad. ¿Complejidad?
+
+00:07:40.840 --> 00:07:44.700
+Te refiere esa manejar tres capas o otra cosa.
+
+00:07:44.700 --> 00:07:50.960
+Más que las tres capas en sí, la complejidad gorda viene de otro lado, viene de tener que implementar
+
+00:07:50.960 --> 00:07:57.040
+la lógica de negocio o sea, las reglas de cómo procesas tus datos, por ejemplo, que cuenta
+
+00:07:57.040 --> 00:08:02.759
+como una vista valida o cómo calculas un puntaje de relevancia, tener que implementar eso
+
+00:08:02.759 --> 00:08:04.759
+en dos sistemas diferentes.
+
+00:08:04.759 --> 00:08:06.759
+Dos sistemas, claro.
+
+00:08:06.759 --> 00:08:12.219
+Tienes que escribir y mantener ese código para la capa vach, quizás usando Spark con Python
+
+00:08:12.219 --> 00:08:18.759
+o escala, como mencionan en textos tipo Data Engineering with Python. Y luego, tienes que volver
+
+00:08:18.759 --> 00:08:24.399
+a implementar básicamente la misma lógica, pero adaptada a las herramientas y la forma de trabajar
+
+00:08:24.399 --> 00:08:29.120
+de la capa speed, como podría ser Kafka Streams o Flink.
+
+00:08:29.120 --> 00:08:36.019
+O sea, el mismo cálculo, la misma regla, escrita y mantenida en dos lugares distintos,
+
+00:08:36.019 --> 00:08:37.639
+con tecnologías distintas.
+
+00:08:37.639 --> 00:08:39.679
+Uff, exactamente.
+
+00:08:39.679 --> 00:08:46.480
+Es, eso zona a una pesadillo operativa, el riesgo de que no sea ni identicas o que actualise
+
+00:08:46.480 --> 00:08:49.519
+su una y se tolvi de la otra, debe ser altísimo.
+
+00:08:49.519 --> 00:08:55.000
+Justo es el punto, y no es solo un dolor de cabeza técnico para los ingenieros, ¿eh?
+
+00:08:55.559 --> 00:09:01.320
+Esta duplicidad afecta directamente la agilidad. Cada vez que quieres cambiar una regla,
+
+00:09:01.320 --> 00:09:06.279
+añadir una metrica nueva o simplemente arreglar un error, tienes que hacerlo dos veces,
+
+00:09:06.279 --> 00:09:10.120
+probarlo dos veces, desplegarlo dos veces.
+
+00:09:10.120 --> 00:09:17.080
+Muchísimo. Y además, aumenta la probabilidad de meter inconsistencias a veces muy sutiles
+
+00:09:17.080 --> 00:09:22.519
+entre lo que te dice la vista histórica del vach y lo que te dice la vista en tiempo real,
+
+00:09:22.519 --> 00:09:28.279
+del speed. Es como pedirle al equipo de investigación y al reportero de última hora que calculen
+
+00:09:28.279 --> 00:09:34.279
+la misma estadística con métodos diferentes y esperar que siempre les declabado el mismo número.
+
+00:09:34.279 --> 00:09:38.360
+Difícil, mantener esa coherencia debe ser un reto constante.
+
+00:09:38.360 --> 00:09:42.199
+Es un desafío sí, un desafío operativo importante.
+
+00:09:42.199 --> 00:09:47.799
+Entendido, esa fricción es como impuesto de complejidad por tener que mantener sin cronizadas
+
+00:09:47.800 --> 00:09:53.000
+dos lógicas paralelas es un punto flaco importante de lambda. ¿Y me imagino que esa misma
+
+00:09:53.000 --> 00:09:58.280
+complicidad fue lo que impulsó a buscar otras maneras, ¿no? Precisamente, la dificultad de mantener
+
+00:09:58.280 --> 00:10:05.000
+lambda fue un motor enorme para que la comunidad pensará no habrá una forma más simple y de ahí surge
+
+00:10:05.000 --> 00:10:12.760
+la arquitectura capa. Capa, ok. Que se presenta como una evolución o para algunos una alternativa más
+
+00:10:12.759 --> 00:10:19.879
+pragmática a lambda. ¿Y cuál es la idea de capa? Pues la idea central de capa es bastante radical
+
+00:10:19.879 --> 00:10:27.080
+si quieres, pregunta. Y si pudiéramos hacer que la ruta caliente, la capa speed que usa streaming
+
+00:10:27.080 --> 00:10:34.200
+fuera tan potente, tan confiable, tan escalable que pudiera ser secargo de todo, de todo,
+
+00:10:34.200 --> 00:10:39.480
+también de lo que hacía vach. Exacto. Si el procesamiento en streaming puede hacerlo todo,
+
+00:10:39.480 --> 00:10:46.120
+entonces podríamos, pues, deshacernos por completo de la capa vach y de su lógica duplicada.
+
+00:10:46.120 --> 00:10:53.080
+Wow, eliminar la capa vach, eso si suena ambicios, pero ver. ¿Cómo funcionarían entonces para
+
+00:10:53.080 --> 00:10:59.560
+tener esa precisión histórica? Esa vista completa que nos daba vach. La clave en capa está en dos cosas.
+
+00:10:59.560 --> 00:11:06.200
+Preinaro tratar el flujo de datos, el stream, como la única fuente de verdad. Todo evento,
+
+00:11:06.200 --> 00:11:13.640
+click, compra lo que sea, se guarda en un registro que no se puede cambiar, como un log gigante e inmutable.
+
+00:11:13.640 --> 00:11:20.759
+Ok, un registro único. Y segundo, tener un sistema de procesamiento en streaming que sea super capas.
+
+00:11:20.759 --> 00:11:26.120
+Capas no sólo de calcular resultados al momento, sino también de, digamos,
+
+00:11:26.120 --> 00:11:32.120
+reprocesar datos históricos cuando haga falta. Reprocesar desde el stream? Exacto.
+
+00:11:32.120 --> 00:11:37.720
+Imagina que necesitas recalcular todo el histórico. Quizás por que encontraste un error en
+
+00:11:37.720 --> 00:11:44.840
+tu lógica o cambias de cómo defines algo importante. En capa, la idea es, agarras tu log original de
+
+00:11:44.840 --> 00:11:51.159
+eventos, los revobinas hasta el principio, y lo vuelve a pasar por el mismo sistema de streaming. Pero ahora,
+
+00:11:51.159 --> 00:11:57.799
+con la lógica corregida o actualizada. Rápido para lo nuevo, tiene su solo sistema de streaming que hace todo.
+
+00:11:57.800 --> 00:12:04.360
+Y si quieres el histórico recalculado simplemente le dices, vuelve a procesar desde el inicio. Esa es la esencia.
+
+00:12:04.360 --> 00:12:11.360
+Y el beneficio más grande es la asimplicidad operativa. Claro, me imagino. Una sola base de código
+
+00:12:11.360 --> 00:12:19.320
+para tu lógica de negocio. Un solo sistema que tienes que monitorear escalar mantener. El inmina es toda esa duplicidad
+
+00:12:19.320 --> 00:12:26.120
+de esfuerzo en desarrollo en pruebas. Es un alivio enorme para los equipos. Volviendo a la analogía de la
+
+00:12:26.120 --> 00:12:31.799
+tubería, sería como tener una sola tubería, pero con un sistema de medición y gestión tan avanzado,
+
+00:12:31.799 --> 00:12:37.759
+que te dice el flujo actual. Y si se lo pides puede recalcular todo el flujo pasado usando las mismas
+
+00:12:37.759 --> 00:12:43.279
+reglas. Justo así, simplifica mucho las cosas. ¿Qué da mucho más claro el panorama ahora?
+
+00:12:43.279 --> 00:12:51.320
+La arquitectura lada con sus capas, bach, speed, and serving fue realmente una solución pionera muy inteligente para
+
+00:12:51.320 --> 00:12:57.400
+ese dilema original de velocidad contra precisión en Big Data. Sin duda. Con vino ese sistema lento,
+
+00:12:57.400 --> 00:13:03.400
+pero exhaustivo, con el rápido, pero más enfocado en lo reciente. Y usó la capa de servicio como
+
+00:13:03.400 --> 00:13:10.360
+el gran integrador. Su impacto fue, pues, innegable. Marcon antes y un después definitivamente. En
+
+00:13:10.360 --> 00:13:16.680
+cómo se pensaban los sistemas de datos a gran escala. Pero como ya vimos, esa misma arquitectura
+
+00:13:16.680 --> 00:13:22.840
+al necesitar dos rutas de procesamiento en paralelo, pues introdujo una complejidad operativa bastante
+
+00:13:22.840 --> 00:13:29.320
+seria. Sí, el doble mantenimiento. Exacto. Y fue esa complejidad la que en gran medida,
+
+00:13:29.320 --> 00:13:35.640
+motivó la búsqueda de la siguiente o la de soluciones como la arquitectura capa, que le apuesta todo a la
+
+00:13:35.640 --> 00:13:41.480
+potencia y flexibilidad del streaming para unificar. Entonces, al final de esta charla, creo que entendemos
+
+00:13:41.480 --> 00:13:47.240
+mucho mejor cómo es que pueden coexistir esos contadores de likes que vemos moverse al instante,
+
+00:13:47.240 --> 00:13:52.840
+y esos reportes anuales súper detallados que nos llegan después. Aha. Arquitecturas como
+
+00:13:52.840 --> 00:13:58.279
+lambda lo hicieron posible, aunque con ese costo de complejidad que luego arquitecturas como capa,
+
+00:13:58.279 --> 00:14:06.600
+intentaron reducir. Exacto. Así, un viaje interesante, ¿no? Desde el problema base hasta las soluciones
+
+00:14:06.600 --> 00:14:13.000
+y sus propias evoluciones. Sí, se ve clarito como la tecnología avanza, respondiendo a los problemas
+
+00:14:13.000 --> 00:14:19.879
+que ella misma a veces crea. La necesidad de velocidad y precisión nos llevó a lambda. Y la complejidad de
+
+00:14:19.879 --> 00:14:26.519
+lambda nos empujó hacia capa y otros enfoque más modernos basados en streaming. Y bueno, para cerrar,
+
+00:14:26.519 --> 00:14:32.120
+quizá podríamos dejar una pregunta aflotando en el aire, algo para que quienes nos escuchan le den una pensada.
+
+00:14:32.120 --> 00:14:38.120
+Adelante. Sí, la promesa de simplicidad de capa, con ese enfoque único basado en streaming,
+
+00:14:38.120 --> 00:14:44.360
+están atractiva. Y parece ser la dirección en muchos casos. ¿Qué tuvo que pasar? ¿Qué avances
+
+00:14:44.360 --> 00:14:50.120
+específicos necesitaron ocurrir en las tecnologías de procesamiento de streamings? Bueno, pregunta.
+
+00:14:50.120 --> 00:14:57.879
+O sea, ¿qué hizo que esa ruta caliente? Se volviera tan robusta, tan escalable, tan confiable como
+
+00:14:57.879 --> 00:15:02.759
+para poder aspirar a comerse todas las tareas, incluso las que antes necesitaban la precisión
+
+00:15:02.759 --> 00:15:08.759
+casi obsesiva y el reprocesamiento total del vach. Claro, ¿qué capacidad estuvieron que madurar? Exacto.
+
+00:15:08.759 --> 00:15:13.480
+Pensaré en eso. En qué tuvo que mejorar específicamente en el mundo del streaming para que esa
+
+00:15:13.480 --> 00:15:17.799
+visión unificada de capa fuera viable. Creo que nos puede dar pistas interesantes sobre a
+
+00:15:17.800 --> 00:15:20.840
+dónde sigue moviéndose todo esto del manejo de datos en tiempo real.
+

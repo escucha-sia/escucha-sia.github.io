@@ -1,0 +1,655 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:05.679
+para la análisis de hoy tenemos sobre la mesa un material que ataca, yo diría un dolor de cabeza
+
+00:00:05.679 --> 00:00:09.759
+crónico en el mundo del desarrollo de software. La dispersión.
+
+00:00:09.759 --> 00:00:11.160
+Uéftotal.
+
+00:00:11.160 --> 00:00:16.000
+¿Quién estén este mundo sabe perfectamente lo que hablamos? Tienes los diagramas de arquitectura
+
+00:00:16.000 --> 00:00:22.240
+en una web, por un lado, los archivos de configuración en otra carpeta, el código en su propio sitio,
+
+00:00:22.240 --> 00:00:26.560
+es un liot tremendo para mantener todo al día y sobre todo sincronizado.
+
+00:00:26.640 --> 00:00:30.360
+Es que es un problema universal. Y a menudo se subestima ¿eh?
+
+00:00:30.360 --> 00:00:33.560
+Se ve como una simple molestia de organización. Claro.
+
+00:00:33.560 --> 00:00:35.880
+Pero el verdadero peligro no es el desorden.
+
+00:00:35.880 --> 00:00:37.800
+Es la incuerencia que genera.
+
+00:00:37.800 --> 00:00:45.480
+Esa brecha que se crea entre lo que creemos que es el sistema según un diagrama y lo que de verdad es.
+
+00:00:45.480 --> 00:00:49.280
+Y lo que el sistema realmente es, según el código.
+
+00:00:49.280 --> 00:00:55.640
+Esa brecha es un caldo de cultivo para errores, para deuda técnica, para malentendidos que pueden costar
+
+00:00:55.640 --> 00:00:57.640
+muchísimo tiempo y dinero.
+
+00:00:57.640 --> 00:00:59.240
+Totalmente.
+
+00:00:59.240 --> 00:01:04.400
+Y justo por eso me llamó tanto la atención la propuesta que analiza nuestro material de hoy,
+
+00:01:04.400 --> 00:01:07.000
+de un artículo de Jeff Banderlast.
+
+00:01:07.000 --> 00:01:08.000
+A ver.
+
+00:01:08.000 --> 00:01:11.640
+La idea a primera vista suena radicalmente simple.
+
+00:01:11.640 --> 00:01:16.560
+El lugar de usar un montón de herramientas distintas, porque no convertir la que ya usamos
+
+00:01:16.560 --> 00:01:21.120
+a cada día, nuestro editor de código, en el centro de operaciones para todo.
+
+00:01:21.120 --> 00:01:22.719
+Ah, centralizarlo todo ahí.
+
+00:01:22.719 --> 00:01:23.719
+Exacto.
+
+00:01:23.799 --> 00:01:26.799
+Y concretamente se centra en Visual Studio Code.
+
+00:01:26.799 --> 00:01:27.799
+Sí.
+
+00:01:27.799 --> 00:01:34.920
+Y la pieza que propone para unir ese puse es integrar la herramienta de diagramación, drop.io, directamente
+
+00:01:34.920 --> 00:01:36.200
+dentro de 10 Code.
+
+00:01:36.200 --> 00:01:37.680
+Que soy achocon poco.
+
+00:01:37.680 --> 00:01:38.680
+Claro.
+
+00:01:38.680 --> 00:01:42.560
+Chocca con la idea tradicional de que deditores para picar código y punto.
+
+00:01:42.560 --> 00:01:47.840
+La propuesta es que también se al lugar donde se visualiza, se diseña y se entiende la arquitectura
+
+00:01:47.840 --> 00:01:48.840
+del sistema.
+
+00:01:48.840 --> 00:01:51.359
+Vale, pues vamos a desgranar esto si te parece.
+
+00:01:51.359 --> 00:01:56.079
+La primera idea que plantea el artículo suena, bueno, suena casi demasiado básica,
+
+00:01:56.079 --> 00:01:57.439
+ponerlo todo junto.
+
+00:01:57.439 --> 00:02:04.599
+Ah, es decir, que los diagramas los archivos de configuración y el código fuente, vivan
+
+00:02:04.599 --> 00:02:08.079
+en el mismo proyecto en el mismo repositorio.
+
+00:02:08.079 --> 00:02:12.960
+¿Por qué es tan importante algo que parece un simple consejo de organización?
+
+00:02:12.960 --> 00:02:14.159
+¿Por qué es el primer paso?
+
+00:02:14.159 --> 00:02:19.039
+El fundamental para crear lo que se conoce como una única fuente de verdad.
+
+00:02:19.039 --> 00:02:20.799
+O single source of truth.
+
+00:02:20.799 --> 00:02:21.799
+Claro.
+
+00:02:21.799 --> 00:02:23.000
+No se trata de como deidad.
+
+00:02:23.000 --> 00:02:25.039
+Se trata de fía habilidad.
+
+00:02:25.039 --> 00:02:29.799
+Cuando el diagrama de la base de datos, el script que la crea y el código de la aplicación
+
+00:02:29.799 --> 00:02:31.680
+que la usan están juntos.
+
+00:02:31.680 --> 00:02:36.120
+Pues la probabilidad de que uno de ellos se quede obsoleto y mientas sobre los otros dos se
+
+00:02:36.120 --> 00:02:38.120
+reduza de forma drástica.
+
+00:02:38.120 --> 00:02:40.319
+Es el principio del fin.
+
+00:02:40.319 --> 00:02:43.560
+Es el principio del fin de la archiología de proyectos.
+
+00:02:43.560 --> 00:02:44.560
+Me encanta esa frase.
+
+00:02:44.560 --> 00:02:46.319
+Arquioología de proyectos.
+
+00:02:46.319 --> 00:02:47.639
+Todas la hemos ofrido.
+
+00:02:47.640 --> 00:02:50.760
+El artículo lo resume con una frase que seguro que nos suena.
+
+00:02:50.760 --> 00:02:55.760
+Se acabó el donde estaba la última versión del diagrama de flujo.
+
+00:02:55.760 --> 00:02:57.560
+Uff, esa pregunta.
+
+00:02:57.560 --> 00:02:58.560
+Esa pregunta.
+
+00:02:58.560 --> 00:03:03.440
+¿Qué ha quemado horas y horas en incontable reuniones simplemente?
+
+00:03:03.440 --> 00:03:04.880
+Se desban Efe.
+
+00:03:04.880 --> 00:03:09.240
+La última versión está por definición junto al código que describe.
+
+00:03:09.240 --> 00:03:15.120
+Y una vez que tienes todo en el mismo sitio, el siguiente paso es casi inevitable.
+
+00:03:15.120 --> 00:03:18.120
+¿Y es donde el sistema gana una robuste extramenda?
+
+00:03:18.120 --> 00:03:20.240
+Aplicar el control de versiones a todo.
+
+00:03:20.240 --> 00:03:21.240
+A todo.
+
+00:03:21.240 --> 00:03:22.240
+No solo al código.
+
+00:03:22.240 --> 00:03:23.240
+A todo.
+
+00:03:23.240 --> 00:03:27.960
+Aquí es donde entra en juego una herramienta como git, que normalmente asociamos solo al código
+
+00:03:27.960 --> 00:03:28.960
+fuente.
+
+00:03:28.960 --> 00:03:31.599
+La idea es tratar los diagramas como lo que son.
+
+00:03:31.599 --> 00:03:32.599
+Archivos de texto.
+
+00:03:32.599 --> 00:03:35.640
+En este caso, aquí se meele que define en una estructura.
+
+00:03:35.640 --> 00:03:37.480
+Espera, para que lo entienda bien.
+
+00:03:37.480 --> 00:03:42.159
+Me estás diciendo que si yo muevo una caja en un diagrama de arquitectura o cambio el
+
+00:03:42.159 --> 00:03:43.840
+nombre de una flecha.
+
+00:03:43.840 --> 00:03:46.000
+¿Y ese cambio quedaría registrado en git?
+
+00:03:46.000 --> 00:03:47.000
+Exacto.
+
+00:03:47.000 --> 00:03:50.360
+¿Cómo si hubiera modificado una línea de código en Python o java?
+
+00:03:50.360 --> 00:03:51.360
+Exactamente eso.
+
+00:03:51.360 --> 00:03:56.039
+Cada cambio, por pequeño que sea, queda registrado en un commit con su autor, su fecha y
+
+00:03:56.039 --> 00:03:57.599
+su descripción.
+
+00:03:57.599 --> 00:04:01.680
+De repente, déjaz de tener solo un historial de los cambios en el código para tener un
+
+00:04:01.680 --> 00:04:05.080
+historial completo y auditable de las decisiones de arquitectura.
+
+00:04:05.080 --> 00:04:06.080
+¿Qué bueno?
+
+00:04:06.080 --> 00:04:10.599
+¿Puedes volver atrás seis meses y ver no solo como era el código, si no como estaba diseñada
+
+00:04:10.599 --> 00:04:15.000
+la arquitectura que lo sustentaba y entender por qué se toma una decisión concreta.
+
+00:04:15.000 --> 00:04:19.120
+O para hacer autopsias de problemas, es una herramienta increíble.
+
+00:04:19.120 --> 00:04:20.399
+Lo es.
+
+00:04:20.399 --> 00:04:24.600
+Recuerdo un proyecto en el que pase una tarde entera de purando un error porque estaba mirando
+
+00:04:24.600 --> 00:04:27.879
+un diagrama de arquitectura que tenía seis meses de antigüedad.
+
+00:04:27.879 --> 00:04:29.839
+Claro, no estaba actualizado.
+
+00:04:29.839 --> 00:04:33.600
+No reflejaba un cambio crítico que se había hecho en el sistema, una tarde entera
+
+00:04:33.600 --> 00:04:37.399
+perdida por culpa de esa brecha entre el diseño y la realidad.
+
+00:04:37.399 --> 00:04:40.120
+Este enfoque me habría horrado ese dolor de cabeza.
+
+00:04:40.120 --> 00:04:43.680
+Bien actual, pero déjame hacer de abogada del diablo un momento.
+
+00:04:43.680 --> 00:04:44.680
+¿Avelante?
+
+00:04:44.680 --> 00:04:49.319
+No hay un riesgo aquí, pienso en los repositorios volviendo seis enormes y lentos al mezclar
+
+00:04:49.319 --> 00:04:52.600
+código con diagramas que a veces pueden ser archivos pesados.
+
+00:04:52.600 --> 00:04:53.600
+Es un buen punto.
+
+00:04:53.600 --> 00:04:57.720
+O lo que es más complicado, pienso en la disciplina del equipo.
+
+00:04:57.720 --> 00:05:03.280
+Es realista esperar que todo el mundo trate los diagramas con el mismo rigor que el código.
+
+00:05:03.280 --> 00:05:05.720
+A veces se ven como un dibujo secundario.
+
+00:05:05.720 --> 00:05:07.320
+Son dos puntos muy pertinentes.
+
+00:05:07.320 --> 00:05:13.160
+Sí, sobre el tamaño, las herramientas modernas de Gits como Git LFS están diseñadas
+
+00:05:13.160 --> 00:05:16.920
+precisamente para manejar archivos grandes sin realentizar el repositorio.
+
+00:05:16.920 --> 00:05:20.520
+Vale, y sobre la disciplina tiene toda la razón.
+
+00:05:20.520 --> 00:05:21.920
+Es el mayor reto.
+
+00:05:21.920 --> 00:05:24.720
+No es un cambio técnico, es un cambio cultural.
+
+00:05:24.720 --> 00:05:27.720
+El equipo tiene que entender que el diagrama ya no es un dibujo.
+
+00:05:27.720 --> 00:05:29.720
+Es una parte biva del sistema.
+
+00:05:29.720 --> 00:05:33.120
+Exacto, es una parte biva y esencial de la documentación.
+
+00:05:33.120 --> 00:05:34.120
+Exige rigor.
+
+00:05:34.120 --> 00:05:35.120
+Sí.
+
+00:05:35.120 --> 00:05:39.840
+En eficiente de tener un arquitecturado comentada y versiónada que no miente, suele ser un
+
+00:05:39.840 --> 00:05:42.720
+incentivo muy poderoso para adoptar esa disciplina.
+
+00:05:42.720 --> 00:05:48.439
+Es un sí, pero la herramienta lo facilita, pero el equipo tiene que comprometerse.
+
+00:05:48.439 --> 00:05:50.319
+De acuerdo, queda claro.
+
+00:05:50.319 --> 00:05:55.000
+La parte de organización diversionado es una mejora de procesos enorme por sí sola, pero
+
+00:05:55.000 --> 00:05:57.000
+el artículo insisten que hay algo más.
+
+00:05:57.000 --> 00:06:00.280
+Habla de un momento aja de un salto cualitativo.
+
+00:06:00.280 --> 00:06:02.040
+¿A qué se refiere exactamente?
+
+00:06:02.040 --> 00:06:06.600
+Se refiere a cuando dejas de ver los diagramas y el código como dos cosas que simplemente
+
+00:06:06.600 --> 00:06:11.760
+están en la misma carpeta y empiezas a ver los como dos cosas que están conectadas de forma
+
+00:06:11.760 --> 00:06:13.480
+interactiva.
+
+00:06:13.480 --> 00:06:17.160
+El concepto clave aquí es la navegación vinculada.
+
+00:06:17.160 --> 00:06:21.720
+La idea es que los elementos del diagrama sepan que parte del código representan.
+
+00:06:21.720 --> 00:06:24.240
+¿Y eso como funciona en la práctica?
+
+00:06:24.240 --> 00:06:27.240
+El ejemplo que da el material es la mejor explicación.
+
+00:06:27.240 --> 00:06:31.480
+Imagina que tiene sabierto en UBC Code un diagrama de tu base de datos.
+
+00:06:31.480 --> 00:06:33.960
+Es las tablas sus columnas las relaciones.
+
+00:06:33.960 --> 00:06:34.960
+¿Vale?
+
+00:06:34.960 --> 00:06:40.000
+Ahora, en lugar de solo mirarlo, hace es clic en la caja que representa la tabla usuarios.
+
+00:06:40.000 --> 00:06:41.000
+¿Ok?
+
+00:06:41.000 --> 00:06:46.000
+Y en ese instante sin que hagas nada más, UBC Code te abre en una nueva pestaña el archivo de código
+
+00:06:46.000 --> 00:06:47.000
+exacto.
+
+00:06:47.000 --> 00:06:53.319
+El escribte secuéle el fichero de terraform lo que sea, que define esa tabla usuarios.
+
+00:06:53.319 --> 00:06:56.000
+El clic en el diagrama te lleva directamente a la implementación.
+
+00:06:56.000 --> 00:06:57.000
+¿Uau?
+
+00:06:57.000 --> 00:06:58.000
+¿Vale?
+
+00:06:58.000 --> 00:06:59.000
+Ahora entiendo el aja.
+
+00:06:59.000 --> 00:07:00.840
+Eso sí que es un cambio de juego.
+
+00:07:00.840 --> 00:07:04.160
+El diagrama deja de ser una imagen estática, un documento pasivo.
+
+00:07:04.160 --> 00:07:05.160
+Eso es.
+
+00:07:05.160 --> 00:07:12.240
+¿Y se convierte en una especie de, pues, una interfaz gráfica para explorar tu propio proyecto?
+
+00:07:12.240 --> 00:07:16.240
+Como un mapa interactivo, esa es la analogía perfecta.
+
+00:07:16.240 --> 00:07:18.920
+Es un mapa interactivo del código.
+
+00:07:18.920 --> 00:07:22.440
+Y lo fascinante aquí es que este puente es tan gible.
+
+00:07:22.440 --> 00:07:23.640
+Es real.
+
+00:07:23.640 --> 00:07:26.960
+Si es rapport completo, es abrecha de la que hablamos al principio.
+
+00:07:26.960 --> 00:07:30.720
+Entre el diseño abstracto y la implementación concreta.
+
+00:07:30.720 --> 00:07:35.320
+Ya no son dos mundos que un desarrollador tiene que mantener conectados en su mente.
+
+00:07:35.320 --> 00:07:37.040
+Con el esfuerzo que eso supone.
+
+00:07:37.040 --> 00:07:41.920
+Claro, piensa en la carga cognitiva, en el famoso cambio de contexto, que es un ladrón de
+
+00:07:41.920 --> 00:07:43.480
+productividad tan grande.
+
+00:07:43.480 --> 00:07:45.280
+Totalmente.
+
+00:07:45.280 --> 00:07:51.520
+Tener que saltar del editor a una web, buscar el diagrama, encontrar el componente, volver al editor,
+
+00:07:51.520 --> 00:07:56.560
+buscar el archivo, cada uno de esos pasos te saca de la zona de concentración.
+
+00:07:56.560 --> 00:07:58.240
+Esto elimina toda esa fricción.
+
+00:07:58.240 --> 00:08:03.240
+No sólo la elimina, es que cambia la forma en que se puede entender un sistema complejo.
+
+00:08:03.240 --> 00:08:06.040
+Piencen el impacto para alguien que se incorpora un equipo.
+
+00:08:06.040 --> 00:08:09.720
+Sería una herramienta de aprendizaje espectacular.
+
+00:08:09.720 --> 00:08:16.319
+Claro, en lugar de darle una pila de documentos y acceso a un mar de código, puedes decirle,
+
+00:08:16.319 --> 00:08:21.079
+abre el diagrama de arquitectura principal y empieza a hacer clic, empieza a navegar.
+
+00:08:21.079 --> 00:08:26.000
+Le permite descubrir las piezas del sistema de una manera visual e intuitiva.
+
+00:08:26.000 --> 00:08:29.439
+Incluso, para los que ya llevamos tiempo en el proyecto.
+
+00:08:29.439 --> 00:08:34.039
+A veces los sistemas crecen tanto que nadie tiene el mapa completo en la cabeza.
+
+00:08:34.039 --> 00:08:35.039
+Exacto.
+
+00:08:35.039 --> 00:08:40.320
+Esto te permitiría, por ejemplo, ver un diagrama de dependencias entre servicios y, si ves que se está
+
+00:08:40.320 --> 00:08:44.720
+volviendo demasiado enrevesado, usarlo como guía para refactorizar.
+
+00:08:44.720 --> 00:08:48.639
+La visualización se convierte en una herramienta de análisis dinámico.
+
+00:08:48.639 --> 00:08:53.720
+Totalmente, deja de ser un artefacto que se crea el principio y se olvida para convertirse
+
+00:08:53.720 --> 00:08:58.879
+en una herramienta viva de trabajo, tanto para entender cómo para mejorar la calidad del código.
+
+00:08:58.879 --> 00:09:03.960
+Entonces, si lo entendido bien, la propuesta completa que hemos analizado, se podría resumir
+
+00:09:03.960 --> 00:09:05.320
+en tres grandes ideas.
+
+00:09:05.320 --> 00:09:11.080
+A ver, juntalo todo en un solo sitio, la consolidación para tener esa única fuente de verdad.
+
+00:09:11.080 --> 00:09:11.840
+Correcto.
+
+00:09:11.840 --> 00:09:15.279
+Trata lo todo como código, usando guía para versionar.
+
+00:09:15.279 --> 00:09:18.360
+No solo los programas, sino también los diagramas y configuraciones.
+
+00:09:18.360 --> 00:09:19.160
+Así es.
+
+00:09:19.159 --> 00:09:25.079
+Y tercero que es el gran salto, conecta lo visual con el código de forma interactiva, aprovechando
+
+00:09:25.079 --> 00:09:30.000
+esta navegación vinculada para crear ese mapa vivo del proyecto, ascapturado la esencia
+
+00:09:30.000 --> 00:09:31.000
+perfectamente.
+
+00:09:31.000 --> 00:09:35.719
+Y la conclusión a la que llega al material es que esta combinación de prácticas no es solo una
+
+00:09:35.719 --> 00:09:36.719
+mejora de orden.
+
+00:09:36.719 --> 00:09:43.240
+Vamos allá, sino que transforma a bsco de lo que la autor llama el entorno ideal para trabajar
+
+00:09:43.240 --> 00:09:46.079
+con arquitecturas impulsadas por metadatos.
+
+00:09:46.080 --> 00:09:50.480
+Es una firmación muy potente, pero creo que justificada por los beneficios.
+
+00:09:50.480 --> 00:09:56.480
+Sí, porque al final del día los beneficios parece muy claros, por un lado, se mejora la colaboración
+
+00:09:56.480 --> 00:10:00.759
+del equipo porque todo el mundo está mirando el mismo mapa, se eliminan ambiguidades.
+
+00:10:00.759 --> 00:10:01.759
+Claro.
+
+00:10:01.759 --> 00:10:05.200
+Y por otro se asegura esa coherencia entre lo que se diseña, lo que se construye.
+
+00:10:05.200 --> 00:10:10.520
+El resultado final, como dice la fuente, es tener un verdadero centro de mando para gestionar
+
+00:10:10.520 --> 00:10:11.520
+la complejidad.
+
+00:10:11.520 --> 00:10:16.040
+Un centro de mando que además es la herramienta que los desarrolladores ya usan y quieren.
+
+00:10:16.039 --> 00:10:19.319
+No les estás imponiendo un sistema externo y complejo.
+
+00:10:19.319 --> 00:10:23.279
+No, estás potenciando la herramienta que ya forma parte de su día a día.
+
+00:10:23.279 --> 00:10:24.279
+Exacto.
+
+00:10:24.279 --> 00:10:25.919
+Es una idea muy poderosa, la verdad.
+
+00:10:25.919 --> 00:10:31.319
+Nos obliga a mirar con otros ojos las herramientas que usamos a diario, un editor de código que
+
+00:10:31.319 --> 00:10:37.039
+a menudo vemos como un simple procesador de textos con superpoderes, puede convertirse en
+
+00:10:37.039 --> 00:10:40.199
+el nexo que une todas las facetas de un proyecto.
+
+00:10:40.199 --> 00:10:44.199
+Desde la idea más abstracta hasta la última línea de código.
+
+00:10:44.200 --> 00:10:46.200
+Esto me deja pensando.
+
+00:10:46.200 --> 00:10:51.600
+Si esta metodología funciona también para vincular de gramas y código, que son dos de los artefactos
+
+00:10:51.600 --> 00:10:54.800
+más importantes, pero a la vez más distintos.
+
+00:10:54.800 --> 00:11:00.280
+¿Qué pasaría si aplicáramos esta misma filosofía a otras piezas del púselo que tradicionalmente
+
+00:11:00.280 --> 00:11:03.280
+viven aisladas y fuera del control de versiones?
+
+00:11:03.280 --> 00:11:05.360
+En qué tipo de piezas estás pensando?
+
+00:11:05.360 --> 00:11:10.600
+Pienso por ejemplo en la documentación funcional para el usuario, o en los planes de prueba detallados,
+
+00:11:10.600 --> 00:11:14.680
+muy incluso en las maquetas interactivas de la interfaz de usuario.
+
+00:11:14.680 --> 00:11:15.680
+Claro.
+
+00:11:15.680 --> 00:11:22.440
+¿Qué pasaría si esos elementos también vivieran en el mismo repositorio versionados y potencialmente
+
+00:11:22.440 --> 00:11:25.879
+vinculados al código que describen o prueban?
+
+00:11:25.879 --> 00:11:30.480
+La idea de un centro de mando se expandiría muchísimo.
+
+00:11:30.480 --> 00:11:31.480
+Exacto.
+
+00:11:31.480 --> 00:11:34.800
+Podría barcar el ciclo de vida completo del producto.
+
+00:11:34.800 --> 00:11:39.040
+Es una pregunta abierta, pero que apunta un futuro donde la fragmentación de herramientas es
+
+00:11:39.039 --> 00:11:42.799
+a dispersión con la que empezamos, podría ser por fin cosa del pasado.
+

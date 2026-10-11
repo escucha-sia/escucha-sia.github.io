@@ -1,0 +1,948 @@
+1
+00:00:00,000 --> 00:00:04,320
+Mira, hoy no vamos a hablar de otra actualización incremental de una hija.
+
+2
+00:00:04,320 --> 00:00:07,200
+De esas que vemos cada semana, ¿no?
+
+3
+00:00:07,200 --> 00:00:08,000
+Justo.
+
+4
+00:00:08,000 --> 00:00:12,919
+Hoy vamos a analizar algo que se siente, no sé, más como una revolución silenciosa.
+
+5
+00:00:12,919 --> 00:00:16,760
+Un cambio de fondo en cómo se está empezando a ejecutar el trabajo.
+
+6
+00:00:16,760 --> 00:00:20,000
+Sobre todo para quienes construyen productos de tecnología.
+
+7
+00:00:20,000 --> 00:00:20,960
+Exacto.
+
+8
+00:00:20,960 --> 00:00:25,320
+Y el epicentro de esta revolución según los materiales que tenemos hoy,
+
+9
+00:00:25,320 --> 00:00:29,080
+es una funcionalidad que, aunque es muy potente,
+
+10
+00:00:29,080 --> 00:00:33,160
+parece que está pasando un poco por debajo del radar para muchos.
+
+11
+00:00:33,160 --> 00:00:34,079
+¿Cuál es?
+
+12
+00:00:34,079 --> 00:00:37,359
+Se trata de las skills, las habilidades,
+
+13
+00:00:37,359 --> 00:00:39,560
+el inteligencia artificial Cloud,
+
+14
+00:00:39,560 --> 00:00:42,520
+así es, y para entrarle de lleno este tema,
+
+15
+00:00:42,520 --> 00:00:48,359
+nos vamos a basar en un artículo que la verdad está muy revelador de Product Powerhouse.
+
+16
+00:00:48,359 --> 00:00:50,439
+Se titula Cloud Skills,
+
+17
+00:00:50,439 --> 00:00:54,920
+día y I feature that's quietly changing how product managers work.
+
+18
+00:00:59,079 --> 00:01:04,519
+Está, bueno, potencialmente, reescribiendo las reglas del juego para el rol del gestor de producto.
+
+19
+00:01:04,519 --> 00:01:06,519
+Y para entender la magnitud de esto,
+
+20
+00:01:06,519 --> 00:01:10,519
+creo que primero hay que pintar el cuadro del problema que resuelve.
+
+21
+00:01:10,519 --> 00:01:12,120
+Es un dolor que hijole,
+
+22
+00:01:12,120 --> 00:01:15,439
+cualquier tecnología conoce demasiado bien.
+
+23
+00:01:15,439 --> 00:01:17,879
+La famosa fricción tecnológica.
+
+24
+00:01:17,879 --> 00:01:18,719
+Justo.
+
+25
+00:01:18,719 --> 00:01:21,480
+Pensemos en el escenario más clásico del mundo.
+
+26
+00:01:21,480 --> 00:01:23,599
+Un gestor de producto, un PM,
+
+27
+00:01:23,599 --> 00:01:26,000
+está en una junta y necesita un dato.
+
+28
+00:01:26,000 --> 00:01:28,400
+Un dato clave para tomar una decisión.
+
+29
+00:01:28,400 --> 00:01:29,240
+¿Qué hace?
+
+30
+00:01:29,240 --> 00:01:31,040
+Uf, ya sea, donde vas.
+
+31
+00:01:31,040 --> 00:01:32,840
+Le van a un ticket o peor,
+
+32
+00:01:32,840 --> 00:01:36,240
+le mando un mensaje por es Lack alguien de datos.
+
+33
+00:01:36,240 --> 00:01:38,960
+Para que le corra una consulta en ese cuel, y ahí.
+
+34
+00:01:38,960 --> 00:01:39,920
+Hay empiezas al espera.
+
+35
+00:01:39,920 --> 00:01:41,640
+Hay empiezas al espera exacto.
+
+36
+00:01:41,640 --> 00:01:44,640
+El analista tiene su propia cola dependiente,
+
+37
+00:01:44,640 --> 00:01:45,840
+sus prioridades,
+
+38
+00:01:45,840 --> 00:01:47,840
+y se genera un cuello de botella.
+
+39
+00:01:47,840 --> 00:01:52,240
+Una pregunta que en teoría tomaría 5 minutos responder en la práctica.
+
+40
+00:01:52,240 --> 00:01:55,680
+Se convierte en un bloqueo de horas.
+
+41
+00:01:55,680 --> 00:01:57,000
+A veces días.
+
+42
+00:01:57,000 --> 00:02:02,159
+Es un freno de mano puesto constantemente en todo el ciclo de desarrollo.
+
+43
+00:02:02,159 --> 00:02:03,560
+Totalmente.
+
+44
+00:02:03,560 --> 00:02:06,400
+Es esa dependencia a la que desgasta.
+
+45
+00:02:06,400 --> 00:02:09,599
+Y es justo ahí donde, según este análisis,
+
+46
+00:02:09,599 --> 00:02:13,120
+las nuevas herramientas entran a cambiarlo todo.
+
+47
+00:02:13,120 --> 00:02:17,039
+Y aquí está la idea principal de todo esto que revisamos.
+
+48
+00:02:17,039 --> 00:02:21,159
+Estamos viendo el salto de la IA, como un chatbot,
+
+49
+00:02:21,159 --> 00:02:24,439
+a un verdadero agente de ejecución.
+
+50
+00:02:24,439 --> 00:02:26,840
+Y esa distinción es crucial.
+
+51
+00:02:26,840 --> 00:02:32,240
+O sea, ya no es un asistente al que le pides que te resuma un texto o que te de ideas.
+
+52
+00:02:32,240 --> 00:02:33,039
+No.
+
+53
+00:02:33,039 --> 00:02:39,960
+Es un agente al que le da una instrucción y la ejecuta en el mundo real en tus sistemas.
+
+54
+00:02:39,960 --> 00:02:44,520
+Una de las fuentes lo resume de una forma muy directa, muy potente.
+
+55
+00:02:44,520 --> 00:02:45,159
+A ver.
+
+56
+00:02:45,159 --> 00:02:48,879
+La IA dejó de ser un chat para ser un empleado.
+
+57
+00:02:48,879 --> 00:02:49,879
+Esa es una frase,
+
+58
+00:02:49,879 --> 00:02:52,280
+wow, es una frase potente.
+
+59
+00:02:52,280 --> 00:02:55,080
+Pero suena un poco asencia ficción.
+
+60
+00:02:55,080 --> 00:02:58,440
+O sea, de verdad, podemos confiar en un empleado de IA
+
+61
+00:02:58,440 --> 00:03:02,280
+para no cometir un error garrafal en una base de datos de producción.
+
+62
+00:03:02,280 --> 00:03:02,880
+Claro.
+
+63
+00:03:02,880 --> 00:03:05,480
+Me da un poco de vertigo pensar en eso la verdad.
+
+64
+00:03:05,480 --> 00:03:07,800
+Es una preocupación totalmente valida.
+
+65
+00:03:07,800 --> 00:03:10,800
+Y de hecho, el análisis la aborda de frente.
+
+66
+00:03:10,800 --> 00:03:15,320
+Pero antes de llegar a la confianza, veamos de qué es capaz este but.
+
+67
+00:03:15,320 --> 00:03:16,439
+Este empleado.
+
+68
+00:03:16,439 --> 00:03:17,000
+OK.
+
+69
+00:03:17,000 --> 00:03:18,600
+No son tareas abstractas.
+
+70
+00:03:18,600 --> 00:03:22,320
+El artículo detalle ejemplos muy concretos.
+
+71
+00:03:22,319 --> 00:03:26,879
+El primero, el más obvio, es justo la capacidad de realizar esas consultas
+
+72
+00:03:26,879 --> 00:03:29,719
+a bases de datos ese cuéle en tiempo real.
+
+73
+00:03:29,719 --> 00:03:33,799
+Es que eso, eso te cambia hasta la dinámica en una junta.
+
+74
+00:03:33,799 --> 00:03:35,519
+Dejas de ser la persona que dice,
+
+75
+00:03:35,519 --> 00:03:38,879
+buena pregunta lo revisamos y volvemos con datos la próxima semana.
+
+76
+00:03:38,879 --> 00:03:39,319
+Claro.
+
+77
+00:03:39,319 --> 00:03:42,680
+A ser quien dice un momento, te crea la pregunta a la IA
+
+78
+00:03:42,680 --> 00:03:44,919
+y tiene la respuesta en 30 segundos.
+
+79
+00:03:44,919 --> 00:03:47,879
+El impacto en la gilidad es brutal.
+
+80
+00:03:47,879 --> 00:03:48,959
+Exacto.
+
+81
+00:03:48,960 --> 00:03:55,439
+Pero, como decía, el vertigo viene de pensar en tareas más complejas y, pues, para
+
+82
+00:03:55,439 --> 00:03:56,439
+allá va esto.
+
+83
+00:03:56,439 --> 00:03:57,439
+OK.
+
+84
+00:03:57,439 --> 00:04:04,280
+El ejemplo del Ese Cuéle es clarísimo, pero hasta donde llega estamos hablando solo de sacardatos
+
+85
+00:04:04,280 --> 00:04:07,280
+o el artículo menciona tareas que van más allá.
+
+86
+00:04:07,280 --> 00:04:10,760
+No sé, quizás más de la recreativa o de definición de producto.
+
+87
+00:04:10,760 --> 00:04:12,080
+Mucho más allá.
+
+88
+00:04:12,080 --> 00:04:17,960
+Se habla de analizar métricas de producto, de generar prototipos de baja fidelidad.
+
+89
+00:04:17,959 --> 00:04:20,199
+Y aquí es donde se pone muy interesante.
+
+90
+00:04:20,199 --> 00:04:21,199
+A ver.
+
+91
+00:04:21,199 --> 00:04:27,359
+De crear historias de usuario con un rigor técnico que antes estaba reservado para los ingenieros.
+
+92
+00:04:27,359 --> 00:04:29,680
+A ver, de tengamos no sé ahí.
+
+93
+00:04:29,680 --> 00:04:33,159
+Porque una cosa es pedirle que describa un borrador.
+
+94
+00:04:33,159 --> 00:04:38,719
+Y otra muy distintas que generé una especificación funcional que un desarrollador pueda usar es
+
+95
+00:04:38,719 --> 00:04:39,719
+otro nivel.
+
+96
+00:04:39,719 --> 00:04:40,719
+Precisamente.
+
+97
+00:04:40,719 --> 00:04:47,120
+Y para que quede claro cómo funciona, darle un esquilla cloud no es magia.
+
+98
+00:04:47,120 --> 00:04:53,280
+Esencialmente, le das acceso controlado a un herramienta, como la ápide tu base de datos
+
+99
+00:04:53,280 --> 00:04:55,920
+o de guira y le enseña a usarla.
+
+100
+00:04:55,920 --> 00:04:56,920
+OK.
+
+101
+00:04:56,920 --> 00:05:00,759
+Es como si le dieras las llaves del coche y el manual de instrucciones.
+
+102
+00:05:00,759 --> 00:05:06,240
+A partir de ahí, puede operar por sí mismo dentro de los límites que tú les estableciste.
+
+103
+00:05:06,240 --> 00:05:07,560
+Entendido.
+
+104
+00:05:07,560 --> 00:05:09,560
+Le das acceso y conocimiento.
+
+105
+00:05:09,560 --> 00:05:13,879
+Y aquí es donde la artículo sueltona cifra que honestamente tuve que leer dos veces para
+
+106
+00:05:13,879 --> 00:05:14,879
+creerla.
+
+107
+00:05:14,879 --> 00:05:19,319
+¿Abla del impacto cuantificable de todo esto?
+
+108
+00:05:19,319 --> 00:05:23,759
+Mensión o un informe de garner que estima que el uso de estos agentes de ella puede reducir el
+
+109
+00:05:23,759 --> 00:05:27,800
+tiempo que los equipos dedican a tareas como la documentación técnica y el refinamiento de
+
+110
+00:05:27,800 --> 00:05:30,399
+backlogs hasta en un 40%.
+
+111
+00:05:30,399 --> 00:05:32,959
+Suena increíble, verdad?
+
+112
+00:05:32,959 --> 00:05:35,360
+Pero si lo desmenusas, tienes sentido.
+
+113
+00:05:35,360 --> 00:05:42,199
+Como irla descripción, es aliniarla con los criterios de aceptación, verificar posibles dependencias
+
+114
+00:05:42,199 --> 00:05:47,879
+técnicas con otras partes del sistema, formatear la bien en la herramienta de gestión.
+
+115
+00:05:47,879 --> 00:05:52,560
+Son dos senas de micro tareas administrativas que se comen las horas.
+
+116
+00:05:52,560 --> 00:05:53,560
+Justo.
+
+117
+00:05:53,560 --> 00:05:56,800
+¿Aí es donde se acumula ese 40 por ciento?
+
+118
+00:05:56,800 --> 00:06:02,480
+Claro, no es una sola tarea grande, es la suma de mil cortes pequeños que te desangran el tiempo.
+
+119
+00:06:02,480 --> 00:06:04,399
+Pero a ver, seamos críticos.
+
+120
+00:06:04,399 --> 00:06:09,360
+Muchas ideas prometen hacer estas cosas, porque el artículo se enfoca tanto en cloth, que tiene
+
+121
+00:06:09,360 --> 00:06:12,960
+especial según el análisis para ser tan efectivo en esto.
+
+122
+00:06:12,960 --> 00:06:18,160
+Fíjate que la fuente lo atribuye algo que llaman razonamiento matizado.
+
+123
+00:06:18,160 --> 00:06:20,280
+Razonamiento matizado.
+
+124
+00:06:20,280 --> 00:06:21,840
+Suena termino de marketing.
+
+125
+00:06:21,840 --> 00:06:27,560
+Y sí, lo sé, pero en la práctica tiene una implicación muy concreta.
+
+126
+00:06:27,560 --> 00:06:30,759
+Significa que es menos literal que otras ideas.
+
+127
+00:06:30,759 --> 00:06:35,740
+Por ejemplo, si le pides analizar el sentir de los usuarios sobre la nueva función de
+
+128
+00:06:35,740 --> 00:06:40,500
+pago, no solo va a buscar las palabras clave, pago y función.
+
+129
+00:06:40,500 --> 00:06:42,060
+Entiendo, y vía más allá.
+
+130
+00:06:42,060 --> 00:06:43,060
+Exacto.
+
+131
+00:06:43,060 --> 00:06:48,939
+Entiende el concepto de sentir e interpreta queja sobre el alentitud del proceso, la confusión
+
+132
+00:06:48,939 --> 00:06:53,460
+en la interfaz o errores inesperados como parte de ese análisis.
+
+133
+00:06:53,460 --> 00:06:54,460
+¿O qué?
+
+134
+00:06:54,460 --> 00:07:00,500
+Se equivocan menos, porque entiende mejor el contexto general, no sólo las palabras aisladas.
+
+135
+00:07:00,500 --> 00:07:04,259
+Reduce las famosas alucinaciones o las invenciones.
+
+136
+00:07:04,259 --> 00:07:08,699
+Ah, ok, entonces eso ataca directamente, mi duda sobre la confianza.
+
+137
+00:07:08,699 --> 00:07:13,500
+Si se equivocan menos, porque entiende el contexto, es más fácil empezar a delegarle algo crítico.
+
+138
+00:07:13,500 --> 00:07:14,500
+Claro.
+
+139
+00:07:14,500 --> 00:07:17,339
+No tienes que estar micro gestionando a curemplado de ella.
+
+140
+00:07:17,339 --> 00:07:19,339
+Lo que anularía todo el propósito.
+
+141
+00:07:19,339 --> 00:07:20,659
+La confianza es la clave.
+
+142
+00:07:20,659 --> 00:07:25,899
+Es la moneda de cambio en la delegación sea a un humano o a una máquina.
+
+143
+00:07:25,899 --> 00:07:32,779
+Si el resultado es consistentemente bueno y preciso, pues la adopción se acelera exponencialmente.
+
+144
+00:07:32,780 --> 00:07:38,580
+Entonces, si sumamos todo esto, un asistente que ejecuta tareas, que es confiable y que te ahorra
+
+145
+00:07:38,580 --> 00:07:44,300
+casi la mitad de tu tiempo en trabajo táctico, la pregunta obvia es que ese supone que hace un
+
+146
+00:07:44,300 --> 00:07:49,100
+gestor de producto con todo ese tiempo, con todo ese espacio mental que se libera.
+
+147
+00:07:49,100 --> 00:07:53,380
+Esa es la consecuencia más profunda que plantea el artículo.
+
+148
+00:07:53,380 --> 00:07:55,860
+Es una redefinición de la enfoque.
+
+149
+00:07:55,860 --> 00:07:57,100
+En qué sentido?
+
+150
+00:07:57,100 --> 00:08:02,939
+Mi té por fin, de legar una gran parte de las tareas tácticas para tener el tiempo de hacer
+
+151
+00:08:02,939 --> 00:08:06,939
+el trabajo estratégico que siempre se supone que deberías estar haciendo.
+
+152
+00:08:06,939 --> 00:08:07,939
+Claro.
+
+153
+00:08:07,939 --> 00:08:11,740
+Es que te permite volver a hacer el trabajo por el que te contrataron en primer lugar.
+
+154
+00:08:11,740 --> 00:08:16,300
+Pensar en el futuro del producto no solo en el sprint de la próxima semana.
+
+155
+00:08:16,300 --> 00:08:21,620
+Es levantar la cabeza del día a día operativo y mirar el horizonte.
+
+156
+00:08:21,660 --> 00:08:26,060
+Si adonde va al mercado, cuál es el siguiente gran problema que debemos resolver, cómo
+
+157
+00:08:26,060 --> 00:08:28,259
+competimos en dos años.
+
+158
+00:08:28,259 --> 00:08:32,299
+Es una reasignación forzosa del recurso más valioso de un líder.
+
+159
+00:08:32,299 --> 00:08:37,340
+Su atención, en lugar de estar atrapado en el cómo se hacen las cosas, puede concentrarse
+
+160
+00:08:37,340 --> 00:08:40,740
+en el que y más importante aún en el por qué.
+
+161
+00:08:40,740 --> 00:08:44,379
+Es increíble pensar en el impacto que esto puede tener hoy.
+
+162
+00:08:44,379 --> 00:08:49,500
+Pero si esto ya está pasando, me vuela a la cabeza imaginar cómo se verá el rol
+
+163
+00:08:49,580 --> 00:08:51,580
+de un PM en cinco años.
+
+164
+00:08:51,580 --> 00:08:55,100
+El artículo se aventura a predecir algo sobre el futuro.
+
+165
+00:08:55,100 --> 00:09:00,899
+Totalmente, de hecho la conclusión de la análisis muy potente, si totextualmente.
+
+166
+00:09:00,899 --> 00:09:05,620
+Esto no es solo una mejora de productividad, sino que redefíne las competencias necesarias
+
+167
+00:09:05,620 --> 00:09:09,659
+para liderar productos tecnológicos en 2024 y más allá.
+
+168
+00:09:09,659 --> 00:09:14,820
+A ver, esa frase suena muy de consultor, redefíniarlas competencias.
+
+169
+00:09:14,820 --> 00:09:19,140
+En español y para la gente de apie, qué significa eso para alguien que está en la
+
+170
+00:09:19,140 --> 00:09:22,420
+trinchera, gestionando un producto todos los días.
+
+171
+00:09:22,420 --> 00:09:27,740
+Significa que las habilidades que hacían a un gran PM hace cinco años, ser súper organizado,
+
+172
+00:09:27,740 --> 00:09:32,900
+un maestro del backlog, un experto en gira, podrían no ser las más importantes en los próximos
+
+173
+00:09:32,900 --> 00:09:33,900
+cinco.
+
+174
+00:09:33,900 --> 00:09:38,820
+Ok, el liderazgo de producto de futuro, según su gire el texto, va a requerir una nueva
+
+175
+00:09:38,820 --> 00:09:40,540
+habilidad fundamental.
+
+176
+00:09:40,539 --> 00:09:46,139
+Saber gestionar y delegar eficazmente a un equipo de agentes de IA, además del equipo humano,
+
+177
+00:09:46,139 --> 00:09:51,019
+se convierte en una nueva habilidad de management, como aprender a dirigir personas.
+
+178
+00:09:51,019 --> 00:09:52,019
+Justo.
+
+179
+00:09:52,019 --> 00:09:56,819
+Así como aprendimos a usar figma o es luck, ahora la competencia clave será saber cómo diseñar
+
+180
+00:09:56,819 --> 00:10:02,459
+promptos efectivos, como entrenar a estos agentes, como supervisar su trabajo y sacarles el máximo
+
+181
+00:10:02,459 --> 00:10:03,459
+provecho.
+
+182
+00:10:03,459 --> 00:10:07,620
+Y esto plantea una pregunta fascinante sobre el perfil del rol.
+
+183
+00:10:07,620 --> 00:10:13,379
+El PM del futuro será más un director de orquestas de sistemas inteligentes y menos un asedor
+
+184
+00:10:13,379 --> 00:10:19,580
+detarias manuales, el material sugiere que el camino va claramente en esa dirección.
+
+185
+00:10:19,580 --> 00:10:23,460
+Para ir cerrando el análisis, quiero volver a la idea del principio.
+
+186
+00:10:23,460 --> 00:10:27,820
+Este es una herramienta que según las fuentes está pasando bajo el radar.
+
+187
+00:10:27,820 --> 00:10:28,820
+Sí.
+
+188
+00:10:28,820 --> 00:10:33,460
+No tiene la fanfaria de otros lanzamientos, pero su impacto en los frujos de trabajo puede ser
+
+189
+00:10:33,460 --> 00:10:35,259
+muchísimo más profundo.
+
+190
+00:10:35,259 --> 00:10:39,659
+Es una revolución silenciosa, como bien dijiste al inicio.
+
+191
+00:10:39,659 --> 00:10:44,899
+No es un cambio que se anuncia con bombos y platillos, sino uno que se infiltran las rutinas
+
+192
+00:10:44,899 --> 00:10:47,299
+diarias y las transformas desde adentro.
+
+193
+00:10:47,299 --> 00:10:49,259
+Casi sin quete descuenta.
+
+194
+00:10:49,259 --> 00:10:54,740
+Y para dejar a la gente pensando, me encanta el gancho que el material proponía para redes sociales.
+
+195
+00:10:54,740 --> 00:10:56,980
+Es una pregunta muy directa y provocadora.
+
+196
+00:10:56,980 --> 00:10:57,980
+¿Cuál era?
+
+197
+00:10:57,980 --> 00:11:02,139
+Si tuía solo escribe textos, estás perdiendo el tiempo.
+
+198
+00:11:02,139 --> 00:11:05,419
+Después de esta conversación creo que tiene todo el sentido del mundo.
+
+199
+00:11:05,419 --> 00:11:12,220
+Potalmente, limitar estas herramientas a la generación de texto es como usar una super computadora
+
+200
+00:11:12,220 --> 00:11:14,419
+para hacer sumas y restas.
+
+201
+00:11:14,419 --> 00:11:19,539
+El verdadero potencial, el cambio de paradigma, está en la ejecución.
+
+202
+00:11:19,539 --> 00:11:26,100
+Entonces, para recapitular la idea central de todo lo que analizamos, la transición de la inteligencia
+
+203
+00:11:26,100 --> 00:11:32,220
+artificial como un consultor pasivo, o sea, un simple chatbot, al que le hacemos preguntas.
+
+204
+00:11:32,220 --> 00:11:37,940
+A una gente de ejecución activo, un empleado que realiza talías, ya comenzó, ese es el
+
+205
+00:11:37,940 --> 00:11:42,980
+verdadero parte agua que proponen las skills de cloud y otras herramientas similares.
+
+206
+00:11:42,980 --> 00:11:48,580
+Y si me permite señadir una capa final de análisis que se desprende de esto, la verdadera
+
+207
+00:11:48,580 --> 00:11:54,120
+revolución aquí no es la automatización en sí misma, la hemos visto en la industria durante
+
+208
+00:11:54,120 --> 00:11:55,120
+décadas.
+
+209
+00:11:55,120 --> 00:12:02,000
+La verdadera revolución es la reasignación del intelecto humano que está nueva o la automatización
+
+210
+00:12:02,000 --> 00:12:03,000
+provoca.
+
+211
+00:12:03,000 --> 00:12:08,120
+Reasignación del intelecto humano, explícame un poco más eso, suena muy profundo.
+
+212
+00:12:08,120 --> 00:12:14,519
+Me refiero a que cuando el trabajo táctico y técnico, escribir el ticket, correr la consulta,
+
+213
+00:12:14,519 --> 00:12:19,639
+formater el documento, se delega de forma masiva y confiable a la máquina.
+
+214
+00:12:19,639 --> 00:12:25,199
+Las habilidades humanas que se vuelven exponencialmente mas valiosas son precisamente a
+
+215
+00:12:25,199 --> 00:12:28,199
+que ellas que la máquina no puede replicar fácilmente.
+
+216
+00:12:28,199 --> 00:12:29,679
+¿Qué sería?
+
+217
+00:12:29,679 --> 00:12:35,439
+La estrategia de alto nivel, la creatividad para conectar ideas dispares y encontrar nuevas soluciones
+
+218
+00:12:35,439 --> 00:12:41,240
+y sobre todo la empatía para entender profundamente las necesidades no articuladas de los usuarios.
+
+219
+00:12:41,240 --> 00:12:42,240
+Claro.
+
+220
+00:12:42,240 --> 00:12:45,480
+El foco de valor se desplaza de lo técnico al opuramente humano.
+
+221
+00:12:45,480 --> 00:12:47,799
+El trabajo no desaparece, se eleva.
+
+222
+00:12:47,800 --> 00:12:49,160
+Eso es muy poderoso.
+
+223
+00:12:49,160 --> 00:12:54,720
+O sea, las máquinas se encargan de la ejecución táctica para que los humanos podamos enfocarnos
+
+224
+00:12:54,720 --> 00:12:57,440
+en la dirección estratégica y la conexión emocional.
+
+225
+00:12:57,440 --> 00:12:58,440
+Exacto.
+
+226
+00:12:58,440 --> 00:13:03,660
+La tecnología como una palanca para amplificar nuestras capacidades mas humanas no para reemplazar
+
+227
+00:13:03,660 --> 00:13:04,660
+las.
+
+228
+00:13:04,660 --> 00:13:05,660
+Justamente.
+
+229
+00:13:05,660 --> 00:13:10,080
+Con eso en mente quiero cerrar con una pregunta que se desprende de todo este análisis y
+
+230
+00:13:10,080 --> 00:13:12,320
+dejarle en el aire para la reflexión.
+
+231
+00:13:12,320 --> 00:13:17,080
+Si la íe se convierte en un empleado masque ejecuta tareas técnicas, como cambia la dinámica
+
+232
+00:13:17,080 --> 00:13:18,080
+de un equipo.
+
+233
+00:13:18,080 --> 00:13:22,120
+Comienza el gestor de producto a dirigir un equipo híbrido con puesto por humanos y por
+
+234
+00:13:22,120 --> 00:13:23,560
+agentes de ella.
+
+235
+00:13:23,560 --> 00:13:26,320
+¿Y quizá lo más importante?
+
+236
+00:13:26,320 --> 00:13:32,080
+Cuando las habilidades técnicas pueden ser delegadas a una máquina que nuevas habilidades
+
+237
+00:13:32,080 --> 00:13:37,600
+puramente humanas se vuelven absolutamente indispensables para seguir siendo relevante.
+

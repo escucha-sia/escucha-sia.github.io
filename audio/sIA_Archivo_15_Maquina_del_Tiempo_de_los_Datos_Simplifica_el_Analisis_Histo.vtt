@@ -1,0 +1,907 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:06.200
+Hola, hoy vamos a meternos con un tema que trae de cabeza a mucha gente en el mundo de los datos.
+
+00:00:06.200 --> 00:00:07.400
+Así, cuál?
+
+00:00:07.400 --> 00:00:12.759
+Pues, como analizar información histórica, datos del pasado, sin volverse lo canel intento, claro.
+
+00:00:12.759 --> 00:00:14.439
+Uf, sí, tema clásico.
+
+00:00:14.439 --> 00:00:19.480
+Imagina, una analista necesita comparar ventas del año pasado, ¿vale?
+
+00:00:19.480 --> 00:00:21.600
+Mesa, es fácil, ¿no?
+
+00:00:21.600 --> 00:00:22.320
+En principio.
+
+00:00:22.320 --> 00:00:25.000
+Pero, ¿y si cambiaron los precios?
+
+00:00:25.000 --> 00:00:27.399
+O se reclasificaron productos.
+
+00:00:27.399 --> 00:00:30.399
+O yo que sé, los comerciales de las cuentas rotaron.
+
+00:00:30.399 --> 00:00:31.800
+Claro, la cosa cambia.
+
+00:00:31.800 --> 00:00:37.960
+De repente, saber cómo estaba todo exactamente un día concreto el 15 de marzo del año pasado
+
+00:00:37.960 --> 00:00:42.120
+por decir algo, pues se convierte en una odisea totalmente.
+
+00:00:42.120 --> 00:00:43.879
+Es lo típico en muchas empresas.
+
+00:00:43.879 --> 00:00:45.920
+Tienen bases de datos enormes, ¿eh?
+
+00:00:45.920 --> 00:00:50.679
+A menudo diseñadas para ser supereficientes guardando datos, sin duplicar.
+
+00:00:50.679 --> 00:00:53.799
+Y sobre todo guardando cada cambio, el historial completo.
+
+00:00:53.799 --> 00:00:54.600
+Eso.
+
+00:00:54.600 --> 00:01:00.560
+Tecnicamente, creo que se llama, tres NF y storyzada, son a como muy técnico.
+
+00:01:00.560 --> 00:01:06.120
+Sí, suena hace un poco rinbombante, pero la idea es en sí ya.
+
+00:01:06.120 --> 00:01:13.319
+A ver, tres NF, tercera forma normal, es una manera de organizar los datos para no repetir información.
+
+00:01:13.319 --> 00:01:16.079
+Para mí, ni ni niizar redundancia, ¿vale?
+
+00:01:16.079 --> 00:01:21.840
+Y lo de storyzada, pues simplemente significa que cuando algo cambia, no sé, la dirección
+
+00:01:21.840 --> 00:01:23.480
+de un cliente, por ejemplo.
+
+00:01:23.480 --> 00:01:26.000
+El sistema no borra la antigua.
+
+00:01:26.000 --> 00:01:27.719
+Ah, no las sobreescribe.
+
+00:01:27.719 --> 00:01:31.280
+Exacto, guarda la versión vieja y añade la nueva.
+
+00:01:31.280 --> 00:01:32.880
+Normalmente le pone fechas, ¿no?
+
+00:01:32.880 --> 00:01:35.200
+Para saber cuándo era valida cada una.
+
+00:01:35.200 --> 00:01:36.200
+Entiendo.
+
+00:01:36.200 --> 00:01:41.200
+El resultado es un registro súper preciso del pasado, sí, pero consultarlo puede ser un
+
+00:01:41.200 --> 00:01:42.200
+lío.
+
+00:01:42.200 --> 00:01:43.840
+Ahí está el kit de la cuestión, ¿no?
+
+00:01:43.840 --> 00:01:48.840
+Tenemos toda esa riqueza histórica, pero es que accedera ella para analizar.
+
+00:01:48.840 --> 00:01:50.600
+Es lento, es complicado.
+
+00:01:50.600 --> 00:01:51.600
+Eso es.
+
+00:01:51.600 --> 00:01:57.960
+Bueno, nos basamos hoy en un artículo de jocobanderland, que justo ataca este problema, propone
+
+00:01:57.960 --> 00:01:59.440
+un método.
+
+00:01:59.440 --> 00:02:04.640
+Una forma de transformar esa complejidad histórica en modelos más sencillos para analizar.
+
+00:02:04.640 --> 00:02:11.060
+Los famosos es que más distraya y hacerlo, además, de formamos fácil y ojo potencialmente
+
+00:02:11.060 --> 00:02:12.060
+automática.
+
+00:02:12.060 --> 00:02:13.060
+Su enaviene.
+
+00:02:13.060 --> 00:02:17.360
+Así que nuestra misión hoy es entender si este método, de verdad, simplifica tanto como
+
+00:02:17.360 --> 00:02:18.360
+promete.
+
+00:02:18.360 --> 00:02:23.640
+Sí, porque el artículo es sugiere una manera de superar lo que llama construir estrellas
+
+00:02:23.640 --> 00:02:24.640
+a mano.
+
+00:02:24.640 --> 00:02:25.640
+Construir estrellas a mano.
+
+00:02:25.640 --> 00:02:31.800
+Sí, ese proceso que ha menudo es manual que te puedes equivocar fácil y que consume un tiempo,
+
+00:02:31.800 --> 00:02:36.680
+bueno, una barbaridad de tiempo, sobre todo se intentas reconstruir cómo eran las cosas en el
+
+00:02:36.680 --> 00:02:37.680
+pasado.
+
+00:02:37.680 --> 00:02:39.240
+Vale, pues vamos al lío.
+
+00:02:39.240 --> 00:02:44.520
+Según el artículo, lo primero, el primer paso conceptual, es identificar los hechos,
+
+00:02:44.520 --> 00:02:46.840
+los facts, que son exactamente.
+
+00:02:46.840 --> 00:02:50.280
+Los hechos son, digamos, las métricas clave.
+
+00:02:50.280 --> 00:02:55.280
+Los eventos de negocio que puedes contar, que puedes medir, los números importantes que quieres
+
+00:02:55.280 --> 00:02:56.280
+analizar.
+
+00:02:56.280 --> 00:03:03.240
+Los números, eso, el artículo de ejemplos muy claros, la cantidad vendida de algo, cuota, el
+
+00:03:03.240 --> 00:03:08.640
+importe de una operación, el número de poliza, Policinanverse y estás en seguro, o el número
+
+00:03:08.640 --> 00:03:15.120
+de llamadas a un co-centar, son las acciones, las mediciones puras, entendido, las cifras
+
+00:03:15.120 --> 00:03:21.000
+que medimos y seguimos, vale, tenemos los números, pero falta el contexto, ¿no? y ahí es
+
+00:03:21.000 --> 00:03:23.120
+donde entran las dimensiones.
+
+00:03:23.120 --> 00:03:29.920
+Precisamente, las dimensiones son el contexto, el quién que, ¿dónde cuando, cómo, de esos
+
+00:03:29.920 --> 00:03:30.920
+hechos?
+
+00:03:30.920 --> 00:03:38.319
+Claro, responden a preguntas como quién compró, dimensión cliente, qué producto era, dimensión
+
+00:03:38.319 --> 00:03:46.000
+producto, cuando pasó, dimensión tiempo, donde, pues, dimensión tienda o geografía,
+
+00:03:46.000 --> 00:03:51.919
+son los atributos que te dejan filtrar, agrupar, bueno, cortar los hechos, para sacar conclusiones,
+
+00:03:51.919 --> 00:03:56.240
+y el artículo de una pista importante sobre cómo definir estas dimensiones y relacionar
+
+00:03:56.240 --> 00:03:59.240
+las con los hechos, para no complicarse la vida después.
+
+00:03:59.240 --> 00:04:04.719
+Sí, es una recomendación muy práctica la verdad, para mantener la lógica, dice que hay que
+
+00:04:04.719 --> 00:04:08.919
+trazar las relaciones siempre desde los hechos hacia las dimensiones.
+
+00:04:08.919 --> 00:04:10.520
+Desde el hecho hacia afuera.
+
+00:04:10.520 --> 00:04:16.560
+Exacto, buscando relaciones de muchos a uno, o sea, muchos hechos, muchas ventas, por ejemplo,
+
+00:04:16.560 --> 00:04:19.319
+se relacionan con un cliente o con un producto.
+
+00:04:19.319 --> 00:04:20.319
+Ah, vale.
+
+00:04:20.319 --> 00:04:24.680
+Seguir esta dirección digamos, ayuda a esquivar relaciones más complicadas, como las de muchos
+
+00:04:24.680 --> 00:04:29.759
+a muchos o bucle es baros, que luego te pueden volverlo a la consulta y el modelo.
+
+00:04:29.759 --> 00:04:37.000
+Recuerdo, tenemos números, hechos y descripciones dimensiones, pero ahora viene lo bueno,
+
+00:04:37.000 --> 00:04:42.319
+el meollo, donde está la dificultad real con los datos históricos, y donde la artículo
+
+00:04:42.319 --> 00:04:45.599
+saca su idea más potente.
+
+00:04:45.599 --> 00:04:51.079
+Hablamos de manejar el historial de cambios en las dimensiones, lo que se llama es cd2.
+
+00:04:51.079 --> 00:04:53.560
+Exacto, es cd2.
+
+00:04:53.600 --> 00:05:00.519
+Son las siglas de... a ver, slowly changing dimension type 2, dimensión de cambio lento tipo 2.
+
+00:05:00.519 --> 00:05:01.519
+Suena, travalenguas.
+
+00:05:01.519 --> 00:05:02.519
+Un poco, sí.
+
+00:05:02.519 --> 00:05:06.519
+Pero es la técnica que decíamos antes para guardar todo el historial.
+
+00:05:06.519 --> 00:05:11.279
+Si un cliente cambia de dirección con scd2, no machacas la dirección antiva.
+
+00:05:11.279 --> 00:05:12.279
+No.
+
+00:05:12.279 --> 00:05:13.279
+¿Qué haces entonces?
+
+00:05:13.279 --> 00:05:17.439
+Pues marcas el registro antiguo como invalido desde hoy, por ejemplo.
+
+00:05:17.439 --> 00:05:22.279
+Y creas uno nuevo para el mismo cliente con la dirección nueva, marcado como valido desde
+
+00:05:22.280 --> 00:05:23.280
+hoy.
+
+00:05:23.280 --> 00:05:29.000
+Así que, en la tabla de clientes, puedes tener varias filas para la misma persona.
+
+00:05:29.000 --> 00:05:32.760
+Cada fila representa como eran sus datos en un periodo de tiempo distinto.
+
+00:05:32.760 --> 00:05:33.760
+Claro.
+
+00:05:33.760 --> 00:05:37.000
+Y eso obviamente complica las consultas.
+
+00:05:37.000 --> 00:05:44.160
+Si yo quiero ver las ventas de... no sé, enero del año pasado, y cruzar las con la categoría
+
+00:05:44.160 --> 00:05:48.640
+del cliente en ese momento, no la que tiene ahora.
+
+00:05:48.639 --> 00:05:50.879
+Ahí te empieza el dolor de cabeza, exacto.
+
+00:05:50.879 --> 00:05:56.240
+Tienes que escribir una lógica en tu consulta de secuéleo, lo que uses, que diga algo como,
+
+00:05:56.240 --> 00:06:01.159
+vale, para esta venta del quince de nero, buscame en la tabla de clientes la fila de este
+
+00:06:01.159 --> 00:06:05.519
+cliente cuyas fechas de validez incluyan justo el quince de nero.
+
+00:06:05.519 --> 00:06:06.879
+Uff.
+
+00:06:06.879 --> 00:06:12.360
+Esto es lo que se llama consulta bítemporal, porque manejas dos tiempos.
+
+00:06:12.360 --> 00:06:18.840
+Cuando fue la venta, y que versión de los datos del cliente era valida en tonces, bítemporal.
+
+00:06:18.840 --> 00:06:25.080
+Y afer esto bien, para varias dimensiones que cambian en el tiempo, puede convertir una consulta
+
+00:06:25.080 --> 00:06:27.280
+sencillita en un monstruo.
+
+00:06:27.280 --> 00:06:29.920
+Lento y difícil de entender.
+
+00:06:29.920 --> 00:06:34.080
+Recuerdo proyectos donde depurar estas consultas nos llevaba semanas, ¿eh?
+
+00:06:34.080 --> 00:06:39.680
+Me lo imagino, un laberinto vamos, y aquí es donde el artículo saca, bueno, su asen la
+
+00:06:39.680 --> 00:06:46.480
+mangano, las vistas de instantánea, las snapshot views, usan una analogía que me ha gustado,
+
+00:06:46.480 --> 00:06:48.959
+una máquina del tiempo para los datos.
+
+00:06:48.959 --> 00:06:51.160
+Es buérísimas analogías, sí.
+
+00:06:51.160 --> 00:06:56.480
+La idea clave es crear como una capa, una capa inteligente por encima de esas tablas históricas
+
+00:06:56.480 --> 00:06:58.199
+es cd2.
+
+00:06:58.199 --> 00:06:59.759
+Una capa de abstracción.
+
+00:06:59.759 --> 00:07:05.319
+Eso es, estas vistas son en el fondo, consultas ya preparadas que hacen el trabajo sucio
+
+00:07:05.319 --> 00:07:06.319
+por ti.
+
+00:07:06.319 --> 00:07:10.839
+El trabajo de buscar la versión correcta del dato para una fecha concreta que tú le digas.
+
+00:07:10.839 --> 00:07:12.439
+¿Cómo funciona?
+
+00:07:12.439 --> 00:07:13.439
+Tecnicamente.
+
+00:07:13.439 --> 00:07:19.240
+Pues, como se ve en el código de ejemplo del artículo, la vista recebe un parámetro.
+
+00:07:19.240 --> 00:07:21.920
+Una fecha específica que le pasa el usuario.
+
+00:07:21.920 --> 00:07:24.319
+La llaman Snapshot date.
+
+00:07:24.319 --> 00:07:29.360
+O sea que yo, como analista, en vez de pelearme con las fechas de inicio y fin de validez y
+
+00:07:29.360 --> 00:07:34.920
+todo eso, simplemente le digo a la vista, quiero ver los datos como estaban el 30 de junio
+
+00:07:34.920 --> 00:07:35.920
+de 2022.
+
+00:07:35.920 --> 00:07:36.920
+Exactamente.
+
+00:07:36.920 --> 00:07:38.920
+Así de fácil.
+
+00:07:38.920 --> 00:07:44.720
+Y la vista, por debajo, usa esas Snapshot date que le has dado y la compara con las columnas
+
+00:07:44.720 --> 00:07:47.879
+de validez frome y validez o como se llaman.
+
+00:07:47.879 --> 00:07:53.480
+Filtre internamente y te devuelve solo la fila, la versión del cliente o del producto o lo que
+
+00:07:53.480 --> 00:07:56.400
+sea que estaba activa en esa fecha.
+
+00:07:56.400 --> 00:08:01.960
+Para ti, como usuaria de la vista, la complejidad del tiempo, puf, desaparece.
+
+00:08:01.960 --> 00:08:05.520
+Ves una única versión correcta para el momento que ha selegido.
+
+00:08:05.520 --> 00:08:09.200
+Es una... casi demasiado bonito.
+
+00:08:09.200 --> 00:08:14.760
+No hay truco, a ver, crear esas vistas sobre tablas que pueden ser enormes con todo el
+
+00:08:14.760 --> 00:08:15.760
+historial.
+
+00:08:15.760 --> 00:08:22.640
+Es una oferta al rendimiento, no estamos simplemente moviendo el problema, la complejidad de la consulta
+
+00:08:22.640 --> 00:08:25.000
+de la analista a la definición de la vista.
+
+00:08:25.000 --> 00:08:27.000
+Es una pregunta muy buena.
+
+00:08:27.000 --> 00:08:31.920
+Y la respuesta es si estamos encapsulando la complejidad en la vista.
+
+00:08:32.360 --> 00:08:34.560
+Pero esto tiene ventajas importantes.
+
+00:08:34.560 --> 00:08:35.560
+A ver, cuéntame.
+
+00:08:35.560 --> 00:08:40.639
+Primero, esa lógica complicada la definé y la prueba una sola vez el equipo de ingeniería
+
+00:08:40.639 --> 00:08:41.639
+de datos.
+
+00:08:41.639 --> 00:08:45.680
+No cada analista reinventando la rueda y posiblemente equivocándose.
+
+00:08:45.680 --> 00:08:47.639
+Vale, eso es bueno, centralizar.
+
+00:08:47.639 --> 00:08:52.639
+Segundo, aunque la vista haga esa lógica temporal, los motores de bases de datos de hoy
+
+00:08:52.639 --> 00:08:56.960
+en día son bastante listos optimizando estos filtros por rango de fechas.
+
+00:08:57.040 --> 00:08:59.800
+Sobre todos y las tablas de abajo están bien indexadas.
+
+00:08:59.800 --> 00:09:05.920
+Y tercero, y esto es clave, el beneficio que te da esto al construir y usar el modelo final.
+
+00:09:05.920 --> 00:09:09.040
+Suele compensar de sobra el esfuerzo de crear la vista.
+
+00:09:09.040 --> 00:09:13.480
+Gestionas la complejidad en un punto controlado, no la desparra más por todas partes.
+
+00:09:13.480 --> 00:09:15.240
+Vale, me convence.
+
+00:09:15.240 --> 00:09:17.639
+En capsular la lógica es bueno.
+
+00:09:17.639 --> 00:09:24.200
+Entonces, si ya tenemos estas vistas mágicas que nos dan la foto del pasado para cada dimensión
+
+00:09:24.200 --> 00:09:26.280
+con solo pedir una fecha.
+
+00:09:26.360 --> 00:09:28.919
+¿Qué pasa al construir el modelo analítico?
+
+00:09:28.919 --> 00:09:30.240
+El es que me estrella.
+
+00:09:30.240 --> 00:09:33.480
+Pues aquí viene la gran simplificación que promete el artículo.
+
+00:09:33.480 --> 00:09:38.559
+Construire el esque me estrella y asabes la tabla central de hechos y las dimensiones alrededor.
+
+00:09:38.559 --> 00:09:40.199
+Se vuelve muchísimo más fácil.
+
+00:09:40.199 --> 00:09:41.199
+Muchísimo.
+
+00:09:41.199 --> 00:09:41.720
+Sí, sí.
+
+00:09:41.720 --> 00:09:43.120
+Y lo interesante es por qué?
+
+00:09:43.120 --> 00:09:47.439
+Al usar estas vistas de instantánea, como si fueran las tablas de dimensión normales.
+
+00:09:47.439 --> 00:09:51.919
+Las uniones, los joins, entre los hechos y las dimensiones, se vuelven increíblemente
+
+00:09:51.919 --> 00:09:52.919
+simples.
+
+00:09:52.919 --> 00:09:54.319
+Simple, tipo.
+
+00:09:54.360 --> 00:09:57.360
+Comparado con la pesadilla vítem por aldeantes.
+
+00:09:57.360 --> 00:09:58.800
+La diferencia es brutal.
+
+00:09:58.800 --> 00:10:04.480
+Antes necesitaba su nir, por ejemplo, hechos con clientes usando el hide del cliente.
+
+00:10:04.480 --> 00:10:07.480
+Y además añadir esa condición horrible de las fechas.
+
+00:10:07.480 --> 00:10:08.560
+Recuerdas.
+
+00:10:08.560 --> 00:10:12.160
+Fecha hechos, bitwins, fecha inicio, and fecha fin.
+
+00:10:12.160 --> 00:10:13.600
+Sí, la recordo bien.
+
+00:10:13.600 --> 00:10:19.480
+Pues ahora simplemente unes la tabla de hechos con la vista de instantánea del cliente.
+
+00:10:19.480 --> 00:10:25.000
+Usando a la clave del cliente, el costomerá hide o lo que sea, y la misma es napshot date.
+
+00:10:25.000 --> 00:10:26.000
+Solo eso.
+
+00:10:26.000 --> 00:10:27.000
+Solo eso.
+
+00:10:27.000 --> 00:10:31.960
+Porque la vista ya sea encargado por ti de buscar la versión correcta del cliente para esa fecha.
+
+00:10:31.960 --> 00:10:33.759
+Toda la lógica temporal compleja.
+
+00:10:33.759 --> 00:10:35.560
+Fue la desaparece del join.
+
+00:10:35.560 --> 00:10:37.560
+Ostras, eso sí que es un alimpio.
+
+00:10:37.560 --> 00:10:39.200
+Y mucho más manejable.
+
+00:10:39.200 --> 00:10:44.600
+Entonces, aparte de estas simplificaciones las uniones que ya es bastante, que beneficios generales
+
+00:10:44.600 --> 00:10:46.200
+de esta calárticula.
+
+00:10:46.200 --> 00:10:49.000
+Pues los agrupas como en tres bloques principales.
+
+00:10:49.000 --> 00:10:53.480
+El primero que ya hemos ido comentando es la simplicidad para el usuario final.
+
+00:10:53.480 --> 00:10:55.480
+Claro, para la analista, exacto.
+
+00:10:55.480 --> 00:11:01.279
+Tuelvidas del S2, de la lógica temporal, tú solo filtras por la snapshot date que te interese
+
+00:11:01.279 --> 00:11:02.799
+y ya está.
+
+00:11:02.799 --> 00:11:07.519
+Esto, bueno, no solo te hace ir más rápido analizando sino que reduce un montón los errores
+
+00:11:07.519 --> 00:11:09.080
+al interpretar el pasado.
+
+00:11:09.080 --> 00:11:11.679
+Menos errores y más rápidez.
+
+00:11:11.679 --> 00:11:13.679
+Eso siempre se agradece.
+
+00:11:13.679 --> 00:11:16.240
+Pero antes mencionaste el rendimiento.
+
+00:11:16.240 --> 00:11:20.039
+De verdad, estas uniones más simples hacen que las consultas vayan más rápido.
+
+00:11:20.039 --> 00:11:23.480
+Es el segundo beneficio clave, el rendimiento.
+
+00:11:23.480 --> 00:11:28.200
+A ver, las uniones que solo usan claves primarias y una fecha simple suelen ser mucho más
+
+00:11:28.200 --> 00:11:30.879
+fáciles de optimizar para la base de datos.
+
+00:11:30.879 --> 00:11:33.200
+Más fáciles que las de rangos de fechas?
+
+00:11:33.200 --> 00:11:34.200
+Mucho más.
+
+00:11:34.200 --> 00:11:39.320
+Las uniones con rangos, between y demás, pueden ser complicadas de optimizar.
+
+00:11:39.320 --> 00:11:43.840
+Las uniones simples tienen patrones de acceso más predecible y la base de datos puede elegir
+
+00:11:43.840 --> 00:11:45.759
+mejores planes de secución.
+
+00:11:45.759 --> 00:11:49.720
+Así que sí, en general, se espera que las consultas sobre un modelo estrella construido
+
+00:11:49.720 --> 00:11:51.200
+así sean más rápidas.
+
+00:11:51.200 --> 00:11:52.200
+¿Quién es sentido?
+
+00:11:52.200 --> 00:11:53.200
+Sí.
+
+00:11:53.200 --> 00:11:58.919
+Le facilitamos el trabajo a la base de datos también y creo que mencionaste un tercer pillar de beneficios.
+
+00:11:58.919 --> 00:12:00.919
+Algo sobre la fiabilidad, no.
+
+00:12:00.919 --> 00:12:02.240
+La consistencia.
+
+00:12:02.240 --> 00:12:03.240
+Correcto.
+
+00:12:03.240 --> 00:12:05.240
+El tercer beneficio es la gobernanza.
+
+00:12:05.240 --> 00:12:09.559
+Al meter toda la lógica para interpretar el historial dentro de las vistas, te aseguras
+
+00:12:09.559 --> 00:12:13.799
+de que todo el mundo en la empresa que uses asvistas, aplique exactamente las mismas
+
+00:12:13.799 --> 00:12:14.799
+reglas.
+
+00:12:15.000 --> 00:12:19.120
+Estables es una única versión de la verdad sobre cómo eran las cosas en el pasado.
+
+00:12:19.120 --> 00:12:23.800
+Imagínate el lío es un departamento calcular la rentabilidad de clientes del año pasado, usando
+
+00:12:23.800 --> 00:12:27.760
+la dirección actual y otro uso analógica temporal que se era distinta.
+
+00:12:27.760 --> 00:12:29.920
+Los números no cuadrarían nunca.
+
+00:12:29.920 --> 00:12:30.920
+Exacto.
+
+00:12:30.920 --> 00:12:31.920
+Serían incomparables.
+
+00:12:31.920 --> 00:12:35.680
+Las vistas de instantánea imponen esa consistencia fundamental.
+
+00:12:35.680 --> 00:12:38.120
+Este punto de la gobernanza me parece crucial.
+
+00:12:38.120 --> 00:12:44.760
+Si, sobre todo si trabajas en sectores regulados o donde la precisión histórica es vital.
+
+00:12:44.759 --> 00:12:50.439
+Entonces, si tuvieras que resumir la idea central, el mensaje clave de todo esto,
+
+00:12:50.439 --> 00:12:51.439
+cual sería.
+
+00:12:51.439 --> 00:12:57.399
+Pues el mensaje potente es que este patron, el de las vistas de instantánea, es una forma elegante
+
+00:12:57.399 --> 00:13:02.679
+diría yo de aplanar la complejidad de un modelo de datos que guarda todo el historial fielmente.
+
+00:13:02.679 --> 00:13:05.000
+El vítem por al, el es ese de dos.
+
+00:13:05.000 --> 00:13:06.679
+Aplanar la complejidad.
+
+00:13:06.679 --> 00:13:07.679
+Me gusta.
+
+00:13:07.679 --> 00:13:08.679
+Sí.
+
+00:13:08.679 --> 00:13:12.399
+La transforma para que en consumo de los datos, en un esquivestre ya clásico.
+
+00:13:12.399 --> 00:13:17.000
+fácil de entender, rápido de consultar mucho más amigable para analizar.
+
+00:13:17.000 --> 00:13:21.480
+Y todo esto sin perder la riqueza del histórico original que sigue ahí debajo guardado.
+
+00:13:21.480 --> 00:13:27.199
+Y como dice la artículo, esto es súper relevante en la práctica porque construyó un
+
+00:13:27.199 --> 00:13:28.199
+puente.
+
+00:13:28.199 --> 00:13:31.319
+Un puente sobre esa brecha que frustra tantas organizaciones.
+
+00:13:31.319 --> 00:13:32.319
+¿Qué brecha?
+
+00:13:32.319 --> 00:13:38.159
+La que hay entre el mundo de la ingeniería de datos, que se centra en la integridad, la gobernanza,
+
+00:13:38.159 --> 00:13:40.360
+guardar todo el historial.
+
+00:13:40.360 --> 00:13:45.159
+Y el mundo de la análisis o la ciencia de datos, que lo que necesita es velocidad,
+
+00:13:45.159 --> 00:13:49.080
+agilidad, facilidad para explorar y sacar valor rápido.
+
+00:13:49.080 --> 00:13:52.320
+Totalmente de acuerdo, suele ver una tensión ahí, verdad?
+
+00:13:52.320 --> 00:13:57.440
+Los ingenieros montan sistemas robustos, pero complejos y los analistas se pelean para usar
+
+00:13:57.440 --> 00:13:58.440
+los bien.
+
+00:13:58.440 --> 00:14:01.240
+Este método parece una forma de contentará ambos.
+
+00:14:01.240 --> 00:14:05.600
+Mantienes el rigor histórico abajo, pero freses una interfaz de análisis simple y ajila
+
+00:14:05.600 --> 00:14:06.600
+arriba.
+
+00:14:06.600 --> 00:14:08.759
+Y además, el artículo va a un paso más allá.
+
+00:14:08.759 --> 00:14:12.120
+Abre la puerta a algo que es suena muy interesante para el futuro.
+
+00:14:12.120 --> 00:14:17.960
+Si lo menciona claramente, dice que como este enfoque está en estructurado, tan basado en reglas,
+
+00:14:17.960 --> 00:14:22.720
+como crear las vistas desde ese de dos, como hacerlos yo en simples, pues se presta muy
+
+00:14:22.720 --> 00:14:24.279
+bien a la automatización.
+
+00:14:24.279 --> 00:14:26.519
+Automatizar la creación de los modelos.
+
+00:14:26.519 --> 00:14:27.519
+Eso es.
+
+00:14:27.519 --> 00:14:32.519
+El autor incluso dice que en próximos artículos explorará como generar estos modelos estrella
+
+00:14:32.519 --> 00:14:35.360
+con vistas de instantánea de forma automática.
+
+00:14:35.360 --> 00:14:39.200
+A partir de metadatos o de la estructura de la base de datos histórica.
+
+00:14:39.200 --> 00:14:45.840
+Ostra, si, imagínate, definir las reglas de negocio y las relaciones una vez y púm, que una herramienta
+
+00:14:45.840 --> 00:14:49.240
+te géneres, los modelos listos para analizar.
+
+00:14:49.240 --> 00:14:52.759
+Siempre consistentes siempre con la lógica temporal correcta.
+
+00:14:52.759 --> 00:14:56.519
+Sería un acelerón tremendo para poner en marcha nuevos análisis.
+
+00:14:56.519 --> 00:14:58.800
+¿Y tú ves esto realista a corto plazo?
+
+00:14:58.800 --> 00:15:01.519
+Yo creo que sí, más que realista.
+
+00:15:01.519 --> 00:15:05.879
+Ya hay herramientas de modelado, de ETL, que están metiendo cosas parecidas.
+
+00:15:05.879 --> 00:15:07.879
+La clave estén era un enfoque estandar.
+
+00:15:07.879 --> 00:15:12.240
+Si adoptas un patrón como este, automatizar es mucho más fácil que intentar automatizar la
+
+00:15:12.240 --> 00:15:16.799
+creación de modelos a mano, con lógicas temporales cada una de su padre y de su madre.
+
+00:15:16.799 --> 00:15:17.799
+Claro.
+
+00:15:17.799 --> 00:15:18.799
+Es un pasológico.
+
+00:15:18.799 --> 00:15:21.799
+Hacia industrializar la preparación de datos para el análisis.
+
+00:15:21.799 --> 00:15:24.120
+Pues sí que hemos cubierto cosas.
+
+00:15:24.120 --> 00:15:29.360
+La esencia de la técnica es ese uso inteligente de las vistas de instantánea.
+
+00:15:29.360 --> 00:15:34.919
+Como un traductor no, entre la complejidad del histórico detallado y la simplicidad que necesitamos
+
+00:15:34.919 --> 00:15:37.399
+para analizar con agilidad y fiabilidad.
+
+00:15:37.399 --> 00:15:38.399
+Exacto.
+
+00:15:38.399 --> 00:15:41.120
+Puedes sonar un poco técnico si no estás en el día a día.
+
+00:15:41.120 --> 00:15:45.960
+Pero la solución al problema de fondo que es acceder fácil al pasado, me parece muy potente.
+
+00:15:45.960 --> 00:15:48.840
+Y ya para cerrar, dándole una última vuelta.
+
+00:15:48.840 --> 00:15:53.940
+Si este método de verdad facilita tanto el acceso a esas fotos precisas del pasado,
+
+00:15:53.940 --> 00:15:57.399
+si quita barreras técnicas y de coste que antes teníamos.
+
+00:15:57.399 --> 00:15:58.920
+¿Qué va a preguntarse a alguno?
+
+00:15:58.920 --> 00:15:59.920
+¿Qué?
+
+00:15:59.920 --> 00:16:03.520
+Pues ¿Qué nuevos tipos de análisis históricos podríamos hacer ahora?
+
+00:16:03.520 --> 00:16:06.520
+Analisis que antes ni nos planteábamos por complejo o caros.
+
+00:16:06.520 --> 00:16:07.520
+¡Ah!
+
+00:16:07.520 --> 00:16:08.520
+Bueno, pregunta.
+
+00:16:08.520 --> 00:16:13.120
+No se por ejemplo analizar superal detalle como cambiaron los patrones de compra de grupitos muy
+
+00:16:13.120 --> 00:16:18.400
+pequeños de clientes, justo antes y después de una campaña concreta del pasado.
+
+00:16:18.400 --> 00:16:23.780
+Ocer comparativa super exhaustivas, de carteras de productos o de riesgos o de fraude, en fechas
+
+00:16:23.780 --> 00:16:28.280
+clave de crisis económicas anteriores, con un nivel de detalle que antes era impensable.
+
+00:16:28.279 --> 00:16:30.279
+¿Qué firmas allá de lo que ya hacíamos?
+
+00:16:30.279 --> 00:16:31.279
+Claro.
+
+00:16:31.279 --> 00:16:35.279
+Quizás este enfoque no solo simplificalo de siempre, sino que abre la puerta de descubrir patrones
+
+00:16:35.279 --> 00:16:40.439
+históricos, tendencias ocultas que hasta ahora estaban, enterradas bajo la complejidad
+
+00:16:40.439 --> 00:16:41.439
+de los datos.
+
+00:16:41.439 --> 00:16:45.079
+¿Qué historias nos contaría el pasado si pudiéramos preguntarle de forma más sencilla?
+

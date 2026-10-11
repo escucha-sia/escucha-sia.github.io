@@ -27,7 +27,24 @@ for xml_file in ['podcast.xml', 'audio/podcast.xml']:
         assert dur is not None and ':' in dur.text, f"Ep {i} sin duración itunes válida"
         assert link is not None and link.text.startswith('https://escucha-sia.github.io/articulos/'), f"Ep {i} sin link a artículo"
 
-print("\n[OK] Feed RSS 100% verificado: 30 episodios válidos, con duraciones, tamaños exactos y enlaces bidireccionales.")
+        # Verificar transcripciones Podcasting 2.0
+        transcripts = it.findall('{https://podcastindex.org/namespace/1.0}transcript')
+        assert len(transcripts) >= 1, f"Ep {i} ({fname}) sin etiqueta <podcast:transcript>"
+        vtt_found = any(t.get('type') == 'text/vtt' for t in transcripts)
+        assert vtt_found, f"Ep {i} ({fname}) sin transcripción WebVTT"
+        
+        # Verificar archivo en disco y en Spotify
+        stem = os.path.splitext(fname)[0]
+        vtt_local = os.path.join('audio', f"{stem}.vtt")
+        srt_local = os.path.join('audio', f"{stem}.srt")
+        assert os.path.exists(vtt_local), f"Falta VTT local para {stem}"
+        assert os.path.exists(srt_local), f"Falta SRT local para {stem}"
+        spotify_vtt = os.path.join(r"C:\Users\c_a_c\Music\NoticIAs", f"{stem}.vtt")
+        spotify_srt = os.path.join(r"C:\Users\c_a_c\Music\NoticIAs", f"{stem}.srt")
+        assert os.path.exists(spotify_vtt), f"Falta VTT en Spotify para {stem}"
+        assert os.path.exists(spotify_srt), f"Falta SRT en Spotify para {stem}"
+
+print(f"\n[OK] Feed RSS 100% verificado: {len(items)} episodios válidos con duraciones, tamaños exactos, enlaces bidireccionales y transcripciones Podcasting 2.0 (VTT/SRT).")
 
 # 2. Auditar index.html
 with open('index.html', 'r', encoding='utf-8') as f:

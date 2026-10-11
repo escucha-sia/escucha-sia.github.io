@@ -1578,6 +1578,11 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
         else:
             apa_html += f'<li class="apa-item">{formatted_ref}</li>\n'
         
+    # Subtitle track for web player
+    audio_stem = Path(audio_url.split('/')[-1]).stem
+    vtt_path = AUDIO_DIR / f"{audio_stem}.vtt"
+    track_html = f'\n                    <track src="../audio/{audio_stem}.vtt" kind="subtitles" srclang="es" label="Español (Subtítulos)" default>' if vtt_path.exists() else ""
+
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1638,7 +1643,7 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
                     </a>
                 </div>
                 <audio controls preload="metadata">
-                    <source src="{audio_url}" type="audio/mpeg">
+                    <source src="{audio_url}" type="audio/mpeg">{track_html}
                     Tu navegador no soporta el reproductor de audio.
                 </audio>
             </div>

@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:13,000
+o la Carlos. Bienvenidos a una edición especial de Asa Adeptar, nuestro espacio de análisis técnico exhaustivo diseñado para esos momentos donde necesitamos ir mucho más allá del titular de las noticias.
+
+2
+00:00:13,000 --> 00:00:15,000
+Soy Jorge.
+
+3
+00:00:15,000 --> 00:00:17,000
+Y yo soy Dalia.
+
+4
+00:00:17,000 --> 00:00:25,000
+Hoy nos tomamos el tiempo para desmen usar un tema que está transformando radicalmente la industria y que está en el centro de todas las conversaciones de arquitectura.
+
+5
+00:00:25,000 --> 00:00:29,000
+Maro Context por Acao y agentes autónomos en producción.
+
+6
+00:00:29,000 --> 00:00:31,000
+Así es Dalia.
+
+7
+00:00:31,000 --> 00:00:39,000
+A diferencia de nuestros resúmenes matutinos de noticias diarias, en estras ediciones de tipta, nos detenemos a examinar la anatomía del sistema,
+
+8
+00:00:39,000 --> 00:00:47,000
+los Trerofs que nadie publican las notas de plenza, y las implicaciones reales para quienes diseñamos software y datos en producción.
+
+9
+00:00:47,000 --> 00:00:50,000
+Y la tesis central con la que abrimos hoy es contundente.
+
+10
+00:00:50,000 --> 00:00:59,000
+El protocolo MSP está reemplazando a las ápizvas tradicionales como el nuevo bus de integración estándar entre modelos de guía y herramientas del mundo real.
+
+11
+00:00:59,000 --> 00:01:08,000
+Parece una firma ciudad, pero cuando analizamos como se están moviendo los estandares de la industria, las piezas empiezan a encajar con una precisión matemática.
+
+12
+00:01:08,000 --> 00:01:14,000
+Para entender el contexto, entremos directo al acto 1, el cambio de paradigma.
+
+13
+00:01:14,000 --> 00:01:18,000
+¿Por qué estamos hablando de esto precisamente ahora en 2016?
+
+14
+00:01:18,000 --> 00:01:32,000
+Durante años nos acostumbramos a resolver estos problemas con arquitecturas convencionales, pero la llegada de modelos con ventanas de contexto masiva y agentes con acceso a herramientas del sistema operativo lo cambió todo.
+
+15
+00:01:32,000 --> 00:01:34,000
+Exacto Jorge.
+
+16
+00:01:34,000 --> 00:01:42,000
+Lo que antes era un cuello de botella computacional o de ancho de banda, hoy se ha convertido en un problema de diseño semántico y gobernanza.
+
+17
+00:01:42,000 --> 00:01:52,000
+Ya no peleamos con si el modelo es capaz de responder, peleamos con si la arquitectura puede soportar respuestas no deterministas sin romper la consistencia de los datos.
+
+18
+00:01:52,000 --> 00:01:57,000
+Y eso nos lleva a la acto 2, la anatomía técnica bajo el capo.
+
+19
+00:01:57,000 --> 00:02:01,000
+Desclosemos los componentes fundamentales de este ecosistema.
+
+20
+00:02:01,000 --> 00:02:06,000
+Primero, tenemos que hablar de la capa de comunicación y protocolos.
+
+21
+00:02:06,000 --> 00:02:10,000
+Los puntos críticos que están definiendo esta arquitectura son.
+
+22
+00:02:10,000 --> 00:02:18,000
+El primer pilar, está andarización de herramientas quientes servidor mediante y es anorquisiz sobre este o ECC.
+
+23
+00:02:18,000 --> 00:02:25,000
+El segundo pilar indispensable, descubrimiento dinámico de recursos, pramp si herramientas sin recompilar el agente.
+
+24
+00:02:25,000 --> 00:02:36,000
+Y el tercer pilar que casi todos los equipos pasan por alto hasta que colapsa, hay el lamiento de permisos y control granular de ejecución sobre el sistema de archivos.
+
+25
+00:02:36,000 --> 00:02:42,000
+Ahora bien, Jorge, entremos al acto 3, el debate de la realidad y los costos ocultos.
+
+26
+00:02:42,000 --> 00:02:53,000
+Porque en Twitter y en las demas de marketing todo luce instantáneo y mágico, pero cuando llevas esto a un entorno empresarial con millones de transacciones, la realidad golpea con fuerza.
+
+27
+00:02:53,000 --> 00:02:56,000
+Totalmente de acuerdo, daña.
+
+28
+00:02:56,000 --> 00:03:06,000
+La trampa principal que estamos viendo en las auditorías de sistemas es, la sobrecarga de la tensia y contexto cuando una gente maneja de cenas de herramientas y multanias.
+
+29
+00:03:06,000 --> 00:03:14,000
+Y no olvidemos el factor financiero, los riesgos de engección de pramp sin directa a través de fuentes de datos no confiables.
+
+30
+00:03:14,000 --> 00:03:21,000
+Si no diseñas límites estrictos y mecanismos de salida, tu infraestructura puede disparar la factura de nube en cuestión de horas.
+
+31
+00:03:21,000 --> 00:03:34,000
+Por eso, la regla de oro para el ingeniero senyoro y no es adoptar la herramienta más nueva, sino diseñar los contratos de observabilidad y las barreras de contención antes de soltar un agente con una plan a producción.
+
+32
+00:03:34,000 --> 00:03:45,000
+Y para conectar con nuestra perspectiva reflexiva y y que en este acto 4, al igual que el protocolo CID de SORBART AMA han permitido que cualquier desarrollador interconectará mundos virtuales con una misma base.
+
+33
+00:03:45,000 --> 00:03:50,000
+MSP está creando la capa de interoperabilidad universal para agentes.
+
+34
+00:03:50,000 --> 00:04:02,000
+Es fascinante ver cómo las obras de ciencia ficción que leíamos hace años anticiparon exactamente los dilemacéticos y arquitectónicos a los que nos enfrentamos hoy al construir sistemas autónomos.
+
+35
+00:04:02,000 --> 00:04:12,000
+Carlos, esperamos que esta inversión profunda te brinde herramientas de pensamiento estratégico y criterio técnico sólido para tus proyectos y decisiones de arquitectura.
+
+36
+00:04:13,000 --> 00:04:19,000
+Recuerda que puedes consultar la bibliografía y notas completas de este episodio en tu repositorio local.
+
+37
+00:04:19,000 --> 00:04:23,000
+Nos escuchamos en la próxima inversión profunda de Asa Ediptad.
+
+38
+00:04:23,000 --> 00:04:25,000
+Hasta la próxima.
+

@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:02.399
+o la toda nuestra audiencia.
+
+00:00:02.399 --> 00:00:05.799
+Bienvenidos a una edición muy especial de Asa Ediptar,
+
+00:00:05.799 --> 00:00:09.200
+nuestro espacio de análisis técnico exhaustivo.
+
+00:00:09.200 --> 00:00:11.000
+Soy Jorge.
+
+00:00:11.000 --> 00:00:12.900
+Y yo soy Dalia.
+
+00:00:12.900 --> 00:00:16.399
+Hoy en aguramos formalmente un nuevo pilar temático en el Parcas
+
+00:00:16.399 --> 00:00:18.000
+que nos apasiona profundamente
+
+00:00:18.000 --> 00:00:20.800
+y que está transformando la ingeniería de hardware,
+
+00:00:20.800 --> 00:00:22.199
+la impresión 3D,
+
+00:00:22.199 --> 00:00:27.199
+la fabricación digital distribuida y el impacto disruptivo de BMW Hub.
+
+00:00:27.199 --> 00:00:29.000
+Así es Dalia.
+
+00:00:29.000 --> 00:00:30.800
+Durante más de una década,
+
+00:00:30.800 --> 00:00:33.200
+la impresión 3D por deposición fundida,
+
+00:00:33.200 --> 00:00:34.399
+o FDM,
+
+00:00:34.399 --> 00:00:38.600
+estuvo confinada al territorio de los entusiasas del blico-laje extremo,
+
+00:00:38.600 --> 00:00:41.799
+pasar horas calibrando la cama con una hoja de papel,
+
+00:00:41.799 --> 00:00:46.400
+ajustando correas a oído y sufriendo una tasa de fallas frustrante.
+
+00:00:46.400 --> 00:00:51.000
+Pero la llegada de BMW abcamrió las reglas del juego para siempre.
+
+00:00:51.000 --> 00:00:53.600
+La tesis central que sostenemos hoy es rotunda,
+
+00:00:53.600 --> 00:00:57.600
+de aambuda transformó la impresión 3D1 pasatiempo artesanal y frustrante
+
+00:00:57.600 --> 00:01:01.399
+en un electrodoméstico de alta precisión industrial.
+
+00:01:01.399 --> 00:01:04.400
+Al integrarse en sueles de bucle cerrado, micro-laida,
+
+00:01:04.400 --> 00:01:07.599
+compensación activa de vibraciones y visión por computadora
+
+00:01:07.599 --> 00:01:09.000
+para detección de fallas,
+
+00:01:09.000 --> 00:01:14.000
+redefinió la fonteera entre el prototipado rápido y la producción en masa.
+
+00:01:14.000 --> 00:01:17.000
+Para dimensionar esto, entremos al acto 1,
+
+00:01:17.000 --> 00:01:20.799
+el salto cuántico de la fabricación en el escritorio.
+
+00:01:20.799 --> 00:01:22.400
+Antes de 2022,
+
+00:01:22.400 --> 00:01:27.400
+si querías imprimir a velocidad de superiores a 150 milímetros por segundo,
+
+00:01:27.400 --> 00:01:30.200
+tenías que armar una impresora bóron de cero,
+
+00:01:30.200 --> 00:01:34.200
+compilar clipper y afinar para metros durante semanas.
+
+00:01:34.200 --> 00:01:36.200
+Bando un átomo esabilosidad,
+
+00:01:36.200 --> 00:01:43.400
+la empa que toencha si se alumiños cerrados y ofreció 500 milímetros por segundo nada más acarla de la caja.
+
+00:01:43.400 --> 00:01:46.000
+Y no fue solo mercado technique.
+
+00:01:46.000 --> 00:01:50.200
+Lo graron que el usuario promedio pasara de preocuparse por la mecánica de la máquina,
+
+00:01:50.200 --> 00:01:54.200
+a preocuparse exclusivamente por el diseño cada de su pieza.
+
+00:01:54.200 --> 00:01:56.200
+La máquina dejó de ser el proyecto,
+
+00:01:56.200 --> 00:02:00.000
+el proyecto volvió a hacer la pieza que querías fabricar.
+
+00:02:00.000 --> 00:02:04.600
+Y eso nos lleva a la acto 2, la anatomía técnica bajo el capo.
+
+00:02:04.600 --> 00:02:09.599
+Desclosemos los componentes que hacen posible esta precisión milimetrica.
+
+00:02:09.599 --> 00:02:14.000
+El primer pilare es el microlaidar y la nivelación por doble lacer.
+
+00:02:14.000 --> 00:02:16.400
+En modelos como la décima 1 carbono,
+
+00:02:16.400 --> 00:02:26.000
+el cabeza al proyecto alineas la acersobre la placa para medir con precisión micrometrica la altura de la primera capa y calcular el factor de compensación de flujo dinámico de cada filamento
+
+00:02:26.000 --> 00:02:27.800
+antes de imprimir.
+
+00:02:27.800 --> 00:02:32.599
+El segundo pilare es la compensación de resonancia activa o input shedding.
+
+00:02:32.599 --> 00:02:46.199
+Con acelerómetros en el cabezal, la impresora mide sus propias frecuencias naturales de vibración y ajusta los pulsos de los motores paso a paso para neutralizar el Gustín o efecto fantasma en las esquinas a velocidades extremas.
+
+00:02:46.199 --> 00:02:51.000
+Y el tercer pilar indispensable, la visión por computadora en el borde.
+
+00:02:51.000 --> 00:02:55.000
+La cámara integrada monitorea constantemente la pieza.
+
+00:02:55.000 --> 00:03:06.599
+Si una esquina se levanta o el filamento se desprende creando el temido monstruo de spaghetti, el algoritmo de tiene la impresión automáticamente y temvia una notificación al teléfono antes de arruinar el otén.
+
+00:03:06.599 --> 00:03:12.599
+Pero entremos al acto 3, Dalia, el gran debate maíquer y las sombras del ecosistema.
+
+00:03:12.599 --> 00:03:21.800
+Porque en la comunidad código abierto, la errupción de pambuda abgenera un terremoto ético y filosófico comparable al debate entre Apple y Linux.
+
+00:03:21.800 --> 00:03:23.600
+Totalmente.
+
+00:03:23.600 --> 00:03:32.600
+Por un lado, y honeros como Pulsovice, China Comunidad Reprap, defienden que la impresión 3 de creció gracias al conocimiento libre y las patentes abiertas.
+
+00:03:32.600 --> 00:03:43.000
+Bambuda abazó parte de su software en Forks de Slick 3R, pero cerró al firmware de sus placas base y centralizó el control a través de su nube y su plataforma Makerboard.
+
+00:03:43.000 --> 00:03:56.599
+Y surgen dilemas legítimos de soberanía de datos y seguridad, que pasa si la nube de la compañía sufre una interrupción o una vulnerabilidad de red, como ocurrió en aquel incidente donde impresoras se encendieron solas por la noche.
+
+00:03:56.599 --> 00:04:03.800
+Onth Bambuda ababilitó el modo la ni centros de confianza, los puristas exigen control total sobre el hardware.
+
+00:04:03.800 --> 00:04:08.400
+Y hablamos también del sistema multimaterial, el AMS.
+
+00:04:08.599 --> 00:04:24.800
+Es una maravilla técnica cambiara entre 4 o 16 colores y soporte solubles en una misma pieza, pero el costo ambiental y económico en desperdicio de filamento de purga es un problema real que los algoritmos de corte en Bambuda y Ua que Slay soba apenas están comenzando a optimizar.
+
+00:04:24.800 --> 00:04:28.600
+Un debate vital entre conveniencia y sostenibilidad.
+
+00:04:28.600 --> 00:04:37.800
+Y para nuestra conexión geek en el acto 4, esto metransporta directo a la herrera del debate en el piso 48 de aincrad en Sordor on Man.
+
+00:04:37.800 --> 00:04:45.600
+En el anime, los artesanos forjaban armas legendarias combinando lingotes raros con interfaces de precisión digital.
+
+00:04:45.600 --> 00:04:58.400
+O a los replicadores de materia de Star Trek, Bambuda abnos acerca a un paso más a esa utopía de ciencia ficción, precionaron botón desde tu teléfono y materializar en plástico de ingeniería o fibra de carbono o un objeto físico.
+
+00:04:58.400 --> 00:05:01.400
+Util para tocar o tu trabajo.
+
+00:05:01.400 --> 00:05:07.400
+La convergencia entre silicio, visión artificial y manufactura aditiva está apenas comenzando.
+
+00:05:07.400 --> 00:05:15.400
+Esperamos que esta inversión profunda en Bambuda ve la impresión 3 de Enriquezca la visión técnica de toda nuestra comunidad.
+
+00:05:15.400 --> 00:05:22.400
+Recuerda consultar el artículo completo y las referencias bibliográficas en estilo Apa en la revista digital esa hechono.
+
+00:05:22.400 --> 00:05:25.400
+Nos escuchamos en el próximo episodio.
+
+00:05:25.400 --> 00:05:29.400
+Hasta la próxima y felices impresiones para todos.
+
+00:05:29.400 --> 00:05:31.400
+Hasta pronto.
+

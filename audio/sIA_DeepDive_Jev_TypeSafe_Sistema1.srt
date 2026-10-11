@@ -1,0 +1,180 @@
+1
+00:00:00,000 --> 00:00:02,399
+o la toda nuestra audiencia.
+
+2
+00:00:02,399 --> 00:00:07,000
+Bienvenidos a una entrega verdaderamente especial de Asa Edictav.
+
+3
+00:00:07,000 --> 00:00:08,800
+Soy Jorge.
+
+4
+00:00:08,800 --> 00:00:10,700
+Y yo soy Dalia.
+
+5
+00:00:10,700 --> 00:00:18,000
+Hoy nos detenemos a analizar uno de los desarrollos más fascinantes y comentados de las últimas semanas en el mundo de la interigencia artificial,
+
+6
+00:00:18,000 --> 00:00:26,199
+la llegada de Jeff, el nuevo modelo generalista desarrollado por Typesaypha y que acaba de desmenusar Carlos Antana en Datsie a sube.
+
+7
+00:00:26,199 --> 00:00:28,000
+Así es Dalia.
+
+8
+00:00:28,000 --> 00:00:39,000
+Si han seguido la conversación reciente sobre agentes autónomos, habrá notado una queja universal, los modelos del lenguaje actuales son increíbles para redactar, resumido filosofar,
+
+9
+00:00:39,000 --> 00:00:46,000
+pero cuando les pedimos que tomen decisiones rápidas en código, son lentos, caros y peligrosamente increíbles.
+
+10
+00:00:46,000 --> 00:00:57,000
+Nuestra tesis central de hoy es contundente, durante años, la industria cometió el grave error arquitectónico de usar LLAMES generativos para tareas de decisión y clasificación.
+
+11
+00:00:57,000 --> 00:01:11,000
+Ya vinagura formalmente la era de los modelos de sistema 1, redas discriminativas que no conversan ni generan texto, sino que evaluan estados en milisegundos y devuelventivos de datos nativos y matemáticamente estructurados.
+
+12
+00:01:11,000 --> 00:01:19,000
+Para entender el impacto, entremos directo al acto 1, el absurdo de los LLAMES para enrujar decisiones.
+
+13
+00:01:19,000 --> 00:01:26,000
+Imagínen contratar a un laureado escritor o a un filósofo para que presione un botón de emergencia cada medio segundo.
+
+14
+00:01:26,000 --> 00:01:37,000
+Eso es exactamente lo que hacíamos al enviar un pront gigante HPTO clau de simplemente para decidir si un correo es urgente o para seleccionar que funciona una ape y invocado.
+
+15
+00:01:37,000 --> 00:01:39,000
+Exacto, Jorge.
+
+16
+00:01:39,000 --> 00:01:53,000
+Anado a Dama Autoregresivo tiene que predecir palabra por palabra, generando Token sin necesarios como claro, con gusto te ayudó con tu consulta, para luego intentar escupir un son que la mitad de las veces viene con comas rotas o campos alucinados.
+
+17
+00:01:53,000 --> 00:02:00,000
+Pagar cientos de miles de tokens de contexto para un simple escondicional era un desperdicio técnico insostenible.
+
+18
+00:02:00,000 --> 00:02:05,000
+Y eso nos lleva al acto 2, la anatomía técnica de Jeff.
+
+19
+00:02:05,000 --> 00:02:09,000
+¿Cómo operá este modelo de Type 6 ahí bajo el capo?
+
+20
+00:02:09,000 --> 00:02:13,000
+La clave de Jeff es que es un modelo discriminativo generalista.
+
+21
+00:02:13,000 --> 00:02:18,000
+No predice el siguiente toque en detesto en un vocabulario de 100.000 palabras.
+
+22
+00:02:19,000 --> 00:02:25,000
+Ya recibe el estado de un sistema y entrega directamente tres tipos de salida fuertemente tipadas.
+
+23
+00:02:25,000 --> 00:02:38,000
+El primer tipo es choise, evalua una lista de opciones discretas pre definidas y calcula la probabilidad matemática de cada una, garantizando que el resultado siempre sea una opción valida del catálogo.
+
+24
+00:02:38,000 --> 00:02:48,000
+El segundo tipo es escor, una puntuación humérica continua entre 0 y 1, perfecta para medir nivel de riesgo, prioridad de atención o afinidad de un usuario.
+
+25
+00:02:48,000 --> 00:02:59,000
+Y el tercer tipo es bulio no-nol, responde con precisión matemática si o no con su respectivo intervalo de certeza eliminando de raíz la ambiguidad del lenguaje natural.
+
+26
+00:02:59,000 --> 00:03:09,000
+Y al no tener que generar texto, la inferencia ocurre en fracciones de milisegundo y con un consumo de computo infinitesimal comparado con un modelo como Yemen a YO Cloud.
+
+27
+00:03:09,000 --> 00:03:16,000
+Pero entremos al acto 3, Dalia, la famosa de modedumila dupla sistema 1 más sistema 2 en producción.
+
+28
+00:03:16,000 --> 00:03:22,000
+Porque el experimento que mostró datcias y dejó a toda la comunidad poquia vierta.
+
+29
+00:03:22,000 --> 00:03:28,000
+Fue una genialidad técnica. Pusieron a llevar a legendario videojuego de un mentien por real.
+
+30
+00:03:28,000 --> 00:03:41,000
+Pero ojo, no procesándolos fotogramas de video con un modelo de visión pesado, sino ingiriendo directamente el vector de estado interno del motor, puntos de vida, munición, coordenadas de demonios en pantalla.
+
+31
+00:03:41,000 --> 00:03:49,000
+Y Jeff tomaba decisiones a descenas de ciclos por segundo, esquivar a la izquierda, disparar la escopeta retrocedero.
+
+32
+00:03:49,000 --> 00:03:54,000
+Una velocidad de reacción que jamás podría alcanzar un modelo generativo.
+
+33
+00:03:54,000 --> 00:04:04,000
+Y esto redegine por completo como debemos diseñar a gente sautónomos en 2016 siguiendo la teoría de Leonio Conamen de Pensar Rápido, Pensar de Espacio.
+
+34
+00:04:04,000 --> 00:04:16,000
+El sistema uno es Jeff, el reflejo incondicional del software. En route a peticiones, validas que más filtra anomalías y toma decisiones operativas instantáneas en el borde.
+
+35
+00:04:16,000 --> 00:04:30,000
+Y el sistema dos son los modelos de razonamiento profundo como ya mena a tenkin o los modelos de cadenas de pensamiento, sólo los despiertas cuando el sistema uno detecta una situación compleja que exige de liberaciones estratégica del largo plazo.
+
+36
+00:04:30,000 --> 00:04:39,000
+Una sinergia perfecta. Y para nuestra conexión geek en el acto 4, esto me recuerda inmediatamente a luta instinto en Dragon Ball Super.
+
+37
+00:04:39,000 --> 00:04:49,000
+El principio marcial donde el cuerpo no espera a que el cerebro reflexione, las terminaciones nerviosas se evaluan el entorno y reaccionan de manera instantánea y perfecta.
+
+38
+00:04:49,000 --> 00:05:02,000
+Totalmente, o al sistema cardinal de software online, que balancea las misiones y los monstruos de encrats sinent hablar un diálogo con los jugadores, ejecutando rutinas deterministas sobre el estado del servidor.
+
+39
+00:05:02,000 --> 00:05:07,000
+Y es la inteligencia artificial moderna e es en mismo instinto reflejo.
+
+40
+00:05:07,000 --> 00:05:12,000
+Una pieza clave que faltaba en el rompecabezas de la arquitectura agéntica.
+
+41
+00:05:12,000 --> 00:05:25,000
+Esperamos que este análisis profundo sobrellevilos modelos de decisiones brinde a todos nuestros oyentes y profesionales técnicos una perspectiva clara para optimizar sus propios país para insistemas autónomos.
+
+42
+00:05:25,000 --> 00:05:40,000
+Recuerden que pueden seguirnos en Spotify para no perderse ningún episodio, y consultar el artículo completo con las referencias en formato a pa y el enlace directo a la análisis de gás si es bien nuestra revista digitales a ello no en escucha guióncia.jt.io.
+
+43
+00:05:40,000 --> 00:05:44,000
+Nos escuchamos en el próximo episodio.
+
+44
+00:05:44,000 --> 00:05:49,000
+Hasta la próxima y que sus modelos tomen siempre la decisión correcta.
+
+45
+00:05:49,000 --> 00:05:54,000
+Hasta pronto.
+

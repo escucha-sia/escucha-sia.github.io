@@ -51,6 +51,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Laya_OpenSource_CommandCenter.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Laya_OpenSource_CommandCenter.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</title>
@@ -63,6 +65,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Jev_TypeSafe_Sistema1.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: Bambu Lab y la Revolución de la Impresión 3D: Visión por Computadora, LiDAR y el Ecosistema Maker</title>
@@ -75,6 +79,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Bambu_Lab_Impresion_3D.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Bambu_Lab_Impresion_3D.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: Inferencia en el Borde vs Nube: NPU del Galaxy S25 e Insta360 X4</title>
@@ -87,6 +93,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: Data Mesh en Retail Masivo: Contratos Semánticos y Streaming Continuo</title>
@@ -99,6 +107,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: El Fin de la Amnesia en LLMs: Context Caching y Memoria Persistente</title>
@@ -111,6 +121,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: BigQuery Gemini Cloud Assist y la Muerte de las Consultas Manuales</title>
@@ -123,6 +135,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA Deep Dive: Model Context Protocol y Agentes Autónomos en Producción</title>
@@ -135,6 +149,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_MCP_Agentes_Produccion.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_MCP_Agentes_Produccion.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA #2: De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity</title>
@@ -147,6 +163,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Episodio_02_Arquitectos_de_Contexto.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Episodio_02_Arquitectos_de_Contexto.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA #1: Gemini 3.8, Agentic BigQuery, Android 17 y Sword Art Online</title>
@@ -159,6 +177,8 @@
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/NoticIAs_Duo_2026-10-03.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/NoticIAs_Duo_2026-10-03.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: 5 claves que transforman la integración de datos</title>
@@ -171,6 +191,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_01_5_claves_que_transforman_la_integracion_de_datos.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_01_5_claves_que_transforman_la_integracion_de_datos.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Adiós Tuberías, Hola Ecosistema Vivo: Los 5 Frameworks de Integración de Datos que Definen la Ingeniería del Futuro (Metadatos, Eventos e IA)</title>
@@ -183,6 +205,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_02_Adios_Tuberias_Hola_Ecosistema_Vivo_Los_5_Frameworks_de_Inte.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_02_Adios_Tuberias_Hola_Ecosistema_Vivo_Los_5_Frameworks_de_Inte.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Antigravity La IA deja de ser copiloto</title>
@@ -195,6 +219,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_03_Antigravity_La_IA_deja_de_ser_copiloto.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_03_Antigravity_La_IA_deja_de_ser_copiloto.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Arquitecto de Inteligencia vs El Fontanero de Datos</title>
@@ -207,6 +233,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_04_Arquitecto_de_Inteligencia_vs_El_Fontanero_de_Datos.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_04_Arquitecto_de_Inteligencia_vs_El_Fontanero_de_Datos.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Convierte a Claude en tu empleado técnico</title>
@@ -219,6 +247,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_05_Convierte_a_Claude_en_tu_empleado_tecnico.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_05_Convierte_a_Claude_en_tu_empleado_tecnico.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Data Mesh No Es Tecnología Es Gente y Estructura</title>
@@ -231,6 +261,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_06_Data_Mesh_No_Es_Tecnologia_Es_Gente_y_Estructura.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_06_Data_Mesh_No_Es_Tecnologia_Es_Gente_y_Estructura.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: De plomeros a arquitectos de contexto</title>
@@ -243,6 +275,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_07_De_plomeros_a_arquitectos_de_contexto.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_07_De_plomeros_a_arquitectos_de_contexto.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Deriva Semántica y Modernización: Cómo Rescatar el Significado de tus Datos con Metadatos Inteligentes</title>
@@ -255,6 +289,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_08_Deriva_Semantica_y_Modernizacion_Como_Rescatar_el_Significad.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_08_Deriva_Semantica_y_Modernizacion_Como_Rescatar_el_Significad.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: El Costo Invisible de Big Data: Ingeniería de Datos, Huella Energética y la Urgencia de la Sostenibilidad</title>
@@ -267,6 +303,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_09_El_Costo_Invisible_de_Big_Data_Ingenieria_de_Datos_Huella_En.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_09_El_Costo_Invisible_de_Big_Data_Ingenieria_de_Datos_Huella_En.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: El Dilema de Big Data: De la Arquitectura Lambda a Kappa (¿Velocidad vs. Precisión)</title>
@@ -279,6 +317,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_10_El_Dilema_de_Big_Data_De_la_Arquitectura_Lambda_a_Kappa_Velo.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_10_El_Dilema_de_Big_Data_De_la_Arquitectura_Lambda_a_Kappa_Velo.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: El fin de la amnesia crónica en IA</title>
@@ -291,6 +331,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_11_El_fin_de_la_amnesia_cronica_en_IA.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_11_El_fin_de_la_amnesia_cronica_en_IA.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: IA La burbuja financiera que se autoalimenta</title>
@@ -303,6 +345,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_12_IA_La_burbuja_financiera_que_se_autoalimenta.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_12_IA_La_burbuja_financiera_que_se_autoalimenta.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: IA que razona antes de actuar</title>
@@ -315,6 +359,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_13_IA_que_razona_antes_de_actuar.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_13_IA_que_razona_antes_de_actuar.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Lambda vs. Kappa: El Dilema de los Datos en México: ¿Velocidad Instantánea o Precisión Histórica?</title>
@@ -327,6 +373,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_14_Lambda_vs_Kappa_El_Dilema_de_los_Datos_en_Mexico_Velocidad_I.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_14_Lambda_vs_Kappa_El_Dilema_de_los_Datos_en_Mexico_Velocidad_I.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Máquina del Tiempo de los Datos: Simplifica el Análisis Histórico con Vistas de Instantánea (SCD2 y Esquemas Estrella)</title>
@@ -339,6 +387,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_15_Maquina_del_Tiempo_de_los_Datos_Simplifica_el_Analisis_Histo.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_15_Maquina_del_Tiempo_de_los_Datos_Simplifica_el_Analisis_Histo.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Siete Métricas Post Lanzamiento para Confianza en Datos</title>
@@ -351,6 +401,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_16_Siete_Metricas_Post_Lanzamiento_para_Confianza_en_Datos.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_16_Siete_Metricas_Post_Lanzamiento_para_Confianza_en_Datos.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Siete Métricas para Confiar en tus Datos</title>
@@ -363,6 +415,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_17_Siete_Metricas_para_Confiar_en_tus_Datos.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_17_Siete_Metricas_para_Confiar_en_tus_Datos.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Tu Segundo Cerebro Digital con C.O.D.E. y P.A.R.A.</title>
@@ -375,6 +429,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_18_Tu_Segundo_Cerebro_Digital_con_C_O_D_E_y_P_A_R_A.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_18_Tu_Segundo_Cerebro_Digital_con_C_O_D_E_y_P_A_R_A.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: VSCode centro de mando para arquitectura viva</title>
@@ -387,6 +443,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_19_VSCode_centro_de_mando_para_arquitectura_viva.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_19_VSCode_centro_de_mando_para_arquitectura_viva.srt" type="application/x-subrip" language="es"/>
     </item>
     <item>
       <title>sIA: Vibe coding y la ilusión de competencia</title>
@@ -399,6 +457,8 @@
       <itunes:author>Carlos Corona (sIA)</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.srt" type="application/x-subrip" language="es"/>
     </item>
   </channel>
 </rss>

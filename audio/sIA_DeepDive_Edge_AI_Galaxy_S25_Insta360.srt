@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:02,399
+que tal a toda nuestra audiencia.
+
+2
+00:00:02,399 --> 00:00:06,000
+Bienvenidos a una nueva edición de Asa Editaf.
+
+3
+00:00:06,000 --> 00:00:07,799
+Soy Jorge.
+
+4
+00:00:07,799 --> 00:00:09,800
+Y yo soy Dalia.
+
+5
+00:00:09,800 --> 00:00:13,300
+Hoy miramos hacia el hardware que llevamos en la mano y en la mochila,
+
+6
+00:00:13,300 --> 00:00:21,000
+el silicio de inferencia local en el gavax CS25 y la captura espacial inmersiva con la Insta 360 X4.
+
+7
+00:00:21,000 --> 00:00:25,300
+Nuestra tesis es que la próxima frontera de la inteligencia artificial personal
+
+8
+00:00:25,300 --> 00:00:28,199
+no se jugará en los macros centros de datos de la nube,
+
+9
+00:00:28,199 --> 00:00:32,000
+sino en la unidad de procesamiento neuronal, la NPEU,
+
+10
+00:00:32,000 --> 00:00:36,399
+directamente en el silicio de nuestros dispositivos móviles.
+
+11
+00:00:36,399 --> 00:00:39,100
+Durante años dependíamos de enviar cada instrucción,
+
+12
+00:00:39,100 --> 00:00:43,899
+audio o imagen a través de internet para recibir una respuesta de la IA.
+
+13
+00:00:43,899 --> 00:00:48,700
+Pero la latencia de red, la falta de cobertura y los riesgos de privacidad hacen que ese modelo
+
+14
+00:00:48,700 --> 00:00:52,500
+sea insostenible para la asistencia en tiempo real.
+
+15
+00:00:52,500 --> 00:00:56,899
+Con los procesadores de última generación en la familia Galaxy S25,
+
+16
+00:00:57,100 --> 00:01:00,899
+contamos con decenas de tops de potencia en la anti-U.
+
+17
+00:01:00,899 --> 00:01:08,400
+Esto permite correr modelos de lenguaje reducidos y quantizados de 3 a 7.000 millones de parámetros de forma completamente local,
+
+18
+00:01:08,400 --> 00:01:12,700
+sin conexión a internet y con consumo mínimo de energía.
+
+19
+00:01:12,700 --> 00:01:19,700
+Y en movilidad, funciones como una brief y macencia menuano y nueve procesa a la cámara y el audio localmente.
+
+20
+00:01:19,700 --> 00:01:24,100
+Mientras tanto, en cámaras de acción como la Insta360X4,
+
+21
+00:01:24,100 --> 00:01:29,200
+los algoritmos de visión por computadora realizan el stitching de la estabilización flow state de video
+
+22
+00:01:29,200 --> 00:01:33,700
+en ochoca en tiempo real utilizando aceleración por hardware.
+
+23
+00:01:33,700 --> 00:01:42,900
+Pero seamos honestos en el debate técnico, Dalia, el estrangulamiento térmico o tormo truado en sigue siendo una realidad física ineludible.
+
+24
+00:01:42,900 --> 00:01:48,500
+Si pones a un teléfono delgado a inferir modelos pesados durante 20 minutos seguidos bajo el sol,
+
+25
+00:01:48,500 --> 00:01:54,799
+la temperatura sube y el procesador baja drásticamente su frecuencia para proteger el silicio.
+
+26
+00:01:54,799 --> 00:01:56,599
+Totalmente.
+
+27
+00:01:56,599 --> 00:02:05,500
+Por eso el futuro inmediato no es todo local ni todo en la nube, sino la arquitectura híbrida, inferencia rápida y privada en el borde para la interacción inmediata,
+
+28
+00:02:05,500 --> 00:02:10,900
+y delegación inteligente a la nube solo cuando se requiere razonamiento ultra profundo.
+
+29
+00:02:10,900 --> 00:02:17,099
+Y como paralelismo geek, pensemos en el dispositivo a ócma de Soro Aronma Nornosqueo.
+
+30
+00:02:17,099 --> 00:02:28,099
+La maje de la realidad aumentada radicaba en que el renderizado de combate ocurría al instante en la siente del jugador, sin el retraso de esperar paquetes de retes de un servidor remoto.
+
+31
+00:02:28,099 --> 00:02:31,400
+Procesar en el borde para vivir en tiempo real.
+
+32
+00:02:31,400 --> 00:02:35,599
+Esperamos que disfruten este análisis donde quiera que nos escuchen.
+
+33
+00:02:35,599 --> 00:02:39,099
+Hasta la próxima edición de SAE DeepTive.
+
+34
+00:02:39,099 --> 00:02:43,099
+Hasta la próxima y excelente jornada para todos.
+

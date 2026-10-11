@@ -1,0 +1,751 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:02.640
+Hola, que gusto encontrarnos de nuevo.
+
+00:00:02.640 --> 00:00:08.939
+Hoy, nos vamos a meter de lleno en algo que la verdad está cambiando como vemos y manejamos
+
+00:00:08.939 --> 00:00:10.839
+los datos en las empresas.
+
+00:00:10.839 --> 00:00:17.359
+Tenemos un material base, un artículo de Saorapsing, que, bueno, plantea algo interesante.
+
+00:00:17.359 --> 00:00:22.600
+Esa idea vieja de integración de datos, como solo moverlos de A a B, pues ya fue.
+
+00:00:22.600 --> 00:00:24.839
+Así es, totalmente.
+
+00:00:24.839 --> 00:00:29.960
+Lo que estamos viendo y este artículo lo capta muy bien, es una transformación profunda.
+
+00:00:29.960 --> 00:00:33.359
+Ya no es nada más conectar cachitos de información.
+
+00:00:33.359 --> 00:00:34.359
+Exacto.
+
+00:00:34.359 --> 00:00:40.439
+Ahora es como, como creer un ecosistema vivo de datos, un sistema inteligente, ¿sabes?
+
+00:00:40.439 --> 00:00:42.799
+Que reacciona, que se cura solo.
+
+00:00:42.799 --> 00:00:47.679
+Nos famosos pipelines, esas tuberías digitales, pues ya no es un solo tubos.
+
+00:00:47.679 --> 00:00:50.240
+Ahora tienen cierta inteligencia se adaptan.
+
+00:00:50.240 --> 00:00:55.799
+Y bueno, esta evolución es super crítica, hoy no, con la cantidad de datos que hay, la velocidad,
+
+00:00:55.799 --> 00:00:58.920
+el modelo viejo simplemente no da, se queda corto.
+
+00:00:58.920 --> 00:00:59.760
+No, para nada.
+
+00:00:59.759 --> 00:01:08.560
+Por eso hoy queremos explorar este 5 enfoque o frameworks clave que según la fuente que tenemos,
+
+00:01:08.560 --> 00:01:12.239
+están pues reinventando esto de la integración de datos.
+
+00:01:12.239 --> 00:01:18.159
+Ok, vamos a desempacarlo, ¿qué te parece si empezamos con el primero, el de los metadatos?
+
+00:01:18.159 --> 00:01:19.560
+Me parece perfecto.
+
+00:01:19.560 --> 00:01:25.359
+Y fíjate que este primer enfoque ya nos da una idea del cambio tan radical que estamos viendo.
+
+00:01:25.359 --> 00:01:31.079
+La idea central digamos el gran cambio es dejar de construir a mano cada flujo, ¿no?
+
+00:01:31.079 --> 00:01:36.920
+Justo eso, el artículo usa una analogía que me encantó, la del piloto automático de un Tesla.
+
+00:01:36.920 --> 00:01:42.719
+No le dice es giratrés grados a la derecha ya, le dice es adonde vas y el coche se encarga.
+
+00:01:42.719 --> 00:01:44.760
+Aha, aquí es parecido.
+
+00:01:44.760 --> 00:01:51.079
+En lugar de programar paso a pasito como mover y cambiar los datos, tú declaras tu intención.
+
+00:01:51.079 --> 00:01:57.560
+Es decir, estos datos de esta fuente transformados así y ahí es donde entra el framework.
+
+00:01:57.560 --> 00:02:03.840
+Le es a configuración que son los metadatos o sea los datos sobre tus datos y lo que quieres hacer con ellos.
+
+00:02:03.840 --> 00:02:07.840
+Y con base en eso, pum, arma y maneja el pipeline solito.
+
+00:02:07.840 --> 00:02:10.000
+Es una abstracción muy, muy potente.
+
+00:02:10.000 --> 00:02:12.840
+Totalmente y cambia el rol del ingeniero, ¿no?
+
+00:02:12.840 --> 00:02:18.079
+Como dice la fuente ya no eres tanto el constructor de tuberías, el que está en la mecánica.
+
+00:02:18.080 --> 00:02:25.040
+Si no más bien el diseñador del comportamiento del sistema, te enfoca en la lógica en el para qué.
+
+00:02:25.040 --> 00:02:29.880
+El beneficio aquí es quitarte de encima lo repetitivo, lo que siempre sale mal.
+
+00:02:29.880 --> 00:02:33.600
+Y eso libera un montón de tiempo y, pues, de energía mental, ¿no?
+
+00:02:33.600 --> 00:02:40.560
+Para que los equipos enfocen en lo que de verdad importa estratégicamente que preguntas respondemos como inovamos.
+
+00:02:40.560 --> 00:02:44.200
+En lugar de estar ahí peleándose con la plomería de cada conexión.
+
+00:02:44.200 --> 00:02:50.760
+Sí, sí, aunque claro, para que funcione hay que invertirle al principio de finir bien esos metadatos.
+
+00:02:50.760 --> 00:02:53.080
+Esalógica, no es magia.
+
+00:02:53.080 --> 00:02:58.280
+Claro, no es automático de la noche a la mañana, hay que ser disciplinados en definir.
+
+00:02:58.280 --> 00:03:03.320
+Pero el potencial de crecer y ser más ágil es enorme.
+
+00:03:03.320 --> 00:03:05.840
+Y esto conecta muy bien con el segundo framework.
+
+00:03:05.840 --> 00:03:10.840
+Los basados en eventos, aquí sí que se ve la diferencia con la tradicional verdad.
+
+00:03:10.840 --> 00:03:13.320
+Eso de ejecutar todo cada hora si o sí.
+
+00:03:13.319 --> 00:03:14.519
+Correcto.
+
+00:03:14.519 --> 00:03:19.840
+Y la fuente lo diseclaron, ese modelo de horarios tiene una falla bien obvia.
+
+00:03:19.840 --> 00:03:22.959
+¿Qué pasa si son las 10 m en la hora marcada?
+
+00:03:22.959 --> 00:03:26.719
+Pero no ha llegado ni un solo dato nuevo desde las 9.
+
+00:03:26.719 --> 00:03:28.359
+Pues que el pipeline arranca.
+
+00:03:28.359 --> 00:03:29.079
+Pana nada.
+
+00:03:29.079 --> 00:03:31.359
+Como mandar un camión de reparto vacío.
+
+00:03:31.359 --> 00:03:35.039
+Gasta computo, tiempo, energía, en vano.
+
+00:03:35.039 --> 00:03:36.199
+Exacto.
+
+00:03:36.199 --> 00:03:40.039
+Imagínate eso multiplicado por 100 de pipelines en una empresa grande.
+
+00:03:40.039 --> 00:03:41.719
+Es un desperdicio considerable.
+
+00:03:41.719 --> 00:03:42.719
+Sí, claro.
+
+00:03:42.800 --> 00:03:47.199
+La alternativa la basada en eventos es mucho más.
+
+00:03:47.199 --> 00:03:48.599
+Digamos lista.
+
+00:03:48.599 --> 00:03:50.400
+La filosofía es otra.
+
+00:03:50.400 --> 00:03:55.000
+En lugar de preguntar, ya es hora, el sistema espera una señal.
+
+00:03:55.000 --> 00:03:56.319
+Un evento.
+
+00:03:56.319 --> 00:04:01.319
+La idea clave como dice la fuente es, el recurso no es espera al trabajo.
+
+00:04:01.319 --> 00:04:03.599
+El trabajo necesita llegar.
+
+00:04:03.599 --> 00:04:08.960
+El pipeline solo se activa cuando el dato llega o cuando pasa algo que lo tiene que disparar.
+
+00:04:08.960 --> 00:04:10.680
+Me encanta esa frase.
+
+00:04:10.680 --> 00:04:12.920
+El trabajo necesita llegar.
+
+00:04:12.920 --> 00:04:15.120
+Por el foco donde debe estar.
+
+00:04:15.120 --> 00:04:18.639
+Entonces es el dato mismo o el evento lo que inicia todo.
+
+00:04:18.639 --> 00:04:20.280
+Es reactivo.
+
+00:04:20.280 --> 00:04:23.160
+Lo fascinante es cómo se invierte todo.
+
+00:04:23.160 --> 00:04:25.519
+Pasamos de un sistema que está preguntando.
+
+00:04:25.519 --> 00:04:26.360
+Ya.
+
+00:04:26.360 --> 00:04:27.360
+Ya.
+
+00:04:27.360 --> 00:04:28.519
+Ya.
+
+00:04:28.519 --> 00:04:31.879
+A uno que está escuchando y reacciona al momento.
+
+00:04:31.879 --> 00:04:35.680
+La analogía con Netflix o Uber que usa el material es buenísima.
+
+00:04:35.680 --> 00:04:36.680
+¿Aja?
+
+00:04:36.680 --> 00:04:40.600
+No te preguntan cada minuto si quieres ver algo o pedir un coche.
+
+00:04:40.600 --> 00:04:42.560
+Reaccionan cuando tú ases algo.
+
+00:04:42.560 --> 00:04:43.560
+Claro.
+
+00:04:43.560 --> 00:04:48.040
+Sería absurdo que Uber me preguntar a cada 5 minutos y necesito coche.
+
+00:04:48.040 --> 00:04:49.240
+¿Qué es la data?
+
+00:04:49.240 --> 00:04:50.240
+Exacto.
+
+00:04:50.240 --> 00:04:57.879
+Y en datos esto hace los sistemas mucho más eficientes con los recursos y súper importante, más adaptables.
+
+00:04:57.879 --> 00:05:01.400
+Te permiten operar casi en tiempo real si lo necesitas, ¿no?
+
+00:05:01.400 --> 00:05:05.439
+Como para detectar un fraude al momento o personalizar una oferta mientras salguen
+
+00:05:05.439 --> 00:05:06.439
+navega.
+
+00:05:06.439 --> 00:05:11.600
+Obvio, tiene sus retos diseñar así, manejar eventos fuera de orden, el estado, pero
+
+00:05:11.600 --> 00:05:14.959
+los beneficios en la rapidez de respuestas son inegables.
+
+00:05:14.959 --> 00:05:16.279
+Totalmente.
+
+00:05:16.279 --> 00:05:21.120
+Menos gasto inútil, respuestas más rápidas, todo más alineado el negocio.
+
+00:05:21.120 --> 00:05:26.720
+Ahora, el tercer framework, aquí es donde para mí la cosa se pone realmente buena.
+
+00:05:26.720 --> 00:05:30.959
+Ataca un dolor de cabeza clásico, los contratos de datos.
+
+00:05:30.959 --> 00:05:31.959
+Ah, sí.
+
+00:05:31.959 --> 00:05:34.199
+Este es un punto crucial.
+
+00:05:34.199 --> 00:05:37.719
+El le pega directo a una de las frustraciones más grandes y constantes en cualquier
+
+00:05:37.719 --> 00:05:39.879
+ecosistema de datos medio complejo.
+
+00:05:39.879 --> 00:05:41.360
+¿Custo eso?
+
+00:05:41.360 --> 00:05:48.079
+El artículo lo llama muy bien dicho, el problema eterno, quien no ha pasado por esto.
+
+00:05:48.079 --> 00:05:51.879
+Paiplines que ayeri van bien hoy, rotos.
+
+00:05:51.879 --> 00:05:52.879
+¿Por qué?
+
+00:05:52.879 --> 00:05:58.719
+A pues alguien cambió un formato borrón campo o la calidad de los datos se fue al suelo.
+
+00:05:58.719 --> 00:05:59.719
+Uf, sí.
+
+00:05:59.719 --> 00:06:03.159
+Y luego empieza el juego de tú tienes la culpa.
+
+00:06:03.160 --> 00:06:04.680
+El clásico ping pong, ¿no?
+
+00:06:04.680 --> 00:06:07.520
+El equipo que consume dice, me llegó basura.
+
+00:06:07.520 --> 00:06:10.000
+El que produce dice, yo no cambié nada.
+
+00:06:10.000 --> 00:06:15.120
+O, a pues no sabía que usaba en eso o a pues no sabía que usaba en eso.
+
+00:06:15.120 --> 00:06:20.160
+Y mientras las decisiones paradas, lo reportes mal, la confianza por los suelos, un
+
+00:06:20.160 --> 00:06:22.160
+circulo visioso y carísimo.
+
+00:06:22.160 --> 00:06:24.480
+Pues justo ahí entran los contratos de datos.
+
+00:06:24.480 --> 00:06:26.720
+Y no son solo un papel guardado, ¿eh?
+
+00:06:26.720 --> 00:06:31.600
+Según la fuente es un acuerdo formal y clave técnicamente ejecutable.
+
+00:06:31.600 --> 00:06:34.960
+Un triquen produce los datos y quien los usa y detalle todo.
+
+00:06:34.960 --> 00:06:40.640
+El esquema, campos tipos, la calidad, valores válidos, cuántos nulos se valen, que significa
+
+00:06:40.640 --> 00:06:43.560
+cada cosa, cada cuando se actualiza, todo.
+
+00:06:43.560 --> 00:06:46.200
+Pero lo importante como dice es que no es solo un papel.
+
+00:06:46.200 --> 00:06:50.680
+La fuente dice que tiene dientes, que se aplica de verdad cómo funciones a parte, como
+
+00:06:50.680 --> 00:06:51.680
+se asegura que se cumpla.
+
+00:06:51.680 --> 00:06:57.400
+Me termo el sistema final, digamos, sal, data warehouse, pasa una revisión automática contra
+
+00:06:57.400 --> 00:06:58.400
+su contrato.
+
+00:06:58.400 --> 00:06:59.400
+¿O qué?
+
+00:06:59.400 --> 00:07:04.800
+Si es sus datos, no cumplen con lo pactado, porque, como dice el texto, hay una normalidad
+
+00:07:04.800 --> 00:07:11.800
+estadística rara, un pico de valores, o cambio el esquema, falta un campo, cambio el tipo,
+
+00:07:11.800 --> 00:07:12.800
+sás.
+
+00:07:12.800 --> 00:07:16.640
+El sistema de tienes a carga mala antes de que contaminé todo lo demás.
+
+00:07:16.640 --> 00:07:18.840
+Bloque a lo malo antes de que entre.
+
+00:07:18.840 --> 00:07:20.840
+Bien, exacto.
+
+00:07:20.840 --> 00:07:27.500
+Y no solo lo bloquea, también súper importante, registra por qué fallo, que regla del
+
+00:07:27.500 --> 00:07:30.699
+contrato, no se cumplió y en quedatos.
+
+00:07:30.699 --> 00:07:36.740
+Es aplicar el confía pero verifica, se acabaron las discusiones de horas, ahora y prueba automática
+
+00:07:36.740 --> 00:07:43.019
+y objetiva de qué fallo, donde y cuando, adiós a esas noches buscando qué se rompió.
+
+00:07:43.019 --> 00:07:47.779
+Viendo lo imperpectiva, el impacto es transformadorno, mete un nivel de responsabilidad
+
+00:07:47.779 --> 00:07:52.779
+de confiabilidad de confianza que se puede verificar que antes será difícil y simulograr
+
+00:07:52.779 --> 00:07:53.779
+a escala.
+
+00:07:53.780 --> 00:07:58.540
+Resuelve un punto de fricción enorme que afecta casi todas las empresas que quieren ser
+
+00:07:58.540 --> 00:08:00.100
+de Ita Driven.
+
+00:08:00.100 --> 00:08:03.100
+Ya no es cosa de fe, esperar que los datos lleguen bien.
+
+00:08:03.100 --> 00:08:07.980
+Hay algo activo que lo asegura o por lo menos te avisa y evita el desastre.
+
+00:08:07.980 --> 00:08:11.700
+Es un pilar para sistemas robustos, definitivamente.
+
+00:08:11.700 --> 00:08:15.380
+Un cambio radical en cómo colaboran los equipos con los datos.
+
+00:08:15.380 --> 00:08:16.900
+Bueno, pasemos al cuarto.
+
+00:08:16.900 --> 00:08:18.780
+Cross Cloud o entre nubes.
+
+00:08:18.780 --> 00:08:22.060
+Este responde algo que vemos cada vez más, ¿no?
+
+00:08:22.060 --> 00:08:25.139
+Es empresas usando varias nubes.
+
+00:08:25.139 --> 00:08:31.819
+Si, cierto, ya casi nadie opera solo en una nube o solo en casa, la realidad es híbrida,
+
+00:08:31.819 --> 00:08:33.019
+es multinube.
+
+00:08:33.019 --> 00:08:34.019
+Exacto.
+
+00:08:34.019 --> 00:08:40.460
+Como dice la fuente, es super común que marketing use salesforce, finanzas esténager, y ciencia
+
+00:08:40.460 --> 00:08:44.779
+de datos prefiera las herramientas de GCP por decir algo.
+
+00:08:44.779 --> 00:08:49.700
+Y pues, integrar datos que viven en mundos distintos, es un reto.
+
+00:08:49.700 --> 00:08:51.299
+Un reto mayúsculo.
+
+00:08:51.299 --> 00:08:56.459
+Cada nube tiene sus ápis, sus formatos, sus seguridad, sus herramientas.
+
+00:08:56.459 --> 00:09:02.459
+Acer que los datos fluyen bien entre ellas puede ser un laborinto técnico, complicado y
+
+00:09:02.459 --> 00:09:03.459
+caro de mantener.
+
+00:09:03.459 --> 00:09:06.859
+Y ahí es donde entra a nuestros frameworks Cross Cloud.
+
+00:09:06.859 --> 00:09:12.179
+La fuente de los describe como traductores universales o intermediarios digitales.
+
+00:09:12.179 --> 00:09:15.539
+Lo que hacen es esconder esas diferencias entre las nubres.
+
+00:09:15.539 --> 00:09:20.339
+Crean una capa en medio que entiende los idiomas de cada nube y permite mover y procesar
+
+00:09:20.340 --> 00:09:26.019
+datos de forma coherente, sin que tú te tengas que preocupar tanto de dónde están físicamente.
+
+00:09:26.019 --> 00:09:29.620
+Funcionan como un pegamento por encima de las nubes, ¿no?
+
+00:09:29.620 --> 00:09:31.740
+Occultándolo complejo de abajo.
+
+00:09:31.740 --> 00:09:39.300
+Mesisamente, el resultado como lo llama el material es un tejido de datos unificado, un unified
+
+00:09:39.300 --> 00:09:40.300
+de irafabric.
+
+00:09:40.300 --> 00:09:46.180
+Imagínate una capa que conecta y harmoniza toda tu información importante, no importa si está
+
+00:09:46.180 --> 00:09:53.300
+en AWS, Azure, GCP, Salesforce o hasta en tus servidores, hacen que todo el ecosistema
+
+00:09:53.300 --> 00:09:58.660
+de datos funcione junto, como un todo coherente, aunque esté repartido por todos lados.
+
+00:09:58.660 --> 00:10:05.820
+Y eso es, pues esencial hoy si quieres esa visión de 360 grados del cliente del producto de todo.
+
+00:10:05.820 --> 00:10:09.980
+Sin poder conectar los puntos entre nubes, esa visión es casi imposible.
+
+00:10:09.980 --> 00:10:13.660
+Esos frameworks son clavers para arquitecturas de datos modernas y flexibles.
+
+00:10:13.660 --> 00:10:14.660
+Y sin duda.
+
+00:10:14.740 --> 00:10:20.779
+Y esto nos lleva derecho al quinto y ultimo framework, que parece como el que una y potencia a todos
+
+00:10:20.779 --> 00:10:21.779
+los demás.
+
+00:10:21.779 --> 00:10:26.299
+Los asistidos por inteligencia artificial eí asisten.
+
+00:10:26.299 --> 00:10:31.019
+Aquí es donde dice la fuente, las integraciones empiezan a pensar.
+
+00:10:31.019 --> 00:10:33.139
+Ah, interesante.
+
+00:10:33.139 --> 00:10:38.699
+La IA ya no sólo aplicada los datos en sí, sino a la gestión de cómo fluyen esos datos.
+
+00:10:38.699 --> 00:10:39.860
+Una aplicación meta.
+
+00:10:39.860 --> 00:10:40.860
+Digamos.
+
+00:10:40.860 --> 00:10:45.980
+El artículo menciona cosas impresionantes que la IA puede hacer aquí, planes antes de que
+
+00:10:45.980 --> 00:10:52.100
+pasen, viendo patrones o degradaciones, o hasta hacer tareas super te diosas, como mapear campos
+
+00:10:52.100 --> 00:10:57.340
+automáticamente entre sistemas, sugiriendo que campo de aquí probablemente va con cual de ella.
+
+00:10:57.340 --> 00:11:00.779
+Tareas que normalmente se comen horas y horas de los ingenieros.
+
+00:11:00.779 --> 00:11:03.500
+Lo del mapeo, uf, es un dolor de cabeza clásico.
+
+00:11:03.500 --> 00:11:07.899
+Totalmente, la fuente usa una meta fuera muy buena.
+
+00:11:07.899 --> 00:11:14.459
+La IA como el copiloto de tu pipeline, quizá no lo maneja todo sola, todavía no, pero
+
+00:11:14.459 --> 00:11:15.939
+te ayuda activamente.
+
+00:11:15.939 --> 00:11:20.659
+Te avisa de problemas, sugieren mejoras, automátiza el orrutinario.
+
+00:11:20.659 --> 00:11:25.899
+Y esto nos lleva a preguntarnos, como sugieren el material como va a cambiar el rol
+
+00:11:25.899 --> 00:11:27.620
+del ingeniero de datos.
+
+00:11:27.620 --> 00:11:33.179
+Si la IA puede hacer cada vez más de la construcción, el monitoreo hasta la reparación,
+
+00:11:33.180 --> 00:11:37.580
+que nos queda los humanos, es la pregunta del millón, ¿no?, el artículo sugiere que el
+
+00:11:37.580 --> 00:11:43.180
+rol se transforma, que en el futuro los ingenieros no van estar tanto escribiendo código para
+
+00:11:43.180 --> 00:11:48.340
+cada pipeline, sino más y en curando y entrenando sistemas autodaptativos.
+
+00:11:48.340 --> 00:11:54.500
+O sea, definiendo las reglas generales, los objetivos, supervisando como funcionan estos sistemas
+
+00:11:54.500 --> 00:11:56.500
+de IA, afinándolos.
+
+00:11:56.500 --> 00:12:00.220
+Un rol más de arquitecta, de estratega, de entrenadora de IA.
+
+00:12:00.220 --> 00:12:02.060
+Tiene mucho sentido la verdad.
+
+00:12:02.060 --> 00:12:07.500
+La complejidad de los sistemas de datos hoy, sobre todos si son distribuidos, multinube,
+
+00:12:07.500 --> 00:12:12.420
+con eventos, miles de flujos, puede volverse inmanejable para una persona.
+
+00:12:12.420 --> 00:12:16.300
+La IA sí puede manejar esa complejidad a otra escala y velocidad.
+
+00:12:16.300 --> 00:12:19.180
+El rol humano se va hacia donde somos únicos.
+
+00:12:19.180 --> 00:12:24.700
+Entendere el negocio, la ética, diseñar la estrategia general, justgar si lo que dice la IA
+
+00:12:24.700 --> 00:12:25.900
+tiene sentido.
+
+00:12:25.900 --> 00:12:29.820
+Una perspectiva fascinante y seguro no tan lejana.
+
+00:12:29.820 --> 00:12:36.020
+Entonces, si juntamos todas las piezas que vimos, metadatos para automatizar, eventos para
+
+00:12:36.020 --> 00:12:42.300
+reaccionar, contratos para confiar, cross cloud para conectar todo y la IA para hacerlo
+
+00:12:42.300 --> 00:12:43.300
+inteligente.
+
+00:12:43.300 --> 00:12:46.420
+¿Cuál es la imagen final que se forma?
+
+00:12:46.420 --> 00:12:52.780
+El material lo deja claro, no son ideas separadas que competen, son más bien como piezas
+
+00:12:52.780 --> 00:12:58.500
+de un rompe cabezas, componentes que se complementan y que deben trabajar juntos.
+
+00:12:58.500 --> 00:13:04.980
+Exacto, son las piezas clave que alunirse crean algo más grande, forman lo que la fuente
+
+00:13:04.980 --> 00:13:06.820
+llama un tejido de integración.
+
+00:13:06.820 --> 00:13:13.700
+Ya no son solo piebla en sueltos, sino un ecosistema cuarente conectado que se puede autorregular
+
+00:13:13.700 --> 00:13:19.460
+un poco, que escala mejor y que es más inteligente y resistente.
+
+00:13:19.460 --> 00:13:23.460
+Entonces, que significa todo esto en la práctica, cuál es la moralaja.
+
+00:13:23.460 --> 00:13:28.299
+Aquí llegamos al meollo de la sunto, a la tesis central de la fuente, la integración
+
+00:13:28.300 --> 00:13:34.260
+de datos, que antes se veía como algo técnico, necesario pero secundario, como la plomería,
+
+00:13:34.260 --> 00:13:37.940
+está cambiando radicalmente su importancia estratégica.
+
+00:13:37.940 --> 00:13:40.780
+Se está volviendo básicamente la nueva infraestructura.
+
+00:13:40.780 --> 00:13:41.780
+¿Aja?
+
+00:13:41.780 --> 00:13:46.820
+Es el tejido conectivo sobre el que se construye todo lo demás en plataformas de datos modernas
+
+00:13:46.820 --> 00:13:49.620
+y, por lo tanto, mucho de lo digitar en una empresa.
+
+00:13:49.620 --> 00:13:57.260
+O sea, deja de ser la plomería para hacer más como el sistema nervioso de la empresa digital.
+
+00:13:57.259 --> 00:14:03.139
+Y por eso entender este cambio, entender que pueden hacer estos nuevos frameworks, ya no es
+
+00:14:03.139 --> 00:14:08.259
+solo cosa de ingenieros o equipetos, es crucial para casi cualquiera que trabaje con datos que
+
+00:14:08.259 --> 00:14:11.419
+decida con ellos o que dependa de sistemas que los usan.
+
+00:14:11.419 --> 00:14:17.899
+Claro, desde analistas científicos de datos hasta gerentes de producto líderes, porque como
+
+00:14:17.899 --> 00:14:23.620
+fluyen los datos, como se validan, se conectan y están disponibles de forma confiable.
+
+00:14:23.620 --> 00:14:28.659
+Eso define al final que tan ágil, inteligente y competitiva puede ser una organización hoy.
+
+00:14:28.659 --> 00:14:30.299
+¿Qué da clarísimo?
+
+00:14:30.299 --> 00:14:36.620
+Hacido un recorrido, denso, sin duda, pero creo que es super revelador sobre dónde estamos y
+
+00:14:36.620 --> 00:14:39.580
+hacia dónde va a esto de manejar los datos.
+
+00:14:39.580 --> 00:14:43.060
+Desmenusamos esos cinco frameworks que están marcando el paso.
+
+00:14:43.060 --> 00:14:49.139
+Una evolución necesaria, la verdad, impulsada por la complejidad y por las nuevas tecnologías,
+
+00:14:49.139 --> 00:14:51.779
+y muy emocionante por lo que permite hacer.
+
+00:14:51.779 --> 00:14:53.580
+Totalmente de acuerdo.
+
+00:14:53.580 --> 00:14:58.500
+Muchísimas gracias por acompañarnos en este análisis, y para cerrar como siempre, dejamos
+
+00:14:58.500 --> 00:15:00.100
+una idea flotando.
+
+00:15:00.100 --> 00:15:04.379
+Algo que sale de esta plática, pero que nos invita a pensar un poco más allá.
+
+00:15:04.379 --> 00:15:10.580
+Si los Pibles se vuelven estos sistemas autodaptativos, inteligentes, que los humanos más bien curamos
+
+00:15:10.580 --> 00:15:12.580
+en lugar de construir a mano.
+
+00:15:12.580 --> 00:15:17.379
+Como podría eso cambiar no solo la chamba técnica, sino la agilidad de toda la organización
+
+00:15:17.379 --> 00:15:23.379
+para detectar, entender y reaccionar información nueva, a cambios en el mercado, en los clientes,
+
+00:15:23.379 --> 00:15:28.259
+que no vas estrategias, que moda los de negocio, que capacidades predictivas o adaptativas
+
+00:15:28.259 --> 00:15:33.139
+nunca antes visitas, se abre en cuando ese infraestructur invisible de los datos no solo
+
+00:15:33.139 --> 00:15:36.779
+funcionan bien, sino que también piensa y se adapta.
+
+00:15:36.779 --> 00:15:39.580
+Una pregunta abierta llena de posibilidades.
+
+00:15:39.580 --> 00:15:40.299
+Hasta la próxima.
+
