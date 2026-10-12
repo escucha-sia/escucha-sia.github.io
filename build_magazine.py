@@ -47,7 +47,62 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
-    # 0. Episodio Diario 32 - Fuera de la Burbuja en Cada Bloque (10 de Octubre de 2026)
+    # 0. Episodio Diario Express 33 - 11 de Octubre de 2026
+    "sIA_Daily_Express_2026-10-11.mp3": {
+        "slug": "edicion-diaria-express-33-gemini-flash-data-contracts-drm-neuromorphic",
+        "category": "Edición Diaria",
+        "badge_color": "purple",
+        "read_time": "11 min",
+        "title": "sIA #33: Edición Diaria Express - El Mito de Gemini Flash, Contratos Semánticos y Computación Neuromórfica",
+        "subtitle": "Estreno del formato Express (11 min): Por qué el 90% de las quejas contra modelos ligeros son errores de prompt, Data Contracts ejecutables y redes neuronales en silicio.",
+        "thesis": "Los modelos de lenguaje ligeros y de baja latencia no son oráculos lentos de propósito general, sino micro-unidades probabilísticas de estado. La madurez de la ingeniería en 2026 exige desacoplar razonamiento profundo de orquestación reactiva, blindar la ingesta con contratos semánticos y explorar el silicio neuromórfico.",
+        "nexo": "Estreno del formato sIA Daily Express, integrando el debate de r/google_antigravity y la soberanía de formatos en e-readers con la frontera de Spiking Neural Networks.",
+        "reel_video": "sIA_Reel_02_Mito_Gemini_Flash.mp4",
+        "content_blocks": [
+            {
+                "title": "1. Apertura: El Manifiesto del sIA Daily Express",
+                "body": """
+Inauguramos sIA Daily Express: una síntesis de alta densidad técnica de 10 a 12 minutos diseñada específicamente para el trayecto al trabajo. En lugar de grabaciones kilométricas que saturan la biblioteca, cada entrega diaria ataca los tres debates arquitectónicos más relevantes de las últimas 24 horas y remata con una cápsula 'Fuera de la Burbuja' para desafiar el sesgo algorítmico.
+"""
+            },
+            {
+                "title": "2. IA & Agentes: La Verdad Detrás del Desempeño de Gemini Flash",
+                "body": """
+A raíz del acalorado debate en r/google_antigravity, analizamos por qué los desarrolladores que critican a Gemini Flash suelen cometer el error de tratar a un modelo sub-200ms como un motor de razonamiento monolítico y lento.
+
+Flash destaca cuando se concibe como el micro-procesador de una máquina de estados: clasificación de intenciones, extracción de entidades con esquemas Pydantic / TypeSafe y orquestación reactiva. Esperar deducciones abstractas sin few-shot ni contexto estructurado evidencia un fallo en el diseño del prompt, no en la capacidad del modelo.
+"""
+            },
+            {
+                "title": "3. Data Engineering: Contratos Semánticos Ejecutables vs. Monolitos de Datos",
+                "body": """
+Los pipelines tradicionales que fallan silenciosamente a las 3:00 AM al mutar el esquema de una tabla transaccional son insostenibles. La ingeniería de datos moderna exige Data Contracts como código en YAML, integrados en CI/CD.
+
+Al desacoplar la semántica del almacén físico mediante dbt Semantic Layer, garantizamos que herramientas de BI, consultas ad-hoc y agentes autónomos compartan métricas de negocio idénticas sin vendor lock-in.
+"""
+            },
+            {
+                "title": "4. Hardware & Lectura: El Fin de la Propiedad Digital y la Resistencia con Calibre",
+                "body": """
+El endurecimiento de DRM en plataformas comerciales refuerza la urgencia de la soberanía digital. Software libre como Calibre y dispositivos de tinta electrónica abiertos con KOReader permiten a desarrolladores e investigadores preservar bibliotecas en formatos abiertos (EPUB, CBZ) e integrarlas con Obsidian sin depender de licencias revocables.
+"""
+            },
+            {
+                "title": "5. 🌌 Fuera de la Burbuja: Micro-Redes Neuronales Neuromórficas (SNNs) en Silicio",
+                "body": """
+En contraste con los clusters de GPUs que consumen megavatios en la nube, los procesadores neuromórficos imitan la activación por espigas del cerebro biológico. Al operar de forma asíncrona y basada en eventos, permiten inferencia en tiempo real en sensores remotos con consumos inferiores a 1 milivatio.
+"""
+            }
+        ],
+        "apa_references": [
+            "Google DeepMind. (2026). *Gemini 3.8 Flash: Architecture and low-latency agentic orchestration*. Google Research.",
+            "Trueman, C., & Anderson, R. (2025). *Data Contracts in Practice: Building reliable, schema-first distributed architectures*. O'Reilly Media.",
+            "Roy, K., & Jaiswal, A. (2024). *Spiking neural networks for energy-efficient neuromorphic edge computing*. Nature Computational Science, 4(1), 18-32.",
+            "Goyal, K. (2024). *Calibre: Open source e-book management and library sovereignty*. Calibre Documentation."
+        ]
+    },
+
+    # 1. Episodio Diario 32 - Fuera de la Burbuja en Cada Bloque (10 de Octubre de 2026)
     "sIA_Daily_FueraDeLaBurbuja_2026-10-10.mp3": {
         "slug": "edicion-diaria-fuera-de-la-burbuja-termodinamica-silica-metamateriales",
         "category": "Edición Diaria",
@@ -57,6 +112,7 @@ RESEARCH_DATABASE = {
         "subtitle": "La nueva arquitectura de sIA: cada bloque temático combina la noticia práctica de producción con una inmersión en la frontera científica y disruptiva.",
         "thesis": "La aceleración tecnológica exige un doble enfoque: optimizar las arquitecturas que sostienen el software productivo hoy y explorar activamente las discontinuidades físicas que reemplazarán a la arquitectura Von Neumann, los medios magnéticos y las pantallas convencionales.",
         "nexo": "Este episodio estrena el formato integrado 'Fuera de la Burbuja en Cada Sección', combinando debates activos de Reddit y TikTok con avances de laboratorio en física de materiales y biotecnología.",
+        "reel_video": "sIA_Reel_01_Computacion_Termodinamica.mp4",
         "content_blocks": [
             {
                 "title": "1. Apertura: La Nueva Dinámica y el Imperativo de Romper la Cámara de Eco",
@@ -1481,6 +1537,8 @@ def build_all_articles():
         article_path = ARTICULOS_DIR / article_filename
         article_url = f"{BASE_URL}/articulos/{article_filename}"
         
+        reel_video = meta.get("reel_video") if (filename in RESEARCH_DATABASE) else None
+        
         # Render Article HTML
         html_content = render_article_html(
             title=title,
@@ -1494,7 +1552,8 @@ def build_all_articles():
             nexo=nexo,
             content_blocks=content_blocks,
             apa_refs=apa_refs,
-            spotify_url=spotify_episode_url
+            spotify_url=spotify_episode_url,
+            reel_video=reel_video
         )
         
         article_path.write_text(html_content, encoding='utf-8')
@@ -1511,7 +1570,8 @@ def build_all_articles():
             "slug": slug,
             "filename": article_filename,
             "raw_title": raw_title,
-            "spotify_url": spotify_episode_url
+            "spotify_url": spotify_episode_url,
+            "reel_video": reel_video
         })
         print(f"  -> Artículo generado: articulos/{article_filename}")
         
@@ -1521,7 +1581,7 @@ def build_all_articles():
     # Update podcast.xml with links
     update_podcast_xml_with_links(catalog)
 
-def render_article_html(title, subtitle, category, badge_color, pub_date, read_time, audio_url, thesis, nexo, content_blocks, apa_refs, spotify_url=None):
+def render_article_html(title, subtitle, category, badge_color, pub_date, read_time, audio_url, thesis, nexo, content_blocks, apa_refs, spotify_url=None, reel_video=None):
     blocks_html = ""
     for block in content_blocks:
         body = block["body"].strip()
@@ -1582,6 +1642,31 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
     audio_stem = Path(audio_url.split('/')[-1]).stem
     vtt_path = AUDIO_DIR / f"{audio_stem}.vtt"
     track_html = f'\n                    <track src="../audio/{audio_stem}.vtt" kind="subtitles" srclang="es" label="Español (Subtítulos)" default>' if vtt_path.exists() else ""
+
+    # Reel Showcase if video exists
+    reel_showcase_html = ""
+    if reel_video:
+        reel_path = BASE_DIR / "reels" / reel_video
+        poster_name = Path(reel_video).stem + "_poster.jpg"
+        if reel_path.exists():
+            topic_clean = title.split(' - ')[-1] if ' - ' in title else title
+            reel_showcase_html = f"""
+            <!-- Video Reel Showcase (Vertical 9:16) -->
+            <div class="reel-showcase" id="reel">
+                <div class="reel-showcase-header">
+                    <span class="reel-showcase-title">
+                        <span>🎬</span> <strong>Cápsula en Video Reel (45s):</strong> {topic_clean}
+                    </span>
+                    <span class="badge badge-purple" style="font-size: 0.75rem;">Vertical 9:16</span>
+                </div>
+                <div class="reel-wrapper">
+                    <video controls playsinline preload="metadata" poster="../reels/{poster_name}">
+                        <source src="../reels/{reel_video}" type="video/mp4">
+                        Tu navegador no soporta video MP4.
+                    </video>
+                </div>
+            </div>
+            """
 
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -1647,6 +1732,7 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
                     Tu navegador no soporta el reproductor de audio.
                 </audio>
             </div>
+            {reel_showcase_html}
 
             <!-- Main Article Body -->
             <div class="article-body">
@@ -1711,6 +1797,10 @@ def render_magazine_index(catalog):
         spotify_tooltip = "Escuchar directamente este capítulo en Spotify" if item.get("spotify_url") else "Ver podcast en Spotify (Capítulo en proceso de sync)"
         spotify_btn_extra_class = "direct-episode" if item.get("spotify_url") else "pending-sync"
         
+        reel_btn_html = ""
+        if item.get("reel_video"):
+            reel_btn_html = f'<a href="articulos/{item["filename"]}#reel" class="card-spotify-btn" style="color: #00f2fe !important; border-color: rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.08);" title="Ver video corto en formato Reel 9:16">🎬 Reel (45s)</a>'
+
         grid_cards_html += f"""
         <div class="card badge-{item['badge_color']}" data-category="{cat_class_attr}">
             <div class="card-header">
@@ -1731,6 +1821,7 @@ def render_magazine_index(catalog):
 
             <div class="card-footer">
                 <a href="articulos/{item['filename']}" class="read-link">Leer artículo y APA &rarr;</a>
+                {reel_btn_html}
                 <a href="{target_spotify_url}" target="_blank" class="card-spotify-btn {spotify_btn_extra_class}" title="{spotify_tooltip}">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
                     {spotify_card_label}

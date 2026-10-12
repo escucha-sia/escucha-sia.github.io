@@ -357,6 +357,7 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     audio_url = f"{base_url}/audio/{filename}"
     cover_url = f"{base_url}/cover.jpg"
     desc_text = description or "sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia."
+    dur_str = get_audio_duration_str(filepath)
     base_stem = Path(filename).stem
     vtt_path = AUDIO_DIR / f"{base_stem}.vtt"
     srt_path = AUDIO_DIR / f"{base_stem}.srt"

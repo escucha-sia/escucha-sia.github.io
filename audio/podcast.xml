@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA #33: Edición Diaria Express - El Mito de Gemini Flash, Contratos Semánticos y Computación Neuromórfica</title>
+      <link>https://escucha-sia.github.io/articulos/edicion-diaria-express-33-gemini-flash-data-contracts-drm-neuromorphic.html</link>
+      <description>sIA: Análisis técnico y estratégico de Inteligencia Artificial, Cloud, Data Engineering, Gadgets y Cultura Geek con Jorge y Dalia.</description>
+      <pubDate>Sun, 11 Oct 2026 15:52:41 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Daily_Express_2026-10-11.mp3" length="14037882" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Daily_Express_2026-10-11.mp3</guid>
+      <itunes:duration>11:41</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Daily_Express_2026-10-11.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Daily_Express_2026-10-11.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D</title>
       <link>https://escucha-sia.github.io/articulos/edicion-diaria-fuera-de-la-burbuja-termodinamica-silica-metamateriales.html</link>
       <description>Episodio diario de 1 hora de sIA estrenando la nueva arquitectura: cada bloque temático incluye su cápsula 'Fuera de la Burbuja'. Jorge y Dalia analizan la latencia de Gemini 3.8 Flash, la fuga de sandboxes en Anthropic, computación termodinámica en silicio, Snowflake Semantic View vs dbt, optimización profunda de JOIN + ORDER BY, Project Silica de Microsoft (cristales de cuarzo a 10,000 años), soberanía de lectura con KOReader y Calibre, pantallas reflectivas por electrohumectación a 60 fps, la lámpara Fluora en Bambu Lab, metamateriales 4D con memoria térmica, Nothing But Blackened Teeth y la neurociencia de la inmersión total Full-Dive VR.</description>
