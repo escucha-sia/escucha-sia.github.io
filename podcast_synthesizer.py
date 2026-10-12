@@ -22,8 +22,15 @@ SPOTIFY_DIR.mkdir(parents=True, exist_ok=True)
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
 async def synthesize_chunk(text: str, voice: str, output_path: Path):
-    communicate = edge_tts.Communicate(text, voice)
-    await communicate.save(str(output_path))
+    for attempt in range(5):
+        try:
+            communicate = edge_tts.Communicate(text, voice)
+            await communicate.save(str(output_path))
+            return
+        except Exception as e:
+            if attempt == 4:
+                raise e
+            await asyncio.sleep(1.0 + attempt * 1.5)
 
 def clean_for_tts(text: str) -> str:
     # Phonetic cleanups for TTS fluency
@@ -189,7 +196,7 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     print(f"Generando {len(chunks)} intervenciones de voz para el dúo con concurrencia...")
     
     # Synthesize chunks with concurrency limit
-    sem = asyncio.Semaphore(6)
+    sem = asyncio.Semaphore(2)
     completed_count = 0
     total_chunks = len(chunks)
 
