@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:07,008
+JORGE: ¡Bienvenidos a sIA Focus: Cultura Geek, Narrativa y Hard Sci-Fi! Soy Jorge.
+
+2
+00:00:07,008 --> 00:00:20,040
+DALIA: ¡Y yo soy Dalia! Hoy cerramos la jornada analizando los debates en r diagonal horrorlit sobre la obra de autores contemporáneos como Darcy Coates y la evolución del suspenso psicológico frente al terror convencional.
+
+3
+00:00:20,040 --> 00:00:38,784
+JORGE: Lo que hace fascinante a la literatura de horror actual no son los monstruos explícitos, sino la maestría para manejar el aislamiento espacial y la descomposición gradual de la certidumbre. Autores que deconstruyen casas embrujadas o estaciones remotas utilizan la arquitectura física como un espejo de la psique humana.
+
+4
+00:00:38,784 --> 00:00:54,048
+DALIA: Es la misma tensión narrativa que vemos en las grandes obras de ciencia ficción dura: obligar al protagonista y al lector a enfrentar las consecuencias existenciales de sistemas tecnológicos que escapan a su control, transformando el misterio en una experiencia inmersiva inolvidable.
+
+5
+00:00:54,048 --> 00:01:09,312
+DALIA: Es la misma tensión narrativa que vemos en las grandes obras de ciencia ficción dura: obligar al protagonista y al lector a enfrentar las consecuencias existenciales de sistemas tecnológicos que escapan a su control, transformando el misterio en una experiencia inmersiva inolvidable.
+
+6
+00:01:09,312 --> 00:01:18,936
+JORGE: Y hablando de inmersión total en mundos alternativos, abramos nuestra última cápsula Fuera de la Burbuja de hoy: la neurociencia real del Ful-Daiv VR.
+
+7
+00:01:18,936 --> 00:01:33,384
+DALIA: Desde novelas ligeras como Sword Art Online hasta los tratados de filosofía de la mente de Peter Watts, la fantasía del Ful-Daiv es desconectar los sentidos biológicos del cuerpo físico y proyectar la consciencia directamente en un entorno virtual sintético.
+
+8
+00:01:33,384 --> 00:01:54,864
+JORGE: ¿Qué tan cerca estamos biológicamente de esto? Los cascos de realidad virtual actuales solo engañan a la vista y al oído. Pero lograr inmersión somatosensorial completa, sentir la brisa, el peso de un objeto o la textura de una superficie sin tocarla físicamente, requiere interactuar con el tálamo y la corteza somatosensorial.
+
+9
+00:01:54,864 --> 00:02:22,992
+DALIA: Los experimentos de estimulación magnética transcraneal focalizada y las interfaces cerebro-computadora no invasivas demuestran que es posible inducir sensaciones táctiles artificiales con pulsos electromagnéticos de alta precisión. Sin embargo, el gran reto de seguridad biofísica no es escribir sensaciones en el cerebro, sino el motor de interrupción: bloquear de forma reversible la señal motora eferente para que el usuario no se mueva en el mundo real mientras corre en el entorno virtual.
+
+10
+00:02:22,992 --> 00:02:34,320
+JORGE: Un dilema fascinante donde la ingeniería de software, la ética médica y la neurología convergen para explorar qué significa realmente la experiencia de estar vivo en una era digital.
+
+11
+00:02:34,320 --> 00:02:45,648
+JORGE: Un dilema fascinante donde la ingeniería de software, la ética médica y la neurología convergen para explorar qué significa realmente la experiencia de estar vivo en una era digital.
+
+12
+00:02:45,648 --> 00:02:52,296
+DALIA: Con este viaje a la frontera de la mente cerramos nuestra serie de cinco entregas modulares de sIA Focus de hoy.
+
+13
+00:02:52,296 --> 00:03:04,488
+JORGE: Recuerda que cada sección tiene su propio artículo técnico y referencias académicas en sIA Journal. ¡Muchísimas gracias por acompañarnos en el camino y nos escuchamos en la próxima edición!
+

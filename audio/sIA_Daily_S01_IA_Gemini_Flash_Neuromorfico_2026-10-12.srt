@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:10,872
+JORGE: ¡Muy buenos días a toda nuestra comunidad técnica! Bienvenidos a sIA Focus, tu cápsula técnica de seis minutos para el camino. Soy Jorge.
+
+2
+00:00:10,872 --> 00:00:22,248
+DALIA: ¡Y yo soy Dalia! Hoy es lunes doce de octubre de dos mil veintiséis, y en este capítulo nos sumergimos de lleno en la Inteligencia Artificial y la orquestación de agentes autónomos.
+
+3
+00:00:22,248 --> 00:00:37,944
+JORGE: El fin de semana estalló un debate masivo en r diagonal googleantigravity con una publicación titulada: Opinión impopular: el noventa por ciento del odio hacia modelos ligeros como Gemini Flash proviene de desarrolladores que no saben usarlos o fanboys corporativos.
+
+4
+00:00:37,944 --> 00:01:00,240
+DALIA: Es una queja constante, Jorge. Desarrolladores que envían un prompt ambiguo y abierto a un modelo sub-doscientos milisegundos como Gemini Flash, esperando que razone diez pasos abstractos como si fuera Clod tres punto cinco Sonnet. Y cuando el modelo responde de forma concisa o falla en un caso de borde, declaran en foros que el modelo no sirve para nada.
+
+5
+00:01:00,240 --> 00:01:23,184
+JORGE: Hay que entender la arquitectura. Gemini Flash no es un oráculo lento de razonamiento monolítico; es una unidad de procesamiento de estado de altísima velocidad y costo microscópico. En producción, su rol es clasificar intenciones, enrutar peticiones entre microservicios y extraer datos en esquemas JSON estrictamente tipados con Pydantic o Taip-Seif.
+
+6
+00:01:23,184 --> 00:01:50,664
+DALIA: Totalmente. Si alimentas a Flash con un prompt de sistema determinista, pocos ejemplos claros y aprovechas Context Caching para no recomputar la matriz de atención en cada llamada, el desempeño es brutal. Usa modelos pesados únicamente cuando el costo de un fallo sea inaceptable; pero para la orquestación masiva y el flujo continuo en tiempo real, dominar el prompting estructurado sobre modelos rápidos como Flash es la verdadera ventaja competitiva.
+
+7
+00:01:50,664 --> 00:02:18,144
+DALIA: Totalmente. Si alimentas a Flash con un prompt de sistema determinista, pocos ejemplos claros y aprovechas Context Caching para no recomputar la matriz de atención en cada llamada, el desempeño es brutal. Usa modelos pesados únicamente cuando el costo de un fallo sea inaceptable; pero para la orquestación masiva y el flujo continuo en tiempo real, dominar el prompting estructurado sobre modelos rápidos como Flash es la verdadera ventaja competitiva.
+
+8
+00:02:18,144 --> 00:02:26,952
+JORGE: Y habiendo analizado la optimización de prompts en producción, es momento de romper la burbuja del algoritmo con nuestra ventana disruptiva de hoy.
+
+9
+00:02:26,952 --> 00:02:46,128
+DALIA: Demos un salto cuántico hacia la computación neuromórfica en silicio. Mientras toda la industria comercial sigue compitiendo por quién construye el clúster de GPUs más gigante consumiendo megavatios en la nube, en los laboratorios de microelectrónica se perfeccionan las Spiking Neural Networks o redes neuronales por impulsos.
+
+10
+00:02:46,128 --> 00:03:04,488
+JORGE: El cerebro humano no procesa datos con un reloj de cuatro gigahercios transmitiendo ceros y unos continuamente. Nuestras neuronas permanecen en reposo consumiendo casi nada de energía hasta que reciben un estímulo específico; solo entonces disparan una espiga eléctrica a través de sus sinapsis.
+
+11
+00:03:04,488 --> 00:03:20,088
+DALIA: Chips neuromórficos como Intel Lóiji o Brein-Chip copian exactamente ese principio físico. En lugar de multiplicar matrices de punto flotante en silicio ardiente, tienen neuronas analógicas que solo se activan cuando hay un cambio relevante en el entorno.
+
+12
+00:03:20,088 --> 00:03:46,776
+JORGE: ¿El resultado? Modelos de visión o detección de anomalías operando con menos de un milivatio. Sensores inteligentes que pueden funcionar durante diez años con una pila de botón en campos agrícolas remotos o implantes médicos, tomando decisiones al instante sin tocar la nube. La verdadera inteligencia artificial no siempre es más grande; muchas veces consiste en imitar la eficiencia energética de la naturaleza.
+
+13
+00:03:46,776 --> 00:04:13,464
+JORGE: ¿El resultado? Modelos de visión o detección de anomalías operando con menos de un milivatio. Sensores inteligentes que pueden funcionar durante diez años con una pila de botón en campos agrícolas remotos o implantes médicos, tomando decisiones al instante sin tocar la nube. La verdadera inteligencia artificial no siempre es más grande; muchas veces consiste en imitar la eficiencia energética de la naturaleza.
+
+14
+00:04:13,464 --> 00:04:21,408
+DALIA: Recuerda que puedes consultar el artículo técnico completo con diagramas Mermaid y referencias APA en escucha-sia punto Git-Jab punto io.
+
+15
+00:04:21,408 --> 00:04:32,616
+JORGE: Y en nuestras redes y canal de Spotify ya tienes disponible el Reel vertical animado de cuarenta y cinco segundos de esta entrega. ¡Nos escuchamos en el siguiente sIA Focus!
+

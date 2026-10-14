@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:05,376
+JORGE: ¡Bienvenidos a sIA Focus: Datos y Cloud! Soy Jorge.
+
+2
+00:00:05,376 --> 00:00:16,752
+DALIA: ¡Y yo soy Dalia! Hoy abordamos uno de los dolores de cabeza más caros de la ingeniería de datos: la fragilidad de los pipelines analíticos ante mutaciones silenciosas de esquema.
+
+3
+00:00:16,752 --> 00:00:35,208
+JORGE: La tendencia arquitectónica definitiva de este año es tratar a los datos como un producto de software formal a través de Data Contracts. Durante años, los equipos vivieron bajo el terror de que un cambio en una columna transaccional rompiera todos los tableros en Big-Kueri o Snou-fleik a las tres de la mañana.
+
+4
+00:00:35,208 --> 00:00:59,760
+DALIA: Exacto. Un Data Contract ya no es un documento pasivo en Notion; es una especificación ejecutable en YAML que valida esquemas, restricciones de tipo, frescura de datos y métricas de negocio antes de permitir la ingesta al lago de datos. Si una columna cambia de entero a flotante, el contrato falla en el pipeline de CI/CD, exactamente como una prueba unitaria de software.
+
+5
+00:00:59,760 --> 00:01:23,376
+JORGE: Y a esto se suma el desacoplamiento semántico. Definir métricas como código versionado en Git mediante herramientas como d b t Semantic Layer permite que cualquier consumidor, ya sea un tablero de Looker, una consulta SQL ad-hoc o un agente autónomo de Google Antigravity, comparta exactamente la misma definición de negocio sin quedar atrapado en el vendor lock-in de un solo almacén.
+
+6
+00:01:23,376 --> 00:01:46,992
+JORGE: Y a esto se suma el desacoplamiento semántico. Definir métricas como código versionado en Git mediante herramientas como d b t Semantic Layer permite que cualquier consumidor, ya sea un tablero de Looker, una consulta SQL ad-hoc o un agente autónomo de Google Antigravity, comparta exactamente la misma definición de negocio sin quedar atrapado en el vendor lock-in de un solo almacén.
+
+7
+00:01:46,992 --> 00:01:54,240
+DALIA: Y pasando de la gobernanza de esquemas a la frontera de la seguridad de datos, abramos nuestra cápsula Fuera de la Burbuja.
+
+8
+00:01:54,240 --> 00:02:18,456
+JORGE: Hablemos de la Criptografía Homomórfica Completa, conocida como F H E. Históricamente, si querías hacer una consulta SQL o entrenar un modelo analítico sobre datos confidenciales, como historiales médicos o transacciones bancarias, estabas obligado a descifrar los datos en la memoria RAM del servidor, dejándolos vulnerables a fugas de memoria o ataques de canal lateral.
+
+9
+00:02:18,456 --> 00:02:37,152
+DALIA: Con F H E, las leyes del álgebra matemática permiten realizar operaciones aritméticas directamente sobre los datos cifrados. El servidor ejecuta sumas, promedios y agrupaciones sobre texto cifrado ilegible, produciendo un resultado cifrado que solo el cliente con su clave privada puede descifrar.
+
+10
+00:02:37,152 --> 00:03:02,544
+JORGE: Aunque tradicionalmente era prohibitivamente lento, los nuevos aceleradores de hardware dedicados y bibliotecas de vectores lattice están reduciendo la penalización a menos de diez veces el tiempo convencional. Esto abre la puerta a un mundo donde las empresas pueden procesar información ultra-sensible en nubes públicas sin confiar ciegamente en el proveedor de infraestructura. Privacidad matemática absoluta por diseño.
+
+11
+00:03:02,544 --> 00:03:27,936
+JORGE: Aunque tradicionalmente era prohibitivamente lento, los nuevos aceleradores de hardware dedicados y bibliotecas de vectores lattice están reduciendo la penalización a menos de diez veces el tiempo convencional. Esto abre la puerta a un mundo donde las empresas pueden procesar información ultra-sensible en nubes públicas sin confiar ciegamente en el proveedor de infraestructura. Privacidad matemática absoluta por diseño.
+
+12
+00:03:27,936 --> 00:03:34,440
+DALIA: Encuentra el contrato de datos de ejemplo en YAML y las referencias en formato APA en nuestro portal sIA Journal.
+
+13
+00:03:34,440 --> 00:03:41,232
+JORGE: ¡Acompáñanos en el siguiente episodio para adentrarnos en la soberanía del hardware y los libros electrónicos!
+

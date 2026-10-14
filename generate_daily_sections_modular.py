@@ -18,9 +18,9 @@ BASE_DIR = Path(r"C:\Carlos\noticias_podcast")
 
 SECTIONS = [
     {
-        "id": "33_ia_agentes",
-        "title": "sIA #33: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio",
-        "filename": "sIA_Daily_S01_IA_Gemini_Flash_Neuromorfico_2026-10-11.mp3",
+        "id": "34_ia_agentes",
+        "title": "sIA #34: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio",
+        "filename": "sIA_Daily_S01_IA_Gemini_Flash_Neuromorfico_2026-10-12.mp3",
         "category": "sIA Focus: IA & Agentes",
         "badge_color": "cyan",
         "read_time": "6 min",
@@ -28,7 +28,7 @@ SECTIONS = [
         "script": """
 [CHAPTER: Noticia Central: El Mito de Gemini Flash y Prompt Engineering]
 JORGE: ¡Muy buenos días a toda nuestra comunidad técnica! Bienvenidos a sIA Focus, tu cápsula técnica de seis minutos para el camino. Soy Jorge.
-DALIA: ¡Y yo soy Dalia! Hoy es domingo once de octubre de dos mil veintiséis, y en este capítulo nos sumergimos de lleno en la Inteligencia Artificial y la orquestación de agentes autónomos.
+DALIA: ¡Y yo soy Dalia! Hoy es lunes doce de octubre de dos mil veintiséis, y en este capítulo nos sumergimos de lleno en la Inteligencia Artificial y la orquestación de agentes autónomos.
 JORGE: El fin de semana estalló un debate masivo en r diagonal google_antigravity con una publicación titulada: Opinión impopular: el noventa por ciento del odio hacia modelos ligeros como Gemini Flash proviene de desarrolladores que no saben usarlos o fanboys corporativos.
 DALIA: Es una queja constante, Jorge. Desarrolladores que envían un prompt ambiguo y abierto a un modelo sub-doscientos milisegundos como Gemini Flash, esperando que razone diez pasos abstractos como si fuera Claude tres punto cinco Sonnet. Y cuando el modelo responde de forma concisa o falla en un caso de borde, declaran en foros que el modelo no sirve para nada.
 JORGE: Hay que entender la arquitectura. Gemini Flash no es un oráculo lento de razonamiento monolítico; es una unidad de procesamiento de estado de altísima velocidad y costo microscópico. En producción, su rol es clasificar intenciones, enrutar peticiones entre microservicios y extraer datos en esquemas JSON estrictamente tipados con Pydantic o TypeSafe.
@@ -47,9 +47,9 @@ JORGE: Y en nuestras redes y canal de Spotify ya tienes disponible el Reel verti
 """
     },
     {
-        "id": "34_data_cloud",
-        "title": "sIA #34: Data & Cloud — Contratos Semánticos en YAML y 🌌 Criptografía Homomórfica en Memoria",
-        "filename": "sIA_Daily_S02_Data_Contratos_Semanticos_FHE_2026-10-11.mp3",
+        "id": "35_data_cloud",
+        "title": "sIA #35: Data & Cloud — Contratos Semánticos en YAML y 🌌 Criptografía Homomórfica en Memoria",
+        "filename": "sIA_Daily_S02_Data_Contratos_Semanticos_FHE_2026-10-12.mp3",
         "category": "sIA Focus: Datos & Cloud",
         "badge_color": "blue",
         "read_time": "6 min",
@@ -74,9 +74,9 @@ JORGE: ¡Acompáñanos en el siguiente episodio para adentrarnos en la soberaní
 """
     },
     {
-        "id": "35_hardware_gadgets",
-        "title": "sIA #35: Hardware & Soberanía — El Cierre de DRM en E-Readers y 🌌 Pantallas Electroquímicas a 60 fps",
-        "filename": "sIA_Daily_S03_Hardware_Calibre_DRM_Electroquimica_2026-10-11.mp3",
+        "id": "36_hardware_gadgets",
+        "title": "sIA #36: Hardware & Soberanía — El Cierre de DRM en E-Readers y 🌌 Pantallas Electroquímicas a 60 fps",
+        "filename": "sIA_Daily_S03_Hardware_Calibre_DRM_Electroquimica_2026-10-12.mp3",
         "category": "sIA Focus: Hardware & Gadgets",
         "badge_color": "cyan",
         "read_time": "6 min",
@@ -101,9 +101,9 @@ JORGE: ¡Nos vemos en el próximo bloque dedicado a la fabricación aditiva y el
 """
     },
     {
-        "id": "36_maker_3d",
-        "title": "sIA #36: Maker & 3D — Tolerancias en PETG con Bambu Lab y 🌌 Impresión 4D con Memoria Térmica",
-        "filename": "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-11.mp3",
+        "id": "37_maker_3d",
+        "title": "sIA #37: Maker & 3D — Tolerancias en PETG con Bambu Lab y 🌌 Impresión 4D con Memoria Térmica",
+        "filename": "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-12.mp3",
         "category": "sIA Focus: Maker & 3D",
         "badge_color": "emerald",
         "read_time": "6 min",
@@ -127,9 +127,9 @@ DALIA: ¡Nos escuchamos en el último episodio del día con ciencia ficción y n
 """
     },
     {
-        "id": "37_geek_scifi",
-        "title": "sIA #37: Cultura Geek — La Deconstrucción del Horror Psicológico y 🌌 Neurociencia del Full-Dive VR",
-        "filename": "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-11.mp3",
+        "id": "38_geek_scifi",
+        "title": "sIA #38: Cultura Geek — La Deconstrucción del Horror Psicológico y 🌌 Neurociencia del Full-Dive VR",
+        "filename": "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-12.mp3",
         "category": "sIA Focus: Cultura Geek & Sci-Fi",
         "badge_color": "purple",
         "read_time": "6 min",
@@ -157,7 +157,7 @@ JORGE: Recuerda que cada sección tiene su propio artículo técnico y referenci
 
 async def generate_all_sections():
     print("=" * 70)
-    print("🚀 GENERANDO 5 CAPÍTULOS MODULARES DE sIA FOCUS (EDICIÓN 11 DE OCTUBRE)")
+    print("🚀 GENERANDO 5 CAPÍTULOS MODULARES DE sIA FOCUS (EDICIÓN 12 DE OCTUBRE)")
     print("=" * 70)
 
     for idx, sec in enumerate(SECTIONS, 1):

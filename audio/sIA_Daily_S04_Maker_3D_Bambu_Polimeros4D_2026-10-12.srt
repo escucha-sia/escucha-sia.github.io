@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:06,696
+JORGE: ¡Bienvenidos a sIA Focus: Fabricación Aditiva y Cultura Maker! Soy Jorge.
+
+2
+00:00:06,696 --> 00:00:22,896
+DALIA: ¡Y yo soy Dalia! Hoy ponemos la lupa sobre la ingeniería de impresión tres D, donde la comunidad técnica en r diagonal BambuLab y r diagonal 3Dprinting debate las claves para obtener piezas mecánicas en P E T G con tolerancias dimensionales exactas.
+
+3
+00:00:22,896 --> 00:00:39,240
+JORGE: El filamento P E T G es el caballo de batalla para piezas funcionales debido a su resistencia al impacto y tolerancia térmica. Sin embargo, su tendencia al hilo o stringing y la adhesión excesiva a placas texturizadas PEI sigue frustrando a muchos creadores.
+
+4
+00:00:39,240 --> 00:01:04,080
+DALIA: En el software de laminado Orca Slaiser y Bambu Studio, la clave reside en calibrar dos parámetros críticos: la compensación de flujo dinámico y la retracción fina. Activar el Pressure Advance con el sensor micro-lidar permite ecualizar la presión en la boquilla antes de los giros cerrados, evitando esquinas hinchadas y asegurando que los orificios para tornillos M tres o rodamientos encajen a la primera sin post-procesado manual.
+
+5
+00:01:04,080 --> 00:01:28,920
+DALIA: En el software de laminado Orca Slaiser y Bambu Studio, la clave reside en calibrar dos parámetros críticos: la compensación de flujo dinámico y la retracción fina. Activar el Pressure Advance con el sensor micro-lidar permite ecualizar la presión en la boquilla antes de los giros cerrados, evitando esquinas hinchadas y asegurando que los orificios para tornillos M tres o rodamientos encajen a la primera sin post-procesado manual.
+
+6
+00:01:28,920 --> 00:01:37,728
+JORGE: Y pasando de la geometría estática tradicional, entremos en la fascinante dimensión de la Impresión cuatro D en nuestra cápsula Fuera de la Burbuja.
+
+7
+00:01:37,728 --> 00:01:53,784
+DALIA: ¿Qué es la impresión cuatro D? Es la fabricación aditiva donde la cuarta dimensión es el tiempo y la respuesta ambiental. La pieza impresa no mantiene una forma rígida para siempre; contiene polímeros con memoria de forma térmica programada en su microestructura.
+
+8
+00:01:53,784 --> 00:02:10,800
+JORGE: Imaginen imprimir una estructura plana que, al ser sumergida en agua a cuarenta grados centígrados o recibir calor ambiental, se pliega automáticamente sobre sí misma para convertirse en un mecanismo robótico o una pinza mecánica sin motores, cables ni actuadores electrónicos.
+
+9
+00:02:10,800 --> 00:02:31,440
+DALIA: Esta tecnología se está aplicando en stents médicos autorreplegables que se expanden dentro de vasos sanguíneos con la temperatura corporal, y en paneles aeroespaciales que se despliegan en el vacío espacial al recibir la radiación solar. No es ciencia ficción; es el poder de la física de materiales programada directamente en el código G de laminado.
+
+10
+00:02:31,440 --> 00:02:52,080
+DALIA: Esta tecnología se está aplicando en stents médicos autorreplegables que se expanden dentro de vasos sanguíneos con la temperatura corporal, y en paneles aeroespaciales que se despliegan en el vacío espacial al recibir la radiación solar. No es ciencia ficción; es el poder de la física de materiales programada directamente en el código G de laminado.
+
+11
+00:02:52,080 --> 00:02:58,584
+JORGE: Todos los parámetros de laminado y los papers de polímeros térmicos están detallados en nuestro artículo web.
+
+12
+00:02:58,584 --> 00:03:03,888
+DALIA: ¡Nos escuchamos en el último episodio del día con ciencia ficción y narrativa geek!
+
