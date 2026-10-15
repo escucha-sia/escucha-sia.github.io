@@ -47,6 +47,39 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Modular 34 - 12 de Octubre de 2026
+    "sIA_Daily_S01_IA_Gemini_Flash_Neuromorfico_2026-10-12.mp3": {
+        "slug": "sia-34-ia-agentes-gemini-flash-redes-neuromorficas",
+        "category": "IA & Agentes",
+        "badge_color": "cyan",
+        "read_time": "6 min",
+        "title": "sIA #34: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio",
+        "subtitle": "Capítulo modular (6 min): Por qué el 90% de las quejas contra Gemini Flash son errores de prompt estructurado, y cómo las Spiking Neural Networks en silicio cambian la eficiencia energética.",
+        "thesis": "Gemini Flash debe concebirse como una unidad de estado ultrarrápida guiada por esquemas tipados (Pydantic / TypeSafe) y context caching. En el plano disruptivo, el silicio neuromórfico (Intel Loihi) prescinde de matrices continuas emulando sinapsis biológicas con consumo inferior a un milivatio.",
+        "nexo": "Inauguración de los capítulos modulares diarios de sIA con debate técnico en Reddit y cápsula Fuera de la Burbuja.",
+        "reel_video": "sIA_Reel_03_Gemini_Flash_TikTok.mp4",
+        "content_blocks": [
+            {
+                "title": "1. Noticia Central: El Mito del Desempeño en Gemini Flash",
+                "body": """
+El fin de semana estalló un debate masivo en r/google_antigravity: 'El 90% del odio hacia modelos como Gemini Flash proviene de desarrolladores que no saben usarlos'. Desarrolladores que envían un prompt ambiguo y abierto esperando razonamiento abstracto estilo Claude 3.5 Sonnet a un modelo sub-200ms cometen un error metodológico básico.
+
+Flash es un procesador de estados ultrarrápido: clasifica intenciones, enruta llamadas y extrae datos en esquemas JSON estrictamente tipados. Con Context Caching y prompts estructurados, ofrece throughput masivo a costo microscópico.
+"""
+            },
+            {
+                "title": "2. Fuera de la Burbuja: Computación Neuromórfica en Silicio",
+                "body": """
+Frente a clústeres de GPUs devoradores de megavatios, las Spiking Neural Networks (SNN) copian el reposo biológico: las neuronas solo disparan espigas ante cambios en el entorno. Procesadores como Intel Loihi o BrainChip operan modelos de visión con menos de un milivatio, posibilitando inteligencia en el borde durante años con una pila de botón.
+"""
+            }
+        ],
+        "apa_references": [
+            "Google DeepMind. (2026). *Gemini 3.8 Flash: Architecture and structured output optimization*. Google Research.",
+            "Davies, M., et al. (2025). *Neuromorphic silicon and spiking neural networks for ultra-low power autonomous edge systems*. Nature Electronics, 8(2), 112-125.",
+            "Corona, C. (2026). *sIA Focus: Inteligencia Artificial, orquestación rápida y computación bio-inspirada*. sIA Technical Publications."
+        ]
+    },
     # 0. Episodio Diario Express 33 - 11 de Octubre de 2026
     "sIA_Daily_Express_2026-10-11.mp3": {
         "slug": "edicion-diaria-express-33-gemini-flash-data-contracts-drm-neuromorphic",
@@ -1830,6 +1863,45 @@ def render_magazine_index(catalog):
         </div>
         """
 
+    # Collect available reels for showcase
+    reels_showcase_html = ""
+    reels_items = [it for it in catalog if it.get("reel_video")]
+    if reels_items:
+        reels_cards_html = ""
+        for r in reels_items:
+            poster_fn = Path(r["reel_video"]).stem + "_poster.jpg"
+            reels_cards_html += f"""
+            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
+                    <video controls playsinline preload="metadata" poster="reels/{poster_fn}" style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="reels/{r['reel_video']}" type="video/mp4">
+                        Tu navegador no soporta video MP4.
+                    </video>
+                </div>
+                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">{r['category']} • REEL 9:16</div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">{r['title']}</h4>
+                <a href="articulos/{r['filename']}#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
+            </div>
+            """
+        
+        reels_showcase_html = f"""
+    <section class="container" id="reels-showcase" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7)); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 24px; padding: 24px 32px; backdrop-filter: blur(16px); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                <div>
+                    <span class="badge badge-purple" style="font-size: 0.75rem; letter-spacing: 0.05em;">TIKTOK & REELS (9:16) • HYPERFRAMES</span>
+                    <h3 style="font-size: 1.5rem; color: #fff; margin-top: 6px;">🎬 Galería de Videos Verticales (TikTok / Reels)</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Cápsulas condensadas con tipografía cinética y ecualizador reactivo reproducibles en tu navegador o móvil.</p>
+                </div>
+                <div style="font-size: 0.85rem; color: #38bdf8; font-family: monospace; font-weight: 600;">{len(reels_items)} Videos Disponibles</div>
+            </div>
+            <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: thin;">
+                {reels_cards_html}
+            </div>
+        </div>
+    </section>
+        """
+
     index_html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1851,6 +1923,7 @@ def render_magazine_index(catalog):
                 </div>
             </a>
             <div class="nav-links">
+                <a href="#reels-showcase" class="nav-link" style="color: #a855f7 !important; font-weight: 700;">🎬 Reels / TikTok</a>
                 <a href="#articulos" class="nav-link">Artículos</a>
                 <a href="{SPOTIFY_SHOW_URL}" target="_blank" class="btn-pill btn-spotify">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
@@ -1880,6 +1953,8 @@ def render_magazine_index(catalog):
             </div>
         </div>
     </section>
+
+    {reels_showcase_html}
 
     <main class="container" id="articulos">
         <div class="magazine-grid">
