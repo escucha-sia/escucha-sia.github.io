@@ -9,4 +9,7 @@ debug_page.png
 dashboard_screenshot.png
 cookies.txt
 inbox_processed.json
-
+.hyperframes/
+node_modules/
+sia_tiktok_flash/renders/
+sia_tiktok_flash/.hyperframes/

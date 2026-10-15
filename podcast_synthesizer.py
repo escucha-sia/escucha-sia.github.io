@@ -374,9 +374,13 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
     if srt_path.exists():
         transcripts_block += f'\n      <podcast:transcript url="{base_url}/audio/{base_stem}.srt" type="application/x-subrip" language="es"/>'
 
+    import html
+    xml_title = html.escape(episode_title)
+    xml_desc = html.escape(desc_text)
+
     new_item = f"""    <item>
-      <title>{episode_title}</title>
-      <description>{desc_text}</description>
+      <title>{xml_title}</title>
+      <description>{xml_desc}</description>
       <pubDate>{pub_date}</pubDate>
       <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
       <guid isPermaLink="true">{audio_url}</guid>
@@ -402,8 +406,8 @@ def update_podcast_rss(episode_title: str, filename: str, filepath: Path, email_
                     link_line = f"\n      <link>{m_link.group(1)}</link>" if m_link else ""
                     
                     updated_it = f"""    <item>
-      <title>{episode_title}</title>{link_line}
-      <description>{desc_text}</description>
+      <title>{xml_title}</title>{link_line}
+      <description>{xml_desc}</description>
       <pubDate>{orig_date}</pubDate>
       <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
       <guid isPermaLink="true">{audio_url}</guid>
