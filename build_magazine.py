@@ -820,6 +820,18 @@ body {
   font-family: var(--font-family);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Proteccion anti-copia de texto */
+p, h1, h2, h3, h4, h5, h6, span, li, blockquote, .article-content, .card, article {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -1802,6 +1814,20 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
             <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
         </div>
     </footer>
+
+    <!-- Anti-Copy & Content Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('copy', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('cut', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('selectstart', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('dragstart', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('keydown', function(e) {{
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {{
+                e.preventDefault();
+            }}
+        }});
+    </script>
 </body>
 </html>
 """
@@ -1990,6 +2016,18 @@ def render_magazine_index(catalog):
                 }}
             }});
         }}
+
+        // Anti-Copy & Content Protection
+        document.addEventListener('contextmenu', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('copy', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('cut', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('selectstart', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('dragstart', function(e) {{ e.preventDefault(); }});
+        document.addEventListener('keydown', function(e) {{
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {{
+                e.preventDefault();
+            }}
+        }});
     </script>
 </body>
 </html>

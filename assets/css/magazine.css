@@ -29,6 +29,18 @@ body {
   font-family: var(--font-family);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Proteccion anti-copia de texto */
+p, h1, h2, h3, h4, h5, h6, span, li, blockquote, .article-content, .card, article {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {

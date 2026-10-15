@@ -1164,6 +1164,18 @@
                 }
             });
         }
+
+        // Anti-Copy & Content Protection
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
