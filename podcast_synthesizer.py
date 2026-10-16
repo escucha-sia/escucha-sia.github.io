@@ -147,7 +147,7 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     current_chapter = "Introducción"
 
     def commit_current_block():
-        nonlocal chunk_index
+        nonlocal chunk_index, current_text, current_speaker
         if current_speaker and current_text:
             combined_text = " ".join(current_text).strip()
             if combined_text:
@@ -156,6 +156,8 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
                 chunk_file = TEMP_DIR / f"chunk_{chunk_index:04d}_{current_speaker.lower()}.mp3"
                 chunks.append((chunk_file, cleaned, voice, current_speaker, current_chapter))
                 chunk_index += 1
+            current_text = []
+            current_speaker = None
 
     for line in lines:
         line_s = line.strip()

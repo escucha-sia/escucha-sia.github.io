@@ -20,30 +20,24 @@ JORGE: Y eso reduce el espacio de búsqueda computacional en órdenes de magnitu
 00:01:40.224 --> 00:01:53.976
 DALIA: Compite donde los L L Ms fracasan miserablemente: en agentes físicos que deben navegar el mundo en tiempo real, procesar video continuo sin colapsar por latencia y aprender causalidad sin millones de tokens de relleno.
 
-00:01:53.976 --> 00:02:07.728
-DALIA: Compite donde los L L Ms fracasan miserablemente: en agentes físicos que deben navegar el mundo en tiempo real, procesar video continuo sin colapsar por latencia y aprender causalidad sin millones de tokens de relleno.
-
-00:02:07.728 --> 00:02:16.248
+00:01:53.976 --> 00:02:02.496
 JORGE: Y si Yepa rompe el monopolio del token autoregresivo, nuestra cápsula Fuera de la Burbuja rompe el dogma del orquestador centralizado.
 
-00:02:16.248 --> 00:02:37.200
+00:02:02.496 --> 00:02:23.448
 DALIA: Hablemos de estigmergia digital y la inteligencia de enjambre. La arquitectura agéntica dominante hoy insiste en poner un supermodelo gigantesco como director de orquesta que manda mensajes a agentes secundarios. ¿Qué pasa en producción? Ese orquestador se convierte en un cuello de botella de latencia y un único punto de falla carísimo.
 
-00:02:37.200 --> 00:02:54.336
+00:02:23.448 --> 00:02:40.584
 JORGE: En la naturaleza, un millón de hormigas o una colonia de termitas construyen catedrales ventiladas sin tener un rey que les diga qué hacer. Cooperan dejando rastros químicos en el entorno: si una zona tiene feromonas de peligro, todas evitan ese camino automáticamente.
 
-00:02:54.336 --> 00:03:20.496
+00:02:40.584 --> 00:03:06.744
 DALIA: En sistemas distribuidos, esto se traduce en agentes ultra-ligeros de siete millones de parámetros que solo leen y escriben marcas criptográficas en una memoria compartida. Sin orquestador. Las soluciones complejas emergen de reglas locales simples. Un agente detecta una anomalía de red, deja un rastro de prioridad en el bus, y tres agentes de contención reaccionan en paralelo en menos de cinco milisegundos.
 
-00:03:20.496 --> 00:03:46.656
-DALIA: En sistemas distribuidos, esto se traduce en agentes ultra-ligeros de siete millones de parámetros que solo leen y escriben marcas criptográficas en una memoria compartida. Sin orquestador. Las soluciones complejas emergen de reglas locales simples. Un agente detecta una anomalía de red, deja un rastro de prioridad en el bus, y tres agentes de contención reaccionan en paralelo en menos de cinco milisegundos.
-
-00:03:46.656 --> 00:04:01.512
+00:03:06.744 --> 00:03:21.600
 JORGE: Veredicto técnico para tu arquitectura: no intentes usar L L Ms de razonamiento lento para problemas de control dinámico. Usa Yepa para fundamentación sensorial y enjambres descentralizados para ejecución masiva en el borde.
 
-00:04:01.512 --> 00:04:13.200
+00:03:21.600 --> 00:03:33.288
 DALIA: Si quieres ver la formulación matemática de la función de pérdida por energía y los esquemas de estigmergia para microservicios, entra ahora mismo a nuestro artículo técnico en escucha-sia punto Git-Jab punto io.
 
-00:04:13.200 --> 00:04:24.336
+00:03:33.288 --> 00:03:44.424
 JORGE: Y en nuestras redes sociales y canal ya tienes el Reel vertical de cuarenta y cinco segundos con la síntesis visual de esta entrega. ¡Nos escuchamos en el siguiente sIA Focus!
 

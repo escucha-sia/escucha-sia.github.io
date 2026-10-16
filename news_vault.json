@@ -11,6 +11,16 @@
       "date": "Thu, 15 Oct 2026 20:30:00 GMT"
     },
     {
+      "title": "sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador",
+      "filename": "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3",
+      "topics": [
+        "Modelos de Mundo no autoregresivos (JEPA y arquitecturas basadas en energía)",
+        "Inteligencia Colectiva de Enjambre (Swarm Intelligence) sin orquestador central"
+      ],
+      "cooldown_days": 45,
+      "date": "Thu, 15 Oct 2026 20:30:00 GMT"
+    },
+    {
       "title": "sIA Deep Dive: Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev",
       "summary": "sIA Deep Dive: Análisis exhaustivo de Laya (aayushch/laya), la alternativa open source y local-first a los modelos privativos de decisión como Jev. Arquitectura en Tauri v2, Svelte 5, FastAPI, n8n emb",
       "date": "Sat, 10 Oct 2026 10:21:45 GMT"
