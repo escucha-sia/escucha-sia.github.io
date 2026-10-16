@@ -47,21 +47,29 @@
         "Metamateriales auxéticos con coeficiente de Poisson negativo para absorción de impacto"
       ]
     },
-    "geek_culture_anime_and_horror": {
+    "geek_culture_anime_and_scifi": {
       "weight": 0.85,
-      "subreddits": ["r/anime", "r/manhwa", "r/horrorlit", "r/J_Horror", "r/swordartonline", "r/mushokutensei"],
-      "keywords": ["dr. stone", "terraforming", "sword art online", "manhwa", "horrorlit", "j-horror", "scifi"],
+      "subreddits": ["r/anime", "r/manhwa", "r/swordartonline", "r/mushokutensei", "r/scifi"],
+      "keywords": ["dr. stone", "terraforming", "sword art online", "manhwa", "scifi"],
       "fuera_de_la_burbuja_vectors": [
         "Neurociencia de la inmersión total (Full-Dive VR) y estimulación magnética transcraneal",
         "Filosofía de la mente en Hard Sci-Fi: Greg Egan, Peter Watts y la consciencia post-biológica",
-        "Deconstrucción de la metaficción en narrativas de sistemas apocalípticos (ORV, The Tutorial is Too Hard)",
-        "Folclore arcaico japonés (ohaguro, yōkai) como alegoría del aislamiento y la pérdida de identidad digital"
+        "Deconstrucción de la metaficción en narrativas de sistemas apocalípticos (ORV, The Tutorial is Too Hard)"
       ]
+    },
+    "reddit_horror_stories": {
+      "weight": 0.90,
+      "subreddits": ["r/nosleep", "r/shortscarystories", "r/creepypasta", "r/DarkTales", "r/horrorlit"],
+      "keywords": ["nosleep", "creepy", "psychological horror", "urban legend", "analog horror"],
+      "format_mode": "narrative_immersion",
+      "deduplication_policy": "STRICT_ZERO_DUPLICATION",
+      "description": "Adaptaciones de los mejores relatos de terror de Reddit con atmósfera inmersiva, tensión psicológica y desenlace cerrado. Prohibido repetir historias salvo actualizaciones oficiales del autor original con nueva información."
     }
   },
   "format_rules": {
-    "structure": "Cada bloque temático debe contener una noticia práctica central + una subsección explícita 'Fuera de la Burbuja' que conecte con una frontera científica/disruptiva.",
+    "structure": "Cada bloque técnico debe contener noticia práctica + Fuera de la Burbuja. El bloque de Terror contiene una narración inmersiva completa y terminada.",
     "hosts": ["Jorge", "Dalia"],
-    "voice_tone": "Técnico, dinámico, riguroso, público, sin referencias directas a personas individuales."
+    "voice_tone": "Técnico y analítico en tecnología; envolvente, oscuro y con ritmo dramático en terror.",
+    "anti_repetition_policy": "Cooldown de 30 días en temas tecnológicos. Cooldown permanente en relatos de terror salvo nueva entrega oficial del autor."
   }
 }

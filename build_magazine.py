@@ -47,6 +47,47 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial Terror 01 - 15 de Octubre de 2026
+    "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3": {
+        "slug": "sia-terror-01-las-escaleras-perdidas-en-el-bosque-profundo",
+        "category": "sIA Terror",
+        "badge_color": "red",
+        "read_time": "7 min",
+        "title": "sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)",
+        "subtitle": "Crónica inmersiva adaptada de r/nosleep: El protocolo tácito de los oficiales de búsqueda y rescate ante anomalías arquitectónicas liminales sin cimientos en mitad de la maleza virgen.",
+        "thesis": "La potencia del horror liminal moderno y las creepypastas fundacionales de Reddit radica en la dislocación espacial: la inserción de un elemento doméstico y humano (escaleras de roble barnizado) en la indiferencia salvaje del bosque, forzando la ruptura de las leyes euclidianas y la mutilación de la realidad.",
+        "nexo": "Estreno formal de la sección sIA Terror: relatos de Reddit curados sin repetición, adaptación literaria inmersiva y análisis de psicología del horror.",
+        "reel_video": "sIA_Terror_01_Las_Escaleras_Reel.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Protocolo No Escrito de Búsqueda y Rescate",
+                "body": """
+En los manuales de guardabosques de Norteamérica existen cientos de directrices sobre hipotermia, brújulas, rastreo de huellas y comportamiento ante depredadores. Pero hay una regla que se transmite únicamente de boca en boca, al oído, entre veteranos y novatos: si en mitad de una reserva forestal virgen, a decenas de kilómetros de cualquier asentamiento, encuentras un tramo de escaleras de concreto o madera pulida parada sola en medio de los árboles... jamás te acerques. Y bajo ninguna circunstancia subas por ellas.
+
+No son ruinas de cabañas coloniales ni cimientos abandonados por incendios forestales. Son estructuras solitarias, perfectamente conservadas, libres de musgo, hojas o podredumbre, erguidas hacia el dosel de los pinos como monumentos al absurdo geométrico.
+"""
+            },
+            {
+                "title": "2. La Anomalía Espacial y el Corte Atómico",
+                "body": """
+El relato documenta la expedición de rescate tras la desaparición de un excursionista en otoño. Durante el rastreo en niebla densa, un oficial novato desoye las advertencias radiales e intenta subir al primer peldaño de una escalera de caracol de hierro forjado.
+
+La consecuencia desafía cualquier patología médica convencional: la mano que tocó el pasamanos superior desaparece con un corte limpio, microscópicamente perfecto, sin rastro de hemorragia ni desgarro tisular, sugiriendo una discontinuidad métrica en el espacio donde el último escalón no conecta con el cielo, sino con una dimensión inaccesible.
+"""
+            },
+            {
+                "title": "3. Análisis Literario: Por Qué Funciona el Horror de r/nosleep",
+                "body": """
+A diferencia del terror gótico clásico basado en monstruos y maldiciones antropomórficas, el horror de comunidades como r/nosleep explota lo 'eerie' según la definición del filósofo Mark Fisher: la presencia de algo que no debería estar ahí, o la ausencia de algo que debería estar. Una escalera sin casa encarna el miedo a que el universo posea bordes mal renderizados donde la lógica biológica colapsa.
+"""
+            }
+        ],
+        "apa_references": [
+            "Searchandrescuewoods. (2015). *I'm a search and rescue officer for the US Forest Service, I have some stories to tell*. Reddit (r/nosleep).",
+            "Fisher, M. (2016). *The weird and the eerie*. Repeater Books.",
+            "Corona, C. (2026). *sIA Terror: Fenomenología del horror liminal y crónicas de Reddit*. sIA Technical Publications."
+        ]
+    },
     # 0. Episodio Modular 34 - 12 de Octubre de 2026
     "sIA_Daily_S01_IA_Gemini_Flash_Neuromorfico_2026-10-12.mp3": {
         "slug": "sia-34-ia-agentes-gemini-flash-redes-neuromorficas",
@@ -1104,6 +1145,16 @@ a:hover {
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
+.card.badge-red:hover::before {
+  background: #ef4444;
+}
+
+.badge-red {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
 .card-meta {
   font-size: 0.8rem;
   color: var(--text-dim);
@@ -1841,6 +1892,8 @@ def render_magazine_index(catalog):
         cat_classes = []
         if "Deep Dive" in item["category"]:
             cat_classes.append("deep-dive")
+        elif "Terror" in item["category"]:
+            cat_classes.append("terror")
         elif "NoticIAs" in item["category"]:
             cat_classes.append("noticias")
         else:
@@ -1973,6 +2026,7 @@ def render_magazine_index(catalog):
             <div class="filter-bar">
                 <button class="filter-btn active" onclick="filterArticles('all')">Todos ({len(catalog)})</button>
                 <button class="filter-btn" onclick="filterArticles('deep-dive')">sIA Deep Dives</button>
+                <button class="filter-btn" onclick="filterArticles('terror')" style="color: #f87171 !important; border-color: rgba(239, 68, 68, 0.4);">💀 sIA Terror</button>
                 <button class="filter-btn" onclick="filterArticles('noticias')">NoticIAs Daily</button>
                 <button class="filter-btn" onclick="filterArticles('maker-3d')">Impresión 3D & Maker</button>
                 <button class="filter-btn" onclick="filterArticles('archivo')">Archivo Histórico</button>

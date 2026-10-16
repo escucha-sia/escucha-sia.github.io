@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #030508;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="sia_horror_reel" data-no-timeline data-start="0" data-duration="18.5" data-width="1080" data-height="1920">
+      <audio
+        id="bg-audio"
+        class="clip"
+        data-start="0"
+        data-duration="18.5"
+        data-track-index="0"
+        data-volume="1.0"
+        src="assets/clip_horror.mp3"
+      ></audio>
+
+      <div
+        id="main-scene"
+        class="clip"
+        data-composition-id="scene"
+        data-composition-src="compositions/scene.html"
+        data-start="0"
+        data-duration="18.5"
+        data-track-index="1"
+      ></div>
+    </div>
+  </body>
+</html>

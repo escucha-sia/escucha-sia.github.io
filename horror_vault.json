@@ -1,0 +1,74 @@
+{
+  "vault_policy": "STRICT_ZERO_DUPLICATION",
+  "description": "Registro inmutable de relatos de terror de Reddit para sIA Terror. Garantiza 0% de repetición. Solo se permiten nuevas entradas si son actualizaciones oficiales del autor original con información nueva.",
+  "narrated_stories": [
+    {
+      "story_id": "stairs_in_the_woods_01",
+      "reddit_source": "r/nosleep",
+      "reddit_author": "searchandrescuewoods",
+      "title": "sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)",
+      "filename": "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3",
+      "date_narrated": "2026-10-15 08:14:12",
+      "status": "COMPLETED",
+      "cooldown": "PERMANENT",
+      "summary": "Oficial de búsqueda y rescate relata el terror inexplicable de las escaleras abandonadas en parques nacionales y la mutilación espacial de quienes las suben."
+    }
+  ],
+  "curated_master_pipeline": [
+    {
+      "story_id": "stairs_in_the_woods_01",
+      "reddit_source": "r/nosleep",
+      "reddit_author": "searchandrescuewoods",
+      "title": "Las Escaleras Perdidas en el Bosque Profundo",
+      "hook_tiktok": "Soy oficial de búsqueda y rescate en parques nacionales. Hay una orden estricta que todo novato aprende el primer día: Si ves una escalera sola en mitad del bosque salvaje... jamás, por ningún motivo, subas por ella.",
+      "summary": "Un oficial de rescate revela el secreto mejor guardado de los guardabosques: estructuras de escaleras de concreto y madera que aparecen en zonas vírgenes sin caminos ni cimientos, y el destino de quienes ignoraron la advertencia.",
+      "status": "COMPLETED",
+      "part": 1,
+      "total_parts": 1
+    },
+    {
+      "story_id": "dead_girlfriend_facebook",
+      "reddit_source": "r/nosleep",
+      "reddit_author": "nathan_erd",
+      "title": "Mi Novia Fallecida Sigue Escribiéndome en Facebook",
+      "hook_tiktok": "Mi novia murió en un accidente hace más de un año. Su cuenta de Facebook quedó inactiva... hasta que anoche empezó a enviarme fotos de mi departamento tomadas mientras dormía.",
+      "summary": "Nathan documenta la pesadilla psicológica tras recibir mensajes de la cuenta de su pareja muerta, que demuestran conocimiento de hechos privados ocurridos después de su funeral.",
+      "status": "QUEUED",
+      "part": 1,
+      "total_parts": 1
+    },
+    {
+      "story_id": "left_right_game_01",
+      "reddit_source": "r/nosleep",
+      "reddit_author": "NeonTempo",
+      "title": "El Juego de Izquierda y Derecha: La Ruta Prohibida",
+      "hook_tiktok": "Existe un juego urbano que no deberías jugar con tu auto: gira primero a la izquierda, luego a la derecha, y repite sin detenerte. En el giro treinta y cuatro... el mundo real desaparece.",
+      "summary": "Una cronista viaja con un conductor obsesivo que descubrió una anomalía dimensional mediante giros alternados, adentrándose en un camino donde la física colapsa.",
+      "status": "QUEUED",
+      "part": 1,
+      "total_parts": 1
+    },
+    {
+      "story_id": "room_733",
+      "reddit_source": "r/nosleep",
+      "reddit_author": "The_Dalek_Emperor",
+      "title": "La Habitación 733 del Dormitorio Universitario",
+      "hook_tiktok": "En mi universidad, la habitación 733 está sellada con candados industriales. Todas las alumnas que vivieron ahí saltaron al vacío exactamente en su tercera semana.",
+      "summary": "La investigación forense de dos estudiantes revela el horror acústico detrás de una cadena de suicidios en una residencia universitaria.",
+      "status": "QUEUED",
+      "part": 1,
+      "total_parts": 1
+    },
+    {
+      "story_id": "midnight_radio_broadcast",
+      "reddit_source": "r/creepypasta",
+      "reddit_author": "Archive99",
+      "title": "La Frecuencia 91.4: La Transmisión que Predice la Muerte",
+      "hook_tiktok": "Sintonizar la frecuencia 91.4 AM a las 3:33 de la madrugada parecía una leyenda urbana infantil... hasta que la radio leyó en voz alta mi nombre y los minutos exactos que me quedaban de vida.",
+      "summary": "Un radioaficionado graba una señal fantasma automatizada con voz sintetizada que anticipa decesos en tiempo real con precisión milimétrica.",
+      "status": "QUEUED",
+      "part": 1,
+      "total_parts": 1
+    }
+  ]
+}
