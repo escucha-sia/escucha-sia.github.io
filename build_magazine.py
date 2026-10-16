@@ -44,6 +44,26 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
     return None
 
 # ==============================================================================
+# CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
+# ==============================================================================
+REELS_MAP = {
+    "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-12.mp3": "sIA_Reel_05_Horror_Psicologico_FullDive.mp4",
+    "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-12.mp3": "sIA_Reel_06_Maker_Bambu_Lab_PETG.mp4",
+    "sIA_Daily_S03_Hardware_Calibre_DRM_Electroquimica_2026-10-12.mp3": "sIA_Reel_07_Hardware_DRM_EReaders.mp4",
+    "sIA_Daily_S02_Data_Contratos_Semanticos_FHE_2026-10-12.mp3": "sIA_Reel_08_Data_Contratos_Semanticos.mp4",
+    "sIA_Daily_S01_IA_Gemini_Flash_Neuromorfico_2026-10-12.mp3": "sIA_Reel_03_Gemini_Flash_TikTok.mp4",
+    "sIA_Daily_Express_2026-10-11.mp3": "sIA_Reel_02_Mito_Gemini_Flash.mp4",
+    "sIA_Daily_FueraDeLaBurbuja_2026-10-10.mp3": "sIA_Reel_01_Computacion_Termodinamica.mp4",
+    "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3": "sIA_Terror_01_Las_Escaleras_Reel.mp4",
+    "sIA_DeepDive_Laya_OpenSource_CommandCenter.mp3": "sIA_Reel_09_Laya_OpenSource_Agentic.mp4",
+    "sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3": "sIA_Reel_10_Jev_TypeSafe_Sistema1.mp4",
+    "sIA_DeepDive_Bambu_Lab_Impresion_3D.mp3": "sIA_Reel_11_Bambu_Lab_LiDAR.mp4",
+    "sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3": "sIA_Reel_12_Edge_AI_Galaxy_S25.mp4",
+    "sIA_DeepDive_MCP_Agentes_Produccion.mp3": "sIA_Reel_13_MCP_Agentes_Produccion.mp4",
+    "sIA_Episodio_02_Arquitectos_de_Contexto.mp3": "sIA_Reel_14_Arquitectos_de_Contexto.mp4",
+}
+
+# ==============================================================================
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
@@ -1634,6 +1654,8 @@ def build_all_articles():
         article_url = f"{BASE_URL}/articulos/{article_filename}"
         
         reel_video = meta.get("reel_video") if (filename in RESEARCH_DATABASE) else None
+        if not reel_video and filename in REELS_MAP:
+            reel_video = REELS_MAP[filename]
         
         # Render Article HTML
         html_content = render_article_html(

@@ -1,0 +1,6 @@
+{
+  "name": "sia-tiktok-batch-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module"
+}
