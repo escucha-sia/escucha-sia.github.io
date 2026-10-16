@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:10,560
+JORGE: Dime una sola razón técnica por la que deberíamos seguir creyendo que predecir la siguiente palabra en un texto va a dotar a una IA de sentido común sobre las leyes de la física.
+
+2
+00:00:10,560 --> 00:00:36,888
+DALIA: Porque hasta ahora el escalado masivo de tokens nos ha dado razonamiento aparente, Jorge. Pero Yann LeCún y el equipo de Meta FAIR tienen razón en su último paper: los modelos autorregresivos son matemáticamente miopes. Generan texto token por token en un espacio unidimensional. Si un agente comete un error del dos por ciento en el paso uno, ese error se propaga y amplifica exponencialmente en el paso veinte.
+
+3
+00:00:36,888 --> 00:00:56,472
+JORGE: Exacto. El célebre efecto bola de nieve. Si le pides a un L L M que guíe un brazo robótico o planifique una ruta de rescate, el modelo no tiene noción espacial de inercia, masa ni gravedad. Solo predice qué palabra suena más plausible según su corpus de entrenamiento.
+
+4
+00:00:56,472 --> 00:01:21,576
+DALIA: Ahí es donde entra Yepa: Joint Embedding Predictive Architecture. En lugar de forzar a la red neuronal a reconstruir cada píxel o cada palabra irrelevante del fondo, Yepa predice la evolución de un estado dentro de un espacio de incrustación abstracto. Si un automóvil gira a la izquierda, a la IA no le importa si una hoja de árbol se movió en la acera; le importa la trayectoria invariante y la masa del vehículo.
+
+5
+00:01:21,576 --> 00:01:40,224
+JORGE: Y eso reduce el espacio de búsqueda computacional en órdenes de magnitud. Pero seamos pragmáticos: en producción hoy, si una empresa necesita extraer entidades o generar una consulta SQL, un L L M estructurado sigue siendo el rey. ¿Dónde compite Yepa de verdad?
+
+6
+00:01:40,224 --> 00:01:53,976
+DALIA: Compite donde los L L Ms fracasan miserablemente: en agentes físicos que deben navegar el mundo en tiempo real, procesar video continuo sin colapsar por latencia y aprender causalidad sin millones de tokens de relleno.
+
+7
+00:01:53,976 --> 00:02:07,728
+DALIA: Compite donde los L L Ms fracasan miserablemente: en agentes físicos que deben navegar el mundo en tiempo real, procesar video continuo sin colapsar por latencia y aprender causalidad sin millones de tokens de relleno.
+
+8
+00:02:07,728 --> 00:02:16,248
+JORGE: Y si Yepa rompe el monopolio del token autoregresivo, nuestra cápsula Fuera de la Burbuja rompe el dogma del orquestador centralizado.
+
+9
+00:02:16,248 --> 00:02:37,200
+DALIA: Hablemos de estigmergia digital y la inteligencia de enjambre. La arquitectura agéntica dominante hoy insiste en poner un supermodelo gigantesco como director de orquesta que manda mensajes a agentes secundarios. ¿Qué pasa en producción? Ese orquestador se convierte en un cuello de botella de latencia y un único punto de falla carísimo.
+
+10
+00:02:37,200 --> 00:02:54,336
+JORGE: En la naturaleza, un millón de hormigas o una colonia de termitas construyen catedrales ventiladas sin tener un rey que les diga qué hacer. Cooperan dejando rastros químicos en el entorno: si una zona tiene feromonas de peligro, todas evitan ese camino automáticamente.
+
+11
+00:02:54,336 --> 00:03:20,496
+DALIA: En sistemas distribuidos, esto se traduce en agentes ultra-ligeros de siete millones de parámetros que solo leen y escriben marcas criptográficas en una memoria compartida. Sin orquestador. Las soluciones complejas emergen de reglas locales simples. Un agente detecta una anomalía de red, deja un rastro de prioridad en el bus, y tres agentes de contención reaccionan en paralelo en menos de cinco milisegundos.
+
+12
+00:03:20,496 --> 00:03:46,656
+DALIA: En sistemas distribuidos, esto se traduce en agentes ultra-ligeros de siete millones de parámetros que solo leen y escriben marcas criptográficas en una memoria compartida. Sin orquestador. Las soluciones complejas emergen de reglas locales simples. Un agente detecta una anomalía de red, deja un rastro de prioridad en el bus, y tres agentes de contención reaccionan en paralelo en menos de cinco milisegundos.
+
+13
+00:03:46,656 --> 00:04:01,512
+JORGE: Veredicto técnico para tu arquitectura: no intentes usar L L Ms de razonamiento lento para problemas de control dinámico. Usa Yepa para fundamentación sensorial y enjambres descentralizados para ejecución masiva en el borde.
+
+14
+00:04:01,512 --> 00:04:13,200
+DALIA: Si quieres ver la formulación matemática de la función de pérdida por energía y los esquemas de estigmergia para microservicios, entra ahora mismo a nuestro artículo técnico en escucha-sia punto Git-Jab punto io.
+
+15
+00:04:13,200 --> 00:04:24,336
+JORGE: Y en nuestras redes sociales y canal ya tienes el Reel vertical de cuarenta y cinco segundos con la síntesis visual de esta entrega. ¡Nos escuchamos en el siguiente sIA Focus!
+

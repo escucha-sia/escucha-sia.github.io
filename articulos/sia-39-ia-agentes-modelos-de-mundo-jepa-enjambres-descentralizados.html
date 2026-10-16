@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador | sIA Digital Magazine</title>
+    <meta name="description" content="Capítulo modular (6 min): Por qué la predicción autoregresiva de tokens falla ante las leyes de la física y cómo las representaciones conjuntas basada">
+    <link rel="stylesheet" href="../assets/css/magazine.css">
+    <link rel="icon" type="image/jpeg" href="../cover.jpg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand">
+                <img src="../cover.jpg" alt="sIA Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>sIA Journal</h1>
+                    <span>Revista Digital & Podcast Tech</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#deep-dives" class="nav-link">Deep Dives</a>
+                <a href="../index.html#noticias" class="nav-link">NoticIAs</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="btn-pill btn-spotify">Spotify</a>
+                <a href="../podcast.xml" target="_blank" class="btn-pill btn-rss">Feed RSS</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Revista sIA</a> &rsaquo; <span>IA & Agentes</span> &rsaquo; <span>Artículo</span>
+        </nav>
+
+        <article>
+            <header class="article-header">
+                <span class="badge badge-cyan">IA & Agentes</span>
+                <h1 class="article-title">sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador</h1>
+                <p class="article-subtitle">Capítulo modular (6 min): Por qué la predicción autoregresiva de tokens falla ante las leyes de la física y cómo las representaciones conjuntas basadas en energía superan el cuello de botella de los LLMs.</p>
+
+                <div class="author-bar">
+                    <div>Investigación: <strong>Carlos Corona</strong> & <strong>sIA Editora</strong></div>
+                    <div>•</div>
+                    <div>Fecha: <strong>Thu, 15 Oct 2026 20:31:42 GMT</strong></div>
+                    <div>•</div>
+                    <div>Lectura: <strong>6 min</strong></div>
+                </div>
+            </header>
+
+            <!-- Embedded Audio Player -->
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="spotify-badge-btn" title="Ver en canal de Spotify (sincronizando catálogo)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify Show
+                    </a>
+                </div>
+                <audio controls preload="metadata">
+                    <source src="https://escucha-sia.github.io/audio/sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3" type="audio/mpeg">
+                    <track src="../audio/sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.vtt" kind="subtitles" srclang="es" label="Español (Subtítulos)" default>
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+            
+            <!-- Video Reel Showcase (Vertical 9:16) -->
+            <div class="reel-showcase" id="reel">
+                <div class="reel-showcase-header">
+                    <span class="reel-showcase-title">
+                        <span>🎬</span> <strong>Cápsula en Video Reel (45s):</strong> sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador
+                    </span>
+                    <span class="badge badge-purple" style="font-size: 0.75rem;">Vertical 9:16</span>
+                </div>
+                <div class="reel-wrapper">
+                    <video controls playsinline preload="metadata" poster="../reels/sIA_Reel_15_Modelos_JEPA_Mundo_poster.jpg">
+                        <source src="../reels/sIA_Reel_15_Modelos_JEPA_Mundo.mp4" type="video/mp4">
+                        Tu navegador no soporta video MP4.
+                    </video>
+                </div>
+            </div>
+            
+
+            <!-- Main Article Body -->
+            <div class="article-body">
+                <div class="thesis-callout">
+                    <h4>Tesis Central de Investigación</h4>
+                    <p>"Los modelos autorregresivos sufren acumulación de error exponencial al interactuar con el entorno físico porque carecen de nociones de masa, inercia y causalidad espacial. Las arquitecturas JEPA (Joint Embedding Predictive Architecture) y los enjambres descentralizados mediante estigmergia digital representan la verdadera frontera de la inteligencia agéntica robusta."</p>
+                </div>
+
+                <div style="background: rgba(148, 163, 184, 0.05); padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.9rem; color: #94a3b8;">
+                    <strong>Nexo de Bitácora:</strong> Abre el nuevo ciclo de investigación de sIA sobre modelos no autorregresivos y computación bio-inspirada fuera de la burbuja.
+                </div>
+
+                
+        <section class="article-section">
+            <h2>1. El Callejón sin Salida del Token Autoregresivo</h2>
+            <p>Predecir la siguiente palabra en un texto ha generado la ilusión de razonamiento general, pero en tareas físicas y espaciales la arquitectura de los Transformers tradicionales expone su miopía matemática. Cuando un agente comete un error del 2% en su predicción inicial, ese desvío se acumula y magnifica exponencialmente a lo largo de pasos secuenciales.</p>
+<p>Frente a esto, <strong>JEPA (Joint Embedding Predictive Architecture)</strong> descarta la reconstrucción de detalles irrelevantes del entorno y predice directamente la evolución de estados en un espacio de incrustación latente invariante a transformaciones irrelevantes.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>2. Fuera de la Burbuja: Enjambres sin Orquestador y Estigmergia Digital</h2>
+            <p>La arquitectura de agentes predominante centraliza la toma de decisiones en un supermodelo orquestador que devora tokens y se convierte en un cuello de botella de latencia crítica.</p>
+<p>Inspirados en colonias de termitas y enjambres biológicos, los sistemas agénticos descentralizados operan mediante <strong>estigmergia digital</strong>: agentes ultra-ligeros (SLMs en el borde) que leen y escriben marcas criptográficas en una memoria distribuida sin requerir un orquestador central, resolviendo incidentes y adaptándose a fallas en menos de 5 milisegundos.</p>
+        </section>
+        
+
+                <!-- APA Bibliography Section -->
+                <section class="apa-section">
+                    <h3>📚 Referencias Bibliográficas (Formato APA 7ª Edición)</h3>
+                    <ul class="apa-list">
+                        <li class="apa-item">LeCun, Y. (2022). <em>A path towards autonomous machine intelligence</em>. OpenReview.</li>
+<li class="apa-item">Assran, M., et al. (2024). <em>Self-supervised learning from images with a joint-embedding predictive architecture</em>. CVPR.</li>
+<li class="apa-item">Corona, C. (2026). <em>sIA Research: Fenomenología de modelos basados en energía y enjambres estigmérgicos</em>. sIA Technical Publications.</li>
+
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Revista Digital</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank">Spotify Show</a>
+                <a href="../podcast.xml">Feed RSS</a>
+                <a href="https://github.com/escucha-sia/escucha-sia.github.io" target="_blank">GitHub Repository</a>
+            </div>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
+        </div>
+    </footer>
+
+    <!-- Anti-Copy & Content Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

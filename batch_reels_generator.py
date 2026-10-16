@@ -286,6 +286,22 @@ REELS_CATALOG = [
         "theme": "violet",
         "start_time": "00:00:01.0",
         "duration": 18.5
+    },
+    {
+        "id": "reel_15",
+        "audio_source": "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3",
+        "output_reel": "sIA_Reel_15_Modelos_JEPA_Mundo.mp4",
+        "badge_tag": "sIA #39",
+        "category_name": "IA & AGENTES",
+        "pill_text": "🧠 WORLD MODELS • JEPA",
+        "hook_title": "¿Por qué predecir tokens de texto <span class=\"hl\">jamás entenderá el mundo físico</span>?",
+        "kinetic_1": "Los LLMs son ciegos a la inercia, masa y física del entorno.",
+        "sub_1": "⚠️ ERROR EXPONENCIAL DE TOKENS",
+        "kinetic_2": "JEPA y los enjambres sin orquestador: el verdadero futuro de la IA.",
+        "sub_2": "⚡ ESTIGMERGIA & LATENCIA CERO",
+        "theme": "cyan",
+        "start_time": "00:00:00.5",
+        "duration": 18.5
     }
 ]
 

@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3": "sIA_Reel_15_Modelos_JEPA_Mundo.mp4",
     "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-12.mp3": "sIA_Reel_05_Horror_Psicologico_FullDive.mp4",
     "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-12.mp3": "sIA_Reel_06_Maker_Bambu_Lab_PETG.mp4",
     "sIA_Daily_S03_Hardware_Calibre_DRM_Electroquimica_2026-10-12.mp3": "sIA_Reel_07_Hardware_DRM_EReaders.mp4",
@@ -106,6 +107,41 @@ A diferencia del terror gótico clásico basado en monstruos y maldiciones antro
             "Searchandrescuewoods. (2015). *I'm a search and rescue officer for the US Forest Service, I have some stories to tell*. Reddit (r/nosleep).",
             "Fisher, M. (2016). *The weird and the eerie*. Repeater Books.",
             "Corona, C. (2026). *sIA Terror: Fenomenología del horror liminal y crónicas de Reddit*. sIA Technical Publications."
+        ]
+    },
+    # 0. Episodio 39 - 15 de Octubre de 2026
+    "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3": {
+        "slug": "sia-39-ia-agentes-modelos-de-mundo-jepa-enjambres-descentralizados",
+        "category": "IA & Agentes",
+        "badge_color": "cyan",
+        "read_time": "6 min",
+        "title": "sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador",
+        "subtitle": "Capítulo modular (6 min): Por qué la predicción autoregresiva de tokens falla ante las leyes de la física y cómo las representaciones conjuntas basadas en energía superan el cuello de botella de los LLMs.",
+        "thesis": "Los modelos autorregresivos sufren acumulación de error exponencial al interactuar con el entorno físico porque carecen de nociones de masa, inercia y causalidad espacial. Las arquitecturas JEPA (Joint Embedding Predictive Architecture) y los enjambres descentralizados mediante estigmergia digital representan la verdadera frontera de la inteligencia agéntica robusta.",
+        "nexo": "Abre el nuevo ciclo de investigación de sIA sobre modelos no autorregresivos y computación bio-inspirada fuera de la burbuja.",
+        "reel_video": "sIA_Reel_15_Modelos_JEPA_Mundo.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Callejón sin Salida del Token Autoregresivo",
+                "body": """
+Predecir la siguiente palabra en un texto ha generado la ilusión de razonamiento general, pero en tareas físicas y espaciales la arquitectura de los Transformers tradicionales expone su miopía matemática. Cuando un agente comete un error del 2% en su predicción inicial, ese desvío se acumula y magnifica exponencialmente a lo largo de pasos secuenciales.
+
+Frente a esto, **JEPA (Joint Embedding Predictive Architecture)** descarta la reconstrucción de detalles irrelevantes del entorno y predice directamente la evolución de estados en un espacio de incrustación latente invariante a transformaciones irrelevantes.
+"""
+            },
+            {
+                "title": "2. Fuera de la Burbuja: Enjambres sin Orquestador y Estigmergia Digital",
+                "body": """
+La arquitectura de agentes predominante centraliza la toma de decisiones en un supermodelo orquestador que devora tokens y se convierte en un cuello de botella de latencia crítica.
+
+Inspirados en colonias de termitas y enjambres biológicos, los sistemas agénticos descentralizados operan mediante **estigmergia digital**: agentes ultra-ligeros (SLMs en el borde) que leen y escriben marcas criptográficas en una memoria distribuida sin requerir un orquestador central, resolviendo incidentes y adaptándose a fallas en menos de 5 milisegundos.
+"""
+            }
+        ],
+        "apa_references": [
+            "LeCun, Y. (2022). *A path towards autonomous machine intelligence*. OpenReview.",
+            "Assran, M., et al. (2024). *Self-supervised learning from images with a joint-embedding predictive architecture*. CVPR.",
+            "Corona, C. (2026). *sIA Research: Fenomenología de modelos basados en energía y enjambres estigmérgicos*. sIA Technical Publications."
         ]
     },
     # 0. Episodio Modular 34 - 12 de Octubre de 2026
