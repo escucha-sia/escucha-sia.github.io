@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -17,7 +17,7 @@
         width: 1080px;
         height: 1920px;
         overflow: hidden;
-        background: #020408;
+        background: #030712;
         font-family: 'Plus Jakarta Sans', sans-serif;
         color: #f8fafc;
       }
@@ -25,25 +25,25 @@
         position: relative;
         width: 1080px;
         height: 1920px;
-        background: radial-gradient(circle at 50% 15%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
-                    radial-gradient(circle at 80% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 55%),
-                    #020408;
+        background: radial-gradient(circle at 50% 20%, rgba(6, 182, 212, 0.18) 0%, transparent 60%),
+                    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 55%),
+                    #030712;
         overflow: hidden;
       }
 
-      /* Dynamic Atmospheric Grid */
-      .grid-bg {
+      /* Animated Grid Background */
+      .grid-layer {
         position: absolute;
         inset: 0;
         background-size: 80px 80px;
         background-image: 
-          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 85%);
+          linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
       }
 
-      /* Top Header Elements */
-      .header-wrap {
+      /* Top Header */
+      .top-header {
         position: absolute;
         top: 60px;
         left: 60px;
@@ -51,7 +51,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 20;
+        z-index: 30;
       }
       .badge-brand {
         display: flex;
@@ -59,190 +59,325 @@
         gap: 14px;
         background: rgba(6, 182, 212, 0.12);
         border: 1px solid rgba(6, 182, 212, 0.4);
-        padding: 10px 22px;
+        padding: 10px 24px;
         border-radius: 9999px;
         backdrop-filter: blur(12px);
       }
       .badge-brand .dot {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
         background: #06b6d4;
-        box-shadow: 0 0 16px rgba(6, 182, 212, 0.6);
+        box-shadow: 0 0 16px #06b6d4;
       }
       .badge-brand span {
         font-family: 'JetBrains Mono', monospace;
         font-size: 24px;
         font-weight: 800;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.05em;
         color: #a5f3fc;
       }
-      .badge-category {
+      .badge-topic {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         font-weight: 700;
         color: #e2e8f0;
         background: rgba(255, 255, 255, 0.06);
-        padding: 8px 18px;
+        padding: 8px 20px;
         border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.15);
       }
 
       /* Hook Question Card */
-      .hook-card {
+      .hook-banner {
         position: absolute;
         top: 150px;
         left: 60px;
         right: 60px;
-        background: rgba(10, 14, 23, 0.90);
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid rgba(56, 189, 248, 0.3);
         border-radius: 28px;
-        padding: 24px 32px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        padding: 26px 36px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(20px);
-        z-index: 15;
+        z-index: 25;
       }
-      .hook-card .topic-tag {
+      .hook-tag {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         font-weight: 800;
-        color: #06b6d4;
-        letter-spacing: 0.12em;
+        color: #38bdf8;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
-      .hook-card h1.main-hook {
+      .hook-title {
         font-size: 34px;
         line-height: 1.25;
         font-weight: 800;
         color: #ffffff;
-        letter-spacing: -0.02em;
       }
-      .hl {
+      .hl-cyan {
         color: #22d3ee;
-        text-decoration: underline;
-        text-decoration-color: rgba(6, 182, 212, 0.6);
-        text-underline-offset: 6px;
+        text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+      }
+      .hl-red {
+        color: #f87171;
+        text-shadow: 0 0 20px rgba(248, 113, 113, 0.5);
       }
 
-      /* HERO VISUAL SCHEMATIC STAGE */
-      .schematic-stage {
+      /* =======================================================
+         STAGE 1: LLM TOKEN FAILURE ANIMATED DIAGRAM (0s - 10.2s)
+         ======================================================= */
+      #stage-llm {
         position: absolute;
         top: 360px;
         left: 60px;
         right: 60px;
-        height: 1060px;
-        background: rgba(8, 12, 20, 0.95);
-        border: 2px solid rgba(6, 182, 212, 0.4);
-        border-radius: 32px;
-        padding: 14px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8),
-                    0 0 35px rgba(6, 182, 212, 0.6);
+        height: 1040px;
+        background: linear-gradient(180deg, rgba(23, 15, 25, 0.95), rgba(15, 10, 20, 0.98));
+        border: 2px solid rgba(239, 68, 68, 0.4);
+        border-radius: 36px;
+        padding: 36px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(239, 68, 68, 0.2);
         backdrop-filter: blur(24px);
-        overflow: hidden;
         z-index: 10;
+        display: flex;
+        flex-direction: column;
       }
-      .schematic-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        border-radius: 22px;
-        overflow: hidden;
-        background: #000;
+      .stage-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
       }
-      .schematic-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
+      .stage-title.red { color: #f87171; }
+      .stage-title.cyan { color: #38bdf8; }
+
+      /* Token Chain Visualization */
+      .token-chain-box {
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 24px;
+        margin-bottom: 24px;
       }
-      .scanline {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: linear-gradient(90deg, transparent, #06b6d4, #ffffff, #06b6d4, transparent);
-        box-shadow: 0 0 25px #06b6d4, 0 0 12px #ffffff;
-        opacity: 0.9;
-        z-index: 12;
-      }
-      .hud-overlay {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        z-index: 14;
-      }
-      .hud-badge {
-        position: absolute;
-        top: 18px;
-        right: 18px;
-        background: rgba(0, 0, 0, 0.80);
-        border: 1px solid #06b6d4;
-        padding: 8px 18px;
-        border-radius: 9999px;
+      .token-chain-label {
         font-family: 'JetBrains Mono', monospace;
         font-size: 18px;
-        font-weight: 800;
-        color: #06b6d4;
-        letter-spacing: 0.05em;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 0 18px rgba(6, 182, 212, 0.6);
+        color: #94a3b8;
+        margin-bottom: 16px;
       }
-      .hud-corner {
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #06b6d4;
+      .tokens-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
       }
-      .hud-corner.top-left { top: 12px; left: 12px; border-right: none; border-bottom: none; }
-      .hud-corner.bottom-right { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+      .token-pill {
+        background: rgba(56, 189, 248, 0.15);
+        border: 1px solid #38bdf8;
+        color: #e0f2fe;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+      }
+      .token-arrow {
+        color: #64748b;
+        font-size: 26px;
+      }
+      .token-pill.predict {
+        background: rgba(239, 68, 68, 0.2);
+        border: 2px dashed #ef4444;
+        color: #fca5a5;
+        animation: pulseBorder 1.5s infinite alternate;
+      }
+      @keyframes pulseBorder {
+        from { box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+        to { box-shadow: 0 0 25px rgba(239, 68, 68, 0.8); }
+      }
 
-      /* Kinetic Dialogue & Takeaway Box */
-      .dialogue-box {
+      /* Error Curve Graph */
+      .graph-box {
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-radius: 20px;
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      .graph-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .graph-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fca5a5;
+      }
+      .graph-metric {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 26px;
+        font-weight: 800;
+        color: #ef4444;
+      }
+      .svg-curve {
+        width: 100%;
+        height: 220px;
+      }
+
+      /* Alert Callout */
+      .alert-box {
+        background: rgba(220, 38, 38, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.5);
+        border-radius: 18px;
+        padding: 20px 24px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .alert-icon {
+        font-size: 38px;
+      }
+      .alert-text h4 {
+        font-size: 22px;
+        color: #fecaca;
+        font-weight: 800;
+      }
+      .alert-text p {
+        font-size: 18px;
+        color: #f87171;
+        font-weight: 500;
+      }
+
+      /* =========================================================
+         STAGE 2: JEPA ARCHITECTURE ANIMATED DIAGRAM (10.2s - 18.5s)
+         ========================================================= */
+      #stage-jepa {
         position: absolute;
-        top: 1450px;
+        top: 360px;
         left: 60px;
         right: 60px;
-        height: 180px;
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(9, 9, 11, 0.96));
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        height: 1040px;
+        background: linear-gradient(180deg, rgba(8, 20, 35, 0.96), rgba(5, 12, 22, 0.98));
+        border: 2px solid rgba(6, 182, 212, 0.5);
+        border-radius: 36px;
+        padding: 36px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(6, 182, 212, 0.25);
+        backdrop-filter: blur(24px);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: scale(0.94);
+      }
+
+      /* SVG Architecture Flowchart */
+      .jepa-svg-container {
+        width: 100%;
+        height: 480px;
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(6, 182, 212, 0.3);
         border-radius: 24px;
-        padding: 22px 30px;
+        padding: 20px;
+        overflow: hidden;
+      }
+      .jepa-svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* 3 Big Metric Badges */
+      .metric-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .metric-card {
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(6, 182, 212, 0.35);
+        border-radius: 20px;
+        padding: 20px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .metric-card.full {
+        grid-column: span 2;
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
+        border: 1px solid #22d3ee;
+      }
+      .metric-card .num {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 900;
+        color: #22d3ee;
+      }
+      .metric-card .lbl {
+        font-size: 19px;
+        font-weight: 700;
+        color: #cbd5e1;
+      }
+
+      /* Dialogue Box */
+      .dialogue-card {
+        position: absolute;
+        top: 1440px;
+        left: 60px;
+        right: 60px;
+        height: 190px;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(9, 9, 11, 0.98));
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 24px;
+        padding: 24px 32px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(16px);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index: 15;
+        z-index: 20;
       }
-      .speaker-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
+      .speaker-tag {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 800;
-        color: #06b6d4;
-        text-transform: uppercase;
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 8px;
-        letter-spacing: 0.05em;
+        text-transform: uppercase;
       }
+      .speaker-tag.dalia { color: #c084fc; }
       .dialogue-text {
         font-size: 26px;
         font-weight: 700;
-        line-height: 1.3;
+        line-height: 1.35;
         color: #f8fafc;
       }
 
-      /* Audio Visualizer Waveform */
-      .eq-container {
+      /* Waveform Bars */
+      .eq-bar-wrap {
         position: absolute;
         top: 1650px;
         left: 60px;
         right: 60px;
-        height: 85px;
+        height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -252,21 +387,21 @@
         border-radius: 20px;
         padding: 0 30px;
         backdrop-filter: blur(10px);
-        z-index: 15;
+        z-index: 20;
       }
-      .eq-bar {
+      .eq-stick {
         width: 12px;
         height: 25px;
-        background: linear-gradient(180deg, #06b6d4, #0e7490);
+        background: linear-gradient(180deg, #38bdf8, #0e7490);
         border-radius: 9999px;
-        box-shadow: 0 0 14px rgba(6, 182, 212, 0.6);
+        box-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
         transform-origin: center;
       }
 
-      /* Footer Branding & Spotify Pill */
-      .footer-cta {
+      /* Footer CTA */
+      .footer-strip {
         position: absolute;
-        top: 1755px;
+        top: 1750px;
         left: 60px;
         right: 60px;
         height: 95px;
@@ -275,17 +410,17 @@
         align-items: center;
         padding: 18px 32px;
         background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        border: 1px solid rgba(56, 189, 248, 0.3);
         border-radius: 9999px;
         backdrop-filter: blur(16px);
-        z-index: 15;
+        z-index: 20;
       }
       .footer-left {
         display: flex;
         align-items: center;
         gap: 16px;
       }
-      .spotify-icon {
+      .spot-icon {
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -305,88 +440,206 @@
         font-weight: 500;
         color: #94a3b8;
       }
-      .listen-btn {
+      .cta-btn {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         font-weight: 800;
         color: #ffffff;
-        background: #0891b2;
-        padding: 12px 24px;
+        background: #0284c7;
+        padding: 14px 26px;
         border-radius: 9999px;
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+        box-shadow: 0 0 20px rgba(2, 132, 199, 0.6);
       }
     </style>
   </head>
   <body>
     <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920">
-      <div class="grid-bg"></div>
+      <div class="grid-layer"></div>
 
       <!-- Top Header -->
-      <div class="header-wrap" id="header">
+      <div class="top-header" id="header">
         <div class="badge-brand">
           <div class="dot"></div>
-          <span>sIA DEEP DIVE</span>
+          <span>sIA #39 • DEBATE TÉCNICO</span>
         </div>
-        <div class="badge-category">IA & ARQUITECTURA</div>
+        <div class="badge-topic">META FAIR • WORLD MODELS</div>
       </div>
 
-      <!-- Hook Question Card -->
-      <div class="hook-card" id="main-card">
-        <div class="topic-tag">🎯 DECISIONES DETERMINISTAS</div>
-        <h1 class="main-hook">
-          "¿Por qué usar un LLM para tomar decisiones es el <span class="hl">peor error de ingeniería</span>?"
+      <!-- Hook Banner -->
+      <div class="hook-banner" id="banner">
+        <div class="hook-tag">EL MITO DE LA PREDICCIÓN DE TEXTO</div>
+        <h1 class="hook-title">
+          "¿Por qué predecir el próximo token <span class="hl-red">jamás</span> entenderá las <span class="hl-cyan">leyes de la física</span>?"
         </h1>
       </div>
 
-      <!-- HERO VISUAL SCHEMATIC / ARCHITECTURE DIAGRAM -->
-      <div class="schematic-stage" id="diagram-stage">
-        <div class="schematic-inner">
-          <img src="assets/current_diagram.jpg" alt="Technical Diagram" class="schematic-img" />
-          <div class="scanline" id="scanline"></div>
-          <div class="hud-overlay">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner bottom-right"></div>
-            <div class="hud-badge" id="hud-badge">SISTEMA 1 • LATENCIA 3.8ms</div>
+      <!-- ==========================================
+           STAGE 1: LLM FAILURE DIAGRAM (0.0s - 10.2s)
+           ========================================== -->
+      <div id="stage-llm">
+        <div class="stage-title red">
+          <span>❌ PARADIGMA ACTUAL: TOKENS AUTORREGRESIVOS</span>
+        </div>
+
+        <!-- Token Step Flow -->
+        <div class="token-chain-box">
+          <div class="token-chain-label">GENERACIÓN SECUENCIAL UNIDIMENSIONAL:</div>
+          <div class="tokens-row">
+            <div class="token-pill" id="tp-1">"El auto"</div>
+            <div class="token-arrow">➔</div>
+            <div class="token-pill" id="tp-2">"gira a"</div>
+            <div class="token-arrow">➔</div>
+            <div class="token-pill predict" id="tp-3">"¿...? (98% prob)"</div>
+          </div>
+        </div>
+
+        <!-- Animated Error Curve Graph -->
+        <div class="graph-box">
+          <div class="graph-header">
+            <span class="graph-title">ACUMULACIÓN EXPONENCIAL DE ERROR:</span>
+            <span class="graph-metric" id="err-val">40.8% ERROR</span>
+          </div>
+
+          <!-- SVG Divergence Graph -->
+          <svg class="svg-curve" viewBox="0 0 800 220" fill="none">
+            <!-- Grid lines -->
+            <line x1="50" y1="20" x2="50" y2="180" stroke="#334155" stroke-width="2" />
+            <line x1="50" y1="180" x2="750" y2="180" stroke="#334155" stroke-width="2" />
+            <line x1="50" y1="100" x2="750" y2="100" stroke="#1e293b" stroke-dasharray="6,6" />
+
+            <!-- Labels -->
+            <text x="60" y="40" fill="#64748b" font-family="monospace" font-size="16">Fallo Crítico</text>
+            <text x="60" y="170" fill="#64748b" font-family="monospace" font-size="16">Paso 1 (2%)</text>
+            <text x="650" y="170" fill="#ef4444" font-family="monospace" font-size="16">Paso 20 (40%)</text>
+
+            <!-- Error Exponential Curve -->
+            <path id="curve-path" d="M 50 170 Q 350 160 550 90 T 750 30" stroke="#ef4444" stroke-width="6" stroke-linecap="round" fill="none" />
+            <circle id="curve-dot" cx="750" cy="30" r="10" fill="#ef4444" filter="drop-shadow(0 0 10px #ef4444)" />
+          </svg>
+        </div>
+
+        <!-- Failure Callout -->
+        <div class="alert-box">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-text">
+            <h4>MIOPÍA MATEMÁTICA EN EL MUNDO REAL</h4>
+            <p>Los LLMs no tienen noción espacial de inercia, masa ni gravedad.</p>
           </div>
         </div>
       </div>
 
-      <!-- Kinetic Takeaway / Dialogue Box -->
-      <div class="dialogue-box" id="kinetic-card">
-        <div id="kinetic-phrase-1" style="display: block;">
-          <div class="speaker-pill">🎙️ JORGE (PRODUCCIÓN)</div>
-          <p class="dialogue-text">Los LLMs sufren alucinación no acotada y varianza estocástica en producción.</p>
+      <!-- ==============================================
+           STAGE 2: JEPA ARCHITECTURE DIAGRAM (10.2s - 18.5s)
+           ============================================== -->
+      <div id="stage-jepa">
+        <div class="stage-title cyan">
+          <span>⚡ SOLUCIÓN: ARQUITECTURA JEPA (JOINT EMBEDDING)</span>
         </div>
-        <div id="kinetic-phrase-2" style="display: none;">
-          <div class="speaker-pill">🎙️ DALIA (DECISION MODELS)</div>
-          <p class="dialogue-text">Jev impone tipado estricto (choice, score, boolean) a velocidad de Sistema 1.</p>
+
+        <!-- SVG High-Tech Diagram -->
+        <div class="jepa-svg-container">
+          <svg class="jepa-svg" viewBox="0 0 850 420" fill="none">
+            <!-- Node X (Sensor/Video) -->
+            <rect x="40" y="40" width="180" height="90" rx="16" fill="rgba(6, 182, 212, 0.15)" stroke="#06b6d4" stroke-width="2" />
+            <text x="130" y="80" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="20" font-weight="bold">ESTADO x</text>
+            <text x="130" y="105" text-anchor="middle" fill="#67e8f9" font-family="monospace" font-size="14">(Video / Sensor)</text>
+
+            <!-- Arrow to Encoder -->
+            <path class="anim-arrow" d="M 220 85 L 300 85" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4" />
+
+            <!-- Node Encoder -->
+            <rect x="300" y="40" width="160" height="90" rx="16" fill="rgba(139, 92, 246, 0.2)" stroke="#a855f7" stroke-width="2" />
+            <text x="380" y="80" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="20" font-weight="bold">ENCODER</text>
+            <text x="380" y="105" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="14">Invarianza Espacial</text>
+
+            <!-- Arrow to Sx -->
+            <path class="anim-arrow" d="M 460 85 L 540 85" stroke="#a855f7" stroke-width="3" />
+
+            <!-- Latent Space Orb Sx -->
+            <circle cx="600" cy="85" r="45" fill="rgba(6, 182, 212, 0.25)" stroke="#22d3ee" stroke-width="3" id="orb-sx" />
+            <text x="600" y="92" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24" font-weight="bold">Sx</text>
+
+            <!-- Context / Action -->
+            <rect x="40" y="270" width="180" height="90" rx="16" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" stroke-width="2" />
+            <text x="130" y="310" text-anchor="middle" fill="#fef3c7" font-family="monospace" font-size="20" font-weight="bold">ACCIÓN a</text>
+            <text x="130" y="335" text-anchor="middle" fill="#fcd34d" font-family="monospace" font-size="14">(Trayectoria)</text>
+
+            <!-- Arrow to Predictor -->
+            <path class="anim-arrow" d="M 220 315 L 300 315" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
+
+            <!-- Predictor Block -->
+            <rect x="300" y="270" width="160" height="90" rx="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2" />
+            <text x="380" y="310" text-anchor="middle" fill="#ecfdf5" font-family="monospace" font-size="20" font-weight="bold">PREDICTOR</text>
+            <text x="380" y="335" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="14">Modelo del Mundo</text>
+
+            <!-- Arrow to Sy -->
+            <path class="anim-arrow" d="M 460 315 L 540 315" stroke="#10b981" stroke-width="3" />
+
+            <!-- Latent Space Orb Sy -->
+            <circle cx="600" cy="315" r="45" fill="rgba(16, 185, 129, 0.25)" stroke="#34d399" stroke-width="3" id="orb-sy" />
+            <text x="600" y="322" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24" font-weight="bold">Sy'</text>
+
+            <!-- Energy Loss Connector -->
+            <line x1="600" y1="130" x2="600" y2="270" stroke="#facc15" stroke-width="4" stroke-dasharray="8,6" id="energy-line" />
+            <rect x="670" y="175" width="160" height="60" rx="12" fill="rgba(0,0,0,0.85)" stroke="#facc15" stroke-width="2" />
+            <text x="750" y="202" text-anchor="middle" fill="#fef08a" font-family="monospace" font-size="15" font-weight="bold">PÉRDIDA DE</text>
+            <text x="750" y="222" text-anchor="middle" fill="#facc15" font-family="monospace" font-size="16" font-weight="bold">ENERGÍA D(Sx,Sy)</text>
+          </svg>
+        </div>
+
+        <!-- 3 Metric Badges -->
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span class="num">100x</span>
+            <span class="lbl">Menor Cómputo que LLMs</span>
+          </div>
+          <div class="metric-card">
+            <span class="num">0%</span>
+            <span class="lbl">Alucinación en Video</span>
+          </div>
+          <div class="metric-card full">
+            <span class="num">⚡ CAUSALIDAD FÍSICA REAL</span>
+            <span class="lbl">Predice trayectorias en robótica y agentes sin generar texto.</span>
+          </div>
         </div>
       </div>
 
-      <!-- Waveform Bars -->
-      <div class="eq-container" id="eq-bars">
-        <div class="eq-bar" id="b1"></div>
-        <div class="eq-bar" id="b2"></div>
-        <div class="eq-bar" id="b3"></div>
-        <div class="eq-bar" id="b4"></div>
-        <div class="eq-bar" id="b5"></div>
-        <div class="eq-bar" id="b6"></div>
-        <div class="eq-bar" id="b7"></div>
-        <div class="eq-bar" id="b8"></div>
-        <div class="eq-bar" id="b9"></div>
-        <div class="eq-bar" id="b10"></div>
-        <div class="eq-bar" id="b11"></div>
-        <div class="eq-bar" id="b12"></div>
-        <div class="eq-bar" id="b13"></div>
-        <div class="eq-bar" id="b14"></div>
-        <div class="eq-bar" id="b15"></div>
-        <div class="eq-bar" id="b16"></div>
+      <!-- Dialogue Subtitle Box -->
+      <div class="dialogue-card" id="dialogue-box">
+        <div id="diag-1" style="display: block;">
+          <div class="speaker-tag">🎙️ JORGE (INFRAESTRUCTURA)</div>
+          <p class="dialogue-text">"¿Por qué insistir en que predecir palabras dará sentido común sobre la física?"</p>
+        </div>
+        <div id="diag-2" style="display: none;">
+          <div class="speaker-tag dalia">🎙️ DALIA (ARQUITECTURA)</div>
+          <p class="dialogue-text">"JEPA descarta píxeles inútiles y predice en espacio latente: comprensión física real."</p>
+        </div>
       </div>
 
-      <!-- Footer CTA -->
-      <div class="footer-cta" id="footer">
+      <!-- Audio Bars Visualizer -->
+      <div class="eq-bar-wrap" id="eq-bars">
+        <div class="eq-stick" id="s1"></div>
+        <div class="eq-stick" id="s2"></div>
+        <div class="eq-stick" id="s3"></div>
+        <div class="eq-stick" id="s4"></div>
+        <div class="eq-stick" id="s5"></div>
+        <div class="eq-stick" id="s6"></div>
+        <div class="eq-stick" id="s7"></div>
+        <div class="eq-stick" id="s8"></div>
+        <div class="eq-stick" id="s9"></div>
+        <div class="eq-stick" id="s10"></div>
+        <div class="eq-stick" id="s11"></div>
+        <div class="eq-stick" id="s12"></div>
+        <div class="eq-stick" id="s13"></div>
+        <div class="eq-stick" id="s14"></div>
+        <div class="eq-stick" id="s15"></div>
+        <div class="eq-stick" id="s16"></div>
+      </div>
+
+      <!-- Footer CTA Strip -->
+      <div class="footer-strip" id="footer">
         <div class="footer-left">
-          <div class="spotify-icon">
+          <div class="spot-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="#000000">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.52 17.3c-.2.35-.68.46-1.03.25-2.82-1.72-6.37-2.11-10.55-1.16-.4.09-.81-.16-.9-.56-.09-.4.16-.81.56-.9 4.58-1.05 8.5-.61 11.66 1.34.36.21.47.68.26 1.03zm1.47-3.26c-.27.44-.85.59-1.3.31-3.22-1.98-8.14-2.56-11.95-1.4-.5.15-1.03-.13-1.18-.63-.15-.5.13-1.03.63-1.18 4.36-1.33 9.78-.68 13.48 1.6.45.27.59.85.32 1.3zm.13-3.41c-3.87-2.3-10.25-2.51-13.94-1.39-.6.18-1.22-.16-1.4-.75-.18-.6.16-1.22.75-1.4 4.24-1.29 11.29-1.04 15.73 1.6.54.32.71 1.01.39 1.55-.32.53-1.01.71-1.53.39z"/>
             </svg>
@@ -396,45 +649,82 @@
             <p>escucha-sia.github.io</p>
           </div>
         </div>
-        <div class="listen-btn">ESCUCHAR EN SPOTIFY</div>
+        <div class="cta-btn">ESCUCHAR CAPÍTULO</div>
       </div>
     </div>
 
-    <!-- GSAP Master Animation Timeline -->
+    <!-- GSAP Master Timeline for Animated Diagram -->
     <script>
       const tl = gsap.timeline({ paused: true });
 
-      // 1. Entrance of Header, Main Hook Card & Footer
-      tl.fromTo("#header", { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
-      tl.fromTo("#main-card", { y: 30, opacity: 0, scale: 0.97 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "power4.out" }, 0.5);
-      tl.fromTo("#footer", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.8);
+      // 1. Initial Scene Setup (0.0s - 1.0s)
+      tl.fromTo("#header", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#banner", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.4);
+      tl.fromTo("#stage-llm", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power4.out" }, 0.6);
+      tl.fromTo("#dialogue-box", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.8);
+      tl.fromTo("#footer", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.0);
 
-      // 2. Entrance of Hero Schematic Stage & Laser Scanline
-      tl.fromTo("#diagram-stage", { scale: 0.94, opacity: 0, y: 30 }, { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.6);
-      tl.fromTo("#hud-badge", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 1.0);
+      // 2. Animate Token Chain & Error Growth in Stage 1 (1.0s - 9.0s)
+      tl.fromTo("#tp-1", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 1.2);
+      tl.fromTo("#tp-2", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 2.0);
+      tl.fromTo("#tp-3", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 3.0);
+
+      // SVG Curve Drawing with stroke-dashoffset simulation
+      const curve = document.querySelector("#curve-path");
+      const pathLen = curve.getTotalLength();
+      gsap.set(curve, { strokeDasharray: pathLen, strokeDashoffset: pathLen });
+      tl.to(curve, { strokeDashoffset: 0, duration: 5.5, ease: "power2.inOut" }, 2.5);
+      tl.fromTo("#curve-dot", { scale: 0 }, { scale: 1.4, repeat: 5, yoyo: true, duration: 0.4 }, 7.0);
+
+      // Number count up simulation
+      const errVal = document.querySelector("#err-val");
+      tl.to({ val: 2.0 }, {
+        val: 40.8,
+        duration: 5.5,
+        ease: "power2.inOut",
+        onUpdate: function() {
+          errVal.innerText = this.targets()[0].val.toFixed(1) + "% ERROR";
+        }
+      }, 2.5);
+
+      // ========================================================
+      // 3. TRANSITION FROM LLM STAGE TO JEPA STAGE (10.2s - 11.0s)
+      // ========================================================
+      tl.to("#stage-llm", { scale: 0.9, opacity: 0, y: -40, duration: 0.6, ease: "power3.in" }, 10.2);
+      tl.set("#stage-llm", { display: "none" }, 10.8);
       
-      // Continuous Laser Scanline Sweep down the diagram
-      tl.fromTo("#scanline", { top: "0%" }, { top: "100%", repeat: -1, duration: 2.6, ease: "linear" }, 0);
+      // Dialogue switch to Dalia
+      tl.to("#diag-1", { opacity: 0, y: -15, duration: 0.3 }, 10.2);
+      tl.set("#diag-1", { display: "none" }, 10.5);
+      tl.set("#diag-2", { display: "block" }, 10.5);
+      tl.fromTo("#diag-2", { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 10.6);
 
-      // 3. Kinetic Dialogue Box Entrance & Flip
-      tl.fromTo("#kinetic-card", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 1.2);
+      // JEPA Stage Slam In
+      tl.set("#stage-jepa", { display: "flex" }, 10.8);
+      tl.fromTo("#stage-jepa", { scale: 0.92, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "elastic.out(1, 0.75)" }, 10.9);
 
-      // Switch phrase at 11.5s deterministically
-      tl.to("#kinetic-phrase-1", { opacity: 0, y: -15, duration: 0.35 }, 11.5);
-      tl.set("#kinetic-phrase-1", { display: "none" }, 11.85);
-      tl.set("#kinetic-phrase-2", { display: "block" }, 11.85);
-      tl.fromTo("#kinetic-phrase-2", { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 11.9);
+      // Pulsing Orbs & Energy Line
+      tl.fromTo("#orb-sx", { scale: 0.8 }, { scale: 1.15, repeat: -1, yoyo: true, duration: 0.8, ease: "sine.inOut" }, 11.5);
+      tl.fromTo("#orb-sy", { scale: 0.8 }, { scale: 1.15, repeat: -1, yoyo: true, duration: 0.8, ease: "sine.inOut" }, 11.5);
+      tl.fromTo("#energy-line", { opacity: 0.3 }, { opacity: 1, strokeWidth: 7, repeat: -1, yoyo: true, duration: 0.4 }, 12.0);
 
-      // 4. Audio Bars Animation (Waveform Simulation)
-      const deterministicHeights = [70, 30, 80, 25, 60, 75, 35, 75, 50, 70, 30, 65, 40, 75, 25, 60];
-      const bars = document.querySelectorAll(".eq-bar");
-      bars.forEach((bar, i) => {
-        const targetH = deterministicHeights[i % deterministicHeights.length];
-        tl.to(bar, {
-          height: targetH,
+      // Metric Badges Pop In with Stagger
+      tl.fromTo(".metric-card", 
+        { y: 25, opacity: 0, scale: 0.9 }, 
+        { y: 0, opacity: 1, scale: 1, stagger: 0.25, duration: 0.5, ease: "back.out(2)" }, 
+        12.2
+      );
+
+      // 4. Equalizer Bar Waveform Animation
+      const heights = [65, 25, 75, 20, 55, 70, 30, 75, 45, 65, 25, 60, 35, 70, 20, 55];
+      const sticks = document.querySelectorAll(".eq-stick");
+      sticks.forEach((s, idx) => {
+        const target = heights[idx % heights.length];
+        tl.to(s, {
+          height: target,
           repeat: 45,
           yoyo: true,
-          duration: 0.25 + (i % 5) * 0.05,
+          duration: 0.25 + (idx % 5) * 0.05,
           ease: "sine.inOut"
         }, 0);
       });
