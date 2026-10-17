@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700;800&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -17,721 +17,609 @@
         width: 1080px;
         height: 1920px;
         overflow: hidden;
-        background: #030712;
+        background: #020617;
         font-family: 'Plus Jakarta Sans', sans-serif;
         color: #f8fafc;
       }
-      #scene-root {
+      
+      .canvas-container {
         position: relative;
         width: 1080px;
         height: 1920px;
-        background: radial-gradient(circle at 50% 20%, rgba(6, 182, 212, 0.18) 0%, transparent 60%),
-                    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 55%),
-                    #030712;
-        overflow: hidden;
+        padding: 80px 60px 100px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: 
+          radial-gradient(circle at 50% 15%, rgba(220, 38, 38, 0.18) 0%, transparent 60%),
+          radial-gradient(circle at 50% 70%, rgba(15, 23, 42, 0.8) 0%, transparent 70%),
+          linear-gradient(180deg, #020617 0%, #090d16 50%, #020617 100%);
       }
 
-      /* Animated Grid Background */
-      .grid-layer {
+      /* Grid de telemetría militar */
+      .grid-overlay {
         position: absolute;
         inset: 0;
-        background-size: 80px 80px;
         background-image: 
-          linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-        mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
+          linear-gradient(rgba(239, 68, 68, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(239, 68, 68, 0.05) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
       }
 
-      /* Top Header */
-      .top-header {
+      /* Scanlines sutiles */
+      .scanline {
         position: absolute;
-        top: 60px;
-        left: 60px;
-        right: 60px;
+        inset: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+
+      /* TOP BAR */
+      .header-hud {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 30;
+        z-index: 10;
       }
-      .badge-brand {
-        display: flex;
+      .badge-series {
+        display: inline-flex;
         align-items: center;
-        gap: 14px;
-        background: rgba(6, 182, 212, 0.12);
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        gap: 12px;
         padding: 10px 24px;
+        background: rgba(220, 38, 38, 0.18);
+        border: 1px solid rgba(239, 68, 68, 0.5);
         border-radius: 9999px;
-        backdrop-filter: blur(12px);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 24px;
+        font-weight: 800;
+        color: #fca5a5;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        box-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
       }
-      .badge-brand .dot {
+      .badge-dot {
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background: #06b6d4;
-        box-shadow: 0 0 16px #06b6d4;
+        background: #ef4444;
+        box-shadow: 0 0 14px #ef4444;
+        animation: pulse 1s infinite alternate;
       }
-      .badge-brand span {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 24px;
-        font-weight: 800;
-        letter-spacing: 0.05em;
-        color: #a5f3fc;
+      @keyframes pulse {
+        from { opacity: 0.4; }
+        to { opacity: 1; }
       }
-      .badge-topic {
+      .badge-telemetry {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
-        font-weight: 700;
-        color: #e2e8f0;
-        background: rgba(255, 255, 255, 0.06);
-        padding: 8px 20px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-      }
-
-      /* Hook Question Card */
-      .hook-banner {
-        position: absolute;
-        top: 150px;
-        left: 60px;
-        right: 60px;
-        background: rgba(15, 23, 42, 0.88);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        border-radius: 28px;
-        padding: 26px 36px;
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(20px);
-        z-index: 25;
-      }
-      .hook-tag {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 20px;
-        font-weight: 800;
-        color: #38bdf8;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-      }
-      .hook-title {
-        font-size: 34px;
-        line-height: 1.25;
-        font-weight: 800;
-        color: #ffffff;
-      }
-      .hl-cyan {
-        color: #22d3ee;
-        text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
-      }
-      .hl-red {
-        color: #f87171;
-        text-shadow: 0 0 20px rgba(248, 113, 113, 0.5);
-      }
-
-      /* =======================================================
-         STAGE 1: LLM TOKEN FAILURE ANIMATED DIAGRAM (0s - 10.2s)
-         ======================================================= */
-      #stage-llm {
-        position: absolute;
-        top: 360px;
-        left: 60px;
-        right: 60px;
-        height: 1040px;
-        background: linear-gradient(180deg, rgba(23, 15, 25, 0.95), rgba(15, 10, 20, 0.98));
-        border: 2px solid rgba(239, 68, 68, 0.4);
-        border-radius: 36px;
-        padding: 36px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(239, 68, 68, 0.2);
-        backdrop-filter: blur(24px);
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-      }
-      .stage-title {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 24px;
-      }
-      .stage-title.red { color: #f87171; }
-      .stage-title.cyan { color: #38bdf8; }
-
-      /* Token Chain Visualization */
-      .token-chain-box {
-        background: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 24px;
-        margin-bottom: 24px;
-      }
-      .token-chain-label {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 18px;
         color: #94a3b8;
-        margin-bottom: 16px;
-      }
-      .tokens-row {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-      .token-pill {
-        background: rgba(56, 189, 248, 0.15);
-        border: 1px solid #38bdf8;
-        color: #e0f2fe;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 24px;
-        font-weight: 700;
-        padding: 12px 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
-      }
-      .token-arrow {
-        color: #64748b;
-        font-size: 26px;
-      }
-      .token-pill.predict {
-        background: rgba(239, 68, 68, 0.2);
-        border: 2px dashed #ef4444;
-        color: #fca5a5;
-        animation: pulseBorder 1.5s infinite alternate;
-      }
-      @keyframes pulseBorder {
-        from { box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
-        to { box-shadow: 0 0 25px rgba(239, 68, 68, 0.8); }
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        padding: 8px 20px;
+        border-radius: 8px;
+        letter-spacing: 1px;
       }
 
-      /* Error Curve Graph */
-      .graph-box {
-        background: rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(239, 68, 68, 0.25);
-        border-radius: 20px;
-        padding: 24px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-      }
-      .graph-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .graph-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #fca5a5;
-      }
-      .graph-metric {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 26px;
-        font-weight: 800;
-        color: #ef4444;
-      }
-      .svg-curve {
-        width: 100%;
-        height: 220px;
-      }
-
-      /* Alert Callout */
-      .alert-box {
-        background: rgba(220, 38, 38, 0.15);
-        border: 1px solid rgba(239, 68, 68, 0.5);
-        border-radius: 18px;
-        padding: 20px 24px;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-      .alert-icon {
-        font-size: 38px;
-      }
-      .alert-text h4 {
-        font-size: 22px;
-        color: #fecaca;
-        font-weight: 800;
-      }
-      .alert-text p {
-        font-size: 18px;
-        color: #f87171;
-        font-weight: 500;
-      }
-
-      /* =========================================================
-         STAGE 2: JEPA ARCHITECTURE ANIMATED DIAGRAM (10.2s - 18.5s)
-         ========================================================= */
-      #stage-jepa {
-        position: absolute;
-        top: 360px;
-        left: 60px;
-        right: 60px;
-        height: 1040px;
-        background: linear-gradient(180deg, rgba(8, 20, 35, 0.96), rgba(5, 12, 22, 0.98));
-        border: 2px solid rgba(6, 182, 212, 0.5);
-        border-radius: 36px;
-        padding: 36px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(6, 182, 212, 0.25);
-        backdrop-filter: blur(24px);
+      /* HOOK CARD */
+      .hook-card {
+        margin-top: 30px;
+        padding: 34px 40px;
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        border-radius: 28px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         z-index: 10;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-        transform: scale(0.94);
       }
-
-      /* SVG Architecture Flowchart */
-      .jepa-svg-container {
-        width: 100%;
-        height: 480px;
-        position: relative;
-        background: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(6, 182, 212, 0.3);
-        border-radius: 24px;
-        padding: 20px;
-        overflow: hidden;
-      }
-      .jepa-svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      /* 3 Big Metric Badges */
-      .metric-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin-top: 24px;
-      }
-      .metric-card {
-        background: rgba(15, 23, 42, 0.8);
-        border: 1px solid rgba(6, 182, 212, 0.35);
-        border-radius: 20px;
-        padding: 20px 22px;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .metric-card.full {
-        grid-column: span 2;
-        background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
-        border: 1px solid #22d3ee;
-      }
-      .metric-card .num {
+      .hook-label {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 32px;
-        font-weight: 900;
-        color: #22d3ee;
-      }
-      .metric-card .lbl {
-        font-size: 19px;
-        font-weight: 700;
-        color: #cbd5e1;
-      }
-
-      /* Dialogue Box */
-      .dialogue-card {
-        position: absolute;
-        top: 1440px;
-        left: 60px;
-        right: 60px;
-        height: 190px;
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(9, 9, 11, 0.98));
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        border-radius: 24px;
-        padding: 24px 32px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(16px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 20;
-      }
-      .speaker-tag {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 19px;
+        font-size: 20px;
         font-weight: 800;
-        color: #38bdf8;
+        letter-spacing: 3px;
+        color: #f87171;
+        text-transform: uppercase;
+        margin-bottom: 12px;
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 8px;
-        text-transform: uppercase;
       }
-      .speaker-tag.dalia { color: #c084fc; }
-      .dialogue-text {
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.35;
-        color: #f8fafc;
+      .hook-title {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+      }
+      .hook-title .alert-hl {
+        color: #ef4444;
+        text-shadow: 0 0 20px rgba(239, 68, 68, 0.7);
       }
 
-      /* Waveform Bars */
-      .eq-bar-wrap {
-        position: absolute;
-        top: 1650px;
-        left: 60px;
-        right: 60px;
-        height: 80px;
+      /* HERO STAGE: RADAR & STAIRCASE DIAGRAM */
+      .hero-stage {
+        position: relative;
+        width: 100%;
+        height: 820px;
+        margin-top: 25px;
+        border-radius: 32px;
+        background: rgba(10, 15, 29, 0.85);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        z-index: 10;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        gap: 12px;
-        background: rgba(15, 23, 42, 0.55);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 0 30px;
-        backdrop-filter: blur(10px);
-        z-index: 20;
+        align-items: center;
       }
-      .eq-stick {
-        width: 12px;
-        height: 25px;
-        background: linear-gradient(180deg, #38bdf8, #0e7490);
-        border-radius: 9999px;
-        box-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
-        transform-origin: center;
-      }
-
-      /* Footer CTA */
-      .footer-strip {
+      .stage-header {
         position: absolute;
-        top: 1750px;
-        left: 60px;
-        right: 60px;
-        height: 95px;
+        top: 24px;
+        left: 32px;
+        right: 32px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 32px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        border-radius: 9999px;
-        backdrop-filter: blur(16px);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        color: #ef4444;
+        font-weight: 700;
+        letter-spacing: 1.5px;
         z-index: 20;
       }
-      .footer-left {
+
+      /* RADAR WRAPPER (Act 1) */
+      .radar-container {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .radar-sweep {
+        position: absolute;
+        width: 560px;
+        height: 560px;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, rgba(239, 68, 68, 0.45) 0deg, transparent 65deg, transparent 360deg);
+        transform-origin: center center;
+      }
+
+      /* VECTOR STAIRCASE (Act 2) */
+      .staircase-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+      }
+      .iso-svg {
+        width: 780px;
+        height: 640px;
+      }
+
+      /* TACTICAL CALLOUT PINS */
+      .callout-badge {
+        position: absolute;
+        padding: 12px 20px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(239, 68, 68, 0.6);
+        border-radius: 12px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        font-weight: 800;
+        color: #fca5a5;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(239, 68, 68, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .pin-1 { top: 120px; right: 80px; }
+      .pin-2 { bottom: 180px; left: 70px; }
+      .pin-3 { top: 280px; left: 60px; }
+
+      /* WARNING CHEVRON BAR */
+      .warning-bar {
+        position: absolute;
+        bottom: 24px;
+        left: 32px;
+        right: 32px;
+        padding: 16px 24px;
+        background: rgba(220, 38, 38, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.6);
+        border-radius: 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        font-weight: 800;
+        color: #fee2e2;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-transform: uppercase;
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+      }
+      .warning-icon {
+        color: #ef4444;
+        font-size: 26px;
+      }
+
+      /* SUBTITLES & AUDIO CARD */
+      .subtitles-card {
+        margin-top: 25px;
+        padding: 30px 40px;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 28px;
+        backdrop-filter: blur(20px);
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      .speaker-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        font-weight: 800;
+        color: #f87171;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .subtitles-text {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #f8fafc;
+        margin-top: 10px;
+      }
+
+      /* AUDIO WAVEFORM */
+      .waveform-row {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        height: 48px;
+      }
+      .bar {
+        width: 8px;
+        height: 16px;
+        background: linear-gradient(180deg, #ef4444, #991b1b);
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+      }
+
+      /* FOOTER / SPOTIFY CTA */
+      .footer-cta {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 36px;
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 9999px;
+        z-index: 10;
+      }
+      .spotify-brand {
         display: flex;
         align-items: center;
         gap: 16px;
       }
-      .spot-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: #1db954;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 18px rgba(29, 185, 84, 0.4);
+      .spotify-logo {
+        width: 44px;
+        height: 44px;
+        fill: #1db954;
       }
-      .footer-text h4 {
+      .brand-title {
         font-size: 24px;
         font-weight: 800;
         color: #ffffff;
       }
-      .footer-text p {
+      .brand-sub {
+        font-family: 'JetBrains Mono', monospace;
         font-size: 18px;
-        font-weight: 500;
         color: #94a3b8;
       }
-      .cta-btn {
+      .action-pill {
+        padding: 14px 28px;
+        background: #dc2626;
+        border-radius: 9999px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         font-weight: 800;
         color: #ffffff;
-        background: #0284c7;
-        padding: 14px 26px;
-        border-radius: 9999px;
-        box-shadow: 0 0 20px rgba(2, 132, 199, 0.6);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
       }
     </style>
   </head>
   <body>
-    <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920">
-      <div class="grid-layer"></div>
+    <div id="scene-root" class="canvas-container" data-composition-id="scene" data-width="1080" data-height="1920">
+      <div class="grid-overlay"></div>
+      <div class="scanline"></div>
 
-      <!-- Top Header -->
-      <div class="top-header" id="header">
-        <div class="badge-brand">
-          <div class="dot"></div>
-          <span>sIA #39 • DEBATE TÉCNICO</span>
+      <!-- TOP BAR -->
+      <div class="header-hud">
+        <div class="badge-series">
+          <div class="badge-dot"></div>
+          sIA TERROR • EXPEDIENTE #01
         </div>
-        <div class="badge-topic">META FAIR • WORLD MODELS</div>
+        <div class="badge-telemetry">
+          SAR LOGS // CLASIFICADO
+        </div>
       </div>
 
-      <!-- Hook Banner -->
-      <div class="hook-banner" id="banner">
-        <div class="hook-tag">EL MITO DE LA PREDICCIÓN DE TEXTO</div>
-        <h1 class="hook-title">
-          "¿Por qué predecir el próximo token <span class="hl-red">jamás</span> entenderá las <span class="hl-cyan">leyes de la física</span>?"
-        </h1>
+      <!-- HOOK CARD -->
+      <div class="hook-card" id="hookCard">
+        <div class="hook-label">
+          <span>⚠️</span> TESTIMONIO DE BÚSQUEDA Y RESCATE (r/nosleep)
+        </div>
+        <div class="hook-title">
+          "Si en mitad del bosque ves una <span class="alert-hl">escalera solitaria</span>... jamás subas."
+        </div>
       </div>
 
-      <!-- ==========================================
-           STAGE 1: LLM FAILURE DIAGRAM (0.0s - 10.2s)
-           ========================================== -->
-      <div id="stage-llm">
-        <div class="stage-title red">
-          <span>❌ PARADIGMA ACTUAL: TOKENS AUTORREGRESIVOS</span>
+      <!-- HERO STAGE (Radar & Staircase Diagram) -->
+      <div class="hero-stage" id="heroStage">
+        <div class="stage-header">
+          <span id="stageTitle">RADAR DE BÚSQUEDA // SECTOR NORTE D-7</span>
+          <span id="stageTelemetry">COORD: 46°51'N 121°45'W</span>
         </div>
 
-        <!-- Token Step Flow -->
-        <div class="token-chain-box">
-          <div class="token-chain-label">GENERACIÓN SECUENCIAL UNIDIMENSIONAL:</div>
-          <div class="tokens-row">
-            <div class="token-pill" id="tp-1">"El auto"</div>
-            <div class="token-arrow">➔</div>
-            <div class="token-pill" id="tp-2">"gira a"</div>
-            <div class="token-arrow">➔</div>
-            <div class="token-pill predict" id="tp-3">"¿...? (98% prob)"</div>
-          </div>
-        </div>
+        <!-- ACT 1: Tactical Radar Grid -->
+        <div class="radar-container" id="radarContainer">
+          <svg width="560" height="560" viewBox="0 0 560 560" style="position: absolute;">
+            <!-- Radar rings -->
+            <circle cx="280" cy="280" r="260" fill="none" stroke="rgba(239, 68, 68, 0.25)" stroke-width="2" stroke-dasharray="8 6"/>
+            <circle cx="280" cy="280" r="190" fill="none" stroke="rgba(239, 68, 68, 0.3)" stroke-width="2"/>
+            <circle cx="280" cy="280" r="120" fill="none" stroke="rgba(239, 68, 68, 0.4)" stroke-width="2"/>
+            <circle cx="280" cy="280" r="50" fill="none" stroke="rgba(239, 68, 68, 0.5)" stroke-width="2"/>
+            
+            <!-- Crosshairs -->
+            <line x1="280" y1="10" x2="280" y2="550" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
+            <line x1="10" y1="280" x2="550" y2="280" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
+            
+            <!-- Angle ticks -->
+            <text x="280" y="32" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="700">000° N</text>
+            <text x="535" y="285" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="end" font-weight="700">090° E</text>
+            <text x="280" y="542" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="700">180° S</text>
+            <text x="25" y="285" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="start" font-weight="700">270° W</text>
 
-        <!-- Animated Error Curve Graph -->
-        <div class="graph-box">
-          <div class="graph-header">
-            <span class="graph-title">ACUMULACIÓN EXPONENCIAL DE ERROR:</span>
-            <span class="graph-metric" id="err-val">40.8% ERROR</span>
-          </div>
-
-          <!-- SVG Divergence Graph -->
-          <svg class="svg-curve" viewBox="0 0 800 220" fill="none">
-            <!-- Grid lines -->
-            <line x1="50" y1="20" x2="50" y2="180" stroke="#334155" stroke-width="2" />
-            <line x1="50" y1="180" x2="750" y2="180" stroke="#334155" stroke-width="2" />
-            <line x1="50" y1="100" x2="750" y2="100" stroke="#1e293b" stroke-dasharray="6,6" />
-
-            <!-- Labels -->
-            <text x="60" y="40" fill="#64748b" font-family="monospace" font-size="16">Fallo Crítico</text>
-            <text x="60" y="170" fill="#64748b" font-family="monospace" font-size="16">Paso 1 (2%)</text>
-            <text x="650" y="170" fill="#ef4444" font-family="monospace" font-size="16">Paso 20 (40%)</text>
-
-            <!-- Error Exponential Curve -->
-            <path id="curve-path" d="M 50 170 Q 350 160 550 90 T 750 30" stroke="#ef4444" stroke-width="6" stroke-linecap="round" fill="none" />
-            <circle id="curve-dot" cx="750" cy="30" r="10" fill="#ef4444" filter="drop-shadow(0 0 10px #ef4444)" />
+            <!-- Anomaly Beacon Ping (At 45 degrees, r=160) -->
+            <g id="radarBlip" transform="translate(393, 167)">
+              <circle r="22" fill="none" stroke="#ef4444" stroke-width="2">
+                <animate attributeName="r" values="6;32" dur="1.2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <circle r="8" fill="#ef4444"/>
+              <text x="20" y="6" fill="#fca5a5" font-family="JetBrains Mono" font-size="16" font-weight="800">ANOMALÍA DETECTADA</text>
+            </g>
           </svg>
+          <!-- Rotating Radar Sweep Line -->
+          <div class="radar-sweep" id="radarSweep"></div>
         </div>
 
-        <!-- Failure Callout -->
-        <div class="alert-box">
-          <div class="alert-icon">⚠️</div>
-          <div class="alert-text">
-            <h4>MIOPÍA MATEMÁTICA EN EL MUNDO REAL</h4>
-            <p>Los LLMs no tienen noción espacial de inercia, masa ni gravedad.</p>
-          </div>
-        </div>
-      </div>
+        <!-- ACT 2: Vector Staircase Blueprint -->
+        <div class="staircase-container" id="staircaseContainer">
+          <svg class="iso-svg" viewBox="0 0 780 640">
+            <defs>
+              <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#450a0a" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.6"/>
+              </linearGradient>
+              <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="8" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
 
-      <!-- ==============================================
-           STAGE 2: JEPA ARCHITECTURE DIAGRAM (10.2s - 18.5s)
-           ============================================== -->
-      <div id="stage-jepa">
-        <div class="stage-title cyan">
-          <span>⚡ SOLUCIÓN: ARQUITECTURA JEPA (JOINT EMBEDDING)</span>
-        </div>
+            <!-- Forest Terrain Grid Ground Plane -->
+            <polygon points="120,480 390,340 660,480 390,620" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <text x="390" y="585" fill="#64748b" font-family="JetBrains Mono" font-size="18" text-anchor="middle">SUELO VIRGEN // BOSQUE DENSO (SIN CIMIENTOS)</text>
 
-        <!-- SVG High-Tech Diagram -->
-        <div class="jepa-svg-container">
-          <svg class="jepa-svg" viewBox="0 0 850 420" fill="none">
-            <!-- Node X (Sensor/Video) -->
-            <rect x="40" y="40" width="180" height="90" rx="16" fill="rgba(6, 182, 212, 0.15)" stroke="#06b6d4" stroke-width="2" />
-            <text x="130" y="80" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="20" font-weight="bold">ESTADO x</text>
-            <text x="130" y="105" text-anchor="middle" fill="#67e8f9" font-family="monospace" font-size="14">(Video / Sensor)</text>
+            <!-- ISOMETRIC STAIRS (5 Steps) -->
+            <!-- Step 1 -->
+            <g id="step1" class="stair-step">
+              <polygon points="260,450 340,410 440,410 360,450" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="260,450 360,450 360,480 260,480" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="360,450 440,410 440,440 360,480" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            </g>
 
-            <!-- Arrow to Encoder -->
-            <path class="anim-arrow" d="M 220 85 L 300 85" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4" />
+            <!-- Step 2 -->
+            <g id="step2" class="stair-step">
+              <polygon points="290,400 370,360 470,360 390,400" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="290,400 390,400 390,430 290,430" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="390,400 470,360 470,390 390,430" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            </g>
 
-            <!-- Node Encoder -->
-            <rect x="300" y="40" width="160" height="90" rx="16" fill="rgba(139, 92, 246, 0.2)" stroke="#a855f7" stroke-width="2" />
-            <text x="380" y="80" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="20" font-weight="bold">ENCODER</text>
-            <text x="380" y="105" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="14">Invarianza Espacial</text>
+            <!-- Step 3 -->
+            <g id="step3" class="stair-step">
+              <polygon points="320,350 400,310 500,310 420,350" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="320,350 420,350 420,380 320,380" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="420,350 500,310 500,340 420,380" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            </g>
 
-            <!-- Arrow to Sx -->
-            <path class="anim-arrow" d="M 460 85 L 540 85" stroke="#a855f7" stroke-width="3" />
+            <!-- Step 4 -->
+            <g id="step4" class="stair-step">
+              <polygon points="350,300 430,260 530,260 450,300" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="350,300 450,300 450,330 350,330" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="450,300 530,260 530,290 450,330" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            </g>
 
-            <!-- Latent Space Orb Sx -->
-            <circle cx="600" cy="85" r="45" fill="rgba(6, 182, 212, 0.25)" stroke="#22d3ee" stroke-width="3" id="orb-sx" />
-            <text x="600" y="92" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24" font-weight="bold">Sx</text>
+            <!-- Step 5 (Top into the void) -->
+            <g id="step5" class="stair-step">
+              <polygon points="380,250 460,210 560,210 480,250" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5" filter="url(#redGlow)"/>
+              <polygon points="380,250 480,250 480,280 380,280" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
+              <polygon points="480,250 560,210 560,240 480,280" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            </g>
 
-            <!-- Context / Action -->
-            <rect x="40" y="270" width="180" height="90" rx="16" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" stroke-width="2" />
-            <text x="130" y="310" text-anchor="middle" fill="#fef3c7" font-family="monospace" font-size="20" font-weight="bold">ACCIÓN a</text>
-            <text x="130" y="335" text-anchor="middle" fill="#fcd34d" font-family="monospace" font-size="14">(Trayectoria)</text>
+            <!-- Handrail line ascending into nothingness -->
+            <path id="handrail" d="M 260,420 L 380,220" stroke="#fca5a5" stroke-width="4" stroke-dasharray="6 4" fill="none"/>
+            <circle cx="380" cy="220" r="10" fill="#ef4444" filter="url(#redGlow)"/>
 
-            <!-- Arrow to Predictor -->
-            <path class="anim-arrow" d="M 220 315 L 300 315" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" />
-
-            <!-- Predictor Block -->
-            <rect x="300" y="270" width="160" height="90" rx="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2" />
-            <text x="380" y="310" text-anchor="middle" fill="#ecfdf5" font-family="monospace" font-size="20" font-weight="bold">PREDICTOR</text>
-            <text x="380" y="335" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="14">Modelo del Mundo</text>
-
-            <!-- Arrow to Sy -->
-            <path class="anim-arrow" d="M 460 315 L 540 315" stroke="#10b981" stroke-width="3" />
-
-            <!-- Latent Space Orb Sy -->
-            <circle cx="600" cy="315" r="45" fill="rgba(16, 185, 129, 0.25)" stroke="#34d399" stroke-width="3" id="orb-sy" />
-            <text x="600" y="322" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24" font-weight="bold">Sy'</text>
-
-            <!-- Energy Loss Connector -->
-            <line x1="600" y1="130" x2="600" y2="270" stroke="#facc15" stroke-width="4" stroke-dasharray="8,6" id="energy-line" />
-            <rect x="670" y="175" width="160" height="60" rx="12" fill="rgba(0,0,0,0.85)" stroke="#facc15" stroke-width="2" />
-            <text x="750" y="202" text-anchor="middle" fill="#fef08a" font-family="monospace" font-size="15" font-weight="bold">PÉRDIDA DE</text>
-            <text x="750" y="222" text-anchor="middle" fill="#facc15" font-family="monospace" font-size="16" font-weight="bold">ENERGÍA D(Sx,Sy)</text>
+            <!-- Upward arrow into void -->
+            <path d="M 510,190 L 510,120" stroke="#ef4444" stroke-width="3" stroke-dasharray="5 5" fill="none"/>
+            <polygon points="510,105 500,125 520,125" fill="#ef4444"/>
+            <text x="510" y="85" fill="#fca5a5" font-family="JetBrains Mono" font-size="20" font-weight="800" text-anchor="middle">HACIA EL VACÍO</text>
           </svg>
+
+          <!-- TACTICAL PINS -->
+          <div class="callout-badge pin-1" id="pin1">
+            <span>⛔</span> 0 RUINAS / 0 CIMIENTOS
+          </div>
+          <div class="callout-badge pin-2" id="pin2">
+            <span>✨</span> MADERA PULIDA (CERO MUSGO)
+          </div>
+          <div class="callout-badge pin-3" id="pin3">
+            <span>🔇</span> SILENCIO ACÚSTICO TOTAL
+          </div>
         </div>
 
-        <!-- 3 Metric Badges -->
-        <div class="metric-grid">
-          <div class="metric-card">
-            <span class="num">100x</span>
-            <span class="lbl">Menor Cómputo que LLMs</span>
-          </div>
-          <div class="metric-card">
-            <span class="num">0%</span>
-            <span class="lbl">Alucinación en Video</span>
-          </div>
-          <div class="metric-card full">
-            <span class="num">⚡ CAUSALIDAD FÍSICA REAL</span>
-            <span class="lbl">Predice trayectorias en robótica y agentes sin generar texto.</span>
-          </div>
+        <!-- WARNING PROTOCOL BAR -->
+        <div class="warning-bar" id="warningBar">
+          <span class="warning-icon">⚠️</span>
+          <span>PROTOCOLO SAR 7B: NO TE ACERQUES • NO MIRES DIRECTO • NO SUBAS</span>
         </div>
       </div>
 
-      <!-- Dialogue Subtitle Box -->
-      <div class="dialogue-card" id="dialogue-box">
-        <div id="diag-1" style="display: block;">
-          <div class="speaker-tag">🎙️ JORGE (INFRAESTRUCTURA)</div>
-          <p class="dialogue-text">"¿Por qué insistir en que predecir palabras dará sentido común sobre la física?"</p>
+      <!-- SUBTITLES & AUDIO CARD -->
+      <div class="subtitles-card">
+        <div class="speaker-tag" id="speakerTag">
+          <span>🎙️</span> OFICIAL SAR (JORGE)
         </div>
-        <div id="diag-2" style="display: none;">
-          <div class="speaker-tag dalia">🎙️ DALIA (ARQUITECTURA)</div>
-          <p class="dialogue-text">"JEPA descarta píxeles inútiles y predice en espacio latente: comprensión física real."</p>
+        <div class="subtitles-text" id="subtitlesText">
+          "Hay una orden estricta que todo rescatista aprende en su primera semana..."
+        </div>
+        <div class="waveform-row" id="waveform">
+          <!-- 24 bars -->
         </div>
       </div>
 
-      <!-- Audio Bars Visualizer -->
-      <div class="eq-bar-wrap" id="eq-bars">
-        <div class="eq-stick" id="s1"></div>
-        <div class="eq-stick" id="s2"></div>
-        <div class="eq-stick" id="s3"></div>
-        <div class="eq-stick" id="s4"></div>
-        <div class="eq-stick" id="s5"></div>
-        <div class="eq-stick" id="s6"></div>
-        <div class="eq-stick" id="s7"></div>
-        <div class="eq-stick" id="s8"></div>
-        <div class="eq-stick" id="s9"></div>
-        <div class="eq-stick" id="s10"></div>
-        <div class="eq-stick" id="s11"></div>
-        <div class="eq-stick" id="s12"></div>
-        <div class="eq-stick" id="s13"></div>
-        <div class="eq-stick" id="s14"></div>
-        <div class="eq-stick" id="s15"></div>
-        <div class="eq-stick" id="s16"></div>
-      </div>
-
-      <!-- Footer CTA Strip -->
-      <div class="footer-strip" id="footer">
-        <div class="footer-left">
-          <div class="spot-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="#000000">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.52 17.3c-.2.35-.68.46-1.03.25-2.82-1.72-6.37-2.11-10.55-1.16-.4.09-.81-.16-.9-.56-.09-.4.16-.81.56-.9 4.58-1.05 8.5-.61 11.66 1.34.36.21.47.68.26 1.03zm1.47-3.26c-.27.44-.85.59-1.3.31-3.22-1.98-8.14-2.56-11.95-1.4-.5.15-1.03-.13-1.18-.63-.15-.5.13-1.03.63-1.18 4.36-1.33 9.78-.68 13.48 1.6.45.27.59.85.32 1.3zm.13-3.41c-3.87-2.3-10.25-2.51-13.94-1.39-.6.18-1.22-.16-1.4-.75-.18-.6.16-1.22.75-1.4 4.24-1.29 11.29-1.04 15.73 1.6.54.32.71 1.01.39 1.55-.32.53-1.01.71-1.53.39z"/>
-            </svg>
-          </div>
-          <div class="footer-text">
-            <h4>sIA Podcast</h4>
-            <p>escucha-sia.github.io</p>
+      <!-- FOOTER / SPOTIFY CTA -->
+      <div class="footer-cta">
+        <div class="spotify-brand">
+          <svg class="spotify-logo" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.308c-.218.358-.684.472-1.042.254-2.855-1.745-6.45-2.14-10.684-1.173-.408.093-.816-.162-.909-.57-.093-.408.162-.816.57-.909 4.637-1.06 8.604-.616 11.811 1.356.358.218.472.684.254 1.042zm1.47-3.268c-.275.448-.863.593-1.311.318-3.268-2.01-8.25-2.593-12.116-1.419-.505.153-1.043-.134-1.196-.639-.153-.505.134-1.043.639-1.196 4.417-1.341 9.907-.696 13.666 1.625.448.275.593.863.318 1.311zm.126-3.41c-3.918-2.327-10.37-2.542-14.103-1.408-.601.183-1.24-.162-1.423-.763-.183-.601.162-1.24.763-1.423 4.288-1.302 11.411-1.053 15.918 1.623.541.321.718 1.026.397 1.567-.321.541-1.026.718-1.567.397z"/>
+          </svg>
+          <div>
+            <div class="brand-title">sIA Terror en Spotify</div>
+            <div class="brand-sub">escucha-sia.github.io</div>
           </div>
         </div>
-        <div class="cta-btn">ESCUCHAR CAPÍTULO</div>
+        <div class="action-pill">
+          ESCUCHAR HISTORIA
+        </div>
       </div>
     </div>
 
-    <!-- GSAP Master Timeline for Animated Diagram -->
     <script>
-      const tl = gsap.timeline({ paused: true });
+      // 1. Build Reactive Waveform
+      const waveContainer = document.getElementById("waveform");
+      const barCount = 28;
+      const bars = [];
+      for (let i = 0; i < barCount; i++) {
+        const b = document.createElement("div");
+        b.className = "bar";
+        waveContainer.appendChild(b);
+        bars.push(b);
+      }
 
-      // 1. Initial Scene Setup (0.0s - 1.0s)
-      tl.fromTo("#header", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
-      tl.fromTo("#banner", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.4);
-      tl.fromTo("#stage-llm", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power4.out" }, 0.6);
-      tl.fromTo("#dialogue-box", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.8);
-      tl.fromTo("#footer", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.0);
-
-      // 2. Animate Token Chain & Error Growth in Stage 1 (1.0s - 9.0s)
-      tl.fromTo("#tp-1", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 1.2);
-      tl.fromTo("#tp-2", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 2.0);
-      tl.fromTo("#tp-3", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 3.0);
-
-      // SVG Curve Drawing with stroke-dashoffset simulation
-      const curve = document.querySelector("#curve-path");
-      const pathLen = curve.getTotalLength();
-      gsap.set(curve, { strokeDasharray: pathLen, strokeDashoffset: pathLen });
-      tl.to(curve, { strokeDashoffset: 0, duration: 5.5, ease: "power2.inOut" }, 2.5);
-      tl.fromTo("#curve-dot", { scale: 0 }, { scale: 1.4, repeat: 5, yoyo: true, duration: 0.4 }, 7.0);
-
-      // Number count up simulation
-      const errVal = document.querySelector("#err-val");
-      tl.to({ val: 2.0 }, {
-        val: 40.8,
-        duration: 5.5,
-        ease: "power2.inOut",
-        onUpdate: function() {
-          errVal.innerText = this.targets()[0].val.toFixed(1) + "% ERROR";
-        }
-      }, 2.5);
-
-      // ========================================================
-      // 3. TRANSITION FROM LLM STAGE TO JEPA STAGE (10.2s - 11.0s)
-      // ========================================================
-      tl.to("#stage-llm", { scale: 0.9, opacity: 0, y: -40, duration: 0.6, ease: "power3.in" }, 10.2);
-      tl.set("#stage-llm", { display: "none" }, 10.8);
-      
-      // Dialogue switch to Dalia
-      tl.to("#diag-1", { opacity: 0, y: -15, duration: 0.3 }, 10.2);
-      tl.set("#diag-1", { display: "none" }, 10.5);
-      tl.set("#diag-2", { display: "block" }, 10.5);
-      tl.fromTo("#diag-2", { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 10.6);
-
-      // JEPA Stage Slam In
-      tl.set("#stage-jepa", { display: "flex" }, 10.8);
-      tl.fromTo("#stage-jepa", { scale: 0.92, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "elastic.out(1, 0.75)" }, 10.9);
-
-      // Pulsing Orbs & Energy Line
-      tl.fromTo("#orb-sx", { scale: 0.8 }, { scale: 1.15, repeat: -1, yoyo: true, duration: 0.8, ease: "sine.inOut" }, 11.5);
-      tl.fromTo("#orb-sy", { scale: 0.8 }, { scale: 1.15, repeat: -1, yoyo: true, duration: 0.8, ease: "sine.inOut" }, 11.5);
-      tl.fromTo("#energy-line", { opacity: 0.3 }, { opacity: 1, strokeWidth: 7, repeat: -1, yoyo: true, duration: 0.4 }, 12.0);
-
-      // Metric Badges Pop In with Stagger
-      tl.fromTo(".metric-card", 
-        { y: 25, opacity: 0, scale: 0.9 }, 
-        { y: 0, opacity: 1, scale: 1, stagger: 0.25, duration: 0.5, ease: "back.out(2)" }, 
-        12.2
-      );
-
-      // 4. Equalizer Bar Waveform Animation
-      const heights = [65, 25, 75, 20, 55, 70, 30, 75, 45, 65, 25, 60, 35, 70, 20, 55];
-      const sticks = document.querySelectorAll(".eq-stick");
-      sticks.forEach((s, idx) => {
-        const target = heights[idx % heights.length];
-        tl.to(s, {
-          height: target,
-          repeat: 45,
+      // 2. Animate Waveform
+      bars.forEach((bar, index) => {
+        gsap.to(bar, {
+          height: gsap.utils.random(14, 46),
+          duration: gsap.utils.random(0.2, 0.45),
+          repeat: -1,
           yoyo: true,
-          duration: 0.25 + (idx % 5) * 0.05,
-          ease: "sine.inOut"
-        }, 0);
+          ease: "power1.inOut",
+          delay: index * 0.02
+        });
       });
 
-      window.__timelines = window.__timelines || {};
-      window.__timelines["scene"] = tl;
-      tl.seek(0);
+      // 3. Continuous Radar Sweep
+      gsap.to("#radarSweep", {
+        rotation: 360,
+        duration: 3.5,
+        repeat: -1,
+        ease: "none"
+      });
+
+      // 4. Warning Bar Flashing
+      gsap.to("#warningBar", {
+        backgroundColor: "rgba(220, 38, 38, 0.35)",
+        borderColor: "rgba(239, 68, 68, 0.9)",
+        duration: 0.6,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut"
+      });
+
+      // 5. MASTER TIMELINE FOR VIDEO
+      const tl = gsap.timeline();
+
+      // ACT 1 (0.0s - 10.5s): El Radar y la advertencia inicial
+      tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+      tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
+      tl.from("#radarContainer", { scale: 0.8, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
+
+      // Subtitles Sync
+      // 0s: Orden estricta
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Hay una orden estricta que todo rescatista novato aprende en su primera semana...";
+      }, null, 0.2);
+
+      // 5.5s: Nadie la menciona a turistas
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "No está en los manuales oficiales. Nadie la menciona frente a los turistas...";
+      }, null, 5.5);
+
+      // TRANSITION TO ACT 2 (10.5s): Aparece la escalera en el claro
+      tl.call(() => {
+        document.getElementById("stageTitle").innerHTML = "ESTRUCTURA ANÓMALA // RECONSTRUCCIÓN ISOMÉTRICA";
+        document.getElementById("stageTelemetry").innerHTML = "DESNIVEL: 5 PELDAÑOS • SIN SOPORTE";
+      }, null, 10.5);
+
+      // Fade out Radar, Fade in Staircase
+      tl.to("#radarContainer", { opacity: 0, scale: 1.1, duration: 0.8, ease: "power2.in" }, 10.5);
+      tl.to("#staircaseContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 11.2);
+
+      // Subtitles: Si en mitad de la maleza densa...
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Pero si en mitad de la maleza densa encuentras un tramo de escaleras solitario...";
+      }, null, 10.8);
+
+      // Draw Steps 1 by 1
+      tl.from("#step1", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 11.5);
+      tl.from("#step2", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 12.0);
+      tl.from("#step3", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 12.5);
+      tl.from("#step4", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 13.0);
+      tl.from("#step5", { y: 30, opacity: 0, duration: 0.5, ease: "back.out(1.5)" }, 13.5);
+      tl.from("#handrail", { strokeDashoffset: 300, duration: 0.8, ease: "power2.out" }, 14.0);
+
+      // Callout pins pop in
+      tl.from("#pin1", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 14.4);
+      tl.from("#pin2", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 15.2);
+      tl.from("#pin3", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 16.0);
+
+      // Subtitles: JAMÁS TE ACERQUES
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #ef4444; font-weight: 900;'>...JAMÁS TE ACERQUES. Y bajo ninguna circunstancia subas por ellas.</span>";
+      }, null, 16.8);
+
+      // Pulsing dramatic effect on climax (16.8s -> 22.5s)
+      tl.to("#staircaseContainer", { scale: 1.04, duration: 5.0, ease: "power1.out" }, 17.0);
     </script>
   </body>
 </html>

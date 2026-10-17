@@ -448,7 +448,7 @@ def write_hyperframes_html():
     </style>
   </head>
   <body>
-    <div class="canvas-container">
+    <div id="scene-root" class="canvas-container" data-composition-id="scene" data-width="1080" data-height="1920">
       <div class="grid-overlay"></div>
       <div class="scanline"></div>
 
