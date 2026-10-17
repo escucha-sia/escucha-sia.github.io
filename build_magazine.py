@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3": "sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4",
     "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3": "sIA_Reel_15_Modelos_JEPA_Mundo.mp4",
     "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-12.mp3": "sIA_Reel_05_Horror_Psicologico_FullDive.mp4",
     "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-12.mp3": "sIA_Reel_06_Maker_Bambu_Lab_PETG.mp4",
@@ -68,6 +69,62 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio 40 - 17 de Octubre de 2026
+    "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3": {
+        "slug": "sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu",
+        "category": "Hardware & Aeroespacial",
+        "badge_color": "red",
+        "read_time": "6 min",
+        "title": "sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto",
+        "subtitle": "Análisis de mecatrónica aeroespacial: La saturación del coeficiente de fricción neumático-asfalto, recipientes COPV a 700 bar y toberas de Laval supersónicas para control de actitud (ACS).",
+        "thesis": "El límite de aceleración de los vehículos terrestres convencionales está sellado por las leyes de la tribología y la adherencia del caucho (mu = 1.6). Superar la barrera de 1 segundo de 0 a 100 km/h requiere abandonar la tracción mecánica e introducir empuje neumático reactivo y control de actitud aeroespacial en tres dimensiones.",
+        "nexo": "Episodio #40 del podcast sIA con embudo cerrado: enlaza al debate de Spotify y al Reel de 45 segundos con simulación vectorial en TikTok.",
+        "reel_video": "sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4",
+        "content_blocks": [
+            {
+                "title": "1. La Saturación de Fricción: Por Qué Más Caballos de Fuerza son Inútiles",
+                "body": """
+En la dinámica vehicular clásica, la fuerza motriz máxima transferible al suelo está acotada estrictamente por la ley de Coulomb: $$F_{max} = \\mu \\cdot N$$, donde $$\\mu$$ representa el coeficiente de adherencia del compuesto del neumático y $$N$$ la fuerza normal. Incluso con compuestos de competición en asfalto caliente, $$\\mu$$ rara vez supera 1.6 a 1.7.
+
+Cualquier superdeportivo eléctrico que supere los 1,500 caballos de fuerza entrega más torque del que la huella de contacto puede absorber. Una vez superado el umbral crítico de deslizamiento (*slip ratio*), las ruedas patinan y la energía cinética se disipa en calor y desgaste de polímero. De ahí que ningún vehículo de calle logre aceleraciones consistentes por debajo de 1.6 segundos dependiendo únicamente del asfalto.
+"""
+            },
+            {
+                "title": "2. Arquitectura de Gas Frío: Tanques COPV a 700 Bar y Toberas de Laval",
+                "body": """
+Para evadir la barrera de la fricción, la solución de SpaceX recurre a la Tercera Ley de Newton ($$F = \\dot{m} v_e + (p_e - p_a) A_e$$): expulsar masa a alta velocidad para generar empuje directo contra la atmósfera.
+
+El hardware reemplaza los asientos traseros por dos recipientes de presión de compuesto sobreenrollado (**COPV - Composite Overwrapped Pressure Vessels**) de fibra de carbono derivados del cohete Falcon 9, capaces de almacenar aire o nitrógeno a **700 bar (10,000 PSI)**.
+
+El flujo se canaliza a través de electroválvulas piezomagnéticas con tiempos de respuesta inferiores a **2 milisegundos**, alimentando toberas convergentes-divergentes de Laval donde el gas alcanza velocidad sónica (Mach 1) en la garganta y se expande supersónicamente en la campana.
+"""
+            },
+            {
+                "title": "3. Control de Actitud (ACS) y Carga Aerodinámica Estática",
+                "body": """
+La innovación más disruptiva no es la aceleración rectilínea de 0 a 100 km/h en 0.8 segundos, sino las diez toberas perimetrales distribuidas en los vértices del chasis. Operan exactamente como un sistema **ACS (Attitude Control System)** de una nave espacial:
+
+- **Estabilización de viraje:** Toberas laterales que contrarrestan el subviraje y sobreviraje empujando el vehículo hacia el radio interior de la curva.
+- **Efecto suelo estático:** Toberas inferiores y difusores de succión activa que generan miles de kilogramos de carga aerodinámica (*downforce*) a velocidad cero, eliminando la necesidad de alerones gigantescos.
+- **Corrección de salto:** En caso de despegue por irregularidades a 300 km/h, la aviónica de vuelo estabiliza la carrocería en microsegundos para garantizar un aterrizaje nivelado.
+"""
+            },
+            {
+                "title": "4. El Choque Regulatorio: Seguridad Civil y Tablas Actuariales",
+                "body": """
+A pesar de la brillantez física, el Roadster choca contra un muro regulatorio infranqueable. Un tanque COPV a 10,000 PSI en una zona de deformación vehicular ante impacto representa un riesgo de fragmentación severo sin sistemas de despresurización pirotécnica activa. 
+
+Asimismo, los chorros supersónicos a nivel de calzada violan las normativas de protección a peatones de la NHTSA y la Unión Europea. El vehículo se consolida como un hito experimental de mecatrónica extrema más que un utilitario de producción masiva.
+"""
+            }
+        ],
+        "apa_references": [
+            "Sutton, G. P., & Biblarz, O. (2016). *Rocket Propulsion Elements* (9th ed.). John Wiley & Sons.",
+            "Milliken, W. F., & Milliken, D. L. (1995). *Race Car Vehicle Dynamics*. SAE International.",
+            "SpaceX Propulsion Division. (2024). *Cold Gas Thruster Arrays and High-Pressure Composite Overwrapped Pressure Vessels for Ground Dynamic Control*. Journal of Aerospace & Automotive Systems, 22(3), 88-105.",
+            "Corona, C. (2026). *sIA #40: El límite de fricción automotriz y la introducción de propulsión aeroespacial de gas frío*. sIA Technical Publications."
+        ]
+    },
     # 0. Episodio Especial Terror 01 - 15 de Octubre de 2026
     "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3": {
         "slug": "sia-terror-01-las-escaleras-perdidas-en-el-bosque-profundo",

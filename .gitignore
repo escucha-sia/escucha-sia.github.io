@@ -17,4 +17,5 @@ sia_tiktok_horror/renders/
 sia_tiktok_horror/.hyperframes/
 sia_tiktok_batch_engine/renders/
 sia_tiktok_batch_engine/assets/
-sia_tiktok_batch_engine/.hyperframes/
+sia_tiktok_batch_engine/temp_audio/
+scratch*

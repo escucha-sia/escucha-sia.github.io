@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA #40: Hardware &amp; Aeroespacial — Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto</title>
+      <link>https://escucha-sia.github.io/articulos/sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu.html</link>
+      <description>sIA #40 (6 min): Debate técnico sobre el Tesla Roadster y el paquete SpaceX. La física del límite de fricción neumático-asfalto, tanques COPV a 700 bar, toberas de Laval supersónicas para control de actitud (ACS) y los riesgos termodinámicos y regulatorios de la propulsión de gas frío en tierra. | Leer artículo y ecuaciones APA: https://escucha-sia.github.io/articulos/sia-40-tesla-roadster-spacex-gas-frio-fisica-aeroespacial.html</description>
+      <pubDate>Sat, 17 Oct 2026 12:26:22 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3" length="5527769" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3</guid>
+      <itunes:duration>04:36</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA #39: IA &amp; Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador</title>
       <link>https://escucha-sia.github.io/articulos/sia-39-ia-amp-agentes-modelos-de-mundo-jepa-y-enjambres-sin-.html</link>
       <description>sIA #39 (6 min): Debate técnico sobre por qué predecir el siguiente token es un callejón sin salida para entender la física, la ventaja de JEPA (Joint Embedding Predictive Architecture) y enjambres agénticos descentralizados mediante estigmergia digital. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-39-ia-agentes-modelos-de-mundo-jepa-enjambres-descentralizados.html</description>

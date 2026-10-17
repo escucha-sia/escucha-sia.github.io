@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto | sIA Digital Magazine</title>
+    <meta name="description" content="Análisis de mecatrónica aeroespacial: La saturación del coeficiente de fricción neumático-asfalto, recipientes COPV a 700 bar y toberas de Laval super">
+    <link rel="stylesheet" href="../assets/css/magazine.css">
+    <link rel="icon" type="image/jpeg" href="../cover.jpg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand">
+                <img src="../cover.jpg" alt="sIA Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>sIA Journal</h1>
+                    <span>Revista Digital & Podcast Tech</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#deep-dives" class="nav-link">Deep Dives</a>
+                <a href="../index.html#noticias" class="nav-link">NoticIAs</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="btn-pill btn-spotify">Spotify</a>
+                <a href="../podcast.xml" target="_blank" class="btn-pill btn-rss">Feed RSS</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Revista sIA</a> &rsaquo; <span>Hardware & Aeroespacial</span> &rsaquo; <span>Artículo</span>
+        </nav>
+
+        <article>
+            <header class="article-header">
+                <span class="badge badge-red">Hardware & Aeroespacial</span>
+                <h1 class="article-title">sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto</h1>
+                <p class="article-subtitle">Análisis de mecatrónica aeroespacial: La saturación del coeficiente de fricción neumático-asfalto, recipientes COPV a 700 bar y toberas de Laval supersónicas para control de actitud (ACS).</p>
+
+                <div class="author-bar">
+                    <div>Investigación: <strong>Carlos Corona</strong> & <strong>sIA Editora</strong></div>
+                    <div>•</div>
+                    <div>Fecha: <strong>Sat, 17 Oct 2026 12:26:22 GMT</strong></div>
+                    <div>•</div>
+                    <div>Lectura: <strong>6 min</strong></div>
+                </div>
+            </header>
+
+            <!-- Embedded Audio Player -->
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="spotify-badge-btn" title="Ver en canal de Spotify (sincronizando catálogo)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify Show
+                    </a>
+                </div>
+                <audio controls preload="metadata">
+                    <source src="https://escucha-sia.github.io/audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3" type="audio/mpeg">
+                    <track src="../audio/sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.vtt" kind="subtitles" srclang="es" label="Español (Subtítulos)" default>
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+            
+            <!-- Video Reel Showcase (Vertical 9:16) -->
+            <div class="reel-showcase" id="reel">
+                <div class="reel-showcase-header">
+                    <span class="reel-showcase-title">
+                        <span>🎬</span> <strong>Cápsula en Video Reel (45s):</strong> sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto
+                    </span>
+                    <span class="badge badge-purple" style="font-size: 0.75rem;">Vertical 9:16</span>
+                </div>
+                <div class="reel-wrapper">
+                    <video controls playsinline preload="metadata" poster="../reels/sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio_poster.jpg">
+                        <source src="../reels/sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4" type="video/mp4">
+                        Tu navegador no soporta video MP4.
+                    </video>
+                </div>
+            </div>
+            
+
+            <!-- Main Article Body -->
+            <div class="article-body">
+                <div class="thesis-callout">
+                    <h4>Tesis Central de Investigación</h4>
+                    <p>"El límite de aceleración de los vehículos terrestres convencionales está sellado por las leyes de la tribología y la adherencia del caucho (mu = 1.6). Superar la barrera de 1 segundo de 0 a 100 km/h requiere abandonar la tracción mecánica e introducir empuje neumático reactivo y control de actitud aeroespacial en tres dimensiones."</p>
+                </div>
+
+                <div style="background: rgba(148, 163, 184, 0.05); padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.9rem; color: #94a3b8;">
+                    <strong>Nexo de Bitácora:</strong> Episodio #40 del podcast sIA con embudo cerrado: enlaza al debate de Spotify y al Reel de 45 segundos con simulación vectorial en TikTok.
+                </div>
+
+                
+        <section class="article-section">
+            <h2>1. La Saturación de Fricción: Por Qué Más Caballos de Fuerza son Inútiles</h2>
+            <p>En la dinámica vehicular clásica, la fuerza motriz máxima transferible al suelo está acotada estrictamente por la ley de Coulomb: $$F_{max} = \mu \cdot N$$, donde $$\mu$$ representa el coeficiente de adherencia del compuesto del neumático y $$N$$ la fuerza normal. Incluso con compuestos de competición en asfalto caliente, $$\mu$$ rara vez supera 1.6 a 1.7.</p>
+<p>Cualquier superdeportivo eléctrico que supere los 1,500 caballos de fuerza entrega más torque del que la huella de contacto puede absorber. Una vez superado el umbral crítico de deslizamiento (<em>slip ratio</em>), las ruedas patinan y la energía cinética se disipa en calor y desgaste de polímero. De ahí que ningún vehículo de calle logre aceleraciones consistentes por debajo de 1.6 segundos dependiendo únicamente del asfalto.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>2. Arquitectura de Gas Frío: Tanques COPV a 700 Bar y Toberas de Laval</h2>
+            <p>Para evadir la barrera de la fricción, la solución de SpaceX recurre a la Tercera Ley de Newton ($$F = \dot{m} v_e + (p_e - p_a) A_e$$): expulsar masa a alta velocidad para generar empuje directo contra la atmósfera.</p>
+<p>El hardware reemplaza los asientos traseros por dos recipientes de presión de compuesto sobreenrollado (<strong>COPV - Composite Overwrapped Pressure Vessels</strong>) de fibra de carbono derivados del cohete Falcon 9, capaces de almacenar aire o nitrógeno a <strong>700 bar (10,000 PSI)</strong>.</p>
+<p>El flujo se canaliza a través de electroválvulas piezomagnéticas con tiempos de respuesta inferiores a <strong>2 milisegundos</strong>, alimentando toberas convergentes-divergentes de Laval donde el gas alcanza velocidad sónica (Mach 1) en la garganta y se expande supersónicamente en la campana.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>3. Control de Actitud (ACS) y Carga Aerodinámica Estática</h2>
+            <p>La innovación más disruptiva no es la aceleración rectilínea de 0 a 100 km/h en 0.8 segundos, sino las diez toberas perimetrales distribuidas en los vértices del chasis. Operan exactamente como un sistema <strong>ACS (Attitude Control System)</strong> de una nave espacial:</p>
+<ul>
+<li><strong>Estabilización de viraje:</strong> Toberas laterales que contrarrestan el subviraje y sobreviraje empujando el vehículo hacia el radio interior de la curva.</li>
+<li><strong>Efecto suelo estático:</strong> Toberas inferiores y difusores de succión activa que generan miles de kilogramos de carga aerodinámica (<em>downforce</em>) a velocidad cero, eliminando la necesidad de alerones gigantescos.</li>
+<li><strong>Corrección de salto:</strong> En caso de despegue por irregularidades a 300 km/h, la aviónica de vuelo estabiliza la carrocería en microsegundos para garantizar un aterrizaje nivelado.</li>
+</ul>
+        </section>
+        
+        <section class="article-section">
+            <h2>4. El Choque Regulatorio: Seguridad Civil y Tablas Actuariales</h2>
+            <p>A pesar de la brillantez física, el Roadster choca contra un muro regulatorio infranqueable. Un tanque COPV a 10,000 PSI en una zona de deformación vehicular ante impacto representa un riesgo de fragmentación severo sin sistemas de despresurización pirotécnica activa.</p>
+<p>Asimismo, los chorros supersónicos a nivel de calzada violan las normativas de protección a peatones de la NHTSA y la Unión Europea. El vehículo se consolida como un hito experimental de mecatrónica extrema más que un utilitario de producción masiva.</p>
+        </section>
+        
+
+                <!-- APA Bibliography Section -->
+                <section class="apa-section">
+                    <h3>📚 Referencias Bibliográficas (Formato APA 7ª Edición)</h3>
+                    <ul class="apa-list">
+                        <li class="apa-item">Sutton, G. P., & Biblarz, O. (2016). <em>Rocket Propulsion Elements</em> (9th ed.). John Wiley & Sons.</li>
+<li class="apa-item">Milliken, W. F., & Milliken, D. L. (1995). <em>Race Car Vehicle Dynamics</em>. SAE International.</li>
+<li class="apa-item">SpaceX Propulsion Division. (2024). <em>Cold Gas Thruster Arrays and High-Pressure Composite Overwrapped Pressure Vessels for Ground Dynamic Control</em>. Journal of Aerospace & Automotive Systems, 22(3), 88-105.</li>
+<li class="apa-item">Corona, C. (2026). <em>sIA #40: El límite de fricción automotriz y la introducción de propulsión aeroespacial de gas frío</em>. sIA Technical Publications.</li>
+
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Revista Digital</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank">Spotify Show</a>
+                <a href="../podcast.xml">Feed RSS</a>
+                <a href="https://github.com/escucha-sia/escucha-sia.github.io" target="_blank">GitHub Repository</a>
+            </div>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
+        </div>
+    </footer>
+
+    <!-- Anti-Copy & Content Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

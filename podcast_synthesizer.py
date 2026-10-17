@@ -131,6 +131,12 @@ def clean_for_tts(text: str) -> str:
 
 
 async def process_dialogue(script_text: str, episode_title: str, custom_filename: str = None, episode_description: str = None) -> Path:
+    if isinstance(episode_title, dict):
+        info = episode_title
+        episode_title = info.get("title", "sIA Podcast")
+        custom_filename = info.get("filename", custom_filename)
+        episode_description = info.get("description", episode_description)
+
     lines = script_text.strip().split('\n')
     chunks = []
     chunk_index = 0

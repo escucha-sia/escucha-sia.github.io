@@ -746,7 +746,7 @@ def render_with_hyperframes():
         
     generated_mp4 = ENGINE_DIR / "renders" / "index.mp4"
     if not generated_mp4.exists():
-        potential = list((ENGINE_DIR / "renders").glob("*.mp4"))
+        potential = sorted(list((ENGINE_DIR / "renders").glob("sia_tiktok_batch_engine_*.mp4")), key=os.path.getmtime, reverse=True)
         if potential:
             generated_mp4 = potential[0]
         else:
