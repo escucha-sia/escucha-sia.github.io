@@ -1,56 +1,68 @@
 1
-00:00:00,000 --> 00:00:10,728
-JORGE: Explícame cómo un fabricante pretende homologar legalmente para las calles un vehículo que expulsa chorros de aire supersónico a Mach uno a la altura de las rodillas de cualquier peatón.
+00:00:00,000 --> 00:00:13,944
+JORGE: Bienvenidos a sIA Podcast. Hoy abrimos nuestra sección de Hardware y Aeroespacial para poner bajo la lupa un dilema de ingeniería que tiene dividido al mundo del motor: ¿tocó techo la física del automóvil tradicional?
 
 2
-00:00:10,728 --> 00:00:40,680
-DALIA: Porque la física automotriz tradicional llegó a su muro final, Jorge. Cualquier superdeportivo eléctrico moderno choca de frente contra el coeficiente de fricción del caucho contra el asfalto. Da igual que le metas dos mil caballos de fuerza o tracción vectorial independiente en cada rueda: si superas la adherencia máxima del neumático, la rueda patina y la potencia se disipa en calor y humo. No puedes bajar de uno punto seis segundos de cero a cien de manera consistente usando solo tracción mecánica.
+00:00:13,944 --> 00:00:36,096
+DALIA: Así es, Jorge. En este episodio desmenuzamos el polémico paquete SpaceX anunciado para el Tesla Roadster. La tesis de hoy es contundente: ningún superdeportivo eléctrico moderno podrá acelerar de cero a cien en menos de un segundo usando neumáticos tradicionales, porque la fricción del caucho contra el asfalto tiene un límite físico insalvable.
 
 3
-00:00:40,680 --> 00:00:52,944
-JORGE: Exacto. El límite físico de la fuerza normal por el coeficiente mu. Para acelerar más rápido, la única opción es aumentar el peso artificialmente o empujar otra cosa.
+00:00:36,096 --> 00:01:02,352
+JORGE: Para romper esa barrera, la propuesta no es meter más caballos de fuerza en los motores eléctricos, sino acoplar diez toberas de propulsión de gas frío a setecientos bar de presión directamente en el chasis. En los próximos seis minutos vamos a analizar la termodinámica de estas toberas de Laval, la viabilidad de montar tanques espaciales de fibra de carbono en el tráfico diario y el enorme riesgo de homologación de seguridad vial ante un choque.
 
 4
-00:00:52,944 --> 00:01:16,824
-DALIA: Y esa otra cosa es la masa de aire alrededor del vehículo. La propuesta de SpaceX para el Tesla Roadster no es un capricho estético: es la aplicación directa de la Tercera Ley de Newton. Acción y reacción. Si dejas de empujar la carretera y empiezas a empujar el aire mediante propulsores de gas frío, desacoplas por completo el rendimiento del vehículo del agarre de los neumáticos.
+00:01:02,352 --> 00:01:14,736
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, arranquemos por la física pura de las ruedas. ¿Por qué los mejores ingenieros de neumáticos admiten que el asfalto ya no da para más?
 
 5
-00:01:16,824 --> 00:01:32,952
-JORGE: Pero desmenucemos la ingeniería real, Dalia, porque esto no es magia. Estamos hablando de recipientes de presión de compuesto sobreenrollado, los famosos tanques COPV de fibra de carbono que SpaceX utiliza en la etapa superior del cohete Falcon nueve.
+00:01:14,736 --> 00:01:43,824
+JORGE: Es pura física newtoniana, Dalia. Cualquier superdeportivo eléctrico moderno choca de frente contra el coeficiente de fricción del caucho contra el pavimento. Da igual que le metas dos mil caballos de fuerza o tracción vectorial independiente en cada rueda: si superas la adherencia máxima del neumático, la rueda patina y la potencia se disipa en calor y humo. No puedes bajar de uno punto seis segundos de cero a cien de manera consistente usando solo tracción mecánica.
 
 6
-00:01:32,952 --> 00:01:47,568
-DALIA: Así es. Esos tanques van empacados en el espacio donde normalmente estarían los asientos traseros del auto, almacenando aire ultracomprimido o nitrógeno a más de setecientos bar de presión, unas diez mil libras por pulgada cuadrada.
+00:01:43,824 --> 00:01:56,544
+DALIA: Exacto. El límite físico de la fuerza normal multiplicada por el coeficiente mu. Para acelerar más rápido, la única opción es aumentar el peso artificialmente o empujar otra cosa.
 
 7
-00:01:47,568 --> 00:02:12,792
-JORGE: Y a esa presión, una fuga microscópica corta metal como si fuera mantequilla. El sistema integra válvulas piezomagnéticas con tiempos de apertura de menos de dos milisegundos y toberas convergentes-divergentes de Laval. En la garganta de la tobera, el flujo de gas se acelera a la velocidad del sonido, y al expandirse en la campana alcanza velocidades supersónicas generando empuje puro instantáneo.
+00:01:56,544 --> 00:02:21,768
+JORGE: Y esa otra cosa es la masa de aire alrededor del vehículo. La propuesta de SpaceX para el Roadster no es un capricho estético de marketing: es la aplicación directa de la Tercera Ley de Newton. Acción y reacción. Si dejas de empujar la carretera y empiezas a empujar el aire mediante propulsores de gas frío, desacoplas por completo el rendimiento del vehículo del agarre de los neumáticos.
 
 8
-00:02:12,792 --> 00:02:41,472
-DALIA: Y lo fascinante no es solo la aceleración en línea recta de cero a cien en cero punto ocho segundos. El verdadero salto arquitectónico está en las diez toberas perimetrales distribuidas en el chasis. Es un sistema de control de actitud aeroespacial en tierra. Si entras a una curva a doscientos kilómetros por hora, las toberas exteriores empujan hacia abajo y hacia el centro de la curva, generando toneladas de carga aerodinámica estática sin necesidad de alerones gigantescos.
+00:02:21,768 --> 00:02:37,847
+DALIA: Pero desmenucemos la ingeniería real, porque esto no es magia ni ciencia ficción. Estamos hablando de recipientes de presión de compuesto sobreenrollado, los famosos tanques COPV de fibra de carbono que SpaceX utiliza en la etapa superior del cohete Falcon nueve.
 
 9
-00:02:41,472 --> 00:02:58,464
-JORGE: Entremos a nuestra cápsula Fuera de la Burbuja, porque la termodinámica no tiene departamento de marketing. El impulso específico del aire comprimido es miserable: ronda los sesenta a setenta segundos, comparado con los más de trescientos segundos de un propelente químico.
+00:02:37,847 --> 00:02:56,735
+JORGE: Esos tanques van empacados en el espacio donde normalmente estarían los asientos traseros del auto, almacenando aire ultracomprimido o nitrógeno a más de setecientos bar de presión, unas diez mil libras por pulgada cuadrada. A esa presión, una fuga microscópica corta metal como si fuera mantequilla.
 
 10
-00:02:58,464 --> 00:03:24,792
-DALIA: Totalmente. Una descarga continua vacía los tanques en apenas diez a doce segundos de empuje total. El compresor eléctrico a bordo, alimentado por el paquete estructural de baterías, tarda más de quince minutos en recuperar la presión operativa de los setecientos bar. Es un sistema para pulsos de milisegundos en momentos críticos, no para volar de forma sostenida como insinúan los titulares de prensa sensacionalistas.
+00:02:56,735 --> 00:03:15,215
+DALIA: El sistema integra válvulas piezomagnéticas con tiempos de apertura de menos de dos milisegundos y toberas convergentes-divergentes de Laval. En la garganta de la tobera, el flujo de gas se acelera a la velocidad del sonido, y al expandirse en la campana alcanza velocidades supersónicas generando empuje puro instantáneo.
 
 11
-00:03:24,792 --> 00:03:51,504
-JORGE: Y la gran pregunta de ingeniería civil: la homologación de seguridad de la NHTSA. En una colisión a alta velocidad, un tanque COPV cargado a diez mil PSI dentro de la celda de deformación estructural del habitáculo representa un riesgo explosivo catastrófico si no cuenta con discos de ruptura pirotécnicos que liberen la presión en microsegundos. Ninguna aseguradora civil tiene tablas actuariales para cubrir propulsores supersónicos en avenidas públicas.
+00:03:15,215 --> 00:03:45,479
+JORGE: Y lo fascinante no es solo la aceleración en línea recta de cero a cien en cero punto ocho segundos. El verdadero salto arquitectónico está en las diez toberas perimetrales distribuidas en el chasis. Es un sistema de control de actitud aeroespacial en tierra. Si entras a una curva a doscientos kilómetros por hora, las toberas exteriores empujan hacia abajo y hacia el centro de la curva, generando toneladas de carga aerodinámica estática sin necesidad de alerones gigantescos.
 
 12
-00:03:51,504 --> 00:04:05,784
-JORGE: Veredicto de arquitectura: el Tesla Roadster con paquete SpaceX no es un auto comercial viable para el día a día; es un laboratorio rodante que demuestra cómo la mecatrónica aeroespacial va a devorar los límites mecánicos del automóvil.
+00:03:45,479 --> 00:04:02,975
+DALIA: Entremos a nuestra cápsula Fuera de la Burbuja, porque la termodinámica no tiene departamento de relaciones públicas. El impulso específico del aire comprimido es miserable: ronda los sesenta a setenta segundos, comparado con los más de trescientos segundos de un propelente químico de cohete.
 
 13
-00:04:05,784 --> 00:04:19,608
-DALIA: Si eres ingeniero y quieres ver el diagrama de bloques del sistema neumático COPV, las ecuaciones de expansión isentrópica y las patentes aeroespaciales en formato APA, revisa el artículo técnico de hoy en escucha-sia punto Git-Jab punto io.
+00:04:02,975 --> 00:04:29,999
+JORGE: Totalmente. Una descarga continua vacía los tanques en apenas diez a doce segundos de empuje total. El compresor eléctrico a bordo, alimentado por el paquete estructural de baterías, tarda más de quince minutos en recuperar la presión operativa de los setecientos bar. Es un sistema para pulsos de milisegundos en momentos críticos, no para volar de forma sostenida como insinúan los titulares de prensa sensacionalistas.
 
 14
-00:04:19,608 --> 00:04:36,264
+00:04:29,999 --> 00:04:56,351
+DALIA: Y está la gran pregunta de ingeniería civil: la homologación de seguridad de la NHTSA. En una colisión a alta velocidad, un tanque COPV cargado a diez mil PSI dentro de la celda de deformación estructural del habitáculo representa un riesgo explosivo catastrófico si no cuenta con discos de ruptura pirotécnicos que liberen la presión en microsegundos. Ninguna aseguradora civil tiene tablas actuariales para cubrir propulsores supersónicos en avenidas públicas.
+
+15
+00:04:56,351 --> 00:05:11,015
+JORGE: Veredicto de arquitectura: el Tesla Roadster con paquete SpaceX no es un auto comercial viable para ir al supermercado; es un laboratorio rodante que demuestra cómo la mecatrónica aeroespacial va a devorar los límites mecánicos del automóvil.
+
+16
+00:05:11,015 --> 00:05:24,839
+DALIA: Si eres ingeniero y quieres ver el diagrama de bloques del sistema neumático COPV, las ecuaciones de expansión isentrópica y las patentes aeroespaciales en formato APA, revisa el artículo técnico de hoy en escucha-sia punto Git-Jab punto io.
+
+17
+00:05:24,839 --> 00:05:41,495
 JORGE: Y si prefieres ver la simulación gráfica animada en dos dimensiones con el chasis vectorial y las toberas disparándose en tiempo real, ya tienes disponible nuestro Reel completo de cuarenta y cinco segundos en TikTok y YouTube Shorts. ¡Nos escuchamos en el siguiente sIA Focus!
 

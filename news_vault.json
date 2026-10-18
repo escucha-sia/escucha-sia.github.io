@@ -1,6 +1,27 @@
 {
   "covered_items": [
     {
+      "title": "sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador",
+      "filename": "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3",
+      "topics": [
+        "Modelos de Mundo no autoregresivos (JEPA y arquitecturas basadas en energía)",
+        "Inteligencia de Enjambre y Estigmergia digital sin orquestador central"
+      ],
+      "cooldown_days": 45,
+      "date": "Thu, 15 Oct 2026 20:30:00 GMT"
+    },
+    {
+      "title": "sIA #40: Hardware & Aeroespacial — Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto",
+      "filename": "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3",
+      "topics": [
+        "Tesla Roadster paquete SpaceX con propulsores de gas frío (Cold Gas Thrusters)",
+        "Límites físicos de fricción neumático-asfalto vs propulsión newtoniana por tanques COPV a 700 bar",
+        "Toberas de Laval supersónicas para control de actitud vehicular (ACS)"
+      ],
+      "cooldown_days": 45,
+      "date": "Sat, 17 Oct 2026 12:00:00 GMT"
+    },
+    {
       "title": "sIA #40: Hardware & Aeroespacial — Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto",
       "filename": "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3",
       "topics": [

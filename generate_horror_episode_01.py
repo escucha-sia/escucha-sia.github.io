@@ -1,8 +1,12 @@
 """
 sIA Terror: Crónicas de Reddit — Episodio Especial #01
 Historia: "Las Escaleras Perdidas en el Bosque Profundo" (r/nosleep)
-Formato: Narración inmersiva, tensión atmosférica, historia cerrada con conclusión contundente.
-Embudo: TikTok (Hook escalofriante) -> Spotify (Historia completa 6 min) -> Blog (Adaptación escrita protegida).
+Formato Narrativo sIA 4.0:
+1. Apertura y Brújula de Sección: Identificación del show y la vertical (sIA Terror / Archivos Ocultos).
+2. Resumen Ejecutivo & Tesis: El fenómeno de los rescatistas forestales, anomalías espaciales y la advertencia.
+3. Despegue ("Alcanzarnos"): Inmersión progresiva en el relato de terror.
+4. Tensión y Clímax: El encuentro, el silencio acústico y la mutilación espacial.
+5. Cierre & Embudo Multicanal (Blog Protegido + Reel Vertical).
 """
 
 import sys
@@ -20,41 +24,48 @@ BASE_DIR = Path(r"C:\Carlos\noticias_podcast")
 HORROR_VAULT = BASE_DIR / "horror_vault.json"
 
 SCRIPT_HORROR_01 = """
+[CHAPTER: Apertura & Brújula: sIA Archivos Ocultos y Terror]
+JORGE: Bienvenidos a sIA Podcast. Hoy abrimos nuestra sección de Archivos Ocultos y Crónicas de Terror, el espacio donde exploramos testimonios inexplicables, anomalías tecnológicas y relatos rescatados de los rincones más oscuros de internet.
+DALIA: Así es, Jorge. En este episodio especial investigamos uno de los expedientes más perturbadores de la comunidad de Reddit: las crónicas de los oficiales de búsqueda y rescate del Servicio Forestal y el fenómeno de las escaleras en el bosque profundo. Analizaremos por qué existe la orden estricta e inquebrantable de jamás subir a una de ellas, el misterioso silencio acústico que las rodea y las distorsiones electromagnéticas que registran los radares militares al aproximarse.
+JORGE: Si estás escuchando a solas o caminando de noche, ajusta el volumen de tus audífonos. Alcancemos de lleno el expediente: Dalia, cuéntanos cuál es esa primera advertencia que todo novato aprende en su primer día de patrulla.
+
 [CHAPTER: Prólogo: La Regla de los Parques Nacionales]
-JORGE: Hay una orden estricta que todo oficial de búsqueda y rescate novato aprende en su primera semana en los bosques del norte. No está en los manuales oficiales de guardabosques. Nadie la menciona frente a los turistas. Pero los veteranos te la repiten al oído antes de entrar a zonas vírgenes: si en mitad de la maleza densa, a kilómetros de cualquier camino, encuentras un tramo de escaleras de concreto o madera pulida parada sola en medio de la nada... jamás te acerques. Y bajo ninguna circunstancia subas por ellas.
-DALIA: Parece una broma de bienvenida para asustar novatos. Una leyenda de fogata inventada por gente aburrida en turnos de doce horas. Pero cuando llevas tres años rastreando excursionistas desaparecidos, dejas de reírte. El bosque no es pacífico, Jorge. El bosque salvaje es una masa indiferente de kilómetros de sombras donde las leyes humanas no significan nada. Y esas estructuras no tienen cimientos. No hay ruinas alrededor. No hay clavos oxidados ni vigas podridas de una cabaña inexistente. Es simplemente una escalera solitaria, perfectamente limpia, elevándose hacia las copas de los pinos como si hubiera sido recortada de una casa suburbana y arrojada por una fuerza invisible en medio de la niebla.
+DALIA: Hay una orden estricta que todo oficial de búsqueda y rescate novato aprende en su primera semana en los bosques del norte. No está en los manuales oficiales de guardabosques. Nadie la menciona frente a los turistas. Pero los veteranos te la repiten al oído antes de entrar a zonas vírgenes: si en mitad de la maleza densa, a kilómetros de cualquier camino, encuentras un tramo de escaleras de concreto o madera pulida parada sola en medio de la nada... jamás te acerques. Y bajo ninguna circunstancia subas por ellas.
+JORGE: Parece una broma de bienvenida para asustar novatos. Una leyenda de fogata inventada por gente aburrida en turnos de doce horas. Pero cuando llevas tres años rastreando excursionistas desaparecidos, dejas de reírte. El bosque salvaje es una masa indiferente de sombras donde las leyes humanas no significan nada. Y esas estructuras no tienen cimientos. No hay ruinas alrededor. No hay clavos oxidados ni vigas podridas de una cabaña inexistente. Es simplemente una escalera solitaria, perfectamente limpia, elevándose hacia las copas de los pinos como si hubiera sido arrojada por una fuerza invisible en medio de la niebla.
 
 [CHAPTER: El Encuentro en el Valle Profundo]
-JORGE: Ocurrió a mediados de otoño, en una expedición para localizar a un joven de veinte años que se había separado de su grupo de senderismo cerca de la cuenca del río. Habían pasado cuatro días. Cuando encuentras a una persona tras cuatro días en clima de congelación, el protocolo suele cambiar de rescate a recuperación de cuerpo. Pero este chico seguía dejando huellas erráticas, caminando en círculos perfectos sobre la hojarasca seca.
-DALIA: El equipo se dividió en parejas. Yo iba con un oficial veterano, un tipo con más de quince años de servicio que conocía cada risco y quebrada de esa cordillera. Hacia las tres de la tarde, la niebla bajó tan espeso que apenas podíamos ver a diez metros. Y entonces, el silencio se volvió absoluto. Si alguna vez has estado en un bosque denso, sabes que el silencio total no existe: siempre hay viento entre las ramas, crujido de insectos, el llamado distante de un cuervo. Pero en ese claro, el mundo pareció quedarse mudo, como si alguien hubiera puesto en pausa la realidad.
-JORGE: Y ahí estaba. Una escalera de madera de roble barnizada, con cinco escalones y un pasamanos tallado a mano, emergiendo directamente de la tierra húmeda. Sin una sola brizna de musgo. Sin hojas caídas sobre los peldaños. Brillaba con un lustre perfecto, como si alguien la hubiera encerado cinco minutos antes. Mi compañero me tomó con fuerza del hombro y me susurró con la voz temblorosa: no la mires directo. Camina en dirección contraria y no hagas ruido.
+DALIA: Ocurrió a mediados de otoño, en una expedición para localizar a un joven de veinte años que se había separado de su grupo de senderismo cerca de la cuenca del río. Habían pasado cuatro días. Cuando encuentras a una persona tras cuatro días en clima de congelación, el protocolo suele cambiar de rescate a recuperación de cuerpo. Pero este chico seguía dejando huellas erráticas, caminando en círculos perfectos sobre la hojarasca seca.
+JORGE: El equipo se dividió en parejas. Yo iba con un oficial veterano, un tipo con más de quince años de servicio que conocía cada risco y quebrada de esa cordillera. Hacia las tres de la tarde, la niebla bajó tan espeso que apenas podíamos ver a diez metros. Y entonces, el silencio se volvió absoluto. Si alguna vez has estado en un bosque denso, sabes que el silencio total no existe: siempre hay viento entre las ramas, crujido de insectos, el llamado distante de un cuervo. Pero en ese claro, el mundo pareció quedarse mudo, como si alguien hubiera puesto en pausa la realidad.
+DALIA: Y ahí estaba. Una escalera de madera de roble barnizada, con cinco escalones y un pasamanos tallado a mano, emergiendo directamente de la tierra húmeda. Sin una sola brizna de musgo. Sin hojas caídas sobre los peldaños. Brillaba con un lustre perfecto, como si alguien la hubiera encerado cinco minutos antes. Mi compañero me tomó con fuerza del hombro y me susurró con la voz temblorosa: no la mires directo. Camina en dirección contraria y no hagas ruido.
 
 [CHAPTER: La Tentación y el Clímax]
-DALIA: Pero el novato del equipo dos, que avanzaba a trescientos metros al este por radio, no tuvo la misma disciplina. Por el transmisor escuchamos su respiración agitada. Decía que había encontrado algo raro. Una escalera de caracol de hierro forjado en una meseta rocosa. Le gritamos por el canal de emergencia que retrocediera de inmediato. Pero la curiosidad morbosa es una trampa mortal en la montaña. El novato dijo por radio: solo voy a subir al primer escalón para tener una mejor vista del valle.
-JORGE: En cuanto su bota tocó el metal, la estática en la radio se convirtió en un zumbido agudo insoportable, como un chirrido de frecuencias que te perfora los tímpanos. Luego un grito seco, no de dolor, sino de puro terror primordial. Cuando llegamos al sitio diez minutos después, la escalera seguía ahí. Impecable. Pero el oficial novato estaba sentado al pie de la estructura, con la mirada completamente vacía, mirando al cielo gris sin parpadear.
-DALIA: Su mano izquierda, la que había tocado el pasamanos superior, ya no estaba. No había sangre en la tierra ni signos de mordedura animal. Simplemente el corte era plano, microscópicamente perfecto, como si el tejido biológico y los huesos hubieran sido rebanados a nivel atómico en el límite exacto del último escalón. El novato nunca volvió a hablar una sola palabra coherente; pasó los siguientes seis meses en una institución psiquiátrica dibujando escaleras infinitas en las paredes de su cuarto.
+JORGE: Pero el novato del equipo dos, que avanzaba a trescientos metros al este por radio, no tuvo la misma disciplina. Por el transmisor escuchamos su respiración agitada. Decía que había encontrado algo raro: una escalera de caracol de hierro forjado en una meseta rocosa. Le gritamos por el canal de emergencia que retrocediera de inmediato. Pero la curiosidad morbosa es una trampa mortal en la montaña. El novato dijo por radio: solo voy a subir al primer escalón para tener una mejor vista del valle.
+DALIA: En cuanto su bota tocó el metal, la estática en la radio se convirtió en un zumbido agudo insoportable, como un chirrido de frecuencias que te perfora los tímpanos. Luego un grito seco, no de dolor, sino de puro terror primordial. Cuando llegamos al sitio diez minutos después, la escalera seguía ahí. Impecable. Pero el oficial novato estaba sentado al pie de la estructura, con la mirada completamente vacía, mirando al cielo gris sin parpadear.
+JORGE: Su mano izquierda, la que había tocado el pasamanos superior, ya no estaba. No había sangre en la tierra ni signos de mordedura animal. Simplemente el corte era plano, microscópicamente perfecto, como si el tejido biológico y los huesos hubieran sido rebanados a nivel atómico en el límite exacto del último escalón. El novato nunca volvió a hablar una sola palabra coherente; pasó los siguientes seis meses en una institución psiquiátrica dibujando escaleras infinitas en las paredes de su cuarto.
 
 [CHAPTER: Cierre: La Advertencia Final]
-JORGE: Las montañas de Norteamérica y los grandes bosques del mundo guardan anomalías que la ciencia formal se niega a catalogar porque destruirían nuestra ilusión de control sobre la geografía. Quienes recorremos esos senderos lo sabemos: la naturaleza no siempre es naturaleza. A veces es una trampa con arquitectura propia.
-DALIA: Si alguna vez sales a caminar lejos de los senderos marcados y entre la niebla ves una escalera de madera o concreto erguida en el vacío... no te acerques. No tomes una foto. Da media vuelta despacio, no corras, y reza para que la escalera no se mueva hacia ti.
-JORGE: Este relato fue adaptado del testimonio original de guardabosques publicado en r diagonal nosleep. Puedes leer la crónica literaria completa y el análisis de anomalías espaciales en nuestra revista digital protegida en escucha-sia punto github punto io.
-DALIA: Y si quieres compartir esta advertencia con alguien que ame el senderismo, ya tienes disponible el Reel vertical en nuestras redes. Nos vemos... en las sombras del siguiente sIA Terror.
+DALIA: Las montañas de Norteamérica y los grandes bosques del mundo guardan anomalías que la ciencia formal se niega a catalogar porque destruirían nuestra ilusión de control sobre la geografía. Quienes recorremos esos senderos lo sabemos: la naturaleza no siempre es naturaleza. A veces es una trampa con arquitectura propia.
+JORGE: Si alguna vez sales a caminar lejos de los senderos marcados y entre la niebla ves una escalera de madera o concreto erguida en el vacío... no te acerques. No tomes una foto. Da media vuelta despacio, no corras, y reza para que la escalera no se mueva hacia ti.
+DALIA: Este relato fue adaptado del testimonio original de guardabosques publicado en r diagonal nosleep. Puedes leer la crónica literaria completa y el análisis de anomalías espaciales en nuestra revista digital protegida en escucha-sia punto github punto io.
+JORGE: Y si quieres compartir esta advertencia con alguien que ame el senderismo, ya tienes disponible el Reel vertical en nuestras redes. Nos vemos... en las sombras del siguiente sIA Terror.
 """
 
 async def generate_horror_01():
     print("=" * 70)
-    print("🎬 GENERANDO sIA TERROR #01: LAS ESCALERAS EN EL BOSQUE PROFUNDO")
+    print("🎬 GENERANDO sIA TERROR #01 CON FORMATO NARRATIVO 4.0")
     print("=" * 70)
 
     title = "sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)"
     filename = "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3"
+    description = "sIA Terror #01: Crónicas de Reddit adaptadas. Oficiales de búsqueda y rescate forestal revelan el fenómeno de las escaleras inexplicables en bosques remotos, el silencio acústico de zona cero y las distorsiones espaciales. | Leer adaptación literaria: https://escucha-sia.github.io/articulos/sia-terror-01-las-escaleras-perdidas-en-el-bosque-profundo.html"
     
     # 1. Sintetizar con podcast_synthesizer
     print("\n🎙️ Sintetizando audio inmersivo con Jorge y Dalia...")
     audio_path = await process_dialogue(
         script_text=SCRIPT_HORROR_01,
         episode_title=title,
-        custom_filename=filename
+        custom_filename=filename,
+        episode_description=description
     )
     print(f"✅ Audio generado en: {audio_path}")
 

@@ -1,8 +1,12 @@
 """
 sIA Episode #39 Production Script
 Topic: Modelos de Mundo JEPA (Joint Embedding Predictive Architecture) & Inteligencia de Enjambre
-Formula: Cold Open in media res, zero corporate greetings, technical debate with trade-offs,
-concrete engineering conclusion, funnel to Spotify & Web Magazine.
+Formato Narrativo sIA 4.0:
+1. Apertura y Brújula de Sección: Identificación del show y la vertical (sIA IA & Agentes).
+2. Resumen Ejecutivo & Tesis: Por qué los LLMs no entienden física y la alternativa de JEPA.
+3. Despegue ("Alcanzarnos"): Debate técnico sobre representación latente vs tokens.
+4. Fuera de la Burbuja: Estigmergia digital y enjambres sin orquestador central.
+5. Veredicto Conclusivo & Embudo Multicanal (Blog + Reel Vertical).
 """
 
 import sys
@@ -19,13 +23,17 @@ BASE_DIR = Path(r"C:\Carlos\noticias_podcast")
 NEWS_VAULT = BASE_DIR / "news_vault.json"
 
 SCRIPT_TEXT = """
+[CHAPTER: Apertura & Brújula: sIA IA y Agentes Autónomos]
+JORGE: Bienvenidos a sIA Podcast. Hoy abrimos nuestra sección de Inteligencia Artificial y Sistemas Agénticos para abordar un dilema que está sacudiendo a los laboratorios de investigación: ¿hemos llegado al límite de lo que las máquinas pueden aprender prediciendo la siguiente palabra?
+DALIA: Así es, Jorge. En este episodio desmenuzamos la arquitectura JEPA de Yann LeCun y Meta FAIR: los Modelos de Mundo predictivos en espacios latentes, y cómo la estigmergia digital permite desplegar enjambres de agentes ultra-ligeros sin necesidad de un orquestador central que asfixie el sistema en latencia y costos.
+JORGE: En los próximos minutos vamos a entender por qué predecir tokens en una dimensión es ciego ante la física de la realidad, cómo JEPA anticipa trayectorias y masas descartando el ruido visual, y cómo coordinar miles de agentes como si fueran hormigas digitales en memoria compartida.
+DALIA: Dicho esto, alcancemos de lleno el centro del debate: Jorge, dime una sola razón técnica por la que deberíamos seguir creyendo que predecir la siguiente palabra en un texto va a dotar a una IA de sentido común sobre las leyes de la física.
+
 [CHAPTER: El Callejón sin Salida del Token Autoregresivo]
-JORGE: Dime una sola razón técnica por la que deberíamos seguir creyendo que predecir la siguiente palabra en un texto va a dotar a una IA de sentido común sobre las leyes de la física.
-DALIA: Porque hasta ahora el escalado masivo de tokens nos ha dado razonamiento aparente, Jorge. Pero Yann LeCun y el equipo de Meta FAIR tienen razón en su último paper: los modelos autorregresivos son matemáticamente miopes. Generan texto token por token en un espacio unidimensional. Si un agente comete un error del dos por ciento en el paso uno, ese error se propaga y amplifica exponencialmente en el paso veinte.
-JORGE: Exacto. El célebre efecto bola de nieve. Si le pides a un LLM que guíe un brazo robótico o planifique una ruta de rescate, el modelo no tiene noción espacial de inercia, masa ni gravedad. Solo predice qué palabra suena más plausible según su corpus de entrenamiento.
-DALIA: Ahí es donde entra JEPA: Joint Embedding Predictive Architecture. En lugar de forzar a la red neuronal a reconstruir cada píxel o cada palabra irrelevante del fondo, JEPA predice la evolución de un estado dentro de un espacio de incrustación abstracto. Si un automóvil gira a la izquierda, a la IA no le importa si una hoja de árbol se movió en la acera; le importa la trayectoria invariante y la masa del vehículo.
-JORGE: Y eso reduce el espacio de búsqueda computacional en órdenes de magnitud. Pero seamos pragmáticos: en producción hoy, si una empresa necesita extraer entidades o generar una consulta SQL, un LLM estructurado sigue siendo el rey. ¿Dónde compite JEPA de verdad?
-DALIA: Compite donde los LLMs fracasan miserablemente: en agentes físicos que deben navegar el mundo en tiempo real, procesar video continuo sin colapsar por latencia y aprender causalidad sin millones de tokens de relleno.
+JORGE: Es matemáticamente inviable, Dalia. Hasta ahora el escalado masivo de tokens nos ha dado una ilusión convincente de razonamiento. Pero Yann LeCun y el equipo de Meta FAIR tienen razón en su tesis: los modelos autorregresivos son miopes. Generan texto token por token en un espacio unidimensional. Si un agente comete un error del dos por ciento en el paso uno, ese error se propaga y amplifica exponencialmente en el paso veinte.
+DALIA: Exacto. El célebre efecto bola de nieve. Si le pides a un LLM tradicional que guíe un brazo robótico o planifique una ruta de rescate, el modelo no tiene noción espacial de inercia, masa ni gravedad. Solo predice qué palabra suena más verosímil según su corpus de entrenamiento estadístico.
+JORGE: Ahí es donde entra JEPA: Joint Embedding Predictive Architecture. En lugar de forzar a la red neuronal a reconstruir cada píxel o cada palabra irrelevante del fondo, JEPA predice la evolución de un estado dentro de un espacio de incrustación abstracto. Si un automóvil gira a la izquierda, a la IA no le importa si una hoja de árbol se movió en la acera; le importa la trayectoria invariante y la masa del vehículo.
+DALIA: Y eso reduce el espacio de búsqueda computacional en órdenes de magnitud. Donde los LLMs colapsan por latencia en video continuo o control físico en tiempo real, JEPA aprende causalidad sin millones de tokens de relleno.
 
 [CHAPTER: 🌌 Fuera de la Burbuja: Enjambres sin Orquestador Central]
 JORGE: Y si JEPA rompe el monopolio del token autoregresivo, nuestra cápsula Fuera de la Burbuja rompe el dogma del orquestador centralizado.
@@ -58,25 +66,29 @@ def log_to_news_vault():
         "filename": EPISODE_INFO["filename"],
         "topics": [
             "Modelos de Mundo no autoregresivos (JEPA y arquitecturas basadas en energía)",
-            "Inteligencia Colectiva de Enjambre (Swarm Intelligence) sin orquestador central"
+            "Inteligencia de Enjambre y Estigmergia digital sin orquestador central"
         ],
         "cooldown_days": 45,
         "date": "Thu, 15 Oct 2026 20:30:00 GMT"
     }
+    
     vault_data["covered_items"].insert(0, new_entry)
-    NEWS_VAULT.write_text(json.dumps(vault_data, indent=2, ensure_ascii=False), encoding='utf-8')
-    print(f"🔒 Registrado en {NEWS_VAULT} con cooldown de 45 días anti-repetición.")
+    with open(NEWS_VAULT, "w", encoding="utf-8") as f:
+        json.dump(vault_data, f, indent=2, ensure_ascii=False)
+    print("📋 Registrado en news_vault.json con cooldown estricto de 45 días.")
 
 async def main():
-    print(f"🎙️ Generando Episodio #39: {EPISODE_INFO['title']}...")
-    mp3_path = await process_dialogue(
-        script_text=SCRIPT_TEXT,
+    print("=" * 60)
+    print(f"🎙️ GENERANDO EPISODIO #39 CON NUEVO STORYTELLING: {EPISODE_INFO['title']}")
+    print("=" * 60)
+    await process_dialogue(
+        SCRIPT_TEXT,
         episode_title=EPISODE_INFO["title"],
         custom_filename=EPISODE_INFO["filename"],
         episode_description=EPISODE_INFO["description"]
     )
-    print(f"✅ Audio generado en: {mp3_path}")
     log_to_news_vault()
+    print("✅ ¡Episodio #39 regenerado con éxito con formato narrativo sIA 4.0!")
 
 if __name__ == "__main__":
     asyncio.run(main())
