@@ -1,18 +1,19 @@
 """
 sIA Motion Graphics Reel Generator: Terror #01 (Escaleras en el Bosque)
-Genera un reel cinemático vertical (1080x1920) 100% código en HyperFrames:
-- Radar táctico SAR con barrido continuo 360° en SVG.
-- Detección de anomalía con pulso rojo y coordenadas GPS.
-- Esquema isométrico vectorial de la escalera que se dibuja peldaño por peldaño.
-- Callouts tácticos: 0 Cimientos, Madera Pulida, Cero Musgo, Silencio Acústico.
-- Banner de protocolo de emergencia y subtítulos cinemáticos.
+Tema: Crónicas de Terror / Relatos de Reddit: El Fenómeno de las Escaleras en el Bosque
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo completo y misterio creciente.
+- No es un corte truncado: inicio, advertencia del rescatista, anomalía electromagnética/SAR, y cierre.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog.
 """
 
 import os
 import sys
 import shutil
+import asyncio
 import subprocess
 from pathlib import Path
+import edge_tts
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -24,25 +25,67 @@ REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
 NODE_PATH = r"C:\Carlos\nodejs"
 
-SOURCE_AUDIO = AUDIO_DIR / "sIA_Terror_01_Las_Escaleras_del_Bosque_2026-10-15.mp3"
 TARGET_REEL = REELS_DIR / "sIA_Terror_01_Las_Escaleras_Reel.mp4"
-DURATION = 22.5
+DURATION = 45.0
 
-def extract_teaser_audio():
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_DALIA = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Hay una regla no escrita que todo rescatista forestal aprende en su primer día: si encuentras unas escaleras en medio del bosque profundo... jamás te acerques a ellas."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "No tienen cimientos, ni muros, ni restos de una casa. La madera luce limpia, barnizada y sin una sola mota de musgo, como si hubieran sido colocadas esta misma mañana."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_DALIA,
+        "text": "Al aproximarte, ocurre el silencio acústico: los insectos y las aves enmudecen al instante. El radar SAR registra distorsiones geométricas en la vegetación y los veteranos juran que subir un solo peldaño altera tu noción de regreso."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Lee la crónica completa de anomalías en escucha guion sia punto github punto io, y escucha el relato inmersivo en el especial de Terror de sIA Podcast."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para Terror #01...")
+    temp_dir = ENGINE_DIR / "temp_audio_terror"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+2%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
     clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
     clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
     cmd = [
         "ffmpeg", "-y",
-        "-ss", "00:00:00.0",
-        "-t", str(DURATION),
-        "-i", str(SOURCE_AUDIO),
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-af", "afade=t=out:st=21.0:d=1.5",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
         str(clip_audio)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-    print("✂️ Audio teaser extraído correctamente.")
+    print("✅ Audio de Terror #01 sintetizado y ensamblado con éxito.")
 
 def write_hyperframes_html():
     index_html = f"""<!doctype html>
@@ -179,7 +222,7 @@ def write_hyperframes_html():
         color: #fca5a5;
         letter-spacing: 2px;
         text-transform: uppercase;
-        box-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
+        box-shadow: 0 0 25px rgba(220, 38, 38, 0.3);
       }
       .badge-dot {
         width: 14px;
@@ -187,18 +230,13 @@ def write_hyperframes_html():
         border-radius: 50%;
         background: #ef4444;
         box-shadow: 0 0 14px #ef4444;
-        animation: pulse 1s infinite alternate;
-      }
-      @keyframes pulse {
-        from { opacity: 0.4; }
-        to { opacity: 1; }
       }
       .badge-telemetry {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         color: #94a3b8;
         background: rgba(15, 23, 42, 0.7);
-        border: 1px solid rgba(148, 163, 184, 0.2);
+        border: 1px solid rgba(239, 68, 68, 0.3);
         padding: 8px 20px;
         border-radius: 8px;
         letter-spacing: 1px;
@@ -208,8 +246,8 @@ def write_hyperframes_html():
       .hook-card {
         margin-top: 30px;
         padding: 34px 40px;
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(239, 68, 68, 0.35);
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(239, 68, 68, 0.4);
         border-radius: 28px;
         backdrop-filter: blur(20px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -220,7 +258,7 @@ def write_hyperframes_html():
         font-size: 20px;
         font-weight: 800;
         letter-spacing: 3px;
-        color: #f87171;
+        color: #ef4444;
         text-transform: uppercase;
         margin-bottom: 12px;
         display: flex;
@@ -228,26 +266,27 @@ def write_hyperframes_html():
         gap: 10px;
       }
       .hook-title {
-        font-size: 38px;
+        font-family: 'Cinzel', serif;
+        font-size: 40px;
         font-weight: 900;
         line-height: 1.25;
         letter-spacing: -0.5px;
         color: #ffffff;
       }
       .hook-title .alert-hl {
-        color: #ef4444;
+        color: #f87171;
         text-shadow: 0 0 20px rgba(239, 68, 68, 0.7);
       }
 
-      /* HERO STAGE: RADAR & STAIRCASE DIAGRAM */
+      /* HERO STAGE: RADAR SAR & ISOMETRIC STAIRS */
       .hero-stage {
         position: relative;
         width: 100%;
         height: 820px;
         margin-top: 25px;
         border-radius: 32px;
-        background: rgba(10, 15, 29, 0.85);
-        border: 1px solid rgba(239, 68, 68, 0.25);
+        background: rgba(8, 12, 22, 0.90);
+        border: 1px solid rgba(239, 68, 68, 0.3);
         box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
         overflow: hidden;
         z-index: 10;
@@ -266,32 +305,29 @@ def write_hyperframes_html():
         align-items: center;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
-        color: #ef4444;
+        color: #f87171;
         font-weight: 700;
         letter-spacing: 1.5px;
         z-index: 20;
       }
 
-      /* RADAR WRAPPER (Act 1) */
+      /* ACT 1: SAR RADAR SWEEP */
       .radar-container {
         position: absolute;
-        width: 600px;
+        width: 860px;
         height: 600px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .radar-sweep {
-        position: absolute;
-        width: 560px;
-        height: 560px;
-        border-radius: 50%;
-        background: conic-gradient(from 0deg, rgba(239, 68, 68, 0.45) 0deg, transparent 65deg, transparent 360deg);
-        transform-origin: center center;
+      .radar-svg {
+        width: 500px;
+        height: 500px;
       }
 
-      /* VECTOR STAIRCASE (Act 2) */
-      .staircase-container {
+      /* ACT 2: ISOMETRIC STAIRCASE BLUEPRINT */
+      .stairs-container {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -300,55 +336,86 @@ def write_hyperframes_html():
         align-items: center;
         opacity: 0;
       }
-      .iso-svg {
-        width: 780px;
+      .stairs-svg {
+        width: 860px;
         height: 640px;
       }
 
-      /* TACTICAL CALLOUT PINS */
-      .callout-badge {
+      /* ACT 3: OMNICHANNEL FLYWHEEL CTA */
+      .flywheel-container {
         position: absolute;
-        padding: 12px 20px;
-        background: rgba(15, 23, 42, 0.9);
-        border: 1px solid rgba(239, 68, 68, 0.6);
-        border-radius: 12px;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 20px;
-        font-weight: 800;
-        color: #fca5a5;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(239, 68, 68, 0.3);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 40px;
+        opacity: 0;
+        z-index: 30;
+      }
+      .flywheel-card {
+        width: 100%;
+        background: rgba(15, 23, 42, 0.95);
+        border: 2px solid rgba(239, 68, 68, 0.6);
+        border-radius: 20px;
+        padding: 24px 32px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
       }
-      .pin-1 { top: 120px; right: 80px; }
-      .pin-2 { bottom: 180px; left: 70px; }
-      .pin-3 { top: 280px; left: 60px; }
+      .card-icon {
+        font-size: 40px;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .card-desc {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #fca5a5;
+        margin-top: 4px;
+      }
 
-      /* WARNING CHEVRON BAR */
-      .warning-bar {
+      /* BADGES & TELEMETRY */
+      .metrics-grid {
         position: absolute;
-        bottom: 24px;
+        bottom: 30px;
         left: 32px;
         right: 32px;
-        padding: 16px 24px;
-        background: rgba(220, 38, 38, 0.15);
-        border: 1px solid rgba(239, 68, 68, 0.6);
-        border-radius: 14px;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 20px;
-        font-weight: 800;
-        color: #fee2e2;
-        letter-spacing: 1px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        text-transform: uppercase;
-        box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        z-index: 20;
       }
-      .warning-icon {
+      .metric-badge {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        padding: 16px 20px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+      .metric-value {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 800;
         color: #ef4444;
-        font-size: 26px;
+        letter-spacing: -1px;
+      }
+      .metric-desc {
+        font-size: 17px;
+        color: #94a3b8;
+        font-weight: 600;
+        margin-top: 4px;
       }
 
       /* SUBTITLES & AUDIO CARD */
@@ -356,7 +423,7 @@ def write_hyperframes_html():
         margin-top: 25px;
         padding: 30px 40px;
         background: rgba(15, 23, 42, 0.85);
-        border: 1px solid rgba(239, 68, 68, 0.3);
+        border: 1px solid rgba(239, 68, 68, 0.35);
         border-radius: 28px;
         backdrop-filter: blur(20px);
         min-height: 200px;
@@ -443,7 +510,7 @@ def write_hyperframes_html():
         color: #ffffff;
         letter-spacing: 1px;
         text-transform: uppercase;
-        box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+        box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
       }
     </style>
   </head>
@@ -456,156 +523,147 @@ def write_hyperframes_html():
       <div class="header-hud">
         <div class="badge-series">
           <div class="badge-dot"></div>
-          sIA TERROR • EXPEDIENTE #01
+          sIA TERROR • EXPEDIENTE FORESTAL
         </div>
         <div class="badge-telemetry">
-          SAR LOGS // CLASIFICADO
+          CASO #01 // ANOMALÍA SAR
         </div>
       </div>
 
       <!-- HOOK CARD -->
       <div class="hook-card" id="hookCard">
         <div class="hook-label">
-          <span>⚠️</span> TESTIMONIO DE BÚSQUEDA Y RESCATE (r/nosleep)
+          <span>⚠️</span> PROTOCOLO DE BÚSQUEDA Y RESCATE
         </div>
         <div class="hook-title">
-          "Si en mitad del bosque ves una <span class="alert-hl">escalera solitaria</span>... jamás subas."
+          "Si encuentras escaleras solas en el bosque... <span class="alert-hl">jamás subas a ellas</span>"
         </div>
       </div>
 
-      <!-- HERO STAGE (Radar & Staircase Diagram) -->
+      <!-- HERO STAGE (Radar SAR vs Isometric Stairs) -->
       <div class="hero-stage" id="heroStage">
         <div class="stage-header">
-          <span id="stageTitle">RADAR DE BÚSQUEDA // SECTOR NORTE D-7</span>
-          <span id="stageTelemetry">COORD: 46°51'N 121°45'W</span>
+          <span id="stageTitle">DETECCIÓN TÁCTICA // BARRIDO SAR 360°</span>
+          <span id="stageTelemetry">SECTOR 7 • COORDENADAS ANÓMALAS</span>
         </div>
 
-        <!-- ACT 1: Tactical Radar Grid -->
+        <!-- ACT 1: SAR Radar Sweep Visual -->
         <div class="radar-container" id="radarContainer">
-          <svg width="560" height="560" viewBox="0 0 560 560" style="position: absolute;">
-            <!-- Radar rings -->
-            <circle cx="280" cy="280" r="260" fill="none" stroke="rgba(239, 68, 68, 0.25)" stroke-width="2" stroke-dasharray="8 6"/>
-            <circle cx="280" cy="280" r="190" fill="none" stroke="rgba(239, 68, 68, 0.3)" stroke-width="2"/>
-            <circle cx="280" cy="280" r="120" fill="none" stroke="rgba(239, 68, 68, 0.4)" stroke-width="2"/>
-            <circle cx="280" cy="280" r="50" fill="none" stroke="rgba(239, 68, 68, 0.5)" stroke-width="2"/>
-            
-            <!-- Crosshairs -->
-            <line x1="280" y1="10" x2="280" y2="550" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
-            <line x1="10" y1="280" x2="550" y2="280" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
-            
-            <!-- Angle ticks -->
-            <text x="280" y="32" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="700">000° N</text>
-            <text x="535" y="285" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="end" font-weight="700">090° E</text>
-            <text x="280" y="542" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="700">180° S</text>
-            <text x="25" y="285" fill="#ef4444" font-family="JetBrains Mono" font-size="14" text-anchor="start" font-weight="700">270° W</text>
-
-            <!-- Anomaly Beacon Ping (At 45 degrees, r=160) -->
-            <g id="radarBlip" transform="translate(393, 167)">
-              <circle r="22" fill="none" stroke="#ef4444" stroke-width="2">
-                <animate attributeName="r" values="6;32" dur="1.2s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/>
-              </circle>
-              <circle r="8" fill="#ef4444"/>
-              <text x="20" y="6" fill="#fca5a5" font-family="JetBrains Mono" font-size="16" font-weight="800">ANOMALÍA DETECTADA</text>
-            </g>
-          </svg>
-          <!-- Rotating Radar Sweep Line -->
-          <div class="radar-sweep" id="radarSweep"></div>
-        </div>
-
-        <!-- ACT 2: Vector Staircase Blueprint -->
-        <div class="staircase-container" id="staircaseContainer">
-          <svg class="iso-svg" viewBox="0 0 780 640">
+          <svg class="radar-svg" viewBox="0 0 500 500">
             <defs>
-              <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#450a0a" stop-opacity="0.8"/>
-                <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.6"/>
+              <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
               </linearGradient>
-              <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="8" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
             </defs>
 
-            <!-- Forest Terrain Grid Ground Plane -->
-            <polygon points="120,480 390,340 660,480 390,620" fill="rgba(15, 23, 42, 0.6)" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.5" stroke-dasharray="6 4"/>
-            <text x="390" y="585" fill="#64748b" font-family="JetBrains Mono" font-size="18" text-anchor="middle">SUELO VIRGEN // BOSQUE DENSO (SIN CIMIENTOS)</text>
+            <!-- Radar Concentric Rings -->
+            <circle cx="250" cy="250" r="220" fill="none" stroke="rgba(239, 68, 68, 0.2)" stroke-width="2"/>
+            <circle cx="250" cy="250" r="160" fill="none" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
+            <circle cx="250" cy="250" r="100" fill="none" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1.5"/>
+            <circle cx="250" cy="250" r="40" fill="none" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.5"/>
 
-            <!-- ISOMETRIC STAIRS (5 Steps) -->
-            <!-- Step 1 -->
-            <g id="step1" class="stair-step">
-              <polygon points="260,450 340,410 440,410 360,450" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="260,450 360,450 360,480 260,480" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="360,450 440,410 440,440 360,480" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
+            <!-- Crosshairs -->
+            <line x1="30" y1="250" x2="470" y2="250" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.5"/>
+            <line x1="250" y1="30" x2="250" y2="470" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.5"/>
+
+            <!-- Rotating Radar Sweep Line -->
+            <g id="radarBeam" transform="rotate(0 250 250)">
+              <line x1="250" y1="250" x2="250" y2="30" stroke="#ef4444" stroke-width="3"/>
+              <path d="M 250,250 L 250,30 A 220,220 0 0,1 390,90 Z" fill="url(#sweepGrad)"/>
             </g>
+
+            <!-- Anomaly Target Blip -->
+            <circle id="anomalyBlip" cx="330" cy="180" r="10" fill="#ef4444"/>
+            <circle cx="330" cy="180" r="24" fill="none" stroke="#f87171" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="350" y="175" fill="#fca5a5" font-family="JetBrains Mono" font-size="14" font-weight="800">OBJETO: ESCALERA</text>
+            <text x="350" y="195" fill="#94a3b8" font-family="JetBrains Mono" font-size="12">0 CIMIENTOS • 0 HUELLAS</text>
+          </svg>
+        </div>
+
+        <!-- ACT 2: Isometric Stairs Blueprint -->
+        <div class="stairs-container" id="stairsContainer">
+          <svg class="stairs-svg" viewBox="0 0 860 640">
+            <!-- Dark Forest Backdrop Glow -->
+            <ellipse cx="430" cy="500" rx="360" ry="60" fill="rgba(15, 23, 42, 0.6)"/>
+
+            <!-- Isometric Steps (Rising into the void) -->
+            <!-- Step 1 -->
+            <polygon points="340,500 520,500 560,460 380,460" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+            <polygon points="340,500 340,530 520,530 520,500" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
 
             <!-- Step 2 -->
-            <g id="step2" class="stair-step">
-              <polygon points="290,400 370,360 470,360 390,400" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="290,400 390,400 390,430 290,430" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="390,400 470,360 470,390 390,430" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
-            </g>
+            <polygon points="360,450 540,450 580,410 400,410" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+            <polygon points="360,450 360,480 540,480 540,450" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
 
             <!-- Step 3 -->
-            <g id="step3" class="stair-step">
-              <polygon points="320,350 400,310 500,310 420,350" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="320,350 420,350 420,380 320,380" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="420,350 500,310 500,340 420,380" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
-            </g>
+            <polygon points="380,400 560,400 600,360 420,360" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+            <polygon points="380,400 380,430 560,430 560,400" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
 
             <!-- Step 4 -->
-            <g id="step4" class="stair-step">
-              <polygon points="350,300 430,260 530,260 450,300" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="350,300 450,300 450,330 350,330" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="450,300 530,260 530,290 450,330" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
-            </g>
+            <polygon points="400,350 580,350 620,310 440,310" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+            <polygon points="400,350 400,380 580,380 580,350" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
 
-            <!-- Step 5 (Top into the void) -->
-            <g id="step5" class="stair-step">
-              <polygon points="380,250 460,210 560,210 480,250" fill="url(#stepGrad)" stroke="#ef4444" stroke-width="2.5" filter="url(#redGlow)"/>
-              <polygon points="380,250 480,250 480,280 380,280" fill="#2d0a0a" stroke="#ef4444" stroke-width="2.5"/>
-              <polygon points="480,250 560,210 560,240 480,280" fill="#1f0707" stroke="#ef4444" stroke-width="2.5"/>
-            </g>
+            <!-- Step 5 (Top in the mist) -->
+            <polygon points="420,300 600,300 640,260 460,260" fill="#334155" stroke="#f87171" stroke-width="2.5"/>
+            <polygon points="420,300 420,330 600,330 600,300" fill="#1e293b" stroke="#f87171" stroke-width="2.5"/>
 
-            <!-- Handrail line ascending into nothingness -->
-            <path id="handrail" d="M 260,420 L 380,220" stroke="#fca5a5" stroke-width="4" stroke-dasharray="6 4" fill="none"/>
-            <circle cx="380" cy="220" r="10" fill="#ef4444" filter="url(#redGlow)"/>
+            <!-- Distortion Aura around top step -->
+            <circle cx="530" cy="270" r="60" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="530" y="220" fill="#fca5a5" font-family="Cinzel" font-size="16" text-anchor="middle" font-weight="900">SILENCIO ACÚSTICO</text>
 
-            <!-- Upward arrow into void -->
-            <path d="M 510,190 L 510,120" stroke="#ef4444" stroke-width="3" stroke-dasharray="5 5" fill="none"/>
-            <polygon points="510,105 500,125 520,125" fill="#ef4444"/>
-            <text x="510" y="85" fill="#fca5a5" font-family="JetBrains Mono" font-size="20" font-weight="800" text-anchor="middle">HACIA EL VACÍO</text>
+            <!-- Technical Callouts -->
+            <rect x="80" y="160" width="220" height="90" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="#ef4444" stroke-width="1.5"/>
+            <text x="190" y="195" fill="#f87171" font-family="JetBrains Mono" font-size="15" text-anchor="middle" font-weight="800">MADERA PULIDA</text>
+            <text x="190" y="225" fill="#94a3b8" font-family="JetBrains Mono" font-size="13" text-anchor="middle">Sin musgo ni humedad</text>
+
+            <rect x="580" y="440" width="220" height="90" rx="14" fill="rgba(15, 23, 42, 0.85)" stroke="#ef4444" stroke-width="1.5"/>
+            <text x="690" y="475" fill="#f87171" font-family="JetBrains Mono" font-size="15" text-anchor="middle" font-weight="800">0 CIMIENTOS</text>
+            <text x="690" y="505" fill="#94a3b8" font-family="JetBrains Mono" font-size="13" text-anchor="middle">Levitación milimétrica</text>
           </svg>
+        </div>
 
-          <!-- TACTICAL PINS -->
-          <div class="callout-badge pin-1" id="pin1">
-            <span>⛔</span> 0 RUINAS / 0 CIMIENTOS
+        <!-- ACT 3: Omnichannel Flywheel Card -->
+        <div class="flywheel-container" id="flywheelContainer">
+          <div class="flywheel-card">
+            <div class="card-icon">🎧</div>
+            <div class="card-info">
+              <span class="card-title">sIA Terror en Spotify</span>
+              <span class="card-desc">Episodio Especial: Las Escaleras en el Bosque y Rescate Forestal</span>
+            </div>
           </div>
-          <div class="callout-badge pin-2" id="pin2">
-            <span>✨</span> MADERA PULIDA (CERO MUSGO)
-          </div>
-          <div class="callout-badge pin-3" id="pin3">
-            <span>🔇</span> SILENCIO ACÚSTICO TOTAL
+          <div class="flywheel-card" style="border-color: #f87171;">
+            <div class="card-icon">📖</div>
+            <div class="card-info">
+              <span class="card-title">Crónica Completa en el Blog</span>
+              <span class="card-desc">escucha-sia.github.io • Relatos originales de Reddit y telemetría</span>
+            </div>
           </div>
         </div>
 
-        <!-- WARNING PROTOCOL BAR -->
-        <div class="warning-bar" id="warningBar">
-          <span class="warning-icon">⚠️</span>
-          <span>PROTOCOLO SAR 7B: NO TE ACERQUES • NO MIRES DIRECTO • NO SUBAS</span>
+        <!-- Telemetry Metrics Grid -->
+        <div class="metrics-grid">
+          <div class="metric-badge">
+            <span class="metric-value">0 dB</span>
+            <span class="metric-desc">Silencio Acústico Absoluto</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-value">SAR 4.2</span>
+            <span class="metric-desc">Distorsión Electromagnética</span>
+          </div>
         </div>
       </div>
 
       <!-- SUBTITLES & AUDIO CARD -->
       <div class="subtitles-card">
         <div class="speaker-tag" id="speakerTag">
-          <span>🎙️</span> OFICIAL SAR (JORGE)
+          <span>🎙️</span> JORGE (EXPEDIENTES FORESTALES)
         </div>
         <div class="subtitles-text" id="subtitlesText">
-          "Hay una orden estricta que todo rescatista aprende en su primera semana..."
+          "Hay una regla no escrita que todo rescatista forestal aprende en su primer día..."
         </div>
         <div class="waveform-row" id="waveform">
-          <!-- 24 bars -->
+          <!-- 28 bars -->
         </div>
       </div>
 
@@ -650,78 +708,78 @@ def write_hyperframes_html():
         });
       });
 
-      // 3. Continuous Radar Sweep
-      gsap.to("#radarSweep", {
+      // 3. Radar Beam Rotation
+      gsap.to("#radarBeam", {
         rotation: 360,
-        duration: 3.5,
+        transformOrigin: "250px 250px",
+        duration: 4.0,
         repeat: -1,
         ease: "none"
       });
 
-      // 4. Warning Bar Flashing
-      gsap.to("#warningBar", {
-        backgroundColor: "rgba(220, 38, 38, 0.35)",
-        borderColor: "rgba(239, 68, 68, 0.9)",
-        duration: 0.6,
+      // 4. Anomaly Blip Pulse
+      gsap.to("#anomalyBlip", {
+        scale: 1.4,
+        opacity: 0.5,
+        duration: 0.8,
         repeat: -1,
         yoyo: true,
-        ease: "power2.inOut"
+        ease: "power2.inOut",
+        transformOrigin: "center"
       });
 
-      // 5. MASTER TIMELINE FOR VIDEO
+      // 5. MASTER TIMELINE FOR VIDEO (45.0s CLOSED PRODUCT)
       const tl = gsap.timeline();
 
-      // ACT 1 (0.0s - 10.5s): El Radar y la advertencia inicial
+      // ACT 1 (0.0s - 16.0s): La advertencia del rescatista y radar SAR
       tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
       tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
-      tl.from("#radarContainer", { scale: 0.8, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
+      tl.from("#radarContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
 
-      // Subtitles Sync
-      // 0s: Orden estricta
+      // Subtitles Sync Act 1
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Hay una orden estricta que todo rescatista novato aprende en su primera semana...";
+        document.getElementById("subtitlesText").innerHTML = "Hay una regla no escrita que todo rescatista forestal aprende en su primer día: si encuentras escaleras en el bosque... jamás te acerques a ellas.";
       }, null, 0.2);
 
-      // 5.5s: Nadie la menciona a turistas
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "No está en los manuales oficiales. Nadie la menciona frente a los turistas...";
-      }, null, 5.5);
+        document.getElementById("subtitlesText").innerHTML = "No tienen cimientos, ni muros, ni restos de una cabaña. La madera luce limpia y sin una sola mota de musgo, como si las hubieran puesto hoy.";
+      }, null, 7.5);
 
-      // TRANSITION TO ACT 2 (10.5s): Aparece la escalera en el claro
+      // TRANSITION TO ACT 2 (16.0s - 34.0s): Dalia relata la anomalía y silencio acústico
       tl.call(() => {
-        document.getElementById("stageTitle").innerHTML = "ESTRUCTURA ANÓMALA // RECONSTRUCCIÓN ISOMÉTRICA";
-        document.getElementById("stageTelemetry").innerHTML = "DESNIVEL: 5 PELDAÑOS • SIN SOPORTE";
-      }, null, 10.5);
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (INVESTIGACIÓN DE CAMPO)";
+        document.getElementById("stageTitle").innerHTML = "ANOMALÍA ISOMÉTRICA // SILENCIO ACÚSTICO";
+        document.getElementById("stageTelemetry").innerHTML = "DISTORSIÓN ESPACIAL DETECTADA";
+      }, null, 16.0);
 
-      // Fade out Radar, Fade in Staircase
-      tl.to("#radarContainer", { opacity: 0, scale: 1.1, duration: 0.8, ease: "power2.in" }, 10.5);
-      tl.to("#staircaseContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 11.2);
+      // Fade out Radar, Fade in Stairs
+      tl.to("#radarContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 16.0);
+      tl.to("#stairsContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.7);
 
-      // Subtitles: Si en mitad de la maleza densa...
+      // Subtitles Act 2
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Pero si en mitad de la maleza densa encuentras un tramo de escaleras solitario...";
-      }, null, 10.8);
+        document.getElementById("subtitlesText").innerHTML = "Al aproximarte, ocurre el silencio acústico: los insectos y las aves enmudecen al instante. El radar SAR registra distorsiones geométricas en la vegetación...";
+      }, null, 16.5);
 
-      // Draw Steps 1 by 1
-      tl.from("#step1", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 11.5);
-      tl.from("#step2", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 12.0);
-      tl.from("#step3", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 12.5);
-      tl.from("#step4", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 13.0);
-      tl.from("#step5", { y: 30, opacity: 0, duration: 0.5, ease: "back.out(1.5)" }, 13.5);
-      tl.from("#handrail", { strokeDashoffset: 300, duration: 0.8, ease: "power2.out" }, 14.0);
-
-      // Callout pins pop in
-      tl.from("#pin1", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 14.4);
-      tl.from("#pin2", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 15.2);
-      tl.from("#pin3", { scale: 0, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 16.0);
-
-      // Subtitles: JAMÁS TE ACERQUES
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "<span style='color: #ef4444; font-weight: 900;'>...JAMÁS TE ACERQUES. Y bajo ninguna circunstancia subas por ellas.</span>";
-      }, null, 16.8);
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #f87171; font-weight: 800;'>...y los rescatistas más veteranos juran que subir un solo peldaño altera tu noción de regreso.</span>";
+      }, null, 25.5);
 
-      // Pulsing dramatic effect on climax (16.8s -> 22.5s)
-      tl.to("#staircaseContainer", { scale: 1.04, duration: 5.0, ease: "power1.out" }, 17.0);
+      // TRANSITION TO ACT 3 (34.0s - 45.0s): Veredicto & Tripartite Flywheel
+      tl.call(() => {
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> JORGE & DALIA (EXPEDIENTE COMPLETO)";
+        document.getElementById("stageTitle").innerHTML = "EXPEDIENTE ABIERTO & REDIRECCIÓN";
+        document.getElementById("stageTelemetry").innerHTML = "HISTORIAS DE REDDIT • sIA TERROR";
+      }, null, 34.0);
+
+      // Fade out Stairs, Fade in Flywheel Card
+      tl.to("#stairsContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 34.0);
+      tl.to("#flywheelContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 34.7);
+
+      // Subtitles Act 3
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Lee la crónica completa de anomalías en escucha-sia.github.io, y escucha el relato inmersivo en el especial de Terror de Spotify.";
+      }, null, 34.5);
     </script>
   </body>
 </html>
@@ -731,7 +789,7 @@ def write_hyperframes_html():
     print("📝 Archivos index.html y compositions/scene.html generados.")
 
 def render_with_hyperframes():
-    print("⚡ Ejecutando HyperFrames GPU render...")
+    print("⚡ Ejecutando HyperFrames GPU render (45 segundos)...")
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
@@ -759,7 +817,7 @@ def render_with_hyperframes():
     poster_path = REELS_DIR / (TARGET_REEL.stem + "_poster.jpg")
     cmd_poster = [
         "ffmpeg", "-y",
-        "-ss", "16.0",
+        "-ss", "20.0",
         "-i", str(TARGET_REEL),
         "-vframes", "1",
         "-q:v", "2",
@@ -768,17 +826,17 @@ def render_with_hyperframes():
     subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     size_mb = os.path.getsize(TARGET_REEL) / (1024 * 1024)
-    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"✅ ¡Video Motion Graphics Terror #01 generado con éxito! ({size_mb:.2f} MB)")
     print(f"   -> {TARGET_REEL}")
     print(f"   -> Póster en: {poster_path}")
 
-def main():
-    print("=" * 50)
-    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA TERROR #01")
-    print("=" * 50)
-    extract_teaser_audio()
+async def main():
+    print("=" * 60)
+    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: TERROR #01 (LAS ESCALERAS DEL BOSQUE)")
+    print("=" * 60)
+    await generate_reel_audio()
     write_hyperframes_html()
     render_with_hyperframes()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

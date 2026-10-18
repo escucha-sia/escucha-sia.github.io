@@ -1,18 +1,19 @@
 """
 sIA Motion Graphics Reel Generator: Reel #06 (Bambu Lab & Tolerancias PETG)
-Genera un reel cinemático vertical (1080x1920) 100% código en HyperFrames:
-- Curva de calibración de flujo dinámico (Pressure Advance) animada con SVG y GSAP.
-- Extrusor CoreXY vectorial con engranajes en rotación y sensor Micro-LiDAR.
-- Cono láser de escaneo en tiempo real sobre la cama caliente.
-- Badges de telemetría de ingeniería: 500 mm/s, 7μm LiDAR, 0.02mm Tolerancia.
-- Embudo cinemático hacia Spotify y el Blog técnico con código y APA.
+Tema: Maker 3D: Bambu Lab, Tolerancias PETG-CF y Micro-LiDAR de Calibración
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo completo (Jorge + Dalia).
+- No es un corte truncado: inicio, falla de presión en hotend a 500 mm/s, metrología Micro-LiDAR y cierre.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog con código.
 """
 
 import os
 import sys
 import shutil
+import asyncio
 import subprocess
 from pathlib import Path
+import edge_tts
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -24,26 +25,67 @@ REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
 NODE_PATH = r"C:\Carlos\nodejs"
 
-SOURCE_AUDIO = AUDIO_DIR / "sIA_Daily_S04_Maker_3D_Bambu_Polimeros4D_2026-10-12.mp3"
 TARGET_REEL = REELS_DIR / "sIA_Reel_06_Maker_Bambu_Lab_PETG.mp4"
-DURATION = 18.5
-START_OFFSET = "00:00:22.8"
+DURATION = 45.0
 
-def extract_teaser_audio():
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_DALIA = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "¿Por qué imprimir filamentos técnicos como PETG con fibra de carbono a quinientos milímetros por segundo suele terminar en delaminación o atascos?"
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "La viscosidad no lineal del polímero crea histéresis de presión en la boquilla. Al acelerar en las esquinas, el flujo se desborda y la pieza pierde precisión dimensional."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_DALIA,
+        "text": "La solución es metrología activa: un Micro-LiDAR de siete micrómetros que escanea la primera capa y calcula la curva de Pressure Advance en tiempo real, calibrando el empuje del extrusor en microsegundos."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Tienes la guía completa de calibración y análisis de polímeros en escucha guion sia punto github punto io, y el debate en el episodio treinta y siete de Spotify."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para el Reel #06...")
+    temp_dir = ENGINE_DIR / "temp_audio_bambu"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+3%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
     clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
     clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
     cmd = [
         "ffmpeg", "-y",
-        "-ss", START_OFFSET,
-        "-t", str(DURATION),
-        "-i", str(SOURCE_AUDIO),
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-af", "afade=t=out:st=17.0:d=1.5",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
         str(clip_audio)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-    print("✂️ Audio teaser extraído correctamente.")
+    print("✅ Audio del Reel #06 sintetizado y ensamblado con éxito.")
 
 def write_hyperframes_html():
     index_html = f"""<!doctype html>
@@ -195,7 +237,7 @@ def write_hyperframes_html():
       .hook-card {
         margin-top: 30px;
         padding: 34px 40px;
-        background: rgba(6, 28, 19, 0.85);
+        background: rgba(5, 25, 18, 0.85);
         border: 1px solid rgba(16, 185, 129, 0.4);
         border-radius: 28px;
         backdrop-filter: blur(20px);
@@ -207,7 +249,7 @@ def write_hyperframes_html():
         font-size: 20px;
         font-weight: 800;
         letter-spacing: 3px;
-        color: #34d399;
+        color: #10b981;
         text-transform: uppercase;
         margin-bottom: 12px;
         display: flex;
@@ -222,11 +264,11 @@ def write_hyperframes_html():
         color: #ffffff;
       }
       .hook-title .alert-hl {
-        color: #10b981;
+        color: #34d399;
         text-shadow: 0 0 20px rgba(16, 185, 129, 0.7);
       }
 
-      /* HERO STAGE: DIAGRAMAS ACTIVOS */
+      /* HERO STAGE: PRESSURE ADVANCE & MICRO-LIDAR */
       .hero-stage {
         position: relative;
         width: 100%;
@@ -253,14 +295,14 @@ def write_hyperframes_html():
         align-items: center;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
-        color: #10b981;
+        color: #34d399;
         font-weight: 700;
         letter-spacing: 1.5px;
         z-index: 20;
       }
 
-      /* ACT 1: FLOW RATE VS PRESSURE ADVANCE GRAPH */
-      .flow-graph-container {
+      /* ACT 1: PRESSURE ADVANCE CURVE */
+      .pressure-curve-container {
         position: absolute;
         width: 860px;
         height: 600px;
@@ -269,9 +311,13 @@ def write_hyperframes_html():
         justify-content: center;
         align-items: center;
       }
+      .curve-svg {
+        width: 800px;
+        height: 460px;
+      }
 
-      /* ACT 2: ISOMETRIC COREXY TOOLHEAD & LIDAR */
-      .extruder-container {
+      /* ACT 2: COREXY TOOLHEAD & LIDAR SCAN */
+      .toolhead-container {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -280,9 +326,53 @@ def write_hyperframes_html():
         align-items: center;
         opacity: 0;
       }
-      .extruder-svg {
-        width: 840px;
+      .toolhead-svg {
+        width: 860px;
         height: 640px;
+      }
+
+      /* ACT 3: OMNICHANNEL FLYWHEEL CTA */
+      .flywheel-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 40px;
+        opacity: 0;
+        z-index: 30;
+      }
+      .flywheel-card {
+        width: 100%;
+        background: rgba(5, 25, 18, 0.95);
+        border: 2px solid rgba(16, 185, 129, 0.6);
+        border-radius: 20px;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+      .card-icon {
+        font-size: 40px;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .card-desc {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #a7f3d0;
+        margin-top: 4px;
       }
 
       /* BADGES & TELEMETRY */
@@ -297,7 +387,7 @@ def write_hyperframes_html():
         z-index: 20;
       }
       .metric-badge {
-        background: rgba(6, 28, 19, 0.85);
+        background: rgba(5, 25, 18, 0.85);
         border: 1px solid rgba(16, 185, 129, 0.4);
         padding: 16px 20px;
         border-radius: 16px;
@@ -308,7 +398,7 @@ def write_hyperframes_html():
         font-family: 'JetBrains Mono', monospace;
         font-size: 32px;
         font-weight: 800;
-        color: #10b981;
+        color: #34d399;
         letter-spacing: -1px;
       }
       .metric-desc {
@@ -322,7 +412,7 @@ def write_hyperframes_html():
       .subtitles-card {
         margin-top: 25px;
         padding: 30px 40px;
-        background: rgba(6, 28, 19, 0.85);
+        background: rgba(5, 25, 18, 0.85);
         border: 1px solid rgba(16, 185, 129, 0.35);
         border-radius: 28px;
         backdrop-filter: blur(20px);
@@ -347,7 +437,7 @@ def write_hyperframes_html():
         font-size: 30px;
         font-weight: 700;
         line-height: 1.35;
-        color: #f0fdf4;
+        color: #f8fafc;
         margin-top: 10px;
       }
 
@@ -363,7 +453,7 @@ def write_hyperframes_html():
       .bar {
         width: 8px;
         height: 16px;
-        background: linear-gradient(180deg, #10b981, #047857);
+        background: linear-gradient(180deg, #10b981, #059669);
         border-radius: 4px;
         box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
       }
@@ -375,7 +465,7 @@ def write_hyperframes_html():
         justify-content: space-between;
         align-items: center;
         padding: 20px 36px;
-        background: rgba(6, 28, 19, 0.75);
+        background: rgba(5, 25, 18, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 9999px;
         z-index: 10;
@@ -422,122 +512,125 @@ def write_hyperframes_html():
       <div class="header-hud">
         <div class="badge-series">
           <div class="badge-dot"></div>
-          sIA #37 • FABRICACIÓN ADITIVA
+          sIA DAILY • FABRICACIÓN DIGITAL
         </div>
         <div class="badge-telemetry">
-          COREXY // BAMBU X1C
+          BAMBU LAB // PRESSURE ADVANCE
         </div>
       </div>
 
       <!-- HOOK CARD -->
       <div class="hook-card" id="hookCard">
         <div class="hook-label">
-          <span>⚙️</span> FÍSICA DE EXTRUSIÓN & POLÍMEROS TÉCNICOS
+          <span>⚙️</span> DINÁMICA DE POLÍMEROS A 500 MM/S
         </div>
         <div class="hook-title">
-          "¿Por qué tus piezas de PETG <span class="alert-hl">se deforman y fallan</span> en tolerancias críticas?"
+          "¿Por qué imprimir PETG con fibra de carbono <span class="alert-hl">suele terminar en atascos</span>?"
         </div>
       </div>
 
-      <!-- HERO STAGE (Flow Calibration & Micro-LiDAR) -->
+      <!-- HERO STAGE (Pressure Advance vs Micro-LiDAR) -->
       <div class="hero-stage" id="heroStage">
         <div class="stage-header">
-          <span id="stageTitle">CALIBRACIÓN DE FLUJO DINÁMICO // PRESSURE ADVANCE</span>
-          <span id="stageTelemetry">BOQUILLA: 0.4mm • TEMP: 265°C</span>
+          <span id="stageTitle">FLUJO NO LINEAL vs METROLOGÍA LÁSER</span>
+          <span id="stageTelemetry">COREXY DIRECT DRIVE</span>
         </div>
 
-        <!-- ACT 1: Flow Rate Graph -->
-        <div class="flow-graph-container" id="graphContainer">
-          <svg width="800" height="480" viewBox="0 0 800 480">
-            <defs>
-              <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#10b981"/>
-                <stop offset="100%" stop-color="#34d399"/>
-              </linearGradient>
-            </defs>
+        <!-- ACT 1: Pressure Advance Curve -->
+        <div class="pressure-curve-container" id="curveContainer">
+          <svg class="curve-svg" viewBox="0 0 800 460">
+            <!-- Axes -->
+            <line x1="100" y1="80" x2="100" y2="380" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+            <line x1="100" y1="380" x2="720" y2="380" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+            <text x="80" y="90" fill="#34d399" font-family="JetBrains Mono" font-size="16" text-anchor="end">PRESIÓN (BAR)</text>
+            <text x="720" y="415" fill="#94a3b8" font-family="JetBrains Mono" font-size="16" text-anchor="end">VELOCIDAD DE EXTRUSIÓN →</text>
 
-            <!-- Graph Grid Lines -->
-            <line x1="80" y1="40" x2="80" y2="400" stroke="rgba(16, 185, 129, 0.3)" stroke-width="2"/>
-            <line x1="80" y1="400" x2="760" y2="400" stroke="rgba(16, 185, 129, 0.3)" stroke-width="2"/>
-            <line x1="80" y1="280" x2="760" y2="280" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" stroke-dasharray="6 6"/>
-            <line x1="80" y1="160" x2="760" y2="160" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" stroke-dasharray="6 6"/>
+            <!-- Grid Lines -->
+            <line x1="100" y1="180" x2="720" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <line x1="100" y1="280" x2="720" y2="280" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="6 4"/>
 
-            <!-- Axis Labels -->
-            <text x="60" y="50" fill="#10b981" font-family="JetBrains Mono" font-size="16" text-anchor="end" font-weight="700">FLUJO (mm³/s)</text>
-            <text x="760" y="435" fill="#94a3b8" font-family="JetBrains Mono" font-size="16" text-anchor="end">TIEMPO / GIRO EN ESQUINA →</text>
-            <text x="65" y="285" fill="#64748b" font-family="JetBrains Mono" font-size="14" text-anchor="end">12 mm³/s</text>
-            <text x="65" y="165" fill="#64748b" font-family="JetBrains Mono" font-size="14" text-anchor="end">24 mm³/s</text>
+            <!-- Flawed Raw Curve (Red, Uncompensated) -->
+            <path id="rawCurve" d="M 100,380 Q 300,360 450,220 T 700,90" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="8 6"/>
+            <text x="680" y="80" fill="#f87171" font-family="JetBrains Mono" font-size="14" font-weight="700">Sin Compensación: Sobrefreído</text>
 
-            <!-- Target Steady Flow (Ideal) -->
-            <line x1="80" y1="200" x2="760" y2="200" stroke="#10b981" stroke-width="3" stroke-dasharray="8 6"/>
-            <text x="750" y="185" fill="#34d399" font-family="JetBrains Mono" font-size="16" text-anchor="end" font-weight="800">FLUJO OBJETIVO LINEAL</text>
+            <!-- Compensated Pressure Advance Curve (Cyan-Green) -->
+            <path id="calibratedCurve" d="M 100,380 C 250,280 400,230 700,210" fill="none" stroke="#10b981" stroke-width="5"/>
+            <text x="680" y="240" fill="#34d399" font-family="JetBrains Mono" font-size="15" font-weight="800">Calibración Activa: Flujo Constante</text>
 
-            <!-- Error Curve (Uncalibrated PETG: Corner Bulge) -->
-            <path id="uncalibratedCurve" d="M 80,200 Q 220,200 280,70 T 420,330 T 560,200 L 760,200" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
-            <circle cx="340" cy="95" r="10" fill="#ef4444"/>
-            <text x="360" y="90" fill="#fca5a5" font-family="JetBrains Mono" font-size="18" font-weight="800">ESQUINA HINCHADA (+0.35mm)</text>
-
-            <!-- Compensated Curve (Pressure Advance Activo) -->
-            <path id="calibratedCurve" d="M 80,200 L 260,200 Q 290,190 320,200 Q 360,208 400,200 L 760,200" fill="none" stroke="url(#emeraldGrad)" stroke-width="5" stroke-linecap="round"/>
-            <text x="500" y="240" fill="#6ee7b7" font-family="JetBrains Mono" font-size="18" font-weight="800">✓ PRESIÓN COMPENSADA (0.02mm)</text>
+            <!-- Warning Box -->
+            <rect x="200" y="110" width="380" height="46" rx="10" fill="rgba(220, 38, 38, 0.2)" stroke="#ef4444" stroke-width="1.5"/>
+            <text x="390" y="139" fill="#fee2e2" font-family="JetBrains Mono" font-size="15" text-anchor="middle" font-weight="800">⚠️ HISTÉRESIS TÉRMICA & RETRACCIÓN</text>
           </svg>
         </div>
 
-        <!-- ACT 2: Isometric Toolhead & Micro-LiDAR -->
-        <div class="extruder-container" id="extruderContainer">
-          <svg class="extruder-svg" viewBox="0 0 840 640">
+        <!-- ACT 2: Toolhead & Dual Micro-LiDAR -->
+        <div class="toolhead-container" id="toolheadContainer">
+          <svg class="toolhead-svg" viewBox="0 0 860 640">
             <defs>
-              <linearGradient id="lidarBeam" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
-                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+              <linearGradient id="laserBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#34d399" stop-opacity="0.1"/>
               </linearGradient>
             </defs>
 
-            <!-- Bed Grid Plane -->
-            <polygon points="120,520 420,380 720,520 420,620" fill="rgba(6, 28, 19, 0.7)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="2"/>
-            <line x1="220" y1="475" x2="620" y2="475" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1.5"/>
-            <line x1="320" y1="430" x2="520" y2="430" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1.5"/>
+            <!-- CoreXY Print Bed Floor -->
+            <rect x="100" y="480" width="660" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+            <line x1="100" y1="480" x2="760" y2="480" stroke="#10b981" stroke-width="3"/>
+            <text x="430" y="540" fill="#94a3b8" font-family="JetBrains Mono" font-size="16" text-anchor="middle">CAMA CALIENTE // TEXTURED PEI (80°C)</text>
 
-            <!-- Toolhead Core Body -->
-            <polygon points="320,160 520,160 520,340 320,340" fill="#0f172a" stroke="#10b981" stroke-width="3"/>
-            <polygon points="320,160 380,120 580,120 520,160" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
-            <polygon points="520,160 580,120 580,300 520,340" fill="#0f172a" stroke="#10b981" stroke-width="3"/>
-
-            <!-- Cooling Fan Circle -->
-            <circle cx="420" cy="240" r="50" fill="#02140d" stroke="#34d399" stroke-width="3"/>
-            <circle cx="420" cy="240" r="16" fill="#10b981"/>
-
-            <!-- Dual Drive Extrusion Gears -->
-            <circle id="gearLeft" cx="370" cy="180" r="22" fill="none" stroke="#6ee7b7" stroke-width="4" stroke-dasharray="8 6"/>
-            <circle id="gearRight" cx="410" cy="180" r="22" fill="none" stroke="#6ee7b7" stroke-width="4" stroke-dasharray="8 6"/>
-
-            <!-- Dual Micro-LiDAR Sensor Pods -->
-            <rect x="340" y="340" width="36" height="24" fill="#10b981" rx="4"/>
-            <rect x="464" y="340" width="36" height="24" fill="#10b981" rx="4"/>
-            <circle cx="358" cy="352" r="6" fill="#ffffff"/>
-            <circle cx="482" cy="352" r="6" fill="#ffffff"/>
-
-            <!-- Nozzle Cone -->
-            <polygon points="405,340 435,340 423,375 417,375" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
-
-            <!-- Micro-LiDAR Laser Beam Scanning Bed -->
-            <polygon id="laserCone" points="358,360 482,360 560,510 280,510" fill="url(#lidarBeam)" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <!-- Extruder Toolhead Block -->
+            <rect id="toolhead" x="300" y="140" width="260" height="220" rx="20" fill="#0f172a" stroke="#10b981" stroke-width="3"/>
             
-            <!-- Scanning Line on Bed -->
-            <line id="scanLine" x1="280" y1="510" x2="560" y2="510" stroke="#34d399" stroke-width="4"/>
-            <text x="420" y="550" fill="#6ee7b7" font-family="JetBrains Mono" font-size="18" font-weight="800" text-anchor="middle">ESCANEO DE CAPA: RESOLUCIÓN 7μm</text>
+            <!-- Hotend Nozzle -->
+            <polygon points="410,360 450,360 435,420 425,420" fill="#f59e0b"/>
+            <circle cx="430" cy="425" r="3" fill="#ef4444"/>
+
+            <!-- Micro-LiDAR Sensor Unit (Left of Nozzle) -->
+            <rect x="320" y="280" width="70" height="80" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+            <circle cx="355" cy="320" r="14" fill="#10b981"/>
+            <text x="355" y="325" fill="#000000" font-family="JetBrains Mono" font-size="11" text-anchor="middle" font-weight="900">LiDAR</text>
+
+            <!-- LiDAR Conical Laser Projection -->
+            <polygon id="laserCone" points="355,334 260,480 410,480" fill="url(#laserBeam)"/>
+            <ellipse cx="335" cy="480" rx="75" ry="8" fill="rgba(16, 185, 129, 0.4)"/>
+            <text x="335" y="470" fill="#6ee7b7" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="800">7 μm SCAN</text>
+
+            <!-- Telemetry callout on Toolhead -->
+            <text x="430" y="180" fill="#ffffff" font-family="JetBrains Mono" font-size="17" text-anchor="middle" font-weight="900">BAMBU DIRECT DRIVE</text>
+            <text x="430" y="205" fill="#6ee7b7" font-family="JetBrains Mono" font-size="13" text-anchor="middle">500 mm/s • Dual Gear</text>
+
+            <rect x="330" y="225" width="200" height="40" rx="8" fill="rgba(16, 185, 129, 0.15)"/>
+            <text x="430" y="250" fill="#34d399" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="800">TOLERANCIA: ±0.02 mm</text>
           </svg>
+        </div>
+
+        <!-- ACT 3: Omnichannel Flywheel Card -->
+        <div class="flywheel-container" id="flywheelContainer">
+          <div class="flywheel-card">
+            <div class="card-icon">🎧</div>
+            <div class="card-info">
+              <span class="card-title">sIA Daily en Spotify</span>
+              <span class="card-desc">Episodio #37: Tolerancias de PETG, Bambu Lab y Polímeros 4D</span>
+            </div>
+          </div>
+          <div class="flywheel-card" style="border-color: #38bdf8;">
+            <div class="card-icon">📖</div>
+            <div class="card-info">
+              <span class="card-title">Revista Técnica Digital</span>
+              <span class="card-desc">escucha-sia.github.io • Guía de calibración y modelos de extrusión</span>
+            </div>
+          </div>
         </div>
 
         <!-- Telemetry Metrics Grid -->
         <div class="metrics-grid">
           <div class="metric-badge">
-            <span class="metric-value" id="valSpeed">500 mm/s</span>
-            <span class="metric-desc">Velocidad Cinemática CoreXY</span>
+            <span class="metric-value">500 mm/s</span>
+            <span class="metric-desc">Velocidad de Impresión CoreXY</span>
           </div>
           <div class="metric-badge">
-            <span class="metric-value" id="valTol">0.02 mm</span>
-            <span class="metric-desc">Tolerancia Dinámica con LiDAR</span>
+            <span class="metric-value">7 μm</span>
+            <span class="metric-desc">Resolución Sensor Micro-LiDAR</span>
           </div>
         </div>
       </div>
@@ -545,10 +638,10 @@ def write_hyperframes_html():
       <!-- SUBTITLES & AUDIO CARD -->
       <div class="subtitles-card">
         <div class="speaker-tag" id="speakerTag">
-          <span>🎙️</span> JORGE (FABRICACIÓN ADITIVA)
+          <span>🎙️</span> JORGE (INGENIERÍA MECATRÓNICA)
         </div>
         <div class="subtitles-text" id="subtitlesText">
-          "El filamento PETG es el caballo de batalla, pero su tendencia al stringing sigue frustrando a creadores..."
+          "¿Por qué imprimir filamentos técnicos como PETG con fibra de carbono a quinientos milímetros por segundo suele terminar en delaminación o atascos?"
         </div>
         <div class="waveform-row" id="waveform">
           <!-- 28 bars -->
@@ -567,7 +660,7 @@ def write_hyperframes_html():
           </div>
         </div>
         <div class="action-pill">
-          ESCUCHAR DEBATE
+          ESCUCHAR CAPÍTULO
         </div>
       </div>
     </div>
@@ -596,62 +689,65 @@ def write_hyperframes_html():
         });
       });
 
-      // 3. Rotating Extruder Gears
-      gsap.to("#gearLeft", { rotation: 360, transformOrigin: "center center", duration: 2.0, repeat: -1, ease: "none" });
-      gsap.to("#gearRight", { rotation: -360, transformOrigin: "center center", duration: 2.0, repeat: -1, ease: "none" });
-
-      // 4. Scanning LiDAR Laser Animation
-      gsap.to("#laserCone", {
-        opacity: 0.35,
-        duration: 0.6,
-        repeat: -1,
-        yoyo: true,
-        ease: "power2.inOut"
-      });
-
-      // 5. MASTER TIMELINE FOR VIDEO
+      // 3. MASTER TIMELINE FOR VIDEO (45.0s CLOSED PRODUCT)
       const tl = gsap.timeline();
 
-      // ACT 1 (0.0s - 9.5s): Jorge explica el error de flujo y stringing en PETG
+      // ACT 1 (0.0s - 16.0s): La histéresis y deformación del polímero
       tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
       tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
-      tl.from("#graphContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
+      tl.from("#curveContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
 
-      // Draw uncalibrated curve
-      tl.from("#uncalibratedCurve", { strokeDashoffset: 1200, duration: 2.5, ease: "power2.out" }, 1.0);
-      tl.from("#calibratedCurve", { strokeDashoffset: 1000, duration: 2.5, ease: "power2.out" }, 3.5);
+      // Curve animations
+      tl.from("#calibratedCurve", { pathLength: 0, duration: 2.0, ease: "power2.out" }, 1.0);
 
       // Subtitles Sync Act 1
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "El filamento PETG es el caballo de batalla para piezas mecánicas por su resistencia al impacto...";
+        document.getElementById("subtitlesText").innerHTML = "¿Por qué imprimir filamentos técnicos como PETG con fibra de carbono a 500 mm/s suele terminar en atascos?";
       }, null, 0.2);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "...sin embargo, el stringing y la adhesión excesiva siguen arruinando tolerancias críticas.";
-      }, null, 5.0);
+        document.getElementById("subtitlesText").innerHTML = "La viscosidad no lineal del polímero genera histéresis de presión. Al acelerar en esquinas, el flujo desborda y deforma la pieza.";
+      }, null, 6.0);
 
-      // TRANSITION TO ACT 2 (9.5s): Dalia presenta la solución Micro-LiDAR
+      // TRANSITION TO ACT 2 (16.0s - 34.0s): Dalia presenta Micro-LiDAR
       tl.call(() => {
-        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (INGENIERÍA)";
-        document.getElementById("stageTitle").innerHTML = "MICRO-LIDAR & CALIBRACIÓN DINÁMICA DE FLUJO";
-        document.getElementById("stageTelemetry").innerHTML = "PRESSURE ADVANCE: ACTIVO • SENSORES: DUAL 7μm";
-      }, null, 9.5);
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (METROLOGÍA & MANUFACTURA)";
+        document.getElementById("stageTitle").innerHTML = "METROLOGÍA ACTIVA // MICRO-LIDAR 7μm";
+        document.getElementById("stageTelemetry").innerHTML = "CALIBRACIÓN PREVENTIVA DE PRESIÓN";
+      }, null, 16.0);
 
-      // Fade out Graph, Fade in Extruder
-      tl.to("#graphContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 9.5);
-      tl.to("#extruderContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 10.2);
+      // Fade out Curve, Fade in Toolhead
+      tl.to("#curveContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 16.0);
+      tl.to("#toolheadContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.7);
+
+      // Toolhead scanner sway
+      tl.to("#toolhead", { x: 30, duration: 2.0, repeat: -1, yoyo: true, ease: "sine.inOut" }, 17.0);
+      tl.to("#laserCone", { x: 30, duration: 2.0, repeat: -1, yoyo: true, ease: "sine.inOut" }, 17.0);
 
       // Subtitles Act 2
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "En Bambu Studio y Orca Slicer calibramos la compensación de flujo dinámico con el sensor Micro-LiDAR...";
-      }, null, 10.0);
+        document.getElementById("subtitlesText").innerHTML = "La solución es metrología activa: un Micro-LiDAR de siete micrómetros que escanea la primera capa...";
+      }, null, 16.5);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "<span style='color: #10b981; font-weight: 800;'>Pressure Advance ecualiza la presión en boquilla: orificios y rodamientos encajan a la primera.</span>";
-      }, null, 14.0);
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #34d399; font-weight: 800;'>...calcula la curva de Pressure Advance en tiempo real, calibrando el empuje en microsegundos.</span>";
+      }, null, 25.0);
 
-      // Telemetry counts
-      tl.from("#valSpeed", { textContent: "100 mm/s", duration: 1.5, ease: "power1.out" }, 10.5);
+      // TRANSITION TO ACT 3 (34.0s - 45.0s): Veredicto & Tripartite Flywheel
+      tl.call(() => {
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> JORGE & DALIA (VEREDICTO)";
+        document.getElementById("stageTitle").innerHTML = "VEREDICTO & REDIRECCIÓN OMNICANAL";
+        document.getElementById("stageTelemetry").innerHTML = "MODELOS 4D Y CALIBRACIÓN";
+      }, null, 34.0);
+
+      // Fade out Toolhead, Fade in Flywheel Card
+      tl.to("#toolheadContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 34.0);
+      tl.to("#flywheelContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 34.7);
+
+      // Subtitles Act 3
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Revisa la guía completa de calibración en escucha-sia.github.io, y escucha el análisis en el episodio 37 de Spotify.";
+      }, null, 34.5);
     </script>
   </body>
 </html>
@@ -661,7 +757,7 @@ def write_hyperframes_html():
     print("📝 Archivos index.html y compositions/scene.html generados.")
 
 def render_with_hyperframes():
-    print("⚡ Ejecutando HyperFrames GPU render...")
+    print("⚡ Ejecutando HyperFrames GPU render (45 segundos)...")
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
@@ -689,7 +785,7 @@ def render_with_hyperframes():
     poster_path = REELS_DIR / (TARGET_REEL.stem + "_poster.jpg")
     cmd_poster = [
         "ffmpeg", "-y",
-        "-ss", "13.5",
+        "-ss", "20.0",
         "-i", str(TARGET_REEL),
         "-vframes", "1",
         "-q:v", "2",
@@ -698,17 +794,17 @@ def render_with_hyperframes():
     subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     size_mb = os.path.getsize(TARGET_REEL) / (1024 * 1024)
-    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"✅ ¡Video Motion Graphics Reel #06 generado con éxito! ({size_mb:.2f} MB)")
     print(f"   -> {TARGET_REEL}")
     print(f"   -> Póster en: {poster_path}")
 
-def main():
-    print("=" * 50)
-    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #37 (BAMBU LAB)")
-    print("=" * 50)
-    extract_teaser_audio()
+async def main():
+    print("=" * 60)
+    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #06 (MAKER BAMBU LAB PETG-CF)")
+    print("=" * 60)
+    await generate_reel_audio()
     write_hyperframes_html()
     render_with_hyperframes()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

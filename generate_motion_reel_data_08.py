@@ -1,17 +1,19 @@
 """
 sIA Motion Graphics Reel Generator: Reel #08 (Data Contracts Semánticos)
-Genera un reel cinemático vertical (1080x1920) 100% código en HyperFrames:
-- Pipeline roto por mutación silenciosa de esquema (Acto 1).
-- YAML Gate de validación semántica activa que intercepta paquetes anómalos (Acto 2).
-- Flujo de datos verificado hacia BigQuery / Snowflake y Dead Letter Queue (DLQ).
-- Badges de telemetría: <5ms Latencia, 0% Roturas en Prod, CI/CD Schema Enforcement.
+Tema: Data Contracts Semánticos: Blindando Pipelines contra Mutaciones de Esquema
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo completo (Jorge + Dalia).
+- No es un corte truncado: inicio, pesadilla del pipeline roto a las 3am, YAML Gate & DLQ, y cierre.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog con código.
 """
 
 import os
 import sys
 import shutil
+import asyncio
 import subprocess
 from pathlib import Path
+import edge_tts
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -23,26 +25,67 @@ REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
 NODE_PATH = r"C:\Carlos\nodejs"
 
-SOURCE_AUDIO = AUDIO_DIR / "sIA_Daily_S02_Data_Contratos_Semanticos_FHE_2026-10-12.mp3"
 TARGET_REEL = REELS_DIR / "sIA_Reel_08_Data_Contratos_Semanticos.mp4"
-DURATION = 18.5
-START_OFFSET = "00:00:16.8"
+DURATION = 45.0
 
-def extract_teaser_audio():
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_DALIA = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "¿Por qué los equipos de datos siguen despertando a las tres de la mañana por pipelines destruidos en producción?"
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Cualquier cambio imprevisto en la base de origen muta silenciosamente el esquema, corrompe las tablas de Snowflake o BigQuery y derrumba los tableros de métricas del negocio."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_DALIA,
+        "text": "La solución son los Data Contracts semánticos: especificaciones YAML declarativas y validación en CI/CD que interceptan anomalías en menos de cinco milisegundos, aislando paquetes corruptos en una Dead Letter Queue."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Aprende a implementar contratos semánticos con dbt en escucha guion sia punto github punto io, y escucha el análisis técnico en el episodio treinta y cinco de Spotify."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para el Reel #08...")
+    temp_dir = ENGINE_DIR / "temp_audio_data"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+3%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
     clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
     clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
     cmd = [
         "ffmpeg", "-y",
-        "-ss", START_OFFSET,
-        "-t", str(DURATION),
-        "-i", str(SOURCE_AUDIO),
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-af", "afade=t=out:st=17.0:d=1.5",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
         str(clip_audio)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-    print("✂️ Audio teaser extraído correctamente.")
+    print("✅ Audio del Reel #08 sintetizado y ensamblado con éxito.")
 
 def write_hyperframes_html():
     index_html = f"""<!doctype html>
@@ -167,7 +210,7 @@ def write_hyperframes_html():
         font-family: 'JetBrains Mono', monospace;
         font-size: 24px;
         font-weight: 800;
-        color: #c084fc;
+        color: #d8b4fe;
         letter-spacing: 2px;
         text-transform: uppercase;
         box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
@@ -194,7 +237,7 @@ def write_hyperframes_html():
       .hook-card {
         margin-top: 30px;
         padding: 34px 40px;
-        background: rgba(19, 13, 38, 0.85);
+        background: rgba(18, 10, 36, 0.85);
         border: 1px solid rgba(168, 85, 247, 0.4);
         border-radius: 28px;
         backdrop-filter: blur(20px);
@@ -225,14 +268,14 @@ def write_hyperframes_html():
         text-shadow: 0 0 20px rgba(168, 85, 247, 0.7);
       }
 
-      /* HERO STAGE: PIPELINES & DATA CONTRACT ENGINE */
+      /* HERO STAGE: SCHEMA MUTATION VS DATA CONTRACTS */
       .hero-stage {
         position: relative;
         width: 100%;
         height: 820px;
         margin-top: 25px;
         border-radius: 32px;
-        background: rgba(14, 9, 28, 0.90);
+        background: rgba(12, 7, 24, 0.90);
         border: 1px solid rgba(168, 85, 247, 0.3);
         box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
         overflow: hidden;
@@ -258,8 +301,8 @@ def write_hyperframes_html():
         z-index: 20;
       }
 
-      /* ACT 1: BROKEN PIPELINE DIAGRAM */
-      .broken-pipeline-container {
+      /* ACT 1: SCHEMA BREAKING FAILURE */
+      .breaking-container {
         position: absolute;
         width: 860px;
         height: 600px;
@@ -269,7 +312,7 @@ def write_hyperframes_html():
         align-items: center;
       }
 
-      /* ACT 2: DATA CONTRACT GATE ENGINE */
+      /* ACT 2: YAML DATA CONTRACT GATE */
       .contract-gate-container {
         position: absolute;
         width: 100%;
@@ -284,6 +327,50 @@ def write_hyperframes_html():
         height: 640px;
       }
 
+      /* ACT 3: OMNICHANNEL FLYWHEEL CTA */
+      .flywheel-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 40px;
+        opacity: 0;
+        z-index: 30;
+      }
+      .flywheel-card {
+        width: 100%;
+        background: rgba(18, 10, 36, 0.95);
+        border: 2px solid rgba(168, 85, 247, 0.6);
+        border-radius: 20px;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+      .card-icon {
+        font-size: 40px;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .card-desc {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #d8b4fe;
+        margin-top: 4px;
+      }
+
       /* BADGES & TELEMETRY */
       .metrics-grid {
         position: absolute;
@@ -296,7 +383,7 @@ def write_hyperframes_html():
         z-index: 20;
       }
       .metric-badge {
-        background: rgba(19, 13, 38, 0.85);
+        background: rgba(18, 10, 36, 0.85);
         border: 1px solid rgba(168, 85, 247, 0.4);
         padding: 16px 20px;
         border-radius: 16px;
@@ -321,7 +408,7 @@ def write_hyperframes_html():
       .subtitles-card {
         margin-top: 25px;
         padding: 30px 40px;
-        background: rgba(19, 13, 38, 0.85);
+        background: rgba(18, 10, 36, 0.85);
         border: 1px solid rgba(168, 85, 247, 0.35);
         border-radius: 28px;
         backdrop-filter: blur(20px);
@@ -346,7 +433,7 @@ def write_hyperframes_html():
         font-size: 30px;
         font-weight: 700;
         line-height: 1.35;
-        color: #f5f3ff;
+        color: #f8fafc;
         margin-top: 10px;
       }
 
@@ -362,7 +449,7 @@ def write_hyperframes_html():
       .bar {
         width: 8px;
         height: 16px;
-        background: linear-gradient(180deg, #a855f7, #6b21a8);
+        background: linear-gradient(180deg, #c084fc, #9333ea);
         border-radius: 4px;
         box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
       }
@@ -374,7 +461,7 @@ def write_hyperframes_html():
         justify-content: space-between;
         align-items: center;
         padding: 20px 36px;
-        background: rgba(19, 13, 38, 0.75);
+        background: rgba(18, 10, 36, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 9999px;
         z-index: 10;
@@ -401,7 +488,7 @@ def write_hyperframes_html():
       }
       .action-pill {
         padding: 14px 28px;
-        background: #7c3aed;
+        background: #9333ea;
         border-radius: 9999px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
@@ -409,7 +496,7 @@ def write_hyperframes_html():
         color: #ffffff;
         letter-spacing: 1px;
         text-transform: uppercase;
-        box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
       }
     </style>
   </head>
@@ -421,32 +508,32 @@ def write_hyperframes_html():
       <div class="header-hud">
         <div class="badge-series">
           <div class="badge-dot"></div>
-          sIA #35 • DATA ENGINEERING
+          sIA DAILY • INGENIERÍA DE DATOS
         </div>
         <div class="badge-telemetry">
-          YAML CONTRACTS // SQL
+          DATA CONTRACTS // DBT & CI/CD
         </div>
       </div>
 
       <!-- HOOK CARD -->
       <div class="hook-card" id="hookCard">
         <div class="hook-label">
-          <span>📊</span> GOBERNANZA TÉCNICA DE DATOS
+          <span>🛡️</span> GOBERNANZA TÉCNICA DE DATOS
         </div>
         <div class="hook-title">
-          "Tus pipelines analíticos fallan porque nadie respeta un <span class="alert-hl">contrato semántico</span>."
+          "¿Por qué los pipelines de datos siguen <span class="alert-hl">rompiéndose a las 3:00 AM</span>?"
         </div>
       </div>
 
-      <!-- HERO STAGE (Broken Pipeline vs Contract Gateway) -->
+      <!-- HERO STAGE (Schema Mutation vs Data Contract Gate) -->
       <div class="hero-stage" id="heroStage">
         <div class="stage-header">
-          <span id="stageTitle">MUTACIÓN SILENCIOSA DE ESQUEMA // ERROR 500</span>
-          <span id="stageTelemetry">INCIDENCIA: 03:14 AM // ON-CALL ALERT</span>
+          <span id="stageTitle">MUTACIÓN SILENCIOSA vs YAML GATE</span>
+          <span id="stageTelemetry">ENFORCEMENT EN TIEMPO REAL</span>
         </div>
 
-        <!-- ACT 1: Broken Pipeline Visual -->
-        <div class="broken-pipeline-container" id="brokenContainer">
+        <!-- ACT 1: Breaking Pipeline Visual -->
+        <div class="breaking-container" id="breakingContainer">
           <svg width="800" height="460" viewBox="0 0 800 460">
             <!-- Source Database Node -->
             <rect x="60" y="160" width="180" height="120" rx="16" fill="#1e1b4b" stroke="#a855f7" stroke-width="2.5"/>
@@ -503,7 +590,7 @@ def write_hyperframes_html():
 
             <rect x="330" y="340" width="200" height="60" rx="10" fill="rgba(0,0,0,0.5)"/>
             <text x="430" y="365" fill="#c084fc" font-family="JetBrains Mono" font-size="14" text-anchor="middle" font-weight="700">CI/CD ENFORCEMENT</text>
-            <text x="430" y="388" fill="#94a3b8" font-family="JetBrains Mono" font-size="12" text-anchor="middle">Validación en tiempo real</text>
+            <text x="430" y="388" fill="#94a3b8" font-family="JetBrains Mono" font-size="12" text-anchor="middle">Validación &lt; 5ms</text>
 
             <!-- Branch 1: Valid Path to Lakehouse -->
             <path d="M 550,240 Q 640,240 670,180" fill="none" stroke="#10b981" stroke-width="3.5"/>
@@ -517,6 +604,24 @@ def write_hyperframes_html():
             <text x="750" y="400" fill="#fca5a5" font-family="JetBrains Mono" font-size="15" text-anchor="middle" font-weight="800">DLQ QUARANTINE</text>
             <text x="750" y="425" fill="#ef4444" font-family="JetBrains Mono" font-size="13" text-anchor="middle">⛔ MUTACIÓN BLOQUEADA</text>
           </svg>
+        </div>
+
+        <!-- ACT 3: Omnichannel Flywheel Card -->
+        <div class="flywheel-container" id="flywheelContainer">
+          <div class="flywheel-card">
+            <div class="card-icon">🎧</div>
+            <div class="card-info">
+              <span class="card-title">sIA Daily en Spotify</span>
+              <span class="card-desc">Episodio #35: Data Contracts Semánticos y FHE en producción</span>
+            </div>
+          </div>
+          <div class="flywheel-card" style="border-color: #38bdf8;">
+            <div class="card-icon">📖</div>
+            <div class="card-info">
+              <span class="card-title">Revista Técnica Digital</span>
+              <span class="card-desc">escucha-sia.github.io • Esquemas YAML, dbt tests y arquitectura</span>
+            </div>
+          </div>
         </div>
 
         <!-- Telemetry Metrics Grid -->
@@ -535,10 +640,10 @@ def write_hyperframes_html():
       <!-- SUBTITLES & AUDIO CARD -->
       <div class="subtitles-card">
         <div class="speaker-tag" id="speakerTag">
-          <span>🎙️</span> JORGE (DATA PIPELINES)
+          <span>🎙️</span> JORGE (INGENIERÍA DE DATOS)
         </div>
         <div class="subtitles-text" id="subtitlesText">
-          "Durante años, los equipos vivieron bajo el terror de que una columna rota destruyera tableros a las tres de la mañana..."
+          "¿Por qué los equipos de datos siguen despertando a las tres de la mañana por pipelines destruidos en producción?"
         </div>
         <div class="waveform-row" id="waveform">
           <!-- 28 bars -->
@@ -595,46 +700,58 @@ def write_hyperframes_html():
         ease: "power2.inOut"
       });
 
-      // 4. MASTER TIMELINE FOR VIDEO
+      // 4. MASTER TIMELINE FOR VIDEO (45.0s CLOSED PRODUCT)
       const tl = gsap.timeline();
 
-      // ACT 1 (0.0s - 9.5s): El terror de las roturas de pipeline en prod
+      // ACT 1 (0.0s - 16.0s): El pipeline roto en producción
       tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
       tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
-      tl.from("#brokenContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
-
-      // Packet moving and breaking
-      tl.from("#errorPacket", { x: -100, opacity: 0, duration: 2.0, ease: "power1.inOut" }, 1.0);
-      tl.to("#errorPacket", { scale: 1.3, duration: 0.3, yoyo: true, repeat: 3 }, 3.0);
+      tl.from("#breakingContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
 
       // Subtitles Sync Act 1
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Durante años, los equipos vivieron bajo el terror de que una columna transaccional rompiera todo...";
+        document.getElementById("subtitlesText").innerHTML = "¿Por qué los equipos de datos siguen despertando a las tres de la mañana por pipelines destruidos en producción?";
       }, null, 0.2);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "...causando alertas a las tres de la mañana por fallos catastróficos de esquema en producción.";
-      }, null, 5.0);
+        document.getElementById("subtitlesText").innerHTML = "Cualquier cambio imprevisto en origen muta el esquema silenciosamente, corrompe las tablas analíticas y derrumba los tableros del negocio.";
+      }, null, 6.0);
 
-      // TRANSITION TO ACT 2 (9.5s): Dalia presenta Data Contracts en YAML
+      // TRANSITION TO ACT 2 (16.0s - 34.0s): Dalia presenta YAML Contract Gate
       tl.call(() => {
         document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (ARQUITECTURA DE DATOS)";
-        document.getElementById("stageTitle").innerHTML = "DATA CONTRACT GATEWAY // ESPECIFICACIÓN EJECUTABLE";
-        document.getElementById("stageTelemetry").innerHTML = "VALIDACIÓN CI/CD • ZERO-DOWNTIME";
-      }, null, 9.5);
+        document.getElementById("stageTitle").innerHTML = "YAML CONTRACT GATE // CI/CD ENFORCEMENT";
+        document.getElementById("stageTelemetry").innerHTML = "LATENCIA: < 5ms • DEAD LETTER QUEUE";
+      }, null, 16.0);
 
-      // Fade out Broken, Fade in Contract Gate
-      tl.to("#brokenContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 9.5);
-      tl.to("#contractContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 10.2);
+      // Fade out Breaking, Fade in Contract Gate
+      tl.to("#breakingContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 16.0);
+      tl.to("#contractContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.7);
 
       // Subtitles Act 2
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Un Data Contract es una especificación ejecutable en YAML que valida esquemas antes de la ingesta...";
-      }, null, 10.0);
+        document.getElementById("subtitlesText").innerHTML = "La solución son los Data Contracts semánticos: especificaciones YAML declarativas y validación en CI/CD que interceptan anomalías en menos de cinco milisegundos...";
+      }, null, 16.5);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "<span style='color: #c084fc; font-weight: 800;'>Si una columna muta, se frena en CI/CD: cero errores silenciosos en analítica.</span>";
-      }, null, 14.0);
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #c084fc; font-weight: 800;'>...aislando paquetes corruptos en una Dead Letter Queue antes de contaminar el lago analítico.</span>";
+      }, null, 25.0);
+
+      // TRANSITION TO ACT 3 (34.0s - 45.0s): Veredicto & Tripartite Flywheel
+      tl.call(() => {
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> JORGE & DALIA (VEREDICTO)";
+        document.getElementById("stageTitle").innerHTML = "VEREDICTO & REDIRECCIÓN OMNICANAL";
+        document.getElementById("stageTelemetry").innerHTML = "DATA CONTRACTS Y PRODUCCIÓN";
+      }, null, 34.0);
+
+      // Fade out Contract Gate, Fade in Flywheel Card
+      tl.to("#contractContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 34.0);
+      tl.to("#flywheelContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 34.7);
+
+      // Subtitles Act 3
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Aprende a implementar contratos con dbt en escucha-sia.github.io, y escucha el análisis técnico en el episodio 35 de Spotify.";
+      }, null, 34.5);
     </script>
   </body>
 </html>
@@ -644,7 +761,7 @@ def write_hyperframes_html():
     print("📝 Archivos index.html y compositions/scene.html generados.")
 
 def render_with_hyperframes():
-    print("⚡ Ejecutando HyperFrames GPU render...")
+    print("⚡ Ejecutando HyperFrames GPU render (45 segundos)...")
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
@@ -672,7 +789,7 @@ def render_with_hyperframes():
     poster_path = REELS_DIR / (TARGET_REEL.stem + "_poster.jpg")
     cmd_poster = [
         "ffmpeg", "-y",
-        "-ss", "13.5",
+        "-ss", "20.0",
         "-i", str(TARGET_REEL),
         "-vframes", "1",
         "-q:v", "2",
@@ -681,17 +798,17 @@ def render_with_hyperframes():
     subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     size_mb = os.path.getsize(TARGET_REEL) / (1024 * 1024)
-    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"✅ ¡Video Motion Graphics Reel #08 generado con éxito! ({size_mb:.2f} MB)")
     print(f"   -> {TARGET_REEL}")
     print(f"   -> Póster en: {poster_path}")
 
-def main():
-    print("=" * 50)
-    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #35 (DATA CONTRACTS)")
-    print("=" * 50)
-    extract_teaser_audio()
+async def main():
+    print("=" * 60)
+    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #08 (DATA CONTRACTS SEMÁNTICOS)")
+    print("=" * 60)
+    await generate_reel_audio()
     write_hyperframes_html()
     render_with_hyperframes()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

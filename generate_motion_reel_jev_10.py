@@ -1,17 +1,19 @@
 """
 sIA Motion Graphics Reel Generator: Reel #10 (Jev: Sistema 1 vs LLMs)
-Genera un reel cinemático vertical (1080x1920) 100% código en HyperFrames:
-- Comparativa de latencia: LLM Estocástico (2,400ms) vs Jev Sistema 1 (3.8ms).
-- Matriz vectorial de decisiones con tipado estricto (choice, score, boolean).
-- HUD de acción DOOM en tiempo real sin alucinación de texto.
-- Badges de telemetría: 3.8ms Latencia, 630x Más Rápido, Tipado Estricto Nativo.
+Tema: TypeSafe AI Jev (Muerte del LLM para Decisiones y Auge del Sistema 1)
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo completo (Jorge + Dalia).
+- No es un corte truncado: inicio, latencia de LLM (2400ms), arquitectura Sistema 1 (3.8ms) y cierre.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog con código.
 """
 
 import os
 import sys
 import shutil
+import asyncio
 import subprocess
 from pathlib import Path
+import edge_tts
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -23,26 +25,67 @@ REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
 NODE_PATH = r"C:\Carlos\nodejs"
 
-SOURCE_AUDIO = AUDIO_DIR / "sIA_DeepDive_Jev_TypeSafe_Sistema1.mp3"
 TARGET_REEL = REELS_DIR / "sIA_Reel_10_Jev_TypeSafe_Sistema1.mp4"
-DURATION = 21.0
-START_OFFSET = "00:00:46.0"
+DURATION = 45.0
 
-def extract_teaser_audio():
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_DALIA = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "¿Por qué usar un modelo de lenguaje para tomar decisiones en tiempo real es el peor error de ingeniería?"
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Un LLM promedio tarda dos mil cuatrocientos milisegundos en responder, alucina tokens y cuesta una fortuna por inferencia. En un bucle de control, dos segundos es un choque seguro."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_DALIA,
+        "text": "La respuesta es Jev: inteligencia artificial de Sistema Uno. Cero generación de texto: evalúa el estado del entorno y devuelve estructuras nativas de Rust o TypeScript en solo tres punto ocho milisegundos. Seiscientas treinta veces más rápido y determinista."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "El debate completo entre razonamiento deliberativo y reflejos puros lo tienes en el podcast de Spotify, y el diagrama con el código de DOOM en escucha guion sia punto github punto io."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para el Reel #10...")
+    temp_dir = ENGINE_DIR / "temp_audio_jev"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+3%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
     clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
     clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
     cmd = [
         "ffmpeg", "-y",
-        "-ss", START_OFFSET,
-        "-t", str(DURATION),
-        "-i", str(SOURCE_AUDIO),
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-af", "afade=t=out:st=19.5:d=1.5",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
         str(clip_audio)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-    print("✂️ Audio teaser extraído correctamente.")
+    print("✅ Audio del Reel #10 sintetizado y ensamblado con éxito.")
 
 def write_hyperframes_html():
     index_html = f"""<!doctype html>
@@ -284,6 +327,50 @@ def write_hyperframes_html():
         height: 640px;
       }
 
+      /* ACT 3: OMNICHANNEL FLYWHEEL CTA */
+      .flywheel-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 40px;
+        opacity: 0;
+        z-index: 30;
+      }
+      .flywheel-card {
+        width: 100%;
+        background: rgba(10, 20, 38, 0.95);
+        border: 2px solid rgba(6, 182, 212, 0.6);
+        border-radius: 20px;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+      .card-icon {
+        font-size: 40px;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .card-desc {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #67e8f9;
+        margin-top: 4px;
+      }
+
       /* BADGES & TELEMETRY */
       .metrics-grid {
         position: absolute;
@@ -498,6 +585,24 @@ def write_hyperframes_html():
           </svg>
         </div>
 
+        <!-- ACT 3: Omnichannel Flywheel Card -->
+        <div class="flywheel-container" id="flywheelContainer">
+          <div class="flywheel-card">
+            <div class="card-icon">🎧</div>
+            <div class="card-info">
+              <span class="card-title">sIA Deep Dive en Spotify</span>
+              <span class="card-desc">Episodio #33: Jev y la muerte del LLM para tomar decisiones</span>
+            </div>
+          </div>
+          <div class="flywheel-card" style="border-color: #38bdf8;">
+            <div class="card-icon">📖</div>
+            <div class="card-info">
+              <span class="card-title">Revista Técnica Digital</span>
+              <span class="card-desc">escucha-sia.github.io • Arquitectura Rust, código y gráficos</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Telemetry Metrics Grid -->
         <div class="metrics-grid">
           <div class="metric-badge">
@@ -505,8 +610,8 @@ def write_hyperframes_html():
             <span class="metric-desc">Latencia de Inferencia en GPU</span>
           </div>
           <div class="metric-badge">
-            <span class="metric-value">0% Texto</span>
-            <span class="metric-desc">Tipado Estricto Discriminativo</span>
+            <span class="metric-value">630x</span>
+            <span class="metric-desc">Más Rápido (Tipado Estricto)</span>
           </div>
         </div>
       </div>
@@ -517,7 +622,7 @@ def write_hyperframes_html():
           <span>🎙️</span> JORGE (INFRAESTRUCTURA)
         </div>
         <div class="subtitles-text" id="subtitlesText">
-          "Nuestra tesis central es contundente: usar LLMs generativos para decisiones fue un error arquitectónico..."
+          "¿Por qué usar un modelo de lenguaje para tomar decisiones en tiempo real es el peor error de ingeniería?"
         </div>
         <div class="waveform-row" id="waveform">
           <!-- 28 bars -->
@@ -565,10 +670,10 @@ def write_hyperframes_html():
         });
       });
 
-      // 3. MASTER TIMELINE FOR VIDEO
+      // 3. MASTER TIMELINE FOR VIDEO (45.0s CLOSED PRODUCT)
       const tl = gsap.timeline();
 
-      // ACT 1 (0.0s - 10.5s): El error de usar LLMs para decisiones
+      // ACT 1 (0.0s - 16.0s): El error de usar LLMs para decisiones
       tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
       tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
       tl.from("#benchmarkContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
@@ -579,32 +684,48 @@ def write_hyperframes_html():
 
       // Subtitles Sync Act 1
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Nuestra tesis central es contundente: usar LLMs generativos para decisiones fue un error arquitectónico...";
+        document.getElementById("subtitlesText").innerHTML = "¿Por qué usar un modelo de lenguaje para tomar decisiones en tiempo real es el peor error de ingeniería?";
       }, null, 0.2);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "...cuando les pedimos velocidad en código son lentos, caros y peligrosamente estocásticos.";
-      }, null, 5.5);
+        document.getElementById("subtitlesText").innerHTML = "Un LLM tarda 2,400 ms en responder, alucina tokens y cuesta una fortuna por inferencia. En un bucle de control, dos segundos es un choque seguro.";
+      }, null, 6.0);
 
-      // TRANSITION TO ACT 2 (10.5s): Dalia presenta Sistema 1 discriminativo
+      // TRANSITION TO ACT 2 (16.0s - 33.0s): Dalia presenta Sistema 1 discriminativo
       tl.call(() => {
         document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (ARQUITECTURA DE IA)";
         document.getElementById("stageTitle").innerHTML = "SISTEMA 1 // MOTOR DISCRIMINATIVO DISCRETO";
         document.getElementById("stageTelemetry").innerHTML = "TIPADO NATIVO • LATENCIA: 3.8ms";
-      }, null, 10.5);
+      }, null, 16.0);
 
       // Fade out Benchmark, Fade in Engine
-      tl.to("#benchmarkContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 10.5);
-      tl.to("#engineContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 11.2);
+      tl.to("#benchmarkContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 16.0);
+      tl.to("#engineContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.7);
 
       // Subtitles Act 2
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Jev inaugura la era del Sistema 1: redes discriminativas que no conversan ni generan texto...";
-      }, null, 11.0);
+        document.getElementById("subtitlesText").innerHTML = "La respuesta es Jev: IA de Sistema 1. Cero texto: evalúa el estado del entorno y devuelve estructuras nativas de Rust o TypeScript en solo 3.8 milisegundos.";
+      }, null, 16.5);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "<span style='color: #38bdf8; font-weight: 800;'>...evalúan estados en milisegundos y devuelven tipos de datos matemáticamente estructurados.</span>";
-      }, null, 15.5);
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #38bdf8; font-weight: 800;'>...seiscientas treinta veces más rápido y cien por ciento determinista sin alucinación.</span>";
+      }, null, 24.5);
+
+      // TRANSITION TO ACT 3 (33.0s - 45.0s): Veredicto & Tripartite Flywheel
+      tl.call(() => {
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> JORGE & DALIA (VEREDICTO)";
+        document.getElementById("stageTitle").innerHTML = "VEREDICTO & REDIRECCIÓN OMNICANAL";
+        document.getElementById("stageTelemetry").innerHTML = "RECURSOS Y ARQUITECTURA COMPLETA";
+      }, null, 33.0);
+
+      // Fade out Engine, Fade in Flywheel Card
+      tl.to("#engineContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 33.0);
+      tl.to("#flywheelContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 33.7);
+
+      // Subtitles Act 3
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "El debate entre razonamiento deliberativo y reflejos puros lo tienes en Spotify, y el diagrama con código en escucha-sia.github.io.";
+      }, null, 33.5);
     </script>
   </body>
 </html>
@@ -614,7 +735,7 @@ def write_hyperframes_html():
     print("📝 Archivos index.html y compositions/scene.html generados.")
 
 def render_with_hyperframes():
-    print("⚡ Ejecutando HyperFrames GPU render...")
+    print("⚡ Ejecutando HyperFrames GPU render (45 segundos)...")
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
@@ -642,7 +763,7 @@ def render_with_hyperframes():
     poster_path = REELS_DIR / (TARGET_REEL.stem + "_poster.jpg")
     cmd_poster = [
         "ffmpeg", "-y",
-        "-ss", "13.5",
+        "-ss", "20.0",
         "-i", str(TARGET_REEL),
         "-vframes", "1",
         "-q:v", "2",
@@ -651,17 +772,17 @@ def render_with_hyperframes():
     subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     size_mb = os.path.getsize(TARGET_REEL) / (1024 * 1024)
-    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"✅ ¡Video Motion Graphics Reel #10 generado con éxito! ({size_mb:.2f} MB)")
     print(f"   -> {TARGET_REEL}")
     print(f"   -> Póster en: {poster_path}")
 
-def main():
-    print("=" * 50)
-    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: JEV (SISTEMA 1)")
-    print("=" * 50)
-    extract_teaser_audio()
+async def main():
+    print("=" * 60)
+    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #10 (JEV SISTEMA 1)")
+    print("=" * 60)
+    await generate_reel_audio()
     write_hyperframes_html()
     render_with_hyperframes()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

@@ -1,17 +1,19 @@
 """
 sIA Motion Graphics Reel Generator: Reel #13 (Model Context Protocol - MCP)
-Genera un reel cinemático vertical (1080x1920) 100% código en HyperFrames:
-- El infierno de las APIs REST heterogéneas para agentes (Acto 1).
-- La arquitectura MCP: bus estándar cliente-servidor JSON-RPC 2.0 (Acto 2).
-- Servidores MCP modulares: SQL Database, Filesystem, Git Tools.
-- Badges de telemetría: JSON-RPC 2.0 Nativo, Estándar Abierto Anthropic, Cero Acoplamiento.
+Tema: MCP en Producción: Desacoplamiento de Agentes y APIs con JSON-RPC 2.0
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo completo (Jorge + Dalia).
+- No es un corte truncado: inicio, pesadilla REST N×M, bus universal MCP JSON-RPC 2.0 y cierre.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog con código.
 """
 
 import os
 import sys
 import shutil
+import asyncio
 import subprocess
 from pathlib import Path
+import edge_tts
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -23,26 +25,67 @@ REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
 NODE_PATH = r"C:\Carlos\nodejs"
 
-SOURCE_AUDIO = AUDIO_DIR / "sIA_DeepDive_MCP_Agentes_Produccion.mp3"
 TARGET_REEL = REELS_DIR / "sIA_Reel_13_MCP_Agentes_Produccion.mp4"
-DURATION = 21.0
-START_OFFSET = "00:00:47.0"
+DURATION = 45.0
 
-def extract_teaser_audio():
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_DALIA = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "¿Por qué integrar agentes de inteligencia artificial con APIs REST tradicionales se ha convertido en la pesadilla de cualquier equipo de ingeniería?"
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Cada servicio tiene esquemas incompatibles, autenticaciones fragmentadas y formatos que saturan la ventana de contexto del LLM. Mantener conectores artesanales no escala: es código espagueti de integración."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_DALIA,
+        "text": "El estándar abierto de la industria es MCP: Model Context Protocol. Un bus universal basado en JSON-RPC 2.0 que desacopla el modelo de las herramientas. El agente descubre recursos, bases de datos y repositorios Git de forma dinámica y segura."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Tienes el código de implementación de servidores MCP en escucha guion sia punto github punto io, y la arquitectura a fondo para producción en el episodio treinta y seis de Spotify."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para el Reel #13...")
+    temp_dir = ENGINE_DIR / "temp_audio_mcp"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+3%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
     clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
     clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
     cmd = [
         "ffmpeg", "-y",
-        "-ss", START_OFFSET,
-        "-t", str(DURATION),
-        "-i", str(SOURCE_AUDIO),
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
-        "-af", "afade=t=out:st=19.5:d=1.5",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
         str(clip_audio)
     ]
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-    print("✂️ Audio teaser extraído correctamente.")
+    print("✅ Audio del Reel #13 sintetizado y ensamblado con éxito.")
 
 def write_hyperframes_html():
     index_html = f"""<!doctype html>
@@ -161,30 +204,30 @@ def write_hyperframes_html():
         align-items: center;
         gap: 12px;
         padding: 10px 24px;
-        background: rgba(6, 182, 212, 0.18);
-        border: 1px solid rgba(6, 182, 212, 0.5);
+        background: rgba(139, 92, 246, 0.18);
+        border: 1px solid rgba(139, 92, 246, 0.5);
         border-radius: 9999px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 24px;
         font-weight: 800;
-        color: #67e8f9;
+        color: #c084fc;
         letter-spacing: 2px;
         text-transform: uppercase;
-        box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+        box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
       }
       .badge-dot {
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background: #06b6d4;
-        box-shadow: 0 0 14px #06b6d4;
+        background: #a855f7;
+        box-shadow: 0 0 14px #a855f7;
       }
       .badge-telemetry {
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         color: #94a3b8;
         background: rgba(15, 23, 42, 0.7);
-        border: 1px solid rgba(6, 182, 212, 0.3);
+        border: 1px solid rgba(139, 92, 246, 0.3);
         padding: 8px 20px;
         border-radius: 8px;
         letter-spacing: 1px;
@@ -195,7 +238,7 @@ def write_hyperframes_html():
         margin-top: 30px;
         padding: 34px 40px;
         background: rgba(10, 20, 38, 0.85);
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        border: 1px solid rgba(139, 92, 246, 0.4);
         border-radius: 28px;
         backdrop-filter: blur(20px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -206,7 +249,7 @@ def write_hyperframes_html():
         font-size: 20px;
         font-weight: 800;
         letter-spacing: 3px;
-        color: #38bdf8;
+        color: #c084fc;
         text-transform: uppercase;
         margin-bottom: 12px;
         display: flex;
@@ -221,11 +264,11 @@ def write_hyperframes_html():
         color: #ffffff;
       }
       .hook-title .alert-hl {
-        color: #38bdf8;
-        text-shadow: 0 0 20px rgba(6, 182, 212, 0.7);
+        color: #c084fc;
+        text-shadow: 0 0 20px rgba(139, 92, 246, 0.7);
       }
 
-      /* HERO STAGE: REST SPAGHETTI VS MCP BUS */
+      /* HERO STAGE: REST VS MCP PROTOCOL */
       .hero-stage {
         position: relative;
         width: 100%;
@@ -233,7 +276,7 @@ def write_hyperframes_html():
         margin-top: 25px;
         border-radius: 32px;
         background: rgba(8, 16, 32, 0.90);
-        border: 1px solid rgba(6, 182, 212, 0.3);
+        border: 1px solid rgba(139, 92, 246, 0.3);
         box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
         overflow: hidden;
         z-index: 10;
@@ -252,13 +295,13 @@ def write_hyperframes_html():
         align-items: center;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
-        color: #38bdf8;
+        color: #c084fc;
         font-weight: 700;
         letter-spacing: 1.5px;
         z-index: 20;
       }
 
-      /* ACT 1: SPAGHETTI REST */
+      /* ACT 1: REST API SPAGHETTI VISUAL */
       .rest-container {
         position: absolute;
         width: 860px;
@@ -269,7 +312,7 @@ def write_hyperframes_html():
         align-items: center;
       }
 
-      /* ACT 2: MCP BUS ARCHITECTURE */
+      /* ACT 2: MCP UNIVERSAL PROTOCOL BUS */
       .mcp-container {
         position: absolute;
         width: 100%;
@@ -282,6 +325,50 @@ def write_hyperframes_html():
       .mcp-svg {
         width: 860px;
         height: 640px;
+      }
+
+      /* ACT 3: OMNICHANNEL FLYWHEEL CTA */
+      .flywheel-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 40px;
+        opacity: 0;
+        z-index: 30;
+      }
+      .flywheel-card {
+        width: 100%;
+        background: rgba(10, 20, 38, 0.95);
+        border: 2px solid rgba(139, 92, 246, 0.6);
+        border-radius: 20px;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      }
+      .card-icon {
+        font-size: 40px;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .card-desc {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #d8b4fe;
+        margin-top: 4px;
       }
 
       /* BADGES & TELEMETRY */
@@ -297,7 +384,7 @@ def write_hyperframes_html():
       }
       .metric-badge {
         background: rgba(10, 20, 38, 0.85);
-        border: 1px solid rgba(6, 182, 212, 0.4);
+        border: 1px solid rgba(139, 92, 246, 0.4);
         padding: 16px 20px;
         border-radius: 16px;
         display: flex;
@@ -307,7 +394,7 @@ def write_hyperframes_html():
         font-family: 'JetBrains Mono', monospace;
         font-size: 32px;
         font-weight: 800;
-        color: #38bdf8;
+        color: #c084fc;
         letter-spacing: -1px;
       }
       .metric-desc {
@@ -322,7 +409,7 @@ def write_hyperframes_html():
         margin-top: 25px;
         padding: 30px 40px;
         background: rgba(10, 20, 38, 0.85);
-        border: 1px solid rgba(6, 182, 212, 0.35);
+        border: 1px solid rgba(139, 92, 246, 0.35);
         border-radius: 28px;
         backdrop-filter: blur(20px);
         min-height: 200px;
@@ -335,7 +422,7 @@ def write_hyperframes_html():
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
         font-weight: 800;
-        color: #38bdf8;
+        color: #c084fc;
         letter-spacing: 2px;
         text-transform: uppercase;
         display: flex;
@@ -362,9 +449,9 @@ def write_hyperframes_html():
       .bar {
         width: 8px;
         height: 16px;
-        background: linear-gradient(180deg, #06b6d4, #0284c7);
+        background: linear-gradient(180deg, #c084fc, #7c3aed);
         border-radius: 4px;
-        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
       }
 
       /* FOOTER / SPOTIFY CTA */
@@ -401,7 +488,7 @@ def write_hyperframes_html():
       }
       .action-pill {
         padding: 14px 28px;
-        background: #0891b2;
+        background: #7c3aed;
         border-radius: 9999px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 20px;
@@ -409,7 +496,7 @@ def write_hyperframes_html():
         color: #ffffff;
         letter-spacing: 1px;
         text-transform: uppercase;
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
       }
     </style>
   </head>
@@ -421,31 +508,31 @@ def write_hyperframes_html():
       <div class="header-hud">
         <div class="badge-series">
           <div class="badge-dot"></div>
-          sIA DEEP DIVE • AGENTIC PROTOCOLS
+          sIA DEEP DIVE • INTEGRACIÓN
         </div>
         <div class="badge-telemetry">
-          ANTHROPIC MCP // BUS ESTÁNDAR
+          MCP // ANTHROPIC STANDARD
         </div>
       </div>
 
       <!-- HOOK CARD -->
       <div class="hook-card" id="hookCard">
         <div class="hook-label">
-          <span>🌐</span> EL NUEVO BUS DE DATOS UNIVERSAL
+          <span>⚡</span> PROTOCOLO MODEL CONTEXT (MCP)
         </div>
         <div class="hook-title">
-          "Las APIs REST están muriendo. El futuro de los agentes se llama <span class="alert-hl">Model Context Protocol</span>."
+          "¿Por qué integrar agentes con APIs REST es el <span class="alert-hl">mayor error de diseño</span>?"
         </div>
       </div>
 
-      <!-- HERO STAGE (REST Spaghetti vs MCP Bus) -->
+      <!-- HERO STAGE (REST Spaghetti vs MCP Universal Bus) -->
       <div class="hero-stage" id="heroStage">
         <div class="stage-header">
-          <span id="stageTitle">EL COLAPSO DE LAS APIS REST EN AGENTES</span>
-          <span id="stageTelemetry">ACOPILAMIENTO: N × M // ALTO RIESGO</span>
+          <span id="stageTitle">INTEGRACIÓN N × M vs BUS UNIVERSAL</span>
+          <span id="stageTelemetry">DESACOPLAMIENTO CONTEXTUAL</span>
         </div>
 
-        <!-- ACT 1: Spaghetti REST Architecture Visual -->
+        <!-- ACT 1: Spaghetti REST Failure -->
         <div class="rest-container" id="restContainer">
           <svg width="800" height="460" viewBox="0 0 800 460">
             <!-- Central LLM -->
@@ -521,6 +608,24 @@ def write_hyperframes_html():
           </svg>
         </div>
 
+        <!-- ACT 3: Omnichannel Flywheel Card -->
+        <div class="flywheel-container" id="flywheelContainer">
+          <div class="flywheel-card">
+            <div class="card-icon">🎧</div>
+            <div class="card-info">
+              <span class="card-title">sIA Deep Dive en Spotify</span>
+              <span class="card-desc">Episodio #36: Arquitectura y despliegue de MCP en producción</span>
+            </div>
+          </div>
+          <div class="flywheel-card" style="border-color: #38bdf8;">
+            <div class="card-icon">📖</div>
+            <div class="card-info">
+              <span class="card-title">Revista Técnica Digital</span>
+              <span class="card-desc">escucha-sia.github.io • Esquemas JSON-RPC y código de servidores</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Telemetry Metrics Grid -->
         <div class="metrics-grid">
           <div class="metric-badge">
@@ -529,7 +634,7 @@ def write_hyperframes_html():
           </div>
           <div class="metric-badge">
             <span class="metric-value">0% Lock-in</span>
-            <span class="metric-desc">Interoperable en Cualquier LLM</span>
+            <span class="metric-desc">Interoperable con Todo LLM</span>
           </div>
         </div>
       </div>
@@ -540,7 +645,7 @@ def write_hyperframes_html():
           <span>🎙️</span> JORGE (ARQUITECTURA DE INTEGRACIÓN)
         </div>
         <div class="subtitles-text" id="subtitlesText">
-          "Y la tesis central con la que abrimos hoy es contundente: el protocolo MCP está reemplazando a las APIs REST..."
+          "¿Por qué integrar agentes de inteligencia artificial con APIs REST tradicionales se ha convertido en la pesadilla de cualquier equipo de ingeniería?"
         </div>
         <div class="waveform-row" id="waveform">
           <!-- 28 bars -->
@@ -588,42 +693,58 @@ def write_hyperframes_html():
         });
       });
 
-      // 3. MASTER TIMELINE FOR VIDEO
+      // 3. MASTER TIMELINE FOR VIDEO (45.0s CLOSED PRODUCT)
       const tl = gsap.timeline();
 
-      // ACT 1 (0.0s - 9.5s): El colapso de las APIs REST para agentes
+      // ACT 1 (0.0s - 16.0s): El colapso de las APIs REST para agentes
       tl.from(".header-hud", { y: -30, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
       tl.from("#hookCard", { scale: 0.95, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.4);
       tl.from("#restContainer", { scale: 0.85, opacity: 0, duration: 1.0, ease: "power3.out" }, 0.6);
 
       // Subtitles Sync Act 1
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Y la tesis central con la que abrimos hoy es contundente...";
+        document.getElementById("subtitlesText").innerHTML = "¿Por qué integrar agentes de IA con APIs REST tradicionales se ha convertido en la pesadilla de cualquier equipo de ingeniería?";
       }, null, 0.2);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "...el protocolo MCP está reemplazando a las APIs REST como el bus estándar entre IA y herramientas.";
-      }, null, 3.5);
+        document.getElementById("subtitlesText").innerHTML = "Cada servicio tiene esquemas incompatibles, autenticaciones fragmentadas y formatos que saturan el contexto. Mantener conectores artesanales es espagueti puro.";
+      }, null, 6.0);
 
-      // TRANSITION TO ACT 2 (9.5s): Dalia presenta el Bus MCP
+      // TRANSITION TO ACT 2 (16.0s - 34.0s): Dalia presenta MCP Universal Bus
       tl.call(() => {
-        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (ARQUITECTURA AGÉNTICA)";
-        document.getElementById("stageTitle").innerHTML = "MODEL CONTEXT PROTOCOL // BUS UNIVERSAL";
-        document.getElementById("stageTelemetry").innerHTML = "ESTÁNDAR ABIERTO • CLIENTE/SERVIDOR";
-      }, null, 9.5);
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> DALIA (ARQUITECTURA DE INTEGRACIÓN)";
+        document.getElementById("stageTitle").innerHTML = "MCP UNIVERSAL BUS // ANTHROPIC OPEN STANDARD";
+        document.getElementById("stageTelemetry").innerHTML = "JSON-RPC 2.0 • DISCOVERY DINÁMICO";
+      }, null, 16.0);
 
-      // Fade out REST, Fade in MCP
-      tl.to("#restContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 9.5);
-      tl.to("#mcpContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 10.2);
+      // Fade out REST, Fade in MCP Bus
+      tl.to("#restContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 16.0);
+      tl.to("#mcpContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.7);
 
       // Subtitles Act 2
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "Las piezas encajan con precisión: en lugar de acoplar código a cada API individual...";
-      }, null, 10.0);
+        document.getElementById("subtitlesText").innerHTML = "El estándar abierto de la industria es MCP: Model Context Protocol. Un bus universal basado en JSON-RPC 2.0 que desacopla el modelo de las herramientas.";
+      }, null, 16.5);
 
       tl.call(() => {
-        document.getElementById("subtitlesText").innerHTML = "<span style='color: #38bdf8; font-weight: 800;'>...MCP expone herramientas y recursos en un protocolo único JSON-RPC 2.0 seguro y dinámico.</span>";
-      }, null, 14.5);
+        document.getElementById("subtitlesText").innerHTML = "<span style='color: #c084fc; font-weight: 800;'>...el agente descubre recursos, bases de datos y repositorios Git de forma dinámica y segura.</span>";
+      }, null, 25.0);
+
+      // TRANSITION TO ACT 3 (34.0s - 45.0s): Veredicto & Tripartite Flywheel
+      tl.call(() => {
+        document.getElementById("speakerTag").innerHTML = "<span>🎙️</span> JORGE & DALIA (VEREDICTO)";
+        document.getElementById("stageTitle").innerHTML = "VEREDICTO & REDIRECCIÓN OMNICANAL";
+        document.getElementById("stageTelemetry").innerHTML = "SERVIDORES MCP Y PRODUCCIÓN";
+      }, null, 34.0);
+
+      // Fade out MCP Bus, Fade in Flywheel Card
+      tl.to("#mcpContainer", { opacity: 0, scale: 0.9, duration: 0.7, ease: "power2.in" }, 34.0);
+      tl.to("#flywheelContainer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 34.7);
+
+      // Subtitles Act 3
+      tl.call(() => {
+        document.getElementById("subtitlesText").innerHTML = "Tienes el código de implementación en escucha-sia.github.io, y la arquitectura a fondo para producción en el episodio 36 de Spotify.";
+      }, null, 34.5);
     </script>
   </body>
 </html>
@@ -633,7 +754,7 @@ def write_hyperframes_html():
     print("📝 Archivos index.html y compositions/scene.html generados.")
 
 def render_with_hyperframes():
-    print("⚡ Ejecutando HyperFrames GPU render...")
+    print("⚡ Ejecutando HyperFrames GPU render (45 segundos)...")
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
@@ -661,7 +782,7 @@ def render_with_hyperframes():
     poster_path = REELS_DIR / (TARGET_REEL.stem + "_poster.jpg")
     cmd_poster = [
         "ffmpeg", "-y",
-        "-ss", "13.5",
+        "-ss", "20.0",
         "-i", str(TARGET_REEL),
         "-vframes", "1",
         "-q:v", "2",
@@ -670,17 +791,17 @@ def render_with_hyperframes():
     subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     size_mb = os.path.getsize(TARGET_REEL) / (1024 * 1024)
-    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"✅ ¡Video Motion Graphics Reel #13 generado con éxito! ({size_mb:.2f} MB)")
     print(f"   -> {TARGET_REEL}")
     print(f"   -> Póster en: {poster_path}")
 
-def main():
-    print("=" * 50)
-    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: MCP AGENTES (REEL #13)")
-    print("=" * 50)
-    extract_teaser_audio()
+async def main():
+    print("=" * 60)
+    print("🎬 RENDERIZANDO VIDEO MOTION GRAPHICS: sIA #13 (MODEL CONTEXT PROTOCOL)")
+    print("=" * 60)
+    await generate_reel_audio()
     write_hyperframes_html()
     render_with_hyperframes()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
