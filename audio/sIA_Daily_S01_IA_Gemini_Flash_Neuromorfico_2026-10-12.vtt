@@ -2,48 +2,51 @@ WEBVTT
 Kind: captions
 Language: es
 
-00:00:00.000 --> 00:00:10.872
-JORGE: ¡Muy buenos días a toda nuestra comunidad técnica! Bienvenidos a sIA Focus, tu cápsula técnica de seis minutos para el camino. Soy Jorge.
+00:00:00.000 --> 00:00:16.464
+JORGE: Bienvenidos a sIA Podcast. Hoy abrimos nuestra sección de Inteligencia Artificial y Sistemas Agénticos para desmontar uno de los mitos más extendidos entre los desarrolladores: ¿realmente los modelos ligeros de lenguaje son inservibles para tareas complejas?
 
-00:00:10.872 --> 00:00:22.248
-DALIA: ¡Y yo soy Dalia! Hoy es lunes doce de octubre de dos mil veintiséis, y en este capítulo nos sumergimos de lleno en la Inteligencia Artificial y la orquestación de agentes autónomos.
+00:00:16.464 --> 00:00:39.792
+DALIA: Así es, Jorge. En este episodio analizamos el fenómeno de Gemini Flash y la orquestación de agentes de alta velocidad. La tesis de hoy es contundente: el noventa por ciento de las quejas contra modelos sub-doscientos milisegundos no se deben a fallas del modelo, sino a arquitecturas de prompting deficientes que esperan razonamiento deliberativo de una unidad de procesamiento de estado.
 
-00:00:22.248 --> 00:00:37.944
-JORGE: El fin de semana estalló un debate masivo en r diagonal googleantigravity con una publicación titulada: Opinión impopular: el noventa por ciento del odio hacia modelos ligeros como Gemini Flash proviene de desarrolladores que no saben usarlos o fanboys corporativos.
+00:00:39.792 --> 00:00:56.832
+JORGE: En los próximos minutos vamos a desarmar cómo estructurar prompts tipados con Pydantic para exprimir Flash al máximo, y en nuestra cápsula Fuera de la Burbuja exploraremos la computación neuromórfica en silicio, donde chips inspirados en el cerebro operan con menos de un milivatio de energía.
 
-00:00:37.944 --> 00:01:00.240
-DALIA: Es una queja constante, Jorge. Desarrolladores que envían un prompt ambiguo y abierto a un modelo sub-doscientos milisegundos como Gemini Flash, esperando que razone diez pasos abstractos como si fuera Clod tres punto cinco Sonnet. Y cuando el modelo responde de forma concisa o falla en un caso de borde, declaran en foros que el modelo no sirve para nada.
+00:00:56.832 --> 00:01:09.624
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, arranquemos por esa queja recurrente en las comunidades de código. ¿Por qué tantos desarrolladores se frustran al usar modelos ultrarrápidos?
 
-00:01:00.240 --> 00:01:23.184
-JORGE: Hay que entender la arquitectura. Gemini Flash no es un oráculo lento de razonamiento monolítico; es una unidad de procesamiento de estado de altísima velocidad y costo microscópico. En producción, su rol es clasificar intenciones, enrutar peticiones entre microservicios y extraer datos en esquemas JSON estrictamente tipados con Pydantic o Taip-Seif.
+00:01:09.624 --> 00:01:37.224
+JORGE: Es un error básico de encuadre arquitectónico, Dalia. El fin de semana estalló un debate masivo en r diagonal googleantigravity sobre desarrolladores que envían un prompt ambiguo y abierto a un modelo sub-doscientos milisegundos como Gemini Flash, esperando que razone diez pasos abstractos como si fuera Clod tres punto cinco Sonnet. Y cuando el modelo responde de forma concisa o falla en un caso de borde, declaran en foros que no sirve para nada.
 
-00:01:23.184 --> 00:01:50.664
-DALIA: Totalmente. Si alimentas a Flash con un prompt de sistema determinista, pocos ejemplos claros y aprovechas Context Caching para no recomputar la matriz de atención en cada llamada, el desempeño es brutal. Usa modelos pesados únicamente cuando el costo de un fallo sea inaceptable; pero para la orquestación masiva y el flujo continuo en tiempo real, dominar el prompting estructurado sobre modelos rápidos como Flash es la verdadera ventaja competitiva.
+00:01:37.224 --> 00:01:59.568
+DALIA: Hay que entender la arquitectura. Gemini Flash no es un oráculo lento de razonamiento monolítico; es una unidad de procesamiento de estado de altísima velocidad y costo microscópico. En producción, su rol es clasificar intenciones, enrutar peticiones entre microservicios y extraer datos en esquemas JSON estrictamente tipados con Pydantic o Taip-Seif.
 
-00:01:50.664 --> 00:02:18.144
-DALIA: Totalmente. Si alimentas a Flash con un prompt de sistema determinista, pocos ejemplos claros y aprovechas Context Caching para no recomputar la matriz de atención en cada llamada, el desempeño es brutal. Usa modelos pesados únicamente cuando el costo de un fallo sea inaceptable; pero para la orquestación masiva y el flujo continuo en tiempo real, dominar el prompting estructurado sobre modelos rápidos como Flash es la verdadera ventaja competitiva.
+00:01:59.568 --> 00:02:11.376
+JORGE: Si alimentas a Flash con un prompt de sistema determinista, pocos ejemplos claros y aprovechas Context Caching para no recomputar la matriz de atención en cada llamada, el desempeño es brutal.
 
-00:02:18.144 --> 00:02:26.952
+00:02:11.376 --> 00:02:26.016
+DALIA: Usa modelos pesados únicamente cuando el costo de un fallo sea inaceptable; pero para la orquestación masiva y el flujo continuo en tiempo real, dominar el prompting estructurado sobre modelos rápidos como Flash es la verdadera ventaja competitiva.
+
+00:02:26.016 --> 00:02:34.824
 JORGE: Y habiendo analizado la optimización de prompts en producción, es momento de romper la burbuja del algoritmo con nuestra ventana disruptiva de hoy.
 
-00:02:26.952 --> 00:02:46.128
+00:02:34.824 --> 00:02:54.000
 DALIA: Demos un salto cuántico hacia la computación neuromórfica en silicio. Mientras toda la industria comercial sigue compitiendo por quién construye el clúster de GPUs más gigante consumiendo megavatios en la nube, en los laboratorios de microelectrónica se perfeccionan las Spiking Neural Networks o redes neuronales por impulsos.
 
-00:02:46.128 --> 00:03:04.488
+00:02:54.000 --> 00:03:12.360
 JORGE: El cerebro humano no procesa datos con un reloj de cuatro gigahercios transmitiendo ceros y unos continuamente. Nuestras neuronas permanecen en reposo consumiendo casi nada de energía hasta que reciben un estímulo específico; solo entonces disparan una espiga eléctrica a través de sus sinapsis.
 
-00:03:04.488 --> 00:03:20.088
+00:03:12.360 --> 00:03:27.960
 DALIA: Chips neuromórficos como Intel Lóiji o Brein-Chip copian exactamente ese principio físico. En lugar de multiplicar matrices de punto flotante en silicio ardiente, tienen neuronas analógicas que solo se activan cuando hay un cambio relevante en el entorno.
 
-00:03:20.088 --> 00:03:46.776
+00:03:27.960 --> 00:03:54.648
 JORGE: ¿El resultado? Modelos de visión o detección de anomalías operando con menos de un milivatio. Sensores inteligentes que pueden funcionar durante diez años con una pila de botón en campos agrícolas remotos o implantes médicos, tomando decisiones al instante sin tocar la nube. La verdadera inteligencia artificial no siempre es más grande; muchas veces consiste en imitar la eficiencia energética de la naturaleza.
 
-00:03:46.776 --> 00:04:13.464
-JORGE: ¿El resultado? Modelos de visión o detección de anomalías operando con menos de un milivatio. Sensores inteligentes que pueden funcionar durante diez años con una pila de botón en campos agrícolas remotos o implantes médicos, tomando decisiones al instante sin tocar la nube. La verdadera inteligencia artificial no siempre es más grande; muchas veces consiste en imitar la eficiencia energética de la naturaleza.
+00:03:54.648 --> 00:04:05.424
+DALIA: Veredicto técnico: diseña tus enjambres desacoplando razonamiento pesado de ejecución rápida con Flash, y vigila de cerca la arquitectura neuromórfica para edge computing.
 
-00:04:13.464 --> 00:04:21.408
-DALIA: Recuerda que puedes consultar el artículo técnico completo con diagramas Mermaid y referencias APA en escucha-sia punto Git-Jab punto io.
+00:04:05.424 --> 00:04:13.080
+JORGE: Puedes consultar el artículo técnico completo con diagramas Mermaid y referencias APA en escucha-sia punto Git-Jab punto io.
 
-00:04:21.408 --> 00:04:32.616
-JORGE: Y en nuestras redes y canal de Spotify ya tienes disponible el Reel vertical animado de cuarenta y cinco segundos de esta entrega. ¡Nos escuchamos en el siguiente sIA Focus!
+00:04:13.080 --> 00:04:23.544
+DALIA: Y en nuestras redes ya tienes disponible el Reel vertical animado de cuarenta y cinco segundos con la comparativa de latencia. ¡Nos escuchamos en el siguiente sIA Focus!
 

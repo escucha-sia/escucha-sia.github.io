@@ -1,52 +1,56 @@
 1
-00:00:00,000 --> 00:00:07,800
-JORGE: ¡Bienvenidos a sIA Focus: Hardware, Lectura Digital y Soberanía Tecnológica! Soy Jorge.
+00:00:00,000 --> 00:00:15,912
+JORGE: Bienvenidos a sIA Podcast. Hoy abrimos nuestra sección de Soberanía Tecnológica y Hardware Libre para abordar una verdad incómoda de la era digital: cuando compras un libro electrónico en plataformas corporativas, ¿realmente eres dueño de algo?
 
 2
-00:00:07,800 --> 00:00:21,984
-DALIA: ¡Y yo soy Dalia! Hoy analizamos el encendido debate en r diagonal Cálibre y comunidades de tinta electrónica sobre el endurecimiento de formatos propietarios y DRM por parte de grandes plataformas de libros electrónicos.
+00:00:15,912 --> 00:00:38,352
+DALIA: Así es, Jorge. En este episodio analizamos el endurecimiento del DRM en los principales ecosistemas de lectura digital. La tesis de hoy es clara: depender de licencias en la nube secuestra tu biblioteca personal, y la resistencia pasa por el software libre como Cálibre y dispositivos abiertos con Kei-Ou-Ríder que sincronizan directamente con Obsidian.
 
 3
-00:00:21,984 --> 00:00:40,560
-JORGE: Es un tema que toca una fibra muy profunda. Muchos usuarios descubren con amargura que al comprar un cómic o libro digital no son dueños del archivo; cuando la tienda cambia sus políticas o bloquea la descarga directa por cable a la computadora, su biblioteca queda secuestrada dentro de una aplicación cerrada.
+00:00:38,352 --> 00:00:55,560
+JORGE: En los próximos minutos desarmaremos el flujo de respaldo local en NAS y formatos abiertos como EPUB, y en nuestra cápsula Fuera de la Burbuja exploraremos la electro-umectación, una tecnología electroquímica que promete pantallas reflectivas a sesenta cuadros por segundo bajo el sol del mediodía.
 
 4
-00:00:40,560 --> 00:01:03,072
-DALIA: Por eso el software libre como Cálibre y los dispositivos de tinta electrónica abiertos cobran un protagonismo histórico. Cálibre no es solo un organizador; es la herramienta que permite a desarrolladores e investigadores indexar, convertir y preservar sus bibliotecas en formatos abiertos como EPUB o CBZ, respaldados localmente en sus propios discos duros o servidores NAS.
+00:00:55,560 --> 00:01:06,024
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, arranquemos por el susto que se llevaron miles de lectores cuando las grandes tiendas bloquearon la descarga directa por cable...
 
 5
-00:01:03,072 --> 00:01:21,072
-JORGE: Y cuando combinas Cálibre con sistemas abiertos como Kei-Ou-Ríder en lectores Android o Kobo, tienes sincronización inalámbrica de anotaciones directamente hacia tu segundo cerebro en Obsidian o Notion. La tecnología debe empoderar al usuario, no convertirlo en un rehén de licencias temporales.
+00:01:06,024 --> 00:01:25,944
+JORGE: Es un tema que toca una fibra muy profunda, Dalia. Muchos usuarios descubren con amargura que al comprar un cómic o libro digital no son dueños del archivo; cuando la tienda cambia sus políticas o bloquea la descarga por cable, su biblioteca queda secuestrada dentro de una aplicación cerrada que la empresa puede revocar a distancia.
 
 6
-00:01:21,072 --> 00:01:39,072
-JORGE: Y cuando combinas Cálibre con sistemas abiertos como Kei-Ou-Ríder en lectores Android o Kobo, tienes sincronización inalámbrica de anotaciones directamente hacia tu segundo cerebro en Obsidian o Notion. La tecnología debe empoderar al usuario, no convertirlo en un rehén de licencias temporales.
+00:01:25,944 --> 00:01:48,456
+DALIA: Por eso el software libre como Cálibre y los dispositivos de tinta electrónica abiertos cobran un protagonismo histórico. Cálibre no es solo un organizador; es la herramienta que permite a desarrolladores e investigadores indexar, convertir y preservar sus bibliotecas en formatos abiertos como EPUB o CBZ, respaldados localmente en sus propios discos duros o servidores NAS.
 
 7
-00:01:39,072 --> 00:01:45,384
-DALIA: Y de la tinta electrónica bistable pasamos a la física de pantallas en nuestra cápsula Fuera de la Burbuja.
+00:01:48,456 --> 00:02:06,456
+JORGE: Y cuando combinas Cálibre con sistemas abiertos como Kei-Ou-Ríder en lectores Android o Kobo, tienes sincronización inalámbrica de anotaciones directamente hacia tu segundo cerebro en Obsidian o Notion. La tecnología debe empoderar al usuario, no convertirlo en un rehén de licencias temporales.
 
 8
-00:01:45,384 --> 00:01:58,848
-JORGE: ¿Por qué la tinta electrónica tradicional es tan lenta para reproducir video? Porque depende de partículas de pigmento físicas cargadas eléctricamente que deben viajar lentamente a través de microcápsulas de fluido viscoso.
+00:02:06,456 --> 00:02:12,768
+DALIA: Y de la tinta electrónica bistable pasamos a la física de pantallas en nuestra cápsula Fuera de la Burbuja.
 
 9
-00:01:58,848 --> 00:02:14,952
-DALIA: En contraste, la tecnología de electro-umectación o electrowetting displays rompe ese cuello de botella. En lugar de mover partículas sólidas, modula el ángulo de contacto de microgotas de aceite coloreado y agua mediante campos electrostáticos microscópicos.
+00:02:12,768 --> 00:02:26,232
+JORGE: ¿Por qué la tinta electrónica tradicional es tan lenta para reproducir video? Porque depende de partículas de pigmento físicas cargadas eléctricamente que deben viajar lentamente a través de microcápsulas de fluido viscoso.
 
 10
-00:02:14,952 --> 00:02:43,080
-JORGE: Al aplicar voltaje, la gota de aceite se retrae en microsegundos, revelando una superficie blanca reflectiva subyacente. Esto permite alcanzar tasas de refresco fluidas de sesenta cuadros por segundo a pleno sol, con color brillante y sin emitir luz dañina para los ojos ni requerir retroiluminación. Una tecnología que promete pantallas tan fluidas como un panel OLED pero tan legibles y eficientes como una hoja de papel bajo el sol del mediodía.
+00:02:26,232 --> 00:02:42,336
+DALIA: En contraste, la tecnología de electro-umectación o electrowetting displays rompe ese cuello de botella. En lugar de mover partículas sólidas, modula el ángulo de contacto de microgotas de aceite coloreado y agua mediante campos electrostáticos microscópicos.
 
 11
-00:02:43,080 --> 00:03:11,208
+00:02:42,336 --> 00:03:10,464
 JORGE: Al aplicar voltaje, la gota de aceite se retrae en microsegundos, revelando una superficie blanca reflectiva subyacente. Esto permite alcanzar tasas de refresco fluidas de sesenta cuadros por segundo a pleno sol, con color brillante y sin emitir luz dañina para los ojos ni requerir retroiluminación. Una tecnología que promete pantallas tan fluidas como un panel OLED pero tan legibles y eficientes como una hoja de papel bajo el sol del mediodía.
 
 12
-00:03:11,208 --> 00:03:18,960
-DALIA: Si quieres ver las especificaciones ópticas y los esquemas de flujo, revisa el artículo complementario en nuestra revista técnica.
+00:03:10,464 --> 00:03:19,728
+DALIA: Veredicto de soberanía: mantén siempre una copia local de tus libros en EPUB sin DRM y no delegues tu biblioteca intelectual a la nube de un tercero.
 
 13
-00:03:18,960 --> 00:03:24,384
-JORGE: ¡Nos vemos en el próximo bloque dedicado a la fabricación aditiva y el mundo maker!
+00:03:19,728 --> 00:03:29,568
+JORGE: Si quieres ver las especificaciones ópticas de electro-umectación y la guía de configuración de Cálibre, revisa el artículo en escucha-sia punto Git-Jab punto io.
+
+14
+00:03:29,568 --> 00:03:40,032
+DALIA: Y en nuestras redes ya tienes disponible el Reel vertical de cuarenta y cinco segundos con la animación de microcápsulas E-Ink. ¡Nos escuchamos en el siguiente sIA Focus!
 
