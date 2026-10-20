@@ -2,99 +2,45 @@ WEBVTT
 Kind: captions
 Language: es
 
-00:00:00.000 --> 00:00:06.000
-o la a todos. Bienvenidos a Asa etiptar. Soy Jorge.
+00:00:00.000 --> 00:00:13.248
+JORGE: Bienvenidos a sIA Deep Dive. Hoy abrimos nuestra vertical de Arquitectura Empresarial y Gobernanza de Datos para examinar las fracturas del almacenamiento analítico centralizado frente al comercio omnicanal masivo.
 
-00:00:06.000 --> 00:00:11.759
-Y yo soy Dalia. Hoy nos adentramos en las trincheras de la alta concurrencia y el volumen
+00:00:13.248 --> 00:00:44.592
+DALIA: Totalmente, Jorge. En esta entrega desmenuzamos la implementación práctica de Data Mesh en gigantes del retail a escala global tipo Walmart. Nuestra tesis de hoy es rotunda: en organizaciones con cientos de miles de transacciones por segundo, los almacenes monolíticos centralizados no fracasan por falta de poder de cómputo en la nube, sino por la fricción sociocultural entre equipos. Data Mesh descentraliza la propiedad de los datos tratándolos como productos autónomos gobernados por contratos semánticos inmutables.
 
-00:00:11.759 --> 00:00:15.480
-masivo, Dere Mesh Envite a Escala Global.
+00:00:44.592 --> 00:01:00.576
+JORGE: En los próximos minutos vamos a desgranar cómo se estructuran los Data Products mediante d b t, esquemas tipados en Kafka y PubSub, la figura del Ingeniero de Plataforma de autoservicio y las claves para evitar que la descentralización se convierta en una pesadilla ingobernable.
 
-00:00:15.480 --> 00:00:21.120
-La Tesis que defendemos hoy es que en empresas con millones de transacciones por segundo, los almacenes
+00:01:00.576 --> 00:01:13.920
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, arranquemos por las trincheras operativas. ¿Por qué el modelo clásico de un equipo central de datos se rompe de forma inevitable en el retail moderno?
 
-00:00:21.120 --> 00:00:27.640
-monolíticos centralizados fallan no por limitaciones de hardware, sino por la fricción organizacional.
+00:01:13.920 --> 00:01:33.912
+JORGE: En una empresa que factura millones de transacciones por minuto, pretender que un solo equipo central de datos entienda la logística de última milla, el inventario en tiendas físicas, la pasarela de pagos y los algoritmos de recomendación es absurdo. El equipo central se convierte en un cuello de botella burocrático permanente.
 
-00:00:27.640 --> 00:00:33.399
-Dere Mesh no es un framwork tecnológico, es una transformación socio-cultural que trata a los datos
+00:01:33.912 --> 00:01:51.768
+DALIA: En Data Mesh, cada dominio de negocio se convierte en el dueño absoluto de su producto de datos. El equipo de inventario no te da acceso a su base de datos transaccional en crudo; publica un Data Product formalizado mediante contratos de datos escritos en Y A M L y modelos testeados en d b t.
 
-00:00:33.399 --> 00:00:38.120
-como un producto descentralizado con contratosemánticos estrictos.
+00:01:51.768 --> 00:02:13.272
+JORGE: Esos contratos definen el esquema exacto de los eventos en Kafka o PubSub, los tipos de datos, los valores nulos permitidos y los acuerdos de nivel de servicio. Si el dominio de logística cambia la estructura de sus eventos sin respetar el contrato semántico, el sistema de integración continua bloquea el despliegue antes de romper las métricas de negocio.
 
-00:00:38.120 --> 00:00:43.200
-En un gigante del video tipo BOMAR o comercio unicana, pretender que un solo equipo central
+00:02:13.272 --> 00:02:21.624
+DALIA: Pero entremos a nuestra cápsula Fuera de la Burbuja, porque Data Mesh mal ejecutado es una de las modas corporativas más peligrosas de la industria.
 
-00:00:43.200 --> 00:00:48.359
-de datos sentiendas a la logística de almacenes, el inventario de última mía, la conciliación
+00:02:21.624 --> 00:02:42.456
+JORGE: Exacto. Si le dices a cada departamento operativo que ahora son dueños de sus datos, pero esos equipos no tienen cultura de ingeniería de software ni disciplina de pruebas, en seis meses no tienes un Data Mesh: tienes un pantano de datos fragmentado, silos aislados y una factura de almacenamiento en la nube multiplicada por diez.
 
-00:00:48.359 --> 00:00:53.480
-de pagos y los algoritmos de recomendaciones una receta para el estancamiento.
+00:02:42.456 --> 00:03:05.328
+DALIA: Por eso la pieza angular de Data Mesh no son los dominios, sino el equipo de Plataforma de Datos de autoservicio. La plataforma debe entregar herramientas automatizadas para que crear un pipeline, registrar metadatos en Dataplex y ejecutar validaciones de calidad con Great Expectations sea tan fácil como hacer un commit en Git. La descentralización sin plataforma es caos garantizado.
 
-00:00:53.480 --> 00:00:58.080
-En la arquitectura Dara Mesh, cada dominio de negocio es dueño de su propio producto
+00:03:05.328 --> 00:03:29.184
+JORGE: Y para nuestra analogía geek: esto funciona exactamente igual que la economía de gremios en Log Horizon o los mundos de rol masivo en línea. Si el gremio de herreros altera unilateralmente la pureza de los lingotes de hierro sin avisar al gremio de comerciantes, toda la economía comercial del servidor colapsa de inmediato. Los contratos de datos son las leyes inmutables del mercado.
 
-00:00:58.080 --> 00:00:59.760
-de datos.
+00:03:29.184 --> 00:03:43.008
+DALIA: Veredicto de arquitectura: Data Mesh no es comprar una herramienta tecnológica nueva; es una transformación organizativa radical donde los datos se construyen, empaquetan y distribuyen con la misma exigencia que el software de producción.
 
-00:00:59.760 --> 00:01:04.880
-El equipo de inventario expone un deraproar conformalizado mediante contratos en debate y esquemas
+00:03:43.008 --> 00:03:56.376
+JORGE: Si quieres descargar la plantilla Y A M L de un Data Contract listo para producción, las métricas de gobierno y las referencias académicas en APA, visita el artículo completo en escucha-sia punto Git-Jab punto io.
 
-00:01:04.880 --> 00:01:11.640
-estrictos de eventos en Kafka o PubSub, garantizando niveles de servicio y calidad acordados.
-
-00:01:11.640 --> 00:01:16.040
-Pero entremos al debate de la realidad, ¿qué pasa cuando los dominios operativos no tienen
-
-00:01:16.040 --> 00:01:19.040
-cultura de ingeniería de software?
-
-00:01:19.040 --> 00:01:23.760
-Y dejas que cada departamento creta a las asuant ojos y no un plano de control unificado,
-
-00:01:23.760 --> 00:01:29.280
-en seis meses no tienes un dermesh, tienes un pantano de datos fragmentado y costos de almacenamiento
-
-00:01:29.280 --> 00:01:31.680
-duplicados por 10.
-
-00:01:31.680 --> 00:01:35.840
-Por eso la figura del ingeniero de plataforma de datos es vital.
-
-00:01:35.840 --> 00:01:40.960
-La plataforma debe ofrecer herramientas de autoservicio para que crear un patlan, aplicar pruebas
-
-00:01:40.960 --> 00:01:45.800
-de calidad con creer expectections y publicar métricas en BKRC a tan sencillo como
-
-00:01:45.799 --> 00:01:48.119
-hacer un camé de enjíth.
-
-00:01:48.119 --> 00:01:52.840
-Y para nuestra mirada geek, esto funciona identico a la economía de gremios en lockbás en o
-
-00:01:52.840 --> 00:01:56.359
-los MMAORPGS complejos.
-
-00:01:56.359 --> 00:02:01.200
-Si la facción de erroros cambia la aleación sin avisar al gremio de comerciantes, toda la cadena
-
-00:02:01.200 --> 00:02:04.519
-de suministro del servidor entra en caos.
-
-00:02:04.519 --> 00:02:08.599
-Los contratos de datos son las leyes inmutables del mercado.
-
-00:02:08.599 --> 00:02:12.879
-Sin contratos claros, no hay interoperabilidad posible.
-
-00:02:12.879 --> 00:02:16.560
-No es una elección fundamental para la arquitectura moderna.
-
-00:02:16.560 --> 00:02:19.359
-Nos vemos en el siguiente análisis.
-
-00:02:19.359 --> 00:02:20.359
-Hasta la próxima.
+00:03:56.376 --> 00:04:08.136
+DALIA: Y para repasar el flujo de eventos entre dominios en un diagrama técnico de cuarenta y cinco segundos, encuéntranos en TikTok y redes sociales. ¡Nos vemos en el próximo sIA Deep Dive!
 

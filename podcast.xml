@@ -211,11 +211,11 @@
     <item>
       <title>sIA Deep Dive: Inferencia en el Borde vs Nube: NPU del Galaxy S25 e Insta360 X4</title>
       <link>https://escucha-sia.github.io/articulos/edge-ai-galaxy-s25-insta360-silicio.html</link>
-      <description>sIA Deep Dive: Silicio NPU en Galaxy S25 (Snapdragon/Exynos), inferencia de SLMs locales en One UI 9, visión computacional 8K en Insta360 X4 y el Augma de Ordinal Scale.</description>
+      <description>sIA Deep Dive: Silicio NPU en Galaxy S25 (Snapdragon/Exynos), inferencia de SLMs locales en One UI 9, visión computacional 8K en Insta360 X4 y el Augma de Ordinal Scale. | Leer artículo técnico y esquemas APA: https://escucha-sia.github.io/articulos/edge-ai-galaxy-s25-insta360-silicio.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:58 GMT</pubDate>
-      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3" length="3260857" type="audio/mpeg"/>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3" length="5066298" type="audio/mpeg"/>
       <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_Edge_AI_Galaxy_S25_Insta360.mp3</guid>
-      <itunes:duration>02:43</itunes:duration>
+      <itunes:duration>04:13</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
@@ -225,11 +225,11 @@
     <item>
       <title>sIA Deep Dive: Data Mesh en Retail Masivo: Contratos Semánticos y Streaming Continuo</title>
       <link>https://escucha-sia.github.io/articulos/data-mesh-retail-streaming-contratos.html</link>
-      <description>sIA Deep Dive: Descentralización de datos en retail de alta escala (estilo Walmart), Data Products con dbt y BigQuery, contratos semánticos en Kafka y economía de gremios.</description>
+      <description>sIA Deep Dive: Descentralización de datos en retail de alta escala (estilo Walmart), Data Products con dbt y BigQuery, contratos semánticos en Kafka y economía de gremios. | Leer artículo técnico y esquemas APA: https://escucha-sia.github.io/articulos/data-mesh-retail-streaming-contratos.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:41 GMT</pubDate>
-      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.mp3" length="2825983" type="audio/mpeg"/>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.mp3" length="4965120" type="audio/mpeg"/>
       <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_Data_Mesh_Retail_Streaming.mp3</guid>
-      <itunes:duration>02:21</itunes:duration>
+      <itunes:duration>04:08</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
@@ -239,11 +239,11 @@
     <item>
       <title>sIA Deep Dive: El Fin de la Amnesia en LLMs: Context Caching y Memoria Persistente</title>
       <link>https://escucha-sia.github.io/articulos/context-caching-memoria-persistente-llms.html</link>
-      <description>sIA Deep Dive: Investigación profunda sobre Context Caching en Gemini, arquitecturas de memoria episódica jerárquica, aprendizaje anidado y el paralelismo con los Fluctlights de SAO.</description>
+      <description>sIA Deep Dive: Investigación profunda sobre Context Caching en Gemini, arquitecturas de memoria episódica jerárquica, aprendizaje anidado y el paralelismo con los Fluctlights de SAO. | Leer artículo técnico y esquemas APA: https://escucha-sia.github.io/articulos/context-caching-memoria-persistente-llms.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:27 GMT</pubDate>
-      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.mp3" length="3041500" type="audio/mpeg"/>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.mp3" length="5645169" type="audio/mpeg"/>
       <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_Context_Caching_Memoria_Persistente.mp3</guid>
-      <itunes:duration>02:32</itunes:duration>
+      <itunes:duration>04:42</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>
@@ -253,11 +253,11 @@
     <item>
       <title>sIA Deep Dive: BigQuery Gemini Cloud Assist y la Muerte de las Consultas Manuales</title>
       <link>https://escucha-sia.github.io/articulos/bigquery-gemini-cloud-assist-arquitectura.html</link>
-      <description>sIA Deep Dive: Análisis exhaustivo sobre cómo Gemini Cloud Assist en BigQuery y Dataplex desplaza el valor del Data Engineer del SQL manual a la modelación semántica y gobernanza.</description>
+      <description>sIA Deep Dive: Análisis exhaustivo sobre cómo Gemini Cloud Assist en BigQuery y Dataplex desplaza el valor del Data Engineer del SQL manual a la modelación semántica y gobernanza. | Leer artículo técnico y esquemas APA: https://escucha-sia.github.io/articulos/bigquery-gemini-cloud-assist-arquitectura.html</description>
       <pubDate>Sun, 04 Oct 2026 13:06:12 GMT</pubDate>
-      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.mp3" length="3154779" type="audio/mpeg"/>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.mp3" length="5336542" type="audio/mpeg"/>
       <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_DeepDive_BigQuery_Gemini_Cloud_Assist.mp3</guid>
-      <itunes:duration>02:37</itunes:duration>
+      <itunes:duration>04:26</itunes:duration>
       <itunes:author>Jorge y Dalia</itunes:author>
       <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
       <itunes:explicit>no</itunes:explicit>

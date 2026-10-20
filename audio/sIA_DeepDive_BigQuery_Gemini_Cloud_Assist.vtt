@@ -2,114 +2,45 @@ WEBVTT
 Kind: captions
 Language: es
 
-00:00:00.000 --> 00:00:02.399
-o la toda nuestra audiencia.
+00:00:00.000 --> 00:00:16.512
+JORGE: Bienvenidos a sIA Deep Dive. Hoy abrimos nuestra vertical de Data Engineering y Cloud Analytics para poner bajo la lupa la transformación más profunda en la gestión de almacenes de datos analíticos: ¿llegó el fin definitivo de las consultas ese cu ele artesanales?
 
-00:00:02.399 --> 00:00:06.100
-Bienvenidos a una nueva entrega de Asa etiptad.
+00:00:16.512 --> 00:00:43.848
+DALIA: Así es, Jorge. En esta entrega desmenuzamos la integración nativa de Gemini Cloud Assist en Google Cloud Big-Kueri y Dataplex. Nuestra tesis de hoy es contundente: la era en la que el analista o el ingeniero de datos dedicaba el setenta por ciento de su jornada a picar consultas ese cu ele complejas desde cero ha terminado. La analítica conversacional sobre grafos de metadatos se está consolidando como la interfaz estándar por defecto.
 
-00:00:06.100 --> 00:00:07.799
-Soy Jorge.
+00:00:43.848 --> 00:00:59.520
+JORGE: En los próximos minutos vamos a analizar cómo el motor infiere la intención del usuario mediante linaje semántico, la optimización predictiva de particiones y costos, y el desplazamiento inevitable del valor profesional desde la sintaxis hacia la gobernanza de datos.
 
-00:00:07.799 --> 00:00:09.800
-Y yo soy Dalia.
+00:00:59.520 --> 00:01:12.984
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, arranquemos por las entrañas de Big-Kueri Studio. ¿Cómo opera realmente Gemini bajo el capó sin limitarse a un simple autocompletado superficial?
 
-00:00:09.800 --> 00:00:14.500
-Hoy nos sumergimos de lleno en el corazón de los almacenes de datos analíticos modernos.
+00:01:12.984 --> 00:01:38.040
+JORGE: Bajo el capó, Big-Kueri Studio ya no trata al ese cu ele como texto plano. Cuando escribes o consultas en lenguaje natural, Gemini no adivina al vacío: consulta en tiempo real el grafo de conocimiento empresarial expuesto por Dataplex. Analiza el esquema relacional, los tipos de datos de las columnas, la frecuencia de actualización y el historial de consultas de toda la organización.
 
-00:00:14.500 --> 00:00:19.400
-Google Cloud B. Carey y el impacto transformador de llamen a Cloud Assist.
+00:01:38.040 --> 00:02:05.232
+DALIA: Eso significa que infiere la intención semántica del analista. Si preguntas por el volumen de ventas por región, Gemini inspecciona el linaje para verificar si debe consultar la tabla de transacciones en bruto o la vista materializada previamente agregada. Puede recomendar particionamiento por fecha, sugerir clústeres óptimos para reducir el escaneo de bytes y explicar cuellos de botella en el plan de ejecución de la consulta usando sentencias expléin avanzadas.
 
-00:00:19.400 --> 00:00:24.260
-Nuestra tesis de hoy es clara, la era en la que la analista o el ingeniero pasaba ahora
+00:02:05.232 --> 00:02:23.280
+JORGE: Y ese ahorro no es menor, Dalia. En almacenes de petabytes donde cada terabyte escaneado cuesta cinco dólares en cómputo bajo demanda, optimizar una consulta reduciendo el escaneo de cien terabytes a dos gigabytes representa cientos de miles de dólares al año para una corporación.
 
-00:00:24.260 --> 00:00:29.300
-se escribiendo consultas es el sillio el artesanal es desde cero a terminado.
+00:02:23.280 --> 00:02:34.104
+DALIA: Pero entremos a nuestra cápsula Fuera de la Burbuja, porque en analítica de datos los errores de la IA no se manifiestan con errores sintácticos, sino con catástrofes financieras silenciosas.
 
-00:00:29.400 --> 00:00:34.399
-Con la integración de modelos del lenguaje directamente en el motor de ejecución, la analítica
+00:02:34.104 --> 00:03:06.624
+JORGE: Totalmente. Si le pides a Gemini ventas netas del último trimestre en una empresa de retail, ¿sabe el modelo cómo se descuentan las devoluciones de mercancía, las notas de crédito o los impuestos locales? Si la empresa no definió un contrato de datos semántico o una métrica unificada en d b t, el modelo elegirá la columna numérica que parezca más lógica. La consulta correrá en tres segundos, el resultado numérico se verá impecable en el tablero directivo, pero estará financieramente equivocado.
 
-00:00:34.399 --> 00:00:39.899
-conversacional sobre grafos de metadatos está convirtiendo en la interfaz por defecto.
+00:03:06.624 --> 00:03:29.328
+DALIA: Además, está la economía oculta de los tokens. Disparar llamadas a L L Ms para generar consultas recurrentes que podrían resolverse con modelos estáticos compilados en d b t introduce latencia innecesaria y costos adicionales de inferencia. La IA nunca sustituye el rigor del ingeniero; lo eleva a nivel de auditoría y arquitectura semántica.
 
-00:00:39.899 --> 00:00:46.100
-Pero cuidado, Jorge, esto nos significa que el trabajo del ingeniero de datos de saparezca.
+00:03:29.328 --> 00:03:46.584
+JORGE: Y para nuestra mirada geek: esto nos recuerda a los Archivos Akáshicos y a la biblioteca de Yggdrasil en la literatura fantástica. Tener acceso a toda la información del universo no te sirve de nada si no sabes formular la pregunta con los parámetros exactos y validar las fuentes.
 
-00:00:46.100 --> 00:00:51.200
-Al contrario, el foco de valor se desplaza de la sintaxis es si lluele hacia la modelación
+00:03:46.584 --> 00:04:01.272
+DALIA: Veredicto de arquitectura: el valor del ingeniero de datos no murió; migró de la fontanería sintáctica a la arquitectura de contratos, calidad y linaje. Quien no domine Dataplex y d b t será reemplazado por quien sí los gobierne.
 
-00:00:51.200 --> 00:00:54.400
-semántica y la arquitectura de gobernanza.
+00:04:01.272 --> 00:04:14.736
+JORGE: Si eres profesional de datos y quieres consultar la arquitectura de referencia con Dataplex, las consultas de benchmark y las fuentes en formato APA, revisa el artículo técnico de hoy en escucha-sia punto Git-Jab punto io.
 
-00:00:54.399 --> 00:00:59.659
-Si las tablas no tienen metadatos limpios en dataplex, llemen a simplemente generar a consulta
-
-00:00:59.659 --> 00:01:02.199
-sobre su puestos falsos.
-
-00:01:02.199 --> 00:01:04.200
-Exacto Dalia.
-
-00:01:04.200 --> 00:01:10.039
-bajo el capo, de carresturio ahora utiliza llemen a inoso no para autocompletar código, sino para
-
-00:01:10.039 --> 00:01:15.000
-inferir la intención del usuario a partir del esquema y del inaje de datos.
-
-00:01:15.000 --> 00:01:20.239
-Puede recomendar particionamiento por fecha, sugerir Cluster Soptimos para reducir el escaneo
-
-00:01:20.239 --> 00:01:25.319
-de Pikes y explicar cuayos de botella en el plan de ejecución de la consulta.
-
-00:01:25.319 --> 00:01:30.039
-Y aquí viene el debate crítico que todo líder técnico debe enfrentar, el riesgo de las
-
-00:01:30.039 --> 00:01:35.000
-alucinaciones silenciosas en agregaciones financieras o métricas de negocio.
-
-00:01:35.000 --> 00:01:39.799
-Si le pides a llemen a chventas netas del último trimestre, sabe el modelo como se descuenta
-
-00:01:39.799 --> 00:01:44.759
-las evoluciones, las notas de crédito o los impuestos locales.
-
-00:01:44.760 --> 00:01:50.120
-Si la empresa no definió un contrato de datos semántico o una métrica unificada en debate,
-
-00:01:50.120 --> 00:01:54.520
-el modelo elegirá la columna que, parezca, más lógica.
-
-00:01:54.520 --> 00:02:00.280
-Y el resultado numérico se verá impecable, pero estará financieramente equivocado.
-
-00:02:00.280 --> 00:02:05.160
-Por eso decimos que la Ia no reemplaza el rigor del ingeniero, no eleva a nivel de arquitectura
-
-00:02:05.160 --> 00:02:06.000
-y auditoría.
-
-00:02:06.000 --> 00:02:12.000
-Y para nuestra conexión dig de hoy, esto me recuerda a los archivos acácicos que a la biblioteca
-
-00:02:12.000 --> 00:02:15.319
-de Igrasile en la literatura fantástica.
-
-00:02:15.319 --> 00:02:19.719
-Tener acceso a toda la información del universo no te sirve de nada si no sabes formular la
-
-00:02:19.719 --> 00:02:22.919
-pregunta con los parámetros exactos.
-
-00:02:22.919 --> 00:02:25.800
-Una analogía perfecta, daña.
-
-00:02:25.800 --> 00:02:31.400
-Anpeca real poder de computo ya es casi infinito, el verdadero reto es la precisión del contexto
-
-00:02:31.400 --> 00:02:33.159
-semántico.
-
-00:02:33.159 --> 00:02:36.800
-Nos escuchamos en el siguiente acto.
+00:04:14.736 --> 00:04:26.712
+DALIA: Y si buscas la síntesis visual de esta arquitectura con diagramas explicativos, no te pierdas nuestro Reel técnico en TikTok y YouTube Shorts. ¡Nos escuchamos en el siguiente sIA Deep Dive!
 

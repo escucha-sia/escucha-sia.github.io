@@ -2,105 +2,48 @@ WEBVTT
 Kind: captions
 Language: es
 
-00:00:00.000 --> 00:00:02.399
-que tal a toda nuestra audiencia.
+00:00:00.000 --> 00:00:14.544
+JORGE: Bienvenidos a sIA Deep Dive. Hoy abrimos nuestra vertical de Hardware Móvil y Cómputo en el Borde para poner a prueba el silicio que llevamos en la mano y en la mochila: ¿puede la inteligencia artificial local derrotar la hegemonía de la nube?
 
-00:00:02.399 --> 00:00:06.000
-Bienvenidos a una nueva edición de Asa Editaf.
+00:00:14.544 --> 00:00:43.848
+DALIA: Así es, Jorge. En este episodio analizamos a fondo la capacidad de inferencia en dispositivo del Galaxy ese veinticinco y la captura espacial acelerada por hardware en la Insta tres sesenta X cuatro. La tesis que sostenemos hoy es clara: la asistencia contextual y la visión espacial en tiempo real no pueden depender de la latencia y los costos de red de los centros de datos remotos; la soberanía y la inmediatez exigen correr modelos reducidos directamente en la N P U del dispositivo.
 
-00:00:06.000 --> 00:00:07.799
-Soy Jorge.
+00:00:43.848 --> 00:01:00.168
+JORGE: Durante los siguientes minutos exploraremos la microarquitectura de los procesadores Snapdragon y Exynos, la cuantización a cuatro bits de modelos de tres a siete mil millones de parámetros, y el procesamiento de video en ocho K a sesenta cuadros por segundo sin drenar la batería.
 
-00:00:07.799 --> 00:00:09.800
-Y yo soy Dalia.
+00:01:00.168 --> 00:01:14.256
+DALIA: Dicho esto, alcancemos el meollo del problema: Jorge, vayamos directo a las especificaciones físicas. ¿Qué salto real han dado las unidades de procesamiento neuronal en los teléfonos insignia de dos mil veintiséis?
 
-00:00:09.800 --> 00:00:13.300
-Hoy miramos hacia el hardware que llevamos en la mano y en la mochila,
+00:01:14.256 --> 00:01:36.024
+JORGE: Con los procesadores de última generación en la familia Galaxy ese veinticinco, contamos con decenas de T O P S de rendimiento directo en la N P U. Esto permite correr modelos de lenguaje reducidos de tres a siete mil millones de parámetros cuantizados a cuatro bits de forma completamente local, sin conexión a Internet y con consumo mínimo de energía.
 
-00:00:13.300 --> 00:00:21.000
-el silicio de inferencia local en el gavax CS25 y la captura espacial inmersiva con la Insta 360 X4.
+00:01:36.024 --> 00:02:01.008
+DALIA: Y en movilidad, funciones del sistema operativo Uan U I nueve procesan la cámara, las llamadas y el contexto ambiental sin enviar un solo byte a servidores externos. Mientras tanto, en cámaras de acción como la Insta tres sesenta X cuatro, los chips de visión por computadora realizan el ensamblado de lentes y la estabilización FlowState de video en ocho K en tiempo real utilizando aceleración directa por hardware.
 
-00:00:21.000 --> 00:00:25.300
-Nuestra tesis es que la próxima frontera de la inteligencia artificial personal
+00:02:01.008 --> 00:02:11.592
+JORGE: Desacoplar la experiencia del usuario de la señal de red cambia las reglas del juego. No hay tiempo de ida y vuelta a la nube ni riesgo de filtración de datos privados.
 
-00:00:25.300 --> 00:00:28.199
-no se jugará en los macros centros de datos de la nube,
+00:02:11.592 --> 00:02:18.312
+DALIA: Pero entremos a nuestra cápsula Fuera de la Burbuja, porque la termodinámica en dispositivos compactos es despiadada.
 
-00:00:28.199 --> 00:00:32.000
-sino en la unidad de procesamiento neuronal, la NPEU,
+00:02:18.312 --> 00:02:41.880
+JORGE: Totalmente. Un teléfono móvil carece de ventiladores activos; depende exclusivamente de la disipación pasiva a través del chasis de titanio o aluminio y pequeñas cámaras de vapor. Si pones a una N P U a inferir un modelo de siete mil millones de parámetros de forma continua durante quince minutos, la temperatura interna supera los cuarenta y cinco grados Celsius.
 
-00:00:32.000 --> 00:00:36.399
-directamente en el silicio de nuestros dispositivos móviles.
+00:02:41.880 --> 00:03:08.688
+DALIA: Y en ese instante entra en acción el estrangulamiento térmico o thermal throttling: el sistema operativo recorta las frecuencias de reloj a la mitad para proteger la batería y evitar quemaduras al usuario, duplicando la latencia al instante. Por eso el futuro no es cien por ciento local ni cien por ciento en la nube, sino una arquitectura híbrida: inferencia local instantánea para tareas sensoriales y delegación inteligente a la nube solo cuando se requiere razonamiento profundo.
 
-00:00:36.399 --> 00:00:39.100
-Durante años dependíamos de enviar cada instrucción,
+00:03:08.688 --> 00:03:25.152
+JORGE: Y como paralelismo geek: pensemos en el dispositivo Augma de Sword Art Online Ordinal Scale. La magia de su realidad aumentada radicaba en que el renderizado de combate ocurría al instante en la sien del jugador, sin esperar paquetes de red desde un servidor lejano.
 
-00:00:39.100 --> 00:00:43.899
-audio o imagen a través de internet para recibir una respuesta de la IA.
+00:03:25.152 --> 00:03:32.376
+DALIA: Procesar en el borde para experimentar el mundo en tiempo real; apoyarse en la nube para el análisis macroscópico.
 
-00:00:43.899 --> 00:00:48.700
-Pero la latencia de red, la falta de cobertura y los riesgos de privacidad hacen que ese modelo
+00:03:32.376 --> 00:03:46.800
+JORGE: Veredicto de ingeniería: el silicio de borde redefine la privacidad y la inmediatez, pero el diseño térmico impone los límites del software. La maestría del arquitecto está en orquestar el equilibrio entre el bolsillo y la nube.
 
-00:00:48.700 --> 00:00:52.500
-sea insostenible para la asistencia en tiempo real.
+00:03:46.800 --> 00:03:59.736
+DALIA: Si quieres consultar las curvas de disipación térmica, los benchmarks de tokens por segundo en N P U y las referencias académicas en formato APA, revisa el artículo técnico de hoy en escucha-sia punto Git-Jab punto io.
 
-00:00:52.500 --> 00:00:56.899
-Con los procesadores de última generación en la familia Galaxy S25,
-
-00:00:57.100 --> 00:01:00.899
-contamos con decenas de tops de potencia en la anti-U.
-
-00:01:00.899 --> 00:01:08.400
-Esto permite correr modelos de lenguaje reducidos y quantizados de 3 a 7.000 millones de parámetros de forma completamente local,
-
-00:01:08.400 --> 00:01:12.700
-sin conexión a internet y con consumo mínimo de energía.
-
-00:01:12.700 --> 00:01:19.700
-Y en movilidad, funciones como una brief y macencia menuano y nueve procesa a la cámara y el audio localmente.
-
-00:01:19.700 --> 00:01:24.100
-Mientras tanto, en cámaras de acción como la Insta360X4,
-
-00:01:24.100 --> 00:01:29.200
-los algoritmos de visión por computadora realizan el stitching de la estabilización flow state de video
-
-00:01:29.200 --> 00:01:33.700
-en ochoca en tiempo real utilizando aceleración por hardware.
-
-00:01:33.700 --> 00:01:42.900
-Pero seamos honestos en el debate técnico, Dalia, el estrangulamiento térmico o tormo truado en sigue siendo una realidad física ineludible.
-
-00:01:42.900 --> 00:01:48.500
-Si pones a un teléfono delgado a inferir modelos pesados durante 20 minutos seguidos bajo el sol,
-
-00:01:48.500 --> 00:01:54.799
-la temperatura sube y el procesador baja drásticamente su frecuencia para proteger el silicio.
-
-00:01:54.799 --> 00:01:56.599
-Totalmente.
-
-00:01:56.599 --> 00:02:05.500
-Por eso el futuro inmediato no es todo local ni todo en la nube, sino la arquitectura híbrida, inferencia rápida y privada en el borde para la interacción inmediata,
-
-00:02:05.500 --> 00:02:10.900
-y delegación inteligente a la nube solo cuando se requiere razonamiento ultra profundo.
-
-00:02:10.900 --> 00:02:17.099
-Y como paralelismo geek, pensemos en el dispositivo a ócma de Soro Aronma Nornosqueo.
-
-00:02:17.099 --> 00:02:28.099
-La maje de la realidad aumentada radicaba en que el renderizado de combate ocurría al instante en la siente del jugador, sin el retraso de esperar paquetes de retes de un servidor remoto.
-
-00:02:28.099 --> 00:02:31.400
-Procesar en el borde para vivir en tiempo real.
-
-00:02:31.400 --> 00:02:35.599
-Esperamos que disfruten este análisis donde quiera que nos escuchen.
-
-00:02:35.599 --> 00:02:39.099
-Hasta la próxima edición de SAE DeepTive.
-
-00:02:39.099 --> 00:02:43.099
-Hasta la próxima y excelente jornada para todos.
+00:03:59.736 --> 00:04:13.200
+JORGE: Y si buscas la comparativa visual de rendimiento entre silicio local y centros de datos en un Reel técnico de cuarenta y cinco segundos, encuéntranos en TikTok y redes. ¡Hasta la próxima edición de sIA Deep Dive!
 
