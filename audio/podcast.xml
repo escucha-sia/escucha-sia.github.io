@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny&#x27;s al Imperio de 3 Billones (Chisme, Traición y el Correo de 3 Líneas)</title>
+      <link>https://escucha-sia.github.io/articulos/sia-corporativo-01-nvidia-de-lavar-platos-en-denny-x27-s-al-.html</link>
+      <description>sIA Crónicas Corporativas #01: La historia sin censura de NVIDIA. De lavar platos en un Denny&#x27;s de San José al imperio de 3 billones. La confesión desesperada a Sega, la quiebra evitada con el RIVA 128, la guerra a muerte con Steve Ballmer por la Xbox, los 15 años de sangría con CUDA y la cultura despiadada del correo de 3 líneas de Jensen Huang. | Leer artículo y cronología financiera: https://escucha-sia.github.io/articulos/sia-corp-01-nvidia-historia-chisme-corporativo-dennys-3-billones.html</description>
+      <pubDate>Tue, 20 Oct 2026 09:25:15 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3" length="12331568" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3</guid>
+      <itunes:duration>10:16</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA #40: Hardware &amp; Aeroespacial — Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto</title>
       <link>https://escucha-sia.github.io/articulos/sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu.html</link>
       <description>sIA #40 (6 min): Debate técnico sobre el Tesla Roadster y el paquete SpaceX. La física del límite de fricción neumático-asfalto, tanques COPV a 700 bar, toberas de Laval supersónicas para control de actitud (ACS) y los riesgos termodinámicos y regulatorios de la propulsión de gas frío en tierra. | Leer artículo y ecuaciones APA: https://escucha-sia.github.io/articulos/sia-40-tesla-roadster-spacex-gas-frio-fisica-aeroespacial.html</description>

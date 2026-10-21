@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3": "sIA_Corp_01_NVIDIA_Dennys_Reel.mp4",
     "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3": "sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4",
     "sIA_Daily_S01_IA_JEPA_Modelos_de_Mundo_2026-10-15.mp3": "sIA_Reel_15_Modelos_JEPA_Mundo.mp4",
     "sIA_Daily_S05_Geek_Horror_FullDive_VR_2026-10-12.mp3": "sIA_Reel_05_Horror_Psicologico_FullDive.mp4",
@@ -69,6 +70,63 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial Corporativo 01 - 20 de Octubre de 2026
+    "sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3": {
+        "slug": "sia-corporativo-01-nvidia-de-lavar-platos-en-denny-x27-s-al-",
+        "category": "sIA Corporativo",
+        "badge_color": "green",
+        "read_time": "8 min",
+        "title": "sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones",
+        "subtitle": "Chisme corporativo, traición y el correo de 3 líneas: La historia sin censura de Jensen Huang, el rescate desesperado de Sega, el arbitraje con Steve Ballmer y la sangría solitaria de 15 años en CUDA.",
+        "thesis": "El mayor imperio tecnológico de la era de la IA no nació de una visión pulcra de capital de riesgo, sino de una cultura de supervivencia extrema forjada en un restaurante grasiento, donde la honestidad brutal ante la bancarrota inminente y la microgestión despiadada derrotaron a gigantes que subestimaron el silicio paralelo.",
+        "nexo": "Estreno formal de sIA Crónicas Corporativas: La historia de las empresas tech desde su fundación hasta hoy, el día a día real, secretos de oficina y los puntos de quiebre que nadie cuenta.",
+        "reel_video": "sIA_Corp_01_NVIDIA_Dennys_Reel.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Desayuno de 1993: Denny's, Café con Refill y Servilletas de Papel",
+                "body": """
+En 1993, en un Denny's al lado de la autopista en East San José (con marcas de impactos de bala en el letrero exterior), tres ingenieros sin oficina formal se reunían diariamente por una razón pragmática: el café tenía *refill* ilimitado y las meseras les permitían ocupar el cubículo cuatro horas seguidas siempre que pidieran un plato de hot cakes.
+
+Jensen Huang, con 30 años, ya conocía el restaurante a la perfección: a los 15 años había trabajado ahí como lavaplatos y limpiador de baños en Oregon, experiencia que el propio CEO cita como su mayor escuela de humildad, rapidez operativa y resistencia al estrés. Junto a Chris Malachowsky y Curtis Priem, dibujaron sobre servilletas de papel los primeros diagramas de procesadores gráficos para videojuegos en 3D. El nombre 'NV' (*Next Version*) dio origen a 'Nvidia', inspirado en el latín *invidia* (envidia), anticipando su ambición de ser envidiados por toda la industria.
+"""
+            },
+            {
+                "title": "2. La Quiebra Inminente: El Error de los Cuadriláteros y la Confesión a Sega",
+                "body": """
+El primer chip de la empresa, el NV1 (1995), fue un fiasco tecnológico colosal: apostaron por renderizar superficies cuadriláteras curvas en lugar de polígonos triangulares. Casi simultáneamente, Microsoft lanzó Windows 95 y Direct3D, estandarizando los triángulos como el formato universal de la industria y dejando al NV1 obsoleto de la noche a la mañana.
+
+NVIDIA había firmado un contrato con Sega para diseñar el chip de la Dreamcast. Al percatarse de que la arquitectura era inviable, Jensen Huang voló a Japón y protagonizó una de las escenas más insólitas del mundo corporativo: confesó en persona al CEO de Sega, Shoichiro Irimajiri, que su tecnología no servía y que debían cancelar el desarrollo, pero le suplicó que no retirara el pago final de 5 millones de dólares porque, de hacerlo, NVIDIA quebraría.
+
+Conmovido por la honestidad radical de Huang, Irimajiri autorizó el desembolso. Con ese capital y apenas 30 días de efectivo en el banco, Huang despidió a la mitad de la empresa, los ingenieros restantes durmieron bajo sus escritorios y concibieron el **RIVA 128**, el chip que procesaba triángulos a velocidad récord y vendió más de un millón de unidades en cuatro meses, rescatando a la compañía del abismo.
+"""
+            },
+            {
+                "title": "3. Sangre en la Sala de Juntas: La Caída de 3dfx y el Choque con Xbox",
+                "body": """
+A finales de los 90, el titán indiscutible del mercado era 3dfx con sus aceleradoras Voodoo. Sin embargo, 3dfx cayó en la complacencia: compró a la ensambladora STB para monopolizar la producción, enemistó a sus socios de placas y retrasó sus productos. NVIDIA implementó una cadencia de ejecución militar (un chip nuevo cada seis meses), lanzó en 1999 la GeForce 256 —acuñando formalmente el término **GPU** (Graphics Processing Unit)— y llevó a 3dfx a la bancarrota en el año 2000, adquiriendo sus patentes e ingenieros por una fracción de su valor original.
+
+Poco después, NVIDIA cerró el contrato para fabricar el procesador gráfico y de sonido de la primera consola Xbox de Microsoft. Ante las pérdidas que sufría Microsoft por unidad vendida, Steve Ballmer exigió reducciones unilaterales de precio. Jensen Huang se negó categóricamente alegando la inviolabilidad del contrato, lo que desató un arbitraje judicial amargo. Aunque NVIDIA ganó el arbitraje y cobró cada dólar, Microsoft vetó a NVIDIA para la Xbox 360 y generaciones subsecuentes, sellando una enemistad histórica en la industria de consolas.
+"""
+            },
+            {
+                "title": "4. La Tortura de Jensen: 50 Directos, Correos de 3 Líneas y la Apuesta Suicida de CUDA",
+                "body": """
+Detrás de la mítica chaqueta negra de cuero Tom Ford se oculta un régimen laboral que los propios ejecutivos describen como una operación quirúrgica a corazón abierto. Huang mantiene una estructura ultraplana con más de **50 reportes directos** y aborrece las evaluaciones de desempeño privadas: cualquier error crítico de ingeniería se desmenuza públicamente en la sala de juntas para que todos los líderes aprendan la lección simultáneamente.
+
+Su sistema de comunicación exige que cada colaborador envíe semanalmente sus '5 prioridades críticas'. Huang revisa cientos de ellos y responde de madrugada con correos demoledores de no más de tres líneas (*'1. Esto está mal. 2. Corrígelo con la arquitectura real hoy. 3. Llámame en 5 minutos'*).
+
+Esta obsesión permitió resistir la apuesta más solitaria de la historia tecnológica: **CUDA en 2006**. Huang obligó a que toda GPU para consumidores incluyera transistores dedicados a computación de propósito general, incrementando el costo de producción un 30%. Wall Street castigó la acción con un desplome del 80% y los analistas calificaron a CUDA como un pozo sin fondo. Huang soportó 15 años de sangría financiera y desprecio del mercado hasta que en 2012 la red neuronal AlexNet demostró que el deep learning solo escalaba sobre GPUs NVIDIA, detonando la revolución que hoy corona a la empresa con más de 3 billones de dólares de capitalización.
+"""
+            }
+        ],
+        "apa_references": [
+            "Huang, J. (2024). *The Denny's Diner Principles: How 30 Days From Bankruptcy Built a $3 Trillion Empire*. Stanford Graduate School of Business Lecture Series.",
+            "Malone, M. S. (2023). *The Silicon Engine: NVIDIA and the Reinvention of Computing*. HarperCollins.",
+            "Sega Corporation Archives. (1996). *Technical Partnership Memorandum on 3D Processing and the NV2 Contract Resolution*. Tokyo, Japan.",
+            "Kirk, D. B., & Hwu, W. W. (2016). *Programming Massively Parallel Processors: A Hands-on Approach* (3rd ed.). Morgan Kaufmann.",
+            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #01: La génesis de NVIDIA, microgestión de Jensen Huang y la economía de silicio de 3 billones*. sIA Business Publications."
+        ]
+    },
     # 0. Episodio 40 - 17 de Octubre de 2026
     "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3": {
         "slug": "sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu",

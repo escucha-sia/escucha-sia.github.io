@@ -226,6 +226,19 @@
         "Omniscient Reader's Viewpoint (ORV) Meta-Fiction",
         "Full-Dive VR Neuroscience: Brainstem Motor Inhibition and Transcranial Magnetic Stimulation"
       ]
+    },
+    {
+      "title": "sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones (Chisme, Traición y el Correo de 3 Líneas)",
+      "filename": "sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3",
+      "topics": [
+        "Historia corporativa de NVIDIA desde 1993 a 2026 (Denny's diner origins)",
+        "Quiebra evitada con Sega y desarrollo del RIVA 128",
+        "Disputa de arbitraje legal con Steve Ballmer y Microsoft Xbox",
+        "La apuesta de 15 años en CUDA y el auge de aceleración para Deep Learning",
+        "Cultura interna de Jensen Huang: estructura plana de 50 directos y microgestión por correos de 3 líneas"
+      ],
+      "cooldown_days": 45,
+      "date": "Tue, 20 Oct 2026 12:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

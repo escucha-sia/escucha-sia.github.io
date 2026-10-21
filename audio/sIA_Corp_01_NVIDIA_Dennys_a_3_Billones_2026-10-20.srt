@@ -1,0 +1,104 @@
+1
+00:00:00,000 --> 00:00:19,488
+JORGE: Bienvenidos al estreno de sIA Crónicas Corporativas, el espacio donde abrimos las puertas traseras de Silicon Valley para contar la historia real de las empresas que cambiaron el mundo: sin el filtro de relaciones públicas, con todo el chisme de oficina, las traiciones en las salas de juntas y las apuestas suicidas del día a día.
+
+2
+00:00:19,488 --> 00:00:51,624
+DALIA: Así es, Jorge. Y para inaugurar esta serie, teníamos que empezar con el titán absoluto del momento: NVIDIA. Hoy vale más de tres billones de dólares y domina el noventa por ciento del silicio para inteligencia artificial en el planeta. Pero la tesis de hoy es que NVIDIA no nació en un garaje glamoroso ni con una ronda millonaria de inversionistas; nació en una mesa grasienta de un restaurante Denny's, comiendo huevos fríos, esquivando tiroteos en San José y a punto de quebrar no una, sino cuatro veces.
+
+3
+00:00:51,624 --> 00:01:12,912
+JORGE: En los próximos diez minutos vamos a desenterrar cómo Jensen Huang pasó de lavar platos y limpiar baños a los quince años a convertirse en el CEO más temido de la industria, la traición involuntaria a Sega que casi los destruye, la guerra a muerte con Steve Ballmer por la primera Xbox, y la despiadada cultura del correo de tres líneas a las dos de la mañana.
+
+4
+00:01:12,912 --> 00:01:25,920
+DALIA: Dicho esto, alcancemos el meollo del chisme: Jorge, arranquemos por ese desayuno de mil novecientos noventa y tres. ¿Quiénes eran estos tres tipos y por qué se reunían en un Denny's de mala muerte?
+
+5
+00:01:25,920 --> 00:01:48,432
+JORGE: Mil novecientos noventa y tres. East San Jose, California. Un Denny's al lado de la autopista con agujeros de bala en el letrero. Jensen Huang, que en ese momento tenía treinta años y era ingeniero en LSI Logic, se reúne con Chris Malachowsky y Curtis Priem, dos ingenieros de Sun Microsystems que estaban hartos de sus jefes.
+
+6
+00:01:48,432 --> 00:02:15,888
+DALIA: Y el detalle cotidiano es genial: no tenían oficina, no tenían dinero para alquilar un garaje y elegían Denny's porque el café tenía refill infinito y las meseras los dejaban quedarse cuatro horas seguidas siempre que pidieran un plato de hot cakes. Jensen ya conocía el lugar a la perfección: de adolescente en Oregon había trabajado ahí lavando platos y limpiando baños. Él mismo cuenta que aprendió a trabajar bajo presión limpiando platos grasosos lo más rápido posible.
+
+7
+00:02:15,888 --> 00:02:44,832
+JORGE: Entre hot cakes con miel y tazas de café aguado, dibujaban diagramas de procesadores gráficos en servilletas de papel. Los tres compartían una obsesión: la computación basada en tres dimensiones para videojuegos. En esa época el mercado de gráficos 3D para PC prácticamente no existía. Cuando Jensen le dijo a su madre que iba a fundar una empresa para hacer chips de videojuegos, su madre le respondió: '¿Por qué no mejor buscas un trabajo de verdad?'.
+
+8
+00:02:44,832 --> 00:03:12,168
+DALIA: Pero consiguieron dos millones de dólares de capital de riesgo y fundaron la compañía. Al principio ni siquiera tenían nombre. Llamaban a sus archivos 'NV', por 'Next Version'. Hasta que buscaron en el diccionario palabras en latín y encontraron 'invidia', que significa envidia. Querían que la competencia se muriera de envidia. Y vaya que lo lograron, pero antes estuvieron a punto de morir de hambre.
+
+9
+00:03:12,168 --> 00:03:40,224
+JORGE: El primer chip, el NV1, lanzado en mil novecientos noventa y cinco, fue un desastre monumental. Decidieron construirlo usando superficies cuadriláteras curvas en lugar de polígonos triangulares. Y justo en ese momento, Microsoft lanza Windows noventa y cinco y Direct3D, estandarizando los triángulos para toda la industria. El chip de NVIDIA era matemáticamente incompatible con todos los juegos nuevos.
+
+10
+00:03:40,224 --> 00:04:06,960
+DALIA: Y aquí viene el primer gran chisme de supervivencia. NVIDIA había firmado un contrato millonario con Sega para fabricar el procesador gráfico de la consola Dreamcast. Sega ya les había adelantado millones de dólares. Jensen se dio cuenta de que la tecnología de cuadriláteros que le estaban vendiendo a Sega era un callejón sin salida. Si seguían, Sega fracasaría; si paraban, NVIDIA quebraba al instante.
+
+11
+00:04:06,960 --> 00:04:30,744
+JORGE: ¿Y qué hizo Jensen? Se subió a un avión a Japón, se sentó con Shoichiro Irimajiri, el mítico CEO de Sega, y le confesó en la cara: 'Nuestra arquitectura está mal. Si la usamos, tu consola perderá. Tenemos que parar el proyecto... pero si cancelas el contrato y no nos pagas los últimos cinco millones de dólares, mi empresa irá a la quiebra'.
+
+12
+00:04:30,744 --> 00:04:54,528
+DALIA: ¡Piénsalo por un segundo! Vas con tu cliente, le dices que tu producto no sirve, y le pides que te regale cinco millones de dólares de caridad para no quebrar. Lo increíble es que el CEO de Sega, conmovido por la brutal honestidad de Jensen y creyendo en su talento, le autorizó los cinco millones de dólares. Ese dinero le dio a NVIDIA exactamente seis meses de vida.
+
+13
+00:04:54,528 --> 00:05:27,240
+JORGE: Con treinta días de dinero en el banco, Jensen despidió a la mitad de la plantilla. Los ingenieros restantes dormían debajo de los escritorios. Se la jugaron a un solo tiro de dados: el chip RIVA 128. Si ese chip fallaba en el laboratorio, la empresa desaparecía en treinta días. Lanzaron el RIVA 128 en mil novecientos noventa y siete, soportaba triángulos a toda velocidad y vendieron un millón de unidades en cuatro meses. Se salvaron por un pelo de rana.
+
+14
+00:05:27,240 --> 00:05:50,760
+DALIA: A finales de los noventa el rey indiscutible de las tarjetas gráficas no era NVIDIA; era 3dfx con sus legendarias tarjetas Voodoo. Todo el mundo quería una Voodoo para jugar Quake y Unreal. Pero a 3dfx le dio el ataque clásico de soberbia corporativa: decidieron fabricar sus propias tarjetas, pelearon con sus distribuidores y retrasaron sus lanzamientos.
+
+15
+00:05:50,760 --> 00:06:18,936
+JORGE: Mientras 3dfx se dormía en los laureles, Jensen impuso un ritmo despiadado: una arquitectura completamente nueva cada seis meses. Era un ritmo suicida para los ingenieros, pero en el año dos mil lanzaron la GeForce 256, acuñaron el término 'GPU', y quebraron a 3dfx. Y con una frialdad quirúrgica, NVIDIA compró todas las patentes y restos de 3dfx por una miseria.
+
+16
+00:06:18,936 --> 00:06:41,520
+DALIA: Pero luego llegó el choque de trenes con Microsoft. En el año dos mil uno, Bill Gates eligió a NVIDIA para fabricar el chip gráfico y de sonido de la primera consola Xbox. Parecía el contrato de ensueño, pero se convirtió en una pesadilla. Los costos de fabricación de la consola eran altísimos y Microsoft perdía dinero por cada Xbox vendida.
+
+17
+00:06:41,520 --> 00:07:13,440
+JORGE: Steve Ballmer llamó a Jensen exigiendo rebajar el precio de los chips a la fuerza. Jensen se negó rotundamente: 'Un contrato firmado es un contrato'. Ballmer enfureció. La pelea terminó en un arbitraje legal sangriento. NVIDIA ganó el arbitraje y cobró cada centavo, pero Microsoft juró venganza y para la Xbox 360 se fue directamente con su archirrival, ATI. Jensen aprendió a la mala que ganar una batalla legal puede costarte el negocio de consolas.
+
+18
+00:07:13,440 --> 00:07:24,960
+DALIA: Llegamos a nuestra cápsula Fuera de la Burbuja Corporativa, porque el mito del líder carismático con chaqueta de cuero esconde una de las culturas laborales más implacables y estresantes de todo el planeta tech.
+
+19
+00:07:24,960 --> 00:07:47,256
+JORGE: Empecemos por la icónica chaqueta negra de cuero. Jensen la usa todo el año, haga frío en Nueva York o haya cuarenta grados de calor en Taiwán. Su esposa y su hija se la compraron hace más de una década para que no perdiera tiempo eligiendo ropa, y se convirtió en su armadura de batalla. Pero detrás de la chaqueta hay un micro-gestor legendario.
+
+20
+00:07:47,256 --> 00:08:11,352
+DALIA: En NVIDIA no existen las evaluaciones de desempeño privadas uno a uno. Jensen las odia. Su filosofía es: 'Si alguien comete un error, se lo digo frente a todos en la sala de juntas para que las cincuenta personas presentes aprendan la lección'. Los directores describen esas reuniones como una sala de operaciones donde te diseccionan vivo si no tienes el dato exacto de ingeniería.
+
+21
+00:08:11,352 --> 00:08:37,752
+JORGE: Jensen tiene más de cincuenta subordinados directos. No cree en las jerarquías intermedias. Y todo empleado debe enviarle periódicamente un correo con sus cinco cosas más importantes del momento. Jensen lee miles de correos y responde a las dos o tres de la mañana con respuestas demoledoras de exactamente tres líneas: 'Esto está mal. Corrígelo ahora. Llámame en cinco minutos'.
+
+22
+00:08:37,752 --> 00:09:03,336
+DALIA: Y está la mayor apuesta incomprendida de la historia: CUDA en dos mil seis. Jensen decidió meter núcleos de cómputo general en cada una de las tarjetas gráficas para que sirvieran para simulaciones científicas, encareciendo los chips un treinta por ciento. Wall Street castigó la acción, los analistas decían que Jensen estaba destruyendo los márgenes de la empresa en una locura sin mercado, y la acción se desplomó un ochenta por ciento.
+
+23
+00:09:03,336 --> 00:09:24,384
+JORGE: Jensen aguantó la respiración durante quince años seguidos perdiendo dinero en software que casi nadie usaba... hasta que en dos mil doce los investigadores de Deep Learning descubrieron que las redes neuronales corrían mil veces más rápido en CUDA que en CPUs tradicionales. La apuesta de quince años dio en el blanco más grande de la historia financiera.
+
+24
+00:09:24,384 --> 00:09:46,584
+DALIA: Veredicto de sIA Crónicas Corporativas: NVIDIA no domina el mundo por suerte ni por un golpe de genialidad repentino. Domina porque su fundador sigue operando cada mañana con el terror visceral de que la empresa va a quebrar en treinta días. De lavar platos con agua hirviendo a los quince años a controlar los cerebros de silicio de la inteligencia artificial moderna.
+
+25
+00:09:46,584 --> 00:10:01,296
+JORGE: Si te apasiona el chisme corporativo y quieres ver la cronología completa con los balances financieros, las fotos de la servilleta de Denny's y la bibliografía en formato APA, revisa el artículo de investigación en escucha-sia punto Git-Jab punto io.
+
+26
+00:10:01,296 --> 00:10:16,440
+DALIA: Y si quieres ver el mapa visual animado con la evolución desde la mesa de Denny's hasta el chip H100 en un Reel dinámico de cuarenta y cinco segundos, encuéntranos en TikTok y YouTube. ¡Nos vemos en el próximo episodio de sIA Crónicas Corporativas!
+
