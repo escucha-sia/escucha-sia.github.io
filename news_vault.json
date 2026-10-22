@@ -239,6 +239,19 @@
       ],
       "cooldown_days": 45,
       "date": "Tue, 20 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "title": "sIA Corporativo #02: Valve & Gabe Newell: De Millonarios en Microsoft al Trono de Steam (Hackers, Traición y Escritorios con Ruedas)",
+      "filename": "sIA_Corp_02_Valve_Gabe_Newell_Steam_2026-10-21.mp3",
+      "topics": [
+        "Historia corporativa de Valve y Gabe Newell desde Microsoft a 2026",
+        "La filtración del código de Half-Life 2 por Axel Gembe y la trampa del FBI",
+        "Litigio contra Vivendi Universal y el nacimiento forzado de Steam en 2004",
+        "Cultura organizacional ultraplana: escritorios sobre ruedas y evaluación por pares",
+        "Economía de plataforma: el 30% de comisión de Steam y el análisis financiero de Half-Life 3"
+      ],
+      "cooldown_days": 45,
+      "date": "Wed, 21 Oct 2026 12:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"
