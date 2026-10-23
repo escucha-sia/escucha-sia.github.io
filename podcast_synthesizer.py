@@ -314,7 +314,7 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
     print(f"[OK] Subtítulos SRT generados: {srt_file}")
     print(f"[OK] Subtítulos sincronizados en carpeta de Spotify: {SPOTIFY_DIR / f'{base_stem}.vtt'}")
 
-    print("\nEnsamblando audio final con capítulos ID3v2 en ffmpeg...")
+    print("\nEnsamblando audio final con compresión dinámica y normalización EBU R128 (-16 LUFS)...")
     cmd = [
         "ffmpeg", "-y",
         "-f", "concat",
@@ -322,6 +322,7 @@ async def process_dialogue(script_text: str, episode_title: str, custom_filename
         "-i", str(concat_list_file),
         "-i", str(meta_file),
         "-map_metadata", "1",
+        "-af", "acompressor=threshold=-20dB:ratio=2.5:attack=20:release=150,loudnorm=I=-16:TP=-1.5:LRA=9",
         "-c:a", "libmp3lame",
         "-b:a", "192k",
         "-id3v2_version", "3",

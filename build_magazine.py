@@ -245,7 +245,7 @@ La rentabilidad del modelo es astronómica: al retener hasta un 30% de peaje sob
         "badge_color": "green",
         "read_time": "8 min",
         "title": "sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones",
-        "subtitle": "Chisme corporativo, traición y el correo de 3 líneas: La historia sin censura de Jensen Huang, el rescate desesperado de Sega, el arbitraje con Steve Ballmer y la sangría solitaria de 15 años en CUDA.",
+        "subtitle": "Intriga corporativa, traición y el correo de 3 líneas: La historia sin censura de Jensen Huang, el rescate desesperado de Sega, el arbitraje con Steve Ballmer y la sangría solitaria de 15 años en CUDA.",
         "thesis": "El mayor imperio tecnológico de la era de la IA no nació de una visión pulcra de capital de riesgo, sino de una cultura de supervivencia extrema forjada en un restaurante grasiento, donde la honestidad brutal ante la bancarrota inminente y la microgestión despiadada derrotaron a gigantes que subestimaron el silicio paralelo.",
         "nexo": "Estreno formal de sIA Crónicas Corporativas: La historia de las empresas tech desde su fundación hasta hoy, el día a día real, secretos de oficina y los puntos de quiebre que nadie cuenta.",
         "reel_video": "sIA_Corp_01_NVIDIA_Dennys_Reel.mp4",

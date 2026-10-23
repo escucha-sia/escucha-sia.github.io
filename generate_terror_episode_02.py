@@ -123,12 +123,13 @@ def get_duration(audio_file: Path) -> float:
     except Exception:
         return 2.0
 
-def mix_background(voice_file: Path, bg_file: Path, output_file: Path, bg_volume: float = 0.20):
+def mix_background(voice_file: Path, bg_file: Path, output_file: Path, bg_volume: float = 0.04):
+    # normalize=0 evita que ffmpeg atenúe la voz al 50%; la voz permanece al 100% y el fondo se mantiene como cama sutil
     cmd = [
         "ffmpeg", "-y",
         "-i", str(voice_file),
         "-i", str(bg_file),
-        "-filter_complex", f"[1:a]volume={bg_volume}[bg];[0:a][bg]amix=inputs=2:duration=first:dropout_transition=1[out]",
+        "-filter_complex", f"[1:a]volume={bg_volume}[bg];[0:a][bg]amix=inputs=2:duration=first:dropout_transition=2:normalize=0[out]",
         "-map", "[out]",
         str(output_file)
     ]
@@ -213,7 +214,7 @@ async def produce_episode():
     # Bloque 0: Cold Open con Teclado de oficina y zumbido de fondo
     b0 = dialogue_blocks[0]
     mixed_b0 = TEMP_DIR / "processed_000_cold_open.mp3"
-    mix_background(b0["raw_audio"], sfx_typing, mixed_b0, bg_volume=0.25)
+    mix_background(b0["raw_audio"], sfx_typing, mixed_b0, bg_volume=0.08)
     timeline_items.append((mixed_b0, b0["raw_text"], b0["speaker"], b0["chapter"]))
 
     # Transición SFX: Estática digital entre Cold Open y Presentación
@@ -222,11 +223,11 @@ async def produce_episode():
     timeline_items.append((static_chunk, None, None, b0["chapter"]))
 
     # Bloques 1 a 4: Presentación cálida, Brújula y Los 3 Detalles de la Bitácora
-    # Mezclados sutilmente con dark_drone de fondo (-22 dB / 0.08 vol)
+    # Mezclados muy sutilmente con dark_drone de fondo (cama imperceptible de sub-graves)
     for i in range(1, 5):
         b = dialogue_blocks[i]
         mixed_b = TEMP_DIR / f"processed_{i:03d}_intro_bed.mp3"
-        mix_background(b["raw_audio"], sfx_drone, mixed_b, bg_volume=0.08)
+        mix_background(b["raw_audio"], sfx_drone, mixed_b, bg_volume=0.025)
         timeline_items.append((mixed_b, b["raw_text"], b["speaker"], b["chapter"]))
 
     # Bloques 5 a 7: El Contrato de Austin y el inicio de la historia
@@ -253,7 +254,7 @@ async def produce_episode():
     for i in range(21, len(dialogue_blocks)):
         b = dialogue_blocks[i]
         mixed_cierre = TEMP_DIR / f"processed_{i:03d}_cierre_bed.mp3"
-        mix_background(b["raw_audio"], sfx_drone, mixed_cierre, bg_volume=0.08)
+        mix_background(b["raw_audio"], sfx_drone, mixed_cierre, bg_volume=0.025)
         timeline_items.append((mixed_cierre, b["raw_text"], b["speaker"], b["chapter"]))
 
     # 4. Construir concatenación y subtítulos sincronizados
@@ -336,19 +337,30 @@ async def produce_episode():
     final_output = AUDIO_DIR / EPISODE_INFO["filename"]
     spotify_output = SPOTIFY_DIR / EPISODE_INFO["filename"]
 
-    print("\n🎬 Ensamblando master final de audio con ffmpeg...")
-    cmd = [
+    print("\n🎬 Ensamblando master final con Compresión Dinámica y Normalización EBU R128 (-16 LUFS)...")
+    raw_master = TEMP_DIR / "raw_concat_master.mp3"
+    cmd_concat = [
         "ffmpeg", "-y",
         "-f", "concat",
         "-safe", "0",
         "-i", str(concat_file),
+        "-c:a", "libmp3lame",
+        "-b:a", "256k",
+        str(raw_master)
+    ]
+    subprocess.run(cmd_concat, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+
+    cmd_master = [
+        "ffmpeg", "-y",
+        "-i", str(raw_master),
         "-i", str(meta_file),
         "-map_metadata", "1",
+        "-af", "acompressor=threshold=-20dB:ratio=2.5:attack=20:release=150,loudnorm=I=-16:TP=-1.5:LRA=9",
         "-c:a", "libmp3lame",
-        "-q:a", "2",
+        "-b:a", "192k",
         str(final_output)
     ]
-    subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+    subprocess.run(cmd_master, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
     shutil.copy2(final_output, spotify_output)
 
     total_sec = get_duration(final_output)
