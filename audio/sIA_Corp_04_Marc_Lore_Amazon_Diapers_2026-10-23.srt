@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:52,488
+JORGE: Invierno de dos mil cinco en Montclair, Nueva Jersey. Afuera cae una tormenta de aguanieve que congela las ventanas. Adentro, en una recámara a media luz, un bebé de seis meses llora desconsolado con la piel irritada. Marc Lore, un padre joven de treinta y cuatro años, busca con desesperación en los cajones del cambiador. No queda ni un solo pañal limpio. Las farmacias están cerradas por el temporal. Y mientras sostiene a su hijo en brazos intentando calmarlo en la madrugada, siente una punzada de impotencia que todo padre o madre conoce de memoria. En ese preciso instante, con los ojos inyectados en sangre por el desvelo, nació una idea. No para construir un imperio multimillonario... sino para que ninguna otra familia tuviera que pasar por esa misma angustia a mitad de la noche.
+
+2
+00:00:52,488 --> 00:00:59,832
+DALIA: Hola, ¿cómo estás? Qué gusto saludarte esta noche. Mi nombre es Dalia...
+
+3
+00:00:59,832 --> 00:01:04,704
+JORGE: ... y yo soy Jorge. Te damos una cálida bienvenida a Sia.
+
+4
+00:01:04,704 --> 00:01:35,376
+DALIA: Para quienes nos acompañan por primera vez o vienen de Spotify, YouTube o TikTok, te damos la bienvenida a nuestra casa. En Sia exploramos el impacto humano de la tecnología. Y hoy estás en sIA Crónicas Corporativas: el espacio donde abrimos los expedientes más íntimos de la historia empresarial. Aquí no venimos a recitar balances financieros ni comunicados de prensa; venimos a contar las batallas de supervivencia, los dilemas morales y las cicatrices personales de quienes arriesgaron todo por una idea.
+
+5
+00:01:35,376 --> 00:01:50,544
+JORGE: Y hoy abrimos uno de los capítulos más dramáticos y aleccionadores en la historia del comercio moderno: la guerra asimétrica entre un padre de familia y la corporación más implacable del planeta: Marc Lore contra Amazon y la Guerra de los Cien Millones de Dólares.
+
+6
+00:01:50,544 --> 00:02:39,312
+DALIA: Jorge, cuando investigamos este caso, descubrimos que no fue una simple adquisición comercial; fue una tragedia humana en tres actos que marcó un antes y un después para cualquier persona que sueñe con emprender. Para que nos acompañes con los cinco sentidos, fíjate en estos tres momentos clave de la noche: Primero: Cómo dos amigos de la infancia crearon una empresa basada en la empatía pura hacia las madres trabajadoras, empacando cajas a mano en un almacén congelado. Segundo: La llamada telefónica de Seattle donde Jeff Bezos les ofreció comprar su empresa... y la venganza automatizada que desató cuando Marc se negó a vender su sueño. Y tercero: La madrugada en que Marc tuvo que sentarse solo en la sala de su casa a decidir entre su orgullo personal... o la supervivencia económica de las doscientas cincuenta familias que dependían de él.
+
+7
+00:02:39,312 --> 00:02:50,664
+JORGE: Presta mucha atención a cada detalle de este viaje. Ponte cómodo, ajusta tus audífonos, respira profundo... y acompáñanos a alcanzar el corazón de esta historia.
+
+8
+00:02:50,664 --> 00:03:14,280
+DALIA: Marc Lore no venía del glamur de Silicon Valley ni tenía millones en el banco. Se asoció con su mejor amigo de la infancia, Vinit Bharara. Ambos sabían que ser padres primerizos es agotador: no tienes tiempo, estás cansado y cargar cajas de pañales de veinte kilos en el supermercado con un bebé en brazos es una pesadilla logística. Así fundaron Diapers punto com.
+
+9
+00:03:14,280 --> 00:03:45,384
+JORGE: Al principio no tenían dinero para camiones ni tecnología avanzada. Alquilaban una esquina en un almacén sin calefacción en las afueras de Jersey City. En los inviernos de dos mil cinco y dos mil seis, Marc y Vinit envolvían los pedidos con cinta adhesiva usando guantes de lana con los dedos cortados porque el frío les entumecía las manos. Pero tenían una obsesión: si una madre pedía pañales a las seis de la tarde, la caja tenía que estar en la puerta de su casa a la mañana siguiente sin falta.
+
+10
+00:03:45,384 --> 00:04:14,400
+DALIA: Incluían notas escritas a mano dentro de cada paquete deseándoles una noche de descanso a los padres. Ese trato humano y cálido detonó un fenómeno de recomendación descomunal: las comunidades de madres en foros de internet empezaron a recomendar el servicio como si fuera un salvavidas familiar. En menos de tres años, la empresa ya despachaba millones de pedidos al año y facturaba trescientos millones de dólares. Se habían ganado el cariño genuino de cientos de miles de hogares.
+
+11
+00:04:14,400 --> 00:04:39,096
+JORGE: Pero en el mundo corporativo, cuando te vuelves indispensable para la gente, despiertas a los gigantes. Y en Seattle, Jeff Bezos vio con alarma cómo un porcentaje masivo de las madres estadounidenses ya no buscaban pañales en Amazon; iban directamente a Diapers punto com. En dos mil nueve, Bezos invitó a Marc Lore a las oficinas centrales de Amazon para un almuerzo privado.
+
+12
+00:04:39,096 --> 00:05:07,488
+DALIA: Ponte en el lugar de Marc: llegas a la torre de Amazon con tu carpeta bajo el brazo, sintiendo orgullo por lo que tú y tu amigo levantaron desde cero. Pero la reunión no fue una charla cordial de felicitaciones. Los ejecutivos de Bezos fueron cortantes y directos: 'Amazon va a entrar de lleno al negocio de bebés. Queremos comprar su empresa. Si aceptan, se integran a nosotros. Si no aceptan... vamos a competir'.
+
+13
+00:05:07,488 --> 00:05:33,144
+JORGE: Marc Lore miró la mesa y dijo con dignidad: 'No estamos en venta. Este es nuestro proyecto de vida, conocemos a nuestros clientes y creemos en lo que estamos construyendo'. Se levantó, estrechó manos y tomó el vuelo de regreso a Nueva Jersey creyendo que competirían en igualdad de condiciones, con mejor servicio y calidad humana. No tenía idea de la trampa letal que se estaba cerrando sobre él.
+
+14
+00:05:33,144 --> 00:06:01,272
+DALIA: Pocos meses después, los analistas de sistemas de Diapers punto com notaron algo insólito en sus paneles de tráfico. Un enjambre de bots automáticos rastreaba cada producto de su catálogo cada quince minutos. Y casi de inmediato, Amazon lanzó un servicio especial reduciendo el precio de los pañales en un treinta por ciento. Cada vez que Diapers punto com bajaba un centavo para no perder a sus clientes, el bot de Amazon bajaba dos centavos más.
+
+15
+00:06:01,272 --> 00:06:39,624
+JORGE: Marc Lore hizo los cálculos matemáticos en una hoja de cálculo y se le cayó el alma a los pies: Amazon estaba vendiendo cada paquete de pañales muy por debajo de su costo de fábrica y asumiendo los gastos de envío gratis. Documentos internos desclasificados años más tarde por el Congreso de los Estados Unidos revelaron que Amazon perdió deliberadamente cien millones de dólares en solo tres meses en esa categoría. Cien millones de dólares quemados a propósito, una cifra que para Amazon era una pequeña raspadura en su balance global, pero que para una empresa mediana independiente significaba la asfixia total de su flujo de caja.
+
+16
+00:06:39,624 --> 00:07:01,152
+DALIA: Los inversionistas de Diapers punto com entraron en pánico. Se negaron a inyectar más capital para sostener una guerra de desgaste contra un titán con reservas infinitas. El dinero en el banco de Marc se evaporaba día tras día. Las madres seguían amando el servicio, pero Amazon las estaba atrayendo con descuentos imposibles de igualar.
+
+17
+00:07:01,152 --> 00:07:33,144
+JORGE: Octubre de dos mil diez. Marc Lore pasó noches enteras sin dormir, caminando en círculos por la sala de su casa mientras su familia dormía. Su socio Vinit y él sabían que podían resistir un par de meses más apelando al orgullo y pelear hasta el último centavo. Pero si la empresa quebraba, más de doscientas cincuenta personas —los empacadores del almacén, los desarrolladores que habían confiado en ellos, los empleados de atención a clientes— se quedarían sin empleo de la noche a la mañana con las manos vacías.
+
+18
+00:07:33,144 --> 00:07:53,160
+DALIA: Esa es la soledad invisible del líder de la que nadie habla en los libros de negocios: cuando el costo de tu orgullo personal lo van a pagar las familias de la gente que creyó en ti. Con el dolor más profundo de su carrera, Marc tragó saliva, descolgó el teléfono y aceptó la oferta de adquisición de Amazon por quinientos cuarenta y cinco millones de dólares.
+
+19
+00:07:53,160 --> 00:08:09,672
+JORGE: Para los periódicos financieros, fue una salida exitosa que convirtió a los fundadores en millonarios. Pero para Marc Lore fue un duelo devastador: vio cómo Amazon absorbió la infraestructura y años después cerró la marca que él había creado con tanto amor para su hijo.
+
+20
+00:08:09,672 --> 00:08:19,416
+DALIA: Entremos a nuestra cápsula Fuera de la Burbuja, porque la historia no termina en la derrota. La resiliencia humana tiene formas poéticas de manifestarse.
+
+21
+00:08:19,416 --> 00:08:46,392
+JORGE: Marc Lore cumplió los dos años de contrato obligatorio trabajando dentro de Amazon, aprendiendo desde adentro cada tuerca de su logística algorítmica y acumulando paciencia. El día que venció su cláusula de no competencia, renunció inmediatamente. Y en dos mil catorce fundó Jet punto com, una plataforma de comercio electrónico diseñada específicamente con algoritmos de optimización de cesta para desafiar el monopolio de Amazon.
+
+22
+00:08:46,392 --> 00:09:22,608
+DALIA: Apenas dos años después, en dos mil dieciséis, el gigante minorista Walmart compró Jet punto com por tres mil trescientos millones de dólares y nombró a Marc Lore como el máximo responsable de todo el comercio digital de Walmart en Estados Unidos. Desde esa posición, Marc lideró la transformación digital que por fin logró arrebatarle cuota de mercado a Amazon a escala global. Aquel padre que en dos mil cinco no tenía un pañal en una noche de nieve en Nueva Jersey demostró que una corporación puede quitarte una empresa con dinero sucio, pero jamás podrá quitarte el talento, la visión y la dignidad de volver a empezar.
+
+23
+00:09:22,608 --> 00:09:44,952
+JORGE: Si quieres consultar los documentos desclasificados del Congreso sobre la guerra de precios de Amazon y el análisis estratégico de este caso con bibliografía en formato APA, revisa nuestra revista digital en escucha guion sia punto github punto io. Y en nuestro TikTok y YouTube Shorts ya tienes disponible el Reel de cuarenta y cinco segundos con la reconstrucción de esta batalla.
+
+24
+00:09:44,952 --> 00:09:57,408
+DALIA: Gracias de corazón por acompañarnos y reflexionar con nosotros sobre el lado humano de las grandes leyendas tecnológicas. Que tengas una excelente noche... y nos escuchamos en la próxima crónica de Sia.
+
+25
+00:09:57,408 --> 00:09:59,400
+JORGE: Hasta la próxima.
+

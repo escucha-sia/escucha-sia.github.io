@@ -1,0 +1,503 @@
+"""
+sIA Motion Graphics Reel Generator: Corporativo #04 (Marc Lore vs. Amazon)
+Tema: La Guerra de los Pañales y el Dilema del Fundador
+Duración: 45.0 Segundos CERRADOS (Producto Terminado Completo)
+- Audio propio sintetizado en 45 segundos con arco narrativo empático (Jorge + Dalia).
+- Infografía animada: Tormenta de 2005 -> Diapers.com -> Bots de Amazon ($100M Pérdida) -> Capitulación -> Revancha Jet.com $3,300M Walmart.
+- Redirección omnicanal total: enlaza visual y verbalmente a Spotify y al Blog.
+"""
+
+import os
+import sys
+import shutil
+import asyncio
+import subprocess
+from pathlib import Path
+import edge_tts
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
+BASE_DIR = Path(r"C:\Carlos\noticias_podcast")
+ENGINE_DIR = BASE_DIR / "sia_tiktok_batch_engine"
+AUDIO_DIR = BASE_DIR / "audio"
+REELS_DIR = BASE_DIR / "reels"
+SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
+NODE_PATH = r"C:\Carlos\nodejs"
+
+TARGET_REEL = REELS_DIR / "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4"
+DURATION = 45.0
+
+VOICE_JORGE = "es-MX-JorgeNeural"
+VOICE_FEMALE = "es-MX-DaliaNeural"
+
+REEL_DIALOGUE = [
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "¿Por qué Amazon estuvo dispuesto a perder cien millones de dólares en tres meses solo para destruir a un padre de familia?"
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_FEMALE,
+        "text": "En dos mil cinco, Marc Lore creó Diapers punto com tras sufrir una tormenta sin pañales para su bebé. Su trato humano enamoró a miles de madres, desatando la furia de Jeff Bezos."
+    },
+    {
+        "speaker": "JORGE",
+        "voice": VOICE_JORGE,
+        "text": "Al negarse a vender, Amazon desplegó bots que bajaron precios bajo costo para asfixiarlos. Para salvar los empleos de doscientas cincuenta familias, Marc tuvo que vender."
+    },
+    {
+        "speaker": "DALIA",
+        "voice": VOICE_FEMALE,
+        "text": "Pero la revancha fue épica: fundó Jet punto com, la vendió a Walmart por tres mil millones y desafió a Amazon. Conoce la historia en escucha guion sia punto github punto io y en Sia Podcast."
+    }
+]
+
+async def generate_reel_audio():
+    print("🎙️ Sintetizando audio cerrado de 45 segundos para Corporativo #04...")
+    temp_dir = ENGINE_DIR / "temp_audio_corp_04"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    
+    chunk_files = []
+    for idx, item in enumerate(REEL_DIALOGUE):
+        chunk_path = temp_dir / f"chunk_{idx}.mp3"
+        communicate = edge_tts.Communicate(item["text"], item["voice"], rate="+2%")
+        await communicate.save(str(chunk_path))
+        chunk_files.append(chunk_path)
+        
+    concat_list = temp_dir / "concat.txt"
+    with open(concat_list, "w", encoding="utf-8") as f:
+        for cf in chunk_files:
+            p = str(cf).replace('\\', '/')
+            f.write(f"file '{p}'\n")
+            
+    clip_audio = ENGINE_DIR / "assets" / "current_clip.mp3"
+    clip_audio.parent.mkdir(parents=True, exist_ok=True)
+    
+    cmd = [
+        "ffmpeg", "-y",
+        "-f", "concat", "-safe", "0",
+        "-i", str(concat_list),
+        "-c:a", "libmp3lame",
+        "-b:a", "192k",
+        "-af", f"apad=whole_dur={DURATION},afade=t=out:st=44.0:d=1.0",
+        str(clip_audio)
+    ]
+    subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+    print("✅ Audio de Corporativo #04 sintetizado y ensamblado con éxito.")
+
+def write_hyperframes_html():
+    index_html = f"""<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <style>
+      * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+      html, body {{
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #080c16;
+      }}
+      #root {{
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+      }}
+      .clip {{
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+      }}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="sia_motion_reel_corp_04" data-no-timeline data-start="0" data-duration="{DURATION}" data-width="1080" data-height="1920">
+      <audio
+        id="bg-audio"
+        class="clip"
+        data-start="0"
+        data-duration="{DURATION}"
+        data-track-index="0"
+        data-volume="1.0"
+        src="assets/current_clip.mp3"
+      ></audio>
+
+      <div
+        id="main-scene"
+        class="clip"
+        data-composition-id="scene"
+        data-composition-src="compositions/scene.html"
+        data-start="0"
+        data-duration="{DURATION}"
+        data-track-index="1"
+      ></div>
+    </div>
+  </body>
+</html>"""
+
+    (ENGINE_DIR / "index.html").write_text(index_html, encoding="utf-8")
+
+    scene_html = f"""<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+      * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+      body {{
+        width: 1080px;
+        height: 1920px;
+        background: #060911;
+        color: #f8fafc;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow: hidden;
+      }}
+
+      .canvas-container {{
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: radial-gradient(circle at 50% 20%, #172554 0%, #090e1a 50%, #030712 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 90px 70px 100px 70px;
+      }}
+
+      /* Ambient Glow */
+      .ambient-glow {{
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(0,0,0,0) 70%);
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }}
+
+      /* Header */
+      .header {{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+      }}
+      .brand-badge {{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(59, 130, 246, 0.15);
+        border: 2px solid rgba(59, 130, 246, 0.4);
+        padding: 14px 28px;
+        border-radius: 999px;
+      }}
+      .brand-dot {{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #3b82f6;
+        box-shadow: 0 0 20px #3b82f6;
+      }}
+      .brand-title {{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #60a5fa;
+      }}
+      .episode-badge {{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 24px;
+        font-weight: 700;
+        background: rgba(245, 158, 11, 0.15);
+        color: #fbbf24;
+        padding: 12px 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+      }}
+
+      /* Main Title */
+      .title-section {{
+        text-align: center;
+        z-index: 10;
+        margin-top: 10px;
+      }}
+      .main-title {{
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -1.5px;
+        color: #ffffff;
+      }}
+      .highlight-orange {{
+        color: #fb923c;
+        text-shadow: 0 0 35px rgba(251, 146, 60, 0.5);
+      }}
+      .highlight-blue {{
+        color: #38bdf8;
+        text-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
+      }}
+
+      /* Infographic Card */
+      .stage-card {{
+        position: relative;
+        background: rgba(15, 23, 42, 0.8);
+        border: 2px solid rgba(59, 130, 246, 0.3);
+        border-radius: 36px;
+        padding: 45px 40px;
+        backdrop-filter: blur(25px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        z-index: 10;
+        min-height: 720px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }}
+
+      /* Timeline Stages */
+      .timeline-box {{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }}
+      .timeline-item {{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 22px 26px;
+        background: rgba(30, 41, 59, 0.6);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }}
+      .timeline-icon {{
+        font-size: 38px;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(59, 130, 246, 0.15);
+        border-radius: 16px;
+      }}
+      .timeline-text {{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }}
+      .timeline-label {{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        color: #94a3b8;
+        letter-spacing: 1px;
+      }}
+      .timeline-val {{
+        font-size: 30px;
+        font-weight: 700;
+        color: #ffffff;
+      }}
+
+      /* Callout Stat */
+      .stat-highlight {{
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-radius: 20px;
+        padding: 24px;
+        text-align: center;
+      }}
+      .stat-number {{
+        font-size: 48px;
+        font-weight: 800;
+        color: #ef4444;
+        font-family: 'JetBrains Mono', monospace;
+      }}
+      .stat-sub {{
+        font-size: 22px;
+        color: #cbd5e1;
+        margin-top: 6px;
+      }}
+
+      /* Subtitles Box */
+      .subtitles-card {{
+        background: rgba(2, 6, 23, 0.85);
+        border: 2px solid rgba(59, 130, 246, 0.4);
+        border-radius: 24px;
+        padding: 24px 32px;
+        text-align: center;
+        z-index: 10;
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }}
+      .subtitles-text {{
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #f1f5f9;
+      }}
+
+      /* Footer */
+      .footer {{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+        gap: 20px;
+      }}
+      .footer-item {{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 18px 24px;
+        border-radius: 20px;
+        font-size: 24px;
+        font-weight: 700;
+      }}
+      .footer-spotify {{
+        color: #1ed760;
+        border-color: rgba(30, 215, 96, 0.3);
+      }}
+      .footer-web {{
+        color: #38bdf8;
+        border-color: rgba(56, 189, 248, 0.3);
+      }}
+    </style>
+  </head>
+  <body>
+    <div id="scene-root" class="canvas-container" data-composition-id="scene" data-width="1080" data-height="1920">
+      <div class="ambient-glow"></div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="brand-badge">
+          <div class="brand-dot"></div>
+          <span class="brand-title">sIA CRÓNICAS</span>
+        </div>
+        <div class="episode-badge">EPISODIO #04</div>
+      </div>
+
+      <!-- Main Title -->
+      <div class="title-section">
+        <h1 class="main-title">MARC LORE VS. <span class="highlight-orange">AMAZON</span></h1>
+        <p style="font-size: 28px; color: #cbd5e1; margin-top: 12px; font-weight: 600;">
+          La Guerra de los Pañales & El Dilema del Fundador
+        </p>
+      </div>
+
+      <!-- Center Stage Infographic -->
+      <div class="stage-card">
+        <div class="stat-highlight">
+          <div class="stat-number">-$100,000,000</div>
+          <div class="stat-sub">Pérdida asumida por Amazon en 3 meses para asfixiarlos</div>
+        </div>
+
+        <div class="timeline-box">
+          <div class="timeline-item">
+            <div class="timeline-icon">❄️</div>
+            <div class="timeline-text">
+              <span class="timeline-label">2005 · NUEVA JERSEY</span>
+              <span class="timeline-val">Noche de nieve y Diapers.com</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🤖</div>
+            <div class="timeline-text">
+              <span class="timeline-label">2010 · GUERRA DE PRECIOS</span>
+              <span class="timeline-val">Bots de Bezos rebajando bajo coste</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🚀</div>
+            <div class="timeline-text">
+              <span class="timeline-label">2016 · LA REVANCHA</span>
+              <span class="timeline-val">Venta de Jet.com a Walmart por $3,300M</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Subtitle Box -->
+      <div class="subtitles-card">
+        <p class="subtitles-text">
+          🎧 Escucha el relato inmersivo con diseño sonoro de piano y foley acústico.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-item footer-spotify">
+          <span>🟢</span> Escúchalo en Spotify
+        </div>
+        <div class="footer-item footer-web">
+          <span>🌐</span> escucha-sia.github.io
+        </div>
+      </div>
+    </div>
+  </body>
+</html>"""
+
+    (ENGINE_DIR / "compositions" / "scene.html").write_text(scene_html, encoding="utf-8")
+    print("✅ Composición HTML/CSS de Corporativo #04 generada con éxito.")
+
+def render_motion_reel():
+    print("🎬 Renderizando Reel vertical en HyperFrames GPU...")
+    env = os.environ.copy()
+    env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
+    
+    cmd = ["cmd.exe", "/c", f"cd /d {ENGINE_DIR} && npx hyperframes render --gpu"]
+    res = subprocess.run(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    
+    output_mp4 = ENGINE_DIR / "renders" / "video.mp4"
+    if not output_mp4.exists():
+        candidates = list((ENGINE_DIR / "renders").glob("*.mp4"))
+        if candidates:
+            output_mp4 = max(candidates, key=lambda p: p.stat().st_mtime)
+            
+    if not output_mp4.exists():
+        raise RuntimeError(f"Fallo al renderizar Reel: {res.stderr or res.stdout}")
+        
+    REELS_DIR.mkdir(parents=True, exist_ok=True)
+    SPOTIFY_REELS_DIR.mkdir(parents=True, exist_ok=True)
+    
+    shutil.copy2(output_mp4, TARGET_REEL)
+    shutil.copy2(output_mp4, SPOTIFY_REELS_DIR / TARGET_REEL.name)
+    
+    size_mb = TARGET_REEL.stat().st_size / (1024 * 1024)
+    print(f"✅ ¡Video Motion Graphics generado con éxito! ({size_mb:.2f} MB)")
+    print(f"   -> {TARGET_REEL}")
+    
+    poster_path = REELS_DIR / f"{TARGET_REEL.stem}_poster.jpg"
+    cmd_poster = [
+        "ffmpeg", "-y",
+        "-ss", "00:00:02",
+        "-i", str(TARGET_REEL),
+        "-vframes", "1",
+        "-q:v", "2",
+        str(poster_path)
+    ]
+    subprocess.run(cmd_poster, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if poster_path.exists():
+        shutil.copy2(poster_path, SPOTIFY_REELS_DIR / poster_path.name)
+        print(f"   -> Póster en: {poster_path}")
+
+async def run():
+    await generate_reel_audio()
+    write_hyperframes_html()
+    render_motion_reel()
+    print("\n🎉 ¡Reel de Corporativo #04 listo para publicación!")
+
+if __name__ == '__main__':
+    asyncio.run(run())

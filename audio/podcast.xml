@@ -12,7 +12,20 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-        <item>
+            <item>
+      <title>sIA Corporativo #04: Marc Lore vs. Amazon: La Guerra de los Pañales y el Dilema del Fundador</title>
+      <link>https://escucha-sia.github.io/articulos/sia-corporativo-04-marc-lore-vs-amazon-guerra-panales.html</link>
+      <description><![CDATA[sIA Crónicas Corporativas #04: El drama humano detrás de Diapers.com y Amazon. La noche de nieve en que un padre agotado concibió una empresa para ayudar a otras familias, la negativa a vender ante Jeff Bezos, la guerra de precios automatizada donde Amazon perdió $100 millones para destruirlos, el doloroso dilema moral de un fundador para proteger los empleos de su gente y el épico renacimiento con Jet.com y Walmart. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corporativo-04-marc-lore-vs-amazon-guerra-panales.html]]></description>
+      <pubDate>Fri, 23 Oct 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3" length="14370583" type="audio/mpeg"/>
+      <guid isPermaLink="false">sia-corp-04-marc-lore-amazon-diapers</guid>
+      <itunes:duration>09:58</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.srt" type="application/x-subrip" language="es"/>
+    </item>
+<item>
       <title>sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7</title>
       <link>https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html</link>
       <description><![CDATA[sIA Terror #02: El testimonio perturbador de un analista nocturno en Austin, Texas, asignado a la 'Cola 7' de moderación algorítmica. Un archivo sin origen clasificado con confianza cero y topología no humana, una cámara apuntando a su propia espalda, el reloj que corría en reversa y la entidad que aprendió a imitar sus parpadeos. Incluye diseño sonoro cinemático con SFX y análisis psicológico de la moderación digital. | Leer artículo y análisis técnico: https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html]]></description>

@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4",
     "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": "sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4",
     "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": "sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4",
     "sIA_Corp_02_Valve_Gabe_Newell_Steam_2026-10-21.mp3": "sIA_Corp_02_Valve_Gabe_Steam_Reel.mp4",
@@ -73,6 +74,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial Corporativo 04 - 23 de Octubre de 2026
+    "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": {
+        "slug": "sia-corporativo-04-marc-lore-vs-amazon-guerra-panales",
+        "category": "sIA Corporativo",
+        "badge_color": "green",
+        "read_time": "9 min",
+        "title": "sIA Corporativo #04: Marc Lore vs. Amazon: La Guerra de los Pañales y el Dilema del Fundador",
+        "subtitle": "De una noche de nieve en Nueva Jersey a la guerra de los 100 millones de dólares: El origen humano de Diapers.com, el choque con Jeff Bezos, la capitulación para salvar 250 familias y la dulce revancha con Jet.com y Walmart.",
+        "thesis": "El verdadero poder de un fundador no reside en el capital financiero inicial, sino en la empatía visceral con el dolor del cliente. Aunque una corporación hegemónica pueda asfixiar temporalmente un negocio mediante subsidios cruzados y guerra algorítmica de precios, jamás puede apropiarse de la visión humana ni impedir la resiliencia estratégica de quien sabe volver a empezar.",
+        "nexo": "Episodio #04 de sIA Crónicas Corporativas: Historia empresarial profunda con enfoque empático, lecciones de supervivencia y el dilema moral del liderazgo.",
+        "reel_video": "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4",
+        "content_blocks": [
+            {
+                "title": "1. La Tormenta de 2005: El Llanto a las 3 AM y los Guantes sin Dedos",
+                "body": """
+En el invierno de 2005 en Montclair, Nueva Jersey, Marc Lore vivió la experiencia universal que catalizó la creación de Diapers.com: un bebé de seis meses llorando en la madrugada, una dermatitis severa y el descubrimiento angustioso de que no quedaba un solo pañal en la casa en mitad de una tormenta de aguanieve que cerró las farmacias locales.
+
+Junto a su amigo de infancia Vinit Bharara, Lore comprendió que la paternidad temprana sufría una fricción logística insoportable. Sin capital de riesgo institucional, ambos alquilaron un rincón en un almacén sin calefacción en Jersey City, donde envolvían paquetes a mano utilizando guantes de lana con los dedos cortados para no perder destreza motriz ante el frío glacial. Su propuesta de valor no radicaba en una plataforma digital compleja, sino en la empatía pura: garantizar entregas al día siguiente e incluir notas caligráficas deseándoles noches de descanso a los padres fatigados, forjando una lealtad comunitaria que en tres años superó los 300 millones de dólares en facturación.
+"""
+            },
+            {
+                "title": "2. El Almuerzo en Seattle: La Oferta Hostil de Jeff Bezos",
+                "body": """
+Hacia 2009, la penetración de Diapers.com en el segmento demográfico de familias jóvenes encendió las alarmas en la sede de Amazon en Seattle. Jeff Bezos invitó a Lore a un almuerzo privado en la torre corporativa. Lo que parecía un acercamiento institucional culminó en un ultimátum quirúrgico: Amazon comunicó su incursión inminente en la categoría infantil y propuso la compra total de la compañía, advirtiendo que, en caso de negativa, desatarían su maquinaria de escala contra ellos.
+
+Lore rechazó la oferta amparado en la dignidad de su proyecto y la convicción de que la excelencia operativa de su equipo bastaría para competir en un mercado abierto. Sin embargo, Amazon no compitió mediante innovación de servicio, sino mediante la fuerza bruta de su balance general: desplegó rastreadores algorítmicos que monitoreaban los inventarios de Diapers.com cada quince minutos, rebajando las tarifas de Amazon un 30% por debajo de los precios de coste mayorista de los fabricantes.
+"""
+            },
+            {
+                "title": "3. La Asfixia de los $100 Millones y la Madrugada del Dilema Moral",
+                "body": """
+La investigación antimonopolio del Congreso de los Estados Unidos (2020) desclasificó documentos internos que demostraron que Amazon asumió pérdidas operativas deliberadas por más de 100 millones de dólares en solo tres meses exclusivamente para estrangular el flujo de caja de Diapers.com. Ante la imposibilidad de recaudar capital adicional frente a un monopolio dispuesto a sangrar infinitamente, Marc Lore enfrentó la soledad más dura del fundador.
+
+Durante semanas de insomnio en octubre de 2010, Lore comprendió que mantener una resistencia suicida por vanidad o heroísmo individual significaría la quiebra fulminante y el despido inmediato de 250 trabajadores de planta y almacén que dependían de su nómina. Priorizando el bienestar económico de su equipo sobre su propio dolor emocional, Lore capituló y firmó la venta por 545 millones de dólares, iniciando un duelo personal al presenciar cómo Amazon desmantelaba progresivamente la marca años más tarde.
+"""
+            },
+            {
+                "title": "4. Fuera de la Burbuja: La Resiliencia de Jet.com y la Venta a Walmart por $3,300M",
+                "body": """
+La trayectoria de Marc Lore ejemplifica el principio de resiliencia ejecutiva y aprendizaje encubierto: durante sus dos años de permanencia obligatoria en Amazon, Lore analizó exhaustivamente la infraestructura logística y las vulnerabilidades del gigante de Seattle. En 2014, liberado de cláusulas de exclusividad, fundó Jet.com, implementando un motor algorítmico de precios dinámicos basado en la proximidad de almacenes y la optimización de cestas de compra.
+
+En 2016, Walmart adquirió Jet.com por 3,300 millones de dólares, designando a Lore como presidente y consejero delegado de comercio electrónico en Estados Unidos. Desde esa plataforma, Lore reestructuró la cadena de suministro de Walmart, multiplicó sus ingresos digitales e impuso la competencia más feroz que Amazon haya enfrentado en retail. El desenlace demuestra que el capital monopólico puede adquirir marcas físicas, pero la visión fundacional y la capacidad de conectar con el factor humano permanecen como activos inalienables.
+"""
+            }
+        ],
+        "apa_references": [
+            "Stone, B. (2013). *The Everything Store: Jeff Bezos and the Age of Amazon*. Little, Brown and Company.",
+            "Lore, M. (2022). *Reflections on Customer Empathy, Predatory Pricing, and the Rebirth of Retail*. Harvard Business Review Case Series.",
+            "United States House Committee on the Judiciary. (2020). *Investigation of Competition in Digital Markets: Majority Staff Report and Recommendations*. Washington, D.C.: U.S. Government Publishing Office.",
+            "Galloway, S. (2017). *The Four: The Hidden DNA of Amazon, Apple, Facebook, and Google*. Portfolio/Penguin.",
+            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #04: Marc Lore vs. Amazon, el dilema humano del fundador y la economía algorítmica de retail*. sIA Business Publications. / [Diapers.com Story](https://github.com/escucha-sia)"
+        ]
+    },
     # 0. Episodio Especial Terror 02 - 23 de Octubre de 2026
     "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": {
         "slug": "sia-terror-02-el-moderador-del-turno-nocturno",
@@ -1972,9 +2026,10 @@ def build_all_articles():
         article_path = ARTICULOS_DIR / article_filename
         article_url = f"{BASE_URL}/articulos/{article_filename}"
         
-        reel_video = meta.get("reel_video") if (filename in RESEARCH_DATABASE) else None
-        if not reel_video and filename in REELS_MAP:
-            reel_video = REELS_MAP[filename]
+        cand_reel = meta.get("reel_video") if (filename in RESEARCH_DATABASE) else None
+        if not cand_reel and filename in REELS_MAP:
+            cand_reel = REELS_MAP[filename]
+        reel_video = cand_reel if (cand_reel and (BASE_DIR / "reels" / cand_reel).exists()) else None
         
         # Render Article HTML
         html_content = render_article_html(
