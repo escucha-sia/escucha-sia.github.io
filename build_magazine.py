@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": "sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4",
     "sIA_Corp_02_Valve_Gabe_Newell_Steam_2026-10-21.mp3": "sIA_Corp_02_Valve_Gabe_Steam_Reel.mp4",
     "sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3": "sIA_Corp_01_NVIDIA_Dennys_Reel.mp4",
     "sIA_Daily_S03_Tesla_Roadster_SpaceX_Gas_Frio_2026-10-17.mp3": "sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4",
@@ -71,6 +72,65 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial Corporativo 03 - 22 de Octubre de 2026
+    "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": {
+        "slug": "sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991",
+        "category": "sIA Corporativo",
+        "badge_color": "green",
+        "read_time": "8 min",
+        "title": "sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza",
+        "subtitle": "La puñalada trapera en el CES de Chicago, el chip clandestino de Ken Kutaragi, el puñetazo sobre la mesa de Norio Ohga y cómo la soberbia de los cartuchos de Nintendo creó a su peor verdugo.",
+        "thesis": "La soberbia hegemónica y la humillación pública son los catalizadores más destructivos en los negocios tecnológicos. La negativa de Nintendo a ceder el control de las regalías en disco óptico y su traición televisada ante la prensa internacional impulsaron a Sony a reinventar la arquitectura 3D, arrebatándole a Square y desmantelando una dinastía de una década.",
+        "nexo": "Episodio #03 de sIA Crónicas Corporativas: Las guerras de consolas, secretos de ingeniería japonesa y la caída del monopolio feudal de Kioto.",
+        "reel_video": "sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Ingeniero Clandestino: Kutaragi y el Chip SPC700 de la Super Nintendo",
+                "body": """
+A finales de los años ochenta, Ken Kutaragi, un brillante investigador en los laboratorios de audio digital de Sony en Tokio, observó con desagrado cómo su hija pequeña jugaba con una Famicom de Nintendo: el audio emitido consistía en pitidos rudimentarios de 8 bits generados por ondas cuadradas sintetizadas.
+
+Convencido del potencial del silicio para reproducir muestreo orquestal en modulación por código de pulso (PCM), Kutaragi comenzó a colaborar clandestinamente con Nintendo para diseñar el chip de sonido de la futura Super Nintendo (**SPC700 de 16 bits**). Cuando la cúpula corporativa de Sony descubrió la actividad no autorizada, los directores exigieron su despido inmediato por violar las políticas de exclusividad. Solo la intervención directa de Norio Ohga —un refinado cantante de ópera y piloto formado en Alemania que presidía Sony— salvó la carrera de Kutaragi al reconocer la sofisticación técnica del procesador. El rotundo éxito sonoro de la Super Nintendo pavimentó el acuerdo para un periférico conjunto de CD-ROM: la 'Play Station'.
+"""
+            },
+            {
+                "title": "2. La Humillación de Chicago: El Escándalo del CES 1991",
+                "body": """
+El contrato preliminar entre ambas empresas escondía una cláusula redactada por el equipo de Kutaragi que concedía a Sony el monopolio de la manufactura y licenciamiento de todo el software comercializado en formato de disco compacto a escala global.
+
+Al percatarse meses después de que dicha cláusula subordinaba el futuro comercial de Nintendo a un competidor de electrónica, el autócrata presidente de Nintendo, Hiroshi Yamauchi, descartó la vía diplomática. En mayo de 1991 envió en secreto a Howard Lincoln y Minoru Arakawa a los Países Bajos para cerrar una alianza alternativa con Philips, el rival directo de Sony.
+
+En junio de 1991, en el Consumer Electronics Show (CES) de Chicago, Sony celebró una multitudinaria rueda de prensa donde presentó con orgullo la consola 'Play Station' en alianza con Nintendo. Menos de 24 horas después, a las 9:00 AM del día siguiente, Nintendo subió al podio oficial y anunció ante los corresponsales de prensa mundiales la ruptura unilateral con Sony y su nueva sociedad con Philips. En la cultura corporativa japonesa, la afrenta constituyó una pérdida de honor público irreparable.
+"""
+            },
+            {
+                "title": "3. El Puñetazo de Norio Ohga: De la Humillación al Silicio 3D",
+                "body": """
+En julio de 1991, la junta directiva de Sony se reunió en Tokio en un clima de derrota. Los directores de mayor antigüedad exigieron la retirada definitiva del mercado de videojuegos, tildando al sector de 'negocio vulgar de juguetes infantiles'.
+
+Kutaragi interpeló directamente al presidente: *'¿Acaso aceptaremos con sumisión que Nintendo nos pisotee ante el mundo?'*. Conmocionado por la ofensa, Norio Ohga propinó un golpe sobre la mesa de caoba y dictó una orden irrevocable: *'¡Jamás retrocederemos! Kutaragi, desarrolla la máquina por tu cuenta, diséñala con aceleración gráfica tridimensional y constrúyela para destruirlos en el mercado'*.
+
+Kutaragi concibió una plataforma revolucionaria dotada del coprocesador **GTE (Geometry Transformation Engine)**, capaz de procesar hasta 360,000 polígonos por segundo. Mientras los cartuchos de Nintendo costaban 30 dólares en silicio y requerían 90 días de manufactura, Sony ofrecía estampar discos compactos en 48 horas por un costo unitario inferior a 2 dólares, democratizando el margen para los estudios de desarrollo.
+"""
+            },
+            {
+                "title": "4. La Deserción de Final Fantasy VII y el Colapso de los Cartuchos",
+                "body": """
+A pesar de la arremetida de Sony, Yamauchi mantuvo su postura inflexible: calificó a los gráficos 3D poligonales de 'moda efímera' y mantuvo el formato de cartuchos propietarios para el Nintendo 64 a fin de preservar el cobro de regalías abusivas y el control de inventario.
+
+En 1996, el estudio japonés Square (creadores de la saga *Final Fantasy*) constató la imposibilidad física de almacenar la banda sonora orquestal y los fondos pre-renderizados cinemáticos de *Final Fantasy VII* en un cartucho de 64 megabytes, requiriendo en su lugar tres discos compactos completos. Tras ser descalificados por Yamauchi en Kioto, Hironobu Sakaguchi y la cúpula de Square rompieron relaciones con Nintendo y firmaron exclusividad absoluta con Sony.
+
+La deserción desató un éxodo sin precedentes: Capcom trasladó la franquicia *Resident Evil*, Konami migró *Metal Gear Solid* y Namco apostó por *Tekken*. La PlayStation original vendió más de **102.4 millones de unidades**, mientras el Nintendo 64 quedó relegado a 32.9 millones, consumando la venganza industrial más rotunda en la historia del entretenimiento interactivo.
+"""
+            }
+        ],
+        "apa_references": [
+            "Asakura, R. (2000). *Revolutionaries at Sony: The Making of the Sony PlayStation and the Visionaries Who Conquered the World of Video Games*. McGraw-Hill.",
+            "Harris, B. J. (2014). *Console Wars: Sega, Nintendo, and the Battle that Defined a Generation*. HarperCollins.",
+            "Kent, S. L. (2001). *The Ultimate History of Video Games: From Pong to Pokémon and Beyond*. Three Rivers Press.",
+            "Sony Computer Entertainment. (1995). *PlayStation Hardware Architecture Manual: GTE and R3000A System Design*. Tokyo, Japan.",
+            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #03: La gran traición de Kioto, el ascenso de PlayStation y la economía de los discos ópticos*. sIA Business Publications."
+        ]
+    },
     # 0. Episodio Especial Corporativo 02 - 21 de Octubre de 2026
     "sIA_Corp_02_Valve_Gabe_Newell_Steam_2026-10-21.mp3": {
         "slug": "sia-corporativo-02-valve-amp-gabe-newell-de-millonarios-en-m",

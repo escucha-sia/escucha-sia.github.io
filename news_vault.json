@@ -252,6 +252,19 @@
       ],
       "cooldown_days": 45,
       "date": "Wed, 21 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "title": "sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza",
+      "filename": "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3",
+      "topics": [
+        "Guerra corporativa Nintendo vs Sony: génesis de PlayStation de 1988 a 1996",
+        "El desarrollo clandestino del chip de audio SPC700 por Ken Kutaragi",
+        "La traición de CES 1991 en Chicago: ruptura con Sony y anuncio con Philips",
+        "La decisión de Norio Ohga de entrar al mercado de videojuegos por venganza corporativa",
+        "La fuga de Square y Final Fantasy VII a CD-ROM frente a los cartuchos del N64"
+      ],
+      "cooldown_days": 45,
+      "date": "Thu, 22 Oct 2026 12:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

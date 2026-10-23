@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza</title>
+      <link>https://escucha-sia.github.io/articulos/sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991.html</link>
+      <description>sIA Crónicas Corporativas #03: La guerra secreta entre Nintendo y Sony. El chip clandestino de Ken Kutaragi, la humillación pública en el CES 1991 en Chicago, el puñetazo en la mesa de Norio Ohga ordenando aplastar a Nintendo, el error de los cartuchos del N64 y la histórica fuga de Final Fantasy VII a PlayStation. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corp-03-nintendo-vs-sony-playstation-traicion-1991.html</description>
+      <pubDate>Thu, 22 Oct 2026 19:30:10 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3" length="11432381" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3</guid>
+      <itunes:duration>09:31</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Corporativo #02: Valve &amp; Gabe Newell: De Millonarios en Microsoft al Trono de Steam (Hackers, Traición y Escritorios con Ruedas)</title>
       <link>https://escucha-sia.github.io/articulos/sia-corporativo-02-valve-amp-gabe-newell-de-millonarios-en-m.html</link>
       <description>sIA Crónicas Corporativas #02: La historia no contada de Valve Corporation y Gabe Newell. La fuga millonaria de Microsoft, el hacker alemán que filtró Half-Life 2 y la emboscada fallida del FBI, la guerra judicial contra Vivendi que dio a luz a Steam, la anarquía interna de los escritorios sobre ruedas y la matemática fría detrás de por qué jamás existirá Half-Life 3. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corp-02-valve-gabe-newell-steam-hackers-escritorios-ruedas.html</description>
