@@ -265,6 +265,19 @@
       ],
       "cooldown_days": 45,
       "date": "Thu, 22 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "title": "sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7",
+      "filename": "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3",
+      "topics": [
+        "sIA Terror #02: El moderador del turno nocturno en Austin Texas",
+        "La Cola 7 de moderación: archivos huérfanos con topología no humana",
+        "Anomalía temporal: el reloj que avanza en reversa y la copia de movimientos",
+        "Puerta de cuarentena magnética y la terminal activa en la sala vacía",
+        "Fuera de la Burbuja: La realidad del aislamiento de moderadores y pareidolia algorítmica"
+      ],
+      "cooldown_days": 45,
+      "date": "Fri, 23 Oct 2026 21:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

@@ -12,7 +12,20 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-    <item>
+        <item>
+      <title>sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7</title>
+      <link>https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html</link>
+      <description><![CDATA[sIA Terror #02: El testimonio perturbador de un analista nocturno en Austin, Texas, asignado a la 'Cola 7' de moderación algorítmica. Un archivo sin origen clasificado con confianza cero y topología no humana, una cámara apuntando a su propia espalda, el reloj que corría en reversa y la entidad que aprendió a imitar sus parpadeos. Incluye diseño sonoro cinemático con SFX y análisis psicológico de la moderación digital. | Leer artículo y análisis técnico: https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html]]></description>
+      <pubDate>Fri, 23 Oct 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3" length="4073096" type="audio/mpeg"/>
+      <guid isPermaLink="false">sia-terror-02-moderador-nocturno-cola-7</guid>
+      <itunes:duration>09:30</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.srt" type="application/x-subrip" language="es"/>
+    </item>
+<item>
       <title>sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza</title>
       <link>https://escucha-sia.github.io/articulos/sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991.html</link>
       <description>sIA Crónicas Corporativas #03: La guerra secreta entre Nintendo y Sony. El chip clandestino de Ken Kutaragi, la humillación pública en el CES 1991 en Chicago, el puñetazo en la mesa de Norio Ohga ordenando aplastar a Nintendo, el error de los cartuchos del N64 y la histórica fuga de Final Fantasy VII a PlayStation. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corp-03-nintendo-vs-sony-playstation-traicion-1991.html</description>

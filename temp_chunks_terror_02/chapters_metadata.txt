@@ -1,0 +1,61 @@
+;FFMETADATA1
+title=sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7
+artist=Jorge y Dalia (sIA Terror)
+album=sIA Terror
+genre=Horror Podcast
+date=2026
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=36173
+title=01. Cold Open: La Señal de las 3:14 AM
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=36173
+END=87029
+title=02. Prólogo & Brújula: sIA Terror
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=87029
+END=157344
+title=03. Los Tres Detalles de la Bitácora
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=157344
+END=228816
+title=04. El Contrato de Austin y la Cola Número Siete
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=228816
+END=316440
+title=05. El Archivo Huérfano y el Ángulo Imposible
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=316440
+END=389256
+title=06. La Anomalía Temporal y el Reflejo que no Parpadea
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=389256
+END=470520
+title=07. La Puerta Bloqueada y la Huella Térmica
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=470520
+END=535392
+title=08. 🌌 Fuera de la Burbuja: La Frontera entre la IA y el Aislamiento
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=535392
+END=571104
+title=09. Cierre Íntimo & Dulces Pesadillas
+

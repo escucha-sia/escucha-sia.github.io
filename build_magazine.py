@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": "sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4",
     "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": "sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4",
     "sIA_Corp_02_Valve_Gabe_Newell_Steam_2026-10-21.mp3": "sIA_Corp_02_Valve_Gabe_Steam_Reel.mp4",
     "sIA_Corp_01_NVIDIA_Dennys_a_3_Billones_2026-10-20.mp3": "sIA_Corp_01_NVIDIA_Dennys_Reel.mp4",
@@ -72,6 +73,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial Terror 02 - 23 de Octubre de 2026
+    "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": {
+        "slug": "sia-terror-02-el-moderador-del-turno-nocturno",
+        "category": "sIA Terror",
+        "badge_color": "red",
+        "read_time": "9 min",
+        "title": "sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7",
+        "subtitle": "Crónica inmersiva y análisis de psicología algorítmica: El testimonio de Austin, Texas, la etiqueta de topología no humana, el reloj en reversa y la privación sensorial de la moderación digital.",
+        "thesis": "El verdadero horror contemporáneo no surge de entes sobrenaturales abstractos, sino de la grieta psicológica donde colisionan el aislamiento humano en turnos de cementerio con la pareidolia algorítmica: redes neuronales forzadas a clasificar ruido estático hasta arrastrar la percepción del observador.",
+        "nexo": "Segundo capítulo de sIA Terror: Historias inmersivas con diseño sonoro SFX, análisis de creepypastas y psicología de la tecnología moderna.",
+        "reel_video": "sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Aislamiento de la Madrugada y la Arquitectura de la 'Cola 7'",
+                "body": """
+En las afueras corporativas de Austin, Texas, operan instalaciones de subcontratación de moderación de contenido que jamás figuran en las memorias anuales de Silicon Valley. Mientras el turno matutino procesa miles de reportes automatizados en salas abarrotadas, el turno de madrugada (de 23:00 a 07:00 horas) opera en un vacío acústico deliberado, segregando a los operadores nocturnos en células aisladas por mamparas fonoabsorbentes.
+
+A Carlos se le asignó la denominada 'Cola 7', el vertedero algorítmico reservado para transmisiones marcadas por redes neuronales convolucionales con una certeza estadística nula (`CONFIDENCE: 0.00%`). Metrajes sin dirección IP de origen, sin metadatos EXIF y con fluctuaciones de compresión no estándar que los clasificadores automáticos descartan como 'artefactos residuales'. El protocolo de la empresa imponía restricciones estrictas: uso continuo de audífonos cerrados con un tope de volumen en nivel 5, prohibición de refrescar memoria caché y purga forzosa ante cualquier latencia superior a veinte segundos.
+"""
+            },
+            {
+                "title": "2. El Archivo '0x7ff': Topología No Humana y el Ángulo Imposible",
+                "body": """
+A las 03:14 de la madrugada del 18 de octubre, el monitor emitió una alerta fuera de estándar, identificada únicamente con la firma hexadecimal `0x7ff` y la categoría inédita: 'Topología no humana detectada'. El archivo consistía en un clip de seis segundos en bucle continuo que mostraba una sala de trabajo sumida en penumbra, iluminada exclusivamente por la radiación azul de una pantalla.
+
+El encuadre procedía de un plano picado cenital situado en la cúspide de la mampara divisoria, enfocado con precisión milimétrica hacia la espalda de un joven con sudadera gris y audífonos de diadema. Al constatar los objetos sobre el escritorio —su propia botella térmica de aluminio y su cuaderno de notas—, Carlos comprendió que la toma no era un archivo de video indexado en la nube, sino una transmisión en vivo que lo filmaba desde su propia espalda sin que existiera cámara física alguna montada en la estructura.
+"""
+            },
+            {
+                "title": "3. La Anomalía Temporal y la Habitación a Ocho Grados",
+                "body": """
+El examen forense del reproductor reveló una distorsión temporal aberrante: el reloj digital visible en la esquina superior del video decrementaba los segundos en sentido inverso (15, 14, 13, 12...), desincronizándose del reloj del sistema. Simultáneamente, el controlador de teclado dejó de responder a las interrupciones de hardware, impidiendo cualquier secuencia de purga o cierre de sesión.
+
+A través de los transductores de los audífonos, desconectados físicamente del puerto frontal de audio, comenzó a filtrarse una señal respiratoria de baja frecuencia sincronizada con un descenso térmico abrupto: el termostato ambiental descendió de 21 a 8 grados centígrados en menos de dos minutos. Cuando la silueta en la pantalla inició una rotación craneal de 180 grados ignorando las limitaciones osteomusculares humanas, Carlos activó la salida de emergencia, encontrando los electroimanes de las puertas sellados bajo el protocolo de 'Bloqueo de Cuarentena: Usuario No Localizado'.
+"""
+            },
+            {
+                "title": "4. Fuera de la Burbuja: Pareidolia Algorítmica y el Síndrome del Observador",
+                "body": """
+La resolución de la policía de Austin como 'desaparición voluntaria' ignora un fenómeno ampliamente documentado en neuroergonomía y computación visual: la fatiga perceptiva extrema en moderadores de contenido nocturnos. Estudios de Roberts (2019) y Zuboff (2019) demuestran que turnos continuos en salas de penumbra provocan despersonalización, pareidolia aguda y disociación sensorial en más del 38% del personal subcontratado.
+
+Bajo este cuadro neuroquímico, la interacción prolongada con redes generativas adversarias (GANs) y clasificadores no supervisados que producen 'alucinaciones de visión' —interpretando ruido de sensor como geometrías faciales— puede inducir estados de pánico psicomotor idénticos a los descritos en la bitácora. La huella térmica y la terminal con el comando 'Entidad indexada en el núcleo del clúster' ilustran la convergencia más aterradora de la era digital: no el despertar de una presencia espectral, sino la alienación total del operador humano consumido por la maquinaria de vigilancia que fue contratado para custodiar.
+"""
+            }
+        ],
+        "apa_references": [
+            "Roberts, S. T. (2019). *Behind the Screen: Content Moderation in the Shadows of Social Media*. Yale University Press.",
+            "Zuboff, S. (2019). *The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power*. PublicAffairs.",
+            "Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). *Generative Adversarial Nets*. Advances in Neural Information Processing Systems, 27, 2672-2680.",
+            "Olah, C., Mordvintsev, A., & Schubert, L. (2017). *Feature Visualization: How neural networks build up their understanding of images*. Distill, 2(11), e7.",
+            "Corona, C., & sIA Editora. (2026). *sIA Terror #02: El moderador del turno nocturno, diseño sonoro cinemático y la patología del aislamiento algorítmico*. sIA Publications."
+        ]
+    },
     # 0. Episodio Especial Corporativo 03 - 22 de Octubre de 2026
     "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": {
         "slug": "sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991",
