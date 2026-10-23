@@ -50,7 +50,7 @@ REEL_DIALOGUE = [
     {
         "speaker": "DALIA",
         "voice": VOICE_FEMALE,
-        "text": "A la mañana siguiente solo hallaron su silla en el suelo y una terminal parpadeando. Conoce el expediente completo en escucha guion sia punto github punto io y en sIA Podcast."
+        "text": "A la mañana siguiente solo hallaron su silla en el suelo y una terminal parpadeando. Conoce el expediente completo en escucha guion sia punto github punto io y en Sia Podcast."
     }
 ]
 

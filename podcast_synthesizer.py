@@ -36,6 +36,9 @@ def clean_for_tts(text: str) -> str:
     # Phonetic cleanups for TTS fluency
     t = text.strip()
     t = re.sub(r'[*_#`]', '', t)
+    # Pronunciación fonética de marca sIA -> 'Sia' (palabra corrida, no deletreada)
+    t = re.sub(r'\bsIA\b', 'Sia', t)
+    t = re.sub(r'\bSIA\b', 'Sia', t)
     # Expand acronyms for clean Spanish TTS reading
     t = re.sub(r'\bGCP\b', 'G C P', t)
     t = re.sub(r'\bAI Studio\b', 'A I Studio', t)

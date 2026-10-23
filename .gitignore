@@ -1,5 +1,5 @@
 browser_profile/
-temp_chunks/
+temp_chunks*/
 temp/
 venv/
 *.pyc

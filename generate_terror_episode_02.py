@@ -95,6 +95,9 @@ JORGE: ... y dulces pesadillas.
 def clean_for_tts(text: str) -> str:
     t = text.strip()
     t = re.sub(r'[*_#`]', '', t)
+    # Pronunciación fonética de la marca sIA -> 'Sia' (una sola palabra fluida)
+    t = re.sub(r'\bsIA\b', 'Sia', t)
+    t = re.sub(r'\bSIA\b', 'Sia', t)
     t = re.sub(r'\bIP\b', 'I P', t)
     t = re.sub(r'\bLED\b', 'L E D', t)
     t = re.sub(r'\bAI\b', 'A I', t)
