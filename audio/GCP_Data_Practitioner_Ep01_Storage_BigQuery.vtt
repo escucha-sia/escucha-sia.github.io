@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:20.472
+JORGE: Hola Carlos, bienvenido a esta serie especial de preparación intensiva para la certificación Google Cloud Certified Associate Data Practitioner. Si estás escuchando esto en el coche camino al trabajo o de regreso, relájate en el asiento porque vamos a convertir tus horas al volante en una ventaja definitiva para aprobar el examen a la primera.
+
+00:00:20.472 --> 00:00:42.552
+DALIA: Totalmente de acuerdo, Jorge. El examen consta de entre 50 y 60 preguntas en dos horas. No te van a pedir que recuerdes sintaxis de memoria ni que escribas código complejo de terminal, sino que entiendas la arquitectura de Google Cloud: qué servicio elegir en cada caso de negocio, cómo minimizar costes y cómo garantizar seguridad y rendimiento.
+
+00:00:42.552 --> 00:00:55.536
+JORGE: Y hoy nos vamos a meter de lleno con los dos primeros dominios del blueprint oficial: el almacenamiento e ingesta de datos con Cloud Storage y Pub/Sub, y el corazón analítico de Google Cloud: Big-Kueri.
+
+00:00:55.536 --> 00:01:03.864
+DALIA: Así que abre bien los oídos, porque cada concepto que toquemos hoy viene con las preguntas trampa clásicas que Google suele poner en los exámenes.
+
+00:01:03.864 --> 00:01:16.128
+JORGE: Arranquemos con Cloud Storage, nuestro data lake principal. Dalia, una empresa llega a Google Cloud con petabytes de datos. ¿Cómo decidimos qué clase de almacenamiento usar?
+
+00:01:16.128 --> 00:01:28.608
+DALIA: Fácil, Jorge. Todo se reduce al patrón de acceso y al coste. En Cloud Storage tenemos cuatro clases principales: Standard, Nearline, Coldline y Archive.
+
+00:01:28.608 --> 00:01:43.320
+JORGE: La clase Standard es la que usamos para datos calientes. Se consultan a diario, no tienen tiempo mínimo de permanencia y el coste por leer o mover datos es casi nulo, aunque el coste por gigabyte almacenado es el más alto.
+
+00:01:43.320 --> 00:01:56.568
+DALIA: Exacto. Pero la trampa del examen empieza cuando bajamos a Nearline, Coldline y Archive. Mucha atención aquí, Carlos: cada una de estas clases tiene un tiempo mínimo de facturación.
+
+00:01:56.568 --> 00:02:07.056
+JORGE: Nearline exige un mínimo de 30 días y está pensada para datos que se leen como máximo una vez al mes, como reportes mensuales o copias de seguridad periódicas.
+
+00:02:07.056 --> 00:02:19.008
+DALIA: Coldline sube la apuesta a 90 días de permanencia mínima. Se recomienda para datos a los que accedes a lo sumo una vez por trimestre o 90 días, como auditorías trimestrales.
+
+00:02:19.008 --> 00:02:29.640
+JORGE: Y Archive es la joya del ahorro para cumplimiento regulatorio: cuesta centavos almacenar terabytes, pero tiene un compromiso mínimo de 365 días.
+
+00:02:29.640 --> 00:02:40.800
+DALIA: ¡Y ojo con esto! Si una pregunta de examen te dice: "Una empresa movió datos a la clase Archive y a los 60 días los borró o los pasó a Standard", ¿qué pasa, Jorge?
+
+00:02:40.800 --> 00:03:01.944
+JORGE: Pasa que Google te va a cobrar una penalización por borrado anticipado equivalente a los 305 días restantes. Por eso, en el examen, si los patrones de acceso son impredecibles, la respuesta correcta suele ser activar Autoclass, o configurar Lifecycle Management Policies con reglas automáticas basadas en la antigüedad del objeto.
+
+00:03:01.944 --> 00:03:18.096
+DALIA: Excelente. Ahora pasemos al movimiento de datos. Tenemos tres herramientas clave en la ingesta: Storage Transfer Service, Big-Kueri Data Transfer Service y Pub/Sub. ¿Cómo los diferenciamos sin dudar?
+
+00:03:18.096 --> 00:03:33.576
+JORGE: La regla es muy directa. Si necesitas migrar petabytes desde Amazon S3, Azure Blob o servidores locales hacia Cloud Storage, la herramienta oficial es Storage Transfer Service. Es masiva, paralela y gestionada.
+
+00:03:33.576 --> 00:03:56.136
+DALIA: En cambio, si el destino final es directamente Big-Kueri y la fuente es una aplicación SaaS como Google Ads, YouTube, Salesforce, o almacenes de datos como Amazon Redshift y Teradata, entonces la respuesta del examen es Big-Kueri Data Transfer Service. Te permite programar cargas automáticas directamente en tablas de Big-Kueri sin escribir una sola línea de código.
+
+00:03:56.136 --> 00:04:04.512
+JORGE: ¿Y qué pasa cuando los datos vienen en tiempo real, milisegundo a milisegundo, como eventos de clics en una web o sensores de IoT?
+
+00:04:04.512 --> 00:04:16.560
+DALIA: Ahí entra Pub/Sub, el sistema de mensajería asíncrona y distribuida. Los productores publican mensajes en un Tópico, y los consumidores se suscriben para procesarlos.
+
+00:04:16.560 --> 00:04:33.912
+JORGE: Recuerda en el coche la diferencia entre suscripciones Pull y Push en Pub/Sub. En una suscripción Pull, tu servicio consumidor, como una canalización de Dataflow, solicita los lotes a su propio ritmo. Es ideal para grandes volúmenes de datos.
+
+00:04:33.912 --> 00:04:45.864
+DALIA: Mientras que en una suscripción Push, Pub/Sub es el que empuja el mensaje haciendo una llamada HTTP POST contra un endpoint web, como una función serverless en Cloud Functions o Cloud Run.
+
+00:04:45.864 --> 00:04:55.488
+JORGE: Llegamos al plato fuerte: Big-Kueri. Dalia, Big-Kueri es serverless, pero tiene una arquitectura muy particular que siempre preguntan.
+
+00:04:55.488 --> 00:05:12.336
+DALIA: Así es, Jorge. El secreto de Big-Kueri es que el almacenamiento, llamado Colossus, está 100% desacoplado del cómputo, que son los famosos Borg slots. Y ambos se comunican mediante una red ultrarrápida de petabits llamada Jupiter.
+
+00:05:12.336 --> 00:05:25.056
+JORGE: Esto significa que puedes tener petabytes guardados pagando solo por disco, y cuando lanzas una consulta SQL, Big-Kueri asigna dinámicamente cientos o miles de slots para procesarla en segundos.
+
+00:05:25.056 --> 00:05:36.864
+DALIA: Pero aquí viene la pesadilla de las empresas y el tema favorito del examen: el coste de las consultas en el modelo On-Demand. Recuerda que en On-Demand pagas por cada Terabyte escaneado.
+
+00:05:36.864 --> 00:05:53.184
+JORGE: Por eso, si un analista ejecuta un SELECT  sobre una tabla de 10 Terabytes, Big-Kueri va a escanear los 10 Terabytes completos aunque solo quiera ver diez filas. Y ahí es donde entra la optimización obligatoria del examen: Particionamiento y Clustering.
+
+00:05:53.184 --> 00:06:07.104
+DALIA: Vamos a dejar esto cristalino, Carlos. El particionamiento divide físicamente la tabla en segmentos independientes. Solo puedes particionar por una columna, generalmente una fecha o timestamp.
+
+00:06:07.104 --> 00:06:23.160
+JORGE: La gran ventaja del particionamiento es que cuando haces una consulta con WHERE fecha = '2026-10-24', Big-Kueri sabe de antemano cuántos bytes va a leer y solo escanea esa partición, ahorrando hasta un 99% del coste.
+
+00:06:23.160 --> 00:06:35.424
+DALIA: Pero el particionamiento tiene un límite de 4,000 particiones por tabla. ¿Qué hacemos si además queremos filtrar por columnas de alta cardinalidad, como el ID del cliente o la categoría del producto?
+
+00:06:35.424 --> 00:06:46.440
+JORGE: Ahí entra el Clustering o agrupamiento. Puedes agrupar hasta por 4 columnas. Big-Kueri ordena los datos dentro de las particiones según esas columnas.
+
+00:06:46.440 --> 00:06:59.184
+DALIA: La regla de oro del examen es: si quieres la máxima eficiencia y menor coste en consultas que filtran por fecha y por usuario, la respuesta correcta es: particionar por fecha y hacer clustering por ID de cliente.
+
+00:06:59.184 --> 00:07:25.176
+JORGE: Y no olvidemos las Vistas Materializadas. A diferencia de una vista normal que reejecuta la consulta cada vez, una Vista Materializada almacena físicamente el resultado precomputado y se actualiza de forma incremental y transparente cuando entran datos nuevos. Además, el optimizador de Big-Kueri reescribe automáticamente las consultas para usar la vista materializada incluso si tú le consultas a la tabla base.
+
+00:07:25.176 --> 00:07:34.992
+DALIA: Bueno Jorge, pongamos a prueba a Carlos ahora mismo al volante con tres preguntas reales de examen. Vamos a dar unos segundos para pensar la respuesta.
+
+00:07:34.992 --> 00:08:06.240
+JORGE: Primera pregunta. Escenario: Tu empresa almacena registros de transacciones financieras en Cloud Storage. Por regulaciones legales, estos registros deben conservarse durante 7 años. Los registros se consultan con frecuencia durante los primeros 30 días, ocasionalmente una vez al trimestre durante el primer año, y después de un año prácticamente nunca se consultan salvo en caso de auditoría extraordinaria. ¿Cuál es la estrategia más rentable recomendada por Google?
+
+00:08:06.240 --> 00:08:09.264
+DALIA: Dejamos cinco segundos para pensar...
+
+00:08:09.264 --> 00:08:31.128
+JORGE: La solución óptima es: almacenar los datos inicialmente en Cloud Storage clase Standard. Configurar una política de gestión del ciclo de vida, o Lifecycle Policy, para transicionar los objetos a Coldline después de 30 días, transicionar a Archive después de 365 días, y finalmente eliminarlos después de 7 años.
+
+00:08:31.128 --> 00:08:41.952
+DALIA: ¡Perfecto! Descartamos Nearline porque se leen trimestralmente, por lo que Coldline ahorra más, y pasarlos a Archive al año cumple la norma al menor coste posible.
+
+00:08:41.952 --> 00:09:03.480
+JORGE: Segunda pregunta. Escenario: Tienes un dashboard en Looker Studio conectado a una tabla de Big-Kueri de 500 Gigabytes. Cada vez que los ejecutivos abren el dashboard, los filtros tardan varios segundos en responder y la factura de consultas está subiendo. ¿Qué dos soluciones nativas de Google Cloud debes implementar?
+
+00:09:03.480 --> 00:09:06.624
+DALIA: Cinco segundos para evaluar opciones...
+
+00:09:06.624 --> 00:09:24.432
+JORGE: Solución ganadora: primero, activar Big-Kueri BI Engine para acelerar en memoria las consultas del dashboard con latencias de milisegundos sin extractos. Segundo, particionar la tabla base por fecha y crear una Vista Materializada con los campos agregados que muestra el informe.
+
+00:09:24.432 --> 00:09:41.808
+DALIA: Excelente. Y tercera pregunta rápida: Tu equipo de marketing quiere transferir diariamente datos de conversiones de Google Ads y pedidos de Amazon Redshift hacia Big-Kueri sin tener que construir ni mantener scripts de Python ni servidores. ¿Qué servicio debes elegir?
+
+00:09:41.808 --> 00:09:44.688
+JORGE: Tiempo para responder mentalmente...
+
+00:09:44.688 --> 00:09:57.480
+DALIA: La respuesta directa es: Big-Kueri Data Transfer Service. Soporta nativamente conectores administrados para Google Ads y Amazon Redshift directamente hacia datasets de Big-Kueri sin código.
+
+00:09:57.480 --> 00:10:07.008
+JORGE: ¡Excelente sesión! Hemos cubierto los pilares fundamentales de almacenamiento, ingesta, particionamiento y analítica en Big-Kueri.
+
+00:10:07.008 --> 00:10:25.104
+DALIA: Si respondiste bien las tres preguntas al volante, vas por el camino perfecto. En el próximo episodio nos meteremos de lleno con el Dominio 3 y 4: orquestación de pipelines con Dataform, Composer y Dataflow, y la seguridad con IAM, enmascaramiento de datos y Big-Kueri ML.
+
+00:10:25.104 --> 00:10:36.168
+JORGE: Que tengas un excelente viaje, Carlos. ¡Sigue concentrado en el camino y nos escuchamos en el siguiente episodio de preparación para Google Cloud Associate Data Practitioner!
+

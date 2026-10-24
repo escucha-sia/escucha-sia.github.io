@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>Google Cloud Certified: Associate Data Practitioner (Audio Curso Oficial)</title>
+    <link>https://escucha-sia.github.io/gcp-data-practitioner.xml</link>
+    <language>es-mx</language>
+    <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+    <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+    <itunes:category text="Education">
+      <itunes:category text="Courses"/>
+    </itunes:category>
+    <itunes:category text="Technology"/>
+    <itunes:owner>
+      <itunes:name>Carlos Corona</itunes:name>
+      <itunes:email>escucha.sia@gmail.com</itunes:email>
+    </itunes:owner>
+    <description>Audio curso oficial y debriefs de ingeniería de datos para la certificación Google Cloud Certified: Associate Data Practitioner. Presentado por Jorge y Dalia en español de México. Incluye análisis teórico 1:1, descripción oral de arquitecturas para estudio en el auto, anécdotas reales y trampas de examen de r/googlecloud y r/dataengineering, y soundbites mnemotécnicos de 60 segundos.</description>
+    <item>
+      <title>#GCP-Data 01.01 - Fundamentos y Componentes de Ingeniería de Datos</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.01: Introducción a la Ingeniería de Datos y Componentes del Ecosistema GCP.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el currículo oficial de Google Cloud Skills Boost con enriquecimiento técnico, pronunciación fonética y anécdotas de producción de r/googlecloud.
+
+📌 Contenido del Episodio:
+• [00:00] Bienvenida y Blueprint Oficial del Associate Data Practitioner.
+• [01:20] Ciclo de vida del dato: Ingestión, Almacenamiento, Procesamiento y Analítica.
+• [03:45] Arquitectura visual: De Data Source a Data Sink paso a paso.
+• [05:15] Interrupción Reddit: El error de novato entre Cloud Storage Multi-Regional vs Regional.
+• [06:40] Alerta de Examen 2026: Dataplex y gobierno unificado de datos.
+• [07:45] Soundbite del Examen: 3 reglas nemotécnicas para aprobar a la primera.]]></description>
+      <pubDate>Sat, 24 Oct 2026 09:45:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_01_Fundamentos_y_Componentes.mp3" length="12714927" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_01_Fundamentos_y_Componentes.mp3</guid>
+      <itunes:duration>08:47</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 01.02 - Replicación y Migración de Datos (Datastream, STS y DMS)</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.02: Replicación y Migración de Datos, Datastream, Storage Transfer Service y Database Migration Service.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el currículo oficial de Google Cloud Skills Boost con enriquecimiento técnico, pronunciación fonética y desastres de producción de Reddit.
+
+📌 Contenido del Episodio:
+• [00:00] Bienvenida y Panorama de Replicación y Migración.
+• [01:15] Arquitectura visual y regla de ancho de banda: ¿Cuándo mover por red y cuándo con hardware?
+• [03:00] La herramienta moderna gcloud storage y reemplazo de gsutil.
+• [04:10] Mover grandes conjuntos: Storage Transfer Service vs Transfer Appliance (>20 TB).
+• [05:45] Datastream y Captura de Datos Modificados (CDC): Lectura de WAL y tipos de datos unificados.
+• [07:20] Debrief Reddit: El desastre de saturación de disco por ranuras de replicación en PostgreSQL.
+• [08:30] Alerta de Examen 2026: Datastream directo a BigQuery y DMS a AlloyDB.
+• [09:15] Soundbite del Examen: 4 reglas nemotécnicas para preguntas de migración.]]></description>
+      <pubDate>Sat, 24 Oct 2026 09:58:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_02_Replicacion_y_Migracion_de_Datos.mp3" length="16268893" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_02_Replicacion_y_Migracion_de_Datos.mp3</guid>
+      <itunes:duration>11:15</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 01.04 - Patrón EL: Extracción y Carga en BigQuery</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.04: Patrón Extract and Load (EL), BigQuery Storage Write API y Cloud Storage.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con análisis de costos y casos reales de r/dataengineering.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción al Patrón EL y Filosofía Schema-on-Read.
+• [01:30] BigQuery Load Jobs vs Streaming Inserts: ¿Cuándo pagar y cuándo es gratis?
+• [03:15] BigQuery Storage Write API: Modo Committed vs Pending y Exactly-Once Semantics.
+• [05:00] Debate Reddit: Por qué las cargas por lotes en BigQuery son gratuitas y cómo evitar facturas sorpresa.
+• [06:30] Alerta de Examen 2026: Formatos columnar Parquet/ORC y compresión Snappy.
+• [07:15] Soundbite del Examen: Reglas de oro para preguntas capciosas de carga de datos.]]></description>
+      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_04_Patron_EL_Extraccion_y_Carga.mp3" length="12338821" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_04_Patron_EL_Extraccion_y_Carga.mp3</guid>
+      <itunes:duration>08:03</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 01.05 - Patrón ELT y Dataform en BigQuery</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.05: Patrón Extract, Load and Transform (ELT), SQL Procedural, UDFs, Spark y Dataform.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con lecciones de producción y reglas de oro de r/dataengineering.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción al Patrón ELT y ahorro de clústeres dedicados.
+• [01:05] Arquitectura visual: Staging tables y transformaciones dentro de BigQuery.
+• [02:10] Extensiones de BigQuery: SQL Procedural, UDFs, Spark sin Dataproc y Remote Functions.
+• [04:15] Dataform: Framework declarativo con SQLX, pruebas de aserción y control Git.
+• [05:35] Alerta de Examen 2026: Dataform y BigQuery DataFrames (bigframes).
+• [06:15] Debrief Reddit: El peligro de las consultas programadas ciegas vs DAGs de Dataform.
+• [07:05] Soundbite del Examen: 4 reglas mnemotécnicas para preguntas de ELT.]]></description>
+      <pubDate>Sat, 24 Oct 2026 10:10:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_05_Patron_ELT_y_Dataform_en_BigQuery.mp3" length="11315723" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_05_Patron_ELT_y_Dataform_en_BigQuery.mp3</guid>
+      <itunes:duration>07:49</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 01.06 - Patrón ETL y Procesamiento Distribuido (Dataproc, Beam, Bigtable)</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.06: Patrón Extract, Transform and Load (ETL), Dataprep, Data Fusion, Dataproc, Apache Beam en Dataflow y Cloud Bigtable.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con anécdotas de costos de r/googlecloud y diseño de clave de fila NoSQL.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción al Patrón ETL y transformación en vuelo.
+• [01:10] Herramientas visuales sin código: Dataprep by Trifacta y Cloud Data Fusion (CDAP).
+• [02:40] Procesamiento por lotes: Clústeres efímeros de Dataproc y Dataproc Serverless para Spark.
+• [04:20] Streaming en tiempo real: Pub/Sub como buffer global y Dataflow con Apache Beam.
+• [05:55] Cloud Bigtable: Almacenamiento NoSQL de columnas anchas para series temporales y latencia sub-10ms.
+• [06:50] Alerta de Examen 2026: Dataproc Serverless y Dataflow Streaming Engine.
+• [07:30] Debrief Reddit: El clúster olvidado del fin de semana y hotspotting en Bigtable.
+• [08:05] Soundbite del Examen: 4 reglas de oro de procesamiento distribuido.]]></description>
+      <pubDate>Sat, 24 Oct 2026 10:18:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_06_Patron_ETL_y_Procesamiento_Distribuido.mp3" length="12721678" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_06_Patron_ETL_y_Procesamiento_Distribuido.mp3</guid>
+      <itunes:duration>08:47</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 01.07 - Automatización y Orquestación en GCP (Scheduler, Composer, Eventarc)</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 01
+Pista 01.07: Automatización y Orquestación, Cloud Scheduler, Cloud Workflows, Cloud Composer (Airflow), Cloud Run Functions y Eventarc.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con la gran síntesis de los 4 patrones de ingeniería de datos.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción a la Automatización: Por tiempo vs Dirigida por eventos.
+• [01:05] Automatización ágil serverless: Cloud Scheduler (cron) y Cloud Workflows.
+• [02:20] Orquestación empresarial: Cloud Composer y DAGs en Python con Apache Airflow.
+• [03:45] Flujos reactivos: Cloud Run Functions y enrutamiento global con Eventarc (CloudEvents).
+• [05:00] Gran Síntesis del Subprograma 1: Los 4 patrones arquitectónicos del examen.
+• [06:35] Alerta de Examen 2026: Cloud Run Functions de 2da gen y Composer 3.
+• [07:15] Debrief Reddit: El costo de usar Composer para crons simples vs Workflows.
+• [07:50] Soundbite del Examen: 4 reglas de oro de automatización.]]></description>
+      <pubDate>Sat, 24 Oct 2026 10:21:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_01_07_Automatizacion_y_Orquestacion_en_GCP.mp3" length="12333253" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_01_07_Automatizacion_y_Orquestacion_en_GCP.mp3</guid>
+      <itunes:duration>08:31</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+  </channel>
+</rss>

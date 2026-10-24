@@ -12,7 +12,20 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-                <item>
+    <item>
+      <title>sIA Manga #01: Kentaro Miura y la Tumba de Tinta de Berserk: El Sacrificio Físico del Mangaka y la Filosofía del Dolor</title>
+      <link>https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html</link>
+      <description><![CDATA[sIA Manga #01: La devoción, el dolor físico y la maestría visual detrás de la obra magna del manga oscuro. Treinta y dos años dibujando cada eslabón a mano con plumilla G-Pen, la soledad extrema frente al tablero, la deconstrucción de Guts como arquetipo de la resistencia humana ante el destino y el legado inmortal de Kentaro Miura continuado por la hermandad de Studio Gaga. | Leer artículo y análisis visual APA: https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html]]></description>
+      <pubDate>Sat, 24 Oct 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Manga_01_Kentaro_Miura_Berserk_Tumba_Tinta_2026-10-24.mp3" length="15510264" type="audio/mpeg"/>
+      <guid isPermaLink="false">sia-manga-01-kentaro-miura-berserk-tumba-tinta</guid>
+      <itunes:duration>09:41</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Manga_01_Kentaro_Miura_Berserk_Tumba_Tinta_2026-10-24.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Manga_01_Kentaro_Miura_Berserk_Tumba_Tinta_2026-10-24.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Anime #01: Kyoto Animation y la Belleza de lo Cotidiano: Salarios Dignos, Sakuga y el Fuego de la Resiliencia</title>
       <link>https://escucha-sia.github.io/articulos/sia-anime-01-kyoto-animation-belleza-cotidiano-resiliencia.html</link>
       <description><![CDATA[sIA Anime #01: La historia humana y técnica del estudio más querido del mundo de la animación. De la mesa de cocina en Uji donde amas de casa fundaron el estudio en 1981, al desafío radical contra el crunch mediante salarios fijos y escuela interna. La obsesión artesanal por las microexpresiones en K-On!, Hyouka y Violet Evergarden, el golpe devastador de 2019 y la resurrección colectiva demostrando que el arte nacido de la empatía no puede ser destruido. | Leer artículo y análisis técnico APA: https://escucha-sia.github.io/articulos/sia-anime-01-kyoto-animation-belleza-cotidiano-resiliencia.html]]></description>
@@ -25,7 +38,7 @@
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Anime_01_Kyoto_Animation_Belleza_Cotidiano_2026-10-24.vtt" type="text/vtt" language="es"/>
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Anime_01_Kyoto_Animation_Belleza_Cotidiano_2026-10-24.srt" type="application/x-subrip" language="es"/>
     </item>
-<item>
+    <item>
       <title>sIA Corporativo #04: Marc Lore vs. Amazon: La Guerra de los Pañales y el Dilema del Fundador</title>
       <link>https://escucha-sia.github.io/articulos/sia-corporativo-04-marc-lore-vs-amazon-guerra-panales.html</link>
       <description><![CDATA[sIA Crónicas Corporativas #04: El drama humano detrás de Diapers.com y Amazon. La noche de nieve en que un padre agotado concibió una empresa para ayudar a otras familias, la negativa a vender ante Jeff Bezos, la guerra de precios automatizada donde Amazon perdió $100 millones para destruirlos, el doloroso dilema moral de un fundador para proteger los empleos de su gente y el épico renacimiento con Jet.com y Walmart. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corporativo-04-marc-lore-vs-amazon-guerra-panales.html]]></description>
@@ -38,7 +51,7 @@
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.vtt" type="text/vtt" language="es"/>
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.srt" type="application/x-subrip" language="es"/>
     </item>
-<item>
+    <item>
       <title>sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7</title>
       <link>https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html</link>
       <description><![CDATA[sIA Terror #02: El testimonio perturbador de un analista nocturno en Austin, Texas, asignado a la 'Cola 7' de moderación algorítmica. Un archivo sin origen clasificado con confianza cero y topología no humana, una cámara apuntando a su propia espalda, el reloj que corría en reversa y la entidad que aprendió a imitar sus parpadeos. Incluye diseño sonoro cinemático con SFX y análisis psicológico de la moderación digital. | Leer artículo y análisis técnico: https://escucha-sia.github.io/articulos/sia-terror-02-el-moderador-del-turno-nocturno.html]]></description>
@@ -51,7 +64,7 @@
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.vtt" type="text/vtt" language="es"/>
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.srt" type="application/x-subrip" language="es"/>
     </item>
-<item>
+    <item>
       <title>sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza</title>
       <link>https://escucha-sia.github.io/articulos/sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991.html</link>
       <description>sIA Crónicas Corporativas #03: La guerra secreta entre Nintendo y Sony. El chip clandestino de Ken Kutaragi, la humillación pública en el CES 1991 en Chicago, el puñetazo en la mesa de Norio Ohga ordenando aplastar a Nintendo, el error de los cartuchos del N64 y la histórica fuga de Final Fantasy VII a PlayStation. | Leer artículo y cronología APA: https://escucha-sia.github.io/articulos/sia-corp-03-nintendo-vs-sony-playstation-traicion-1991.html</description>
