@@ -204,6 +204,66 @@ Basado 100% en el curso oficial de Google Cloud Skills Boost con la gran síntes
 • [06:35] Alerta de Examen 2026: Cloud Run Functions de 2da gen y Composer 3.
 • [07:15] Debrief Reddit: El costo de usar Composer para crons simples vs Workflows.
 • [07:50] Soundbite del Examen: 4 reglas de oro de automatización."""
+    },
+    {
+        "track_num": "02.01",
+        "filename": "Pista_02_01_Fundamentos_SQL_y_Paradigma_BigQuery.mp3",
+        "title": "#GCP-Data 02.01 - Fundamentos de SQL y el Paradigma de BigQuery",
+        "duration": "06:44",
+        "pub_date": "Sat, 24 Oct 2026 10:53:00 GMT",
+        "description": """🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 02
+Pista 02.01: Fundamentos de SQL y el Paradigma de Almacenamiento de BigQuery.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con arquitectura OLTP vs OLAP y optimización de costos.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 2: BigQuery y Blueprint Oficial.
+• [01:10] Paradigma BigQuery vs Cloud SQL: Almacenamiento columnar Capacitor y Validador de consultas.
+• [02:30] Sintaxis SQL Esencial y automatización con Cloud SDK: bq query, bq mk y bq extract.
+• [03:45] Alerta de Examen 2026: BigQuery Studio, Gemini in BigQuery y BigQuery Editions.
+• [04:35] Debrief Reddit: El mito del comando LIMIT y la factura de los 10 Terabytes.
+• [05:50] Soundbite del Examen: 4 reglas de oro de BigQuery SQL."""
+    },
+    {
+        "track_num": "02.02",
+        "filename": "Pista_02_02_SQL_Analitico_Deduplicacion_y_Depuracion.mp3",
+        "title": "#GCP-Data 02.02 - SQL Analítico, Deduplicación y Depuración",
+        "duration": "06:17",
+        "pub_date": "Sat, 24 Oct 2026 10:54:00 GMT",
+        "description": """🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 02
+Pista 02.02: SQL Analítico, Patrones de Deduplicación y Depuración de Errores de Consulta.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con datos de e-commerce y lecciones de r/dataengineering.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción al SQL Analítico y conjuntos de datos de comercio electrónico.
+• [01:10] Deduplicación con funciones analíticas de ventana: ROW_NUMBER() OVER(PARTITION BY... ORDER BY... DESC).
+• [02:25] Depuración de errores: La diferencia vital entre WHERE y HAVING, y prevención con SAFE_DIVIDE.
+• [03:40] Alerta de Examen 2026: BigQuery Search Index y Vector Search.
+• [04:30] Debrief Reddit: El peligro de los JOINs sobre campos NULL y el error de memoria de shuffle.
+• [05:40] Soundbite del Examen: 4 reglas nemotécnicas de SQL Analítico."""
+    },
+    {
+        "track_num": "02.03",
+        "filename": "Pista_02_03_Visualizacion_Looker_Studio_y_Challenge_Lab.mp3",
+        "title": "#GCP-Data 02.03 - Visualización con Looker Studio y Challenge Lab",
+        "duration": "06:09",
+        "pub_date": "Sat, 24 Oct 2026 10:56:00 GMT",
+        "description": """🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 02
+Pista 02.03: Visualización de Informes de Negocio con Looker Studio, BI Engine y Challenge Lab.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con aceleración en memoria y resolución de examen práctico.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción a la Visualización de Negocio y conectores de datos.
+• [01:05] Arquitectura de Looker Studio y aceleración en memoria RAM con BigQuery BI Engine.
+• [02:30] Estrategia de resolución de 4 fases para el Laboratorio de Desafío (Challenge Lab).
+• [03:45] Alerta de Examen 2026: Diferencia entre Looker Studio y Looker Enterprise (LookML).
+• [04:35] Debrief Reddit: El desastre de facturación por dashboards sin caché en producción.
+• [05:40] Soundbite del Examen: 4 reglas de oro de visualización y Challenge Labs."""
     }
 ]
 
@@ -262,14 +322,22 @@ def main():
 
     # 2. Copiar archivos de audio a C:\Carlos\noticias_podcast\audio\
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+    candidate_folders = [
+        Path(r"C:\Users\c_a_c\Music\NoticIAs"),
+        Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_01_Ingenieria_de_Datos"),
+        Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_02_Estadisticas_en_BigQuery")
+    ]
     for ep in EPISODES:
-        src = MUSIC_SRC_DIR / ep["filename"]
         dst = AUDIO_DIR / ep["filename"]
-        if src.exists() and not dst.exists():
-            print(f"[*] Copiando {ep['filename']} a audio/...")
-            shutil.copy2(src, dst)
-        elif dst.exists():
-            print(f"[OK] Audio ya presente en audio/{ep['filename']}")
+        if not dst.exists():
+            for c_folder in candidate_folders:
+                src = c_folder / ep["filename"]
+                if src.exists():
+                    print(f"[*] Copiando {ep['filename']} a audio/ desde {c_folder.name}...")
+                    shutil.copy2(src, dst)
+                    break
+        if dst.exists():
+            print(f"[OK] Audio presente: {ep['filename']}")
 
     # 3. Generar feed XML exclusivo
     feed_xml = build_feed_xml(EPISODES)
