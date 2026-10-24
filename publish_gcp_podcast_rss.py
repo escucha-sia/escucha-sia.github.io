@@ -264,6 +264,46 @@ Basado 100% en el curso oficial de Google Cloud Skills Boost con aceleración en
 • [03:45] Alerta de Examen 2026: Diferencia entre Looker Studio y Looker Enterprise (LookML).
 • [04:35] Debrief Reddit: El desastre de facturación por dashboards sin caché en producción.
 • [05:40] Soundbite del Examen: 4 reglas de oro de visualización y Challenge Labs."""
+    },
+    {
+        "track_num": "03.01",
+        "filename": "Pista_03_01_Exploracion_y_Filtrado_en_Looker.mp3",
+        "title": "#GCP-Data 03.01 - Exploración y Filtrado en Looker",
+        "duration": "06:00",
+        "pub_date": "Sat, 24 Oct 2026 11:10:00 GMT",
+        "description": """🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 03
+Pista 03.01: Exploración y Filtrado en Looker, Dimensiones, Medidas y Merged Results.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con capa semántica, Looker Modeler y trampas de rendimiento en r/looker.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 3: Preparar datos para paneles de Looker e informes.
+• [01:05] Dimensiones vs Medidas y pivotes en Looker Explores.
+• [02:30] Combinar resultados (Merged Results) entre exploraciones sin JOIN en LookML.
+• [03:45] Alerta de Examen 2026: Capa semántica universal y Looker Modeler.
+• [04:30] Debrief Reddit: El abuso de Merged Results y el colapso de memoria en el navegador.
+• [05:20] Soundbite del Examen: 4 reglas mnemotécnicas de Looker Explores."""
+    },
+    {
+        "track_num": "03.02",
+        "filename": "Pista_03_02_Calculos_de_Tabla_y_Challenge_Lab.mp3",
+        "title": "#GCP-Data 03.02 - Cálculos de Tabla y Challenge Lab de Looker",
+        "duration": "06:00",
+        "pub_date": "Sat, 24 Oct 2026 11:15:00 GMT",
+        "description": """🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 03
+Pista 03.02: Cálculos de Tabla, Expresiones de Looker y Estrategia del Challenge Lab.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con funciones de offset, percentiles y resolución de laboratorio.
+
+📌 Contenido del Episodio:
+• [00:00] Introducción a los Table Calculations y Looker Expressions (Lexp).
+• [01:05] Diferencia vital de arquitectura: Consulta SQL vs Cálculos en memoria del navegador.
+• [02:25] Funciones avanzadas: offset, pivot_index, percentiles y formateo condicional.
+• [03:40] Alerta de Examen 2026: Cuándo usar Table Calculations vs Métricas en LookML.
+• [04:30] Debrief Reddit: El peligro de aplicar cálculos de tabla a consultas sin ordenar.
+• [05:20] Soundbite del Examen: 4 reglas de oro para el Challenge Lab de Looker."""
     }
 ]
 
@@ -320,12 +360,13 @@ def main():
     if not COVER_PATH.exists():
         generate_podcast_show_cover()
 
-    # 2. Copiar archivos de audio a C:\Carlos\noticias_podcast\audio\
+    # 2. Copiar archivos de audio a C:\\Carlos\\noticias_podcast\\audio\\
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     candidate_folders = [
         Path(r"C:\Users\c_a_c\Music\NoticIAs"),
         Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_01_Ingenieria_de_Datos"),
-        Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_02_Estadisticas_en_BigQuery")
+        Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_02_Estadisticas_en_BigQuery"),
+        Path(r"C:\Users\c_a_c\Music\Associate_Data_Practitioner\Subprograma_03_Paneles_de_Looker_e_Informes")
     ]
     for ep in EPISODES:
         dst = AUDIO_DIR / ep["filename"]
