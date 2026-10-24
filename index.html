@@ -41,11 +41,15 @@
             <p>Cada episodio de podcast se respalda en un artículo de investigación con análisis de arquitectura, trade-offs de producción y bibliografía en formato APA.</p>
             
             <div class="filter-bar">
-                <button class="filter-btn active" onclick="filterArticles('all')">Todos (46)</button>
+                <button class="filter-btn active" onclick="filterArticles('all')">Todos (47)</button>
                 <button class="filter-btn" onclick="filterArticles('deep-dive')">sIA Deep Dives</button>
+                <button class="filter-btn" onclick="filterArticles('corporativo')" style="color: #38bdf8 !important; border-color: rgba(56, 189, 248, 0.4);">💼 Corporativo</button>
                 <button class="filter-btn" onclick="filterArticles('terror')" style="color: #f87171 !important; border-color: rgba(239, 68, 68, 0.4);">💀 sIA Terror</button>
+                <button class="filter-btn" onclick="filterArticles('anime')" style="color: #f43f5e !important; border-color: rgba(244, 63, 94, 0.4);">🌸 sIA Anime</button>
+                <button class="filter-btn" onclick="filterArticles('manga')" style="color: #a855f7 !important; border-color: rgba(168, 85, 247, 0.4);">✒️ sIA Manga</button>
+                <button class="filter-btn" onclick="filterArticles('novelas')" style="color: #f59e0b !important; border-color: rgba(245, 158, 11, 0.4);">📖 sIA Novelas</button>
+                <button class="filter-btn" onclick="filterArticles('maker-3d')" style="color: #10b981 !important; border-color: rgba(16, 185, 129, 0.4);">🛠️ Maker & 3D</button>
                 <button class="filter-btn" onclick="filterArticles('noticias')">NoticIAs Daily</button>
-                <button class="filter-btn" onclick="filterArticles('maker-3d')">Impresión 3D & Maker</button>
                 <button class="filter-btn" onclick="filterArticles('archivo')">Archivo Histórico</button>
             </div>
         </div>
@@ -312,7 +316,34 @@
     <main class="container" id="articulos">
         <div class="magazine-grid">
             
-        <div class="card badge-green" data-category="archivo">
+        <div class="card badge-purple" data-category="anime">
+            <div class="card-header">
+                <span class="badge badge-purple">sIA Anime</span>
+                <span class="card-meta">10 min • Sat, 24 Oct</span>
+            </div>
+            <h3>sIA Anime #01: Kyoto Animation y la Belleza de lo Cotidiano: Salarios Dignos, Sakuga y el Fuego de la Resiliencia</h3>
+            <p>De la mesa de té en Uji a la cúspide de la animación mundial: Cómo un colectivo fundado por amas de casa en 1981 desafió el crunch de Tokio con salarios fijos, ...</p>
+            
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 Audio Podcast:</span>
+                </div>
+                <audio controls preload="none">
+                    <source src="https://escucha-sia.github.io/audio/sIA_Anime_01_Kyoto_Animation_Belleza_Cotidiano_2026-10-24.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="card-footer">
+                <a href="articulos/sia-anime-01-kyoto-animation-belleza-cotidiano-resiliencia.html" class="read-link">Leer artículo y APA &rarr;</a>
+                
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="card-spotify-btn pending-sync" title="Ver podcast en Spotify (Capítulo en proceso de sync)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Spotify Show
+                </a>
+            </div>
+        </div>
+        
+        <div class="card badge-green" data-category="corporativo">
             <div class="card-header">
                 <span class="badge badge-green">sIA Corporativo</span>
                 <span class="card-meta">9 min • Fri, 23 Oct</span>
@@ -366,7 +397,7 @@
             </div>
         </div>
         
-        <div class="card badge-green" data-category="archivo">
+        <div class="card badge-green" data-category="corporativo">
             <div class="card-header">
                 <span class="badge badge-green">sIA Corporativo</span>
                 <span class="card-meta">8 min • Thu, 22 Oct</span>
@@ -393,7 +424,7 @@
             </div>
         </div>
         
-        <div class="card badge-green" data-category="archivo">
+        <div class="card badge-green" data-category="corporativo">
             <div class="card-header">
                 <span class="badge badge-green">sIA Corporativo</span>
                 <span class="card-meta">8 min • Wed, 21 Oct</span>
@@ -420,7 +451,7 @@
             </div>
         </div>
         
-        <div class="card badge-green" data-category="archivo">
+        <div class="card badge-green" data-category="corporativo">
             <div class="card-header">
                 <span class="badge badge-green">sIA Corporativo</span>
                 <span class="card-meta">8 min • Tue, 20 Oct</span>

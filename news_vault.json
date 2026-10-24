@@ -318,6 +318,19 @@
       ],
       "cooldown_days": 45,
       "date": "Fri, 23 Oct 2026 21:00:00 GMT"
+    },
+    {
+      "title": "sIA Anime #01: Kyoto Animation y la Belleza de lo Cotidiano: Salarios Dignos, Sakuga y el Fuego de la Resiliencia",
+      "filename": "sIA_Anime_01_Kyoto_Animation_Belleza_Cotidiano_2026-10-24.mp3",
+      "topics": [
+        "sIA Anime #01: Kyoto Animation y la fundación comunitaria en Uji en 1981",
+        "La rebelión contra el crunch: salarios fijos, formación interna y liderazgo femenino",
+        "La física de lo cotidiano: sakuga de microexpresiones y acting animation",
+        "El atentado de 2019 en el Estudio 1 y la respuesta solidaria mundial",
+        "La resurrección artística de Violet Evergarden: The Movie y el homenaje a los caídos"
+      ],
+      "cooldown_days": 45,
+      "date": "Sat, 24 Oct 2026 21:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

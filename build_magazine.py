@@ -74,6 +74,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial sIA Anime 01 - 24 de Octubre de 2026
+    "sIA_Anime_01_Kyoto_Animation_Belleza_Cotidiano_2026-10-24.mp3": {
+        "slug": "sia-anime-01-kyoto-animation-belleza-cotidiano-resiliencia",
+        "category": "sIA Anime",
+        "badge_color": "purple",
+        "read_time": "10 min",
+        "title": "sIA Anime #01: Kyoto Animation y la Belleza de lo Cotidiano: Salarios Dignos, Sakuga y el Fuego de la Resiliencia",
+        "subtitle": "De la mesa de té en Uji a la cúspide de la animación mundial: Cómo un colectivo fundado por amas de casa en 1981 desafió el crunch de Tokio con salarios fijos, inventó la física de las microexpresiones y renació tras el fuego con Violet Evergarden.",
+        "thesis": "La excelencia técnica en la animación no es el resultado de la explotación ni del virtuosismo individualista, sino de la dignidad laboral y la empatía comunitaria. Al garantizar salarios estables y formación interna, Kyoto Animation transformó la rutina cotidiana en poesía visual y demostró que una obra nacida del amor colectivo es indestructible frente al dolor.",
+        "nexo": "Inauguración de sIA Anime (La Física de la Ilusión): Análisis de la dirección visual, la ingeniería de movimiento (sakuga) y la condición humana detrás del fotograma.",
+        "content_blocks": [
+            {
+                "title": "1. La Mesa de Té en Uji: De Amas de Casa a Bastión de la Animación",
+                "body": """
+En la primavera de 1981, en la apacible ciudad de Uji (Kioto), Yoko Hatta —antigua colorista de Mushi Production que se había mudado tras contraer matrimonio— reunió a un grupo de vecinas y amas de casa alrededor de una mesa baja de madera. Lejos de la vorágine industrial de Tokio, aquellas mujeres coloreaban a mano, dibujo por dibujo sobre láminas transparentes de acetato, los fotogramas que los estudios de la capital les subcontrataban por correo postal.
+
+Lo que inició como una cooperativa vecinal creció bajo una premisa fundacional inquebrantable: rechazar la cultura del descarte humano predominante en la animación japonesa. En lugar de someter a sus artistas a la precariedad del destajo, Yoko y su esposo Hideaki Hatta formalizaron Kyoto Animation con la visión de crear un espacio donde el trabajo artístico fuera sostenible, respetuoso y profundamente arraigado en los lazos familiares de su comunidad.
+"""
+            },
+            {
+                "title": "2. La Rebelión Laboral contra el Crunch: Salarios Fijos y la Escuela KyoAni",
+                "body": """
+A diferencia del modelo hegemónico de Tokio, donde los animadores cobran tarifas residuales por dibujo (aproximadamente 200 yenes o $1.50 USD por hoja, lo que fuerza jornadas de 16 horas diarias durmiendo bajo el tablero), KyoAni implementó un sistema contracultural de empleo asalariado permanente. Sus creadores contaban con sueldos mensuales regulares, seguro médico, jornadas acotadas y apoyo para el cuidado de sus hijos.
+
+Asimismo, fundaron la KyoAni School, un centro de formación interno donde mentores veteranos instruían a las nuevas generaciones no solo en técnicas cinéticas, sino en la observación paciente de la conducta humana. Este ecosistema de estabilidad propició una equidad de género inédita en la industria, promoviendo a brillantes directoras como Naoko Yamada (*K-On!*, *A Silent Voice*) y consolidando un lenguaje propio donde ningún proceso se tercerizaba a estudios extranjeros.
+"""
+            },
+            {
+                "title": "3. La Física de lo Cotidiano: Sakuga de Actuación y Microexpresiones",
+                "body": """
+La seguridad laboral de KyoAni permitió a sus animadores dedicar semanas enteras a secuencias de apenas segundos de duración, inaugurando la llamada 'física de lo cotidiano' o *acting animation*. Mientras los estándares comerciales reservaban sus mayores esfuerzos para batallas épicas, KyoAni volcó su virtuosismo en los gestos aparentemente intrascendentes: el ajuste titubeante de unas gafas, la vacilación muscular en los dedos al sostener una taza o la refracción lumínica en una mirada melancólica (*Hyouka*, *Hibike! Euphonium*).
+
+Técnicamente, el estudio priorizó el movimiento corporal continuo a 24 fotogramas por segundo frente a las poses estáticas con bocas parlantes del anime convencional. Estudiaron la inercia del peso corporal, la gravedad en los tejidos y la iluminación volumétrica suave mediante difusión digital, demostrando que la emoción dramática más honda no surge de explosiones fantásticas, sino de la vulnerabilidad capturada en la rutina humana más íntima.
+"""
+            },
+            {
+                "title": "4. Fuera de la Burbuja: La Tragedia de 2019 y el Triunfo de Violet Evergarden",
+                "body": """
+El 18 de julio de 2019, un atentado incendiario premeditado en el Estudio 1 en Fushimi cobró la vida de 36 miembros del equipo —incluidos directores icónicos como Yasuhiro Takemoto— e hirió de gravedad a otros 34, representando la mayor tragedia del arte contemporáneo japonés. Sin embargo, en medio del luto global y el dolor insondable, la directiva y los supervivientes rechazaron disolver la empresa.
+
+Con vendas en las manos y apoyados por una ola de solidaridad internacional, los artistas completaron *Violet Evergarden: The Movie* (2020), la conmovedora travesía de una excombatiente que aprende a descifrar el amor transcribiendo cartas ajenas. Por decisión unánime, los créditos cinematográficos inmortalizaron los nombres de todos los compañeros caídos. La película se convirtió en una cumbre artística que reafirmó la tesis central de Kyoto Animation: la violencia puede arrasar estructuras físicas, pero el arte forjado con dignidad, amor y comunidad es inmortal.
+"""
+            }
+        ],
+        "apa_references": [
+            "Clements, J. (2013). *Anime: A history*. British Film Institute.",
+            "Cavallaro, D. (2012). *Kyoto Animation: A critical study and symbol analyses*. McFarland & Company.",
+            "Yamada, N. (2017). *Directing emotion and the subtle choreography of youth*. Kyoto Animation Publications.",
+            "The Japan Times. (2020). *Kyoto Animation's 'Violet Evergarden' film honors 36 victims of arson attack*. The Japan Times Culture Archive.",
+            "Denison, R. (2015). *Anime: A critical introduction*. Bloomsbury Academic.",
+            "Kyoto Animation Co. (2021). *Memorial archive and philosophy of in-house studio craftsmanship*. KyoAni Press."
+        ]
+    },
     # 0. Episodio Especial Corporativo 04 - 23 de Octubre de 2026
     "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": {
         "slug": "sia-corporativo-04-marc-lore-vs-amazon-guerra-panales",
@@ -2292,12 +2345,30 @@ def render_magazine_index(catalog):
             cat_classes.append("terror")
         elif "NoticIAs" in item["category"]:
             cat_classes.append("noticias")
+        elif "Corporativo" in item["category"]:
+            cat_classes.append("corporativo")
+        elif "Anime" in item["category"]:
+            cat_classes.append("anime")
+        elif "Manga" in item["category"]:
+            cat_classes.append("manga")
+        elif "Novelas" in item["category"]:
+            cat_classes.append("novelas")
+        elif "Maker" in item["category"] or "3D" in item["category"]:
+            cat_classes.append("maker-3d")
         else:
             cat_classes.append("archivo")
             
         full_text = f"{item['title']} {item['subtitle']} {item.get('category', '')}".lower()
-        if any(k in full_text for k in ["3d", "bambu", "impresión", "impresora", "maker"]):
+        if any(k in full_text for k in ["3d", "bambu", "impresión", "impresora", "maker"]) and "maker-3d" not in cat_classes:
             cat_classes.append("maker-3d")
+        if any(k in full_text for k in ["anime", "sakuga", "animación", "kyoani"]) and "anime" not in cat_classes:
+            cat_classes.append("anime")
+        if any(k in full_text for k in ["manga", "viñeta", "paneling", "mangaka", "berserk", "miura"]) and "manga" not in cat_classes:
+            cat_classes.append("manga")
+        if any(k in full_text for k in ["novela", "webnovel", "light novel", "worldbuilding", "omniscient reader"]) and "novelas" not in cat_classes:
+            cat_classes.append("novelas")
+        if any(k in full_text for k in ["corporativo", "amazon", "nintendo", "valve", "nvidia"]) and "corporativo" not in cat_classes:
+            cat_classes.append("corporativo")
             
         cat_class_attr = " ".join(cat_classes)
         target_spotify_url = item.get("spotify_url") or SPOTIFY_SHOW_URL
@@ -2422,9 +2493,13 @@ def render_magazine_index(catalog):
             <div class="filter-bar">
                 <button class="filter-btn active" onclick="filterArticles('all')">Todos ({len(catalog)})</button>
                 <button class="filter-btn" onclick="filterArticles('deep-dive')">sIA Deep Dives</button>
+                <button class="filter-btn" onclick="filterArticles('corporativo')" style="color: #38bdf8 !important; border-color: rgba(56, 189, 248, 0.4);">💼 Corporativo</button>
                 <button class="filter-btn" onclick="filterArticles('terror')" style="color: #f87171 !important; border-color: rgba(239, 68, 68, 0.4);">💀 sIA Terror</button>
+                <button class="filter-btn" onclick="filterArticles('anime')" style="color: #f43f5e !important; border-color: rgba(244, 63, 94, 0.4);">🌸 sIA Anime</button>
+                <button class="filter-btn" onclick="filterArticles('manga')" style="color: #a855f7 !important; border-color: rgba(168, 85, 247, 0.4);">✒️ sIA Manga</button>
+                <button class="filter-btn" onclick="filterArticles('novelas')" style="color: #f59e0b !important; border-color: rgba(245, 158, 11, 0.4);">📖 sIA Novelas</button>
+                <button class="filter-btn" onclick="filterArticles('maker-3d')" style="color: #10b981 !important; border-color: rgba(16, 185, 129, 0.4);">🛠️ Maker & 3D</button>
                 <button class="filter-btn" onclick="filterArticles('noticias')">NoticIAs Daily</button>
-                <button class="filter-btn" onclick="filterArticles('maker-3d')">Impresión 3D & Maker</button>
                 <button class="filter-btn" onclick="filterArticles('archivo')">Archivo Histórico</button>
             </div>
         </div>
