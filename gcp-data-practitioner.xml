@@ -275,5 +275,200 @@ Basado 100% en el curso oficial de Google Cloud Skills Boost con funciones de of
       <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
       <itunes:explicit>no</itunes:explicit>
     </item>
+    <item>
+      <title>#GCP-Data 04.01 - Fundamentos de IA e Infraestructura</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 04
+Pista 04.01: Fundamentos de IA, Caso Coffee on Wheels, Arquitectura de 3 Capas y BigQuery ML.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con desacoplamiento compute/storage y optimización de costos de cómputo en r/googlecloud.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 4: Introducción a la IA y Machine Learning en Google Cloud.
+• [01:10] Caso Coffee on Wheels y DataBeans: Rutas, inventario y marketing multimodal.
+• [02:30] La Arquitectura de 3 capas: Infraestructura, Plataforma de desarrollo (Vertex AI) y Soluciones.
+• [03:45] IA Predictiva (discriminativa) vs IA Generativa: El árbol de decisión.
+• [05:00] Desacoplamiento de cómputo y almacenamiento con BigQuery ML en SQL.
+• [06:15] Alerta de Examen 2026: Cuándo usar BigQuery ML vs Vertex AI Workbench.
+• [07:05] Debrief Reddit: El desastre de la GPU olvidada y costos de cómputo inactivo.
+• [07:55] Soundbite del Examen: 4 reglas de oro de fundamentos de IA.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:20:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_04_01_Fundamentos_de_IA_e_Infraestructura.mp3" length="9008309" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_04_01_Fundamentos_de_IA_e_Infraestructura.mp3</guid>
+      <itunes:duration>06:30</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 04.02 - IA Generativa, Modelos de Base y Agentes</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 04
+Pista 04.02: Modelos de Base, Familia Gemini, Multimodalidad Nativa y Vertex AI Studio.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con Grounding en datos corporativos y prevención de alucinaciones.
+
+📌 Contenido del Episodio:
+• [00:00] Panorama de Modelos de Base: Parámetros y entrenamiento a escala.
+• [01:10] Familia Gemini: Gemini Pro (razonamiento), Flash (baja latencia) y Flash-Lite (volumen).
+• [02:30] Multimodalidad nativa: Texto, imagen, audio y video simultáneos.
+• [03:45] Vertex AI Studio y Vertex AI Agent Builder con Function Calling.
+• [05:00] Técnicas de adaptación: Prompt Engineering, RAG con Grounding y Fine-Tuning.
+• [06:15] Alerta de Examen 2026: Grounding con Vertex AI Search vs Fine-Tuning innecesario.
+• [07:05] Debrief Reddit: El error de hacer fine-tuning para datos dinámicos.
+• [07:50] Soundbite del Examen: 4 reglas mnemotécnicas de IA generativa.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:25:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_04_02_IA_Generativa_Modelos_y_Agentes.mp3" length="8805917" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_04_02_IA_Generativa_Modelos_y_Agentes.mp3</guid>
+      <itunes:duration>06:15</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 04.03 - Opciones de Desarrollo y Flujo MLOps en Vertex AI</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 04
+Pista 04.03: Cuadrante de Selección de ML, Ciclo de Vida del Modelo y Vertex AI Pipelines.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con MLOps, drift detection y análisis de costos en inferencia.
+
+📌 Contenido del Episodio:
+• [00:00] Las 4 opciones de desarrollo: Pretrained APIs, BigQuery ML, AutoML y Custom Training.
+• [01:15] Las 3 etapas del flujo: Preparación de datos, Model Training & Evaluation, Model Serving.
+• [02:40] Online Prediction Endpoints vs Vertex AI Batch Prediction.
+• [04:00] MLOps: Data Drift, Concept Drift y orquestación con Vertex AI Pipelines (Kubeflow).
+• [05:15] Alerta de Examen 2026: Criterios de examen para inferencia en línea vs por lotes.
+• [06:05] Debrief Reddit: El costo desmedido de endpoints dedicados 24/7 sin tráfico.
+• [06:50] Soundbite del Examen: 4 reglas de oro de desarrollo ML y MLOps.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:30:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_04_03_Opciones_de_Desarrollo_y_Flujo_MLOps.mp3" length="8719541" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_04_03_Opciones_de_Desarrollo_y_Flujo_MLOps.mp3</guid>
+      <itunes:duration>06:20</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 05.01 - Almacenamiento en Cloud Storage e Identidad IAM</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 05
+Pista 05.01: Cloud Storage (gcloud storage), Identidades IAM, Roles y Cloud Monitoring.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con principio de menor privilegio y gobernanza de accesos.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 5: Modelo de Referencia de Infraestructura.
+• [01:05] Cloud Storage: Once nueves de durabilidad y la herramienta moderna gcloud storage.
+• [02:20] El modelo IAM: Quién (Principals, Service Accounts), Qué (Roles) y Dónde (Recursos).
+• [03:40] Observabilidad con Cloud Monitoring: Métricas, paneles y políticas de alertas.
+• [04:55] Alerta de Examen 2026: Uniform Bucket-Level Access y prohibición de Roles Primitivos.
+• [05:45] Debrief Reddit: El becario con rol Editor de proyecto y el borrado de tablas de producción.
+• [06:30] Soundbite del Examen: 4 reglas de oro de infraestructura e IAM.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:35:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_05_01_Almacenamiento_e_Identidad_IAM.mp3" length="8212571" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_05_01_Almacenamiento_e_Identidad_IAM.mp3</guid>
+      <itunes:duration>06:10</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 05.02 - Serverless y Mensajería Escalable con Pub/Sub</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 05
+Pista 05.02: Cloud Run Functions, Arquitectura de Pub/Sub (Push vs Pull) y Dead-Lettering.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con resiliencia en eventos y prevención de bucles infinitos.
+
+📌 Contenido del Episodio:
+• [00:00] Computación Serverless reactiva con Cloud Run Functions (2da gen).
+• [01:10] Arquitectura de Cloud Pub/Sub: Publicadores, Tópicos y Suscripciones.
+• [02:30] Suscripción Push (endpoints HTTPS, autoscale) vs Suscripción Pull (Dataflow, VPC privada).
+• [03:50] Resiliencia y Dead-Letter Topics para mensajes corruptos.
+• [05:00] Alerta de Examen 2026: Push vs Pull y garantías de entrega At-Least-Once.
+• [05:50] Debrief Reddit: El bucle infinito de reintentos en Cloud Run Functions sin Dead-Letter.
+• [06:40] Soundbite del Examen: 4 reglas mnemotécnicas de serverless y mensajería.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:40:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_05_02_Serverless_y_Mensajeria_con_PubSub.mp3" length="7953080" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_05_02_Serverless_y_Mensajeria_con_PubSub.mp3</guid>
+      <itunes:duration>06:25</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 06.01 - Clases de Almacenamiento, Lifecycle y Autoclass</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 06
+Pista 06.01: Optimización de Costos en Cloud Storage, Reglas OLM, Autoclass y Soft Delete.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con tarifas de recuperación y retención mínima.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 6: Optimiza los Costos con Google Cloud Storage.
+• [01:05] Las 4 clases: Standard, Nearline (30d), Coldline (90d) y Archive (365d).
+• [02:25] Object Lifecycle Management (OLM): Condiciones (Age) y Acciones (SetStorageClass, Delete).
+• [03:45] Cloud Storage Autoclass: Transición inteligente sin tarifas de recuperación.
+• [05:00] Protección contra ransomware con Soft Delete (retención de 7 días).
+• [06:10] Alerta de Examen 2026: Tarifas de recuperación (Retrieval Fees) y penalizaciones de borrado temprano.
+• [07:00] Debrief Reddit: La migración a Archive y la factura astronómica por auditoría de lectura.
+• [07:50] Soundbite del Examen: 4 reglas de oro de costos de almacenamiento.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:45:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_06_01_Clases_de_Almacenamiento_Lifecycle_y_Autoclass.mp3" length="9170555" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_06_01_Clases_de_Almacenamiento_Lifecycle_y_Autoclass.mp3</guid>
+      <itunes:duration>06:40</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 07.01 - IAM, Service Accounts y VPC Network Peering</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 07
+Pista 07.01: Implementa Seguridad en la Nube, Roles Personalizados, Workload Identity y Peering.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con interconexión privada de redes y no transitividad.
+
+📌 Contenido del Episodio:
+• [00:00] Apertura del Curso 7: Implementa los Aspectos Básicos de Seguridad en Google Cloud.
+• [01:05] Creación quirúrgica de Roles Personalizados (Custom Roles) con gcloud iam roles create.
+• [02:20] Seguridad en Cuentas de Servicio: Prohibición de claves JSON y Workload Identity Federation.
+• [03:40] VPC Network Peering: Comunicación privada con IPs internas sin salir a internet.
+• [04:55] Alerta de Examen 2026: No Transitividad de VPC Peering y gobernanza con Grupos.
+• [05:45] Debrief Reddit: La fuga de Service Account Key en GitHub y la botnet de minería crypto.
+• [06:30] Soundbite del Examen: 4 reglas mnemotécnicas de IAM y redes privadas.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:50:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_07_01_IAM_Service_Accounts_y_VPC_Peering.mp3" length="8219088" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_07_01_IAM_Service_Accounts_y_VPC_Peering.mp3</guid>
+      <itunes:duration>06:15</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>#GCP-Data 07.02 - Cloud KMS, IAP, GKE Privado y Challenge Lab</title>
+      <description><![CDATA[🎧 Certificación Google Cloud Associate Data Practitioner - Subprograma 07
+Pista 07.02: Criptografía con Cloud KMS (CMEK), Identity-Aware Proxy, GKE Privado y Laboratorio de Desafío.
+
+Voces: Jorge y Dalia (Español México).
+Basado 100% en el curso oficial de Google Cloud Skills Boost con resolución paso a paso del Challenge Lab final.
+
+📌 Contenido del Episodio:
+• [00:00] Criptografía y Control Total de Claves con Cloud KMS y CMEK.
+• [01:10] Paradigma Zero Trust con Identity-Aware Proxy (IAP) y túnel TCP para SSH sin IP pública.
+• [02:30] Clústeres Privados de Google Kubernetes Engine (Private GKE) y Cloud NAT.
+• [03:50] Estrategia de 4 Fases para resolver el Challenge Lab de Seguridad con 100 puntos.
+• [05:10] Alerta de Examen 2026: gcloud compute ssh con tunnel-through-iap y rango CIDR de Google.
+• [06:00] Debrief Reddit: El bastión SSH tradicional bombardeado por ataques de fuerza bruta vs IAP.
+• [06:50] Soundbite del Examen: 4 reglas de oro para aprobar el Challenge Lab y la certificación.]]></description>
+      <pubDate>Sat, 24 Oct 2026 11:55:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/Pista_07_02_Cloud_KMS_IAP_GKE_Privado_y_Challenge_Lab.mp3" length="9434416" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/Pista_07_02_Cloud_KMS_IAP_GKE_Privado_y_Challenge_Lab.mp3</guid>
+      <itunes:duration>06:35</itunes:duration>
+      <itunes:author>Jorge y Dalia • Carlos Corona</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover_gcp_podcast.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
   </channel>
 </rss>
