@@ -344,6 +344,19 @@
       ],
       "cooldown_days": 45,
       "date": "Sat, 24 Oct 2026 21:00:00 GMT"
+    },
+    {
+      "title": "sIA Novelas #01: Omniscient Reader's Viewpoint: La Novela que Salvó la Vida de un Lector Solitario en el Metro de Seúl",
+      "filename": "sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.mp3",
+      "topics": [
+        "sIA Novelas #01: Omniscient Reader's Viewpoint y el fenómeno de las webnovels coreanas",
+        "La sociología del metro de Seúl: soledad urbana y lectura capitulada en Munpia",
+        "La metaficción del lector: Kim Dokja y la primacía de la empatía sobre la fuerza bruta",
+        "El pacto supremo entre autor y lector: salvar una vida a través de una historia",
+        "La expansión transmedia: de la webnovel al webtoon vertical de Redice y la gran pantalla"
+      ],
+      "cooldown_days": 45,
+      "date": "Sat, 24 Oct 2026 21:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

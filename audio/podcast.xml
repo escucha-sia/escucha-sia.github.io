@@ -12,7 +12,20 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-    <item>
+        <item>
+      <title>sIA Novelas #01: Omniscient Reader's Viewpoint: La Novela que Salvó la Vida de un Lector Solitario en el Metro de Seúl</title>
+      <link>https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html</link>
+      <description><![CDATA[sIA Novelas #01: El fenómeno literario de las webnovels coreanas y la arquitectura de la metaficción. La historia de Kim Dokja, un oficinista anónimo que sobrevivió a la depresión leyendo cada noche en el metro un manuscrito ignorado por todos, el pacto íntimo entre quien escribe en soledad y quien lee para no rendirse, y cómo Omniscient Reader's Viewpoint se convirtió en la mayor carta de amor a la lectura de nuestra generación. | Leer artículo y análisis narrativo APA: https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html]]></description>
+      <pubDate>Sat, 24 Oct 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.mp3" length="14362432" type="audio/mpeg"/>
+      <guid isPermaLink="false">sia-novelas-01-omniscient-reader-viewpoint</guid>
+      <itunes:duration>08:53</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.srt" type="application/x-subrip" language="es"/>
+    </item>
+<item>
       <title>sIA Manga #01: Kentaro Miura y la Tumba de Tinta de Berserk: El Sacrificio Físico del Mangaka y la Filosofía del Dolor</title>
       <link>https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html</link>
       <description><![CDATA[sIA Manga #01: La devoción, el dolor físico y la maestría visual detrás de la obra magna del manga oscuro. Treinta y dos años dibujando cada eslabón a mano con plumilla G-Pen, la soledad extrema frente al tablero, la deconstrucción de Guts como arquetipo de la resistencia humana ante el destino y el legado inmortal de Kentaro Miura continuado por la hermandad de Studio Gaga. | Leer artículo y análisis visual APA: https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html]]></description>

@@ -74,6 +74,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial sIA Novelas 01 - 24 de Octubre de 2026
+    "sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.mp3": {
+        "slug": "sia-novelas-01-omniscient-reader-viewpoint-metaficcion",
+        "category": "sIA Novelas",
+        "badge_color": "amber",
+        "read_time": "11 min",
+        "title": "sIA Novelas #01: Omniscient Reader's Viewpoint: La Novela que Salvó la Vida de un Lector Solitario en el Metro de Seúl",
+        "subtitle": "El fenómeno cultural de las webnovels coreanas y la arquitectura de la metaficción: Kim Dokja en la Línea 3 del metro, el pacto silencioso entre quien escribe en soledad y quien lee para no rendirse, y la mayor carta de amor a la literatura digital.",
+        "thesis": "En la era de la hiperconexión y el aislamiento urbano, la literatura serializada digital no opera como mero consumo de evasión, sino como un anclaje existencial primario. A través de la metaficción, Omniscient Reader's Viewpoint demuestra que el verdadero poder de una historia no reside en la omnipotencia de sus héroes, sino en la empatía radical de un lector dispuesto a acompañar el dolor de los personajes hasta la última página.",
+        "nexo": "Inauguración de sIA Novelas (Arquitectura de Mundos): Análisis de sistemas de progresión narrativa, sociología del lector digital y el auge transmedia de Munpia y Webtoon.",
+        "content_blocks": [
+            {
+                "title": "1. La Línea 3 de Seúl: La Soledad Urbana y la Rutina de las 7:00 PM",
+                "body": """
+En las megalópolis contemporáneas, el acto de leer ha sido expulsado del recogimiento doméstico para refugiarse en los márgenes del tránsito urbano. En la Línea 3 del metro de Seúl, Kim Dokja —un contratista precario de veintiocho años cuyo nombre en hangul condensa simultáneamente los significados de 'hijo único' (독자) y 'lector'— encarna a la generación de trabajadores despersonalizados por el corporativismo asiático.
+
+Durante una década de aislamiento y depresión severa, la supervivencia psicológica de Dokja estuvo condicionada por una sola constante: abrir su teléfono móvil a las 7:00 PM para leer el capítulo diario de *Tres formas de sobrevivir en un mundo en ruinas*, una extensísima webnovel de más de 3,149 entregas ignorada por el algoritmo masivo y sostenida por un único lector activo en el mundo. La serialización diaria en plataformas como Munpia demostró que la regularidad del texto funciona como un hilo de Ariadna que impide al individuo desvincularse de la realidad cotidiana.
+"""
+            },
+            {
+                "title": "2. La Metaficción como Sistema: El Lector Omnisciente frente a la Fuerza Bruta",
+                "body": """
+Al colapsar el tejido de la realidad y manifestarse el apocalipsis de la novela en el mundo físico, la obra subvierte las convenciones de la fantasía de poder (*power fantasy*). Frente al arquetipo del protagonista trágico tradicional (Yoo Joonghyuk, atrapado en un ciclo eterno de regresiones temporales y desgaste moral), Dokja no sobrevive mediante atributos físicos sobrehumanos, sino mediante el atributo exclusivo de su memoria lectora: el *Punto de Vista del Lector Omnisciente*.
+
+Esta arquitectura metaficcional postula que el acto de leer no es una recepción pasiva, sino un ejercicio cocreativo de significado. Dokja comprende las motivaciones ocultas, los puntos de quiebre psicológico y los dolores no verbalizados de sus aliados y antagonistas porque dedicó diez años de su vida a prestarles atención. En un ecosistema dominado por 'Constelaciones' estelares que demandan espectáculo y sangre humana, la empatía hermenéutica del lector se erige como la única fuerza capaz de descifrar y quebrar las reglas del juego.
+"""
+            },
+            {
+                "title": "3. El Pacto Invisible: La Escritura como Salvaguarda de la Vida Humana",
+                "body": """
+En su clímax conceptual, el dúo autoral sing N song desarticula el artificio narrativo para revelar la tesis moral de la obra: la novela apocalíptica no fue concebida para satisfacer el mercado editorial ni para obtener lucro, sino como una carta de rescate individual. El autor continuó redactando miles de episodios durante diez años impulsado por la certeza de que suspender la publicación significaría el suicidio inminente de aquel único lector anónimo en el metro.
+
+Esta paradoja de dependencia mutua consagra la sacralidad del lazo comunicativo. La literatura se despoja de su pedantería académica y se reivindica como un refugio de auxilio mutuo: el autor escribe en la soledad de la noche para no desmoronarse, y el lector resiste el peso del mundo para averiguar cómo continúa la historia al amanecer. Si una obra defectuosa logra que una sola persona decida vivir un día más, su existencia queda plenamente justificada.
+"""
+            },
+            {
+                "title": "4. Fuera de la Burbuja: La Explosión Transmedia de Redice y la Fábrica de Webtoons",
+                "body": """
+El tránsito de *Omniscient Reader's Viewpoint* del texto plano al lienzo vertical del webtoon —ilustrado por Sleepy-C bajo el sello del recordado estudio Redice— consolidó una revolución industrial en la narrativa visual surcoreana. Con cientos de millones de lecturas acumuladas en Naver y Webtoon, la adaptación demostró que la gramática de los paneles de desplazamiento vertical (*infinite canvas*) permite una modulación del suspense psicológico equivalente a las mejores técnicas cinematográficas.
+
+La obra ha abierto el camino a adaptaciones cinematográficas de alto presupuesto y series de animación globales, demostrando que las narrativas originadas en comunidades digitales de base albergan una profundidad existencial capaz de dialogar de tú a tú con los grandes hitos de la literatura especulativa universal.
+"""
+            }
+        ],
+        "apa_references": [
+            "sing N song. (2018-2020). *Omniscient reader's viewpoint* (Vols. 1-5). Munpia & Naver Series.",
+            "Sleepy-C & Redice Studio. (2020-present). *Omniscient reader's viewpoint: The webtoon*. Webtoon Entertainment.",
+            "Kim, J. H. (2022). *The platformization of storytelling: Serialized webnovels, reader engagement and emotional labor in South Korea*. Journal of Popular Culture and Media, 15(4), 210-228.",
+            "Park, S. (2021). *Metafiction, LitRPG, and the aesthetics of the modern web novel*. Seoul National University Korean Literature Review, 33, 89-112.",
+            "Genette, G. (1997). *Paratexts: Thresholds of interpretation*. Cambridge University Press.",
+            "Hutcheon, L. (2000). *A poetics of postmodernism: History, theory, fiction*. Routledge."
+        ]
+    },
     # 0. Episodio Especial sIA Manga 01 - 24 de Octubre de 2026
     "sIA_Manga_01_Kentaro_Miura_Berserk_Tumba_Tinta_2026-10-24.mp3": {
         "slug": "sia-manga-01-kentaro-miura-berserk-tumba-tinta",

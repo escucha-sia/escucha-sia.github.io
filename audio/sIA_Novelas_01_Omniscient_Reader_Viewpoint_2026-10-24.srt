@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:01:09,408
+DALIA: Son las siete de la noche en la Línea Tres del metro de Seúl. El vagón va repleto de hombres y mujeres de traje oscuro con la mirada perdida en las pantallas de sus teléfonos, agotados tras jornadas de doce horas en oficinas corporativas. Entre ellos viaja Kim Dokja, un joven de veintiocho años con un contrato temporal en una empresa de videojuegos. Dokja no tiene amigos cercanos, no tiene ahorros ni una familia que lo espere en casa. En coreano, su nombre significa dos cosas: 'hijo único'... y también significa 'lector'. Durante diez años enteros, desde que era un adolescente acosado en la escuela, Dokja sobrevivió a la depresión gracias a un único ritual cotidiano: abrir una aplicación de novelas digitales a las siete en punto para leer una historia interminable titulada 'Tres formas de sobrevivir en un mundo en ruinas'. La novela tenía más de tres mil capítulos, una trama repetitiva y exactamente un solo lector activo en todo el planeta: él. Pero esa noche, tras publicar el epílogo final, el autor misterioso le envía un mensaje privado que cambiará la realidad: 'Gracias a ti, esta historia pudo llegar hasta el final'.
+
+2
+00:01:09,408 --> 00:01:15,719
+JORGE: Hola, ¿cómo estás? Qué alegría saludarte. Mi nombre es Jorge...
+
+3
+00:01:15,719 --> 00:01:20,712
+DALIA: ... y yo soy Dalia. Te damos una cálida bienvenida a Sia.
+
+4
+00:01:20,712 --> 00:01:54,024
+JORGE: Hoy inauguramos una nueva estación en nuestro viaje: sIA Novelas, arquitectura de mundos. Si creías que las novelas ligeras y las webnovels digitales eran solo entretenimiento adolescente o clichés de reencarnación, en este espacio vamos a desmontar ese mito. En Sia exploramos la ingeniería de los sistemas narrativos: cómo se construyen universos fantásticos coherentes, la psicología del lector moderno y el impacto social de plataformas como Munpia, Kakao y Naver, que han revolucionado la literatura global desde los teléfonos móviles.
+
+5
+00:01:54,024 --> 00:02:16,560
+DALIA: Y para abrir esta puerta, no podíamos elegir otra obra que no fuera el hito más brillante y conmovedor de la narrativa coreana moderna: Omniscient Reader's Viewpoint, escrita por el dúo de autores anónimos sing N song. Una novela que no solo rompió récords con cientos de millones de lecturas, sino que construyó la declaración de amor más profunda jamás escrita hacia el acto solitario de leer.
+
+6
+00:02:16,560 --> 00:03:08,975
+JORGE: Cuando analizas Omniscient Reader, descubres que su genialidad no está en los monstruos ni en los combates; está en cómo convierte la relación entre autor, protagonista y lector en un triángulo existencial. Para acompañarnos en esta travesía, fíjate en estos tres momentos clave: Primero: El auge de las webnovels coreanas y la soledad del oficinista. Cómo la literatura capitulada diaria sustituyó a las bibliotecas tradicionales en las metrópolis asiáticas. Segundo: La metaficción de la supervivencia. Por qué Kim Dokja no sobrevive al apocalipsis por ser el más fuerte, sino por ser el único que comprendió el dolor de los personajes leyendo hasta la última página. Y tercero: El pacto del autor y el lector. La revelación de por qué escribir una historia para una sola persona puede ser suficiente para salvar una vida en el mundo real.
+
+7
+00:03:08,975 --> 00:03:15,671
+DALIA: Ponte cómodo, ponte tus audífonos, respira profundo... y acompáñanos a subir al tren de Seúl.
+
+8
+00:03:15,671 --> 00:03:39,072
+DALIA: Para entender el impacto de Omniscient Reader, primero hay que entender cómo lee la sociedad contemporánea. En Seúl, Tokio o Ciudad de México, el ritmo de vida moderno destruyó el hábito de sentarse durante horas con un libro pesado en la sala. La gente lee de pie, tambaleándose en el transporte público, esperando el cambio de semáforo o comiendo sola en una tienda de conveniencia.
+
+9
+00:03:39,072 --> 00:04:08,544
+JORGE: Las plataformas coreanas como Munpia entendieron esa realidad y crearon un modelo editorial radical: novelas serializadas que publican un capítulo diario de unas mil quinientas palabras a una hora fija. Cuesta apenas unos centavos desbloquear un capítulo. Pero lo revolucionario es la inmediatez: al final de cada texto hay una sección de comentarios en tiempo real donde los lectores debaten teorías, critican decisiones o simplemente le agradecen al autor por acompañarlos un día más.
+
+10
+00:04:08,544 --> 00:04:38,016
+DALIA: Los autores de Omniscient Reader —un matrimonio que firma bajo el seudónimo sing N song— vivieron esa realidad en carne propia. Escribían desde un modesto departamento, enfrentando el agotamiento y la ansiedad creativa. Y plasmaron esa vivencia en su protagonista: Kim Dokja es el reflejo de millones de jóvenes urbanos que sienten que la sociedad los ha dejado atrás, personas para quienes la ficción no es una simple distracción, sino el único refugio cálido donde pueden sentirse comprendidos.
+
+11
+00:04:38,016 --> 00:04:57,024
+JORGE: La premisa de la novela arranca cuando el mundo real colapsa y se convierte en el escenario apocalíptico de la novela que Dokja leía. Aparecen criaturas míticas y constelaciones estelares que transmiten el sufrimiento humano como si fuera un reality show cósmico. Pero aquí ocurre la gran subversión del género.
+
+12
+00:04:57,024 --> 00:05:21,648
+DALIA: En cualquier historia convencional, el héroe es un guerrero con fuerza sobrehumana o un genio mágico. En este universo, el personaje principal original se llama Yoo Joonghyuk: un hombre destinado a regresar en el tiempo cada vez que muere, acumulando siglos de traumas, pérdida y desesperación en un ciclo eterno. Pero Yoo Joonghyuk no es quien salva el mundo. Quien lo salva es Kim Dokja.
+
+13
+00:05:21,648 --> 00:05:59,208
+JORGE: ¿Y cuál es el superpoder de Kim Dokja? El Punto de Vista del Lector Omnisciente. Dokja no tiene fuerza física descomunal; tiene la memoria de haber leído cada tropiezo, cada lágrima y cada secreto de los personajes durante diez años. Es una metáfora literaria deslumbrante: el lector no es un observador pasivo que mira desde afuera; el lector es quien le da sentido a la historia. Sin alguien que lea las penurias de un personaje, el sufrimiento de ese héroe no existe en ninguna parte. Dokja sobrevive porque es el único que verdaderamente ama a los personajes más allá del texto.
+
+14
+00:05:59,208 --> 00:06:11,088
+DALIA: Hacia el tramo final de la obra, sing N song desvela el misterio más conmovedor de toda la trama: ¿quién era el autor anónimo que escribió más de tres mil capítulos sin cobrar un solo centavo y sin tener lectores?
+
+15
+00:06:11,088 --> 00:06:38,951
+JORGE: La respuesta es un nudo en la garganta. La historia fue escrita específicamente para Kim Dokja. En una paradoja temporal y emocional sublime, descubrimos que el autor continuó escribiendo noche tras noche porque sabía que si dejaba de publicar un solo día, aquel joven solitario en el metro de Seúl perdería la última razón que le quedaba para no quitarse la vida. El texto existía para mantenerlo con vida, y Dokja vivía para leer el texto.
+
+16
+00:06:38,951 --> 00:07:10,319
+DALIA: Esa es la tesis suprema de Omniscient Reader: el pacto invisible entre quien escribe y quien lee. Cuando un autor se sienta solo frente al teclado a las dos de la mañana, no sabe quién, al otro lado de una pantalla a miles de kilómetros de distancia, está encontrando consuelo en sus palabras. Una historia puede ser defectuosa, puede tener errores de ritmo o ser rechazada por los críticos literarios; pero si logró que una sola persona decidiera resistir hasta el día siguiente, esa historia ha cumplido el propósito más sagrado del arte humano.
+
+17
+00:07:10,319 --> 00:07:17,663
+JORGE: Entremos a nuestra cápsula Fuera de la Burbuja para analizar cómo esta novela redefinió la narrativa transmedia global.
+
+18
+00:07:17,663 --> 00:07:42,360
+DALIA: Tras conquistar las plataformas de texto, Omniscient Reader fue adaptada al formato de webtoon vertical con arte del estudio Redice. El éxito fue tan descomunal que superó los trescientos millones de lecturas globales, demostrando que la estructura de niveles, habilidades cuantificadas y escenarios tipo videojuego no abaratan la literatura, sino que crean un nuevo lenguaje visual perfectamente adaptado a la psicología de la era digital.
+
+19
+00:07:42,360 --> 00:08:06,168
+JORGE: Sing N song demostró a los escritores de todo el mundo que se puede combinar la adrenalina de los sistemas mágicos de progresión con dilemas morales sobre el libre albedrío, la culpa del superviviente y el duelo. Hoy en día, la obra está en camino a convertirse en una superproducción cinematográfica de acción real y en serie de animación, llevando la voz de aquel lector solitario del metro a cada rincón del planeta.
+
+20
+00:08:06,168 --> 00:08:20,639
+DALIA: Omniscient Reader's Viewpoint nos recuerda que todos nosotros, en algún momento oscuro de nuestra vida, hemos sido Kim Dokja: buscando desesperadamente entre las páginas de un libro o los minutos de un podcast una voz que nos diga que nuestra existencia importa.
+
+21
+00:08:20,639 --> 00:08:34,271
+JORGE: Si deseas leer nuestro ensayo completo sobre la metaficción en las webnovels coreanas y revisar la bibliografía académica sobre narrativa digital en formato APA, visita nuestra revista en escucha guion sia punto github punto io.
+
+22
+00:08:34,271 --> 00:08:52,607
+DALIA: Muchísimas gracias por acompañarnos en esta inauguración de sIA Novelas. Cuéntanos en los comentarios qué historia o libro te salvó la vida en un momento difícil y qué otra gran novela te gustaría que desglosemos. Que tengas una noche reconfortante y serena... y nos escuchamos en la próxima entrega de Sia.
+
+23
+00:08:52,607 --> 00:08:54,575
+JORGE: Hasta la próxima.
