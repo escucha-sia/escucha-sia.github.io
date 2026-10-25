@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js | sIA Digital Magazine</title>
+    <meta name="description" content="La anatomía técnica y humana detrás de Plane (makeplane/plane): Cómo dos hermanos en Hyderabad desafiaron el monopolio de Jira, la catarsis de Reddit ">
+    <link rel="stylesheet" href="../assets/css/magazine.css">
+    <link rel="icon" type="image/jpeg" href="../cover.jpg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand">
+                <img src="../cover.jpg" alt="sIA Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>sIA Journal</h1>
+                    <span>Revista Digital & Podcast Tech</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#deep-dives" class="nav-link">Deep Dives</a>
+                <a href="../index.html#noticias" class="nav-link">NoticIAs</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="btn-pill btn-spotify">Spotify</a>
+                <a href="../podcast.xml" target="_blank" class="btn-pill btn-rss">Feed RSS</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Revista sIA</a> &rsaquo; <span>sIA Deep Dive</span> &rsaquo; <span>Artículo</span>
+        </nav>
+
+        <article>
+            <header class="article-header">
+                <span class="badge badge-cyan">sIA Deep Dive</span>
+                <h1 class="article-title">sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js</h1>
+                <p class="article-subtitle">La anatomía técnica y humana detrás de Plane (makeplane/plane): Cómo dos hermanos en Hyderabad desafiaron el monopolio de Jira, la catarsis de Reddit ante la burocracia de Atlassian y la valiente migración de más de 1,200 archivos de Next.js a Vite.</p>
+
+                <div class="author-bar">
+                    <div>Investigación: <strong>Carlos Corona</strong> & <strong>sIA Editora</strong></div>
+                    <div>•</div>
+                    <div>Fecha: <strong>Sun, 25 Oct 2026 21:00:00 GMT</strong></div>
+                    <div>•</div>
+                    <div>Lectura: <strong>12 min</strong></div>
+                </div>
+            </header>
+
+            <!-- Embedded Audio Player -->
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="spotify-badge-btn" title="Ver en canal de Spotify (sincronizando catálogo)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify Show
+                    </a>
+                </div>
+                <audio controls preload="metadata">
+                    <source src="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.mp3" type="audio/mpeg">
+                    <track src="../audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.vtt" kind="subtitles" srclang="es" label="Español (Subtítulos)" default>
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+            
+
+            <!-- Main Article Body -->
+            <div class="article-body">
+                <div class="thesis-callout">
+                    <h4>Tesis Central de Investigación</h4>
+                    <p>"El software de productividad corporativa sufre una degradación entrópica inevitable cuando prioriza la extracción de rentas sobre la ergonomía cognitiva del desarrollador. Plane demuestra que la soberanía de datos y el código abierto bajo AGPLv3, combinados con una arquitectura SPA reactiva sin la sobrecarga de frameworks SSR innecesarios, son el antídoto definitivo frente al monopolio y la parálisis burocrática."</p>
+                </div>
+
+                <div style="background: rgba(148, 163, 184, 0.05); padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.9rem; color: #94a3b8;">
+                    <strong>Nexo de Bitácora:</strong> Especial de Soberanía Tecnológica & Arquitectura de Software: Análisis del ecosistema self-hosted, comparativa técnica Jira/Linear/Plane y lecciones de refactorización frontend a gran escala.
+                </div>
+
+                
+        <section class="article-section">
+            <h2>1. La Fatiga de Jira y el Fin de la Soberanía On-Premise</h2>
+            <p>En la cultura del desarrollo de software contemporáneo, pocas herramientas concentran un rechazo tan unánime en foros como r/programming y Hacker News como Jira de Atlassian. Concebida originalmente en 2002 como un gestor de incidencias ligero, dos décadas de adquisiciones y expansión corporativa transformaron a la plataforma en una hidra burocrática: formularios hipertrofiados, esquemas de permisos bizantinos y latencias de apertura de tickets que oscilan entre 6 y 10 segundos debido a la descarga masiva de scripts cliente.</p>
+<p>La tensión alcanzó su punto de ruptura cuando Atlassian declaró el fin de soporte para Jira Server, obligando a su base de clientes a migrar a Jira Cloud bajo esquemas de suscripción recurrente por usuario, o asumir costos prohibitivos en licenciamiento Data Center. Para sectores de alta seguridad —banca, salud, defensa e ingeniería aeroespacial—, transferir la totalidad de sus vulnerabilidades, hojas de ruta y secretos industriales a la nube de un tercero representaba una renuncia inaceptable a la soberanía de sus datos.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>2. De Hyderabad a 30,000 Estrellas: La Génesis de Plane</h2>
+            <p>Frente a la disyuntiva entre la pesadez de Jira y la elegancia propietaria pero cerrada de Linear, los hermanos Vamsi y Vihar Kurama —desde la ciudad de Hyderabad, India— decidieron articular una tercera vía. En noviembre de 2022 liberaron el repositorio `makeplane/plane` en GitHub bajo la licencia estricta AGPL-3.0, estructurando una plataforma modular que integra seguimiento de incidencias, ciclos de sprint, módulos de proyecto y documentación tipo Notion en un único lienzo interactivo.</p>
+<p>La propuesta resonó de inmediato en la comunidad de r/selfhosted: la promesa de un sistema ágil con atajos de teclado tipo comando K que cualquier ingeniero puede levantar en su propio homelab o infraestructura privada mediante un simple archivo de Docker Compose. Respaldados por una ronda semilla de 4 millones de dólares liderada por OSS Capital, Plane escaló vertiginosamente hasta superar las 30,000 estrellas en GitHub, consolidándose como uno de los estandartes del software libre comercial moderno (COSS).</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>3. La Gran Refactorización: Por qué Plane Abandonó Next.js por Vite</h2>
+            <p>Uno de los episodios técnicos más aleccionadores en la evolución de Plane ocurrió durante su transición hacia la versión 1.0. Inicialmente edificado sobre Next.js debido a su prominencia en el ecosistema React, el equipo comenzó a experimentar una severa degradación en la experiencia de desarrollo (DX): recargas en caliente (HMR) que demoraban de 20 a 30 segundos por cambio cosmético y contenedores Docker sobredimensionados debido a las dependencias de renderizado en servidor.</p>
+<p>Comprendiendo que Plane es una aplicación interactiva protegida tras autenticación que no requiere optimización para motores de búsqueda (SEO) ni hidratación híbrida compleja, los ingenieros acometieron una reescritura masiva de más de 1,200 archivos y 20,000 líneas de código para extirpar Next.js y migrar a React Router (Framework Mode) junto con Vite. La decisión redujo los tiempos de recarga a milisegundos imperceptibles, aligeró sustancialmente la huella de memoria para los usuarios de self-hosting y demostró que la madurez arquitectónica radica en desestimar las modas de la industria para abrazar la herramienta exacta que el problema exige.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>4. Fuera de la Burbuja: La Paradoja del Open-Core y el Futuro de la Productividad</h2>
+            <p>El crecimiento de Plane no ha estado exento de debates éticos y comerciales. En plataformas como Reddit y Hacker News, la frontera entre la Community Edition (libre y gratuita) y las funciones corporativas de pago (Enterprise Edition) generó fricciones sobre los límites del modelo open-core y las estrategias de adquisición de usuarios mediante métricas de GitHub.</p>
+<p>No obstante, la existencia de Plane ha alterado permanentemente el equilibrio de poder en el software de productividad. Demuestra a las corporaciones hegemónicas que los desarrolladores ya no están cautivos de contratos abusivos ni de herramientas degradadas. La soberanía de los datos, la velocidad de ejecución y el control sobre el entorno de trabajo han dejado de ser lujos negociables para convertirse en exigencias fundacionales de la ingeniería contemporánea.</p>
+        </section>
+        
+
+                <!-- APA Bibliography Section -->
+                <section class="apa-section">
+                    <h3>📚 Referencias Bibliográficas (Formato APA 7ª Edición)</h3>
+                    <ul class="apa-list">
+                        <li class="apa-item">
+                Kurama, V., & Kurama, V. (2022-2024). <em>Plane: The open source project management tool</em>. GitHub Repository: .
+                <span class="apa-url-container">
+                    <a href="https://github.com/makeplane/plane" target="_blank" rel="noopener" class="apa-url">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        https://github.com/makeplane/plane
+                    </a>
+                </span>
+            </li>
+<li class="apa-item">
+                MakePlane Team. (2024). <em>Why and how we migrated from Next.js to Vite across 1,200+ files</em>. Plane Technical Engineering Blog: .
+                <span class="apa-url-container">
+                    <a href="https://plane.so/blog/migration-nextjs-to-vite" target="_blank" rel="noopener" class="apa-url">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        https://plane.so/blog/migration-nextjs-to-vite
+                    </a>
+                </span>
+            </li>
+<li class="apa-item">Atlassian Corporation. (2020). <em>Accelerating our journey to the cloud: Announcing the end of sale for Jira Server licenses</em>. Atlassian Official Announcements.</li>
+<li class="apa-item">Jacks, J. (2024). <em>The continuous rise of commercial open source software (COSS) and the sovereign developer stack</em>. OSS Capital Research Reports.</li>
+<li class="apa-item">Reddit Community. (2023-2024). <em>Self-hosting project management: Experiences, benchmarks and debates on makeplane/plane</em>. r/selfhosted & r/programming Archives.</li>
+<li class="apa-item">Linear Orbit, Inc. (2022). <em>The Linear Method: Principles of high-performance project execution and keyboard-first design</em>. Linear Method Publications.</li>
+
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Revista Digital</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank">Spotify Show</a>
+                <a href="../podcast.xml">Feed RSS</a>
+                <a href="https://github.com/escucha-sia/escucha-sia.github.io" target="_blank">GitHub Repository</a>
+            </div>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
+        </div>
+    </footer>
+
+    <!-- Anti-Copy & Content Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

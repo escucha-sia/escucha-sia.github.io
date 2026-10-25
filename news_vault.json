@@ -357,6 +357,19 @@
       ],
       "cooldown_days": 45,
       "date": "Sat, 24 Oct 2026 21:00:00 GMT"
+    },
+    {
+      "title": "sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js",
+      "filename": "sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.mp3",
+      "topics": [
+        "sIA Deep Dive #48: Plane (makeplane/plane) y la rebelión de código abierto contra Jira",
+        "La muerte de Jira Server y el hartazgo de los desarrolladores en Reddit r/programming",
+        "La tentación de Linear: elegancia estética versus el jardín vallado propietario",
+        "Los hermanos Vamsi y Vihar Kurama: de Hyderabad a $4M con OSS Capital bajo AGPLv3",
+        "La migración masiva de 1,200 archivos: por qué abandonaron Next.js para abrazar Vite y React Router"
+      ],
+      "cooldown_days": 45,
+      "date": "Sun, 25 Oct 2026 21:00:00 GMT"
     }
   ],
   "last_run": "2026-10-10"

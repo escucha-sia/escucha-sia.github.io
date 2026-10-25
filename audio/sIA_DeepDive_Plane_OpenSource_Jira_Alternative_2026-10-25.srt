@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:01:09,719
+JORGE: Pregúntale a cualquier desarrollador de software en el planeta cuál es la herramienta que más drena su energía vital en el trabajo diario, y nueve de cada diez no dudarán en darte el mismo nombre: Jira. Hay un hilo legendario en Reddit, en la comunidad de programación, con miles de votos positivos titulado simplemente: 'Jira es el lugar donde el entusiasmo de programar va a morir'. La anécdota se repite en miles de oficinas: son las diez de la mañana, acabas de resolver un error complejo en el código, pero antes de hacer el commit tienes que documentarlo. Haces clic en un enlace de Jira... y la pantalla se queda en blanco. Dos segundos. Cuatro segundos. Ocho segundos enteros de ruleta girando mientras tu navegador descarga megabytes de scripts pesados, formularios infinitos de campos obligatorios y permisos bizantinos configurados por un departamento de recursos humanos que jamás ha escrito una línea de código. En noviembre de dos mil veintidós, dos hermanos en Hyderabad, India, dijeron: 'Basta. No podemos seguir viviendo así'. Y abrieron un repositorio en GitHub llamado Plane.
+
+2
+00:01:09,719 --> 00:01:16,319
+DALIA: Hola, ¿cómo estás? Qué gusto saludarte. Mi nombre es Dalia...
+
+3
+00:01:16,319 --> 00:01:21,095
+JORGE: ... y yo soy Jorge. Te damos una cálida bienvenida a Sia.
+
+4
+00:01:21,095 --> 00:01:39,839
+DALIA: Hoy en sIA exploramos un caso fascinante de soberanía tecnológica y arquitectura de software: el fenómeno de Plane, el proyecto de código abierto alojado en makeplane barra plane que ha sacudido a la industria de la gestión de proyectos, acumulando más de treinta mil estrellas en GitHub y desafiando el imperio multimillonario de Atlassian.
+
+5
+00:01:39,839 --> 00:02:00,671
+JORGE: Este no es solo un episodio sobre administración de tareas; es una radiografía profunda sobre por qué las herramientas corporativas se vuelven lentas y alienantes, cómo la comunidad de Reddit impulsó una alternativa autoalojada y la valiente decisión de ingeniería que tomó el equipo de Plane cuando decidieron arrancar de raíz a Next punto j-s para migrar toda su plataforma a Vite.
+
+6
+00:02:00,671 --> 00:02:47,159
+DALIA: Para desglosar este caso en toda su dimensión técnica y humana, Jorge y yo hemos dividido la bitácora en tres momentos clave: Primero: El fin de la era Jira Server y el hartazgo de la comunidad. Cómo Atlassian forzó a miles de empresas a migrar a su nube cerrada y por qué herramientas como Linear enamoraron a Silicon Valley pero dejaron desamparados a los defensores del software libre. Segundo: Los hermanos Kurama y el nacimiento de Plane. De un prototipo en Hyderabad a recibir cuatro millones de dólares de OSS Capital bajo licencia abierta A-G-P-L versión tres. Y tercero: La rebelión de los mil doscientos archivos. Por qué tiraron Next punto j-s a la basura tras sufrir tiempos de espera de treinta segundos en desarrollo y cómo Vite les devolvió la velocidad instantánea.
+
+7
+00:02:47,159 --> 00:02:58,512
+JORGE: Si eres desarrollador, líder técnico o simplemente estás cansado de la burocracia digital, ajusta tus audífonos, respira profundo... y acompáñanos a analizar este viaje.
+
+8
+00:02:58,512 --> 00:03:22,367
+DALIA: Para comprender el éxito fulgurante de Plane, hay que entender la tormenta perfecta que desató Atlassian. Durante casi dos décadas, Jira fue el estándar indiscutible de la industria. Si una empresa crecía, instalaba Jira Server en sus propios centros de datos. Pero en dos mil veinte, Atlassian anunció una decisión comercial letal: la muerte definitiva de Jira Server.
+
+9
+00:03:22,367 --> 00:03:56,087
+JORGE: El mensaje para los clientes fue contundente: o migraban obligatoriamente a Jira Cloud, pagando suscripciones mensuales recurrentes por usuario donde Atlassian custodia todos tus datos en sus servidores, o pagaban licencias corporativas Data Center que costaban cientos de miles de dólares al año. Para equipos médicos, instituciones financieras, entidades gubernamentales y empresas con políticas estrictas de privacidad, esto fue una bofetada. No podían legalmente poner sus secretos industriales y fallos de seguridad en la nube pública de un tercero.
+
+10
+00:03:56,087 --> 00:04:24,504
+DALIA: Al mismo tiempo, en Silicon Valley surgió Linear: una herramienta deslumbrante diseñada con obsesión por la velocidad. Con atajos de teclado tipo comando K, transiciones a sesenta fotogramas por segundo y una interfaz limpia y minimalista, Linear demostró que registrar un bug podía sentirse tan ágil como escribir en un editor de texto. Pero Linear tenía un gran inconveniente: era un jardín vallado, cien por ciento propietario y exclusivamente disponible en la nube.
+
+11
+00:04:24,504 --> 00:04:42,504
+JORGE: Los desarrolladores en foros como r diagonal selfhosted se hacían la misma pregunta desesperada: '¿Por qué no podemos tener la belleza y agilidad de Linear, con la potencia de sprints y módulos de Jira, pero bajo código abierto que podamos correr en nuestro propio servidor con un simple comando de Docker Compose?'
+
+12
+00:04:42,504 --> 00:04:56,759
+DALIA: Esa pregunta fue la chispa que encendió a Vamsi Kurama y su hermano Vihar Kurama en Hyderabad. No querían fundar otra consultora de software tradicional; querían construir una alternativa soberana desde el sur global para el resto del planeta.
+
+13
+00:04:56,759 --> 00:05:26,135
+JORGE: En noviembre de dos mil veintidós publicaron el código de Plane bajo la licencia A-G-P-L versión tres. Su propuesta era directa: una plataforma modular que combina problemas, ciclos de trabajo, hojas de ruta y páginas de documentación estilo Notion en un solo espacio unificado. Pero con una regla innegociable: la edición comunitaria debía ser completamente gratuita, sin límites artificiales de usuarios y desplegable en tu propia infraestructura con contenedores Docker.
+
+14
+00:05:26,135 --> 00:06:01,583
+DALIA: La respuesta en Reddit y Hacker News fue explosiva. En cuestión de meses, Plane se convirtió en uno de los repositorios con mayor crecimiento orgánico en GitHub. Ingenieros de todo el mundo comenzaron a contribuir con traducciones, integraciones con GitHub y GitLab, y adaptadores para bases de datos Postgres. El fondo estadounidense O-S-S Capital, especializado en respaldar empresas comerciales de código abierto, lideró una ronda semilla de cuatro millones de dólares, validando que el software libre no es una obra de caridad, sino el modelo de desarrollo más robusto del siglo veintiuno.
+
+15
+00:06:01,583 --> 00:06:14,111
+JORGE: Pero en el corazón de todo gran proyecto de software llega un momento donde las decisiones arquitectónicas del pasado se convierten en un ancla. Y para Plane, esa ancla se llamaba Next punto j-s.
+
+16
+00:06:14,111 --> 00:06:35,543
+DALIA: Cuando los hermanos Kurama comenzaron a programar Plane, eligieron el framework Next punto j-s porque era la opción por defecto en el ecosistema de React. Tenía gran popularidad y facilitaba el enrutamiento inicial. Sin embargo, conforme el código creció hasta superar miles de componentes, el equipo empezó a sufrir una pesadilla técnica interna.
+
+17
+00:06:35,543 --> 00:07:10,007
+JORGE: En publicaciones sumamente francas en su blog técnico y en Reddit, los ingenieros de Plane confesaron la cruda verdad: el servidor de desarrollo de Next tardaba entre veinte y treinta segundos en reflejar un cambio simple de código en pantalla. Cada vez que un desarrollador modificaba un botón o un estilo, tenía que esperar medio minuto para ver el resultado. Además, Plane es una aplicación interactiva que vive detrás de una pantalla de inicio de sesión; no es un periódico digital ni un blog de comercio electrónico que requiera renderizado en el servidor para posicionamiento en Google.
+
+18
+00:07:10,007 --> 00:07:37,367
+DALIA: Next punto j-s forzaba capas innecesarias de complejidad, hidratación en el cliente y contenedores de Docker pesados que consumían demasiada memoria en los servidores pequeños de los usuarios de self-hosting. Así que el equipo tomó una decisión que la mayoría de las empresas teme: en su versión uno punto cero, reescribieron más de mil doscientos archivos y veinte mil líneas de código para extirpar a Next punto j-s y migrar todo el frontend a React Router en modo framework junto a Vite.
+
+19
+00:07:37,367 --> 00:08:04,752
+JORGE: El cambio fue instantáneo: las recargas en caliente pasaron de treinta segundos a milisegundos imperceptibles. Los paquetes de despliegue para Docker se aligeraron drásticamente y la fluidez de navegación para el usuario final alcanzó la velocidad que los desarrolladores siempre habían soñado. Demostraron que la verdadera madurez técnica no es seguir la moda de los frameworks de moda, sino tener la valentía de elegir la herramienta correcta para el problema real.
+
+20
+00:08:04,752 --> 00:08:13,271
+DALIA: Entremos a nuestra cápsula Fuera de la Burbuja, porque no todo es idílico en el mundo del código abierto y es necesario hablar de las tensiones reales.
+
+21
+00:08:13,271 --> 00:08:47,375
+JORGE: En comunidades como r diagonal selfhosted, Plane ha sido celebrado como un héroe, pero también ha generado debates intensos sobre el modelo de negocio open-core. Algunos usuarios expresaron inquietud cuando ciertas funciones avanzadas de nivel corporativo se reservaron para la versión comercial de pago. Los fundadores tuvieron que ser muy transparentes: mantener a decenas de ingenieros de tiempo completo resolviendo errores y actualizando el software exige sostenibilidad financiera; de lo contrario, el proyecto muere abandonado como tantos repositorios de GitHub.
+
+22
+00:08:47,375 --> 00:09:12,096
+DALIA: A pesar de esos debates, el impacto de Plane es innegable: le ha devuelto a miles de equipos de tecnología la soberanía de sus propios datos. Saber que tus proyectos, tus discusiones internas y tus hojas de ruta están seguras en tu propio servidor, sin temor a que una corporación te duplique el precio de la noche a la mañana o te cierre el servicio, es una tranquilidad que el dinero de las suscripciones corporativas no puede comprar.
+
+23
+00:09:12,096 --> 00:09:30,480
+JORGE: Plane nos recuerda una lección fundamental de la ingeniería moderna: cuando una herramienta que usamos todos los días se vuelve lenta, arrogante y costosa, la respuesta de la comunidad de desarrolladores nunca es resignarse; la respuesta siempre es abrir una terminal, escribir código y construir algo mejor.
+
+24
+00:09:30,480 --> 00:09:44,783
+DALIA: Si deseas consultar los diagramas de arquitectura de la migración de Next a Vite de Plane, y revisar los enlaces al repositorio de GitHub con bibliografía técnica en formato APA, visita nuestra revista digital en escucha guion sia punto github punto io.
+
+25
+00:09:44,783 --> 00:10:05,375
+JORGE: Muchísimas gracias por acompañarnos en este viaje por las trincheras del software libre. Déjanos en los comentarios qué opinas de Jira, si has probado Plane o Linear, y qué otro gran proyecto de código abierto te gustaría que analicemos a fondo. Que tengas una excelente jornada... y nos escuchamos en el próximo episodio de Sia.
+
+26
+00:10:05,375 --> 00:10:07,439
+DALIA: Hasta la próxima.

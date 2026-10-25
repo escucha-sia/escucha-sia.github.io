@@ -74,6 +74,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # 0. Episodio Especial sIA Deep Dive 48 - 25 de Octubre de 2026
+    "sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.mp3": {
+        "slug": "sia-deepdive-plane-opensource-jira-alternative-atlassian",
+        "category": "sIA Deep Dive",
+        "badge_color": "cyan",
+        "read_time": "12 min",
+        "title": "sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js",
+        "subtitle": "La anatomía técnica y humana detrás de Plane (makeplane/plane): Cómo dos hermanos en Hyderabad desafiaron el monopolio de Jira, la catarsis de Reddit ante la burocracia de Atlassian y la valiente migración de más de 1,200 archivos de Next.js a Vite.",
+        "thesis": "El software de productividad corporativa sufre una degradación entrópica inevitable cuando prioriza la extracción de rentas sobre la ergonomía cognitiva del desarrollador. Plane demuestra que la soberanía de datos y el código abierto bajo AGPLv3, combinados con una arquitectura SPA reactiva sin la sobrecarga de frameworks SSR innecesarios, son el antídoto definitivo frente al monopolio y la parálisis burocrática.",
+        "nexo": "Especial de Soberanía Tecnológica & Arquitectura de Software: Análisis del ecosistema self-hosted, comparativa técnica Jira/Linear/Plane y lecciones de refactorización frontend a gran escala.",
+        "content_blocks": [
+            {
+                "title": "1. La Fatiga de Jira y el Fin de la Soberanía On-Premise",
+                "body": """
+En la cultura del desarrollo de software contemporáneo, pocas herramientas concentran un rechazo tan unánime en foros como r/programming y Hacker News como Jira de Atlassian. Concebida originalmente en 2002 como un gestor de incidencias ligero, dos décadas de adquisiciones y expansión corporativa transformaron a la plataforma en una hidra burocrática: formularios hipertrofiados, esquemas de permisos bizantinos y latencias de apertura de tickets que oscilan entre 6 y 10 segundos debido a la descarga masiva de scripts cliente.
+
+La tensión alcanzó su punto de ruptura cuando Atlassian declaró el fin de soporte para Jira Server, obligando a su base de clientes a migrar a Jira Cloud bajo esquemas de suscripción recurrente por usuario, o asumir costos prohibitivos en licenciamiento Data Center. Para sectores de alta seguridad —banca, salud, defensa e ingeniería aeroespacial—, transferir la totalidad de sus vulnerabilidades, hojas de ruta y secretos industriales a la nube de un tercero representaba una renuncia inaceptable a la soberanía de sus datos.
+"""
+            },
+            {
+                "title": "2. De Hyderabad a 30,000 Estrellas: La Génesis de Plane",
+                "body": """
+Frente a la disyuntiva entre la pesadez de Jira y la elegancia propietaria pero cerrada de Linear, los hermanos Vamsi y Vihar Kurama —desde la ciudad de Hyderabad, India— decidieron articular una tercera vía. En noviembre de 2022 liberaron el repositorio `makeplane/plane` en GitHub bajo la licencia estricta AGPL-3.0, estructurando una plataforma modular que integra seguimiento de incidencias, ciclos de sprint, módulos de proyecto y documentación tipo Notion en un único lienzo interactivo.
+
+La propuesta resonó de inmediato en la comunidad de r/selfhosted: la promesa de un sistema ágil con atajos de teclado tipo comando K que cualquier ingeniero puede levantar en su propio homelab o infraestructura privada mediante un simple archivo de Docker Compose. Respaldados por una ronda semilla de 4 millones de dólares liderada por OSS Capital, Plane escaló vertiginosamente hasta superar las 30,000 estrellas en GitHub, consolidándose como uno de los estandartes del software libre comercial moderno (COSS).
+"""
+            },
+            {
+                "title": "3. La Gran Refactorización: Por qué Plane Abandonó Next.js por Vite",
+                "body": """
+Uno de los episodios técnicos más aleccionadores en la evolución de Plane ocurrió durante su transición hacia la versión 1.0. Inicialmente edificado sobre Next.js debido a su prominencia en el ecosistema React, el equipo comenzó a experimentar una severa degradación en la experiencia de desarrollo (DX): recargas en caliente (HMR) que demoraban de 20 a 30 segundos por cambio cosmético y contenedores Docker sobredimensionados debido a las dependencias de renderizado en servidor.
+
+Comprendiendo que Plane es una aplicación interactiva protegida tras autenticación que no requiere optimización para motores de búsqueda (SEO) ni hidratación híbrida compleja, los ingenieros acometieron una reescritura masiva de más de 1,200 archivos y 20,000 líneas de código para extirpar Next.js y migrar a React Router (Framework Mode) junto con Vite. La decisión redujo los tiempos de recarga a milisegundos imperceptibles, aligeró sustancialmente la huella de memoria para los usuarios de self-hosting y demostró que la madurez arquitectónica radica en desestimar las modas de la industria para abrazar la herramienta exacta que el problema exige.
+"""
+            },
+            {
+                "title": "4. Fuera de la Burbuja: La Paradoja del Open-Core y el Futuro de la Productividad",
+                "body": """
+El crecimiento de Plane no ha estado exento de debates éticos y comerciales. En plataformas como Reddit y Hacker News, la frontera entre la Community Edition (libre y gratuita) y las funciones corporativas de pago (Enterprise Edition) generó fricciones sobre los límites del modelo open-core y las estrategias de adquisición de usuarios mediante métricas de GitHub.
+
+No obstante, la existencia de Plane ha alterado permanentemente el equilibrio de poder en el software de productividad. Demuestra a las corporaciones hegemónicas que los desarrolladores ya no están cautivos de contratos abusivos ni de herramientas degradadas. La soberanía de los datos, la velocidad de ejecución y el control sobre el entorno de trabajo han dejado de ser lujos negociables para convertirse en exigencias fundacionales de la ingeniería contemporánea.
+"""
+            }
+        ],
+        "apa_references": [
+            "Kurama, V., & Kurama, V. (2022-2024). *Plane: The open source project management tool*. GitHub Repository: https://github.com/makeplane/plane.",
+            "MakePlane Team. (2024). *Why and how we migrated from Next.js to Vite across 1,200+ files*. Plane Technical Engineering Blog: https://plane.so/blog/migration-nextjs-to-vite.",
+            "Atlassian Corporation. (2020). *Accelerating our journey to the cloud: Announcing the end of sale for Jira Server licenses*. Atlassian Official Announcements.",
+            "Jacks, J. (2024). *The continuous rise of commercial open source software (COSS) and the sovereign developer stack*. OSS Capital Research Reports.",
+            "Reddit Community. (2023-2024). *Self-hosting project management: Experiences, benchmarks and debates on makeplane/plane*. r/selfhosted & r/programming Archives.",
+            "Linear Orbit, Inc. (2022). *The Linear Method: Principles of high-performance project execution and keyboard-first design*. Linear Method Publications."
+        ]
+    },
     # 0. Episodio Especial sIA Novelas 01 - 24 de Octubre de 2026
     "sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.mp3": {
         "slug": "sia-novelas-01-omniscient-reader-viewpoint-metaficcion",

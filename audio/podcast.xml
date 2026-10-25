@@ -12,7 +12,20 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-        <item>
+            <item>
+      <title>sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js</title>
+      <link>https://escucha-sia.github.io/articulos/sia-deepdive-plane-opensource-jira-alternative-atlassian.html</link>
+      <description><![CDATA[sIA Deep Dive #48: La historia detrás de Plane (github.com/makeplane/plane). Cómo los hermanos Vamsi y Vihar Kurama desafiaron el monopolio de Atlassian desde Hyderabad, el hartazgo de los desarrolladores en Reddit ante la lentitud de Jira, la seducción de Linear y la decisión técnica radical de eliminar Next.js para migrar más de 1,200 archivos a React Router y Vite. | Leer artículo y análisis de arquitectura APA: https://escucha-sia.github.io/articulos/sia-deepdive-plane-opensource-jira-alternative-atlassian.html]]></description>
+      <pubDate>Sun, 25 Oct 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.mp3" length="16107594" type="audio/mpeg"/>
+      <guid isPermaLink="false">sia-deepdive-plane-opensource-jira-alternative</guid>
+      <itunes:duration>10:06</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.srt" type="application/x-subrip" language="es"/>
+    </item>
+<item>
       <title>sIA Novelas #01: Omniscient Reader's Viewpoint: La Novela que Salvó la Vida de un Lector Solitario en el Metro de Seúl</title>
       <link>https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html</link>
       <description><![CDATA[sIA Novelas #01: El fenómeno literario de las webnovels coreanas y la arquitectura de la metaficción. La historia de Kim Dokja, un oficinista anónimo que sobrevivió a la depresión leyendo cada noche en el metro un manuscrito ignorado por todos, el pacto íntimo entre quien escribe en soledad y quien lee para no rendirse, y cómo Omniscient Reader's Viewpoint se convirtió en la mayor carta de amor a la lectura de nuestra generación. | Leer artículo y análisis narrativo APA: https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html]]></description>
