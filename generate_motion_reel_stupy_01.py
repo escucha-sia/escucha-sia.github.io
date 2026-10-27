@@ -21,7 +21,7 @@ ENGINE_DIR = BASE_DIR / "sia_tiktok_batch_engine"
 AUDIO_DIR = BASE_DIR / "audio"
 REELS_DIR = BASE_DIR / "reels"
 SPOTIFY_REELS_DIR = Path(r"C:\Users\c_a_c\Music\NoticIAs\Reels")
-NODE_PATH = r"C:\Carlos\nodejs"
+NODE_PATH = r"C:\Program Files\nodejs"
 
 TARGET_REEL = REELS_DIR / "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4"
 DURATION = 45.0
@@ -633,8 +633,20 @@ def render_motion_reel():
     env = os.environ.copy()
     env["PATH"] = f"{NODE_PATH};" + env.get("PATH", "")
     
-    cmd = ["cmd.exe", "/c", f"cd /d {ENGINE_DIR} && npx hyperframes render --gpu"]
+    renders_dir = ENGINE_DIR / "renders"
+    if renders_dir.exists():
+        for old_vid in renders_dir.glob("*.mp4"):
+            try:
+                old_vid.unlink()
+            except Exception:
+                pass
+
+    cmd = ["cmd.exe", "/c", f"set PATH={NODE_PATH};%PATH% && cd /d {ENGINE_DIR} && npx hyperframes render --gpu"]
     res = subprocess.run(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if res.returncode != 0:
+        print("HyperFrames stdout:", res.stdout)
+        print("HyperFrames stderr:", res.stderr)
+        raise RuntimeError(f"Fallo al renderizar Reel en HyperFrames: {res.stderr}")
     
     output_mp4 = ENGINE_DIR / "renders" / "video.mp4"
     if not output_mp4.exists():
