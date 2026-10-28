@@ -519,6 +519,7 @@ def write_hyperframes_html():
     </style>
   </head>
   <body>
+    <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: relative; width: 1080px; height: 1920px; overflow: hidden;">
     <!-- 1. Halftone comic overlay -->
     <div class="halftone-overlay"></div>
 
@@ -621,6 +622,7 @@ def write_hyperframes_html():
     <!-- 6. Bottom Progress Bar -->
     <div class="progress-bar-container">
       <div class="progress-fill"></div>
+    </div>
     </div>
   </body>
 </html>"""
