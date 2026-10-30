@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3": "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4",
     "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4",
     "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": "sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4",
     "sIA_Corp_03_Nintendo_vs_Sony_Playstation_1991_2026-10-22.mp3": "sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4",
@@ -2572,6 +2573,8 @@ def render_magazine_index(catalog):
     reels_showcase_html = ""
     reels_items = [it for it in catalog if it.get("reel_video")]
     if reels_items:
+        # Mostrar primero los reels más recientes según la fecha de su archivo .mp4
+        reels_items.sort(key=lambda it: (BASE_DIR / "reels" / it["reel_video"]).stat().st_mtime if (BASE_DIR / "reels" / it["reel_video"]).exists() else 0, reverse=True)
         reels_cards_html = ""
         for r in reels_items:
             poster_fn = Path(r["reel_video"]).stem + "_poster.jpg"

@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "id": "node-inbox",
+      "x": -600,
+      "y": 0,
+      "width": 300,
+      "height": 180,
+      "type": "text",
+      "text": "### 1. Ingesta & Mito\n- Detectar creencia exagerada (Twitter, Reddit)\n- Ej: *\"Copiar código con IA te hace 10x más rápido\"*\n- Formular contraste: *¿O no?*"
+    },
+    {
+      "id": "node-script",
+      "x": -220,
+      "y": 0,
+      "width": 320,
+      "height": 220,
+      "type": "text",
+      "text": "### 2. Guion Markdown (Jorge & Dalia)\n- **Jorge:** Presenta mito y dolor del dev.\n- **Dalia:** Datos de Stanford/GitHub y regla técnica.\n- Estructura exacta en 4 escenas (45 seg)."
+    },
+    {
+      "id": "node-engine",
+      "x": 180,
+      "y": 0,
+      "width": 340,
+      "height": 240,
+      "type": "text",
+      "text": "### 3. Motor Automatizado sIA\n- **EdgeTTS:** Voces es-MX a +6% velocidad.\n- **FFmpeg:** Cama de tensión y máster -16 LUFS.\n- **HyperFrames:** Cómic-Pop Halftone por GPU."
+    },
+    {
+      "id": "node-git",
+      "x": 600,
+      "y": 0,
+      "width": 320,
+      "height": 200,
+      "type": "text",
+      "text": "### 4. Git Vault Sync & Publicación\n- Commit automático con trazabilidad total.\n- Subida a `escucha-sia.github.io`.\n- Embed disponible en Obsidian con `![[video.mp4]]`."
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "node-inbox",
+      "fromSide": "right",
+      "toNode": "node-script",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "node-script",
+      "fromSide": "right",
+      "toNode": "node-engine",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "node-engine",
+      "fromSide": "right",
+      "toNode": "node-git",
+      "toSide": "left"
+    }
+  ]
+}
