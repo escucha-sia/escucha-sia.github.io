@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
     "sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3": "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4",
     "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4",
     "sIA_Terror_02_El_Moderador_Nocturno_Cola_7_2026-10-23.mp3": "sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4",
@@ -75,6 +76,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Dev 01 - El Síndrome de la Niñera de Prompts (AI Burnout) - 30 de Octubre de 2026
+    "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": {
+        "slug": "sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout",
+        "category": "sIA Tech & Dev",
+        "badge_color": "purple",
+        "read_time": "10 min",
+        "title": "sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review",
+        "subtitle": "Cuando programar se convirtió en presionar 'Enter' 500 veces al día: El colapso del 'LGTM', los Pull Requests masivos sin auditar, la pérdida de soberanía técnica y el nuevo paradigma de verificación arquitectónica.",
+        "thesis": "La Inteligencia Artificial generativa no elimina el trabajo intelectual del programador; cuando se adopta sin rigor arquitectónico, degrada al ingeniero en un burócrata de validación superficial ('niñera de prompts'), acumulando deuda técnica silenciosa que cuadruplica el tiempo de depuración en producción.",
+        "nexo": "Primer capítulo de sIA Dev: Análisis sociotécnico, ingeniería de software contemporánea, psicología del desarrollador y verificación determinista.",
+        "reel_video": "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Confesionario de Reddit y la Fatiga del 'Botón Enter'",
+                "body": """
+Durante el último trimestre de 2026, foros de ingeniería como r/programming y r/softwareengineer han registrado una oleada de testimonios de desarrolladores senior con más de una década de experiencia manifestando un agotamiento existencial inédito. El discurso corporativo prometía que la IA liberaría a los programadores del código repetitivo ('boilerplate') para enfocarse en la creatividad arquitectónica. Sin embargo, la experiencia cotidiana en las trincheras de software se ha transformado en lo que la comunidad denomina el 'síndrome de la niñera de prompts'.
+
+En lugar de razonar estructuras de datos complejas o modelar dominios de negocio, los ingenieros pasan entre 10 y 12 horas diarias frente a sus terminales aprobando sugerencias predictivas, aceptando 'diffs' multilínea y supervisando bucles de agentes autónomos. Esta pérdida de autoría directa sobre el código fragmenta la concentración profunda y genera un estado constante de sospecha: el profesional deja de ser un creador para convertirse en un inspector burocrático de lógica ajena que no escribió ni internalizó mentalmente.
+"""
+            },
+            {
+                "title": "2. La Crisis del Code Review y el Colapso Institucional del 'LGTM'",
+                "body": """
+El síntoma más peligroso de esta transformación es la degradación del proceso de revisión de código (Code Review). Tradicionalmente, un Pull Request bien estructurado contenía entre 50 y 200 líneas de código con intención clara y trazabilidad de pruebas. Con agentes capaces de modificar docenas de archivos en segundos, los repositorios de las empresas se inundan a diario de Pull Requests gigantescos de 1,500 a 3,000 líneas generadas mecánicamente.
+
+Ante la imposibilidad física y cognitiva de auditar semejante volumen de texto sintético, los equipos caen en la pereza sistémica: los revisores le piden a otra IA que resuma los cambios y responden con el clásico 'LGTM' ('Looks Good To Me') sin verificar condiciones de carrera, inyecciones de dependencias ni supuestos de escalabilidad. Se institucionaliza así un circuito cerrado donde el código lo genera una máquina, lo valida otra máquina de forma superficial y se despliega en producción sin que ningún cerebro humano haya comprendido integralmente su comportamiento en casos extremos.
+"""
+            },
+            {
+                "title": "3. La Paradoja de la Confianza: 85% de Adopción, Mínimos Históricos de Fe",
+                "body": """
+Las métricas recientes de la industria reflejan una paradoja contundente: mientras la adopción de herramientas de IA entre ingenieros de software supera el 85%, la confianza en la corrección matemática y lógica del código generado se sitúa en mínimos históricos. Esto se debe a la naturaleza de las fallas contemporáneas: ya no se trata de errores sintácticos burdos que el compilador detiene al instante, sino de código 'casi correcto'.
+
+Un agente moderno redacta funciones con excelente formato visual, variables descriptivas y comentarios convincentes, pero oculta suposiciones erróneas sobre el estado transaccional o filtraciones de memoria en concurrencia. Investigaciones empíricas demuestran que localizar y corregir una alucinación silenciosa en 500 líneas de código generado toma entre tres y cinco veces más tiempo y desgaste cognitivo que escribir el componente desde cero con pruebas de diseño guiadas por el dominio (TDD).
+"""
+            },
+            {
+                "title": "4. La Solución Arquitectónica: Inversión del Control y Verificación Determinista",
+                "body": """
+Para rescatar la dignidad del trabajo técnico y blindar la confiabilidad de los sistemas, la ingeniería de software debe invertir la jerarquía de control. La regla de oro en producción establece que jamás debe permitirse a un modelo probabilístico escribir una sola línea de código antes de que el ingeniero humano haya definido formalmente el contrato determinista del componente.
+
+Esto implica diseñar primero interfaces estrictamente tipadas (TypeSafe, Pydantic, Zod), contratos semánticos y una suite de pruebas de integración inmutables que actúen como árbitros inviolables. El agente de IA puede proponer la implementación dentro de un entorno aislado, pero su trabajo se rechaza automáticamente si falla un solo test. Recuperar la soberanía del desarrollador exige entender que la velocidad no reside en la cantidad de líneas vomitadas por segundo, sino en la solidez del diseño arquitectónico que evita colapsos a las tres de la madrugada.
+"""
+            }
+        ],
+        "apa_references": [
+            "Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations*. IT Revolution Press.",
+            "Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.",
+            "Stack Overflow. (2025). *Developer Survey 2025: AI Tools, Trust Deficits, and the Evolving Role of Code Review*. Stack Overflow Research.",
+            "GitHub & Stanford University. (2024). *The Impact of Generative AI on Developer Velocity and Software Quality: A Longitudinal Case Study*. ACM Transactions on Software Engineering.",
+            "Corona, C., & sIA Editora. (2026). *sIA Dev #01: El síndrome de la niñera de prompts, el colapso del LGTM y la soberanía del software en la era de los agentes*. sIA Technology Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # 0. Episodio Especial sIA Deep Dive 48 - 25 de Octubre de 2026
     "sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.mp3": {
         "slug": "sia-deepdive-plane-opensource-jira-alternative-atlassian",

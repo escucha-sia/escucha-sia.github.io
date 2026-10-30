@@ -12,7 +12,21 @@
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
-            <item>
+    <item>
+      <title>sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review</title>
+      <link>https://escucha-sia.github.io/articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout-y-.html</link>
+      <description>Análisis sobre la fatiga del desarrollador moderno, el colapso del &#x27;LGTM&#x27; en Pull Requests masivos generados por IA, la pérdida de soberanía técnica y el nuevo paradigma de verificación arquitectónica por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout.html</description>
+      <pubDate>Fri, 30 Oct 2026 13:55:24 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3" length="9946761" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3</guid>
+      <itunes:duration>06:54</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA #48: Plane vs. Jira: La Rebelión Open Source contra Atlassian, la Fatiga de los Tickets y el Éxodo de Next.js</title>
       <link>https://escucha-sia.github.io/articulos/sia-deepdive-plane-opensource-jira-alternative-atlassian.html</link>
       <description><![CDATA[sIA Deep Dive #48: La historia detrás de Plane (github.com/makeplane/plane). Cómo los hermanos Vamsi y Vihar Kurama desafiaron el monopolio de Atlassian desde Hyderabad, el hartazgo de los desarrolladores en Reddit ante la lentitud de Jira, la seducción de Linear y la decisión técnica radical de eliminar Next.js para migrar más de 1,200 archivos a React Router y Vite. | Leer artículo y análisis de arquitectura APA: https://escucha-sia.github.io/articulos/sia-deepdive-plane-opensource-jira-alternative-atlassian.html]]></description>
@@ -25,7 +39,7 @@
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.vtt" type="text/vtt" language="es"/>
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_DeepDive_Plane_OpenSource_Jira_Alternative_2026-10-25.srt" type="application/x-subrip" language="es"/>
     </item>
-<item>
+    <item>
       <title>sIA Novelas #01: Omniscient Reader's Viewpoint: La Novela que Salvó la Vida de un Lector Solitario en el Metro de Seúl</title>
       <link>https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html</link>
       <description><![CDATA[sIA Novelas #01: El fenómeno literario de las webnovels coreanas y la arquitectura de la metaficción. La historia de Kim Dokja, un oficinista anónimo que sobrevivió a la depresión leyendo cada noche en el metro un manuscrito ignorado por todos, el pacto íntimo entre quien escribe en soledad y quien lee para no rendirse, y cómo Omniscient Reader's Viewpoint se convirtió en la mayor carta de amor a la lectura de nuestra generación. | Leer artículo y análisis narrativo APA: https://escucha-sia.github.io/articulos/sia-novelas-01-omniscient-reader-viewpoint-metaficcion.html]]></description>
@@ -38,7 +52,7 @@
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.vtt" type="text/vtt" language="es"/>
       <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Novelas_01_Omniscient_Reader_Viewpoint_2026-10-24.srt" type="application/x-subrip" language="es"/>
     </item>
-<item>
+    <item>
       <title>sIA Manga #01: Kentaro Miura y la Tumba de Tinta de Berserk: El Sacrificio Físico del Mangaka y la Filosofía del Dolor</title>
       <link>https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html</link>
       <description><![CDATA[sIA Manga #01: La devoción, el dolor físico y la maestría visual detrás de la obra magna del manga oscuro. Treinta y dos años dibujando cada eslabón a mano con plumilla G-Pen, la soledad extrema frente al tablero, la deconstrucción de Guts como arquetipo de la resistencia humana ante el destino y el legado inmortal de Kentaro Miura continuado por la hermandad de Studio Gaga. | Leer artículo y análisis visual APA: https://escucha-sia.github.io/articulos/sia-manga-01-kentaro-miura-berserk-tumba-tinta.html]]></description>
