@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?</title>
+      <link>https://escucha-sia.github.io/articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-se-convirtio-la.html</link>
+      <description>Análisis sobre el choque ideológico entre el hardware libre de garaje (RepRap, Klipper, Marlin) y el modelo de electrodoméstico cerrado de Bambu Lab: DRM en filamentos por RFID, telemetría en la nube y la soberanía de fabricación personal por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado.html</description>
+      <pubDate>Sat, 31 Oct 2026 06:40:05 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3" length="12069058" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3</guid>
+      <itunes:duration>08:22</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review</title>
       <link>https://escucha-sia.github.io/articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout-y-.html</link>
       <description>Análisis sobre la fatiga del desarrollador moderno, el colapso del &#x27;LGTM&#x27; en Pull Requests masivos generados por IA, la pérdida de soberanía técnica y el nuevo paradigma de verificación arquitectónica por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout.html</description>

@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:13.248
+JORGE: ¡Muy buenas tardes a toda nuestra comunidad maker, ingenieros de diseño y apasionados de la tecnología en México y toda Latinoamérica! Bienvenidos a un nuevo episodio de Sia. Soy Jorge.
+
+00:00:13.248 --> 00:00:31.416
+DALIA: ¡Y yo soy Dalia! Hoy es viernes treinta de octubre de dos mil veintiséis. Y hoy nos sumergimos en una de las batallas ideológicas y de ingeniería más encarnizadas de la década: la guerra silenciosa que está fracturando a las comunidades de r diagonal 3Dprinting y r diagonal BambuLab.
+
+00:00:31.416 --> 00:00:58.920
+JORGE: Así es, Dalia. Durante casi veinte años, la fabricación aditiva de escritorio vivió bajo un pacto sagrado: el movimiento RepRap. La idea utópica y hermosa de Adrian Bowyer en dos mil cuatro, donde las impresoras 3D eran herramientas de código abierto diseñadas para replicarse a sí mismas, con firmware modificable como Marlin o Klipper y soberanía absoluta del usuario sobre cada tornillo y cada línea de código G.
+
+00:00:58.920 --> 00:01:21.816
+DALIA: Pero en los últimos tres años, una empresa nacida de ingenieros fugitivos del gigante de drones DJI ha cambiado las reglas para siempre: Bambu Lab. Llegaron al mercado con cinemáticas Core X Y ultrarrápidas, escaneo Láidar de primera capa, calibración por acelerómetros y una experiencia donde sacas la máquina de la caja y funciona a la primera como si fuera un horno de microondas.
+
+00:01:21.816 --> 00:01:42.816
+JORGE: El mercado masivo los coronó como los reyes indiscutibles. Pero entre los veteranos del hardware libre, las alarmas están sonando con fuerza: nubes propietarias obligatorias, microchips RFID en los carretes de filamento, restricciones de telemetría y el fantasma de que la impresión 3D se está convirtiendo en el jardín cerrado de Apple.
+
+00:01:42.816 --> 00:01:56.736
+DALIA: En este episodio analizaremos la tensión entre la conveniencia del consumidor y la soberanía del creador, la historia de cómo MakerBot cayó en esta misma trampa y qué significa esto para el futuro del hardware abierto. ¡Comenzamos!
+
+00:01:56.736 --> 00:02:19.008
+JORGE: Para entender la magnitud de lo que está en juego, tenemos que recordar de dónde venimos, Dalia. A principios de los dos mil, la tecnología de deposición por hilo fundido estaba secuestrada por patentes corporativas multimillonarias de Stratasys. Una máquina industrial costaba cincuenta mil dólares y solo la podían pagar laboratorios aeroespaciales.
+
+00:02:19.008 --> 00:02:48.312
+DALIA: Cuando esas patentes clave expiraron en dos mil nueve, Adrian Bowyer y una red global de hackers en garajes crearon el proyecto RepRap: Replication Rapid Prototyper. La premisa era casi filosófica: democratizar la producción material. Tú descargabas los esquemas de código abierto, le pedías a un amigo que te imprimiera las piezas plásticas en su casa, comprabas unas varillas roscadas en la ferretería, soldabas una placa Arduino y tenías tu propia fábrica personal en el escritorio.
+
+00:02:48.312 --> 00:03:09.168
+JORGE: Toda la industria moderna —desde las Ender 3 de Creality hasta las máquinas legendarias de Josef Průša— se construyó sobre los hombros gigantescos de esa comunidad abierta. Cada avance en aceleración de cabezal, cada mejora en boquillas de acero templado y cada optimización en laminadores nació de foros colaborativos sin secretos comerciales.
+
+00:03:09.168 --> 00:03:25.320
+DALIA: La filosofía era clara: si compras una máquina, eres el dueño absoluto de ella. Tienes el derecho inalienable a modificar el firmware, a reemplazar cualquier motor con piezas genéricas del mercado y a operar completamente sin conexión a internet si así lo decides.
+
+00:03:25.320 --> 00:03:38.424
+JORGE: Y entonces, en dos mil veintidós, irrumpe Bambu Lab con la X Uno Carbon. Y admitámoslo con honestidad técnica, Dalia: le dieron una bofetada tecnológica al resto del mercado.
+
+00:03:38.424 --> 00:04:09.864
+DALIA: Una bofetada necesaria, hay que decirlo, Jorge. La comunidad de entusiastas se había estancado en un romanticismo tóxico donde calibrar una cama caliente con una hoja de papel durante dos horas y nivelar perfiles de extrusión fallidos se consideraba una 'medalla de honor'. Bambu Lab entendió que la inmensa mayoría de las personas no quieren una impresora para pasar el fin de semana reparándola; quieren imprimir una pieza funcional para su bicicleta, un prototipo de ingeniería o un juguete para sus hijos en veinte minutos sin dolores de cabeza.
+
+00:04:09.864 --> 00:04:36.936
+JORGE: Introdujeron la compensación de resonancia por sensor de vibración en tiempo real, el flujo automático compensado por cámara de inteligencia artificial y el sistema multi-material A M S que permite combinar hasta dieciséis colores y soportes solubles sin intervención humana. Fue literalmente el 'momento iPhone' de la impresión 3D: tomaron una tecnología tosca de entusiastas y la convirtieron en un electrodoméstico de alta gama impecable.
+
+00:04:36.936 --> 00:04:42.720
+DALIA: Pero la pregunta incómoda que hoy arde en Reddit es: ¿a cambio de qué entregamos el control?
+
+00:04:42.720 --> 00:05:06.072
+JORGE: Y aquí entramos a la zona de conflicto. Para que ese ecosistema 'mágico' funcione, Bambu Lab comenzó a levantar muros. El primero fue la telemetría en la nube: durante meses, enviar un archivo de impresión requería forzosamente que tu modelo 3D viajara a través de sus servidores centrales antes de llegar a la máquina que tienes a medio metro en tu propia mesa.
+
+00:05:06.072 --> 00:05:43.104
+DALIA: Aunque luego introdujeron un 'modo LAN', la experiencia está deliberadamente diseñada para empujar al usuario hacia su aplicación móvil y su nube propietaria. Pero lo más alarmante para los analistas es la introducción de etiquetas RFID en sus filamentos oficiales. La máquina detecta el material automáticamente, sí; pero abre la puerta tecnológica más peligrosa: el DRM de consumibles. El día de mañana, una actualización de firmware podría penalizar la velocidad de impresión si utilizas bobinas genéricas de terceros, exactamente como hicieron las impresoras de papel de tinta tradicional durante décadas.
+
+00:05:43.104 --> 00:06:10.704
+JORGE: Y esta historia ya la vivimos, Dalia. En dos mil doce, MakerBot era el héroe mimado del movimiento RepRap con la Replicator original. Pero decidieron cerrar su código, patentar los diseños que la comunidad les ayudó a perfeccionar y volverse corporativos. ¿El resultado? La comunidad les dio la espalda, la innovación se congeló y la empresa terminó siendo absorbida y reducida a una sombra de lo que fue.
+
+00:06:10.704 --> 00:06:34.656
+DALIA: Los defensores del código abierto advierten que el verdadero peligro no es Bambu Lab hoy, sino el precedente: si normalizamos que nuestras herramientas de fabricación requieran autorización en la nube de un servidor corporativo para operar, perdemos la soberanía material. Un hackeo, un cambio de términos de servicio o un conflicto geopolítico podría convertir tu máquina de mil quinientos dólares en un pisapapeles de metal.
+
+00:06:34.656 --> 00:06:53.328
+JORGE: Afortunadamente, la comunidad hacker nunca se rinde sin dar pelea. Frente a las restricciones, vimos nacer proyectos extraordinarios como Orca Slaiser: un fork comunitario libre del software de Bambu que devolvió las funciones avanzadas a todos los usuarios, sin muros corporativos.
+
+00:06:53.328 --> 00:07:06.480
+DALIA: Y el auge imparable de Klipper, el firmware libre que corre sobre una Raspberry Pi y que permite a cualquier usuario actualizar una impresora vieja para que alcance las mismas velocidades extremas sin vender su privacidad a ninguna nube.
+
+00:07:06.480 --> 00:07:26.928
+JORGE: La lección de esta década es que la comodidad del consumidor no tiene por qué estar reñida con la libertad del usuario. Las empresas que sobrevivirán a largo plazo son aquellas que respeten el derecho a reparar, permitan el control local offline sin trucos y entiendan que el mayor valor de una herramienta no es encerrar al cliente, sino empoderarlo.
+
+00:07:26.928 --> 00:07:40.320
+DALIA: Si eres un maker, disfruta la velocidad de las nuevas máquinas, pero jamás entregues tus llaves de soberanía técnica. Diseña abierto, hackea tus herramientas y mantén encendido el espíritu del garaje.
+
+00:07:40.320 --> 00:07:46.632
+JORGE: ¡Y con este debate fundamental sobre la filosofía de las máquinas cerramos esta entrega de Sia Maker!
+
+00:07:46.632 --> 00:08:01.800
+DALIA: Recuerden que el artículo completo con la cronología histórica de RepRap, el análisis técnico de cinemáticas y todas las fuentes bibliográficas en formato APA ya está disponible en nuestra revista digital en escucha guion sia punto Git-Jab punto io diagonal articulos.
+
+00:08:01.800 --> 00:08:12.144
+JORGE: Y en nuestras redes y en Spotify ya tienen listo el Reel vertical Cómic-Pop de cuarenta y cinco segundos con la síntesis animada para abrir el debate con su comunidad de impresión.
+
+00:08:12.144 --> 00:08:16.992
+DALIA: Muchísimas gracias por acompañarnos. Soy Dalia.
+
+00:08:16.992 --> 00:08:22.776
+JORGE: Y yo soy Jorge. ¡Nos escuchamos en el próximo episodio de Sia Podcast!
+

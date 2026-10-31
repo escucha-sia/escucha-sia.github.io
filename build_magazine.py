@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
     "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
     "sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3": "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4",
     "sIA_Corp_04_Marc_Lore_Amazon_Diapers_2026-10-23.mp3": "sIA_Corp_04_Marc_Lore_Amazon_Reel.mp4",
@@ -76,6 +77,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Maker 02 - Bambu Lab vs. RepRap - 30 de Octubre de 2026
+    "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": {
+        "slug": "sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado",
+        "category": "sIA Maker & 3D",
+        "badge_color": "emerald",
+        "read_time": "11 min",
+        "title": "sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?",
+        "subtitle": "De la utopía de la máquina autorreplicable en el garaje al electrodoméstico hermético con DRM: El choque entre la conveniencia masiva, el control en la nube por RFID y la batalla por el derecho a reparar.",
+        "thesis": "La democratización de la tecnología de fabricación personal enfrenta una encrucijada existencial: la adopción masiva impulsada por ecosistemas cerrados y eficientes como Bambu Lab amenaza con destruir la soberanía hacker y la innovación comunitaria del movimiento RepRap que hizo posible la industria moderna.",
+        "nexo": "Segundo capítulo de sIA Maker: Hardware libre, análisis de modelos de negocio en fabricación aditiva, cinemática CoreXY y soberanía digital.",
+        "reel_video": "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Génesis de RepRap: La Utopía de Adrian Bowyer y la Liberación de Patentes",
+                "body": """
+En 2004, el académico británico Adrian Bowyer concibió en la Universidad de Bath una de las ideas más revolucionarias de la tecnología moderna: el proyecto RepRap (Replicating Rapid-prototyper). Su postulado desafiaba los cimientos del capitalismo manufacturero: si logramos diseñar una máquina de impresión tridimensional de código abierto cuyos componentes estructurales puedan ser impresos por otra máquina idéntica, el coste marginal de reproducir la infraestructura productiva desciende prácticamente a cero.
+
+Cuando en 2009 expiraron las patentes fundamentales sobre modelado por deposición fundida (FDM) que la corporación Stratasys había custodiado durante dos décadas bajo candado comercial, el movimiento RepRap desató una explosión global de garajes. Desarrolladores e ingenieros de todos los continentes compartieron esquemas esquemáticos de electrónica sobre Arduino (RAMPS), firmwares colaborativos como Marlin y geometrías de boquillas optimizadas. Cada impresora doméstica vendida entre 2010 y 2022 —desde la humilde Ender 3 hasta las robustas máquinas de Prusa Research— es hija directa de esa generosidad comunitaria donde ningún avance técnico se guardaba como secreto industrial.
+"""
+            },
+            {
+                "title": "2. El Huracán Bambu Lab: El 'Momento iPhone' de la Fabricación Aditiva",
+                "body": """
+En 2022, un equipo de ingenieros provenientes de la división de sistemas de vuelo y estabilización de cámaras de DJI fundó Bambu Lab y lanzó al mercado la X1-Carbon. El impacto sobre la industria fue devastador e instantáneo. Mientras las empresas tradicionales continuaban vendiendo kits que requerían horas de calibración manual de cama mediante galgas de papel y ajustes empíricos de tensión de correas, Bambu introdujo cinemáticas CoreXY blindadas capaces de imprimir a 500 mm/s, nivelación automática por microsensores de deformación y compensación activa de vibraciones.
+
+Fue, en el sentido más estricto, el 'momento iPhone' de la impresión 3D: tomaron una herramienta tosca, impredecible y reservada para entusiastas pacientes del soldador de estaño, y la empaquetaron en un electrodoméstico impecable que cualquier diseñador, médico o padre de familia puede encender y utilizar de forma infalible en quince minutos. La conveniencia operativa arrasó el mercado y redefinió las expectativas de los usuarios a nivel mundial.
+"""
+            },
+            {
+                "title": "3. La Trampa del Jardín Cerrado: Nube Obligatoria, RFID y el Espejo de MakerBot",
+                "body": """
+Sin embargo, esa 'magia' tiene un precio invisible que ha encendido acalorados debates en comunidades como r/3Dprinting: el encierro dentro de un ecosistema propietario. Bambu Lab diseñó sus máquinas para operar subordinadas a su infraestructura en la nube, canalizando los modelos tridimensionales del usuario a través de servidores centrales antes de iniciar la impresión. Aunque posteriormente se habilitó un modo LAN bajo intensa presión comunitaria, la telemetría propietaria y la opacidad del código fuente del firmware suscitan serias preocupaciones de privacidad y soberanía industrial.
+
+El síntoma más alarmante es la integración de chips RFID en sus bobinas de filamento oficiales. Aunque la función comercial es la comodidad de detectar automáticamente el material y el color, representa la infraestructura técnica perfecta para un futuro modelo de DRM restrictivo, idéntico al que convirtió a las impresoras de inyección de tinta en monopolios extractivos de consumibles. La historia ofrece una advertencia severa: en 2012, MakerBot intentó transitar este mismo camino cerrando el código de la Replicator 2; la comunidad de código abierto la abandonó de inmediato, congeló su ventaja de innovación y la compañía terminó colapsando y siendo absorbida.
+"""
+            },
+            {
+                "title": "4. La Resistencia de Klipper y OrcaSlicer: Hacia un Modelo Híbrido",
+                "body": """
+La respuesta de la comunidad hacker ante el avance de los jardines cerrados ha demostrado la resiliencia del software libre. El auge fulminante de **OrcaSlicer** —un fork comunitario de código abierto del propio laminador de Bambu— demostró que los usuarios exigen calibraciones avanzadas y compatibilidad multiplataforma sin ataduras de marca. Del mismo modo, el ecosistema **Klipper**, ejecutado sobre computadoras de placa reducida como Raspberry Pi, ha permitido a millones de creadores actualizar impresoras abiertas para alcanzar velocidades de vértigo manteniendo el control absoluto de cada parámetro del hardware.
+
+La lección fundamental para la cultura maker de 2026 es que la conveniencia del consumidor no puede negociarse a cambio del derecho a reparar y la soberanía material. Una máquina de fabricación personal que dependa del permiso de un servidor remoto para operar no te pertenece: eres simplemente un arrendatario temporal de su funcionalidad. El verdadero futuro de la innovación distribuida reside en herramientas que ofrezcan la sofisticación de la era moderna sin amputar el espíritu indomable del garaje abierto.
+"""
+            }
+        ],
+        "apa_references": [
+            "Bowyer, A. (2014). *3D Printing and Humanity's First Self-Replicating Manufacturing Machine*. Architectural Design, 84(1), 12-19. https://doi.org/10.1002/ad.1702",
+            "Průša, J. (2023). *The State of Open Source in 3D Printing: Why Proprietary Firmware Threatens Innovation*. Prusa Research Technical Whitepapers.",
+            "Doctorow, C. (2020). *The Right to Repair: Why Open Hardware is Essential for Technological Sovereignty*. MIT Technology Review.",
+            "Lipson, H., & Kurman, M. (2013). *Fabricated: The New World of 3D Printing*. John Wiley & Sons.",
+            "Corona, C., & sIA Editora. (2026). *sIA Maker #02: Bambu Lab vs. El espíritu RepRap, la comoditización del hardware y la soberanía de fabricación en el escritorio*. sIA Maker Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Dev 01 - El Síndrome de la Niñera de Prompts (AI Burnout) - 30 de Octubre de 2026
     "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": {
         "slug": "sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout",
