@@ -15,8 +15,8 @@ SCRATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 REELS_TO_PUBLISH = [
     {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
-        "caption": "¿Matt Mullenweg destruyó WordPress? La guerra civil entre Automattic y WP Engine que rompió el 43% de la web. #wordpress #wpengine #automattic #opensource #softwareengineer #ciberseguridad #programacion"
+        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4",
+        "caption": "¿Por qué el 80% de proyectos de datos fracasan en producción? Snowflake vs Databricks vs Apache Iceberg y DuckDB. Episodio completo en Spotify (sIA) y blog en perfil. #dataengineering #bigdata #lakehouse #snowflake #databricks #duckdb #python #sql #siapodcast"
     }
 ]
 
