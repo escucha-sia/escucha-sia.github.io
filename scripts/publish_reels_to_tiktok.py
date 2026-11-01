@@ -15,16 +15,8 @@ SCRATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 REELS_TO_PUBLISH = [
     {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4",
-        "caption": "¿Copiar código de la IA te hace 10x más rápido o 10x más bugs? Un estudio de Stanford y GitHub reveló la letra chiquita. #ia #programacion #softwareengineer #coding #aprenderaprogramar #devhumor"
-    },
-    {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
-        "caption": "El Síndrome de la Niñera de Prompts: cuando programar se convirtió en presionar 'Enter' 500 veces al día. #aiburnout #programacion #vibeengineering #chatgpt #softwareengineer"
-    },
-    {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
-        "caption": "Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple? #impresion3d #bambulab #reprap #maker #opensource #tecnologia"
+        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
+        "caption": "¿Matt Mullenweg destruyó WordPress? La guerra civil entre Automattic y WP Engine que rompió el 43% de la web. #wordpress #wpengine #automattic #opensource #softwareengineer #ciberseguridad #programacion"
     }
 ]
 
