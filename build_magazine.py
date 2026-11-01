@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
     "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
     "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
     "sIA_Archivo_20_Vibe_coding_y_la_ilusion_de_competencia.mp3": "sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4",
@@ -77,6 +78,59 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Corp 05 - Matt Mullenweg vs. WP Engine - 31 de Octubre de 2026
+    "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": {
+        "slug": "sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source",
+        "category": "Crónicas Corporativas & Open Source",
+        "badge_color": "violet",
+        "read_time": "12 min",
+        "title": "sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet",
+        "subtitle": "Marcas registradas, el secuestro de Advanced Custom Fields (ACF), el éxodo de ingenieros y la crisis existencial del código abierto corporativo.",
+        "thesis": "El conflicto entre Automattic y Silver Lake evidencia los riesgos sistémicos de concentrar la infraestructura central del software libre en una sola corporación comercial, demostrando la urgencia de gobernar la web mediante repositorios federados y fundaciones neutrales.",
+        "nexo": "Quinto episodio de Crónicas Corporativas: Gobernanza de código abierto, cadenas de suministro de software, monopolios de infraestructura y derechos de autor.",
+        "reel_video": "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
+        "content_blocks": [
+            {
+                "title": "1. La Bomba de WordCamp US: La Ruptura del Pacto Comunitario",
+                "body": """
+En septiembre de 2024, durante la sesión de clausura de WordCamp US en Portland, el cofundador de WordPress y director ejecutivo de Automattic, Matt Mullenweg, desató un terremoto político y técnico cuyas réplicas aún sacuden a la industria del desarrollo web. Frente a una audiencia atónita, Mullenweg calificó a WP Engine —el mayor proveedor de alojamiento gestionado del ecosistema— como un 'cáncer para WordPress'.
+
+La acusación no radicaba en fallos técnicos de seguridad, sino en una amarga disputa económica: Automattic exigía a WP Engine el pago de una regalía del 8% de sus ingresos brutos (decenas de millones de dólares anuales) por el uso comercial de la marca 'WP'. La negativa de WP Engine, respaldada por la firma de capital privado Silver Lake, transformó una negociación contractual en una guerra abierta que puso en jaque la estabilidad técnica del 43% de los sitios web del planeta.
+"""
+            },
+            {
+                "title": "2. El Secuestro de Advanced Custom Fields: La Línea Roja de la Cadena de Suministro",
+                "body": """
+La escalada alcanzó su punto de mayor gravedad técnica el 12 de octubre de 2024. Tras revocar el acceso de los servidores de WP Engine al repositorio oficial de WordPress.org, Automattic tomó el control unilateral y forzoso del slug del popular plugin Advanced Custom Fields (ACF), una herramienta esencial de arquitectura de datos instalada en más de cinco millones de sitios web comerciales.
+
+Automattic bifurcó el código, le cambió el nombre a 'Secure Custom Fields' y forzó su distribución sobre los servidores de los usuarios mediante el mecanismo de actualizaciones automáticas del núcleo. Esta maniobra sentó un precedente devastador para la ciberseguridad corporativa: el repositorio central de software libre más grande del mundo fue utilizado como un arma comercial punitiva, rompiendo la presunción básica de confianza en la cadena de suministro de software abierta.
+"""
+            },
+            {
+                "title": "3. La Crisis del BDFL y la Purga de Ingeniería",
+                "body": """
+El autoritarismo demostrado por Mullenweg desencadenó una crisis de gobernanza sin precedentes. Dentro de Automattic, 159 empleados (el 8.4% de la plantilla global de la empresa) decidieron acogerse a un paquete de indemnización para abandonar la empresa tras manifestar su desacuerdo ético con la gestión del conflicto.
+
+Líderes de la comunidad como David Heinemeier Hansson (DHH) advirtieron sobre el colapso del modelo BDFL (Benevolent Dictator for Life) cuando el líder mezcla la custodia de un bien público con los intereses comerciales de su propia empresa privada. La imposición de una casilla de lealtad en WordPress.org que exigía a los desarrolladores declarar bajo juramento no tener vínculos con WP Engine confirmó los temores de que el ecosistema se había convertido en un feudo personal.
+"""
+            },
+            {
+                "title": "4. Demandas Federales y el Imperativo de la Web Federada",
+                "body": """
+El conflicto escaló rápidamente a los tribunales federales de California con demandas multimillonarias por extorsión, difamación y competencia desleal. Sin embargo, más allá del desenlace judicial, la comunidad global de desarrollo ha comenzado a construir salvaguardas arquitectónicas.
+
+El auge de repositorios de plugins federados e independientes, el renacimiento de sistemas descentralizados de gestión de paquetes y la acelerada adopción de arquitecturas desacopladas (Headless CMS con Next.js y Astro) demuestran que la industria no volverá a tolerar un único punto central de fallo. La lección fundamental de 2026 es incontestable: un ecosistema del que depende casi la mitad de internet jamás puede estar subordinado al arbitrio emocional de un solo individuo o corporación.
+"""
+            }
+        ],
+        "apa_references": [
+            "Mullenweg, M. (2024). *WP Engine is a cancer to WordPress*. Matt Mullenweg Personal Dispatch. https://ma.tt",
+            "Heinemeier Hansson, D. (2024). *The Open Source Governance Dilemma: Lessons from the WordPress Schism*. World Wide Web Foundation Whitepapers.",
+            "United States District Court for the Northern District of California. (2024). *WP Engine Inc. v. Automattic Inc. & Matthew Mullenweg* (Civil Action No. 3:24-cv-06832).",
+            "Doctorow, C. (2024). *The Weaponization of Open Source Registries: Why We Need Decentralized Package Infrastructure*. Electronic Frontier Foundation Deep Dive.",
+            "Corona, C., & sIA Editora. (2026). *sIA Crónicas #05: Matt Mullenweg vs. WP Engine, la fractura de la gobernanza comunitaria y la vulnerabilidad del 40% de la web*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Maker 02 - Bambu Lab vs. RepRap - 30 de Octubre de 2026
     "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": {
         "slug": "sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado",

@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet</title>
+      <link>https://escucha-sia.github.io/articulos/sia-cronicas-05-matt-mullenweg-vs-wp-engine-la-guerra-civil-.html</link>
+      <description>Análisis exhaustivo del choque entre Automattic y Silver Lake: marcas registradas, el secuestro de Advanced Custom Fields (ACF), el éxodo de ingenieros y la crisis existencial del código abierto corporativo por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source.html</description>
+      <pubDate>Sat, 31 Oct 2026 19:36:06 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3" length="11292495" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3</guid>
+      <itunes:duration>07:50</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?</title>
       <link>https://escucha-sia.github.io/articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-se-convirtio-la.html</link>
       <description>Análisis sobre el choque ideológico entre el hardware libre de garaje (RepRap, Klipper, Marlin) y el modelo de electrodoméstico cerrado de Bambu Lab: DRM en filamentos por RFID, telemetría en la nube y la soberanía de fabricación personal por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado.html</description>

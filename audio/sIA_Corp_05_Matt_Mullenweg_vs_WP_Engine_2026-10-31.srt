@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:15,528
+JORGE: ¡Muy buenas tardes a toda nuestra comunidad de desarrolladores, ingenieros de infraestructura y arquitectos de la web en México y toda Iberoamérica! Bienvenidos a una nueva entrega de Sia en su edición de Crónicas Corporativas. Soy Jorge.
+
+2
+00:00:15,528 --> 00:00:34,416
+DALIA: ¡Y yo soy Dalia! Hoy es sábado treinta y uno de octubre de dos mil veintiséis. Y hoy desentrañamos el conflicto más destructivo, insólito y trascendental de la historia reciente del software libre: la guerra total entre Matt Mullenweg, Automattic y el gigante de alojamiento web WP Engine.
+
+3
+00:00:34,416 --> 00:00:51,720
+JORGE: Una batalla que empezó con insultos públicos en el escenario principal de WordCamp Portland, escaló al secuestro forzoso de plugins con millones de instalaciones activas, provocó renuncias masivas de empleados y terminó con demandas federales por extorsión corporativa en los juzgados de California.
+
+4
+00:00:51,720 --> 00:01:18,864
+DALIA: Para entender el impacto de esto, solo hay que recordar una cifra abrumadora: el cuarenta y tres por ciento de todos los sitios web del planeta tierra funcionan sobre WordPress. Tiendas de comercio electrónico, diarios nacionales, portales gubernamentales y blogs personales. Y de la noche a la mañana, la estabilidad técnica de toda esa infraestructura quedó atrapada en el fuego cruzado del ego de un fundador y los fondos multimillonarios de capital privado.
+
+5
+00:01:18,864 --> 00:01:33,408
+JORGE: ¿Cómo pasamos de la utopía del software libre y la democratización editorial a las listas negras y las casillas de lealtad obligatoria? Prepárense un café bien cargado, porque esta crónica lo tiene todo. ¡Arrancamos!
+
+6
+00:01:33,408 --> 00:01:57,792
+DALIA: Para comprender este choque de titanes, tenemos que separar primero las entidades, Jorge. Por un lado tenemos la Fundación WordPress, una organización sin fines de lucro dueña teórica de la marca. Por otro lado está Automattic, la corporación con fines de lucro fundada por Matt Mullenweg, valuada en miles de millones de dólares y que explota servicios comerciales como WordPress.com y WooCommerce.
+
+7
+00:01:57,792 --> 00:02:21,024
+JORGE: Y del otro lado del cuadrilátero aparece WP Engine: una compañía de hosting administrado respaldada por Silver Lake, uno de los fondos de inversión privada más agresivos y colosales de Wall Street, con más de cien mil millones de dólares en activos bajo gestión. WP Engine factura más de cuatrocientos millones de dólares anuales hospedando millones de páginas en WordPress.
+
+8
+00:02:21,024 --> 00:02:43,224
+DALIA: Durante años, la relación fue cordial. Pero en septiembre de dos mil veinticuatro, la bomba estalló. Automattic le exigió a WP Engine el pago de una regalía contractual del ocho por ciento de sus ingresos brutos —decenas de millones de dólares anuales— alegando que estaban explotando ilegalmente la marca registrada de las letras 'WP'.
+
+9
+00:02:43,224 --> 00:03:13,872
+JORGE: Cuando WP Engine se negó a pagar lo que calificaron abiertamente como un 'impuesto mafioso de extorsión', Matt Mullenweg subió al escenario de WordCamp US. Frente a una audiencia atónita de cientos de desarrolladores comunitarios, tomó el micrófono y declaró textualmente que WP Engine era 'un cáncer para WordPress'. Los acusó de exprimir los beneficios del código abierto sin devolver las contribuciones proporcionales en horas de ingeniería. Y la guerra civil comenzó.
+
+10
+00:03:13,872 --> 00:03:33,624
+DALIA: El conflicto pasó de las palabras a los hechos técnicos en cuestión de días. Automattic bloqueó a WP Engine el acceso a los servidores de WordPress.org. De pronto, millones de sitios web alojados en WP Engine no podían actualizar temas ni plugins de seguridad desde el panel de administración tradicional.
+
+11
+00:03:33,624 --> 00:03:59,640
+JORGE: Pero la línea roja definitiva se cruzó el doce de octubre de dos mil veinticuatro, un día que quedará grabado con infamia en la historia de la ciberseguridad. WP Engine es propietaria de Advanced Custom Fields, mejor conocido como ACF: probablemente el plugin de arquitectura de bases de datos más respetado y utilizado de todo el ecosistema, con más de cinco millones de instalaciones activas en agencias y corporaciones.
+
+12
+00:03:59,640 --> 00:04:19,680
+DALIA: Aprovechando su control monopólico sobre los servidores centrales de WordPress.org, Matt Mullenweg tomó el control forzoso del slug de ACF, expulsó a sus desarrolladores legítimos, le cambió el nombre a 'Secure Custom Fields' y comenzó a distribuir un fork controlado por Automattic a través de las actualizaciones automáticas.
+
+13
+00:04:19,680 --> 00:04:44,832
+JORGE: Técnicamente fue un secuestro de la cadena de suministro de software sin precedentes. Desarrolladores de todo el mundo vieron cómo sus servidores instalaban un código bifurcado sin su consentimiento explícito. La confianza fundamental que sostenía al ecosistema —la certeza de que el repositorio central de WordPress.org era un bien común neutral gobernado por la comunidad— se pulverizó en una sola tarde.
+
+14
+00:04:44,832 --> 00:05:04,608
+DALIA: Las repercusiones dentro de la propia empresa Automattic fueron devastadoras, Jorge. Cuando decenas de empleados manifestaron en foros internos su preocupación ética por el ataque a ACF y el daño a la comunidad, Mullenweg lanzó un ultimátum: un paquete de salida de nueve meses de sueldo para cualquiera que estuviera en desacuerdo con su cruzada.
+
+15
+00:05:04,608 --> 00:05:28,416
+JORGE: Ciento cincuenta y nueve ingenieros y líderes de producto —más del ocho por ciento de toda la fuerza laboral de Automattic— aceptaron el dinero y renunciaron en el acto. Días después, despidió a más empleados y llegó al extremo de implementar una casilla de verificación obligatoria para entrar a WordPress.org que decía: 'No tengo ninguna relación comercial ni laboral con WP Engine'.
+
+16
+00:05:28,416 --> 00:05:56,136
+DALIA: Figuras legendarias de la industria como David Heinemeier Hansson, creador de Ruby on Rails, salieron a condenar la deriva autoritaria: señalaron que el modelo del BDFL —Benevolent Dictator for Life, o Dictador Benevolente de por Vida— funciona cuando el fundador actúa como custodio de un bien público. Pero cuando el dictador benevolente confunde sus intereses comerciales privados con el destino de un proyecto del que depende medio internet, la estructura entera colapsa.
+
+17
+00:05:56,136 --> 00:06:13,752
+JORGE: La disputa escaló de inmediato a los tribunales. WP Engine demandó a Automattic y a Matt Mullenweg ante el Tribunal de Distrito del Norte de California, acusándolos de abuso de posición dominante, difamación, interferencia económica y extorsión bajo la ley estadounidense.
+
+18
+00:06:13,752 --> 00:06:37,584
+DALIA: Automattic respondió con contrademandas por infracción marcaria, pero el daño colateral ya es irreversible. Cientos de agencias de desarrollo y empresas corporativas han comenzado a migrar hacia arquitecturas desacopladas o headless: frameworks modernos como Next.js, Astro y gestores de contenido como Strapi o Ghost, aterrados ante la idea de que su negocio dependa del humor de un solo individuo.
+
+19
+00:06:37,584 --> 00:07:02,760
+JORGE: Además, el conflicto aceleró la creación de repositorios de plugins federados e independientes, rompiendo el monopolio de WordPress.org. La gran lección de esta crisis es que el software libre corporativo del siglo veintiuno no puede depender de la benevolencia de ninguna persona ni corporación: necesita fundaciones con gobernanza compartida, cortafuegos legales estrictos y repositorios descentralizados.
+
+20
+00:07:02,760 --> 00:07:10,176
+DALIA: Si una sola llave puede apagar el cuarenta y tres por ciento de la web, entonces la web no es libre: está en arriendo.
+
+21
+00:07:10,176 --> 00:07:16,392
+JORGE: ¡Y así cerramos este análisis a fondo sobre la fractura de WordPress en Sia Crónicas Corporativas!
+
+22
+00:07:16,392 --> 00:07:30,984
+DALIA: Los documentos legales completos, la cronología del caso ACF y el análisis de gobernanza de software con referencias en formato APA 7 ya están publicados en nuestra revista digital en escucha guion sia punto Git-Jab punto io diagonal articulos.
+
+23
+00:07:30,984 --> 00:07:40,536
+JORGE: Y en TikTok, Spotify y YouTube Shorts ya pueden ver y compartir el Reel animado en formato Cómic-Pop para encender el debate en sus equipos de desarrollo.
+
+24
+00:07:40,536 --> 00:07:45,312
+DALIA: Muchísimas gracias por escucharnos. Soy Dalia.
+
+25
+00:07:45,312 --> 00:07:50,424
+JORGE: Y yo soy Jorge. ¡Hasta el próximo episodio de Sia Podcast!
+

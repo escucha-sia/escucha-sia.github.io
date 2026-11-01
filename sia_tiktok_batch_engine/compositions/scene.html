@@ -10,7 +10,7 @@
       body {
         width: 1080px;
         height: 1920px;
-        background: #090b14;
+        background: #090915;
         color: #0b0d17;
         font-family: 'Montserrat', sans-serif;
         overflow: hidden;
@@ -27,7 +27,7 @@
         z-index: 1;
       }
 
-      /* 2. GIANT BACKGROUND GHOST WATERMARK TICKER */
+      /* 2. BACKGROUND GHOST TICKER */
       .bg-ticker {
         position: absolute;
         inset: 0;
@@ -62,11 +62,11 @@
       }
       .comic-frame-left {
         left: 0;
-        background: radial-gradient(circle at 0% 50%, rgba(16, 185, 129, 0.15), transparent 70%);
+        background: radial-gradient(circle at 0% 50%, rgba(139, 92, 246, 0.25), transparent 70%);
       }
       .comic-frame-right {
         right: 0;
-        background: radial-gradient(circle at 100% 50%, rgba(16, 185, 129, 0.15), transparent 70%);
+        background: radial-gradient(circle at 100% 50%, rgba(245, 158, 11, 0.25), transparent 70%);
       }
 
       /* 4. TOP BRAND BAR */
@@ -82,14 +82,14 @@
         border: 4px solid #fff;
         padding: 12px 32px;
         border-radius: 999px;
-        box-shadow: 6px 6px 0px #10b981;
+        box-shadow: 6px 6px 0px #8b5cf6;
         z-index: 20;
       }
       .brand-dot {
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        background: #10b981;
+        background: #8b5cf6;
         animation: pulseDot 1s infinite alternate;
       }
       @keyframes pulseDot {
@@ -112,7 +112,7 @@
         transform: translateX(-50%);
         width: 900px;
         height: 1420px;
-        background: #f8fafc;
+        background: #fdfdfd;
         border-radius: 48px;
         border: 7px solid #000;
         box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.95);
@@ -194,7 +194,7 @@
         border-radius: 12px;
         letter-spacing: 2px;
         display: inline-block;
-        box-shadow: 4px 4px 0px #10b981;
+        box-shadow: 4px 4px 0px #8b5cf6;
       }
 
       .headline-black {
@@ -208,126 +208,91 @@
       }
 
       .punch-pill {
-        background: #10b981;
-        color: #000 !important;
-        font-size: 68px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 44px;
         font-weight: 900;
-        padding: 16px 40px;
+        background: #facc15;
+        color: #000;
+        padding: 14px 34px;
+        border: 4px solid #000;
+        border-radius: 20px;
+        display: inline-block;
+        box-shadow: 8px 8px 0px #000;
+        transform: rotate(-2deg);
+        animation: floatPill 2s ease-in-out infinite alternate;
+      }
+      @keyframes floatPill {
+        0% { transform: rotate(-2deg) translateY(0); }
+        100% { transform: rotate(-1deg) translateY(-8px); }
+      }
+
+      .badge-versus {
+        font-size: 40px;
+        font-weight: 900;
+        color: #ef4444;
+        background: #fee2e2;
+        border: 3px solid #000;
+        padding: 6px 20px;
         border-radius: 16px;
         display: inline-block;
-        border: 5px solid #000;
-        box-shadow: 8px 8px 0px #000;
-        transform: rotate(-3deg);
-        animation: popPunch 0.8s infinite alternate ease-in-out;
-      }
-      @keyframes popPunch {
-        0% { transform: rotate(-3deg) scale(0.98); }
-        100% { transform: rotate(-3deg) scale(1.04); }
+        box-shadow: 4px 4px 0px #000;
+        margin: 12px 0;
       }
 
-      .metric-grid {
+      .metric-box {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        margin-top: 10px;
-      }
-      .metric-card {
-        background: #fff;
-        border: 5px solid #000;
+        background: #f1f5f9;
+        border: 4px solid #000;
         border-radius: 24px;
-        padding: 20px 26px;
+        padding: 24px;
         box-shadow: 8px 8px 0px #000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .metric-card.good {
-        border-color: #10b981;
-        box-shadow: 8px 8px 0px #10b981;
-      }
-      .metric-card.danger {
-        border-color: #dc2626;
-        box-shadow: 8px 8px 0px #dc2626;
+        margin: 10px 0;
+        width: 100%;
       }
       .metric-val {
-        font-size: 60px;
+        font-size: 56px;
         font-weight: 900;
-      }
-      .metric-val.green { color: #10b981; }
-      .metric-val.red { color: #dc2626; }
-      .metric-desc {
-        font-size: 28px;
-        font-weight: 800;
-        text-align: right;
-        color: #000;
-        line-height: 1.15;
-      }
-
-      .compare-box {
-        background: #000;
-        color: #fff;
-        border-radius: 24px;
-        padding: 30px 36px;
-        width: 100%;
-        text-align: left;
-        box-shadow: 10px 10px 0px #10b981;
-        border: 4px solid #fff;
         font-family: 'JetBrains Mono', monospace;
       }
-      .code-line {
-        font-size: 26px;
-        margin-bottom: 12px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-      .tag-fast {
-        background: #10b981;
-        color: #000;
-        padding: 4px 14px;
-        border-radius: 6px;
-        font-weight: 900;
-        font-size: 22px;
-      }
-      .tag-slow {
-        background: #ef4444;
-        color: #fff;
-        padding: 4px 14px;
-        border-radius: 6px;
-        font-weight: 900;
-        font-size: 22px;
+      .metric-lbl {
+        font-size: 24px;
+        font-weight: 800;
+        color: #475569;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .final-pill {
-        background: #000;
-        color: #00f0ff;
-        border: 5px solid #00f0ff;
-        padding: 20px 40px;
-        border-radius: 20px;
-        font-size: 34px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 46px;
         font-weight: 900;
-        box-shadow: 8px 8px 0px #00f0ff;
-        margin-top: 20px;
-        letter-spacing: 1px;
+        background: #8b5cf6;
+        color: #fff;
+        border: 5px solid #000;
+        border-radius: 24px;
+        padding: 18px 40px;
+        box-shadow: 10px 10px 0px #000;
+        letter-spacing: 2px;
       }
 
       .progress-bar-container {
         position: absolute;
-        bottom: 40px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
-        width: 860px;
-        height: 14px;
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 999px;
+        width: 800px;
+        height: 16px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 3px solid #fff;
+        border-radius: 10px;
         overflow: hidden;
-        z-index: 20;
+        z-index: 30;
       }
       .progress-fill {
         height: 100%;
+        background: #8b5cf6;
         width: 0%;
-        background: linear-gradient(90deg, #10b981, #00f0ff);
         animation: fillProgress 45s linear forwards;
       }
       @keyframes fillProgress {
@@ -339,87 +304,75 @@
   <body>
     <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: relative; width: 1080px; height: 1920px; overflow: hidden;">
       <div class="halftone-overlay"></div>
+    <div class="bg-ticker">
+      <div>WORDPRESS AUTOMATTIC WP ENGINE</div>
+      <div>OPEN SOURCE ACF REPO HIJACK</div>
+      <div>43% OF THE WEB IN PERIL 2026</div>
+      <div>BDFL LAW SUITS SILVER LAKE</div>
+    </div>
 
-      <div class="bg-ticker">
-        <div>BAMBU LAB VS REPRAP</div>
-        <div>SOBERANÍA DEL HACKER</div>
-        <div>DRM EN FILAMENTOS RFID</div>
-        <div>JARDÍN CERRADO DE APPLE</div>
-        <div>SIA MAKER MEDIA</div>
-      </div>
+    <div class="comic-frame-left"></div>
+    <div class="comic-frame-right"></div>
 
-      <div class="comic-frame-left"></div>
-      <div class="comic-frame-right"></div>
+    <div class="brand-bar">
+      <div class="brand-dot"></div>
+      <div class="brand-title">sIA CRÓNICAS CORPORATIVAS</div>
+    </div>
 
-      <div class="brand-bar">
-        <div class="brand-dot"></div>
-        <div class="brand-title">SIA • CULTURA MAKER & 3D</div>
-      </div>
-
-      <div class="center-shield">
-        <!-- SCENE 1: EL GANCHO (0s - 8.5s) -->
+    <div class="center-shield">
+      <div style="position: relative; width: 100%; height: 100%;">
+        <!-- SCENE 1: EL GANCHO DEL CONFLICTO (0s - 9s) -->
         <div class="scene" id="scene-1">
-          <div class="myth-tag">EL DEBATE EN REDDIT</div>
+          <div class="myth-tag">LA GUERRA CIVIL TECH</div>
           <div class="headline-black">
-            ¿BAMBU LAB SALVÓ<br>LA IMPRESIÓN 3D?<br>LOS MAKERS DICEN...
+            ¿MATT MULLENWEG<br>ROMPIÓ WORDPRESS?
           </div>
-          <div class="punch-pill">¿O ES UNA TRAMPA? 🖨️</div>
-          <div style="font-size: 30px; font-weight: 800; color: #64748b; margin-top: 20px;">
-            La muerte del garaje abierto
+          <div class="punch-pill">
+            43% DE LA WEB EN CRISIS 💥
+          </div>
+          <div style="font-size: 30px; font-weight: 800; color: #475569; margin-top: 15px;">
+            El choque entre Automattic y WP Engine
           </div>
         </div>
 
-        <!-- SCENE 2: EL CHOQUE DE FILOSOFÍAS (8.5s - 20.5s) -->
+        <!-- SCENE 2: LA LÍNEA ROJA (9s - 20s) -->
         <div class="scene" id="scene-2">
-          <div class="myth-tag" style="background: #1e293b; box-shadow: 4px 4px 0px #38bdf8;">DEL HACKER AL CONSUMIDOR</div>
-          <div class="headline-black" style="font-size: 48px;">
-            DEL SUEÑO REPRAP<br>AL JARDÍN CERRADO
+          <div class="myth-tag" style="background: #ef4444; box-shadow: 4px 4px 0px #000;">LA EXTORSION COMERCIAL</div>
+          <div class="metric-box">
+            <div class="metric-val" style="color: #ef4444;">8% REGALÍAS</div>
+            <div class="metric-lbl">Por usar las siglas "WP"</div>
           </div>
-          <div class="metric-grid">
-            <div class="metric-card good">
-              <span class="metric-val green">500 mm/s</span>
-              <span class="metric-desc">VELOCIDAD<br>EXTREMA</span>
-            </div>
-            <div class="metric-card danger">
-              <span class="metric-val red">NUBE + RFID</span>
-              <span class="metric-desc">CONTROL Y<br>DRM SUTIL</span>
-            </div>
-          </div>
-          <div style="background: #fee2e2; border: 3px solid #ef4444; color: #b91c1c; padding: 10px 20px; border-radius: 12px; font-weight: 900; font-size: 24px; margin-top: 10px;">
-            ⚠️ ¿EL NUEVO MAKERBOT?
+          <div class="badge-versus">VS</div>
+          <div class="metric-box">
+            <div class="metric-val" style="color: #8b5cf6;">SECUESTRO DE ACF</div>
+            <div class="metric-lbl">5 millones de sitios forzados</div>
           </div>
         </div>
 
-        <!-- SCENE 3: EL COSTE DE LA CONVENIENCIA (20.5s - 33.5s) -->
+        <!-- SCENE 3: EL CHANTAJE DE INFRAESTRUCTURA (20s - 33.5s) -->
         <div class="scene" id="scene-3">
-          <div class="myth-tag" style="background: #7c2d12; box-shadow: 4px 4px 0px #ea580c;">SOBERANÍA MATERIAL</div>
-          <div class="headline-black" style="font-size: 50px;">
-            ¿CREADOR O<br>ARRENDATARIO?
+          <div class="myth-tag" style="background: #f59e0b; color: #000; box-shadow: 4px 4px 0px #000;">EL MONOPOLIO CENTRAL</div>
+          <div class="headline-black" style="font-size: 52px;">
+            1 SOLO HOMBRE CON EL CONTROL DE LA RED
           </div>
-          <div class="compare-box">
-            <div class="code-line">
-              <span class="tag-fast">OPEN</span>
-              <span>Repara y modifica libremente</span>
-            </div>
-            <div style="border-top: 2px dashed #475569; margin: 16px 0;"></div>
-            <div class="code-line">
-              <span class="tag-slow">CLOSED</span>
-              <span>Si la nube cae, no imprimes</span>
+          <div class="metric-box" style="background: #fee2e2; border-color: #ef4444;">
+            <div style="font-size: 34px; font-weight: 900; color: #991b1b;">
+              ⚠️ PURGA DE INGENIEROS Y CASILLA DE LEALTAD
             </div>
           </div>
           <div style="font-size: 32px; font-weight: 900; color: #dc2626; margin-top: 15px;">
-            💥 Tu máquina como rehén.
+            💥 La infraestructura como rehén.
           </div>
         </div>
 
-        <!-- SCENE 4: LA REGLA DE ORO (33.5s - 45s) -->
+        <!-- SCENE 4: LA LECCIÓN DEL OPEN SOURCE (33.5s - 45s) -->
         <div class="scene" id="scene-4">
-          <div class="myth-tag" style="background: #0f172a; box-shadow: 4px 4px 0px #06b6d4;">LA FILOSOFÍA MAKER</div>
+          <div class="myth-tag" style="background: #0f172a; box-shadow: 4px 4px 0px #8b5cf6;">EL FUTURO DEL SOFTWARE</div>
           <div class="headline-black" style="font-size: 54px;">
-            LA COMODIDAD NO DEBE<br>COSTARTE LA LIBERTAD
+            EL CÓDIGO ABIERTO<br>NO TIENE DUEÑO
           </div>
-          <div class="punch-pill" style="font-size: 38px; background: #000; border-color: #10b981; color: #10b981 !important; box-shadow: 8px 8px 0px #10b981;">
-            DEFIENDE EL OPEN SOURCE
+          <div class="punch-pill" style="font-size: 38px; background: #000; border-color: #8b5cf6; color: #8b5cf6 !important; box-shadow: 8px 8px 0px #8b5cf6;">
+            DESCENTRALIZA TU STACK
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 20px;">
             Capítulo completo y fuentes en:
@@ -434,5 +387,6 @@
         <div class="progress-fill"></div>
       </div>
     </div>
+  </div>
   </body>
 </html>
