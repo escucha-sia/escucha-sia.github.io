@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sIA | Enlaces Oficiales (Spotify, Journal & Reels)</title>
+    <meta name="description" content="Ecosistema sIA: Podcast en Spotify, Revista Digital sIA Journal, Artículos de Arquitectura y Reels Verticales.">
+    <link rel="icon" type="image/jpeg" href="cover.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #090915;
+            background-image: 
+                radial-gradient(rgba(139, 92, 246, 0.15) 2px, transparent 2px),
+                linear-gradient(180deg, #090915 0%, #030712 100%);
+            background-size: 24px 24px, 100% 100%;
+            color: #f8fafc;
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .avatar-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #8b5cf6;
+            box-shadow: 0 0 35px rgba(139, 92, 246, 0.4);
+            object-fit: cover;
+        }
+
+        .badge-verified {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: #10b981;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 3px solid #090915;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bio {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.45;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .links-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            border-radius: 18px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px) scale(1.01);
+        }
+
+        .link-spotify {
+            background: linear-gradient(135deg, #1db954 0%, #15803d 100%);
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(29, 185, 84, 0.35);
+        }
+
+        .link-journal {
+            background: #1e1e38;
+            border-color: rgba(139, 92, 246, 0.4);
+            color: #f1f5f9;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .link-journal:hover {
+            border-color: #8b5cf6;
+            background: #252547;
+        }
+
+        .link-article {
+            background: #0f172a;
+            border-color: rgba(56, 189, 248, 0.4);
+            color: #f8fafc;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .link-article:hover {
+            border-color: #38bdf8;
+            background: #1e293b;
+        }
+
+        .link-github {
+            background: #000000;
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+        }
+        .link-github:hover {
+            border-color: #ffffff;
+        }
+
+        .link-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 14px;
+            flex-shrink: 0;
+        }
+
+        .link-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+
+        .link-subtitle {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 3px;
+            font-weight: 500;
+        }
+
+        .badge-hot {
+            background: #f59e0b;
+            color: #000;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #64748b;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        footer a {
+            color: #8b5cf6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar-box">
+            <img src="cover.jpg" alt="sIA Logo" class="avatar">
+            <div class="badge-verified">✓</div>
+        </div>
+
+        <h1>sIA Podcast & Journal</h1>
+        <p class="bio">Revista de investigación, arquitectura de software, inteligencia artificial y debates de ingeniería por Carlos Corona.</p>
+
+        <div class="links-group">
+            <!-- 1. SPOTIFY DIRECT SHOW -->
+            <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="link-card link-spotify">
+                <div class="link-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Escuchar en Spotify <span class="badge-hot">En vivo</span></div>
+                    <div class="link-subtitle">Todos los episodios en audio master EBU R128</div>
+                </div>
+            </a>
+
+            <!-- 2. ÚLTIMO EPISODIO: LAKEHOUSE & DATA MESH -->
+            <a href="articulos/sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh.html" class="link-card link-article">
+                <div class="link-icon">⚡</div>
+                <div class="link-content">
+                    <div class="link-title">sIA Data #03: Lakehouse & Iceberg</div>
+                    <div class="link-subtitle">Por qué el 80% de proyectos de datos fracasan</div>
+                </div>
+            </a>
+
+            <!-- 3. EPISODIO MULLENWEG VS WP ENGINE -->
+            <a href="articulos/sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source.html" class="link-card link-article">
+                <div class="link-icon">🌐</div>
+                <div class="link-content">
+                    <div class="link-title">Crónicas #05: Matt Mullenweg vs. WP Engine</div>
+                    <div class="link-subtitle">La guerra civil que fracturó WordPress</div>
+                </div>
+            </a>
+
+            <!-- 4. SIA JOURNAL COMPENDIO -->
+            <a href="index.html" class="link-card link-journal">
+                <div class="link-icon">📖</div>
+                <div class="link-content">
+                    <div class="link-title">sIA Journal (Revista Digital)</div>
+                    <div class="link-subtitle">54 artículos técnicos con fuentes y referencias APA 7</div>
+                </div>
+            </a>
+
+            <!-- 5. FEED RSS ABIERTO -->
+            <a href="podcast.xml" target="_blank" class="link-card link-github">
+                <div class="link-icon">📡</div>
+                <div class="link-content">
+                    <div class="link-title">Feed RSS Oficial (Apple Podcasts / Pocket Casts)</div>
+                    <div class="link-subtitle">Transmisión abierta sin algoritmos</div>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>Ecosistema sIA &bull; Desarrollado por <a href="https://github.com/escucha-sia">Carlos Corona</a></p>
+        </footer>
+    </div>
+</body>
+</html>
