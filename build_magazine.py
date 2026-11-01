@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3": "sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4",
     "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
     "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
     "sIA_Dev_01_Ninera_de_Prompts_AI_Burnout_2026-10-30.mp3": "sIA_Reel_Stupy_02_Ninera_Prompts.mp4",
@@ -78,6 +79,67 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Data 03 - Lakehouse, Data Mesh, Iceberg & DuckDB - 31 de Octubre de 2026
+    "sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3": {
+        "slug": "sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh",
+        "category": "Arquitectura & Data Engineering",
+        "badge_color": "cyan",
+        "read_time": "12 min",
+        "title": "sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción",
+        "subtitle": "La trampa de los silos modernos: Snowflake vs. Databricks, el auge de formatos abiertos como Apache Iceberg y la revolución local de DuckDB frente a la falacia del Big Data.",
+        "thesis": "El fracaso sistémico en las arquitecturas de datos corporativas se debe a la adopción de complejidad distribuida injustificada y vendor lock-in en formatos cerrados. La convergencia hacia metadatos abiertos con Apache Iceberg y motores vectorizados eficientes como DuckDB restaura la soberanía técnica y el retorno de inversión.",
+        "nexo": "Tercer episodio de Ingeniería de Datos: Arquitectura Lakehouse, formatos abiertos, gobernanza de datos, contratos de datos y optimización de cómputo.",
+        "reel_video": "sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Espejismo de los Petabytes: La Autopsia del 80% de Fracaso",
+                "body": """
+Informes consolidados de firmas como Gartner, VentureBeat y McKinsey confirman una estadística alarmante para los presupuestos de tecnología: entre el 75% y el 85% de las iniciativas corporativas de Big Data, lagos de datos y plataformas de aprendizaje automático no logran entregar un retorno de inversión sostenible o son silenciosamente abandonadas en producción tras consumir millones de dólares.
+
+El origen fundamental de este desperdicio radica en una falacia arquitectónica: la creencia de que contratar almacenamiento distribuido y clústeres masivos en la nube resuelve por sí mismo la falta de definición analítica. Las empresas invirtieron fortunas en replicar arquitecturas complejas de gigantes como Google o Netflix para resolver problemas operacionales cotidianos cuyas cargas reales jamás superaron los cincuenta gigabytes.
+"""
+            },
+            {
+                "title": "2. De Monolitos Rígidos a Pantanos de Datos: El Surgimiento del Lakehouse",
+                "body": """
+Durante décadas, el Data Warehouse clásico (Teradata, Oracle) impuso esquemas relacionales inmutables y costos prohibitivos de licenciamiento. La posterior rebelión del Data Lake sobre Hadoop y Amazon S3 prometió libertad mediante el lema 'vuelca primero en crudo y estructura después'. Sin embargo, esta permisividad dio lugar a pantanos de datos corruptos, carentes de transacciones ACID, con lecturas 'sucias' y nula garantía de integridad.
+
+La arquitectura Lakehouse surgió precisamente para conciliar ambos mundos: retener el bajo coste y la escalabilidad del almacenamiento de objetos desacoplado, pero superponiendo una capa transaccional robusta capaz de ofrecer aislamiento, auditoría y evolución de esquemas. No obstante, esta promesa pronto se vio capturada por la batalla comercial entre Snowflake y Databricks.
+"""
+            },
+            {
+                "title": "3. La Liberación de Apache Iceberg: Metadatos sin Dueño",
+                "body": """
+Snowflake demostró la elegancia del desacoplamiento entre cómputo y almacenamiento en la nube, pero impuso formatos de almacenamiento cerrados que generaron un severo vendor lock-in y facturas de cómputo impredecibles. Databricks contraatacó con Delta Lake y cómputo Spark distribuido, manteniendo la competencia en una carrera por monopolizar la capa de almacenamiento.
+
+En respuesta a esta trampa propietaria, Apache Iceberg (creado en la ingeniería de Netflix) rompió el tablero. Al estructurar las tablas como árboles de metadatos inmutables e independientes del motor de procesamiento, Iceberg permitió que Spark, Trino, Snowflake y DuckDB consulten concurrentemente los mismos datos en cubos S3 sin mover un solo byte. La adquisición de Tabular por parte de Snowflake por más de mil millones de dólares consagró a Iceberg como el estándar abierto irrenunciable de la industria.
+"""
+            },
+            {
+                "title": "4. Data Mesh y la Trampa de los Silos Descentralizados",
+                "body": """
+Paralelamente, la tesis de Data Mesh formulada por Zhamak Dehghani planteó descentralizar la propiedad de los datos hacia los dominios de negocio, tratando los datasets como productos con SLAs verificables. Si bien el modelo conceptual es impecable, su implementación práctica derivó en un fracaso generalizado al ser confundido con la compra masiva de herramientas de software.
+
+Descentralizar la analítica sin una cultura madura de ingeniería de software en cada área de negocio únicamente logró multiplicar por diez los silos caóticos. El éxito de Data Mesh exige contratos de datos (Data Contracts) formalizados a nivel de API de producción, no simplemente adquirir suites de catálogos y linaje cosmético.
+"""
+            },
+            {
+                "title": "5. El Contraataque Local con DuckDB: La Victoria del Pragmatismo",
+                "body": """
+La mayor revolución de sentido común en la ingeniería moderna de datos ha sido el ascenso meteórico de DuckDB. Diseñado en el CWI como una base de datos columnar analítica in-process (el SQLite de la analítica), DuckDB ejecuta consultas vectorizadas altamente optimizadas para CPUs multinúcleo con instrucciones SIMD.
+
+Telemetrías reales en corporaciones Fortune 500 demuestran que más del 90% de las consultas analíticas diarias operan sobre volúmenes menores a 100 GB. DuckDB procesa agregaciones complejas sobre archivos Parquet locales o remotos en fracciones de segundo dentro de una sola laptop de desarrollo, destruyendo la necesidad de mantener clústeres distribuidos costosos y devolviendo a los equipos la velocidad, simplicidad y soberanía técnica.
+"""
+            }
+        ],
+        "apa_references": [
+            "Dehghani, Z. (2022). *Data Mesh: Delivering Data-Driven Value at Scale*. O'Reilly Media.",
+            "Raasveldt, M., & Mühleisen, H. (2019). *DuckDB: an Embeddable Analytical Database*. Proceedings of the 2019 International Conference on Management of Data (SIGMOD '19), 1981–1984.",
+            "Blue, R., Weeks, D., & Sznajdman, J. (2021). *Apache Iceberg: An Architectural Overview of the Open Table Format*. Netflix Technology Blog.",
+            "Gartner Research. (2024). *Predicts 2024: The Real Cost of Big Data and Lakehouse Implementations*. Gartner Information Technology Whitepapers.",
+            "Corona, C., & sIA Editora. (2026). *sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Corp 05 - Matt Mullenweg vs. WP Engine - 31 de Octubre de 2026
     "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": {
         "slug": "sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source",

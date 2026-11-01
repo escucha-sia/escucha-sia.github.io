@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:17,112
+JORGE: ¡Muy buenas tardes a toda nuestra comunidad de arquitectos de datos, ingenieros de analítica y líderes de tecnología en México y toda Iberoamérica! Bienvenidos a una nueva entrega de Sia en su edición de Deep Dive de Arquitectura e Ingeniería de Datos. Soy Jorge.
+
+2
+00:00:17,112 --> 00:00:33,360
+DALIA: ¡Y yo soy Dalia! Hoy es sábado treinta y uno de octubre de dos mil veintiséis. Y hoy nos sumergimos de lleno en la autopsia técnica de la promesa más inflada y costosa de la industria tecnológica corporativa: la ingeniería de datos a escala de petabytes.
+
+3
+00:00:33,360 --> 00:00:57,432
+JORGE: Informes consolidados de firmas como Gartner, VentureBeat y McKinsey confirman una estadística escalofriante: entre el setenta y cinco y el ochenta y cinco por ciento de las iniciativas corporativas de Big Data, lagos de datos y plataformas de inteligencia artificial fracasan en entregar un retorno de inversión real, o terminan abandonadas silenciosamente tras quemar millones de dólares en facturas de nube.
+
+4
+00:00:57,432 --> 00:01:19,800
+DALIA: Corporaciones que contrataron clústeres masivos de computación distribuida para responder preguntas analíticas básicas que caben en la memoria RAM de una computadora portátil común. Equipos que migraron a arquitecturas de Leik-jaus y Data Mesh sin entender los fundamentos de gobernanza, convirtiendo sus plataformas en un cementerio digital de dashboards que nadie consulta y tablas huérfanas sin dueño.
+
+5
+00:01:19,800 --> 00:01:48,600
+JORGE: ¿Cómo llegamos a esta trampa tecnológica? ¿Por qué la batalla entre Snou-fleik, Data-briks y los formatos abiertos como Apache Áisberg está definiendo el futuro del software empresarial? Y sobre todo: ¿por qué herramientas locales como Dak D B están demostrando que el Big Data era, en gran parte, una ilusión comercial? Prepárense un café bien cargado, porque este análisis desmonta mitos desde la primera línea de código. ¡Arrancamos!
+
+6
+00:01:48,600 --> 00:02:05,592
+DALIA: Para entender la crisis actual, Jorge, tenemos que repasar la evolución de las últimas tres décadas. En los años noventa y dos mil, el rey indiscutible era el Data Uer-jaus tradicional: bases de datos relacionales colosales de Teradata, Oracle o Microsoft SQL Server.
+
+7
+00:02:05,592 --> 00:02:38,712
+JORGE: Eran sistemas extremadamente caros, altamente estructurados y basados en procesos ETL rígidos. Para subir una nueva columna, el equipo de negocio tenía que esperar semanas de reuniones con el comité de arquitectura. La ventaja era que los datos tenían consistencia transaccional absoluta y esquemas verificados. Pero cuando estalló la explosión de datos no estructurados —logs de servidores, eventos web, telemetría y audio—, el modelo de Data Uer-jaus tradicional se volvió prohibitivo en costo y escala.
+
+8
+00:02:38,712 --> 00:03:00,192
+DALIA: Ahí nació la segunda ola: la utopía del Data Lake con Hadoop y los almacenes de objetos en la nube como Amazon S3 y Google Cloud Storage. La promesa de los evangelistas era seductora: 'Simplemente arroja todos tus archivos crudos en formato JSON, CSV o Par-kei en un cubo de S3 a bajo costo, y ya los consultaremos después con Spark'.
+
+9
+00:03:00,192 --> 00:03:29,016
+JORGE: Pero lo que crearon no fue un lago de datos: fue un pantano de datos nauseabundo. Sin esquemas de validación obligatorios, sin transacciones ACID y sin control de concurrencia, miles de archivos quedaban corruptos a mitad de escritura. Los científicos de datos gastaban el ochenta por ciento de su tiempo limpiando basura inconsistente, y los directores financieros descubrieron con horror que consultar un pantano de petabytes consumía millones de dólares en cómputo innecesario.
+
+10
+00:03:29,016 --> 00:03:49,056
+DALIA: La respuesta de la industria para salvar el desastre fue inventar el 'Leik-jaus': una arquitectura híbrida que busca combinar la escalabilidad barata del almacenamiento de objetos con las garantías de calidad, esquemas estructurados y transacciones ACID del Data Uer-jaus tradicional. Y ahí es donde comenzó la verdadera guerra de los metadatos.
+
+11
+00:03:49,056 --> 00:03:57,264
+JORGE: En el centro de esta pugna emergieron dos titanes tecnológicos con filosofías de ingeniería opuestas: Snou-fleik y Data-briks.
+
+12
+00:03:57,264 --> 00:04:19,704
+DALIA: Snou-fleik conquistó a las empresas gracias a una genialidad de diseño: la separación radical entre almacenamiento y cómputo elástico, envuelta en un lenguaje SQL puro y una experiencia de usuario donde el administrador no tiene que preocuparse por gestionar clústeres ni servidores. Simplemente lanzas consultas y Snou-fleik escala automáticamente almacenes virtuales según la demanda.
+
+13
+00:04:19,704 --> 00:04:55,032
+JORGE: Pero esa conveniencia extrema trajo consigo una jaula de oro. Históricamente, para usar Snou-fleik a máxima velocidad, debías cargar tus datos en sus formatos propietarios de almacenamiento. Y cuando una corporación almacena cinco petabytes dentro del formato cerrado de un proveedor, el costo de salida o egress se vuelve astronómico. Muchas empresas experimentaron el famoso 'efecto de la factura sorpresa': consultas analíticas mal optimizadas por analistas novatos que consumían decenas de miles de dólares en créditos durante un solo fin de semana.
+
+14
+00:04:55,032 --> 00:05:11,111
+DALIA: Por otro lado, Data-briks nació en los laboratorios de UC Berkeley con Apache Spark en su A D N. Su enfoque original era para ingenieros de datos y científicos de aprendizaje automático que requerían cómputo distribuido masivo en Python, Scala y SQL.
+
+15
+00:05:11,111 --> 00:05:38,687
+JORGE: Para competir con la simplicidad de Snou-fleik, Data-briks introdujo Delta Lake: una capa de almacenamiento de código abierto que añade metadatos transaccionales sobre archivos Par-kei almacenados en los propios cubos de S3 del cliente. Y aquí se desató la guerra comercial: Snou-fleik comenzó a incorporar capacidades de Python y Machine Learning con Snowpark, mientras que Data-briks construyó Data-briks SQL para devorar las cargas de trabajo de Business Intelligence.
+
+16
+00:05:38,687 --> 00:06:03,695
+DALIA: Ambos gigantes peleaban por convertirse en el sistema operativo central de los datos corporativos. Pero cometieron un error de cálculo: los clientes corporativos, escarmentados tras décadas de dependencia tecnológica, ya no querían estar atados ni a los formatos de Snou-fleik ni al ecosistema cerrado de Data-briks. Y fue entonces cuando la comunidad de código abierto detonó su jugada maestra: Apache Áisberg.
+
+17
+00:06:03,695 --> 00:06:22,223
+JORGE: Apache Áisberg nació en las trincheras de ingeniería de Netflix, diseñado por Ryan Blue y Dan Weeks para resolver un problema crítico: cómo gestionar tablas con cientos de miles de particiones sobre Amazon S3 sin sufrir las lentitudes y limitaciones de consistencia eventual del antiguo catálogo de Apache Hive.
+
+18
+00:06:22,223 --> 00:06:40,415
+DALIA: Áisberg cambió las reglas del juego de forma radical. En lugar de definir una tabla como un directorio de archivos en un sistema de almacenamiento, Áisberg define una tabla como un árbol inmutable de metadatos jerárquicos. Cada commit crea una foto instantánea o snapshot de la tabla.
+
+19
+00:06:40,415 --> 00:07:01,439
+JORGE: Esto permite capacidades fascinantes que antes solo existían en bases de datos propietarias de millones de dólares: viajes en el tiempo para consultar cómo estaban los datos hace una semana, evolución de esquemas atómica sin necesidad de reescribir petabytes de datos, transacciones completamente serializables y compactación invisible en segundo plano.
+
+20
+00:07:01,439 --> 00:07:32,855
+DALIA: Pero la verdadera revolución de Áisberg es política y arquitectónica: la total separación entre el motor de cómputo y el formato de la tabla. Con Apache Áisberg, tus datos residen en tu propio almacenamiento en archivos Apache Par-kei estándar. Y sobre esa misma tabla puedes ejecutar consultas concurrentes con Snou-fleik, clústeres de Spark en Data-briks, motores de consulta interactiva como Tríno o Presto, y herramientas analíticas locales como Dak D B. Ningún proveedor puede secuestrar tus metadatos.
+
+21
+00:07:32,855 --> 00:07:54,263
+JORGE: El impacto en la industria fue tan demoledor que Snou-fleik tuvo que claudicar e implementar soporte nativo de primera clase para Áisberg, llegando incluso a adquirir por más de mil millones de dólares a Tabular, la empresa fundada por los creadores de Áisberg, en una maniobra desesperada para no perder el control sobre el nuevo estándar de facto del planeta de los datos.
+
+22
+00:07:54,263 --> 00:08:07,439
+DALIA: Mientras la capa técnica se debatía entre Lakehouses e Áisberg, en la capa organizacional explotó otra tendencia revolucionaria: el concepto de Data Mesh, formulado por la tecnóloga Zhamak Dej-gáni en Thoughtworks.
+
+23
+00:08:07,439 --> 00:08:31,823
+JORGE: El diagnóstico de Dej-gáni era brillante y demoledor: el cuello de botella de los datos en las empresas no es tecnológico, sino humano y organizacional. El modelo tradicional de concentrar a un equipo centralizado de ingenieros de datos como intermediarios entre quienes generan la información en las áreas de negocio y quienes la consumen es una receta garantizada para la lentitud, el agotamiento y el fracaso.
+
+24
+00:08:31,823 --> 00:08:53,447
+DALIA: Data Mesh propuso cuatro principios fundacionales: propiedad descentralizada de los datos orientada al dominio de negocio, datos como un producto consumible con contratos de servicio estrictos, una plataforma de datos de autoservicio que abstraiga la infraestructura subyacente, y una gobernanza federada computacional basada en políticas automatizadas de calidad y seguridad.
+
+25
+00:08:53,447 --> 00:09:11,351
+JORGE: La teoría es impecable. Pero en la práctica, el ochenta por ciento de las empresas que intentaron adoptar Data Mesh fracasaron estrepitosamente. ¿Por qué? Porque trataron al Data Mesh como si fuera un producto de software que se puede comprar con una tarjeta corporativa.
+
+26
+00:09:11,351 --> 00:09:42,215
+DALIA: Directores de tecnología salieron a contratar decenas de herramientas SaaS creyendo que instalando software de catálogo y linaje ya tenían un Data Mesh. En realidad, descentralizar la propiedad de los datos requiere una cultura madura de ingeniería en cada área de negocio: desarrolladores que traten a sus esquemas de eventos como APIs públicas y no como volcados descuidados de bases de datos operacionales. Al carecer de esa madurez, lo único que lograron fue multiplicar por diez los silos caóticos y fragmentar la gobernanza.
+
+27
+00:09:42,215 --> 00:09:56,087
+JORGE: Y mientras las grandes consultoras vendían soluciones multimillonarias en la nube, en dos mil diecinueve emergió silenciosamente desde los Países Bajos la mayor revolución de sentido común en la historia reciente de los datos: Dak D B.
+
+28
+00:09:56,087 --> 00:10:15,287
+DALIA: Creado por Mark Raasveldt y Hannes Mühleisen en el CWI de Ámsterdam, Dak D B es a las consultas analíticas lo que Es-Kiu-Lait es a las bases de datos transaccionales: un motor de base de datos columnar en memoria, libre de dependencias de servidor, que se ejecuta directamente embebido dentro del proceso de tu aplicación o terminal.
+
+29
+00:10:15,287 --> 00:10:33,767
+JORGE: Y aquí viene la gran verdad que los proveedores de nube no quieren que los directores financieros escuchen: estudios de telemetría en empresas de la lista Fortune 500 demuestran que más del noventa por ciento de las consultas analíticas diarias en producción operan sobre conjuntos de datos que pesan menos de cien gigabytes.
+
+30
+00:10:33,767 --> 00:10:48,815
+DALIA: ¡Menos de cien gigabytes! Y sin embargo, las empresas estaban levantando clústeres de cincuenta máquinas de Spark en la nube, pagando miles de dólares por hora solo para esperar quince minutos mientras la red distribuida transfería paquetes entre nodos.
+
+31
+00:10:48,815 --> 00:11:12,143
+JORGE: Dak D B destruyó ese absurdo con un motor de ejecución vectorial moderno optimizado para procesadores multinúcleo e instrucciones SIMD. Puede leer directamente archivos Par-kei remotos en S3 o locales en tu disco de estado sólido NVMe, ejecutando agregaciones complejas sobre cientos de millones de registros en fracciones de segundo dentro de una sola laptop o contenedor liviano.
+
+32
+00:11:12,143 --> 00:11:25,583
+DALIA: Dak D B demostró la falsedad del dogma del Big Data: no necesitas complejidad distribuida cuando el hardware moderno y los algoritmos vectorizados eficientes pueden hacer el trabajo a una fracción del costo y con cero fricción operativa.
+
+33
+00:11:25,583 --> 00:11:39,023
+JORGE: La gran lección para este dos mil veintiséis es indiscutible: el éxito en la ingeniería de datos no proviene de sumar más capas de abstracción ni de pagar las licencias más costosas, sino de aplicar un pragmatismo feroz.
+
+34
+00:11:39,023 --> 00:12:04,655
+DALIA: Adopta formatos abiertos como Apache Áisberg y Par-kei para ser dueño incondicional de tus datos. Implementa contratos de datos estrictos en origen antes de que la información toque la plataforma analítica. Prototipa localmente con Dak D B antes de considerar un clúster distribuido. Y no intentes descentralizar tu organización con Data Mesh si primero no has resuelto la disciplina básica de ingeniería en tus dominios.
+
+35
+00:12:04,655 --> 00:12:19,847
+JORGE: El análisis técnico exhaustivo, las comparativas de rendimiento, los diagramas de arquitectura y la bibliografía con referencias en formato APA 7 ya están disponibles en Sia Journal en escucha guion sia punto Git-Jab punto io diagonal articulos.
+
+36
+00:12:19,847 --> 00:12:28,295
+DALIA: Y en TikTok, Spotify y Shorts pueden consultar la síntesis animada en nuestro Reel Cómic-Pop para compartir con sus colegas de ingeniería.
+
+37
+00:12:28,295 --> 00:12:33,047
+JORGE: Muchísimas gracias por acompañarnos. Soy Jorge.
+
+38
+00:12:33,047 --> 00:12:38,303
+DALIA: Y yo soy Dalia. ¡Hasta el próximo episodio de Sia Podcast!
+

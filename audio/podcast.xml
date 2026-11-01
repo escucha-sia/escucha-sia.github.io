@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción</title>
+      <link>https://escucha-sia.github.io/articulos/sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh-por-qu.html</link>
+      <description>Análisis arquitectónico a fondo sobre la trampa de los silos modernos: Snowflake vs. Databricks, la revolución de Apache Iceberg, la utopía organizacional del Data Mesh y el contraataque local de DuckDB por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh.html</description>
+      <pubDate>Sat, 31 Oct 2026 20:09:37 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3" length="18201908" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3</guid>
+      <itunes:duration>12:38</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet</title>
       <link>https://escucha-sia.github.io/articulos/sia-cronicas-05-matt-mullenweg-vs-wp-engine-la-guerra-civil-.html</link>
       <description>Análisis exhaustivo del choque entre Automattic y Silver Lake: marcas registradas, el secuestro de Advanced Custom Fields (ACF), el éxodo de ingenieros y la crisis existencial del código abierto corporativo por Carlos Corona. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source.html</description>
