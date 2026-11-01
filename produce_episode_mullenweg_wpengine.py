@@ -132,7 +132,7 @@ async def step1_generate_full_audio():
     ep_info = {
         "title": "sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet",
         "filename": EPISODE_FILENAME,
-        "description": "Análisis exhaustivo del choque entre Automattic y Silver Lake: marcas registradas, el secuestro de Advanced Custom Fields (ACF), el éxodo de ingenieros y la crisis existencial del código abierto corporativo por Carlos Corona."
+        "description": "Análisis exhaustivo del choque entre Automattic y Silver Lake: marcas registradas, el secuestro de Advanced Custom Fields (ACF), el éxodo de ingenieros y la crisis existencial del código abierto corporativo por cacs."
     }
     
     out_path = await process_dialogue(FULL_SCRIPT, ep_info, custom_filename=EPISODE_FILENAME)
@@ -756,7 +756,7 @@ El auge de repositorios de plugins federados e independientes, el renacimiento d
             "Heinemeier Hansson, D. (2024). *The Open Source Governance Dilemma: Lessons from the WordPress Schism*. World Wide Web Foundation Whitepapers.",
             "United States District Court for the Northern District of California. (2024). *WP Engine Inc. v. Automattic Inc. & Matthew Mullenweg* (Civil Action No. 3:24-cv-06832).",
             "Doctorow, C. (2024). *The Weaponization of Open Source Registries: Why We Need Decentralized Package Infrastructure*. Electronic Frontier Foundation Deep Dive.",
-            "Corona, C., & sIA Editora. (2026). *sIA Crónicas #05: Matt Mullenweg vs. WP Engine, la fractura de la gobernanza comunitaria y la vulnerabilidad del 40% de la web*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Crónicas #05: Matt Mullenweg vs. WP Engine, la fractura de la gobernanza comunitaria y la vulnerabilidad del 40% de la web*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     }},'''
 

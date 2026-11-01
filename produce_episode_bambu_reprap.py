@@ -126,7 +126,7 @@ async def step1_generate_full_audio():
     ep_info = {
         "title": "sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?",
         "filename": EPISODE_FILENAME,
-        "description": "Análisis sobre el choque ideológico entre el hardware libre de garaje (RepRap, Klipper, Marlin) y el modelo de electrodoméstico cerrado de Bambu Lab: DRM en filamentos por RFID, telemetría en la nube y la soberanía de fabricación personal por Carlos Corona."
+        "description": "Análisis sobre el choque ideológico entre el hardware libre de garaje (RepRap, Klipper, Marlin) y el modelo de electrodoméstico cerrado de Bambu Lab: DRM en filamentos por RFID, telemetría en la nube y la soberanía de fabricación personal por cacs."
     }
     
     out_path = await process_dialogue(FULL_SCRIPT, ep_info, custom_filename=EPISODE_FILENAME)
@@ -796,7 +796,7 @@ La lección fundamental para la cultura maker de 2026 es que la conveniencia del
             "Průša, J. (2023). *The State of Open Source in 3D Printing: Why Proprietary Firmware Threatens Innovation*. Prusa Research Technical Whitepapers.",
             "Doctorow, C. (2020). *The Right to Repair: Why Open Hardware is Essential for Technological Sovereignty*. MIT Technology Review.",
             "Lipson, H., & Kurman, M. (2013). *Fabricated: The New World of 3D Printing*. John Wiley & Sons.",
-            "Corona, C., & sIA Editora. (2026). *sIA Maker #02: Bambu Lab vs. El espíritu RepRap, la comoditización del hardware y la soberanía de fabricación en el escritorio*. sIA Maker Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Maker #02: Bambu Lab vs. El espíritu RepRap, la comoditización del hardware y la soberanía de fabricación en el escritorio*. sIA Maker Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     }},'''
 

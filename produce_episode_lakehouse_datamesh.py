@@ -148,7 +148,7 @@ async def step1_generate_full_audio():
     ep_info = {
         "title": "sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción",
         "filename": EPISODE_FILENAME,
-        "description": "Análisis arquitectónico a fondo sobre la trampa de los silos modernos: Snowflake vs. Databricks, la revolución de Apache Iceberg, la utopía organizacional del Data Mesh y el contraataque local de DuckDB por Carlos Corona."
+        "description": "Análisis arquitectónico a fondo sobre la trampa de los silos modernos: Snowflake vs. Databricks, la revolución de Apache Iceberg, la utopía organizacional del Data Mesh y el contraataque local de DuckDB por cacs."
     }
     
     out_path = await process_dialogue(FULL_SCRIPT, ep_info, custom_filename=EPISODE_FILENAME)
@@ -769,7 +769,7 @@ Telemetrías reales en corporaciones Fortune 500 demuestran que más del 90% de 
             "Raasveldt, M., & Mühleisen, H. (2019). *DuckDB: an Embeddable Analytical Database*. Proceedings of the 2019 International Conference on Management of Data (SIGMOD '19), 1981–1984.",
             "Blue, R., Weeks, D., & Sznajdman, J. (2021). *Apache Iceberg: An Architectural Overview of the Open Table Format*. Netflix Technology Blog.",
             "Gartner Research. (2024). *Predicts 2024: The Real Cost of Big Data and Lakehouse Implementations*. Gartner Information Technology Whitepapers.",
-            "Corona, C., & sIA Editora. (2026). *sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     }},'''
 

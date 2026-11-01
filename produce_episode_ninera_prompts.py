@@ -122,7 +122,7 @@ async def step1_generate_full_audio():
     ep_info = {
         "title": "sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review",
         "filename": EPISODE_FILENAME,
-        "description": "Análisis sobre la fatiga del desarrollador moderno, el colapso del 'LGTM' en Pull Requests masivos generados por IA, la pérdida de soberanía técnica y el nuevo paradigma de verificación arquitectónica por Carlos Corona."
+        "description": "Análisis sobre la fatiga del desarrollador moderno, el colapso del 'LGTM' en Pull Requests masivos generados por IA, la pérdida de soberanía técnica y el nuevo paradigma de verificación arquitectónica por cacs."
     }
     
     out_path = await process_dialogue(FULL_SCRIPT, ep_info, custom_filename=EPISODE_FILENAME)
@@ -790,7 +790,7 @@ Esto implica diseñar primero interfaces estrictamente tipadas (TypeSafe, Pydant
             "Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.",
             "Stack Overflow. (2025). *Developer Survey 2025: AI Tools, Trust Deficits, and the Evolving Role of Code Review*. Stack Overflow Research.",
             "GitHub & Stanford University. (2024). *The Impact of Generative AI on Developer Velocity and Software Quality: A Longitudinal Case Study*. ACM Transactions on Software Engineering.",
-            "Corona, C., & sIA Editora. (2026). *sIA Dev #01: El síndrome de la niñera de prompts, el colapso del LGTM y la soberanía del software en la era de los agentes*. sIA Technology Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Dev #01: El síndrome de la niñera de prompts, el colapso del LGTM y la soberanía del software en la era de los agentes*. sIA Technology Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     }},'''
 

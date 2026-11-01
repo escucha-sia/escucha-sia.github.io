@@ -137,7 +137,7 @@ Telemetrías reales en corporaciones Fortune 500 demuestran que más del 90% de 
             "Raasveldt, M., & Mühleisen, H. (2019). *DuckDB: an Embeddable Analytical Database*. Proceedings of the 2019 International Conference on Management of Data (SIGMOD '19), 1981–1984.",
             "Blue, R., Weeks, D., & Sznajdman, J. (2021). *Apache Iceberg: An Architectural Overview of the Open Table Format*. Netflix Technology Blog.",
             "Gartner Research. (2024). *Predicts 2024: The Real Cost of Big Data and Lakehouse Implementations*. Gartner Information Technology Whitepapers.",
-            "Corona, C., & sIA Editora. (2026). *sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     },
     # sIA Corp 05 - Matt Mullenweg vs. WP Engine - 31 de Octubre de 2026
@@ -190,7 +190,7 @@ El auge de repositorios de plugins federados e independientes, el renacimiento d
             "Heinemeier Hansson, D. (2024). *The Open Source Governance Dilemma: Lessons from the WordPress Schism*. World Wide Web Foundation Whitepapers.",
             "United States District Court for the Northern District of California. (2024). *WP Engine Inc. v. Automattic Inc. & Matthew Mullenweg* (Civil Action No. 3:24-cv-06832).",
             "Doctorow, C. (2024). *The Weaponization of Open Source Registries: Why We Need Decentralized Package Infrastructure*. Electronic Frontier Foundation Deep Dive.",
-            "Corona, C., & sIA Editora. (2026). *sIA Crónicas #05: Matt Mullenweg vs. WP Engine, la fractura de la gobernanza comunitaria y la vulnerabilidad del 40% de la web*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Crónicas #05: Matt Mullenweg vs. WP Engine, la fractura de la gobernanza comunitaria y la vulnerabilidad del 40% de la web*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     },
     # sIA Maker 02 - Bambu Lab vs. RepRap - 30 de Octubre de 2026
@@ -243,7 +243,7 @@ La lección fundamental para la cultura maker de 2026 es que la conveniencia del
             "Průša, J. (2023). *The State of Open Source in 3D Printing: Why Proprietary Firmware Threatens Innovation*. Prusa Research Technical Whitepapers.",
             "Doctorow, C. (2020). *The Right to Repair: Why Open Hardware is Essential for Technological Sovereignty*. MIT Technology Review.",
             "Lipson, H., & Kurman, M. (2013). *Fabricated: The New World of 3D Printing*. John Wiley & Sons.",
-            "Corona, C., & sIA Editora. (2026). *sIA Maker #02: Bambu Lab vs. El espíritu RepRap, la comoditización del hardware y la soberanía de fabricación en el escritorio*. sIA Maker Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Maker #02: Bambu Lab vs. El espíritu RepRap, la comoditización del hardware y la soberanía de fabricación en el escritorio*. sIA Maker Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     },
     # sIA Dev 01 - El Síndrome de la Niñera de Prompts (AI Burnout) - 30 de Octubre de 2026
@@ -296,7 +296,7 @@ Esto implica diseñar primero interfaces estrictamente tipadas (TypeSafe, Pydant
             "Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.",
             "Stack Overflow. (2025). *Developer Survey 2025: AI Tools, Trust Deficits, and the Evolving Role of Code Review*. Stack Overflow Research.",
             "GitHub & Stanford University. (2024). *The Impact of Generative AI on Developer Velocity and Software Quality: A Longitudinal Case Study*. ACM Transactions on Software Engineering.",
-            "Corona, C., & sIA Editora. (2026). *sIA Dev #01: El síndrome de la niñera de prompts, el colapso del LGTM y la soberanía del software en la era de los agentes*. sIA Technology Publications. / [escucha-sia](https://escucha-sia.github.io)"
+            "cacs, & sIA Editora. (2026). *sIA Dev #01: El síndrome de la niñera de prompts, el colapso del LGTM y la soberanía del software en la era de los agentes*. sIA Technology Publications. / [escucha-sia](https://escucha-sia.github.io)"
         ]
     },
     # 0. Episodio Especial sIA Deep Dive 48 - 25 de Octubre de 2026
@@ -561,7 +561,7 @@ En 2016, Walmart adquirió Jet.com por 3,300 millones de dólares, designando a 
             "Lore, M. (2022). *Reflections on Customer Empathy, Predatory Pricing, and the Rebirth of Retail*. Harvard Business Review Case Series.",
             "United States House Committee on the Judiciary. (2020). *Investigation of Competition in Digital Markets: Majority Staff Report and Recommendations*. Washington, D.C.: U.S. Government Publishing Office.",
             "Galloway, S. (2017). *The Four: The Hidden DNA of Amazon, Apple, Facebook, and Google*. Portfolio/Penguin.",
-            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #04: Marc Lore vs. Amazon, el dilema humano del fundador y la economía algorítmica de retail*. sIA Business Publications. / [Diapers.com Story](https://github.com/escucha-sia)"
+            "cacs, & sIA Editora. (2026). *sIA Corporativo #04: Marc Lore vs. Amazon, el dilema humano del fundador y la economía algorítmica de retail*. sIA Business Publications. / [Diapers.com Story](https://github.com/escucha-sia)"
         ]
     },
     # 0. Episodio Especial Terror 02 - 23 de Octubre de 2026
@@ -614,7 +614,7 @@ Bajo este cuadro neuroquímico, la interacción prolongada con redes generativas
             "Zuboff, S. (2019). *The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power*. PublicAffairs.",
             "Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). *Generative Adversarial Nets*. Advances in Neural Information Processing Systems, 27, 2672-2680.",
             "Olah, C., Mordvintsev, A., & Schubert, L. (2017). *Feature Visualization: How neural networks build up their understanding of images*. Distill, 2(11), e7.",
-            "Corona, C., & sIA Editora. (2026). *sIA Terror #02: El moderador del turno nocturno, diseño sonoro cinemático y la patología del aislamiento algorítmico*. sIA Publications."
+            "cacs, & sIA Editora. (2026). *sIA Terror #02: El moderador del turno nocturno, diseño sonoro cinemático y la patología del aislamiento algorítmico*. sIA Publications."
         ]
     },
     # 0. Episodio Especial Corporativo 03 - 22 de Octubre de 2026
@@ -673,7 +673,7 @@ La deserción desató un éxodo sin precedentes: Capcom trasladó la franquicia 
             "Harris, B. J. (2014). *Console Wars: Sega, Nintendo, and the Battle that Defined a Generation*. HarperCollins.",
             "Kent, S. L. (2001). *The Ultimate History of Video Games: From Pong to Pokémon and Beyond*. Three Rivers Press.",
             "Sony Computer Entertainment. (1995). *PlayStation Hardware Architecture Manual: GTE and R3000A System Design*. Tokyo, Japan.",
-            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #03: La gran traición de Kioto, el ascenso de PlayStation y la economía de los discos ópticos*. sIA Business Publications."
+            "cacs, & sIA Editora. (2026). *sIA Corporativo #03: La gran traición de Kioto, el ascenso de PlayStation y la economía de los discos ópticos*. sIA Business Publications."
         ]
     },
     # 0. Episodio Especial Corporativo 02 - 21 de Octubre de 2026
@@ -726,7 +726,7 @@ La rentabilidad del modelo es astronómica: al retener hasta un 30% de peaje sob
             "Keighley, G. (2004). *The Final Hours of Half-Life 2: The Inside Story of the Five-Year Journey and the Stolen Code*. GameSpot Publications.",
             "Valve Corporation. (2012). *Handbook for New Employees: A Fearless Adventure in Finding Your Own Way*. Bellevue, WA: Valve Press.",
             "Schreier, J. (2021). *Press Reset: Ruin and Recovery in the Video Game Industry*. Grand Central Publishing.",
-            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #02: La génesis de Valve, la economía de Steam y la anarquía operativa de Gabe Newell*. sIA Business Publications."
+            "cacs, & sIA Editora. (2026). *sIA Corporativo #02: La génesis de Valve, la economía de Steam y la anarquía operativa de Gabe Newell*. sIA Business Publications."
         ]
     },
     # 0. Episodio Especial Corporativo 01 - 20 de Octubre de 2026
@@ -783,7 +783,7 @@ Esta obsesión permitió resistir la apuesta más solitaria de la historia tecno
             "Malone, M. S. (2023). *The Silicon Engine: NVIDIA and the Reinvention of Computing*. HarperCollins.",
             "Sega Corporation Archives. (1996). *Technical Partnership Memorandum on 3D Processing and the NV2 Contract Resolution*. Tokyo, Japan.",
             "Kirk, D. B., & Hwu, W. W. (2016). *Programming Massively Parallel Processors: A Hands-on Approach* (3rd ed.). Morgan Kaufmann.",
-            "Corona, C., & sIA Editora. (2026). *sIA Corporativo #01: La génesis de NVIDIA, microgestión de Jensen Huang y la economía de silicio de 3 billones*. sIA Business Publications."
+            "cacs, & sIA Editora. (2026). *sIA Corporativo #01: La génesis de NVIDIA, microgestión de Jensen Huang y la economía de silicio de 3 billones*. sIA Business Publications."
         ]
     },
     # 0. Episodio 40 - 17 de Octubre de 2026
@@ -2639,7 +2639,7 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
                 <p class="article-subtitle">{subtitle}</p>
 
                 <div class="author-bar">
-                    <div>Investigación: <strong>Carlos Corona</strong> & <strong>sIA Editora</strong></div>
+                    <div>Investigación: <strong>cacs</strong> & <strong>sIA Editora</strong></div>
                     <div>•</div>
                     <div>Fecha: <strong>{pub_date}</strong></div>
                     <div>•</div>
@@ -2695,7 +2695,7 @@ def render_article_html(title, subtitle, category, badge_color, pub_date, read_t
                 <a href="../podcast.xml">Feed RSS</a>
                 <a href="{GITHUB_REPO_URL}" target="_blank">GitHub Repository</a>
             </div>
-            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por cacs.</p>
         </div>
     </footer>
 
@@ -2840,7 +2840,7 @@ def render_magazine_index(catalog):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sIA Journal | Revista Digital de Inteligencia Artificial & Ingeniería de Datos</title>
-    <meta name="description" content="Revista técnica y compendio de podcasts de Inteligencia Artificial, Cloud, Big Data y Cultura Geek por Carlos Corona.">
+    <meta name="description" content="Revista técnica y compendio de podcasts de Inteligencia Artificial, Cloud, Big Data y Cultura Geek por cacs.">
     <link rel="stylesheet" href="assets/css/magazine.css">
     <link rel="icon" type="image/jpeg" href="cover.jpg">
 </head>
@@ -2907,7 +2907,7 @@ def render_magazine_index(catalog):
                 <a href="podcast.xml">Feed RSS</a>
                 <a href="{GITHUB_REPO_URL}" target="_blank">GitHub Repository</a>
             </div>
-            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por Carlos Corona.</p>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por cacs.</p>
         </div>
     </footer>
 
