@@ -113,6 +113,17 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bLLM\b', 'L L M', t)
     t = re.sub(r'\bRAG\b', 'Rag', t)
     t = re.sub(r'\bMCP\b', 'M C P', t)
+    # Ciberseguridad, Kernel y CrowdStrike
+    t = re.sub(r'\bCrowdStrike\b', 'Craud-Straik', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bRing 0\b', 'Ring Cero', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bRing 3\b', 'Ring Tres', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bBSOD\b', 'B S O D', t)
+    t = re.sub(r'\bEDR\b', 'E D R', t)
+    t = re.sub(r'\beBPF\b', 'e B P F', t)
+    t = re.sub(r'\bBitLocker\b', 'Bit-Lóquer', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bsysadmins\b', 'sis-ádmins', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bsysadmin\b', 'sis-ádmin', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bFalcon\b', 'Fálcon', t, flags=re.IGNORECASE)
     # Hardware, E-Ink y Serendipia
     t = re.sub(r'\bACeP\b', 'A C E P', t)
     t = re.sub(r'\bGallery 3\b', 'Gálery tres', t)

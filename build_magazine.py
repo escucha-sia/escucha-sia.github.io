@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Sec_01_CrowdStrike_Ring0_Kernel_BSOD_2026-11-02.mp3": "sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4",
     "sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3": "sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4",
     "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
     "sIA_Maker_02_Bambu_Lab_vs_RepRap_OpenSource_2026-10-30.mp3": "sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4",
@@ -79,6 +80,67 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Sec 01 - CrowdStrike, Ring 0 y el Bug del Kernel - 2 de Noviembre de 2026
+    "sIA_Sec_01_CrowdStrike_Ring0_Kernel_BSOD_2026-11-02.mp3": {
+        "slug": "sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-0",
+        "category": "Ciberseguridad & Kernel",
+        "badge_color": "blue",
+        "read_time": "12 min",
+        "title": "sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos",
+        "subtitle": "La anatomía forense del fallo de memoria en Channel File 291: Ring 0 vs. Ring 3, la ausencia de despliegues canario y la urgencia de expulsar el software de seguridad fuera del núcleo del sistema operativo.",
+        "thesis": "La concentración de privilegios irrestrictos en el Modo Núcleo (Ring 0) para software de seguridad corporativo constituye un riesgo sistémico inaceptable. La adopción de arquitecturas aisladas en espacio de usuario y mecanismos de observabilidad formalmente verificados como eBPF es imprescindible para salvaguardar la infraestructura crítica global.",
+        "nexo": "Primer episodio de la serie de Ciberseguridad & Resiliencia de Sistemas: Arquitectura de sistemas operativos, fallos de memoria, despliegues canario y gobernanza de infraestructura crítica.",
+        "reel_video": "sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Apagón Informático Global: La Fragilidad de la Infraestructura Crítica",
+                "body": """
+El 19 de julio de 2024, el tejido digital de la civilización moderna experimentó una fractura sistémica sin precedentes. En cuestión de minutos, más de 8.5 millones de computadoras y servidores con sistema operativo Windows quedaron paralizados en bucles infinitos de Pantalla Azul de la Muerte (BSOD), exhibiendo el mensaje de excepción 'PAGE FAULT IN NONPAGED AREA'.
+
+Aerolíneas globales cancelaron decenas de miles de vuelos dejando a millones de pasajeros atrapados; quirófanos y tratamientos oncológicos en hospitales de Estados Unidos y Europa fueron suspendidos; plataformas bancarias, cajeros automáticos y sistemas de logística portuaria dejaron de procesar transacciones. Con un impacto económico directo estimado en más de 10,000 millones de dólares, el incidente demostró que no se requería una ciberguerra ni un ataque de ransomware de actores estatales para doblegar a la economía mundial: bastaba un fallo de puntero en una actualización rutinaria de ciberseguridad.
+"""
+            },
+            {
+                "title": "2. La Arquitectura de Anillos de Protección: Ring 0 vs. Ring 3",
+                "body": """
+Para comprender la mecánica del fallo es necesario analizar la jerarquía de hardware de los procesadores x86/x64 modernos. En el 'Ring 3' o Espacio de Usuario (User Space) se ejecutan todas las aplicaciones convencionales (navegadores, bases de datos, suites ofimáticas). Si un programa en Ring 3 comete una violación de memoria, el sistema operativo aborta el proceso sin comprometer la estabilidad del equipo.
+
+En contraste, el 'Ring 0' o Modo Núcleo (Kernel Mode) es el santuario interior donde reside el núcleo del sistema operativo (ntoskrnl.exe) y los controladores de bajo nivel. En Ring 0 el software goza de acceso irrestricto a la memoria física y a todas las instrucciones de la CPU. No existe ninguna red de contención: si una sola instrucción en Ring 0 intenta acceder a una dirección de memoria inválida, la CPU dispara una excepción no manejable forzando el reinicio de emergencia para evitar la corrupción de datos en disco.
+"""
+            },
+            {
+                "title": "3. Anatomía Forense del Bug: El Archivo Channel 291",
+                "body": """
+El sensor CrowdStrike Falcon opera en Ring 0 mediante un controlador registrado como 'Boot-Start Driver' (csagent.sys), el cual se inicializa en los primeros instantes del arranque de Windows. Para incorporar nuevas reglas de detección sin exigir reinicios de servidores, Falcon descarga archivos binarios denominados 'Channel Files'.
+
+A las 04:09 UTC, CrowdStrike distribuyó el archivo 'Channel 291', orientado a evaluar el uso de tuberías con nombre (Named Pipes) en ataques cibernéticos. El analizador del driver esperaba veintiún campos de entrada; sin embargo, el archivo distribuido únicamente contenía veinte. Al intentar evaluar el índice 21 inexistente, el controlador leyó a través de un puntero nulo (dirección hexadecimal 0x9c), provocando una violación de acceso inmediata en Ring 0 y desencadenando el colapso en cadena de millones de equipos.
+"""
+            },
+            {
+                "title": "4. El Colapso de QA y la Falta de Despliegues Canario",
+                "body": """
+Más allá del error de programación en C++, la catástrofe evidenció una omisión imperdonable en las prácticas de ingeniería de infraestructura: la ausencia de despliegues canario (canary deployments). CrowdStrike consideró los Channel Files como 'datos' en lugar de código ejecutable, lo que provocó que su validador automático aprobara el archivo corrupto debido a un fallo en su propia lógica de pruebas.
+
+Posteriormente, la actualización fue inyectada de manera simultánea e indiscriminada a nivel planetario en lugar de seguir un esquema escalonado (1%, 10%, 25%, 100%). Esta decisión transformó un fallo aislado en un apagón mundial, forzando a los equipos de TI a realizar intervenciones presenciales máquina por máquina, ingresando claves de recuperación BitLocker de 48 caracteres para eliminar el archivo corrupto en Modo Seguro.
+"""
+            },
+            {
+                "title": "5. El Futuro de la Ciberseguridad: Expulsar los Antivirus del Kernel",
+                "body": """
+La cumbre de seguridad de Windows celebrada por Microsoft en Redmond marcó un punto de inflexión definitivo. Siguiendo el precedente de Apple en macOS con Endpoint Security y System Extensions, la industria ha acelerado el desarrollo de mecanismos para migrar los agentes de seguridad fuera del Ring 0.
+
+El uso de eBPF (Extended Berkeley Packet Filter) en Linux y su implementación en Windows se perfila como la arquitectura del futuro: permite ejecutar sondas de seguridad en el kernel pero sometidas a un verificador formal estricto que garantiza en tiempo de compilación que el código jamás accederá a memoria prohibida ni entrará en bucles infinitos. La lección de CrowdStrike es incontestable: otorgar privilegios absolutos en el núcleo a software de terceros es una práctica obsoleta e insostenible.
+"""
+            }
+        ],
+        "apa_references": [
+            "CrowdStrike Intelligence. (2024). *External Technical Root Cause Analysis: Channel File 291 Incident*. CrowdStrike Security Reports. https://www.crowdstrike.com",
+            "Microsoft Security Response Center. (2024). *Windows Security Ecosystem Architecture and Resiliency: Moving Beyond Kernel Drivers*. Microsoft Technical Whitepapers.",
+            "Russinovich, M., Solomon, D. A., & Ionescu, A. (2021). *Windows Internals, Part 1: System architecture, processes, threads, memory management, and more* (7th ed.). Microsoft Press.",
+            "Gregg, B. (2020). *BPF Performance Tools: Deep Visibility into Systems and Performance*. Addison-Wesley Professional.",
+            "cacs, & sIA Editora. (2026). *sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Data 03 - Lakehouse, Data Mesh, Iceberg & DuckDB - 31 de Octubre de 2026
     "sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3": {
         "slug": "sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh",
