@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.mp3": "sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4",
     "sIA_Sec_01_CrowdStrike_Ring0_Kernel_BSOD_2026-11-02.mp3": "sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4",
     "sIA_Data_03_Lakehouse_Data_Mesh_Iceberg_DuckDB_2026-10-31.mp3": "sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4",
     "sIA_Corp_05_Matt_Mullenweg_vs_WP_Engine_2026-10-31.mp3": "sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4",
@@ -80,6 +81,67 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Corp 06 - Dulces Montes y la Resistencia Industrial - 2 de Noviembre de 2026
+    "sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.mp3": {
+        "slug": "sia-corp-06-fabrica-de-dulces-montes-caramelo-de-leche-poncitlan",
+        "category": "Crónicas Corporativas & Manufactura",
+        "badge_color": "amber",
+        "read_time": "12 min",
+        "title": "sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana",
+        "subtitle": "La alquimia de 1938 de Don Miguel Montes Martell: la química de Maillard a escala industrial, Tomy, Damy y la supervivencia frente a los conglomerados globales de Wall Street.",
+        "thesis": "La permanencia y competitividad internacional de Fábrica de Dulces Montes durante casi un siglo demuestra que la integración vertical con cuencas lecheras locales, la fidelidad a ingredientes auténticos y la ingeniería de procesos al vacío superan a largo plazo a las economías de escala basadas en ultraprocesados y sustitutos artificiales.",
+        "nexo": "Sexto episodio de Crónicas Corporativas: Historia empresarial mexicana, manufactura de alimentos, ingeniería de confitería, cadenas agroindustriales y resistencia a adquisiciones transnacionales.",
+        "reel_video": "sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4",
+        "content_blocks": [
+            {
+                "title": "1. El Origen en la Ciénega de Chapala: Don Miguel Montes Martell (1938)",
+                "body": """
+En 1938, en el municipio ribereño de Poncitlán, Jalisco, Don Miguel Montes Martell sentó las bases de lo que se convertiría en un bastión de la confitería tradicional mexicana. Rodeado por la cuenca lechera más productiva del occidente del país, Montes identificó una oportunidad agroindustrial decisiva: transformar los excedentes perecederos de leche bronca en caramelos concentrados de alto valor agregado mediante pailas de cobre y calor controlado.
+
+Aquel taller artesanal, donde los primeros caramelos se cortaban a mano sobre losas de mármol frío y se envolvían manualmente en papel encerado con doble torsión, evolucionó paulatinamente hasta convertirse en un complejo industrial tecnificado que abastecería a los mercados de Guadalajara, la Ciudad de México y las redes mayoristas del bajío.
+"""
+            },
+            {
+                "title": "2. La Tríada Dorada: Tomy, Damy y Riko Riko",
+                "body": """
+El arraigo cultural de Montes descansa sobre una tríada de productos icónicos que trascendieron generaciones. El caramelo 'Tomy', con su distintiva envoltura amarilla y su ilustración de una vaca lechera sonriente, redefinió la categoría del caramelo blando masticable al integrar leche entera y mantequilla fresca en una emulsión elástica que no se fractura ni se adhiere en exceso al esmalte dental.
+
+Posteriormente, la formulación de 'Damy' añadió mitades de cacahuate tostado de primera selección a la masa láctea, logrando un equilibrio organoléptico entre grasas vegetales, salinidad sutil y dulzor profundo. La tríada se completó con 'Riko Riko', un caramelo relleno mediante técnicas de coextrusión concéntrica con núcleo líquido de cajeta, consolidando un portafolio complementado por Chupirul, paletas y mentas con mantequilla.
+"""
+            },
+            {
+                "title": "3. Termodinámica y Reacción de Maillard a Escala Industrial",
+                "body": """
+Lejos de depender de esencias químicas o jarabes sintéticos, el perfil aromático de Dulces Montes es el resultado directo de la Reacción de Maillard: una serie de transformaciones no enzimáticas entre los aminoácidos de las proteínas lácteas (caseína) y los azúcares reductores (lactosa y sacarosa) a temperaturas controladas de entre 110°C y 125°C.
+
+Para evitar la desnaturalización violenta de la proteína y la separación de fases grasas, la planta de Poncitlán adoptó concentradores y evaporadores al vacío. Al reducir la presión barométrica en las calderas, el agua de la leche fresca se evapora a menor temperatura, permitiendo obtener una concentración de sólidos superior al 92% sin carbonizar la mezcla y preservando la matriz coloidal que caracteriza a sus productos.
+"""
+            },
+            {
+                "title": "4. La Resistencia Familiar frente a los Gigantes Multinacionales",
+                "body": """
+Tras la apertura comercial de los años 90, la industria confitera en México presenció una ola masiva de consolidación extranjera: Ricolino fue adquirida por Bimbo y vendida después a Mondelēz; Nestlé absorbió La Corona y Carlos Quinto; Mars Wrigley se adueñó de Lucas y Skwinkles.
+
+Frente a ofertas millonarias de compra por parte de corporaciones transnacionales, la familia Montes optó por la independencia accionaria. Su fortaleza radicó en el dominio del canal tradicional de abarrotes y dulcerías de mayoreo, así como en la exportación al mercado de la nostalgia en Estados Unidos (Texas, California, Illinois), donde millones de consumidores buscan la autenticidad láctea frente a los caramelos estadounidenses elaborados con jarabe de maíz de alta fructosa (HFCS).
+"""
+            },
+            {
+                "title": "5. Desafíos Regulatorios y el Futuro de la Confitería Mexicana",
+                "body": """
+En la actualidad, Montes procesa decenas de miles de litros diarios de leche, genera más de 1,500 empleos directos e indirectos en la región de Poncitlán y comercializa en más de 30 naciones. La implementación de la NOM-051 sobre etiquetado frontal de advertencia calórica y los impuestos especiales (IEPS) han obligado a optimizar procesos sin desvirtuar la receta original.
+
+La trayectoria de Dulces Montes ratifica una lección estratégica para la industria nacional: el patrimonio agroindustrial mexicano sustentado en ingredientes genuinos, control estricto de ingeniería térmica y fidelidad a sus raíces comunitarias constituye una ventaja competitiva inexpugnable frente a cualquier monopolio global.
+"""
+            }
+        ],
+        "apa_references": [
+            "INEGI. (2024). *La industria de la confitería y productos de chocolate en México: Censos Económicos*. Instituto Nacional de Estadística y Geografía.",
+            "Secretaría de Economía. (2023). *Perfil del sector de confitería y derivados lácteos en Jalisco*. Gobierno de México.",
+            "Montes Martell, M. (1938-2024). *Archivos Históricos de Fábrica de Dulces Montes S.A. de C.V.* Poncitlán, Jalisco.",
+            "Belitz, H. D., Grosch, W., & Schieberle, P. (2009). *Food Chemistry: Milk and Dairy Products, Maillard Reaction Mechanisms* (4th ed.). Springer.",
+            "cacs, & sIA Editora. (2026). *sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Sec 01 - CrowdStrike, Ring 0 y el Bug del Kernel - 2 de Noviembre de 2026
     "sIA_Sec_01_CrowdStrike_Ring0_Kernel_BSOD_2026-11-02.mp3": {
         "slug": "sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-0",

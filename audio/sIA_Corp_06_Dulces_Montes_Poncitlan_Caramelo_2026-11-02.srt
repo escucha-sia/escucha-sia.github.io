@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:17,520
+JORGE: ¡Muy buenas tardes a toda nuestra comunidad de ingenieros de procesos, analistas corporativos y apasionados de la manufactura industrial en México y toda Iberoamérica! Bienvenidos a una nueva entrega de Sia en su edición de Crónicas Corporativas e Industriales. Soy Jorge.
+
+2
+00:00:17,520 --> 00:00:36,696
+DALIA: ¡Y yo soy Dalia! Hoy es lunes dos de noviembre de dos mil veintiséis. Y hoy nos trasladamos al corazón de Jalisco, a orillas del Río Santiago y la Ciénega de Chapala, para desentrañar la historia de una de las hazañas empresariales más queridas y resilientes de México: la Fábrica de Dulces Montes.
+
+3
+00:00:36,696 --> 00:01:07,752
+JORGE: ¿Quién en este país no creció desenvolviendo un caramelo Tomi con su inconfundible vaca lechera, mordiendo un Dami con trozos crujientes de cacahuate tostado o disfrutando un Riko Riko en una piñata familiar? Esos pequeños envoltorios amarillos y rojos no son solo nostalgia infantil: son el resultado de casi nueve décadas de estricta ingeniería de confitería, integración agroindustrial con cuencas lecheras locales y una feroz resistencia mexicana frente a las ofertas de compra de conglomerados multinacionales de Wall Street.
+
+4
+00:01:07,752 --> 00:01:28,776
+DALIA: En una era donde gigantes transnacionales como Móndeles, Nestlé y Mars han devorado marcas tradicionales para sustituir los ingredientes naturales por jarabes de maíz de alta fructosa y saborizantes artificiales, Dulces Montes sigue procesando leche fresca pasteurizada en pailas de cobre y hornos de vacío en su planta de Poncitlán, exportando a más de treinta países.
+
+5
+00:01:28,776 --> 00:01:54,984
+JORGE: ¿Cómo nació este imperio dulce en mil novecientos treinta y ocho? ¿Cuál es la química exacta detrás de la reacción de Maillár que le da su textura inigualable? Y sobre todo: ¿cómo sobrevive una empresa familiar de manufactura ante la NOM-051 y los impuestos calóricos modernos? Prepárense un café bien cargado, porque esta crónica despierta el apetito y el orgullo ingenieril. ¡Arrancamos!
+
+6
+00:01:54,984 --> 00:02:14,736
+DALIA: La historia comienza en mil novecientos treinta y ocho con un hombre visionario: Don Miguel Montes Martell. Poncitlán era entonces un pueblo predominantemente agrícola y ganadero, favorecido por la riqueza de los pastizales cercanos al Lago de Chapala, donde la producción de leche de vaca superaba por mucho el consumo fresco de la población.
+
+7
+00:02:14,736 --> 00:02:37,344
+JORGE: Don Miguel entendió un principio económico fundamental de la transformación de materia prima: la leche cruda es un producto altamente perecedero que pierde valor en cuestión de horas si no se pasteuriza o refrigera. Pero si concentras esa leche con azúcar, mantequilla y calor constante, no solo extiendes su vida útil a más de un año: multiplicas su valor agregado por diez.
+
+8
+00:02:37,344 --> 00:02:59,016
+DALIA: Comenzó en un pequeño taller artesanal con una paila de cobre calentada a fuego directo, revolviendo con palas de madera mezclas de leche bronca recién ordeñada y sacarosa. Los primeros productos no tenían máquinas empacadoras: se cortaban a mano sobre mesas de mármol frío y se envolvían individualmente en papel encerado con doble torsión manual por trabajadoras del pueblo.
+
+9
+00:02:59,016 --> 00:03:23,952
+JORGE: El éxito regional fue instantáneo. Los arrieros y comerciantes que viajaban entre Guadalajara, Ocotlán y la Ciudad de México cargaban costales de caramelos Montes porque no se derretían con el calor del camino gracias a su emulsión láctea estabilizada. Para la década de mil novecientos cincuenta, el pequeño taller ya era una fábrica en toda regla con calderas de vapor y líneas de producción mecanizadas.
+
+10
+00:03:23,952 --> 00:03:34,656
+DALIA: El verdadero salto a la inmortalidad comercial llegó cuando Don Miguel y su equipo desarrollaron su portafolio insignia: lo que en la industria se conoce como 'La Tríada Dorada de Montes'.
+
+11
+00:03:34,656 --> 00:04:01,896
+JORGE: El primero de ellos es el indiscutible rey: Tomi. Un caramelo blando de leche con mantequilla natural, caracterizado por su envoltura amarilla brillante decorada con una vaca sonriente. Lo que hacía único al Tomi no era solo su sabor lácteo concentrado, sino su elasticidad masticable: no se fragmentaba como un dulce macizo ni se pegaba agresivamente a los dientes como un toffee británico, logrando un equilibrio coloidal perfecto.
+
+12
+00:04:01,896 --> 00:04:22,416
+DALIA: Poco después nació Dami: una genialidad gastronómica que incorporó mitades de cacahuate tostado seleccionado dentro de la matriz caramelizada de leche. El contraste entre la salinidad sutil y las grasas saludables del cacahuate con el dulzor lácteo convirtió al Dami en un clásico de las cooperativas escolares y los puestos de periódicos en todo México.
+
+13
+00:04:22,416 --> 00:04:46,200
+JORGE: Y para completar la tríada surgió Riko Riko: un caramelo con corazón suave y centro fluido de cajeta o dulce de leche que requería una innovación técnica avanzada en boquillas de coextrusión concéntrica. A estos se sumaron marcas legendarias como Chupirul, las paletas de cajeta y los caramelos de menta con mantequilla, consolidando a Montes como el amo absoluto del caramelo lácteo nacional.
+
+14
+00:04:46,200 --> 00:04:54,144
+DALIA: Detrás del placer sensorial de un caramelo Tomi existe una compleja coreografía de química de alimentos y termodinámica, Jorge.
+
+15
+00:04:54,144 --> 00:05:18,984
+JORGE: El color ámbar profundo y el aroma característico a caramelo de leche no provienen de colorantes artificiales: son el resultado directo de la Reacción de Maillár. Se trata de una red de reacciones químicas entre los aminoácidos de las proteínas lácteas —principalmente la caseína— y los azúcares reductores como la lactosa y la glucosa a temperaturas entre los ciento diez y ciento veinticinco grados centígrados.
+
+16
+00:05:18,984 --> 00:05:37,608
+DALIA: Si cocinas a fuego abierto excesivo, la proteína se desnaturaliza, el azúcar se quema amargo y la grasa de la mantequilla se separa en una fase oleosa desagradable. Por eso, la gran innovación de ingeniería en la planta de Poncitlán fue la incorporación de evaporadores de película descendente y cocedores al vacío.
+
+17
+00:05:37,608 --> 00:06:00,072
+JORGE: Al cocinar la leche bajo presión negativa de vacío, el punto de ebullición del agua desciende drásticamente. Esto permite evaporar el agua de la leche fresca sin destruir las proteínas ni quemar los azúcares, logrando una concentración de sólidos de más del noventa y dos por ciento con una textura sedosa, homogénea y repetible en lotes de varias toneladas por turno.
+
+18
+00:06:00,072 --> 00:06:17,424
+DALIA: Y en el empaque, la velocidad es asombrosa: líneas de envasado automatizadas con servomotores que toman la cuerda continua de caramelo enfriada en túneles térmicos, la cortan con guillotinas rotativas y aplican la doble torsión al celofán a un ritmo de más de mil quinientos caramelos por minuto por línea.
+
+19
+00:06:17,424 --> 00:06:29,688
+JORGE: A partir de la década de mil novecientos noventa y con la entrada en vigor del Tratado de Libre Comercio, el mercado mexicano de confitería se convirtió en el objetivo más codiciado de los conglomerados globales.
+
+20
+00:06:29,688 --> 00:06:47,904
+DALIA: Vimos cómo marcas históricas de dulces mexicanos fueron adquiridas una tras otra: Ricolino fue absorbida por Bimbo y posteriormente vendida a la multinacional Móndeles por más de mil trescientos millones de dólares; La Corona y Carlos Quinto pasaron a manos de Nestlé; Lucas y Skwinkles fueron integradas por Mars Wrigley.
+
+21
+00:06:47,904 --> 00:06:59,808
+JORGE: Sin embargo, la familia Montes tomó una decisión estratégica contracorriente: rechazar las ofertas de adquisición y mantener el control soberano e independiente de la fábrica en Poncitlán.
+
+22
+00:06:59,808 --> 00:07:23,136
+DALIA: Para sobrevivir sin los presupuestos multimillonarios de mercadotecnia de las transnacionales, Montes recurrió a dos pilares imbatibles: la lealtad absoluta de la red tradicional de mayoristas y dulcerías de barrio en México, y la exportación al mercado de la nostalgia en los Estados Unidos, donde millones de migrantes hispanos buscan en las estanterías de Texas, California e Illinois el sabor genuino de su infancia.
+
+23
+00:07:23,136 --> 00:07:47,664
+JORGE: En la actualidad, Montes procesa decenas de miles de litros de leche diarios, genera más de mil quinientos empleos directos en la región Ciénega de Jalisco y ha sorteado con éxito las presiones de la NOM-051 y los sellos de advertencia calórica, demostrando que cuando un producto tiene autenticidad en sus ingredientes y excelencia en su manufactura, el consumidor jamás lo abandona por un sustituto barato.
+
+24
+00:07:47,664 --> 00:07:59,640
+DALIA: La historia de Dulces Montes es un recordatorio inspirador de que la mejor tecnología no siempre nace en Silicon Valley: también se forja en los calderos de vapor y las líneas de ensamble de nuestros municipios industriales.
+
+25
+00:07:59,640 --> 00:08:14,616
+JORGE: El ensayo histórico completo, el diagrama de flujo del proceso de cocción al vacío y la bibliografía con fuentes en formato APA 7ª Edición ya están disponibles en Sia Journal en nuestro portal web en escucha guion sia punto Git-Jab punto io diagonal articulos.
+
+26
+00:08:14,616 --> 00:08:26,136
+DALIA: Y en TikTok, en nuestra cuenta oficial arroba escucha guion bajo sia, los invitamos a ver el Reel animado en formato Cómic-Pop para revivir la historia del Tomi y compartir con nosotros su caramelo favorito.
+
+27
+00:08:26,136 --> 00:08:30,888
+JORGE: Muchísimas gracias por acompañarnos. Soy Jorge.
+
+28
+00:08:30,888 --> 00:08:36,144
+DALIA: Y yo soy Dalia. ¡Hasta el próximo episodio de Sia Podcast!
+

@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana</title>
+      <link>https://escucha-sia.github.io/articulos/sia-cronicas-06-fabrica-de-dulces-montes-el-imperio-del-cara.html</link>
+      <description>Crónica corporativa e industrial sobre Don Miguel Montes Martell (1938), la ingeniería de confitería con leche fresca y cocción al vacío, la tríada dorada de Tomy, Damy y Riko Riko, y la resistencia frente a los conglomerados globales por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-corp-06-fabrica-de-dulces-montes-caramelo-de-leche-poncitlan.html</description>
+      <pubDate>Tue, 03 Nov 2026 05:10:39 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.mp3" length="12389796" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.mp3</guid>
+      <itunes:duration>08:36</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos</title>
       <link>https://escucha-sia.github.io/articulos/sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-.html</link>
       <description>Autopsia forense y arquitectónica del mayor colapso informático de la historia: Ring 0 vs Ring 3, el archivo Channel 291, violación de memoria nula, fallo de QA masivo y el imperativo de expulsar los antivirus fuera del kernel por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-0.html</description>

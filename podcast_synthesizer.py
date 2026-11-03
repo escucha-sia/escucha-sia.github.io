@@ -124,6 +124,13 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bsysadmins\b', 'sis-ádmins', t, flags=re.IGNORECASE)
     t = re.sub(r'\bsysadmin\b', 'sis-ádmin', t, flags=re.IGNORECASE)
     t = re.sub(r'\bFalcon\b', 'Fálcon', t, flags=re.IGNORECASE)
+    # Manufactura, Confitería y Dulces Montes
+    t = re.sub(r'\bTomy\b', 'Tomi', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bDamy\b', 'Dami', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bMaillard\b', 'Maillár', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bMondelēz\b', 'Móndeles', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bMondelēz\b', 'Móndeles', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bHFCS\b', 'H F C S', t)
     # Hardware, E-Ink y Serendipia
     t = re.sub(r'\bACeP\b', 'A C E P', t)
     t = re.sub(r'\bGallery 3\b', 'Gálery tres', t)
