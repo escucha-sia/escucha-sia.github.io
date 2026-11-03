@@ -15,8 +15,8 @@ SCRATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 REELS_TO_PUBLISH = [
     {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4",
-        "caption": "¿Cómo una línea de código apagó 8.5 millones de PCs? La caída de CrowdStrike y el bug del Ring 0. Episodio en Spotify (sIA) y blog en perfil. #ciberseguridad #crowdstrike #windows #bsod #kernel #devops #sysadmin #programacion #siapodcast"
+        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4",
+        "caption": "¿Cómo un taller en Poncitlán creó el dulce más icónico de México? La historia de Dulces Montes (Tomy, Damy y Riko Riko). Episodio en Spotify (sIA) y blog en perfil. #dulcesmontes #tomy #damy #jalisco #hechoenmexico #emprendimiento #manufactura #siapodcast"
     }
 ]
 
