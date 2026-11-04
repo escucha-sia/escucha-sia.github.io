@@ -15,8 +15,8 @@ SCRATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 REELS_TO_PUBLISH = [
     {
-        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4",
-        "caption": "¿Cómo un taller en Poncitlán creó el dulce más icónico de México? La historia de Dulces Montes (Tomy, Damy y Riko Riko). Episodio en Spotify (sIA) y blog en perfil. #dulcesmontes #tomy #damy #jalisco #hechoenmexico #emprendimiento #manufactura #siapodcast"
+        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_08_CodeMode_vs_MCP.mp4",
+        "caption": "¿RIP MCP? Por qué la IA ya no llama a herramientas una por una: Cloudflare Code Mode, 2,500 endpoints en 1,000 tokens y sandboxes V8. Episodio completo en Spotify (sIA) y blog en perfil. #mcp #agentesia #cloudflare #anthropic #programacion #softwareengineer #siapodcast"
     }
 ]
 
