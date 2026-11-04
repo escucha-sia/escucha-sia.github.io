@@ -2,13 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>sIA Reel Stupy 08 - Code Mode vs MCP</title>
+    <title>sIA Reel Stupy 09 - BIQU Panda Treat</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@800&display=swap');
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        background: #060913;
+        background: #0f0a1c;
         color: #ffffff;
         font-family: 'Space Grotesk', sans-serif;
         width: 1080px;
@@ -17,13 +17,13 @@
         position: relative;
       }
 
-      /* Matriz Halftone Cómic Pop */
+      /* Matriz Halftone Cómic Pop Dulce */
       .halftone-overlay {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(#38bdf8 1.5px, transparent 1.5px);
+        background-image: radial-gradient(#ec4899 1.5px, transparent 1.5px);
         background-size: 26px 26px;
-        opacity: 0.15;
+        opacity: 0.16;
         z-index: 1;
         pointer-events: none;
       }
@@ -33,8 +33,8 @@
         inset: 0;
         background: repeating-linear-gradient(
           -45deg,
-          rgba(56, 189, 248, 0.05) 0px,
-          rgba(56, 189, 248, 0.05) 12px,
+          rgba(236, 72, 153, 0.05) 0px,
+          rgba(236, 72, 153, 0.05) 12px,
           transparent 12px,
           transparent 24px
         );
@@ -50,7 +50,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 80px;
-        color: rgba(56, 189, 248, 0.06);
+        color: rgba(236, 72, 153, 0.07);
         text-transform: uppercase;
         transform: rotate(-12deg) scale(1.4);
         top: 25%;
@@ -70,15 +70,15 @@
         padding: 90px 50px 110px 50px;
       }
 
-      /* BARRA DE CAPÍTULOS SUPERIOR TIPO JOHNOLVEN */
+      /* BARRA DE CAPÍTULOS DINÁMICA SUPERIOR */
       .chapters-pill-bar {
         display: flex;
         gap: 12px;
-        background: rgba(15, 23, 42, 0.85);
+        background: rgba(30, 27, 75, 0.9);
         padding: 10px 20px;
         border-radius: 40px;
-        border: 2px solid rgba(56, 189, 248, 0.3);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        border: 2px solid rgba(236, 72, 153, 0.4);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         backdrop-filter: blur(10px);
         margin-bottom: 20px;
       }
@@ -95,15 +95,15 @@
       }
 
       .step-active {
-        background: #38bdf8;
-        color: #000000;
-        box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+        background: #ec4899;
+        color: #ffffff;
+        box-shadow: 0 0 16px rgba(236, 72, 153, 0.7);
       }
 
       .header-pill {
         background: #000000;
-        border: 4px solid #38bdf8;
-        box-shadow: 6px 6px 0px #38bdf8;
+        border: 4px solid #ec4899;
+        box-shadow: 6px 6px 0px #ec4899;
         border-radius: 50px;
         padding: 14px 38px;
         display: flex;
@@ -115,9 +115,9 @@
       .header-dot {
         width: 20px;
         height: 20px;
-        background: #38bdf8;
+        background: #ec4899;
         border-radius: 50%;
-        box-shadow: 0 0 16px #38bdf8;
+        box-shadow: 0 0 16px #ec4899;
       }
 
       .header-text {
@@ -132,7 +132,7 @@
       .comic-card {
         background: #ffffff;
         border: 8px solid #000000;
-        box-shadow: 18px 18px 0px #38bdf8;
+        box-shadow: 18px 18px 0px #ec4899;
         border-radius: 36px;
         width: 100%;
         max-width: 980px;
@@ -146,8 +146,8 @@
         position: absolute;
         top: -30px;
         right: 40px;
-        background: #ef4444;
-        color: #ffffff;
+        background: #f59e0b;
+        color: #000000;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 24px;
@@ -160,7 +160,7 @@
 
       .myth-tag {
         display: inline-block;
-        background: #0284c7;
+        background: #be185d;
         color: #ffffff;
         font-family: 'JetBrains Mono', monospace;
         font-size: 26px;
@@ -184,8 +184,8 @@
       }
 
       .punch-pill {
-        background: #38bdf8;
-        color: #000000;
+        background: #fbcfe8;
+        color: #831843;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 40px;
@@ -198,8 +198,8 @@
       }
 
       .metric-box {
-        background: #f0f9ff;
-        border: 4px dashed #0284c7;
+        background: #fdf2f8;
+        border: 4px dashed #db2777;
         border-radius: 20px;
         padding: 24px 28px;
         margin-top: 15px;
@@ -209,14 +209,14 @@
         font-family: 'JetBrains Mono', monospace;
         font-size: 24px;
         font-weight: 800;
-        color: #0369a1;
+        color: #9d174d;
       }
 
       .metric-stat {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 58px;
-        color: #0284c7;
+        color: #db2777;
         line-height: 1.1;
         margin-top: 6px;
       }
@@ -237,9 +237,9 @@
         font-size: 32px;
         font-weight: 800;
         padding: 12px 36px;
-        border: 4px solid #38bdf8;
+        border: 4px solid #ec4899;
         border-radius: 40px;
-        box-shadow: 6px 6px 0px #38bdf8;
+        box-shadow: 6px 6px 0px #ec4899;
       }
 
       .progress-bar-container {
@@ -255,7 +255,7 @@
 
       .progress-bar-fill {
         height: 100%;
-        background: linear-gradient(90deg, #38bdf8, #0284c7, #818cf8);
+        background: linear-gradient(90deg, #ec4899, #db2777, #f43f5e);
         width: 0%;
         animation: progressAnim 45s linear infinite;
       }
@@ -267,14 +267,14 @@
 
       .final-pill {
         background: #000000;
-        color: #38bdf8;
+        color: #f472b6;
         font-family: 'JetBrains Mono', monospace;
         font-size: 34px;
         font-weight: 800;
         padding: 16px 36px;
-        border: 5px solid #38bdf8;
+        border: 5px solid #ec4899;
         border-radius: 20px;
-        box-shadow: 6px 6px 0px #38bdf8;
+        box-shadow: 6px 6px 0px #ec4899;
         margin-top: 15px;
         display: inline-block;
       }
@@ -286,99 +286,99 @@
     <div class="speed-lines"></div>
 
     <div class="bg-ticker">
-      <div>MCP TOOL CALLING CODE MODE CLOUDFLARE</div>
-      <div>ANTHROPIC 1.17M TOKENS A 1000 TOKENS</div>
-      <div>TYPESCRIPT SDK V8 ISOLATES SANDBOX</div>
-      <div>CODE IS THE UNIVERSAL INTERFACE</div>
+      <div>BIQU PANDA TREAT BAMBU LAB FOODTECH</div>
+      <div>GALLETAS DECORADAS REPOSTERIA 3D TINTA COMESTIBLE</div>
+      <div>DE 5000 A 330 DOLARES DEMOCRATIZACION</div>
+      <div>BIGTREETECH HACK ALIMENTARIO VIRAL TIKTOK</div>
     </div>
 
     <div class="reel-wrapper">
-      <!-- BARRA DE CAPÍTULOS DINÁMICA -->
+      <!-- BARRA DE CAPÍTULOS SUPERIOR -->
       <div class="chapters-pill-bar">
-        <div class="chapter-step" id="chap-1">01 MCP</div>
-        <div class="chapter-step" id="chap-2">02 PROBLEMA</div>
-        <div class="chapter-step" id="chap-3">03 CODE MODE</div>
-        <div class="chapter-step" id="chap-4">04 BENCHMARK</div>
+        <div class="chapter-step" id="chap-1">01 $5,000 A $330</div>
+        <div class="chapter-step" id="chap-2">02 EL HACK</div>
+        <div class="chapter-step" id="chap-3">03 FOOD SAFETY</div>
+        <div class="chapter-step" id="chap-4">04 NEGOCIO</div>
       </div>
 
       <div class="header-pill">
         <div class="header-dot"></div>
-        <div class="header-text">sIA DEV & ARQUITECTURA #02</div>
+        <div class="header-text">sIA MAKER & FOODTECH #03</div>
       </div>
 
       <!-- MAIN COMIC CARD -->
       <div class="comic-card">
-        <div class="comic-stamp">NOVEDAD 2026</div>
+        <div class="comic-stamp">HACK 2026</div>
 
-        <!-- SCENE 1: EL CUELLO DE BOTELLA (0s - 9.0s) -->
+        <!-- SCENE 1: EL PRECIO PROHIBITIVO (0s - 9.0s) -->
         <div class="scene" id="scene-1">
-          <div class="myth-tag">EL MITO DEL TOOL CALLING</div>
+          <div class="myth-tag">EL MONOPOLIO DULCE</div>
           <div class="headline-black">
-            ¿RIP MCP? LLAMAR TOOLS UNA POR UNA MURIÓ
+            ¿IMPRIMIR GALLETAS COSTABA $5,000?
           </div>
           <div class="punch-pill">
-            ¿FACTURA DE TOKENS POR LAS NUBES?
+            LLEGÓ EL BIQU PANDA TREAT
           </div>
           <div class="metric-box">
-            <div class="metric-title">API CLOUDFLARE EN MCP:</div>
-            <div class="metric-stat">1.17M TOKENS</div>
+            <div class="metric-title">MÁQUINAS INDUSTRIALES ANTIGUAS:</div>
+            <div class="metric-stat">$5,000 USD</div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 18px;">
-            2,500 endpoints saturan el contexto antes de empezar.
+            Un lujo reservado para gigantes hoteleros.
           </div>
         </div>
 
-        <!-- SCENE 2: EL PROBLEMA DEL JSON (9.0s - 21.0s) -->
+        <!-- SCENE 2: EL HACK DE BIGTREETECH (9.0s - 21.0s) -->
         <div class="scene" id="scene-2">
-          <div class="myth-tag" style="background: #ef4444; color: #fff;">LATENCIA Y BASURA JSON</div>
+          <div class="myth-tag" style="background: #0284c7; color: #fff;">INGENIERÍA MAKER</div>
           <div class="headline-black" style="font-size: 50px;">
-            MÚLTIPLES VIAJES DE IDA Y VUELTA
+            HACK A BAMBU LAB POR $130
           </div>
-          <div class="punch-pill" style="background: #fca5a5; color: #000; font-size: 36px;">
-            CONGESTIÓN DE CONTEXTO
+          <div class="punch-pill" style="background: #e0f2fe; color: #0369a1; font-size: 36px;">
+            CABEZAL COMESTIBLE SNAP-ON
           </div>
-          <div class="metric-box" style="background: #fef2f2; border-color: #ef4444;">
-            <div style="font-size: 32px; font-weight: 900; color: #991b1b;">
-              ⚠️ EL LLM NO ES UN ENRUTADOR
+          <div class="metric-box" style="background: #f0f9ff; border-color: #0284c7;">
+            <div style="font-size: 32px; font-weight: 900; color: #075985;">
+              🍓 CAMBIO RÁPIDO EN SEGUNDOS
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
-            Payloads intermedios destruyen el razonamiento.
+            Quitas el plástico y pones tinta de comida.
           </div>
         </div>
 
-        <!-- SCENE 3: CODE MODE (21.0s - 34.0s) -->
+        <!-- SCENE 3: FOOD SAFETY (21.0s - 34.0s) -->
         <div class="scene" id="scene-3">
-          <div class="myth-tag" style="background: #10b981; color: #fff;">LA SOLUCIÓN REVOLUCIONARIA</div>
+          <div class="myth-tag" style="background: #10b981; color: #fff;">INOCUIDAD CERTIFICADA</div>
           <div class="headline-black" style="font-size: 48px;">
-            CODE MODE: TYPESCRIPT SDK
+            TINTAS COMESTIBLES FDA
           </div>
-          <div class="punch-pill" style="background: #000; color: #38bdf8 !important; font-size: 36px; border-color: #38bdf8;">
-            CORRE EN SANDBOX V8 ISOLATE
+          <div class="punch-pill" style="background: #000; color: #f472b6 !important; font-size: 36px; border-color: #f472b6;">
+            BANDEJA DE SILICONA PURA
           </div>
           <div class="metric-box" style="background: #f0fdf4; border-color: #10b981;">
             <div style="font-size: 30px; font-weight: 900; color: #166534;">
-              ⚡ UN SOLO VIAJE DE IDA Y VUELTA
+              ✨ KOSHER, HALAL Y SIN GLUTEN
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 15px;">
-            El código corre en milisegundos y filtra en local.
+            Galletas, macarons y café en 20 segundos.
           </div>
         </div>
 
-        <!-- SCENE 4: BENCHMARK Y CIERRE (34.0s - 45.0s) -->
+        <!-- SCENE 4: LA REVOLUCIÓN (34.0s - 45.0s) -->
         <div class="scene" id="scene-4">
-          <div class="myth-tag" style="background: #8b5cf6; color: #fff;">EL BENCHMARK DEFINITIVO</div>
+          <div class="myth-tag" style="background: #ec4899; color: #fff;">MICRO-BAKING VIRAL</div>
           <div class="headline-black" style="font-size: 46px;">
-            DE 150,000 A 2,000 TOKENS
+            TOTAL: $330 USD EN TU COCINA
           </div>
-          <div class="punch-pill" style="background: #38bdf8; font-size: 34px;">
-            -98% EN COSTOS DE INFERENCIA
+          <div class="punch-pill" style="background: #fbcfe8; font-size: 34px;">
+            DEMOCRATIZACIÓN GASTRONÓMICA
           </div>
           <div class="final-pill">
             🎧 EPISODIO COMPLETO EN SPOTIFY
           </div>
-          <div style="font-size: 26px; font-weight: 800; color: #0284c7; margin-top: 14px;">
+          <div style="font-size: 26px; font-weight: 800; color: #db2777; margin-top: 14px;">
             Lee la investigación en sIA Journal (link en bio)
           </div>
         </div>
@@ -405,7 +405,6 @@
       const c3 = document.getElementById('chap-3');
       const c4 = document.getElementById('chap-4');
 
-      // Reset display
       s1.style.display = 'none';
       s2.style.display = 'none';
       s3.style.display = 'none';

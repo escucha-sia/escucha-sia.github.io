@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Maker_03_Biqu_Panda_Treat_FoodTech_2026-11-04.mp3": "sIA_Reel_Stupy_09_Biqu_Panda_Treat.mp4",
     "sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.mp3": "sIA_Reel_Stupy_08_CodeMode_vs_MCP.mp4",
     "sIA_Corp_06_Dulces_Montes_Poncitlan_Caramelo_2026-11-02.mp3": "sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4",
     "sIA_Sec_01_CrowdStrike_Ring0_Kernel_BSOD_2026-11-02.mp3": "sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4",
