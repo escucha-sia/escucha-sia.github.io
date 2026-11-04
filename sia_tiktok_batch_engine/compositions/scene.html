@@ -1,247 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1080, height=1920" />
+    <meta charset="utf-8" />
+    <title>sIA Reel Stupy 08 - Code Mode vs MCP</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,900&family=Space+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@700;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@800&display=swap');
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
+        background: #060913;
+        color: #ffffff;
+        font-family: 'Space Grotesk', sans-serif;
         width: 1080px;
         height: 1920px;
-        background: #1c0d02;
-        color: #0b0d17;
-        font-family: 'Montserrat', sans-serif;
         overflow: hidden;
         position: relative;
       }
 
-      /* 1. HALFTONE COMIC PATTERN BACKGROUND */
+      /* Matriz Halftone Cómic Pop */
       .halftone-overlay {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(rgba(245, 158, 11, 0.18) 2.5px, transparent 2.5px);
+        background-image: radial-gradient(#38bdf8 1.5px, transparent 1.5px);
         background-size: 26px 26px;
-        opacity: 0.9;
+        opacity: 0.15;
         z-index: 1;
-      }
-
-      /* 2. BACKGROUND GHOST TICKER */
-      .bg-ticker {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        opacity: 0.06;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 80px;
-        font-weight: 900;
-        color: #f59e0b;
-        user-select: none;
         pointer-events: none;
-        z-index: 2;
-        line-height: 1.1;
       }
 
-      /* 3. SPEED LINES */
       .speed-lines {
         position: absolute;
         inset: 0;
-        background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(245, 158, 11, 0.05) 0deg 8deg, transparent 8deg 16deg);
+        background: repeating-linear-gradient(
+          -45deg,
+          rgba(56, 189, 248, 0.05) 0px,
+          rgba(56, 189, 248, 0.05) 12px,
+          transparent 12px,
+          transparent 24px
+        );
         z-index: 2;
         pointer-events: none;
       }
 
-      /* 4. MAIN CONTAINER */
-      .reel-wrapper {
+      .bg-ticker {
         position: absolute;
-        inset: 0;
-        z-index: 10;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 90px 48px 120px 48px;
+        justify-content: space-around;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 80px;
+        color: rgba(56, 189, 248, 0.06);
+        text-transform: uppercase;
+        transform: rotate(-12deg) scale(1.4);
+        top: 25%;
+        z-index: 0;
+        line-height: 1.1;
       }
 
-      /* HEADER */
+      .reel-wrapper {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 50px 110px 50px;
+      }
+
+      /* BARRA DE CAPÍTULOS SUPERIOR TIPO JOHNOLVEN */
+      .chapters-pill-bar {
+        display: flex;
+        gap: 12px;
+        background: rgba(15, 23, 42, 0.85);
+        padding: 10px 20px;
+        border-radius: 40px;
+        border: 2px solid rgba(56, 189, 248, 0.3);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        backdrop-filter: blur(10px);
+        margin-bottom: 20px;
+      }
+
+      .chapter-step {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        font-weight: 800;
+        padding: 6px 16px;
+        border-radius: 20px;
+        color: #94a3b8;
+        background: transparent;
+        transition: all 0.3s ease;
+      }
+
+      .step-active {
+        background: #38bdf8;
+        color: #000000;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+      }
+
       .header-pill {
         background: #000000;
-        border: 4px solid #f59e0b;
-        border-radius: 999px;
-        padding: 14px 34px;
+        border: 4px solid #38bdf8;
+        box-shadow: 6px 6px 0px #38bdf8;
+        border-radius: 50px;
+        padding: 14px 38px;
         display: flex;
         align-items: center;
         gap: 16px;
-        box-shadow: 6px 6px 0px #f59e0b;
-        transform: rotate(-1deg);
+        margin-bottom: 10px;
       }
+
       .header-dot {
-        width: 18px;
-        height: 18px;
-        background: #10b981;
+        width: 20px;
+        height: 20px;
+        background: #38bdf8;
         border-radius: 50%;
-        box-shadow: 0 0 16px #10b981;
+        box-shadow: 0 0 16px #38bdf8;
       }
+
       .header-text {
-        color: #ffffff;
         font-family: 'JetBrains Mono', monospace;
         font-size: 26px;
         font-weight: 800;
         letter-spacing: 2px;
+        color: #f8fafc;
       }
 
-      /* COMIC POP CARD */
+      /* TARJETA CÓMIC-POP PRINCIPAL */
       .comic-card {
         background: #ffffff;
-        border: 7px solid #000000;
+        border: 8px solid #000000;
+        box-shadow: 18px 18px 0px #38bdf8;
         border-radius: 36px;
-        box-shadow: 18px 18px 0px #000000;
         width: 100%;
-        max-width: 984px;
-        padding: 44px 36px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        max-width: 980px;
+        padding: 50px 42px;
+        color: #000000;
         text-align: center;
-        margin: auto 0;
+        position: relative;
       }
 
-      /* CORNER COMIC STAMP */
       .comic-stamp {
         position: absolute;
         top: -30px;
         right: 40px;
-        background: #ea580c;
-        color: #fff;
+        background: #ef4444;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 26px;
-        padding: 10px 24px;
-        border: 5px solid #000;
-        box-shadow: 6px 6px 0px #000;
-        border-radius: 12px;
-        transform: rotate(4deg);
-        letter-spacing: 1px;
+        font-size: 24px;
+        padding: 8px 24px;
+        border: 4px solid #000000;
+        border-radius: 14px;
+        transform: rotate(6deg);
+        box-shadow: 4px 4px 0px #000000;
       }
-
-      /* SCENES DEFINITION */
-      .scene {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #scene-1 { display: flex; }
-
-      @keyframes showS1 {
-        0%, 18.88% { opacity: 1; pointer-events: auto; display: flex; }
-        18.89%, 100% { opacity: 0; pointer-events: none; display: none; }
-      }
-      @keyframes showS2 {
-        0%, 18.88% { opacity: 0; pointer-events: none; display: none; }
-        18.89%, 45.55% { opacity: 1; pointer-events: auto; display: flex; }
-        45.56%, 100% { opacity: 0; pointer-events: none; display: none; }
-      }
-      @keyframes showS3 {
-        0%, 45.55% { opacity: 0; pointer-events: none; display: none; }
-        45.56%, 74.44% { opacity: 1; pointer-events: auto; display: flex; }
-        74.45%, 100% { opacity: 0; pointer-events: none; display: none; }
-      }
-      @keyframes showS4 {
-        0%, 74.44% { opacity: 0; pointer-events: none; display: none; }
-        74.45%, 100% { opacity: 1; pointer-events: auto; display: flex; }
-      }
-
-      #scene-1 { animation: showS1 45s infinite; }
-      #scene-2 { animation: showS2 45s infinite; }
-      #scene-3 { animation: showS3 45s infinite; }
-      #scene-4 { animation: showS4 45s infinite; }
 
       .myth-tag {
-        background: #f59e0b;
-        color: #000000;
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 26px;
-        font-weight: 900;
-        letter-spacing: 2px;
-        padding: 8px 22px;
-        border-radius: 999px;
-        border: 4px solid #000;
-        box-shadow: 4px 4px 0px #000;
-        margin-bottom: 24px;
         display: inline-block;
+        background: #0284c7;
+        color: #ffffff;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 26px;
+        font-weight: 800;
+        padding: 8px 24px;
+        border-radius: 12px;
+        border: 3px solid #000;
+        margin-bottom: 24px;
+        text-transform: uppercase;
       }
 
       .headline-black {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 54px;
-        line-height: 1.08;
-        color: #0b0d17;
-        text-transform: uppercase;
+        line-height: 1.15;
         letter-spacing: -1.5px;
-        margin-bottom: 26px;
+        color: #000000;
+        margin-bottom: 24px;
+        text-transform: uppercase;
       }
 
       .punch-pill {
-        background: #fbbf24;
+        background: #38bdf8;
         color: #000000;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 40px;
-        line-height: 1.15;
         padding: 16px 28px;
-        border: 6px solid #000000;
-        box-shadow: 8px 8px 0px #000000;
+        border: 5px solid #000000;
         border-radius: 20px;
-        transform: rotate(-1.5deg);
-        margin: 18px 0;
+        box-shadow: 6px 6px 0px #000000;
         display: inline-block;
+        margin-bottom: 26px;
       }
 
       .metric-box {
-        background: #fef3c7;
-        border: 5px dashed #f59e0b;
+        background: #f0f9ff;
+        border: 4px dashed #0284c7;
         border-radius: 20px;
-        padding: 22px 28px;
-        margin-top: 20px;
-        width: 100%;
+        padding: 24px 28px;
+        margin-top: 15px;
       }
 
       .metric-title {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 800;
-        color: #b45309;
-        letter-spacing: 1px;
+        color: #0369a1;
       }
 
       .metric-stat {
         font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
         font-weight: 900;
-        color: #78350f;
+        font-size: 58px;
+        color: #0284c7;
         line-height: 1.1;
+        margin-top: 6px;
+      }
+
+      /* FOOTER & TIMELINE */
+      .footer-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .channel-tag {
+        background: #000000;
+        color: #ffffff;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 800;
+        padding: 12px 36px;
+        border: 4px solid #38bdf8;
+        border-radius: 40px;
+        box-shadow: 6px 6px 0px #38bdf8;
       }
 
       .progress-bar-container {
         width: 100%;
-        height: 20px;
-        background: #000000;
-        border: 4px solid #f59e0b;
-        border-radius: 999px;
+        max-width: 900px;
+        height: 16px;
+        background: #1e293b;
+        border: 3px solid #000000;
+        border-radius: 10px;
         overflow: hidden;
-        position: relative;
-        box-shadow: 4px 4px 0px #f59e0b;
+        margin-top: 15px;
       }
 
-      .progress-fill {
+      .progress-bar-fill {
         height: 100%;
-        background: linear-gradient(90deg, #f59e0b, #fbbf24, #ea580c);
+        background: linear-gradient(90deg, #38bdf8, #0284c7, #818cf8);
         width: 0%;
         animation: progressAnim 45s linear infinite;
       }
@@ -253,14 +267,14 @@
 
       .final-pill {
         background: #000000;
-        color: #fbbf24;
+        color: #38bdf8;
         font-family: 'JetBrains Mono', monospace;
         font-size: 34px;
         font-weight: 800;
         padding: 16px 36px;
-        border: 5px solid #f59e0b;
+        border: 5px solid #38bdf8;
         border-radius: 20px;
-        box-shadow: 6px 6px 0px #f59e0b;
+        box-shadow: 6px 6px 0px #38bdf8;
         margin-top: 15px;
         display: inline-block;
       }
@@ -272,100 +286,153 @@
     <div class="speed-lines"></div>
 
     <div class="bg-ticker">
-      <div>DULCES MONTES PONCITLAN JALISCO 1938</div>
-      <div>TOMY DAMY RIKO RIKO CARAMELO DE LECHE</div>
-      <div>REACCION DE MAILLARD VACIO Y PAILAS</div>
-      <div>HECHO EN MEXICO RESISTENCIA INDUSTRIAL</div>
+      <div>MCP TOOL CALLING CODE MODE CLOUDFLARE</div>
+      <div>ANTHROPIC 1.17M TOKENS A 1000 TOKENS</div>
+      <div>TYPESCRIPT SDK V8 ISOLATES SANDBOX</div>
+      <div>CODE IS THE UNIVERSAL INTERFACE</div>
     </div>
 
     <div class="reel-wrapper">
+      <!-- BARRA DE CAPÍTULOS DINÁMICA -->
+      <div class="chapters-pill-bar">
+        <div class="chapter-step" id="chap-1">01 MCP</div>
+        <div class="chapter-step" id="chap-2">02 PROBLEMA</div>
+        <div class="chapter-step" id="chap-3">03 CODE MODE</div>
+        <div class="chapter-step" id="chap-4">04 BENCHMARK</div>
+      </div>
+
       <div class="header-pill">
         <div class="header-dot"></div>
-        <div class="header-text">sIA CRÓNICAS CORP #06</div>
+        <div class="header-text">sIA DEV & ARQUITECTURA #02</div>
       </div>
 
       <!-- MAIN COMIC CARD -->
       <div class="comic-card">
-        <div class="comic-stamp">MÉXICO 1938</div>
+        <div class="comic-stamp">NOVEDAD 2026</div>
 
-        <!-- SCENE 1: EL REY DEL CARAMELO (0s - 8.5s) -->
+        <!-- SCENE 1: EL CUELLO DE BOTELLA (0s - 9.0s) -->
         <div class="scene" id="scene-1">
-          <div class="myth-tag">EL ORIGEN DE PONCITLÁN</div>
+          <div class="myth-tag">EL MITO DEL TOOL CALLING</div>
           <div class="headline-black">
-            ¿CÓMO NACIÓ EL REY DEL CARAMELO?
+            ¿RIP MCP? LLAMAR TOOLS UNA POR UNA MURIÓ
           </div>
           <div class="punch-pill">
-            DULCES MONTES DESDE 1938
+            ¿FACTURA DE TOKENS POR LAS NUBES?
           </div>
           <div class="metric-box">
-            <div class="metric-title">CIÉNEGA DE CHAPALA, JALISCO:</div>
-            <div class="metric-stat">88 AÑOS DE RESISTENCIA</div>
+            <div class="metric-title">API CLOUDFLARE EN MCP:</div>
+            <div class="metric-stat">1.17M TOKENS</div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 18px;">
-            El dulce más icónico de la infancia mexicana.
+            2,500 endpoints saturan el contexto antes de empezar.
           </div>
         </div>
 
-        <!-- SCENE 2: LA TRÍADA DORADA (8.5s - 20.5s) -->
+        <!-- SCENE 2: EL PROBLEMA DEL JSON (9.0s - 21.0s) -->
         <div class="scene" id="scene-2">
-          <div class="myth-tag" style="background: #ea580c; color: #fff;">LA TRÍADA LEGENDARIA</div>
+          <div class="myth-tag" style="background: #ef4444; color: #fff;">LATENCIA Y BASURA JSON</div>
           <div class="headline-black" style="font-size: 50px;">
-            TOMY, DAMY Y RIKO RIKO
+            MÚLTIPLES VIAJES DE IDA Y VUELTA
           </div>
-          <div class="punch-pill" style="background: #fef08a; color: #000; font-size: 36px;">
-            LECHE REAL Y MANTEQUILLA
+          <div class="punch-pill" style="background: #fca5a5; color: #000; font-size: 36px;">
+            CONGESTIÓN DE CONTEXTO
           </div>
-          <div class="metric-box" style="background: #fefce8; border-color: #f59e0b;">
-            <div style="font-size: 32px; font-weight: 900; color: #854d0e;">
-              🥛 LA QUÍMICA DE MAILLARD
+          <div class="metric-box" style="background: #fef2f2; border-color: #ef4444;">
+            <div style="font-size: 32px; font-weight: 900; color: #991b1b;">
+              ⚠️ EL LLM NO ES UN ENRUTADOR
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
-            Sabor natural sin sustitutos artificiales.
+            Payloads intermedios destruyen el razonamiento.
           </div>
         </div>
 
-        <!-- SCENE 3: RESISTENCIA INDUSTRIAL (20.5s - 33.5s) -->
+        <!-- SCENE 3: CODE MODE (21.0s - 34.0s) -->
         <div class="scene" id="scene-3">
-          <div class="myth-tag" style="background: #10b981; color: #fff;">INDEPENDENCIA MEXICANA</div>
+          <div class="myth-tag" style="background: #10b981; color: #fff;">LA SOLUCIÓN REVOLUCIONARIA</div>
           <div class="headline-black" style="font-size: 48px;">
-            FRENTE A LOS GIGANTES
+            CODE MODE: TYPESCRIPT SDK
           </div>
-          <div class="punch-pill" style="background: #000; color: #fbbf24 !important; font-size: 36px; border-color: #fbbf24;">
-            EXPORTA A +30 PAÍSES
+          <div class="punch-pill" style="background: #000; color: #38bdf8 !important; font-size: 36px; border-color: #38bdf8;">
+            CORRE EN SANDBOX V8 ISOLATE
           </div>
           <div class="metric-box" style="background: #f0fdf4; border-color: #10b981;">
             <div style="font-size: 30px; font-weight: 900; color: #166534;">
-              🇲🇽 NUNCA VENDIDA A WALL STREET
+              ⚡ UN SOLO VIAJE DE IDA Y VUELTA
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 15px;">
-            Cientos de millones de caramelos por año.
+            El código corre en milisegundos y filtra en local.
           </div>
         </div>
 
-        <!-- SCENE 4: ORGULLO MANUFACTURERO (33.5s - 45s) -->
+        <!-- SCENE 4: BENCHMARK Y CIERRE (34.0s - 45.0s) -->
         <div class="scene" id="scene-4">
-          <div class="myth-tag" style="background: #0f172a; color: #fff; box-shadow: 4px 4px 0px #f59e0b;">MANUFACTURA MEXICANA</div>
-          <div class="headline-black" style="font-size: 52px;">
-            TRADICIÓN &<br>ALTA INGENIERÍA
+          <div class="myth-tag" style="background: #8b5cf6; color: #fff;">EL BENCHMARK DEFINITIVO</div>
+          <div class="headline-black" style="font-size: 46px;">
+            DE 150,000 A 2,000 TOKENS
           </div>
-          <div class="punch-pill" style="font-size: 36px; background: #000; border-color: #f59e0b; color: #fbbf24 !important; box-shadow: 8px 8px 0px #f59e0b;">
-            COCCIÓN AL VACÍO
-          </div>
-          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 20px;">
-            Crónica completa y fuentes en:
+          <div class="punch-pill" style="background: #38bdf8; font-size: 34px;">
+            -98% EN COSTOS DE INFERENCIA
           </div>
           <div class="final-pill">
-            ESCUCHA-SIA.GITHUB.IO
+            🎧 EPISODIO COMPLETO EN SPOTIFY
+          </div>
+          <div style="font-size: 26px; font-weight: 800; color: #0284c7; margin-top: 14px;">
+            Lee la investigación en sIA Journal (link en bio)
           </div>
         </div>
       </div>
 
-      <div class="progress-bar-container">
-        <div class="progress-fill"></div>
+      <div class="footer-badge">
+        <div class="channel-tag">@escucha_sia &bull; Spotify Show</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function updateTimeline(time) {
+      const s1 = document.getElementById('scene-1');
+      const s2 = document.getElementById('scene-2');
+      const s3 = document.getElementById('scene-3');
+      const s4 = document.getElementById('scene-4');
+
+      const c1 = document.getElementById('chap-1');
+      const c2 = document.getElementById('chap-2');
+      const c3 = document.getElementById('chap-3');
+      const c4 = document.getElementById('chap-4');
+
+      // Reset display
+      s1.style.display = 'none';
+      s2.style.display = 'none';
+      s3.style.display = 'none';
+      s4.style.display = 'none';
+
+      [c1, c2, c3, c4].forEach(c => c.className = 'chapter-step');
+
+      if (time < 9.0) {
+        s1.style.display = 'block';
+        c1.className = 'chapter-step step-active';
+      } else if (time < 21.0) {
+        s2.style.display = 'block';
+        c2.className = 'chapter-step step-active';
+      } else if (time < 34.0) {
+        s3.style.display = 'block';
+        c3.className = 'chapter-step step-active';
+      } else {
+        s4.style.display = 'block';
+        c4.className = 'chapter-step step-active';
+      }
+    }
+
+    window.__seekHyperFrames = function(currentTime) {
+      updateTimeline(currentTime);
+    };
+
+    updateTimeline(0);
+  </script>
   </body>
 </html>
