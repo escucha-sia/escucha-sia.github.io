@@ -1,0 +1,54 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:18.216
+JORGE: Bienvenidos a sIA Podcast. Hoy en sIA Sec analizamos la que es, sin exagerar, la historia de espionaje cibernético y paranoia técnica más impresionante del siglo veintiuno: cómo un retraso de medio segundo en una terminal de Linux evitó el mayor colapso de seguridad en la historia de Internet.
+
+2
+00:00:18.566 --> 00:00:35.606
+DALIA: Ocurrió a finales de marzo de 2024. El objetivo era xz utils y su librería liblzma, un paquete de compresión de datos ubicuo que está instalado por defecto en prácticamente todos los servidores Linux del mundo, desde centros de datos bancarios hasta satélites y nubes gubernamentales.
+
+3
+00:00:35.956 --> 00:00:59.356
+JORGE: Lo aterrador de este ataque no fue la sofisticación técnica, sino la paciencia infinita de los atacantes. Durante más de dos años, un perfil anónimo bajo el seudónimo de Jia Tan se dedicó a construir una identidad impecable en el mundo del código abierto. Ayudó a corregir bugs menores, limpió código y se ganó la confianza del único y agotado mantenedor de xz, Lasse Collin.
+
+4
+00:00:59.706 --> 00:01:22.385
+DALIA: Junto a Jia Tan, una red de cuentas títere comenzó a presionar a Lasse con mensajes agresivos exigiendo que cediera el mantenimiento del proyecto. Agotado por la carga mental, Lasse le entregó las llaves del repositorio. Una vez con control total de los lanzamientos oficiales, Jia Tan preparó las versiones 5.6.0 y 5.6.1 con un caballo de Troya invisible a simple vista.
+
+5
+00:01:22.735 --> 00:01:48.199
+JORGE: El código malicioso no estaba en los archivos de código C, donde cualquier auditor lo habría detectado. Estaba oculto dentro de archivos binarios de prueba aparentemente corruptos, utilizados para comprobar algoritmos de descompresión. Durante el proceso de compilación con M4, el script extraía un archivo objeto precompilado que utilizaba una característica avanzada de Linux llamada funciones indirectas de GNU, o IFUNC.
+
+6
+00:01:48.549 --> 00:02:15.717
+DALIA: ¿Y contra qué apuntaba? Contra OpenSSH, el servicio que permite la administración remota de cualquier servidor. A través de una cadena de dependencias complejas, systemd enlazaba con liblzma, lo que permitía al malware interceptar la función de desencriptación de claves públicas de SSH. Cualquier persona con la clave privada de los atacantes podía enviar una firma que ejecutaba comandos remotos con privilegios de root sin dejar un solo rastro en los registros.
+
+7
+00:02:16.067 --> 00:02:32.267
+JORGE: Era la llave maestra para abrir cualquier servidor del planeta. Y habría llegado a las versiones estables de Debian, Red Hat y Ubuntu de no ser por un héroe inesperado: Andrés Freund, un ingeniero de software alemán que trabajaba en Microsoft optimizando PostgreSQL.
+
+8
+00:02:32.617 --> 00:02:52.585
+DALIA: Andrés estaba ejecutando micro-benchmarks de rendimiento en Debian sid. Al hacer pruebas de estrés, notó tres anomalías diminutas: el inicio de sesión por SSH consumía demasiada CPU, la herramienta Valgrind arrojaba errores extraños de memoria en liblzma, y los logins tardaban exactamente quinientos milisegundos más de lo habitual.
+
+9
+00:02:52.935 --> 00:03:15.519
+JORGE: Cualquier otro desarrollador habría atribuido ese medio segundo a congestión de red o un fallo pasajero. Pero Andrés se negó a ignorarlo. Empezó a desensamblar el binario, rastreó las llamadas al linker y descubrió la inyección maliciosa en los archivos M4. Cuando publicó la alerta el 29 de marzo, la comunidad de ciberseguridad entró en estado de emergencia global.
+
+10
+00:03:15.869 --> 00:03:33.341
+DALIA: El descubrimiento de Andrés Freund salvó literalmente los cimientos de la economía digital. Pero dejó al descubierto la fragilidad más profunda del software moderno: que infraestructuras críticas que mueven billones de dólares dependen de proyectos de código abierto mantenidos por voluntarios solitarios y agotados en su tiempo libre.
+
+11
+00:03:33.691 --> 00:03:48.523
+JORGE: El análisis técnico completo, la cadena de explotación de IFUNC y el post-mortem paso a paso están disponibles en sIA Journal en escucha guion sia punto github punto io. Y en TikTok pueden ver la animación visual en arroba escucha guion bajo sia.
+
+12
+00:03:48.873 --> 00:03:55.185
+DALIA: Gracias por escucharnos en este fascinante episodio de sIA Sec. Soy Dalia.
+
+13
+00:03:55.535 --> 00:04:00.623
+JORGE: Y yo soy Jorge. ¡Hasta el próximo episodio de sIA Podcast!
+

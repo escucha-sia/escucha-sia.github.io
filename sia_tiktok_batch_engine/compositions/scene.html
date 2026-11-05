@@ -2,13 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>sIA Reel Stupy 09 - BIQU Panda Treat</title>
+    <title>sIA Reel Stupy 13 - XZ Utils Backdoor 500ms</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@800&display=swap');
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        background: #0f0a1c;
+        background: #020617;
         color: #ffffff;
         font-family: 'Space Grotesk', sans-serif;
         width: 1080px;
@@ -17,26 +17,26 @@
         position: relative;
       }
 
-      /* Matriz Halftone Cómic Pop Dulce */
+      /* Matriz Halftone Hacker Emerald/Slate */
       .halftone-overlay {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(#ec4899 1.5px, transparent 1.5px);
+        background-image: radial-gradient(#10b981 1.5px, transparent 1.5px);
         background-size: 26px 26px;
-        opacity: 0.16;
+        opacity: 0.14;
         z-index: 1;
         pointer-events: none;
       }
 
-      .speed-lines {
+      .matrix-grid {
         position: absolute;
         inset: 0;
         background: repeating-linear-gradient(
-          -45deg,
-          rgba(236, 72, 153, 0.05) 0px,
-          rgba(236, 72, 153, 0.05) 12px,
-          transparent 12px,
-          transparent 24px
+          0deg,
+          rgba(16, 185, 129, 0.04) 0px,
+          rgba(16, 185, 129, 0.04) 2px,
+          transparent 2px,
+          transparent 4px
         );
         z-index: 2;
         pointer-events: none;
@@ -50,7 +50,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 80px;
-        color: rgba(236, 72, 153, 0.07);
+        color: rgba(16, 185, 129, 0.06);
         text-transform: uppercase;
         transform: rotate(-12deg) scale(1.4);
         top: 25%;
@@ -61,325 +61,300 @@
       .reel-wrapper {
         position: relative;
         z-index: 10;
-        width: 100%;
-        height: 100%;
+        width: 1080px;
+        height: 1920px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        padding: 80px 60px 100px 60px;
+      }
+
+      /* HEADER TÁCTICO CON CAPÍTULOS */
+      .header-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .brand-row {
+        display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 90px 50px 110px 50px;
       }
 
-      /* BARRA DE CAPÍTULOS DINÁMICA SUPERIOR */
-      .chapters-pill-bar {
-        display: flex;
-        gap: 12px;
-        background: rgba(30, 27, 75, 0.9);
-        padding: 10px 20px;
-        border-radius: 40px;
-        border: 2px solid rgba(236, 72, 153, 0.4);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-        backdrop-filter: blur(10px);
-        margin-bottom: 20px;
-      }
-
-      .chapter-step {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 20px;
-        font-weight: 800;
-        padding: 6px 16px;
-        border-radius: 20px;
-        color: #94a3b8;
-        background: transparent;
-        transition: all 0.3s ease;
-      }
-
-      .step-active {
-        background: #ec4899;
-        color: #ffffff;
-        box-shadow: 0 0 16px rgba(236, 72, 153, 0.7);
-      }
-
-      .header-pill {
-        background: #000000;
-        border: 4px solid #ec4899;
-        box-shadow: 6px 6px 0px #ec4899;
-        border-radius: 50px;
-        padding: 14px 38px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 10px;
-      }
-
-      .header-dot {
-        width: 20px;
-        height: 20px;
-        background: #ec4899;
-        border-radius: 50%;
-        box-shadow: 0 0 16px #ec4899;
-      }
-
-      .header-text {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 26px;
-        font-weight: 800;
-        letter-spacing: 2px;
-        color: #f8fafc;
-      }
-
-      /* TARJETA CÓMIC-POP PRINCIPAL */
-      .comic-card {
-        background: #ffffff;
-        border: 8px solid #000000;
-        box-shadow: 18px 18px 0px #ec4899;
-        border-radius: 36px;
-        width: 100%;
-        max-width: 980px;
-        padding: 50px 42px;
+      .brand-pill {
+        background: #10b981;
         color: #000000;
-        text-align: center;
-        position: relative;
-      }
-
-      .comic-stamp {
-        position: absolute;
-        top: -30px;
-        right: 40px;
-        background: #f59e0b;
-        color: #000000;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
         font-size: 24px;
-        padding: 8px 24px;
-        border: 4px solid #000000;
-        border-radius: 14px;
-        transform: rotate(6deg);
-        box-shadow: 4px 4px 0px #000000;
+        padding: 10px 24px;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+        border: 2px solid #ffffff;
+      }
+
+      .tag-pill {
+        background: rgba(16, 185, 129, 0.15);
+        color: #34d399;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        font-size: 22px;
+        padding: 8px 20px;
+        border-radius: 12px;
+        border: 2px solid #059669;
+      }
+
+      /* BARRA DE CAPÍTULOS */
+      .chapters-bar {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .chapter-pill {
+        flex: 1;
+        padding: 12px 6px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        text-align: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        font-size: 15px;
+        color: #94a3b8;
+        text-transform: uppercase;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .chapter-pill.active {
+        background: #059669;
+        color: #ffffff;
+        border-color: #34d399;
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
+        transform: scale(1.04);
+      }
+
+      /* TARJETA DINÁMICA CENTRAL */
+      .main-card {
+        background: #ffffff;
+        border-radius: 36px;
+        padding: 50px 45px;
+        color: #0f172a;
+        box-shadow: 0 35px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.25);
+        border: 6px solid #10b981;
+        position: relative;
+        min-height: 820px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .scene {
+        display: none;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+
+      @keyframes popIn {
+        0% { opacity: 0; transform: scale(0.92); }
+        100% { opacity: 1; transform: scale(1); }
       }
 
       .myth-tag {
         display: inline-block;
-        background: #be185d;
-        color: #ffffff;
+        align-self: center;
         font-family: 'JetBrains Mono', monospace;
+        font-weight: 900;
         font-size: 26px;
-        font-weight: 800;
         padding: 8px 24px;
-        border-radius: 12px;
-        border: 3px solid #000;
-        margin-bottom: 24px;
+        border-radius: 10px;
         text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .headline-black {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 54px;
-        line-height: 1.15;
-        letter-spacing: -1.5px;
-        color: #000000;
-        margin-bottom: 24px;
-        text-transform: uppercase;
+        font-size: 52px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #09090f;
       }
 
       .punch-pill {
-        background: #fbcfe8;
-        color: #831843;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 40px;
-        padding: 16px 28px;
-        border: 5px solid #000000;
-        border-radius: 20px;
-        box-shadow: 6px 6px 0px #000000;
         display: inline-block;
-        margin-bottom: 26px;
+        align-self: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 38px;
+        padding: 16px 36px;
+        border-radius: 20px;
+        line-height: 1.2;
+        border: 3px solid #000;
       }
 
       .metric-box {
-        background: #fdf2f8;
-        border: 4px dashed #db2777;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #f8fafc;
+        border: 4px dashed #94a3b8;
         border-radius: 20px;
-        padding: 24px 28px;
-        margin-top: 15px;
+        padding: 24px;
+        margin-top: 10px;
       }
 
-      .metric-title {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 24px;
-        font-weight: 800;
-        color: #9d174d;
-      }
-
-      .metric-stat {
+      .final-pill {
+        background: #059669;
+        color: #fff;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 58px;
-        color: #db2777;
-        line-height: 1.1;
-        margin-top: 6px;
+        font-size: 38px;
+        padding: 20px;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
       }
 
-      /* FOOTER & TIMELINE */
+      /* FOOTER */
       .footer-badge {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 14px;
-        margin-top: 20px;
+        gap: 16px;
       }
 
       .channel-tag {
-        background: #000000;
-        color: #ffffff;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 32px;
         font-weight: 800;
-        padding: 12px 36px;
-        border: 4px solid #ec4899;
-        border-radius: 40px;
-        box-shadow: 6px 6px 0px #ec4899;
+        font-size: 26px;
+        color: #94a3b8;
+        letter-spacing: 1px;
       }
 
       .progress-bar-container {
         width: 100%;
-        max-width: 900px;
         height: 16px;
-        background: #1e293b;
-        border: 3px solid #000000;
-        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 9999px;
         overflow: hidden;
-        margin-top: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
       }
 
       .progress-bar-fill {
         height: 100%;
-        background: linear-gradient(90deg, #ec4899, #db2777, #f43f5e);
+        background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
         width: 0%;
-        animation: progressAnim 45s linear infinite;
-      }
-
-      @keyframes progressAnim {
-        0% { width: 0%; }
-        100% { width: 100%; }
-      }
-
-      .final-pill {
-        background: #000000;
-        color: #f472b6;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 34px;
-        font-weight: 800;
-        padding: 16px 36px;
-        border: 5px solid #ec4899;
-        border-radius: 20px;
-        box-shadow: 6px 6px 0px #ec4899;
-        margin-top: 15px;
-        display: inline-block;
       }
     </style>
   </head>
   <body>
   <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
     <div class="halftone-overlay"></div>
-    <div class="speed-lines"></div>
-
-    <div class="bg-ticker">
-      <div>BIQU PANDA TREAT BAMBU LAB FOODTECH</div>
-      <div>GALLETAS DECORADAS REPOSTERIA 3D TINTA COMESTIBLE</div>
-      <div>DE 5000 A 330 DOLARES DEMOCRATIZACION</div>
-      <div>BIGTREETECH HACK ALIMENTARIO VIRAL TIKTOK</div>
-    </div>
+    <div class="matrix-grid"></div>
+    <div class="bg-ticker">XZ UTILS &bull; SSH BACKDOOR &bull; JIA TAN &bull; 500MS &bull; FREUND</div>
 
     <div class="reel-wrapper">
-      <!-- BARRA DE CAPÍTULOS SUPERIOR -->
-      <div class="chapters-pill-bar">
-        <div class="chapter-step" id="chap-1">01 $5,000 A $330</div>
-        <div class="chapter-step" id="chap-2">02 EL HACK</div>
-        <div class="chapter-step" id="chap-3">03 FOOD SAFETY</div>
-        <div class="chapter-step" id="chap-4">04 NEGOCIO</div>
-      </div>
-
-      <div class="header-pill">
-        <div class="header-dot"></div>
-        <div class="header-text">sIA MAKER & FOODTECH #03</div>
-      </div>
-
-      <!-- MAIN COMIC CARD -->
-      <div class="comic-card">
-        <div class="comic-stamp">HACK 2026</div>
-
-        <!-- SCENE 1: EL PRECIO PROHIBITIVO (0s - 9.0s) -->
-        <div class="scene" id="scene-1">
-          <div class="myth-tag">EL MONOPOLIO DULCE</div>
-          <div class="headline-black">
-            ¿IMPRIMIR GALLETAS COSTABA $5,000?
-          </div>
-          <div class="punch-pill">
-            LLEGÓ EL BIQU PANDA TREAT
-          </div>
-          <div class="metric-box">
-            <div class="metric-title">MÁQUINAS INDUSTRIALES ANTIGUAS:</div>
-            <div class="metric-stat">$5,000 USD</div>
-          </div>
-          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 18px;">
-            Un lujo reservado para gigantes hoteleros.
-          </div>
+      <div class="header-box">
+        <div class="brand-row">
+          <div class="brand-pill">🛡️ sIA Sec #03</div>
+          <div class="tag-pill">CYBER ESPIONAGE</div>
         </div>
 
-        <!-- SCENE 2: EL HACK DE BIGTREETECH (9.0s - 21.0s) -->
-        <div class="scene" id="scene-2">
-          <div class="myth-tag" style="background: #0284c7; color: #fff;">INGENIERÍA MAKER</div>
-          <div class="headline-black" style="font-size: 50px;">
-            HACK A BAMBU LAB POR $130
+        <div class="chapters-bar">
+          <div class="chapter-pill active" id="chap-1">01 El Enigma 500ms</div>
+          <div class="chapter-pill" id="chap-2">02 Infiltración 2 Años</div>
+          <div class="chapter-pill" id="chap-3">03 Llave Maestra SSH</div>
+          <div class="chapter-pill" id="chap-4">04 El Héroe Andrés</div>
+        </div>
+      </div>
+
+      <div class="main-card">
+        <!-- SCENE 1: EL ENIGMA (0.0s - 11.0s) -->
+        <div class="scene" id="scene-1" style="display: flex;">
+          <div class="myth-tag" style="background: #10b981; color: #000;">EL DÍA QUE INTERNET CASI CAE</div>
+          <div class="headline-black">
+            500 MILISEGUNDOS DE LAG
           </div>
-          <div class="punch-pill" style="background: #e0f2fe; color: #0369a1; font-size: 36px;">
-            CABEZAL COMESTIBLE SNAP-ON
+          <div class="punch-pill" style="background: #d1fae5; color: #065f46; border-color: #10b981;">
+            EL BACKDOOR DE XZ UTILS
           </div>
-          <div class="metric-box" style="background: #f0f9ff; border-color: #0284c7;">
-            <div style="font-size: 32px; font-weight: 900; color: #075985;">
-              🍓 CAMBIO RÁPIDO EN SEGUNDOS
+          <div class="metric-box">
+            <div style="font-size: 32px; font-weight: 900; color: #047857;">
+              ⚡ AFECTABA A TODO LINUX
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: #64748b;">
+              Servidores bancarios, nubes y gobiernos en jaque
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
-            Quitas el plástico y pones tinta de comida.
+            La mayor conspiración en código abierto.
           </div>
         </div>
 
-        <!-- SCENE 3: FOOD SAFETY (21.0s - 34.0s) -->
+        <!-- SCENE 2: INFILTRACIÓN (11.0s - 22.0s) -->
+        <div class="scene" id="scene-2">
+          <div class="myth-tag" style="background: #6366f1; color: #fff;">INGENIERÍA SOCIAL</div>
+          <div class="headline-black">
+            JIA TAN: 2 AÑOS DE PACIENCIA
+          </div>
+          <div class="punch-pill" style="background: #000; color: #818cf8; border-color: #6366f1;">
+            GANÁNDOSE AL MANTENEDOR
+          </div>
+          <div class="metric-box" style="background: #eef2ff; border-color: #6366f1;">
+            <div style="font-size: 30px; font-weight: 900; color: #4338ca;">
+              🕵️ PRESIÓN CON CUENTAS TÍTERE
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: #6366f1;">
+              Inyectó el código en archivos de prueba corruptos
+            </div>
+          </div>
+          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
+            Compilación oculta mediante macros M4.
+          </div>
+        </div>
+
+        <!-- SCENE 3: LLAVE MAESTRA (22.0s - 34.0s) -->
         <div class="scene" id="scene-3">
-          <div class="myth-tag" style="background: #10b981; color: #fff;">INOCUIDAD CERTIFICADA</div>
-          <div class="headline-black" style="font-size: 48px;">
-            TINTAS COMESTIBLES FDA
+          <div class="myth-tag" style="background: #ef4444; color: #fff;">EXPLOIT DE KERNEL</div>
+          <div class="headline-black">
+            BYPASS ROOT EN OPENSSH
           </div>
-          <div class="punch-pill" style="background: #000; color: #f472b6 !important; font-size: 36px; border-color: #f472b6;">
-            BANDEJA DE SILICONA PURA
+          <div class="punch-pill" style="background: #fee2e2; color: #b91c1c; border-color: #ef4444;">
+            HOOK IFUNC EN LIBLZMA
           </div>
-          <div class="metric-box" style="background: #f0fdf4; border-color: #10b981;">
-            <div style="font-size: 30px; font-weight: 900; color: #166534;">
-              ✨ KOSHER, HALAL Y SIN GLUTEN
+          <div class="metric-box" style="background: #fef2f2; border-color: #ef4444;">
+            <div style="font-size: 30px; font-weight: 900; color: #b91c1c;">
+              🔑 CONTROL TOTAL SIN REGISTROS
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: #ef4444;">
+              Una clave privada podía mandar órdenes a cualquier servidor
             </div>
           </div>
           <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 15px;">
-            Galletas, macarons y café en 20 segundos.
+            A horas de entrar a Debian y Red Hat estables.
           </div>
         </div>
 
-        <!-- SCENE 4: LA REVOLUCIÓN (34.0s - 45.0s) -->
+        <!-- SCENE 4: EL HÉROE (34.0s - 45.0s) -->
         <div class="scene" id="scene-4">
-          <div class="myth-tag" style="background: #ec4899; color: #fff;">MICRO-BAKING VIRAL</div>
-          <div class="headline-black" style="font-size: 46px;">
-            TOTAL: $330 USD EN TU COCINA
+          <div class="myth-tag" style="background: #10b981; color: #000;">EL INGENIERO OBSERVADOR</div>
+          <div class="headline-black">
+            ANDRÉS FREUND
           </div>
-          <div class="punch-pill" style="background: #fbcfe8; font-size: 34px;">
-            DEMOCRATIZACIÓN GASTRONÓMICA
+          <div class="punch-pill" style="background: #d1fae5; color: #065f46; font-size: 34px;">
+            MICRO-BENCHMARK DE POSTGRESQL
           </div>
           <div class="final-pill">
             🎧 EPISODIO COMPLETO EN SPOTIFY
           </div>
-          <div style="font-size: 26px; font-weight: 800; color: #db2777; margin-top: 14px;">
-            Lee la investigación en sIA Journal (link en bio)
+          <div style="font-size: 26px; font-weight: 800; color: #059669; margin-top: 14px;">
+            Lee el post-mortem en sIA Journal (link en bio)
           </div>
         </div>
       </div>
@@ -391,47 +366,53 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function updateTimeline(time) {
-      const s1 = document.getElementById('scene-1');
-      const s2 = document.getElementById('scene-2');
-      const s3 = document.getElementById('scene-3');
-      const s4 = document.getElementById('scene-4');
+    <script>
+      function updateTimeline(time) {
+        const s1 = document.getElementById('scene-1');
+        const s2 = document.getElementById('scene-2');
+        const s3 = document.getElementById('scene-3');
+        const s4 = document.getElementById('scene-4');
 
-      const c1 = document.getElementById('chap-1');
-      const c2 = document.getElementById('chap-2');
-      const c3 = document.getElementById('chap-3');
-      const c4 = document.getElementById('chap-4');
+        const c1 = document.getElementById('chap-1');
+        const c2 = document.getElementById('chap-2');
+        const c3 = document.getElementById('chap-3');
+        const c4 = document.getElementById('chap-4');
 
-      s1.style.display = 'none';
-      s2.style.display = 'none';
-      s3.style.display = 'none';
-      s4.style.display = 'none';
+        s1.style.display = 'none';
+        s2.style.display = 'none';
+        s3.style.display = 'none';
+        s4.style.display = 'none';
 
-      [c1, c2, c3, c4].forEach(c => c.className = 'chapter-step');
+        c1.classList.remove('active');
+        c2.classList.remove('active');
+        c3.classList.remove('active');
+        c4.classList.remove('active');
 
-      if (time < 9.0) {
-        s1.style.display = 'block';
-        c1.className = 'chapter-step step-active';
-      } else if (time < 21.0) {
-        s2.style.display = 'block';
-        c2.className = 'chapter-step step-active';
-      } else if (time < 34.0) {
-        s3.style.display = 'block';
-        c3.className = 'chapter-step step-active';
-      } else {
-        s4.style.display = 'block';
-        c4.className = 'chapter-step step-active';
+        if (time < 11.0) {
+          s1.style.display = 'flex';
+          c1.classList.add('active');
+        } else if (time < 22.0) {
+          s2.style.display = 'flex';
+          c2.classList.add('active');
+        } else if (time < 34.0) {
+          s3.style.display = 'flex';
+          c3.classList.add('active');
+        } else {
+          s4.style.display = 'flex';
+          c4.classList.add('active');
+        }
+
+        const pct = Math.min(100, Math.max(0, (time / 45.0) * 100));
+        document.querySelector('.progress-bar-fill').style.width = pct + '%';
       }
-    }
 
-    window.__seekHyperFrames = function(currentTime) {
-      updateTimeline(currentTime);
-    };
-
-    updateTimeline(0);
-  </script>
+      window.__hyperframes = {
+        seek: function(t) {
+          updateTimeline(t);
+        }
+      };
+    </script>
+  </div>
   </body>
 </html>

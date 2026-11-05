@@ -17,6 +17,10 @@ REELS_TO_PUBLISH = [
     {
         "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_08_CodeMode_vs_MCP.mp4",
         "caption": "¿RIP MCP? Por qué la IA ya no llama a herramientas una por una: Cloudflare Code Mode, 2,500 endpoints en 1,000 tokens y sandboxes V8. Episodio completo en Spotify (sIA) y blog en perfil. #mcp #agentesia #cloudflare #anthropic #programacion #softwareengineer #siapodcast"
+    },
+    {
+        "file": BASE_DIR / "reels" / "sIA_Reel_Stupy_09_Biqu_Panda_Treat.mp4",
+        "caption": "¿Imprimir comida en tu impresora 3D? De pagar 5,000 dólares por una máquina industrial a personalizar galletas en tu cocina por 330 en total. Te explico cómo el BIQU Panda Treat hackeó a Bambu Lab. 🍪✨ #impresion3d #bambulab #pandatreat #bigtreetech #foodtech #reposteria #galletasdecoradas #maker #siapodcast"
     }
 ]
 

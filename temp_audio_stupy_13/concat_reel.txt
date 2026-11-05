@@ -1,0 +1,5 @@
+file 'C:/Carlos/noticias_podcast/temp_audio_stupy_13/chunk_0_jorge.mp3'
+file 'C:/Carlos/noticias_podcast/temp_audio_stupy_13/chunk_1_dalia.mp3'
+file 'C:/Carlos/noticias_podcast/temp_audio_stupy_13/chunk_2_jorge.mp3'
+file 'C:/Carlos/noticias_podcast/temp_audio_stupy_13/chunk_3_dalia.mp3'
+file 'C:/Carlos/noticias_podcast/temp_audio_stupy_13/chunk_4_jorge.mp3'

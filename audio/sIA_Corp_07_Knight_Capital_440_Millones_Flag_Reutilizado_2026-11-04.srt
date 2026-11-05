@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:18,096
+JORGE: Bienvenidos a sIA Podcast. Hoy en Crónicas Corporativas y DevOps traemos uno de los casos de estudio más brutales en la historia de la ingeniería de software y Wall Street: cómo una sola empresa perdió cuatrocientos cuarenta millones de dólares en apenas cuarenta y cinco minutos por culpa de una variable booleana.
+
+2
+00:00:18,446 --> 00:00:40,262
+DALIA: Ocurrió la mañana del primero de agosto de 2012. La protagonista era Knight Capital Group, en aquel entonces el mayor creador de mercado de acciones de todos los Estados Unidos. Manejaba el diecisiete por ciento de todo el volumen de la Bolsa de Nueva York y el diecisiete por ciento del NASDAQ. Eran los reyes indiscutibles de las finanzas algorítmicas de alta frecuencia.
+
+3
+00:00:40,612 --> 00:01:03,436
+JORGE: Para entender cómo se gestó la catástrofe, tenemos que viajar a 2003, nueve años antes del desastre. En ese año, los desarrolladores de Knight crearon una función interna de pruebas llamada PowerPeg. Su único propósito era simular órdenes masivas a mercado para medir la velocidad de ejecución. Era código de prueba que nunca debió ejecutarse con dinero real.
+
+4
+00:01:03,786 --> 00:01:24,042
+DALIA: Con los años, el sistema de enrutamiento de órdenes de Knight, conocido como SMARS, evolucionó a través de miles de líneas de código C++. Pero nadie borró PowerPeg. El código zombi permaneció dormido dentro de los binarios de producción durante casi una década, protegido por una bandera o flag de configuración apagada.
+
+5
+00:01:24,391 --> 00:01:46,159
+JORGE: En julio de 2012, la Bolsa de Nueva York anunció un nuevo programa de liquidez minorista, el Retail Liquidity Program. Los ingenieros de Knight tuvieron que actualizar SMARS con urgencia. Y aquí vino el primer pecado cardinal de arquitectura: en lugar de crear un nuevo flag limpio, decidieron reutilizar el viejo flag que antes controlaba la función PowerPeg.
+
+6
+00:01:46,509 --> 00:02:12,237
+DALIA: Y aquí entró en juego el factor humano más destructivo: el despliegue manual. Knight no contaba con un pipeline automatizado de integración continua ni despliegues canary. La noche del 31 de julio, un técnico del equipo de operaciones se conectó manualmente vía consola a los ocho servidores de producción que componían el clúster de SMARS. Copió y reemplazó los binarios en siete de ellos... pero olvidó por completo el octavo servidor.
+
+7
+00:02:12,587 --> 00:02:37,883
+JORGE: A las nueve y media de la mañana, sonó la campana de apertura de Wall Street. Cientos de clientes enviaron órdenes para comprar acciones ordinarias. En los siete servidores actualizados, el nuevo código procesó las órdenes con normalidad. Pero en el octavo servidor, ocurrió la tormenta perfecta: el sistema tenía la nueva configuración con el flag activado, pero ejecutando el código viejo de 2003.
+
+8
+00:02:38,233 --> 00:03:01,753
+DALIA: Para el código viejo, ese flag significaba: ejecuta PowerPeg a máxima potencia. PowerPeg entró en un bucle infinito destructivo: tomó una orden original de unas pocas miles de acciones y comenzó a emitir millones de micro-órdenes agresivas en el mercado abierto. Compraba al precio de venta más alto y vendía al precio de compra más bajo, perdiendo centavos por milisegundo a una escala monstruosa.
+
+9
+00:03:02,103 --> 00:03:29,703
+JORGE: Durante cuarenta y cinco minutos de auténtico pánico en el centro de operaciones, mientras los teléfonos de la SEC ardían, el servidor fantasma ejecutó más de cuatro millones de transacciones, moviendo doscientos doce millones de acciones en ciento cincuenta y cuatro empresas diferentes. A las diez y cuarto de la mañana, cuando por fin lograron desconectar el servidor, la cuenta de pérdidas marcaba cuatrocientos cuarenta millones de dólares. Diez millones de dólares por minuto.
+
+10
+00:03:30,053 --> 00:03:50,165
+DALIA: El impacto fue fulminante. El valor de las acciones de Knight se desplomó un setenta y cinco por ciento en dos días. Incapaz de absorber el déficit de capital regulatorio, la junta directiva tuvo que vender la empresa de emergencia a su rival Getco a precio de liquidación, por un dólar con cincuenta centavos por acción cuando días antes valía más de diez.
+
+11
+00:03:50,515 --> 00:04:11,395
+JORGE: Las lecciones técnicas que este desastre dejó a la industria del software son monumentales: nunca dejes código muerto en producción; los feature flags deben tener ciclo de vida estricto; los despliegues manuales en clústeres son inadmisibles; y todo sistema de alta velocidad necesita un interruptor de corte automático o circuit breaker cuando el volumen se dispara anomalamente.
+
+12
+00:04:11,745 --> 00:04:22,377
+DALIA: Pueden leer el análisis forense con el informe oficial de la SEC y diagramas de arquitectura en escucha guion sia punto github punto io, y ver el desglose gráfico en TikTok en arroba escucha guion bajo sia.
+
+13
+00:04:22,727 --> 00:04:24,599
+JORGE: Soy Jorge.
+
+14
+00:04:24,949 --> 00:04:30,110
+DALIA: Y yo soy Dalia. ¡Hasta el próximo episodio de sIA Podcast!
+
