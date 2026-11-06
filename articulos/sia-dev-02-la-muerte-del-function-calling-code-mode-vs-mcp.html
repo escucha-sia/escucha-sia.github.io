@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens | sIA Digital Magazine</title>
+    <meta name="description" content="Por qué los LLMs son mediocres invocando herramientas JSON una por una, pero extraordinarios escribiendo código TypeScript en sandboxes V8.">
+    <link rel="stylesheet" href="../assets/css/magazine.css">
+    <link rel="icon" type="image/jpeg" href="../cover.jpg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand">
+                <img src="../cover.jpg" alt="sIA Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>sIA Journal</h1>
+                    <span>Revista Digital & Podcast Tech</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#deep-dives" class="nav-link">Deep Dives</a>
+                <a href="../index.html#noticias" class="nav-link">NoticIAs</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="btn-pill btn-spotify">Spotify</a>
+                <a href="../podcast.xml" target="_blank" class="btn-pill btn-rss">Feed RSS</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <nav class="breadcrumbs">
+            <a href="../index.html">Revista sIA</a> &rsaquo; <span>Arquitectura de Agentes & IA</span> &rsaquo; <span>Artículo</span>
+        </nav>
+
+        <article>
+            <header class="article-header">
+                <span class="badge badge-blue">Arquitectura de Agentes & IA</span>
+                <h1 class="article-title">sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens</h1>
+                <p class="article-subtitle">Por qué los LLMs son mediocres invocando herramientas JSON una por una, pero extraordinarios escribiendo código TypeScript en sandboxes V8.</p>
+
+                <div class="author-bar">
+                    <div>Investigación: <strong>cacs</strong> & <strong>sIA Editora</strong></div>
+                    <div>•</div>
+                    <div>Fecha: <strong>Wed, 04 Nov 2026 11:00:00 GMT</strong></div>
+                    <div>•</div>
+                    <div>Lectura: <strong>14 min</strong></div>
+                </div>
+            </header>
+
+            <!-- Embedded Audio Player -->
+            <div class="player-container">
+                <div class="player-label">
+                    <span>🎧 <strong>Escuchar episodio complementario:</strong></span>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="spotify-badge-btn" title="Ver en canal de Spotify (sincronizando catálogo)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Spotify Show
+                    </a>
+                </div>
+                <audio controls preload="metadata">
+                    <source src="https://escucha-sia.github.io/audio/sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+            
+            <!-- Video Reel Showcase (Vertical 9:16) -->
+            <div class="reel-showcase" id="reel">
+                <div class="reel-showcase-header">
+                    <span class="reel-showcase-title">
+                        <span>🎬</span> <strong>Cápsula en Video Reel (45s):</strong> sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens
+                    </span>
+                    <span class="badge badge-purple" style="font-size: 0.75rem;">Vertical 9:16</span>
+                </div>
+                <div class="reel-wrapper">
+                    <video controls playsinline preload="metadata" poster="../reels/sIA_Reel_Stupy_08_CodeMode_vs_MCP_poster.jpg">
+                        <source src="../reels/sIA_Reel_Stupy_08_CodeMode_vs_MCP.mp4" type="video/mp4">
+                        Tu navegador no soporta video MP4.
+                    </video>
+                </div>
+            </div>
+            
+
+            <!-- Main Article Body -->
+            <div class="article-body">
+                <div class="thesis-callout">
+                    <h4>Tesis Central de Investigación</h4>
+                    <p>"La transición del paradigma de invocación secuencial de herramientas (JSON Tool Calling) hacia la síntesis programática de código ejecutable en sandboxes ligeros (Code Mode) elimina la inflación de contexto en servidores MCP masivos y reduce el consumo de tokens en un 99.9%."</p>
+                </div>
+
+                <div style="background: rgba(148, 163, 184, 0.05); padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.9rem; color: #94a3b8;">
+                    <strong>Nexo de Bitácora:</strong> Segundo episodio de sIA Dev: Evolución del protocolo MCP de Anthropic, V8 Isolates de Cloudflare, optimización de ventana de contexto y agentes autónomos.
+                </div>
+
+                
+        <section class="article-section">
+            <h2>1. La Crisis de Escalabilidad del Tool Calling Tradicional en MCP</h2>
+            <p>Cargar los esquemas JSON de los 2,500 endpoints de la API de Cloudflare en un servidor MCP tradicional consume 1.17 millones de tokens antes de que el usuario escriba su primera instrucción. Además, los modelos de lenguaje sufren degradación de razonamiento al encadenar decenas de llamadas JSON secuenciales (round-trips).</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>2. Code Mode y Sandboxes V8 Isolates: De 1.17 Millones a 1,000 Tokens</h2>
+            <p>En lugar de exponer miles de herramientas estáticas, Code Mode entrega al agente únicamente dos funciones: 'search()' y 'execute()'. El LLM consulta la documentación tipada bajo demanda y escribe un script completo en TypeScript que se ejecuta en milisegundos dentro de un Dynamic Worker V8 Isolate sin acceso a internet abierto, abatiendo el costo de contexto en un 99.9%.</p>
+        </section>
+        
+
+                <!-- APA Bibliography Section -->
+                <section class="apa-section">
+                    <h3>📚 Referencias Bibliográficas (Formato APA 7ª Edición)</h3>
+                    <ul class="apa-list">
+                        <li class="apa-item">Cloudflare Engineering. (2026). <em>Code Mode: Executing MCP Servers in Dynamic Worker V8 Isolates</em>. Cloudflare Blog.</li>
+<li class="apa-item">Anthropic Research. (2026). <em>Scaling Model Context Protocol with Programmatic Code Execution</em>. Anthropic Publications.</li>
+<li class="apa-item">
+                cacs, & sIA Editora. (2026). <em>sIA Dev #02: La Muerte del Function Calling (Code Mode vs MCP)</em>. sIA Journal Publications. / [escucha-sia](.
+                <span class="apa-url-container">
+                    <a href="https://escucha-sia.github.io)" target="_blank" rel="noopener" class="apa-url">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        https://escucha-sia.github.io)
+                    </a>
+                </span>
+            </li>
+
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Revista Digital</a>
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank">Spotify Show</a>
+                <a href="../podcast.xml">Feed RSS</a>
+                <a href="https://github.com/escucha-sia/escucha-sia.github.io" target="_blank">GitHub Repository</a>
+            </div>
+            <p>&copy; 2026 sIA Tech Media — Curaduría, Arquitectura & Rigor Técnico por cacs.</p>
+        </div>
+    </footer>
+
+    <!-- Anti-Copy & Content Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && ['c', 'C', 'u', 'U', 's', 'S', 'a', 'A', 'p', 'P'].includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -8,10 +8,94 @@
     <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
     <itunes:category text="Technology"/>
     <itunes:owner>
-      <itunes:name>Carlos Corona</itunes:name>
+      <itunes:name>cacs</itunes:name>
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
+    <item>
+      <title>sIA Sec #03: El Backdoor de XZ Utils: Cómo 500 Milisegundos de Lag Salvaron al Internet Entero</title>
+      <link>https://escucha-sia.github.io/articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html</link>
+      <description>Crónica forense de la mayor operación de espionaje en código abierto: los dos años de ingeniería social de Jia Tan sobre Lasse Collin, los hooks IFUNC en liblzma para secuestrar OpenSSH, y cómo el ingeniero Andrés Freund salvó internet al investigar 500ms de latencia en PostgreSQL por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html</description>
+      <pubDate>Wed, 04 Nov 2026 22:30:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Sec_03_XZ_Utils_Backdoor_Andres_Freund_SSH_2026-11-04.mp3" length="5675093" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Sec_03_XZ_Utils_Backdoor_Andres_Freund_SSH_2026-11-04.mp3</guid>
+      <itunes:duration>03:56</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Sec_03_XZ_Utils_Backdoor_Andres_Freund_SSH_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Sec_03_XZ_Utils_Backdoor_Andres_Freund_SSH_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
+      <title>sIA Corp #07: Knight Capital: $440 Millones Destruidos en 45 Minutos por Reutilizar un Flag Booleano</title>
+      <link>https://escucha-sia.github.io/articulos/sia-corp-07-knight-capital-el-bug-de-440-millones-en-45-minutos.html</link>
+      <description>El mayor desastre de DevOps en la historia de Wall Street: cómo el sistema SMARS de Knight Capital despertó código muerto de 2003 (PowerPeg) en un octavo servidor olvidado durante un despliegue manual, perdiendo 10 millones de dólares por minuto por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-corp-07-knight-capital-el-bug-de-440-millones-en-45-minutos.html</description>
+      <pubDate>Wed, 04 Nov 2026 21:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_07_Knight_Capital_440_Millones_Flag_Reutilizado_2026-11-04.mp3" length="6374757" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_07_Knight_Capital_440_Millones_Flag_Reutilizado_2026-11-04.mp3</guid>
+      <itunes:duration>04:25</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_07_Knight_Capital_440_Millones_Flag_Reutilizado_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_07_Knight_Capital_440_Millones_Flag_Reutilizado_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
+      <title>sIA Sec #02: El Caballo de Troya en tu Sala: Cómo 1.3 Millones de TV Boxes Android Venían con Malware de Fábrica</title>
+      <link>https://escucha-sia.github.io/articulos/sia-sec-02-el-caballo-de-troya-en-tu-sala-tv-boxes-android-malware-de-fabrica.html</link>
+      <description>Análisis de la operación del Grupo de Inteligencia de Amenazas de Google contra la botnet XCPE: cómo el fabricante chino Videostrong (MECOOL, T95) inyectó el rootkit x.cpe en la partición de sistema con persistencia en bootloader, MQTT y proxies residenciales, y su expulsión definitiva de Android por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-sec-02-el-caballo-de-troya-en-tu-sala-tv-boxes-android-malware-de-fabrica.html</description>
+      <pubDate>Wed, 04 Nov 2026 19:30:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Sec_02_TV_Boxes_Malware_Fabrica_Videostrong_2026-11-04.mp3" length="5524001" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Sec_02_TV_Boxes_Malware_Fabrica_Videostrong_2026-11-04.mp3</guid>
+      <itunes:duration>03:50</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Sec_02_TV_Boxes_Malware_Fabrica_Videostrong_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Sec_02_TV_Boxes_Malware_Fabrica_Videostrong_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
+      <title>sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo: El Secreto de los Guardabosques</title>
+      <link>https://escucha-sia.github.io/articulos/sia-terror-01-las-escaleras-en-el-bosque-nacional.html</link>
+      <description>Especial inmersivo de terror analógico y misterio: los testimonios de oficiales de Búsqueda y Rescate en parques nacionales sobre estructuras arquitectónicas imposibles a kilómetros de la civilización y la orden estricta de jamás subir sus escalones por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-terror-01-las-escaleras-en-el-bosque-nacional.html</description>
+      <pubDate>Wed, 04 Nov 2026 17:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.mp3" length="5500000" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.mp3</guid>
+      <itunes:duration>05:30</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
+      <title>sIA Maker #03: BIQU Panda Treat: Cómo una Impresora 3D de $200 Hackeó la Industria de la Confitería Digital</title>
+      <link>https://escucha-sia.github.io/articulos/sia-maker-03-biqu-panda-treat-impresora-3d-confiteria-digital.html</link>
+      <description>De $5,000 a $330 USD: cómo el cabezal modular de inyección térmica de tintas comestibles BIQU Panda Treat transforma la cinemática de una Bambu Lab A1 Mini en una plataforma de repostería digital certificada por la FDA por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-maker-03-biqu-panda-treat-impresora-3d-confiteria-digital.html</description>
+      <pubDate>Wed, 04 Nov 2026 14:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Maker_03_Biqu_Panda_Treat_FoodTech_2026-11-04.mp3" length="11291211" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Maker_03_Biqu_Panda_Treat_FoodTech_2026-11-04.mp3</guid>
+      <itunes:duration>07:50</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_03_Biqu_Panda_Treat_FoodTech_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_03_Biqu_Panda_Treat_FoodTech_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
+      <title>sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens</title>
+      <link>https://escucha-sia.github.io/articulos/sia-dev-02-la-muerte-del-function-calling-code-mode-vs-mcp.html</link>
+      <description>Por qué los LLMs son ineficientes invocando herramientas JSON secuenciales y cómo el paradigma Code Mode sobre Dynamic Worker V8 Isolates reduce el consumo de contexto en servidores MCP masivos en un 99.9% por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-dev-02-la-muerte-del-function-calling-code-mode-vs-mcp.html</description>
+      <pubDate>Wed, 04 Nov 2026 11:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.mp3" length="13171400" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.mp3</guid>
+      <itunes:duration>09:08</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Dev_02_Code_Mode_vs_MCP_Cloudflare_Anthropic_2026-11-04.srt" type="application/x-subrip" language="es"/>
+    </item>
     <item>
       <title>sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana</title>
       <link>https://escucha-sia.github.io/articulos/sia-cronicas-06-fabrica-de-dulces-montes-el-imperio-del-cara.html</link>
