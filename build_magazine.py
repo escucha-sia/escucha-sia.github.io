@@ -47,6 +47,7 @@ def get_spotify_episode_url(filename: str, meta: dict = None) -> str:
 # CATÁLOGO DE VIDEOS VERTICALES TIKTOK / REELS (9:16)
 # ==============================================================================
 REELS_MAP = {
+    "sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.mp3": "sIA_Storybook_14_Jabon_Zote_La_Corona_Ecatepec.mp4",
     "sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.mp3": "sIA_Terror_01_Las_Escaleras_Reel.mp4",
     "sIA_Sec_03_XZ_Utils_Backdoor_Andres_Freund_SSH_2026-11-04.mp3": "sIA_Reel_Stupy_13_XZ_Utils_Backdoor_500ms.mp4",
     "sIA_Corp_07_Knight_Capital_440_Millones_Flag_Reutilizado_2026-11-04.mp3": "sIA_Reel_Stupy_12_Knight_Capital_Bug_440M.mp4",
@@ -87,6 +88,58 @@ REELS_MAP = {
 # BASE DE CONOCIMIENTO DE INVESTIGACIÓN CON BIBLIOGRAFÍA APA
 # ==============================================================================
 RESEARCH_DATABASE = {
+    # sIA Corp 08 - Fabrica de Jabon La Corona & Jabon Zote - 6 de Noviembre de 2026
+    "sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.mp3": {
+        "slug": "sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote",
+        "category": "Crónicas Corporativas & Industria",
+        "badge_color": "rose",
+        "read_time": "14 min",
+        "title": "sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad",
+        "subtitle": "Integración Vertical en Ecatepec, Química de Saponificación con Blanqueadores Ópticos UV y Resistencia Familiar frente a Wall Street.",
+        "thesis": "El éxito centenario de Fábrica de Jabón La Corona demuestra que la integración vertical extrema —desde la cogeneración termoeléctrica y el refinamiento de glicerina hasta la logística ferroviaria propia— combinada con una política de cero gasto publicitario y cero endeudamiento financiero permite a una empresa familiar mexicana superar en cuota de mercado a conglomerados multinacionales como Procter & Gamble y Unilever.",
+        "nexo": "Octavo episodio de Crónicas Corporativas (Formato Cuento Ilustrado Tri-Plataforma): Ingeniería química mexicana, economía circular industrial en Xalostoc y soberanía manufacturera.",
+        "reel_video": "sIA_Storybook_14_Jabon_Zote_La_Corona_Ecatepec.mp4",
+        "content_blocks": [
+            {
+                "title": "1. De Tepatitlán a los Baños Corona de Peralvillo (1920)",
+                "body": """
+En 1920, tras el final de la fase armada de la Revolución Mexicana, los hermanos Esteban, Loreto y Daniel González Padilla emigraron desde Tepatitlán, Jalisco, hacia la Ciudad de México. Instalaron su primer taller artesanal de saponificación con cazos de cobre dentro del inmueble de unos antiguos baños públicos de vapor ubicados en el barrio de Peralvillo, conocidos popularmente como los 'Baños Corona'.
+
+Como el taller carecía de un rótulo comercial propio y conservaba en su fachada de ladrillo el letrero de los antiguos baños, los habitantes de la capital comenzaron a decir cotidianamente: 'Vamos a comprar jabón a La Corona'. Aquel bautizo popular dio nombre definitivo a la empresa que transformaría la industria química de limpieza en México.
+"""
+            },
+            {
+                "title": "2. El Coloso Industrial de Xalostoc en Ecatepec: Integración Vertical y Cogeneración",
+                "body": """
+Para sostener el crecimiento de la demanda nacional, la compañía trasladó su corazón operativo al Parque Industrial Xalostoc, en Ecatepec de Morelos, Estado de México. A diferencia de las firmas de consumo que subcontratan la maquila, La Corona edificó un complejo autosuficiente con espuelas de ferrocarril propias que ingresan directamente a los patios de descarga de materias primas.
+
+La planta opera bajo un esquema de economía circular e integración vertical: cuenta con turbinas de cogeneración de energía eléctrica y térmica, plantas de tratamiento de agua, soplado de envases plásticos, imprenta de empaques y torres de refinación que recuperan la glicerina generada naturalmente durante la saponificación para comercializarla con pureza de grado farmacéutico y cosmético. En este mismo complejo se producen marcas históricas como los detergentes biodegradables Roma y Foca, el jabón de tocador Rosa Venus y el aceite vegetal comestible 1-2-3.
+"""
+            },
+            {
+                "title": "3. La Química del Jabón Zote (1970): Ácidos Grasos y Blanqueadores Ópticos UV",
+                "body": """
+Lanzado al mercado en 1970 bajo un ingenioso juego lingüístico ('un jabón-zote' de 400 gramos), el Jabón Zote fue formulado con un mínimo de 66% de ácidos grasos puros derivados de una proporción exacta entre sebo de res refinado (que aporta firmeza estructural y baja solubilidad de desgaste) y aceite de coco (que garantiza abundante espuma incluso en aguas con alta concentración de sales minerales), aromatizado con aceite esencial de citronela.
+
+Su secreto más notable reside en la incorporación de blanqueadores ópticos fluorescentes. En lugar de degradar las fibras textiles mediante hipoclorito de sodio (cloro), estas moléculas se fijan al tejido durante el lavado, absorben fotones de radiación ultravioleta invisible de la luz solar y los reemiten en el espectro visible como luz azulada, neutralizando ópticamente el tono amarillento de las prendas blancas.
+"""
+            },
+            {
+                "title": "4. Cero Publicidad, Rechazo a Wall Street y Culto en Corea del Sur",
+                "body": """
+Fábrica de Jabón La Corona constituye una anomalía en las escuelas de negocios globales: no invierte en campañas de televisión ni mantiene pasivos con la banca internacional. Todo el margen que las transnacionales destinan a mercadotecnia se transfiere directamente a un precio imbatible para el consumidor. Pese a las reiteradas ofertas de compra por parte de fondos de inversión y gigantes extranjeros, la familia González ha mantenido el principio de que una fuente de trabajo mexicana no está en venta.
+
+Irónicamente, sin pagar un solo anuncio, el Jabón Zote cruzó el océano Pacífico: en Corea del Sur se comercializa en tiendas especializadas como producto predilecto para higienizar brochas de maquillaje profesional y tratar pieles grasas, mientras que en los ríos del sur de Estados Unidos es utilizado por pescadores deportivos como la carnada más eficaz para capturar bagre (catfish) debido a la dispersión acuática de sus ácidos grasos y citronela.
+"""
+            }
+        ],
+        "apa_references": [
+            "Fábrica de Jabón La Corona, S.A. de C.V. (2025). *Historia centenaria, procesos de saponificación y sostenibilidad en Xalostoc (1920-2025)*. Documentación Corporativa La Corona. https://www.lacorona.com.mx/",
+            "González Padilla, E. (Archivo Histórico). *De Tepatitlán a Peralvillo: Memoria industrial de la jabonería mexicana*. Acervo Industrial del Estado de México.",
+            "Procurement & Chemical Engineering Review. (2024). *Optical brighteners and fatty acid ratios in traditional laundry bars: The Zote formulation*. Journal of Surfactants and Detergents.",
+            "cacs, & sIA Editora. (2026). *sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote (Cuento Ilustrado Tri-Plataforma)*. sIA Journal Publications. / [escucha-sia](https://escucha-sia.github.io)"
+        ]
+    },
     # sIA Terror 01 - Las Escaleras en el Bosque - 4 de Noviembre de 2026
     "sIA_Terror_01_Las_Escaleras_En_El_Bosque_2026-11-04.mp3": {
         "slug": "sia-terror-01-las-escaleras-en-el-bosque-nacional",

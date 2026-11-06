@@ -13,6 +13,20 @@
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
     <item>
+      <title>sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad</title>
+      <link>https://escucha-sia.github.io/articulos/sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote.html</link>
+      <description>Cuento Ilustrado Tri-Plataforma (Spotify en tu coche + Video en YouTube y TikTok): Cómo los hermanos González Padilla fundaron La Corona en unos baños de vapor en 1920, la fortaleza industrial de Ecatepec con ferrocarril propio y cogeneración, la química secreta del Jabón Zote con blanqueadores ópticos UV y su éxito en Corea del Sur sin gastar en publicidad por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote.html</description>
+      <pubDate>Thu, 05 Nov 2026 12:00:00 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.mp3" length="5161631" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.mp3</guid>
+      <itunes:duration>03:35</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Corp_08_Jabon_Zote_La_Corona_Ecatepec_2026-11-06.srt" type="application/x-subrip" language="es"/>
+    </item>
+    <item>
       <title>sIA Sec #03: El Backdoor de XZ Utils: Cómo 500 Milisegundos de Lag Salvaron al Internet Entero</title>
       <link>https://escucha-sia.github.io/articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html</link>
       <description>Crónica forense de la mayor operación de espionaje en código abierto: los dos años de ingeniería social de Jia Tan sobre Lasse Collin, los hooks IFUNC en liblzma para secuestrar OpenSSH, y cómo el ingeniero Andrés Freund salvó internet al investigar 500ms de latencia en PostgreSQL por cacs. | Leer artículo y referencias APA: https://escucha-sia.github.io/articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html</description>
