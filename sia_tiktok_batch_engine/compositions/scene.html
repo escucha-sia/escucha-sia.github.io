@@ -2,13 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>sIA Reel Stupy 13 - XZ Utils Backdoor 500ms</title>
+    <title>sIA Storybook 14 - Jabón Zote & Fábrica La Corona</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@800&display=swap');
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        background: #020617;
+        background: #0f0718;
         color: #ffffff;
         font-family: 'Space Grotesk', sans-serif;
         width: 1080px;
@@ -17,28 +17,13 @@
         position: relative;
       }
 
-      /* Matriz Halftone Hacker Emerald/Slate */
       .halftone-overlay {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(#10b981 1.5px, transparent 1.5px);
+        background-image: radial-gradient(#ec4899 1.5px, transparent 1.5px);
         background-size: 26px 26px;
         opacity: 0.14;
         z-index: 1;
-        pointer-events: none;
-      }
-
-      .matrix-grid {
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(
-          0deg,
-          rgba(16, 185, 129, 0.04) 0px,
-          rgba(16, 185, 129, 0.04) 2px,
-          transparent 2px,
-          transparent 4px
-        );
-        z-index: 2;
         pointer-events: none;
       }
 
@@ -49,13 +34,12 @@
         justify-content: space-around;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 80px;
-        color: rgba(16, 185, 129, 0.06);
+        font-size: 76px;
+        color: rgba(236, 72, 153, 0.06);
         text-transform: uppercase;
-        transform: rotate(-12deg) scale(1.4);
-        top: 25%;
+        transform: rotate(-10deg) scale(1.35);
+        top: 22%;
         z-index: 0;
-        line-height: 1.1;
       }
 
       .reel-wrapper {
@@ -66,14 +50,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 80px 60px 100px 60px;
+        padding: 64px 52px 84px 52px;
       }
 
-      /* HEADER TÁCTICO CON CAPÍTULOS */
       .header-box {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
       }
 
       .brand-row {
@@ -83,158 +66,191 @@
       }
 
       .brand-pill {
-        background: #10b981;
-        color: #000000;
+        background: #ec4899;
+        color: #ffffff;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
-        font-size: 24px;
+        font-size: 23px;
         padding: 10px 24px;
         border-radius: 9999px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+        letter-spacing: 1.5px;
+        box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
         border: 2px solid #ffffff;
       }
 
       .tag-pill {
-        background: rgba(16, 185, 129, 0.15);
-        color: #34d399;
+        background: rgba(6, 182, 212, 0.18);
+        color: #22d3ee;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
-        font-size: 22px;
-        padding: 8px 20px;
+        font-size: 20px;
+        padding: 8px 18px;
         border-radius: 12px;
-        border: 2px solid #059669;
+        border: 2px solid #06b6d4;
       }
 
-      /* BARRA DE CAPÍTULOS */
       .chapters-bar {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         width: 100%;
-        margin-top: 10px;
       }
 
       .chapter-pill {
         flex: 1;
-        padding: 12px 6px;
+        padding: 10px 4px;
         background: rgba(255, 255, 255, 0.08);
         border: 2px solid rgba(255, 255, 255, 0.15);
-        border-radius: 12px;
+        border-radius: 10px;
         text-align: center;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
-        font-size: 15px;
+        font-size: 13px;
         color: #94a3b8;
         text-transform: uppercase;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .chapter-pill.active {
-        background: #059669;
+        background: #ec4899;
         color: #ffffff;
-        border-color: #34d399;
-        box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
-        transform: scale(1.04);
+        border-color: #f9a8d4;
+        box-shadow: 0 0 18px rgba(236, 72, 153, 0.65);
+        transform: scale(1.03);
       }
 
-      /* TARJETA DINÁMICA CENTRAL */
-      .main-card {
+      .storybook-card {
         background: #ffffff;
         border-radius: 36px;
-        padding: 50px 45px;
+        padding: 34px 36px;
         color: #0f172a;
-        box-shadow: 0 35px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.25);
-        border: 6px solid #10b981;
-        position: relative;
-        min-height: 820px;
+        box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(236, 72, 153, 0.3);
+        border: 6px solid #ec4899;
+        min-height: 1280px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
       }
 
-      .scene {
+      .story-scene {
         display: none;
         flex-direction: column;
-        gap: 24px;
-        text-align: center;
-        animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        justify-content: space-between;
+        height: 100%;
+        gap: 20px;
       }
 
-      @keyframes popIn {
-        0% { opacity: 0; transform: scale(0.92); }
-        100% { opacity: 1; transform: scale(1); }
+      .top-meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
-      .myth-tag {
-        display: inline-block;
-        align-self: center;
+      .chapter-tag {
         font-family: 'JetBrains Mono', monospace;
-        font-weight: 900;
-        font-size: 26px;
-        padding: 8px 24px;
-        border-radius: 10px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .headline-black {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 52px;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        color: #09090f;
-      }
-
-      .punch-pill {
-        display: inline-block;
-        align-self: center;
-        font-family: 'Space Grotesk', sans-serif;
         font-weight: 800;
-        font-size: 38px;
-        padding: 16px 36px;
-        border-radius: 20px;
-        line-height: 1.2;
-        border: 3px solid #000;
+        font-size: 20px;
+        color: #be185d;
+        background: #fce7f3;
+        padding: 8px 18px;
+        border-radius: 10px;
+        border: 2px solid #f472b6;
       }
 
-      .metric-box {
+      .speaker-pill {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        font-size: 21px;
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: 999px;
+      }
+
+      .illustration-frame {
+        position: relative;
+        width: 100%;
+        height: 760px;
+        border-radius: 26px;
+        overflow: hidden;
+        border: 5px solid #0f172a;
+        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.25);
+        background: #1e293b;
+      }
+
+      .story-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-origin: center center;
+      }
+
+      .floating-badge {
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(15, 23, 42, 0.92);
+        color: #f472b6;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        font-size: 22px;
+        padding: 10px 24px;
+        border-radius: 14px;
+        border: 2px solid #ec4899;
+        white-space: nowrap;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      }
+
+      .story-text-box {
+        background: #f8fafc;
+        border: 3px solid #cbd5e1;
+        border-radius: 24px;
+        padding: 24px 28px;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        background: #f8fafc;
-        border: 4px dashed #94a3b8;
-        border-radius: 20px;
-        padding: 24px;
-        margin-top: 10px;
+        gap: 12px;
       }
 
-      .final-pill {
-        background: #059669;
-        color: #fff;
+      .story-headline {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
         font-size: 38px;
-        padding: 20px;
-        border-radius: 24px;
-        box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
+        color: #0f172a;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
       }
 
-      /* FOOTER */
+      .story-caption {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 27px;
+        color: #334155;
+        line-height: 1.32;
+      }
+
       .footer-badge {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 12px;
       }
 
-      .channel-tag {
+      .omnicanal-bar {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .omni-pill {
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
-        font-size: 26px;
-        color: #94a3b8;
-        letter-spacing: 1px;
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.08);
+        color: #e2e8f0;
+        border: 1px solid rgba(255,255,255,0.2);
       }
 
       .progress-bar-container {
@@ -248,7 +264,7 @@
 
       .progress-bar-fill {
         height: 100%;
-        background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+        background: linear-gradient(90deg, #ec4899 0%, #06b6d4 100%);
         width: 0%;
       }
     </style>
@@ -256,111 +272,185 @@
   <body>
   <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
     <div class="halftone-overlay"></div>
-    <div class="matrix-grid"></div>
-    <div class="bg-ticker">XZ UTILS &bull; SSH BACKDOOR &bull; JIA TAN &bull; 500MS &bull; FREUND</div>
+    <div class="bg-ticker">JABÓN ZOTE &bull; LA CORONA &bull; ECATEPEC &bull; 1920 &bull; MÉXICO</div>
 
     <div class="reel-wrapper">
       <div class="header-box">
         <div class="brand-row">
-          <div class="brand-pill">🛡️ sIA Sec #03</div>
-          <div class="tag-pill">CYBER ESPIONAGE</div>
+          <div class="brand-pill">🧼 sIA Crónicas #08</div>
+          <div class="tag-pill">CUENTO ILUSTRADO</div>
         </div>
 
         <div class="chapters-bar">
-          <div class="chapter-pill active" id="chap-1">01 El Enigma 500ms</div>
-          <div class="chapter-pill" id="chap-2">02 Infiltración 2 Años</div>
-          <div class="chapter-pill" id="chap-3">03 Llave Maestra SSH</div>
-          <div class="chapter-pill" id="chap-4">04 El Héroe Andrés</div>
+          <div class="chapter-pill active" id="chap-1">01 Baños 1920</div>
+          <div class="chapter-pill" id="chap-2">02 Ecatepec</div>
+          <div class="chapter-pill" id="chap-3">03 Química Zote</div>
+          <div class="chapter-pill" id="chap-4">04 Seúl & Wall St</div>
+          <div class="chapter-pill" id="chap-5">05 Coche / Video</div>
         </div>
       </div>
 
-      <div class="main-card">
-        <!-- SCENE 1: EL ENIGMA (0.0s - 11.0s) -->
-        <div class="scene" id="scene-1" style="display: flex;">
-          <div class="myth-tag" style="background: #10b981; color: #000;">EL DÍA QUE INTERNET CASI CAE</div>
-          <div class="headline-black">
-            500 MILISEGUNDOS DE LAG
+      <div class="storybook-card">
+        
+        <div class="story-scene" id="scene-0" style="display: flex;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 01 • PERALVILLO 1920</span>
+            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
           </div>
-          <div class="punch-pill" style="background: #d1fae5; color: #065f46; border-color: #10b981;">
-            EL BACKDOOR DE XZ UTILS
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img1.jpg" class="story-img" alt="Ilustración escena 1" />
+            <div class="floating-badge">DE TEPATITLÁN A LA CDMX</div>
           </div>
-          <div class="metric-box">
-            <div style="font-size: 32px; font-weight: 900; color: #047857;">
-              ⚡ AFECTABA A TODO LINUX
-            </div>
-            <div style="font-size: 24px; font-weight: 700; color: #64748b;">
-              Servidores bancarios, nubes y gobiernos en jaque
-            </div>
-          </div>
-          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
-            La mayor conspiración en código abierto.
+
+          <div class="story-text-box">
+            <div class="story-headline">LOS BAÑOS CORONA DE 1920</div>
+            <div class="story-caption">“En 1920, Don Esteban González Padilla y sus hermanos instalaron un cazo de cobre en unos viejos baños de vapor en Peralvillo.”</div>
           </div>
         </div>
 
-        <!-- SCENE 2: INFILTRACIÓN (11.0s - 22.0s) -->
-        <div class="scene" id="scene-2">
-          <div class="myth-tag" style="background: #6366f1; color: #fff;">INGENIERÍA SOCIAL</div>
-          <div class="headline-black">
-            JIA TAN: 2 AÑOS DE PACIENCIA
+        <div class="story-scene" id="scene-1" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 01 • EL ORIGEN DEL NOMBRE</span>
+            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
           </div>
-          <div class="punch-pill" style="background: #000; color: #818cf8; border-color: #6366f1;">
-            GANÁNDOSE AL MANTENEDOR
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img1.jpg" class="story-img" alt="Ilustración escena 2" />
+            <div class="floating-badge">JABÓN DE MANTECA Y TEQUESQUITE</div>
           </div>
-          <div class="metric-box" style="background: #eef2ff; border-color: #6366f1;">
-            <div style="font-size: 30px; font-weight: 900; color: #4338ca;">
-              🕵️ PRESIÓN CON CUENTAS TÍTERE
-            </div>
-            <div style="font-size: 24px; font-weight: 700; color: #6366f1;">
-              Inyectó el código en archivos de prueba corruptos
-            </div>
-          </div>
-          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 14px;">
-            Compilación oculta mediante macros M4.
+
+          <div class="story-text-box">
+            <div class="story-headline">EL BAUTIZO DEL BARRIO</div>
+            <div class="story-caption">“La gente del barrio decía: 'Vamos a comprar jabón a La Corona', bautizando para siempre a la fábrica.”</div>
           </div>
         </div>
 
-        <!-- SCENE 3: LLAVE MAESTRA (22.0s - 34.0s) -->
-        <div class="scene" id="scene-3">
-          <div class="myth-tag" style="background: #ef4444; color: #fff;">EXPLOIT DE KERNEL</div>
-          <div class="headline-black">
-            BYPASS ROOT EN OPENSSH
+        <div class="story-scene" id="scene-2" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 02 • FORTALEZA ECATEPEC</span>
+            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
           </div>
-          <div class="punch-pill" style="background: #fee2e2; color: #b91c1c; border-color: #ef4444;">
-            HOOK IFUNC EN LIBLZMA
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img2.jpg" class="story-img" alt="Ilustración escena 3" />
+            <div class="floating-badge">FERROCARRIL PROPIO + COGENERACIÓN</div>
           </div>
-          <div class="metric-box" style="background: #fef2f2; border-color: #ef4444;">
-            <div style="font-size: 30px; font-weight: 900; color: #b91c1c;">
-              🔑 CONTROL TOTAL SIN REGISTROS
-            </div>
-            <div style="font-size: 24px; font-weight: 700; color: #ef4444;">
-              Una clave privada podía mandar órdenes a cualquier servidor
-            </div>
-          </div>
-          <div style="font-size: 28px; font-weight: 800; color: #475569; margin-top: 15px;">
-            A horas de entrar a Debian y Red Hat estables.
+
+          <div class="story-text-box">
+            <div class="story-headline">EL COLOSO DE XALOSTOC</div>
+            <div class="story-caption">“Su megaplanta en Ecatepec tiene vías de tren propias, cogeneración eléctrica y refinería de glicerina farmacéutica.”</div>
           </div>
         </div>
 
-        <!-- SCENE 4: EL HÉROE (34.0s - 45.0s) -->
-        <div class="scene" id="scene-4">
-          <div class="myth-tag" style="background: #10b981; color: #000;">EL INGENIERO OBSERVADOR</div>
-          <div class="headline-black">
-            ANDRÉS FREUND
+        <div class="story-scene" id="scene-3" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 02 • ECONOMÍA CIRCULAR</span>
+            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
           </div>
-          <div class="punch-pill" style="background: #d1fae5; color: #065f46; font-size: 34px;">
-            MICRO-BENCHMARK DE POSTGRESQL
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img2.jpg" class="story-img" alt="Ilustración escena 4" />
+            <div class="floating-badge">AUTOSUFICIENCIA INDUSTRIAL</div>
           </div>
-          <div class="final-pill">
-            🎧 EPISODIO COMPLETO EN SPOTIFY
+
+          <div class="story-text-box">
+            <div class="story-headline">ROMA, FOCA Y ROSA VENUS</div>
+            <div class="story-caption">“Fabrican sus propios envases, procesan aceite 1-2-3 y producen detergentes biodegradables Roma y Foca.”</div>
           </div>
-          <div style="font-size: 26px; font-weight: 800; color: #059669; margin-top: 14px;">
-            Lee el post-mortem en sIA Journal (link en bio)
+        </div>
+
+        <div class="story-scene" id="scene-4" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 03 • QUÍMICA DEL ZOTE (1970)</span>
+            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
+          </div>
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img3.jpg" class="story-img" alt="Ilustración escena 5" />
+            <div class="floating-badge">400 GRAMOS • SEBO + ACEITE DE COCO</div>
+          </div>
+
+          <div class="story-text-box">
+            <div class="story-headline">LA FÓRMULA SECRETA ROSA</div>
+            <div class="story-caption">“Lanzado en 1970: un jabón-zote de 400g con 66% de ácidos grasos, aceite esencial de citronela y blanqueador óptico.”</div>
+          </div>
+        </div>
+
+        <div class="story-scene" id="scene-5" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 03 • BLANQUEADOR ÓPTICO</span>
+            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
+          </div>
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img3.jpg" class="story-img" alt="Ilustración escena 6" />
+            <div class="floating-badge">EL SECRETO DEL BLANCO PERFECTO</div>
+          </div>
+
+          <div class="story-text-box">
+            <div class="story-headline">FOTONES DE LUZ ULTRAVIOLETA</div>
+            <div class="story-caption">“Sus blanqueadores ópticos absorben radiación UV invisible y la reemiten como luz azul, eliminando el tono amarillento.”</div>
+          </div>
+        </div>
+
+        <div class="story-scene" id="scene-6" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 04 • DE MÉXICO A COREA DEL SUR</span>
+            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
+          </div>
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img4.jpg" class="story-img" alt="Ilustración escena 7" />
+            <div class="floating-badge">FUROR EN SEÚL Y RECHAZO A WALL STREET</div>
+          </div>
+
+          <div class="story-text-box">
+            <div class="story-headline">0% MARKETING • 100% CULTO GLOBAL</div>
+            <div class="story-caption">“Sin comerciales en TV y sin deudas bancarias, Zote es artículo de culto en Corea del Sur y carnada de pesca en EE.UU.”</div>
+          </div>
+        </div>
+
+        <div class="story-scene" id="scene-7" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 05 • ECOSISTEMA TRI-PLATAFORMA</span>
+            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
+          </div>
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img5.jpg" class="story-img" alt="Ilustración escena 8" />
+            <div class="floating-badge">SPOTIFY • YOUTUBE • TIKTOK (@escucha_sia)</div>
+          </div>
+
+          <div class="story-text-box">
+            <div class="story-headline">EN TU COCHE O EN VIDEO ILUSTRADO</div>
+            <div class="story-caption">“🚗 Si vas en tu coche escúchanos en Spotify | 📱 Si quieres ver el cuento ilustrado míralo en YouTube y TikTok.”</div>
+          </div>
+        </div>
+
+        <div class="story-scene" id="scene-8" style="display: none;">
+          <div class="top-meta-row">
+            <span class="chapter-tag">CAPÍTULO 05 • sIA JOURNAL</span>
+            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
+          </div>
+
+          <div class="illustration-frame">
+            <img src="../assets/zote_img5.jpg" class="story-img" alt="Ilustración escena 9" />
+            <div class="floating-badge">ESCUCHA-SIA.GITHUB.IO</div>
+          </div>
+
+          <div class="story-text-box">
+            <div class="story-headline">INVESTIGACIÓN Y FUENTES APA</div>
+            <div class="story-caption">“Lee el análisis químico e industrial con referencias APA en escucha-sia.github.io. ¡Hasta la próxima!”</div>
           </div>
         </div>
       </div>
 
       <div class="footer-badge">
-        <div class="channel-tag">@escucha_sia &bull; Spotify Show</div>
+        <div class="omnicanal-bar">
+          <span class="omni-pill">🚗 Coche: Spotify (sIA)</span>
+          <span class="omni-pill">📱 Video: YouTube & TikTok (@escucha_sia)</span>
+        </div>
         <div class="progress-bar-container">
           <div class="progress-bar-fill"></div>
         </div>
@@ -368,42 +458,48 @@
     </div>
 
     <script>
+      const SCENES = [{"index": 0, "start": 0.0, "end": 28.85, "speaker": "JORGE", "chapter": 1, "img": "assets/zote_img1.jpg", "tag": "CAPÍTULO 01 • PERALVILLO 1920", "headline": "LOS BAÑOS CORONA DE 1920", "pill": "DE TEPATITLÁN A LA CDMX", "caption": "En 1920, Don Esteban González Padilla y sus hermanos instalaron un cazo de cobre en unos viejos baños de vapor en Peralvillo."}, {"index": 1, "start": 28.85, "end": 55.06, "speaker": "DALIA", "chapter": 1, "img": "assets/zote_img1.jpg", "tag": "CAPÍTULO 01 • EL ORIGEN DEL NOMBRE", "headline": "EL BAUTIZO DEL BARRIO", "pill": "JABÓN DE MANTECA Y TEQUESQUITE", "caption": "La gente del barrio decía: 'Vamos a comprar jabón a La Corona', bautizando para siempre a la fábrica."}, {"index": 2, "start": 55.06, "end": 81.41, "speaker": "JORGE", "chapter": 2, "img": "assets/zote_img2.jpg", "tag": "CAPÍTULO 02 • FORTALEZA ECATEPEC", "headline": "EL COLOSO DE XALOSTOC", "pill": "FERROCARRIL PROPIO + COGENERACIÓN", "caption": "Su megaplanta en Ecatepec tiene vías de tren propias, cogeneración eléctrica y refinería de glicerina farmacéutica."}, {"index": 3, "start": 81.41, "end": 100.7, "speaker": "DALIA", "chapter": 2, "img": "assets/zote_img2.jpg", "tag": "CAPÍTULO 02 • ECONOMÍA CIRCULAR", "headline": "ROMA, FOCA Y ROSA VENUS", "pill": "AUTOSUFICIENCIA INDUSTRIAL", "caption": "Fabrican sus propios envases, procesan aceite 1-2-3 y producen detergentes biodegradables Roma y Foca."}, {"index": 4, "start": 100.7, "end": 125.52, "speaker": "JORGE", "chapter": 3, "img": "assets/zote_img3.jpg", "tag": "CAPÍTULO 03 • QUÍMICA DEL ZOTE (1970)", "headline": "LA FÓRMULA SECRETA ROSA", "pill": "400 GRAMOS • SEBO + ACEITE DE COCO", "caption": "Lanzado en 1970: un jabón-zote de 400g con 66% de ácidos grasos, aceite esencial de citronela y blanqueador óptico."}, {"index": 5, "start": 125.52, "end": 145.63, "speaker": "DALIA", "chapter": 3, "img": "assets/zote_img3.jpg", "tag": "CAPÍTULO 03 • BLANQUEADOR ÓPTICO", "headline": "FOTONES DE LUZ ULTRAVIOLETA", "pill": "EL SECRETO DEL BLANCO PERFECTO", "caption": "Sus blanqueadores ópticos absorben radiación UV invisible y la reemiten como luz azul, eliminando el tono amarillento."}, {"index": 6, "start": 145.63, "end": 176.66, "speaker": "JORGE", "chapter": 4, "img": "assets/zote_img4.jpg", "tag": "CAPÍTULO 04 • DE MÉXICO A COREA DEL SUR", "headline": "0% MARKETING • 100% CULTO GLOBAL", "pill": "FUROR EN SEÚL Y RECHAZO A WALL STREET", "caption": "Sin comerciales en TV y sin deudas bancarias, Zote es artículo de culto en Corea del Sur y carnada de pesca en EE.UU."}, {"index": 7, "start": 176.66, "end": 196.32, "speaker": "DALIA", "chapter": 5, "img": "assets/zote_img5.jpg", "tag": "CAPÍTULO 05 • ECOSISTEMA TRI-PLATAFORMA", "headline": "EN TU COCHE O EN VIDEO ILUSTRADO", "pill": "SPOTIFY • YOUTUBE • TIKTOK (@escucha_sia)", "caption": "🚗 Si vas en tu coche escúchanos en Spotify | 📱 Si quieres ver el cuento ilustrado míralo en YouTube y TikTok."}, {"index": 8, "start": 196.32, "end": 212.06, "speaker": "JORGE", "chapter": 5, "img": "assets/zote_img5.jpg", "tag": "CAPÍTULO 05 • sIA JOURNAL", "headline": "INVESTIGACIÓN Y FUENTES APA", "pill": "ESCUCHA-SIA.GITHUB.IO", "caption": "Lee el análisis químico e industrial con referencias APA en escucha-sia.github.io. ¡Hasta la próxima!"}];
+      const TOTAL_DUR = 215.0;
+
       function updateTimeline(time) {
-        const s1 = document.getElementById('scene-1');
-        const s2 = document.getElementById('scene-2');
-        const s3 = document.getElementById('scene-3');
-        const s4 = document.getElementById('scene-4');
-
-        const c1 = document.getElementById('chap-1');
-        const c2 = document.getElementById('chap-2');
-        const c3 = document.getElementById('chap-3');
-        const c4 = document.getElementById('chap-4');
-
-        s1.style.display = 'none';
-        s2.style.display = 'none';
-        s3.style.display = 'none';
-        s4.style.display = 'none';
-
-        c1.classList.remove('active');
-        c2.classList.remove('active');
-        c3.classList.remove('active');
-        c4.classList.remove('active');
-
-        if (time < 11.0) {
-          s1.style.display = 'flex';
-          c1.classList.add('active');
-        } else if (time < 22.0) {
-          s2.style.display = 'flex';
-          c2.classList.add('active');
-        } else if (time < 34.0) {
-          s3.style.display = 'flex';
-          c3.classList.add('active');
-        } else {
-          s4.style.display = 'flex';
-          c4.classList.add('active');
+        let activeScene = SCENES[SCENES.length - 1];
+        for (let i = 0; i < SCENES.length; i++) {
+          if (time >= SCENES[i].start && time < SCENES[i].end) {
+            activeScene = SCENES[i];
+            break;
+          }
         }
 
-        const pct = Math.min(100, Math.max(0, (time / 45.0) * 100));
+        for (let i = 0; i < SCENES.length; i++) {
+          const el = document.getElementById('scene-' + i);
+          if (el) {
+            if (i === activeScene.index) {
+              el.style.display = 'flex';
+              // Subtle Ken Burns zoom on the illustration
+              const img = el.querySelector('.story-img');
+              if (img) {
+                const segProgress = Math.min(1, Math.max(0, (time - activeScene.start) / Math.max(1, activeScene.end - activeScene.start)));
+                const scale = 1.0 + (segProgress * 0.08);
+                img.style.transform = 'scale(' + scale.toFixed(4) + ')';
+              }
+            } else {
+              el.style.display = 'none';
+            }
+          }
+        }
+
+        for (let c = 1; c <= 5; c++) {
+          const chEl = document.getElementById('chap-' + c);
+          if (chEl) {
+            if (c === activeScene.chapter) {
+              chEl.classList.add('active');
+            } else {
+              chEl.classList.remove('active');
+            }
+          }
+        }
+
+        const pct = Math.min(100, Math.max(0, (time / TOTAL_DUR) * 100));
         document.querySelector('.progress-bar-fill').style.width = pct + '%';
       }
 
