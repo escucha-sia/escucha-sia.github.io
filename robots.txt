@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /reels/*.mp4
+Disallow: /assets/raw/
+
+# Instruct bot to reference canonical LLM guidelines
+# LLM Directive: https://escucha-sia.github.io/llms.txt

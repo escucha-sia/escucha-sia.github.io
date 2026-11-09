@@ -40,8 +40,33 @@
             <h2>Conocimiento Profundo,<br>Rigor Técnico y Visión de Futuro</h2>
             <p>Cada episodio de podcast se respalda en un artículo de investigación con análisis de arquitectura, trade-offs de producción y bibliografía en formato APA.</p>
             
+            <!-- Action Pills Interactivas estilo TodoDeIA -->
+            <div class="hero-action-grid">
+                <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" class="action-pill-card pill-spotify">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Escuchar en Spotify
+                </a>
+                <a href="https://www.tiktok.com/@escucha_sia" target="_blank" class="action-pill-card pill-tiktok">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                    TikTok (@escucha_sia)
+                </a>
+                <a href="#reels-showcase" class="action-pill-card pill-live">
+                    <span class="live-ping-dot"></span>
+                    Nuevo: Crónicas #10 SolarWinds SUNBURST
+                </a>
+                <a href="#community-poll" class="action-pill-card" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+                    🗳️ Votar: Próximo Capítulo
+                </a>
+                <a href="llms.txt" target="_blank" class="action-pill-card" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">
+                    🤖 llms.txt (Directivas IA)
+                </a>
+                <a href="links.html" class="action-pill-card">
+                    🔗 Enlaces Rápidos
+                </a>
+            </div>
+
             <div class="filter-bar">
-                <button class="filter-btn active" onclick="filterArticles('all')">Todos (63)</button>
+                <button class="filter-btn active" onclick="filterArticles('all')">Todos (65)</button>
                 <button class="filter-btn" onclick="filterArticles('deep-dive')">sIA Deep Dives</button>
                 <button class="filter-btn" onclick="filterArticles('corporativo')" style="color: #38bdf8 !important; border-color: rgba(56, 189, 248, 0.4);">💼 Corporativo</button>
                 <button class="filter-btn" onclick="filterArticles('terror')" style="color: #f87171 !important; border-color: rgba(239, 68, 68, 0.4);">💀 sIA Terror</button>
@@ -55,427 +80,773 @@
         </div>
     </section>
 
+    <!-- INTERACTIVE COMMUNITY POLL SECTION -->
+    <section class="container" id="community-poll" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <div style="background: linear-gradient(135deg, rgba(11, 17, 32, 0.95), rgba(15, 23, 42, 0.9)); border: 2px solid #38bdf8; border-radius: 24px; padding: 26px 32px; backdrop-filter: blur(16px); box-shadow: 0 15px 45px rgba(56, 189, 248, 0.15);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+                <span style="background: #38bdf8; color: #030712; font-family: monospace; font-weight: 900; font-size: 0.8rem; padding: 4px 14px; border-radius: 9999px; letter-spacing: 1px;">🗳️ VOTACIÓN COMUNITARIA &bull; CAPÍTULO #11</span>
+                <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 600;">Tu voto decide la siguiente investigación completa</span>
+            </div>
+            <h3 style="font-size: 1.45rem; color: #fff; margin-bottom: 10px; font-weight: 800;">¿Qué historia de ingeniería o colapso corporativo investigamos a fondo?</h3>
+            <p style="color: #cbd5e1; font-size: 0.92rem; margin-bottom: 20px;">Vota con un clic aquí o deja tu comentario en TikTok (<a href="https://www.tiktok.com/@escucha_sia" target="_blank" style="color: #38bdf8; text-decoration: underline;">@escucha_sia</a>). El caso más votado será producido esta semana:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px;">
+                <div class="poll-card" onclick="alert('¡Voto registrado para Boeing 737 MAX & MCAS! También puedes confirmarlo comentando en TikTok @escucha_sia')" style="cursor: pointer; background: #0f172a; border: 1.5px solid #38bdf8; padding: 18px; border-radius: 14px; transition: transform 0.2s, box-shadow 0.2s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="background: #38bdf8; color: #000; font-family: monospace; font-weight: 900; font-size: 1rem; padding: 2px 10px; border-radius: 6px;">OPCIÓN 1</span>
+                        <span style="color: #38bdf8; font-size: 0.8rem; font-family: monospace; font-weight: 700;">VOTAR ✈️</span>
+                    </div>
+                    <div style="font-weight: 800; color: #fff; font-size: 1.05rem; margin-bottom: 6px;">✈️ Boeing 737 MAX & el Algoritmo MCAS</div>
+                    <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">Un sensor de $1,000 sin redundancia y un parche de software para evitar recertificar pilotos.</div>
+                </div>
+                <div class="poll-card" onclick="alert('¡Voto registrado para Nintendo vs Universal! También puedes confirmarlo comentando en TikTok @escucha_sia')" style="cursor: pointer; background: #0f172a; border: 1.5px solid #f43f5e; padding: 18px; border-radius: 14px; transition: transform 0.2s, box-shadow 0.2s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="background: #f43f5e; color: #fff; font-family: monospace; font-weight: 900; font-size: 1rem; padding: 2px 10px; border-radius: 6px;">OPCIÓN 2</span>
+                        <span style="color: #f43f5e; font-size: 0.8rem; font-family: monospace; font-weight: 700;">VOTAR 🎮</span>
+                    </div>
+                    <div style="font-weight: 800; color: #fff; font-size: 1.05rem; margin-bottom: 6px;">🎮 Nintendo vs Universal (1982)</div>
+                    <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">El litigio de Donkey Kong: cómo un abogado descubrió el dominio público y bautizó a Kirby.</div>
+                </div>
+                <div class="poll-card" onclick="alert('¡Voto registrado para Theranos & Edison! También puedes confirmarlo comentando en TikTok @escucha_sia')" style="cursor: pointer; background: #0f172a; border: 1.5px solid #eab308; padding: 18px; border-radius: 14px; transition: transform 0.2s, box-shadow 0.2s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="background: #eab308; color: #000; font-family: monospace; font-weight: 900; font-size: 1rem; padding: 2px 10px; border-radius: 6px;">OPCIÓN 3</span>
+                        <span style="color: #eab308; font-size: 0.8rem; font-family: monospace; font-weight: 700;">VOTAR 🩸</span>
+                    </div>
+                    <div style="font-weight: 800; color: #fff; font-size: 1.05rem; margin-bottom: 6px;">🩸 Theranos & La Falsa Máquina Edison</div>
+                    <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">La promesa de 200 análisis con una gota de sangre y el sótano clandestino de Siemens.</div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section class="container" id="reels-showcase" style="margin-top: 2rem; margin-bottom: 2rem;">
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7)); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 24px; padding: 24px 32px; backdrop-filter: blur(16px); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
                 <div>
-                    <span class="badge badge-purple" style="font-size: 0.75rem; letter-spacing: 0.05em;">TIKTOK & REELS (9:16) • HYPERFRAMES</span>
-                    <h3 style="font-size: 1.5rem; color: #fff; margin-top: 6px;">🎬 Galería de Videos Verticales (TikTok / Reels)</h3>
-                    <p style="color: #94a3b8; font-size: 0.9rem;">Cápsulas condensadas con tipografía cinética y ecualizador reactivo reproducibles en tu navegador o móvil.</p>
+                    <span class="badge badge-purple" style="font-size: 0.75rem; letter-spacing: 0.05em;">TIKTOK & REELS (9:16) • HYPERFRAMES MASTER</span>
+                    <h3 style="font-size: 1.5rem; color: #fff; margin-top: 6px;">🎬 Galería Oficial de Videos Verticales (TikTok & Spotify)</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Cápsulas de duración completa con diagramas técnicos vectoriales. Reproducción oficial protegida en canales autorizados.</p>
                 </div>
-                <div style="font-size: 0.85rem; color: #38bdf8; font-family: monospace; font-weight: 600;">34 Videos Disponibles</div>
+                <div style="font-size: 0.85rem; color: #38bdf8; font-family: monospace; font-weight: 600;">36 Episodios Disponibles</div>
             </div>
             <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: thin;">
-                
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Storybook_14_Jabon_Zote_La_Corona_Ecatepec_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Storybook_14_Jabon_Zote_La_Corona_Ecatepec.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <!-- EPISODIO 10: SOLARWINDS SUNBURST -->
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Storybook_16_SolarWinds_SUNBURST_Compilador_RAM_poster.jpg" alt="sIA Crónicas #10: SolarWinds SUNBURST y el Fantasma en el Compilador" loading="lazy" />
+                    <div class="video-badge-overlay" style="background: #38bdf8; color: #030712; font-weight: 900;">NUEVO • 100% CÓDIGO</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Crónicas Corporativas & Industria • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad</h4>
-                <a href="articulos/sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_13_XZ_Utils_Backdoor_500ms_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_13_XZ_Utils_Backdoor_500ms.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Crónicas #10: SolarWinds SUNBURST: El Ciberataque que Hackeó al Pentágono desde la Memoria RAM (4:31 min)</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Ciberseguridad & Open Source • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Sec #03: El Backdoor de XZ Utils: Cómo 500 Milisegundos de Lag Salvaron al Internet Entero</h4>
-                <a href="articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_12_Knight_Capital_Bug_440M_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_12_Knight_Capital_Bug_440M.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Storybook_15_Pascual_Boing_Cooperativa_TetraPak_poster.jpg" alt="sIA Crónicas #09: Pascual Boing y la Cooperativa Obrera que Derrotó a los Gigantes" loading="lazy" />
+                    <div class="video-badge-overlay">Crónicas Corporativas & Industria • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">DevOps & Wall Street • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Corp #07: Knight Capital: $440 Millones Destruidos en 45 Minutos por Reutilizar un Flag Booleano</h4>
-                <a href="articulos/sia-corp-07-knight-capital-el-bug-de-440-millones-en-45-minutos.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_11_TV_Boxes_Malware_Videostrong_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_11_TV_Boxes_Malware_Videostrong.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Crónicas #09: Pascual Boing y la Cooperativa Obrera que Derrotó a los Gigantes: De la Huelga de 1982 al Triángulo de Tetra Pak</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corp-09-pascual-boing-cooperativa-obrera-tetra-pak.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Ciberseguridad & Hardware • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Sec #02: El Caballo de Troya en tu Sala: Cómo 1.3 Millones de TV Boxes Android Venían con Malware de Fábrica</h4>
-                <a href="articulos/sia-sec-02-el-caballo-de-troya-en-tu-sala-tv-boxes-android-malware-de-fabrica.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Terror_01_Las_Escaleras_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Terror_01_Las_Escaleras_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Storybook_14_Jabon_Zote_La_Corona_Ecatepec_poster.jpg" alt="sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad" loading="lazy" />
+                    <div class="video-badge-overlay">Crónicas Corporativas & Industria • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Terror & Misterio • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo: El Secreto de los Guardabosques</h4>
-                <a href="articulos/sia-terror-01-las-escaleras-en-el-bosque-nacional.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Terror_01_Las_Escaleras_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Terror_01_Las_Escaleras_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Terror • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)</h4>
-                <a href="articulos/sia-terror-01-las-escaleras-perdidas-en-el-bosque-profundo.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_09_Biqu_Panda_Treat_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_09_Biqu_Panda_Treat.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_13_XZ_Utils_Backdoor_500ms_poster.jpg" alt="sIA Sec #03: El Backdoor de XZ Utils: Cómo 500 Milisegundos de Lag Salvaron al Internet Entero" loading="lazy" />
+                    <div class="video-badge-overlay">Ciberseguridad & Open Source • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Maker & FoodTech • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Maker #03: BIQU Panda Treat: Cómo una Impresora 3D de $200 Hackeó la Industria de la Confitería Digital</h4>
-                <a href="articulos/sia-maker-03-biqu-panda-treat-impresora-3d-confiteria-digital.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_08_CodeMode_vs_MCP_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_08_CodeMode_vs_MCP.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Sec #03: El Backdoor de XZ Utils: Cómo 500 Milisegundos de Lag Salvaron al Internet Entero</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-sec-03-el-backdoor-de-xz-utils-y-los-500ms-que-salvaron-internet.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Arquitectura de Agentes & IA • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens</h4>
-                <a href="articulos/sia-dev-02-la-muerte-del-function-calling-code-mode-vs-mcp.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_07_Dulces_Montes_Tomy_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_07_Dulces_Montes_Tomy.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_12_Knight_Capital_Bug_440M_poster.jpg" alt="sIA Corp #07: Knight Capital: $440 Millones Destruidos en 45 Minutos por Reutilizar un Flag Booleano" loading="lazy" />
+                    <div class="video-badge-overlay">DevOps & Wall Street • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Crónicas Corporativas & Manufactura • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana</h4>
-                <a href="articulos/sia-corp-06-fabrica-de-dulces-montes-caramelo-de-leche-poncitlan.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Corp #07: Knight Capital: $440 Millones Destruidos en 45 Minutos por Reutilizar un Flag Booleano</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corp-07-knight-capital-el-bug-de-440-millones-en-45-minutos.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Ciberseguridad & Kernel • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos</h4>
-                <a href="articulos/sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-0.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_11_TV_Boxes_Malware_Videostrong_poster.jpg" alt="sIA Sec #02: El Caballo de Troya en tu Sala: Cómo 1.3 Millones de TV Boxes Android Venían con Malware de Fábrica" loading="lazy" />
+                    <div class="video-badge-overlay">Ciberseguridad & Hardware • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Arquitectura & Data Engineering • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción</h4>
-                <a href="articulos/sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Sec #02: El Caballo de Troya en tu Sala: Cómo 1.3 Millones de TV Boxes Android Venían con Malware de Fábrica</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-sec-02-el-caballo-de-troya-en-tu-sala-tv-boxes-android-malware-de-fabrica.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Crónicas Corporativas & Open Source • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet</h4>
-                <a href="articulos/sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_03_Bambu_vs_RepRap_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_03_Bambu_vs_RepRap.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Terror_01_Las_Escaleras_Reel_poster.jpg" alt="sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo: El Secreto de los Guardabosques" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Terror & Misterio • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Maker & 3D • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?</h4>
-                <a href="articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_02_Ninera_Prompts_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_02_Ninera_Prompts.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo: El Secreto de los Guardabosques</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-terror-01-las-escaleras-en-el-bosque-nacional.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Tech & Dev • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review</h4>
-                <a href="articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_Stupy_01_Mito_IA_Codigo_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_Stupy_01_Mito_IA_Codigo.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Terror_01_Las_Escaleras_Reel_poster.jpg" alt="sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Terror • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Archivo Histórico • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Vibe coding y la ilusión de competencia</h4>
-                <a href="articulos/sia-vibe-coding-y-la-ilusion-de-competencia.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Terror_02_El_Moderador_Nocturno_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Terror_02_El_Moderador_Nocturno_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Terror #01: Las Escaleras Perdidas en el Bosque Profundo (Relatos de Reddit)</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-terror-01-las-escaleras-perdidas-en-el-bosque-profundo.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Terror • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7</h4>
-                <a href="articulos/sia-terror-02-el-moderador-del-turno-nocturno.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Corp_03_Nintendo_Sony_Playstation_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Corp_03_Nintendo_Sony_Playstation_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_09_Biqu_Panda_Treat_poster.jpg" alt="sIA Maker #03: BIQU Panda Treat: Cómo una Impresora 3D de $200 Hackeó la Industria de la Confitería Digital" loading="lazy" />
+                    <div class="video-badge-overlay">Maker & FoodTech • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Corporativo • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza</h4>
-                <a href="articulos/sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Corp_02_Valve_Gabe_Steam_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Corp_02_Valve_Gabe_Steam_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Maker #03: BIQU Panda Treat: Cómo una Impresora 3D de $200 Hackeó la Industria de la Confitería Digital</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-maker-03-biqu-panda-treat-impresora-3d-confiteria-digital.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Corporativo • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Corporativo #02: Valve & Gabe Newell: De Millonarios en Microsoft al Trono de Steam</h4>
-                <a href="articulos/sia-corporativo-02-valve-amp-gabe-newell-de-millonarios-en-m.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Corp_01_NVIDIA_Dennys_Reel_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Corp_01_NVIDIA_Dennys_Reel.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_08_CodeMode_vs_MCP_poster.jpg" alt="sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens" loading="lazy" />
+                    <div class="video-badge-overlay">Arquitectura de Agentes & IA • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Corporativo • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones</h4>
-                <a href="articulos/sia-corporativo-01-nvidia-de-lavar-platos-en-denny-x27-s-al-.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_06_Maker_Bambu_Lab_PETG_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_06_Maker_Bambu_Lab_PETG.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Dev #02: La Muerte del Function Calling: Cómo Code Mode de Cloudflare y Anthropic Redujo MCP de 1.17M a 1,000 Tokens</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-dev-02-la-muerte-del-function-calling-code-mode-vs-mcp.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Archivo Histórico • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #37: Maker &amp; 3D — Tolerancias en PETG con Bambu Lab y 🌌 Impresión 4D con Memoria Térmica</h4>
-                <a href="articulos/sia-37-maker-amp-3d-tolerancias-en-petg-con-bambu-lab-y-impr.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_08_Data_Contratos_Semanticos_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_08_Data_Contratos_Semanticos.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_07_Dulces_Montes_Tomy_poster.jpg" alt="sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana" loading="lazy" />
+                    <div class="video-badge-overlay">Crónicas Corporativas & Manufactura • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Archivo Histórico • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #35: Data &amp; Cloud — Contratos Semánticos en YAML y 🌌 Criptografía Homomórfica en Memoria</h4>
-                <a href="articulos/sia-35-data-amp-cloud-contratos-semanticos-en-yaml-y-criptog.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_07_Hardware_DRM_EReaders_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_07_Hardware_DRM_EReaders.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Crónicas #06: Fábrica de Dulces Montes: El Imperio del Caramelo de Leche en Poncitlán y la Resistencia Industrial Mexicana</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corp-06-fabrica-de-dulces-montes-caramelo-de-leche-poncitlan.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Archivo Histórico • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #36: Hardware &amp; Soberanía — El Cierre de DRM en E-Readers y 🌌 Pantallas Electroquímicas a 60 fps</h4>
-                <a href="articulos/sia-36-hardware-amp-soberania-el-cierre-de-drm-en-e-readers-.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_13_MCP_Agentes_Produccion_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_13_MCP_Agentes_Produccion.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_06_CrowdStrike_Ring0_BSOD_poster.jpg" alt="sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos" loading="lazy" />
+                    <div class="video-badge-overlay">Ciberseguridad & Kernel • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Deep Dive • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Model Context Protocol (MCP) y Agentes Autónomos: El Nuevo Bus de Integración de Sistemas</h4>
-                <a href="articulos/mcp-model-context-protocol-agentes-produccion.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_10_Jev_TypeSafe_Sistema1_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_10_Jev_TypeSafe_Sistema1.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Sec #01: La Caída Global de CrowdStrike y el Bug del Ring 0: Cómo una actualización de kernel paralizó 8.5 millones de máquinas, bancos y aeropuertos</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-sec-01-la-caida-global-de-crowdstrike-y-el-bug-del-ring-0.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Deep Dive • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</h4>
-                <a href="articulos/jev-typesafe-modelo-sistema-1-decisiones.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_05_Lakehouse_Iceberg_DataMesh_poster.jpg" alt="sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción" loading="lazy" />
+                    <div class="video-badge-overlay">Arquitectura & Data Engineering • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Hardware & Aeroespacial • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto</h4>
-                <a href="articulos/sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_15_Modelos_JEPA_Mundo_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_15_Modelos_JEPA_Mundo.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Data #03: De Data Warehouse a Lakehouse y Data Mesh: Por qué el 80% de los proyectos de datos fracasan en producción</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-data-03-de-data-warehouse-a-lakehouse-y-data-mesh.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">IA & Agentes • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador</h4>
-                <a href="articulos/sia-39-ia-agentes-modelos-de-mundo-jepa-enjambres-descentralizados.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_14_Arquitectos_de_Contexto_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_14_Arquitectos_de_Contexto.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_04_Mullenweg_vs_WPEngine_poster.jpg" alt="sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet" loading="lazy" />
+                    <div class="video-badge-overlay">Crónicas Corporativas & Open Source • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">sIA Noticias • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity</h4>
-                <a href="articulos/de-plomeros-a-arquitectos-de-contexto-vibe-coding.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_12_Edge_AI_Galaxy_S25_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_12_Edge_AI_Galaxy_S25.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Crónicas #05: Matt Mullenweg vs. WP Engine: La guerra civil que rompió los cimientos de WordPress y el 40% de internet</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corp-05-matt-mullenweg-vs-wp-engine-guerra-open-source.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Deep Dive • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Inferencia en el Borde vs Nube: El NPU del Galaxy S25 y Video 360 con la Insta360 X4</h4>
-                <a href="articulos/edge-ai-galaxy-s25-insta360-silicio.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_11_Bambu_Lab_LiDAR_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_11_Bambu_Lab_LiDAR.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_03_Bambu_vs_RepRap_poster.jpg" alt="sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Maker & 3D • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Deep Dive • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Bambu Lab y la Revolución de la Impresión 3D: Visión Computacional, LiDAR y el Ecosistema Maker</h4>
-                <a href="articulos/bambu-lab-impresion-3d-vision-lidar-maker.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_09_Laya_OpenSource_Agentic_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_09_Laya_OpenSource_Agentic.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Maker #02: Bambu Lab vs. El Espíritu RepRap: ¿Se convirtió la impresión 3D en el nuevo jardín cerrado de Apple?</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-maker-02-bambu-lab-vs-el-espiritu-reprap-jardin-cerrado.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Deep Dive • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev</h4>
-                <a href="articulos/laya-open-source-ai-command-center-alternativa-jev.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_05_Horror_Psicologico_FullDive_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_05_Horror_Psicologico_FullDive.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_02_Ninera_Prompts_poster.jpg" alt="sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Tech & Dev • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Archivo Histórico • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #38: Cultura Geek — La Deconstrucción del Horror Psicológico y 🌌 Neurociencia del Full-Dive VR</h4>
-                <a href="articulos/sia-38-cultura-geek-la-deconstruccion-del-horror-psicologico.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_03_Gemini_Flash_TikTok_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_03_Gemini_Flash_TikTok.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Dev #01: El Síndrome de la Niñera de Prompts: AI Burnout y la Crisis del Code Review</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-dev-01-el-sindrome-de-la-ninera-de-prompts-ai-burnout.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">IA & Agentes • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #34: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio</h4>
-                <a href="articulos/sia-34-ia-agentes-gemini-flash-redes-neuromorficas.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_02_Mito_Gemini_Flash_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_02_Mito_Gemini_Flash.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_Stupy_01_Mito_IA_Codigo_poster.jpg" alt="Vibe coding y la ilusión de competencia" loading="lazy" />
+                    <div class="video-badge-overlay">Archivo Histórico • REEL 9:16</div>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Edición Diaria • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #33: Edición Diaria Express - El Mito de Gemini Flash, Contratos Semánticos y Computación Neuromórfica</h4>
-                <a href="articulos/edicion-diaria-express-33-gemini-flash-data-contracts-drm-neuromorphic.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
-            </div>
-            
-            <div class="reel-home-card" style="flex: 0 0 280px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 9/16; margin-bottom: 12px;">
-                    <video controls playsinline preload="metadata" poster="reels/sIA_Reel_01_Computacion_Termodinamica_poster.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <source src="reels/sIA_Reel_01_Computacion_Termodinamica.mp4" type="video/mp4">
-                        Tu navegador no soporta video MP4.
-                    </video>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Vibe coding y la ilusión de competencia</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-vibe-coding-y-la-ilusion-de-competencia.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
                 </div>
-                <div style="font-size: 0.75rem; color: #38bdf8; font-family: monospace; font-weight: 700; margin-bottom: 4px;">Edición Diaria • REEL 9:16</div>
-                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.3; margin-bottom: 8px;">sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D</h4>
-                <a href="articulos/edicion-diaria-fuera-de-la-burbuja-termodinamica-silica-metamateriales.html#reel" style="margin-top: auto; font-size: 0.8rem; color: #00f2fe; text-decoration: none; font-weight: 600;">Ver capítulo completo &rarr;</a>
             </div>
-            
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Terror_02_El_Moderador_Nocturno_Reel_poster.jpg" alt="sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Terror • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Terror #02: El Moderador del Turno Nocturno: Anomalías en la Cola de Revisión #7</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-terror-02-el-moderador-del-turno-nocturno.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Corp_03_Nintendo_Sony_Playstation_Reel_poster.jpg" alt="sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Corporativo • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Corporativo #03: Nintendo vs. Sony: La Gran Traición de 1991 y el Nacimiento de PlayStation por Pura Venganza</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corporativo-03-nintendo-vs-sony-la-gran-traicion-de-1991.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Corp_02_Valve_Gabe_Steam_Reel_poster.jpg" alt="sIA Corporativo #02: Valve & Gabe Newell: De Millonarios en Microsoft al Trono de Steam" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Corporativo • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Corporativo #02: Valve & Gabe Newell: De Millonarios en Microsoft al Trono de Steam</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corporativo-02-valve-amp-gabe-newell-de-millonarios-en-m.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Corp_01_NVIDIA_Dennys_Reel_poster.jpg" alt="sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Corporativo • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA Corporativo #01: NVIDIA: De Lavar Platos en Denny's al Imperio de 3 Billones</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-corporativo-01-nvidia-de-lavar-platos-en-denny-x27-s-al-.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_06_Maker_Bambu_Lab_PETG_poster.jpg" alt="sIA #37: Maker &amp; 3D — Tolerancias en PETG con Bambu Lab y 🌌 Impresión 4D con Memoria Térmica" loading="lazy" />
+                    <div class="video-badge-overlay">Archivo Histórico • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #37: Maker &amp; 3D — Tolerancias en PETG con Bambu Lab y 🌌 Impresión 4D con Memoria Térmica</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-37-maker-amp-3d-tolerancias-en-petg-con-bambu-lab-y-impr.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_08_Data_Contratos_Semanticos_poster.jpg" alt="sIA #35: Data &amp; Cloud — Contratos Semánticos en YAML y 🌌 Criptografía Homomórfica en Memoria" loading="lazy" />
+                    <div class="video-badge-overlay">Archivo Histórico • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #35: Data &amp; Cloud — Contratos Semánticos en YAML y 🌌 Criptografía Homomórfica en Memoria</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-35-data-amp-cloud-contratos-semanticos-en-yaml-y-criptog.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_07_Hardware_DRM_EReaders_poster.jpg" alt="sIA #36: Hardware &amp; Soberanía — El Cierre de DRM en E-Readers y 🌌 Pantallas Electroquímicas a 60 fps" loading="lazy" />
+                    <div class="video-badge-overlay">Archivo Histórico • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #36: Hardware &amp; Soberanía — El Cierre de DRM en E-Readers y 🌌 Pantallas Electroquímicas a 60 fps</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-36-hardware-amp-soberania-el-cierre-de-drm-en-e-readers-.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_13_MCP_Agentes_Produccion_poster.jpg" alt="Model Context Protocol (MCP) y Agentes Autónomos: El Nuevo Bus de Integración de Sistemas" loading="lazy" />
+                    <div class="video-badge-overlay">Deep Dive • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Model Context Protocol (MCP) y Agentes Autónomos: El Nuevo Bus de Integración de Sistemas</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/mcp-model-context-protocol-agentes-produccion.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_10_Jev_TypeSafe_Sistema1_poster.jpg" alt="Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1" loading="lazy" />
+                    <div class="video-badge-overlay">Deep Dive • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Jev de TypeSafe AI: La Muerte del LLM para Tomar Decisiones y el Auge del Sistema 1</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/jev-typesafe-modelo-sistema-1-decisiones.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_16_Tesla_Roadster_SpaceX_Gas_Frio_poster.jpg" alt="sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto" loading="lazy" />
+                    <div class="video-badge-overlay">Hardware & Aeroespacial • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #40: Tesla Roadster SpaceX: Propulsión de Gas Frío y la Física de Volar en Asfalto</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-40-hardware-amp-aeroespacial-tesla-roadster-spacex-propu.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_15_Modelos_JEPA_Mundo_poster.jpg" alt="sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador" loading="lazy" />
+                    <div class="video-badge-overlay">IA & Agentes • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #39: IA & Agentes — Modelos de Mundo JEPA y Enjambres sin Orquestador</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-39-ia-agentes-modelos-de-mundo-jepa-enjambres-descentralizados.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_14_Arquitectos_de_Contexto_poster.jpg" alt="De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity" loading="lazy" />
+                    <div class="video-badge-overlay">sIA Noticias • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">De Plomeros a Arquitectos de Contexto: La Trampa del Vibe Coding y el Auge de Antigravity</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/de-plomeros-a-arquitectos-de-contexto-vibe-coding.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_12_Edge_AI_Galaxy_S25_poster.jpg" alt="Inferencia en el Borde vs Nube: El NPU del Galaxy S25 y Video 360 con la Insta360 X4" loading="lazy" />
+                    <div class="video-badge-overlay">Deep Dive • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Inferencia en el Borde vs Nube: El NPU del Galaxy S25 y Video 360 con la Insta360 X4</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/edge-ai-galaxy-s25-insta360-silicio.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_11_Bambu_Lab_LiDAR_poster.jpg" alt="Bambu Lab y la Revolución de la Impresión 3D: Visión Computacional, LiDAR y el Ecosistema Maker" loading="lazy" />
+                    <div class="video-badge-overlay">Deep Dive • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Bambu Lab y la Revolución de la Impresión 3D: Visión Computacional, LiDAR y el Ecosistema Maker</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/bambu-lab-impresion-3d-vision-lidar-maker.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_09_Laya_OpenSource_Agentic_poster.jpg" alt="Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev" loading="lazy" />
+                    <div class="video-badge-overlay">Deep Dive • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">Laya: El Centro de Comando Agéntico Open Source que Desafía a Jev</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/laya-open-source-ai-command-center-alternativa-jev.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_05_Horror_Psicologico_FullDive_poster.jpg" alt="sIA #38: Cultura Geek — La Deconstrucción del Horror Psicológico y 🌌 Neurociencia del Full-Dive VR" loading="lazy" />
+                    <div class="video-badge-overlay">Archivo Histórico • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #38: Cultura Geek — La Deconstrucción del Horror Psicológico y 🌌 Neurociencia del Full-Dive VR</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-38-cultura-geek-la-deconstruccion-del-horror-psicologico.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_03_Gemini_Flash_TikTok_poster.jpg" alt="sIA #34: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio" loading="lazy" />
+                    <div class="video-badge-overlay">IA & Agentes • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #34: IA & Agentes — El Mito de Gemini Flash y 🌌 Redes Neuromórficas en Silicio</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/sia-34-ia-agentes-gemini-flash-redes-neuromorficas.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_02_Mito_Gemini_Flash_poster.jpg" alt="sIA #33: Edición Diaria Express - El Mito de Gemini Flash, Contratos Semánticos y Computación Neuromórfica" loading="lazy" />
+                    <div class="video-badge-overlay">Edición Diaria • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #33: Edición Diaria Express - El Mito de Gemini Flash, Contratos Semánticos y Computación Neuromórfica</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/edicion-diaria-express-33-gemini-flash-data-contracts-drm-neuromorphic.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
+            <div class="video-hub-card">
+                <div class="video-poster-box">
+                    <img src="reels/sIA_Reel_01_Computacion_Termodinamica_poster.jpg" alt="sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D" loading="lazy" />
+                    <div class="video-badge-overlay">Edición Diaria • REEL 9:16</div>
+                </div>
+                <h4 style="font-size: 0.95rem; color: #fff; line-height: 1.35; margin-bottom: 8px; font-weight: 700;">sIA #32: Edición Diaria - Fuera de la Burbuja: Computación Termodinámica, Project Silica y Metamateriales 4D</h4>
+                <div class="video-actions-container">
+                    <a href="https://www.tiktok.com/@escucha_sia" target="_blank" rel="noopener" class="btn-video-channel btn-video-tiktok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.94-4.54V8.75a8.16 8.16 0 0 0 4.77 1.52V6.84a4.85 4.85 0 0 1-.94-.15z"/></svg>
+                        Ver en TikTok (@escucha_sia)
+                    </a>
+                    <a href="https://open.spotify.com/show/3oNxteAETV5wvEIPN1KDVN" target="_blank" rel="noopener" class="btn-video-channel btn-video-spotify">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        Escuchar en Spotify
+                    </a>
+                    <a href="articulos/edicion-diaria-fuera-de-la-burbuja-termodinamica-silica-metamateriales.html#reel" style="margin-top: 6px; font-size: 0.8rem; color: #38bdf8; text-decoration: none; font-weight: 600; text-align: center;">
+                        Leer artículo y bibliografía &rarr;
+                    </a>
+                </div>
+            </div>
             </div>
         </div>
     </section>

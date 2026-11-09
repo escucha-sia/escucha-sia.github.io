@@ -2,13 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>sIA Storybook 14 - Jabón Zote & Fábrica La Corona</title>
+    <title>sIA Crónicas #10 - SolarWinds SUNBURST</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@800&display=swap');
-
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@700;800;900&display=swap');
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        background: #0f0718;
+        background: #060911;
         color: #ffffff;
         font-family: 'Space Grotesk', sans-serif;
         width: 1080px;
@@ -16,32 +15,45 @@
         overflow: hidden;
         position: relative;
       }
-
-      .halftone-overlay {
+      .cyber-grid {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(#ec4899 1.5px, transparent 1.5px);
-        background-size: 26px 26px;
-        opacity: 0.14;
+        background-image: 
+          linear-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+        background-size: 40px 40px;
         z-index: 1;
         pointer-events: none;
       }
-
+      .cyber-scanlines {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.15) 0px,
+          rgba(0, 0, 0, 0.15) 2px,
+          transparent 2px,
+          transparent 4px
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
       .bg-ticker {
         position: absolute;
-        width: 100%;
+        width: 120%;
         display: flex;
         justify-content: space-around;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 76px;
-        color: rgba(236, 72, 153, 0.06);
+        font-size: 78px;
+        color: rgba(56, 189, 248, 0.04);
         text-transform: uppercase;
-        transform: rotate(-10deg) scale(1.35);
-        top: 22%;
+        transform: rotate(-10deg) scale(1.3);
+        top: 20%;
+        left: -10%;
         z-index: 0;
+        line-height: 1.1;
       }
-
       .reel-wrapper {
         position: relative;
         z-index: 10;
@@ -50,465 +62,904 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 64px 52px 84px 52px;
+        padding: 60px 48px 45px 48px;
       }
-
-      .header-box {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      .brand-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
+      
+      /* HEADER */
+      .header-box { display: flex; flex-direction: column; gap: 12px; }
+      .brand-row { display: flex; align-items: center; justify-content: space-between; }
       .brand-pill {
-        background: #ec4899;
-        color: #ffffff;
+        background: #38bdf8;
+        color: #030712;
         font-family: 'JetBrains Mono', monospace;
-        font-weight: 800;
+        font-weight: 900;
         font-size: 23px;
-        padding: 10px 24px;
+        padding: 8px 22px;
         border-radius: 9999px;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+        letter-spacing: 2px;
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
         border: 2px solid #ffffff;
       }
-
       .tag-pill {
-        background: rgba(6, 182, 212, 0.18);
-        color: #22d3ee;
+        background: rgba(56, 189, 248, 0.12);
+        color: #7dd3fc;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
         font-size: 20px;
-        padding: 8px 18px;
-        border-radius: 12px;
-        border: 2px solid #06b6d4;
+        padding: 6px 18px;
+        border-radius: 9999px;
+        border: 1px solid rgba(56, 189, 248, 0.35);
       }
-
-      .chapters-bar {
-        display: flex;
-        gap: 8px;
-        width: 100%;
-      }
-
-      .chapter-pill {
-        flex: 1;
-        padding: 10px 4px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        border-radius: 10px;
-        text-align: center;
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 800;
-        font-size: 13px;
-        color: #94a3b8;
-        text-transform: uppercase;
-      }
-
-      .chapter-pill.active {
-        background: #ec4899;
-        color: #ffffff;
-        border-color: #f9a8d4;
-        box-shadow: 0 0 18px rgba(236, 72, 153, 0.65);
-        transform: scale(1.03);
-      }
-
-      .storybook-card {
-        background: #ffffff;
-        border-radius: 36px;
-        padding: 34px 36px;
-        color: #0f172a;
-        box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(236, 72, 153, 0.3);
-        border: 6px solid #ec4899;
-        min-height: 1280px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .story-scene {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        gap: 20px;
-      }
-
-      .top-meta-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .chapter-tag {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 800;
-        font-size: 20px;
-        color: #be185d;
-        background: #fce7f3;
-        padding: 8px 18px;
-        border-radius: 10px;
-        border: 2px solid #f472b6;
-      }
-
-      .speaker-pill {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 800;
-        font-size: 21px;
-        color: #ffffff;
-        padding: 8px 20px;
-        border-radius: 999px;
-      }
-
-      .illustration-frame {
-        position: relative;
-        width: 100%;
-        height: 760px;
-        border-radius: 26px;
-        overflow: hidden;
-        border: 5px solid #0f172a;
-        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.25);
-        background: #1e293b;
-      }
-
-      .story-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform-origin: center center;
-      }
-
-      .floating-badge {
-        position: absolute;
-        bottom: 18px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(15, 23, 42, 0.92);
-        color: #f472b6;
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 800;
-        font-size: 22px;
-        padding: 10px 24px;
-        border-radius: 14px;
-        border: 2px solid #ec4899;
-        white-space: nowrap;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-      }
-
-      .story-text-box {
-        background: #f8fafc;
-        border: 3px solid #cbd5e1;
-        border-radius: 24px;
-        padding: 24px 28px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .story-headline {
+      .title-hero {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 38px;
-        color: #0f172a;
-        line-height: 1.1;
-        letter-spacing: -0.5px;
+        font-size: 40px;
+        line-height: 1.12;
+        letter-spacing: -1.2px;
+        color: #ffffff;
       }
-
-      .story-caption {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 27px;
-        color: #334155;
-        line-height: 1.32;
+      .title-hero span { color: #38bdf8; }
+      
+      .chapters-bar {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        margin-top: 4px;
       }
-
-      .footer-badge {
+      .chapter-pill {
+        flex: 1;
+        text-align: center;
+        padding: 8px 2px;
+        border-radius: 10px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 800;
+        font-size: 15px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        color: #94a3b8;
+      }
+      
+      #chap-1 { animation: c1Anim 271.66s linear forwards; }
+      #chap-2 { animation: c2Anim 271.66s linear forwards; }
+      #chap-3 { animation: c3Anim 271.66s linear forwards; }
+      #chap-4 { animation: c4Anim 271.66s linear forwards; }
+      #chap-5 { animation: c5Anim 271.66s linear forwards; }
+      
+      
+        @keyframes c1Anim {
+          0%, 15.876% { background: #38bdf8; color: #000; border-color: #fff; box-shadow: 0 0 16px #38bdf8; transform: scale(1.05); }
+          15.976%, 100% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+        } 
+        @keyframes c2Anim {
+          0%, 15.876% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+          15.976%, 39.876% { background: #f43f5e; color: #000; border-color: #fff; box-shadow: 0 0 16px #f43f5e; transform: scale(1.05); }
+          39.976%, 100% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+        } 
+        @keyframes c3Anim {
+          0%, 39.876% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+          39.976%, 61.006% { background: #a855f7; color: #000; border-color: #fff; box-shadow: 0 0 16px #a855f7; transform: scale(1.05); }
+          61.106%, 100% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+        } 
+        @keyframes c4Anim {
+          0%, 61.006% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+          61.106%, 79.779% { background: #eab308; color: #000; border-color: #fff; box-shadow: 0 0 16px #eab308; transform: scale(1.05); }
+          79.879%, 100% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+        } 
+        @keyframes c5Anim {
+          0%, 79.779% { background: rgba(255,255,255,0.06); color: #94a3b8; border-color: rgba(255,255,255,0.12); transform: scale(1); }
+          79.879%, 100% { background: #10b981; color: #000; border-color: #fff; box-shadow: 0 0 20px #10b981; transform: scale(1.08); animation: c5Pulse 1.2s infinite alternate; }
+        }
+      
+      @keyframes c5Pulse {
+        0% { box-shadow: 0 0 10px #10b981; transform: scale(1.05); }
+        100% { box-shadow: 0 0 25px #34d399; transform: scale(1.1); }
+      }
+      
+      /* TOP SHOWCASE WINDOW (UPPER 50%) */
+      .showcase-stage {
+        position: relative;
+        width: 100%;
+        height: 930px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .card-layer {
+        position: absolute;
+        inset: 0;
+        background: #0b1120;
+        border-radius: 30px;
+        padding: 28px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.85);
+        border: 4px solid #38bdf8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      #card-1 { animation: scene1Anim 271.66s linear forwards; border-color: #38bdf8; }
+      #card-2 { animation: scene2Anim 271.66s linear forwards; border-color: #f43f5e; }
+      #card-3 { animation: scene3Anim 271.66s linear forwards; border-color: #a855f7; }
+      #card-4 { animation: scene4Anim 271.66s linear forwards; border-color: #eab308; }
+      #card-5 { animation: scene5Anim 271.66s linear forwards; border-color: #10b981; }
+      
+      
+        @keyframes scene1Anim {
+          0% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+          15.876% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+          15.976%, 100% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+        } 
+        @keyframes scene2Anim {
+          0%, 15.876% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+          15.976%, 39.876% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+          39.976%, 100% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+        } 
+        @keyframes scene3Anim {
+          0%, 39.876% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+          39.976%, 61.006% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+          61.106%, 100% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+        } 
+        @keyframes scene4Anim {
+          0%, 61.006% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+          61.106%, 79.779% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+          79.879%, 100% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+        } 
+        @keyframes scene5Anim {
+          0%, 79.779% { opacity: 0; transform: scale(0.96); z-index: 0; pointer-events: none; }
+          79.879%, 100% { opacity: 1; transform: scale(1); z-index: 5; pointer-events: auto; }
+        }
+      
+      .myth-tag {
+        display: inline-block;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 6px 16px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .headline-black {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+        color: #f8fafc;
+        margin-top: 8px;
+      }
+      
+      .canvas-graphic-box {
+        width: 100%;
+        height: 480px;
+        border-radius: 20px;
+        background: #030712;
+        border: 2px solid #1e293b;
+        position: relative;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 12px;
-      }
-
-      .omnicanal-bar {
-        display: flex;
-        gap: 16px;
         justify-content: center;
-        width: 100%;
+        padding: 16px;
       }
+      
+      .punch-pill {
+        display: inline-block;
+        align-self: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        padding: 10px 24px;
+        border-radius: 12px;
+        line-height: 1.2;
+        border: 2px solid #fff;
+        text-align: center;
+      }
+      .metric-box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #0f172a;
+        border: 2px dashed #334155;
+        border-radius: 16px;
+        padding: 14px 18px;
+      }
+      
+      /* SUBTITLES ZONE (MIDDLE 12%) */
+      .subtitles-box {
+        position: relative;
+        width: 100%;
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(15, 23, 42, 0.75);
+        border: 2px solid rgba(56, 189, 248, 0.3);
+        border-radius: 18px;
+        padding: 12px 24px;
+        margin: 8px 0;
+        backdrop-filter: blur(10px);
+      }
+      .sub-line {
+        position: absolute;
+        width: 92%;
+        text-align: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.25;
+        color: #ffffff;
+      }
+      .sub-speaker {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 900;
+        margin-right: 8px;
+      }
+      
+      
+    #sub-0 { animation: subAnim_0 271.66s linear forwards; }
+    @keyframes subAnim_0 {
+      0%, 0.000% { opacity: 0; transform: translateY(6px); display: none; }
+      0.000%, 3.286% { opacity: 1; transform: translateY(0); display: block; }
+      3.366%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-1 { animation: subAnim_1 271.66s linear forwards; }
+    @keyframes subAnim_1 {
+      0%, 3.286% { opacity: 0; transform: translateY(6px); display: none; }
+      3.366%, 9.806% { opacity: 1; transform: translateY(0); display: block; }
+      9.886%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-2 { animation: subAnim_2 271.66s linear forwards; }
+    @keyframes subAnim_2 {
+      0%, 9.806% { opacity: 0; transform: translateY(6px); display: none; }
+      9.886%, 15.902% { opacity: 1; transform: translateY(0); display: block; }
+      15.982%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-3 { animation: subAnim_3 271.66s linear forwards; }
+    @keyframes subAnim_3 {
+      0%, 15.902% { opacity: 0; transform: translateY(6px); display: none; }
+      15.982%, 20.725% { opacity: 1; transform: translateY(0); display: block; }
+      20.805%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-4 { animation: subAnim_4 271.66s linear forwards; }
+    @keyframes subAnim_4 {
+      0%, 20.725% { opacity: 0; transform: translateY(6px); display: none; }
+      20.805%, 26.539% { opacity: 1; transform: translateY(0); display: block; }
+      26.619%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-5 { animation: subAnim_5 271.66s linear forwards; }
+    @keyframes subAnim_5 {
+      0%, 26.539% { opacity: 0; transform: translateY(6px); display: none; }
+      26.619%, 33.094% { opacity: 1; transform: translateY(0); display: block; }
+      33.174%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-6 { animation: subAnim_6 271.66s linear forwards; }
+    @keyframes subAnim_6 {
+      0%, 33.094% { opacity: 0; transform: translateY(6px); display: none; }
+      33.174%, 39.896% { opacity: 1; transform: translateY(0); display: block; }
+      39.976%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-7 { animation: subAnim_7 271.66s linear forwards; }
+    @keyframes subAnim_7 {
+      0%, 39.896% { opacity: 0; transform: translateY(6px); display: none; }
+      39.976%, 44.296% { opacity: 1; transform: translateY(0); display: block; }
+      44.376%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-8 { animation: subAnim_8 271.66s linear forwards; }
+    @keyframes subAnim_8 {
+      0%, 44.296% { opacity: 0; transform: translateY(6px); display: none; }
+      44.376%, 48.166% { opacity: 1; transform: translateY(0); display: block; }
+      48.246%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-9 { animation: subAnim_9 271.66s linear forwards; }
+    @keyframes subAnim_9 {
+      0%, 48.166% { opacity: 0; transform: translateY(6px); display: none; }
+      48.246%, 54.067% { opacity: 1; transform: translateY(0); display: block; }
+      54.147%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-10 { animation: subAnim_10 271.66s linear forwards; }
+    @keyframes subAnim_10 {
+      0%, 54.067% { opacity: 0; transform: translateY(6px); display: none; }
+      54.147%, 61.029% { opacity: 1; transform: translateY(0); display: block; }
+      61.109%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-11 { animation: subAnim_11 271.66s linear forwards; }
+    @keyframes subAnim_11 {
+      0%, 61.029% { opacity: 0; transform: translateY(6px); display: none; }
+      61.109%, 64.112% { opacity: 1; transform: translateY(0); display: block; }
+      64.192%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-12 { animation: subAnim_12 271.66s linear forwards; }
+    @keyframes subAnim_12 {
+      0%, 64.112% { opacity: 0; transform: translateY(6px); display: none; }
+      64.192%, 68.644% { opacity: 1; transform: translateY(0); display: block; }
+      68.724%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-13 { animation: subAnim_13 271.66s linear forwards; }
+    @keyframes subAnim_13 {
+      0%, 68.644% { opacity: 0; transform: translateY(6px); display: none; }
+      68.724%, 74.175% { opacity: 1; transform: translateY(0); display: block; }
+      74.255%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-14 { animation: subAnim_14 271.66s linear forwards; }
+    @keyframes subAnim_14 {
+      0%, 74.175% { opacity: 0; transform: translateY(6px); display: none; }
+      74.255%, 79.811% { opacity: 1; transform: translateY(0); display: block; }
+      79.891%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-15 { animation: subAnim_15 271.66s linear forwards; }
+    @keyframes subAnim_15 {
+      0%, 79.811% { opacity: 0; transform: translateY(6px); display: none; }
+      79.891%, 83.681% { opacity: 1; transform: translateY(0); display: block; }
+      83.761%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-16 { animation: subAnim_16 271.66s linear forwards; }
+    @keyframes subAnim_16 {
+      0%, 83.681% { opacity: 0; transform: translateY(6px); display: none; }
+      83.761%, 87.170% { opacity: 1; transform: translateY(0); display: block; }
+      87.250%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-17 { animation: subAnim_17 271.66s linear forwards; }
+    @keyframes subAnim_17 {
+      0%, 87.170% { opacity: 0; transform: translateY(6px); display: none; }
+      87.250%, 90.731% { opacity: 1; transform: translateY(0); display: block; }
+      90.811%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-18 { animation: subAnim_18 271.66s linear forwards; }
+    @keyframes subAnim_18 {
+      0%, 90.731% { opacity: 0; transform: translateY(6px); display: none; }
+      90.811%, 96.376% { opacity: 1; transform: translateY(0); display: block; }
+      96.456%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    } 
+    #sub-19 { animation: subAnim_19 271.66s linear forwards; }
+    @keyframes subAnim_19 {
+      0%, 96.376% { opacity: 0; transform: translateY(6px); display: none; }
+      96.456%, 99.901% { opacity: 1; transform: translateY(0); display: block; }
+      99.981%, 100% { opacity: 0; transform: translateY(-6px); display: none; }
+    }
+      
+      /* BOTTOM STAGE: HOST AVATARS (LOWER 28%) */
+      .hosts-stage {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding: 0 40px;
+      }
+      
+      .host-card {
+        position: relative;
+        width: 320px;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        transition: all 0.3s ease;
+      }
+      
+      .host-img {
+        width: 300px;
+        height: auto;
+        max-height: 360px;
+        object-fit: contain;
+        display: block;
+        animation: idleBreathe 3s ease-in-out infinite alternate;
+      }
+      
+      @keyframes idleBreathe {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-7px); }
+      }
+      
+      #host-jorge {
+        animation: jorgeSpotlight 271.66s linear forwards;
+      }
+      #host-dalia {
+        animation: daliaSpotlight 271.66s linear forwards;
+      }
+      
+      
+@keyframes jorgeSpotlight {
+  0.000% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 3.316% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 3.366% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 9.836% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 9.886% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 15.932% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 15.982% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 20.755% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 20.805% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 26.569% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 26.619% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 33.124% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 33.174% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 39.926% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 39.976% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 44.326% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 44.376% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 48.196% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 48.246% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 54.097% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 54.147% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 61.059% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 61.109% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 64.142% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 64.192% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 68.674% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 68.724% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 74.205% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 74.255% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 79.841% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 79.891% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 83.711% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 83.761% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 87.200% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 87.250% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 90.761% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 90.811% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 96.406% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); } 96.456% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 99.931% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); }
+}
 
+      
+@keyframes daliaSpotlight {
+  0.000% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 3.316% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 3.366% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 9.836% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 9.886% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 15.932% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 15.982% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 20.755% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 20.805% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 26.569% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 26.619% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 33.124% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 33.174% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 39.926% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 39.976% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 44.326% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 44.376% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 48.196% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 48.246% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 54.097% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 54.147% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 61.059% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 61.109% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 64.142% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 64.192% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 68.674% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 68.724% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 74.205% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 74.255% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 79.841% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 79.891% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 83.711% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 83.761% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 87.200% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 87.250% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 90.761% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 90.811% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 96.406% { opacity: 0.55; transform: scale(0.94) translateY(12px); filter: grayscale(40%); } 96.456% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); } 99.931% { opacity: 1; transform: scale(1) translateY(0); filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6)); }
+}
+
+      
+      /* FOOTER PROGRESS */
+      .footer-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .omnicanal-bar { display: flex; gap: 14px; justify-content: center; width: 100%; }
       .omni-pill {
         font-family: 'JetBrains Mono', monospace;
         font-weight: 800;
-        font-size: 18px;
+        font-size: 17px;
         padding: 8px 16px;
         border-radius: 10px;
-        background: rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.06);
         color: #e2e8f0;
-        border: 1px solid rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.18);
       }
-
       .progress-bar-container {
         width: 100%;
-        height: 16px;
-        background: rgba(255, 255, 255, 0.15);
+        height: 14px;
+        background: rgba(255, 255, 255, 0.12);
         border-radius: 9999px;
         overflow: hidden;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.25);
       }
-
+      @keyframes progressFillAnim {
+        0% { width: 0%; }
+        100% { width: 100%; }
+      }
       .progress-bar-fill {
         height: 100%;
-        background: linear-gradient(90deg, #ec4899 0%, #06b6d4 100%);
+        background: linear-gradient(90deg, #38bdf8 0%, #f43f5e 35%, #a855f7 65%, #eab308 85%, #10b981 100%);
         width: 0%;
+        animation: progressFillAnim 271.66s linear forwards;
       }
     </style>
   </head>
   <body>
-  <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
-    <div class="halftone-overlay"></div>
-    <div class="bg-ticker">JABÓN ZOTE &bull; LA CORONA &bull; ECATEPEC &bull; 1920 &bull; MÉXICO</div>
+    <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
+      <div class="cyber-grid"></div>
+      <div class="cyber-scanlines"></div>
+      <div class="bg-ticker">SOLARWINDS &bull; SUNBURST &bull; MSBUILD &bull; PENTÁGONO &bull; TEARDROP &bull; ZERO TRUST</div>
 
-    <div class="reel-wrapper">
-      <div class="header-box">
-        <div class="brand-row">
-          <div class="brand-pill">🧼 sIA Crónicas #08</div>
-          <div class="tag-pill">CUENTO ILUSTRADO</div>
-        </div>
-
-        <div class="chapters-bar">
-          <div class="chapter-pill active" id="chap-1">01 Baños 1920</div>
-          <div class="chapter-pill" id="chap-2">02 Ecatepec</div>
-          <div class="chapter-pill" id="chap-3">03 Química Zote</div>
-          <div class="chapter-pill" id="chap-4">04 Seúl & Wall St</div>
-          <div class="chapter-pill" id="chap-5">05 Coche / Video</div>
-        </div>
-      </div>
-
-      <div class="storybook-card">
-        
-        <div class="story-scene" id="scene-0" style="display: flex;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 01 • PERALVILLO 1920</span>
-            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
+      <div class="reel-wrapper">
+        <!-- HEADER -->
+        <div class="header-box">
+          <div class="brand-row">
+            <div class="brand-pill">🛡️ sIA Crónicas #10</div>
+            <div class="tag-pill">CIBERESPIONAJE & INGENIERÍA</div>
           </div>
 
-          <div class="illustration-frame">
-            <img src="../assets/zote_img1.jpg" class="story-img" alt="Ilustración escena 1" />
-            <div class="floating-badge">DE TEPATITLÁN A LA CDMX</div>
+          <div class="chapters-bar">
+            <div class="chapter-pill" id="chap-1">01 ORION 2020</div>
+            <div class="chapter-pill" id="chap-2">02 COMPILADOR</div>
+            <div class="chapter-pill" id="chap-3">03 DNS FANTASMA</div>
+            <div class="chapter-pill" id="chap-4">04 FIREEYE</div>
+            <div class="chapter-pill" id="chap-5">05 TÚ DECIDES</div>
           </div>
 
-          <div class="story-text-box">
-            <div class="story-headline">LOS BAÑOS CORONA DE 1920</div>
-            <div class="story-caption">“En 1920, Don Esteban González Padilla y sus hermanos instalaron un cazo de cobre en unos viejos baños de vapor en Peralvillo.”</div>
+          <div class="title-hero">
+            SolarWinds SUNBURST: <span>El Fantasma</span> en el Compilador
           </div>
         </div>
 
-        <div class="story-scene" id="scene-1" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 01 • EL ORIGEN DEL NOMBRE</span>
-            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
+        <!-- TOP SHOWCASE WINDOW (UPPER 50%) -->
+        <div class="showcase-stage">
+          <!-- ACTO 1: El Caballo de Troya Perfecto -->
+          <div class="card-layer" id="card-1">
+            <div>
+              <div class="myth-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid #38bdf8;">01 • MARZO 2020: ACTUALIZACIÓN ORION</div>
+              <div class="headline-black">18,000 Redes Infectadas con Certificado Oficial Válido</div>
+            </div>
+
+            <!-- Procedural SVG Diagram: Orion Network & Victims -->
+            <div class="canvas-graphic-box">
+              <svg width="680" height="420" viewBox="0 0 680 420" style="overflow: visible;">
+                <defs>
+                  <linearGradient id="cyberGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#38bdf8" />
+                    <stop offset="100%" stop-color="#0284c7" />
+                  </linearGradient>
+                  <filter id="glowEffect">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Central Node: SolarWinds Orion -->
+                <circle cx="340" cy="180" r="65" fill="#0f172a" stroke="#38bdf8" stroke-width="4" filter="url(#glowEffect)" />
+                <text x="340" y="165" font-family="Space Grotesk" font-weight="800" font-size="18" fill="#38bdf8" text-anchor="middle">SOLARWINDS</text>
+                <text x="340" y="188" font-family="JetBrains Mono" font-weight="900" font-size="15" fill="#f8fafc" text-anchor="middle">ORION 2020.2.1</text>
+                <text x="340" y="208" font-family="JetBrains Mono" font-weight="700" font-size="12" fill="#22c55e" text-anchor="middle">✓ SHA-256 SIGNED</text>
+
+                <!-- Connecting Branches -->
+                <line x1="340" y1="115" x2="160" y2="60" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" />
+                <line x1="340" y1="115" x2="520" y2="60" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" />
+                <line x1="340" y1="245" x2="140" y2="330" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" />
+                <line x1="340" y1="245" x2="340" y2="340" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" />
+                <line x1="340" y1="245" x2="540" y2="330" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" />
+
+                <!-- Nodes -->
+                <!-- Pentagon -->
+                <rect x="80" y="30" width="160" height="60" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="2" />
+                <text x="160" y="55" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">🏛️ EL PENTÁGONO</text>
+                <text x="160" y="75" font-family="JetBrains Mono" font-size="12" fill="#fda4af" text-anchor="middle">Dept. Defensa EE.UU.</text>
+
+                <!-- Los Alamos -->
+                <rect x="440" y="30" width="160" height="60" rx="10" fill="#0f172a" stroke="#eab308" stroke-width="2" />
+                <text x="520" y="55" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">☢️ LOS ÁLAMOS</text>
+                <text x="520" y="75" font-family="JetBrains Mono" font-size="12" fill="#fde047" text-anchor="middle">Laboratorio Nuclear</text>
+
+                <!-- Fortune 500 -->
+                <rect x="50" y="300" width="180" height="60" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+                <text x="140" y="325" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">🏢 425 FORTUNE 500</text>
+                <text x="140" y="345" font-family="JetBrains Mono" font-size="12" fill="#7dd3fc" text-anchor="middle">Banca y Telecom</text>
+
+                <!-- Dept Estado -->
+                <rect x="250" y="315" width="180" height="60" rx="10" fill="#0f172a" stroke="#a855f7" stroke-width="2" />
+                <text x="340" y="340" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">🌐 DEPT. ESTADO</text>
+                <text x="340" y="360" font-family="JetBrains Mono" font-size="12" fill="#d8b4fe" text-anchor="middle">Comunicaciones</text>
+
+                <!-- Microsoft -->
+                <rect x="460" y="300" width="160" height="60" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="2" />
+                <text x="540" y="325" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">☁️ MICROSOFT</text>
+                <text x="540" y="345" font-family="JetBrains Mono" font-size="12" fill="#86efac" text-anchor="middle">Azure Cloud Ops</text>
+              </svg>
+            </div>
+
+            <div class="punch-pill" style="background: #38bdf8; color: #030712;">
+              EL CABALLO DE TROYA MÁS GRANDE DE LA HISTORIA
+            </div>
+
+            <div class="metric-box">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #38bdf8; font-weight: 800;">
+                🔒 FIRMADO DIGITALMENTE: Certificado oficial de DigiCert/Symantec 100% válido.
+              </div>
+              <div style="font-size: 18px; color: #94a3b8; font-weight: 700;">
+                Ningún antivirus generó alertas. La actualización entró por el canal corporativo legítimo.
+              </div>
+            </div>
           </div>
 
-          <div class="illustration-frame">
-            <img src="../assets/zote_img1.jpg" class="story-img" alt="Ilustración escena 2" />
-            <div class="floating-badge">JABÓN DE MANTECA Y TEQUESQUITE</div>
+          <!-- ACTO 2: La Inyección en el Compilador -->
+          <div class="card-layer" id="card-2">
+            <div>
+              <div class="myth-tag" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid #f43f5e;">02 • INYECCIÓN EN MSBUILD.EXE</div>
+              <div class="headline-black">El Código en Git Estaba Limpio: El Malware Nació en la RAM</div>
+            </div>
+
+            <!-- Procedural Architecture Diagram: Compiler Injection -->
+            <div class="canvas-graphic-box">
+              <svg width="680" height="420" viewBox="0 0 680 420">
+                <!-- Step 1: GitHub Clean Code -->
+                <rect x="30" y="50" width="180" height="110" rx="14" fill="#0f172a" stroke="#22c55e" stroke-width="2" />
+                <text x="120" y="85" font-family="Space Grotesk" font-weight="800" font-size="17" fill="#22c55e" text-anchor="middle">1. REPO GITHUB</text>
+                <text x="120" y="110" font-family="JetBrains Mono" font-size="13" fill="#86efac" text-anchor="middle">CÓDIGO 100% LIMPIO</text>
+                <text x="120" y="135" font-family="JetBrains Mono" font-size="11" fill="#64748b" text-anchor="middle">BusinessLayer.cs</text>
+
+                <!-- Arrow 1 to Compiler -->
+                <line x1="210" y1="105" x2="260" y2="105" stroke="#fff" stroke-width="3" marker-end="url(#arrow)" />
+
+                <!-- Step 2: MSBuild in RAM -->
+                <rect x="260" y="30" width="200" height="150" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                <text x="360" y="65" font-family="Space Grotesk" font-weight="800" font-size="17" fill="#38bdf8" text-anchor="middle">2. MSBUILD.EXE</text>
+                <text x="360" y="90" font-family="JetBrains Mono" font-size="13" fill="#cbd5e1" text-anchor="middle">Compilación en RAM</text>
+                
+                <!-- Red Hacker Hook Solorigate -->
+                <rect x="280" y="115" width="160" height="50" rx="8" fill="#f43f5e" />
+                <text x="360" y="137" font-family="JetBrains Mono" font-weight="900" font-size="12" fill="#fff" text-anchor="middle">⚡ SOLORIGATE HOOK</text>
+                <text x="360" y="153" font-family="JetBrains Mono" font-size="10" fill="#fff" text-anchor="middle">+4,000 líneas maliciosas</text>
+
+                <!-- Arrow 2 to Output -->
+                <line x1="460" y1="105" x2="510" y2="105" stroke="#fff" stroke-width="3" />
+
+                <!-- Step 3: Envenenado y Firmado -->
+                <rect x="510" y="50" width="150" height="110" rx="14" fill="#0f172a" stroke="#f43f5e" stroke-width="2" />
+                <text x="585" y="85" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#f43f5e" text-anchor="middle">3. DLL FIRMADA</text>
+                <text x="585" y="110" font-family="JetBrains Mono" font-size="12" fill="#fda4af" text-anchor="middle">SUNBURST BACKDOOR</text>
+                <text x="585" y="135" font-family="JetBrains Mono" font-size="11" fill="#22c55e" text-anchor="middle">✓ Firma Válida</text>
+
+                <!-- Code Comparison Snippet Box -->
+                <rect x="50" y="220" width="580" height="150" rx="12" fill="#090d16" stroke="#334155" stroke-width="2" />
+                <text x="70" y="250" font-family="JetBrains Mono" font-weight="900" font-size="15" fill="#f43f5e">💻 SolarWinds.Orion.Core.BusinessLayer.dll:</text>
+                <text x="70" y="280" font-family="JetBrains Mono" font-size="13" fill="#64748b">// Función manipulada en tiempo de compilación</text>
+                <text x="70" y="305" font-family="JetBrains Mono" font-size="13" fill="#38bdf8">void Update() { if (CheckTimer() &gt; 14_DAYS) {</text>
+                <text x="90" y="330" font-family="JetBrains Mono" font-size="13" fill="#f43f5e">  SpawnThread(DnsBeacon.Resolve()); // Cozy Bear (APT29)</text>
+                <text x="70" y="355" font-family="JetBrains Mono" font-size="13" fill="#38bdf8">}}</text>
+              </svg>
+            </div>
+
+            <div class="punch-pill" style="background: #f43f5e; color: #ffffff;">
+              EL CÓDIGO FUENTE NO DEJÓ HUELLA EN EL DISCO
+            </div>
+
+            <div class="metric-box">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #f43f5e; font-weight: 800;">
+                🧠 HACKEO AL PROCESO DE COMPILACIÓN: Solorigate vigilaba MSBuild.exe en memoria.
+              </div>
+              <div style="font-size: 18px; color: #94a3b8; font-weight: 700;">
+                Cero modificaciones en Git. El binario salía envenenado y se firmaba automáticamente.
+              </div>
+            </div>
           </div>
 
-          <div class="story-text-box">
-            <div class="story-headline">EL BAUTIZO DEL BARRIO</div>
-            <div class="story-caption">“La gente del barrio decía: 'Vamos a comprar jabón a La Corona', bautizando para siempre a la fábrica.”</div>
+          <!-- ACTO 3: La Hibernación de 14 Días y el DNS Fantasma -->
+          <div class="card-layer" id="card-3">
+            <div>
+              <div class="myth-tag" style="background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid #a855f7;">03 • EVASIÓN DE SANDBOX & STEGANOGRAFÍA</div>
+              <div class="headline-black">14 Días de Silencio y Tráfico Camuflado en AWS</div>
+            </div>
+
+            <!-- Procedural Diagram: 14 Days & DNS Tunneling -->
+            <div class="canvas-graphic-box">
+              <svg width="680" height="420" viewBox="0 0 680 420">
+                <!-- 14 Day Dormancy Calendar Box -->
+                <rect x="40" y="30" width="260" height="140" rx="16" fill="#0f172a" stroke="#a855f7" stroke-width="2" />
+                <text x="170" y="65" font-family="Space Grotesk" font-weight="900" font-size="18" fill="#a855f7" text-anchor="middle">⏳ HIBERNACIÓN TOTAL</text>
+                <text x="170" y="105" font-family="Montserrat" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">14 DÍAS</text>
+                <text x="170" y="145" font-family="JetBrains Mono" font-size="12" fill="#94a3b8" text-anchor="middle">Burló análisis de Sandbox</text>
+
+                <!-- DNS Tunneling Visual -->
+                <rect x="340" y="30" width="300" height="140" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+                <text x="490" y="65" font-family="Space Grotesk" font-weight="800" font-size="17" fill="#38bdf8" text-anchor="middle">📡 ESTEGANOGRAFÍA DNS</text>
+                <text x="490" y="98" font-family="JetBrains Mono" font-weight="800" font-size="13" fill="#cbd5e1" text-anchor="middle">Base32 DGA Queries:</text>
+                <text x="490" y="125" font-family="JetBrains Mono" font-size="12" fill="#22c55e" text-anchor="middle">*.avsvmcloud.com</text>
+                <text x="490" y="150" font-family="JetBrains Mono" font-size="11" fill="#64748b" text-anchor="middle">Camuflado como Amazon AWS</text>
+
+                <!-- Decision Branch: Target Filter -->
+                <rect x="50" y="210" width="580" height="160" rx="14" fill="#090d16" stroke="#475569" stroke-width="2" />
+                <text x="340" y="245" font-family="Space Grotesk" font-weight="800" font-size="18" fill="#fff" text-anchor="middle">FILTRO DE OBJETIVOS ESTRATÉGICOS</text>
+                
+                <!-- Path A: Common Target -->
+                <rect x="80" y="270" width="220" height="80" rx="10" fill="#1e293b" />
+                <text x="190" y="300" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#94a3b8" text-anchor="middle">Empresa Común</text>
+                <text x="190" y="330" font-family="JetBrains Mono" font-size="13" fill="#ef4444" text-anchor="middle">💣 Auto-destrucción</text>
+
+                <!-- Path B: Pentagon/Microsoft -->
+                <rect x="380" y="270" width="220" height="80" rx="10" fill="#2e1065" stroke="#a855f7" stroke-width="2" />
+                <text x="490" y="300" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#d8b4fe" text-anchor="middle">Pentágono / Tesoro</text>
+                <text x="490" y="330" font-family="JetBrains Mono" font-size="13" fill="#a855f7" text-anchor="middle">💀 Inyección TEARDROP</text>
+              </svg>
+            </div>
+
+            <div class="punch-pill" style="background: #a855f7; color: #ffffff;">
+              TEARDROP: LA SEGUNDA FASE SÓLO EN OBJETIVOS CLAVE
+            </div>
+
+            <div class="metric-box">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #a855f7; font-weight: 800;">
+                🛰️ TRÁFICO CAMUFLADO: Peticiones DNS a dominios controlados por AWS.
+              </div>
+              <div style="font-size: 18px; color: #94a3b8; font-weight: 700;">
+                El malware permaneció 9 meses invisible en los servidores más custodiados de la Tierra.
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTO 4: El Error de los 2FA y la Cacería de FireEye -->
+          <div class="card-layer" id="card-4">
+            <div>
+              <div class="myth-tag" style="background: rgba(234, 179, 8, 0.15); color: #eab308; border: 1px solid #eab308;">04 • DICIEMBRE 2020: LA CAÍDA</div>
+              <div class="headline-black">Un Teléfono Duplicado en el 2FA Reveló el Secreto</div>
+            </div>
+
+            <!-- Procedural Diagram: FireEye Discovery -->
+            <div class="canvas-graphic-box">
+              <svg width="680" height="420" viewBox="0 0 680 420">
+                <!-- 2FA Alert Box -->
+                <rect x="50" y="40" width="580" height="140" rx="16" fill="#1c1917" stroke="#eab308" stroke-width="3" />
+                <text x="340" y="80" font-family="Space Grotesk" font-weight="900" font-size="22" fill="#eab308" text-anchor="middle">⚠️ ALERTA DE SEGURIDAD INTERNA FIREEYE</text>
+                <text x="340" y="115" font-family="JetBrains Mono" font-size="16" fill="#fff" text-anchor="middle">Nuevo teléfono móvil registrado para autenticación de empleado</text>
+                <text x="340" y="145" font-family="JetBrains Mono" font-weight="800" font-size="14" fill="#22c55e" text-anchor="middle">¿Fue el empleado? -> RESPUESTA: NO</text>
+
+                <!-- Forensic Investigation Steps -->
+                <rect x="60" y="210" width="160" height="120" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2" />
+                <text x="140" y="245" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#38bdf8" text-anchor="middle">1. RASTREO</text>
+                <text x="140" y="280" font-family="JetBrains Mono" font-size="12" fill="#cbd5e1" text-anchor="middle">Cero malware externo</text>
+                <text x="140" y="305" font-family="JetBrains Mono" font-size="12" fill="#94a3b8" text-anchor="middle">Credenciales ilesas</text>
+
+                <line x1="220" y1="270" x2="260" y2="270" stroke="#fff" stroke-width="2" />
+
+                <rect x="260" y="210" width="160" height="120" rx="12" fill="#0f172a" stroke="#eab308" stroke-width="2" />
+                <text x="340" y="245" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#eab308" text-anchor="middle">2. SOLARWINDS</text>
+                <text x="340" y="280" font-family="JetBrains Mono" font-size="12" fill="#cbd5e1" text-anchor="middle">La actualización oficial</text>
+                <text x="340" y="305" font-family="JetBrains Mono" font-size="12" fill="#eab308" text-anchor="middle">es el vector</text>
+
+                <line x1="420" y1="270" x2="460" y2="270" stroke="#fff" stroke-width="2" />
+
+                <rect x="460" y="210" width="160" height="120" rx="12" fill="#0f172a" stroke="#f43f5e" stroke-width="2" />
+                <text x="540" y="245" font-family="Space Grotesk" font-weight="800" font-size="15" fill="#f43f5e" text-anchor="middle">3. CRISIS NACIONAL</text>
+                <text x="540" y="280" font-family="JetBrains Mono" font-size="12" fill="#cbd5e1" text-anchor="middle">Casa Blanca y Azure</text>
+                <text x="540" y="305" font-family="JetBrains Mono" font-size="12" fill="#f43f5e" text-anchor="middle">en alerta roja</text>
+              </svg>
+            </div>
+
+            <div class="punch-pill" style="background: #eab308; color: #000000;">
+              EL MEJOR MALWARE DEL MUNDO CAYÓ POR UN SMS
+            </div>
+
+            <div class="metric-box">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #eab308; font-weight: 800;">
+                🔍 CACERÍA INVERSA DE KEVIN MANDIA: FireEye alertó al mundo entero.
+              </div>
+              <div style="font-size: 18px; color: #94a3b8; font-weight: 700;">
+                Los atacantes accedieron a los repositorios secretos de Azure y correos de seguridad nacional.
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTO 5: Cierre Omnicanal & Votación Comunitaria -->
+          <div class="card-layer" id="card-5">
+            <div>
+              <div class="myth-tag" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 2px solid #10b981;">05 • DECISIÓN DE LA COMUNIDAD</div>
+              <div class="headline-black">¿Qué Historia Analizamos en el Capítulo #11?</div>
+            </div>
+
+            <!-- Interactive Voting Ballot UI -->
+            <div class="canvas-graphic-box" style="justify-content: space-around;">
+              <!-- Option 1: Boeing 737 MAX -->
+              <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 22px; border-radius: 14px; border: 2px solid #38bdf8;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <span style="background: #38bdf8; color: #000; font-family: 'JetBrains Mono'; font-weight: 900; font-size: 20px; padding: 4px 12px; border-radius: 8px;">1</span>
+                  <div style="text-align: left;">
+                    <div style="font-weight: 800; font-size: 20px; color: #fff;">✈️ BOEING 737 MAX & MCAS</div>
+                    <div style="font-size: 15px; color: #94a3b8;">El sensor de $1,000 y el código oculto que costó 346 vidas</div>
+                  </div>
+                </div>
+                <span style="font-family: 'JetBrains Mono'; color: #38bdf8; font-weight: 800; font-size: 17px;">COMENTA 1</span>
+              </div>
+
+              <!-- Option 2: Nintendo vs Universal -->
+              <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 22px; border-radius: 14px; border: 2px solid #f43f5e;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <span style="background: #f43f5e; color: #fff; font-family: 'JetBrains Mono'; font-weight: 900; font-size: 20px; padding: 4px 12px; border-radius: 8px;">2</span>
+                  <div style="text-align: left;">
+                    <div style="font-weight: 800; font-size: 20px; color: #fff;">🎮 NINTENDO VS UNIVERSAL</div>
+                    <div style="font-size: 15px; color: #94a3b8;">El abogado de Donkey Kong que bautizó al personaje Kirby</div>
+                  </div>
+                </div>
+                <span style="font-family: 'JetBrains Mono'; color: #f43f5e; font-weight: 800; font-size: 17px;">COMENTA 2</span>
+              </div>
+
+              <!-- Option 3: Theranos & Elizabeth Holmes -->
+              <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; background: #0f172a; padding: 14px 22px; border-radius: 14px; border: 2px solid #eab308;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <span style="background: #eab308; color: #000; font-family: 'JetBrains Mono'; font-weight: 900; font-size: 20px; padding: 4px 12px; border-radius: 8px;">3</span>
+                  <div style="text-align: left;">
+                    <div style="font-weight: 800; font-size: 20px; color: #fff;">🩸 THERANOS & LA FALSA MÁQUINA</div>
+                    <div style="font-size: 15px; color: #94a3b8;">La ilusión de la gota de sangre y el búnker secreto de Siemens</div>
+                  </div>
+                </div>
+                <span style="font-family: 'JetBrains Mono'; color: #eab308; font-weight: 800; font-size: 17px;">COMENTA 3</span>
+              </div>
+            </div>
+
+            <div class="punch-pill" style="background: #10b981; color: #000000; font-size: 26px;">
+              👇 DEJA EN LOS COMENTARIOS CUÁL QUIERES VER 👇
+            </div>
+
+            <div class="metric-box">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #10b981; font-weight: 800;">
+                🏆 EL COMENTARIO MÁS VOTADO SERÁ EL PRÓXIMO CAPÍTULO COMPLETO
+              </div>
+              <div style="font-size: 18px; color: #94a3b8; font-weight: 700;">
+                O déjanos tu caso corporativo o colapso tecnológico favorito. ¡Los leemos todos!
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="story-scene" id="scene-2" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 02 • FORTALEZA ECATEPEC</span>
-            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
+        <!-- SUBTITLES ZONE (MIDDLE 12%) -->
+        <div class="subtitles-box">
+          
+    <div class="sub-line" id="sub-0">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">En marzo de 2020, dieciocho mil redes corporativas y gubernamentales alrededor del mundo instalaron una actualización rutinaria de software.</span>
+    </div> 
+    <div class="sub-line" id="sub-1">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">No era una descarga sospechosa de internet. Venía de SolarWinds Orion, una plataforma de monitoreo de servidores utilizada por el Pentágono, el Departamento de Estado de Estados Unidos, los laboratorios nucleares de Los Álamos y más de cuatrocientas empresas de la lista Fortune 500.</span>
+    </div> 
+    <div class="sub-line" id="sub-2">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">El paquete de actualización estaba firmado digitalmente con un certificado criptográfico legítimo y válido. Ningún antivirus del planeta alertó de una amenaza. El caballo de troya más sofisticado del siglo veintiuno acababa de entrar por la puerta principal.</span>
+    </div> 
+    <div class="sub-line" id="sub-3">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Durante meses, los mejores equipos de ciberseguridad se hicieron la misma pregunta: ¿cómo lograron los atacantes meter cuatro mil líneas de código malicioso en el producto estrella de SolarWinds sin que ningún ingeniero se diera cuenta?</span>
+    </div> 
+    <div class="sub-line" id="sub-4">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">La respuesta fue una obra maestra de ingeniería inversa llamada Solorigate. Los atacantes, identificados como el grupo de inteligencia rusa Cozy Bear, no tocaron el repositorio oficial de código en GitHub ni modificaron los archivos fuente en disco.</span>
+    </div> 
+    <div class="sub-line" id="sub-5">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">En su lugar, crearon un software durmiente que vigilaba el proceso de compilación em ese build punto exe. Justo en la fracción de segundo en que el compilador leía el código fuente limpio y lo transformaba en memoria RAM en un archivo ejecutable, el implante inyectaba el malware directamente en la memoria volátil.</span>
+    </div> 
+    <div class="sub-line" id="sub-6">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">Cuando el archivo punto de ele ele salía del compilador, ya contenía el backdoor llamado Sunburst. Y de inmediato, los sistemas automatizados de SolarWinds lo firmaban con su clave criptográfica oficial. El código en el repositorio estaba limpio; el producto final estaba envenenado.</span>
+    </div> 
+    <div class="sub-line" id="sub-7">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Pero la genialidad técnica de Sunburst no terminó en la compilación. Una vez instalado en los servidores de las víctimas, el malware entraba en hibernación absoluta durante catorce días continuos.</span>
+    </div> 
+    <div class="sub-line" id="sub-8">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">Esta pausa deliberada burlaba las cajas de arena o sandboxes automatizadas de los antivirus, que solo monitorean el comportamiento de un software nuevo durante unos minutos.</span>
+    </div> 
+    <div class="sub-line" id="sub-9">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Al despertar, no abría conexiones directas a servidores rusos. Utilizaba peticiones de nombres de dominio o D-N-S codificadas en base 32 hacia un dominio aparentemente legítimo alojado en Amazon Web Services: a-v-s-v-m-cloud punto com.</span>
+    </div> 
+    <div class="sub-line" id="sub-10">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">El tráfico parecía telemetría inocente de servidores. Si la víctima no era de interés estratégico, el malware se autodestruía en silencio. Pero si detectaba que estaba dentro del Departamento del Tesoro o de Microsoft, desplegaba en memoria una segunda carga espía indetectable llamada Teardrop.</span>
+    </div> 
+    <div class="sub-line" id="sub-11">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">¿Cómo cayó este fantasma digital? No fue por un error en su código, sino por un detalle humano en diciembre de 2020.</span>
+    </div> 
+    <div class="sub-line" id="sub-12">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">El equipo de seguridad de la firma FireEye notó una alerta insólita: alguien había registrado un segundo teléfono móvil en el sistema de autenticación de dos factores para hacerse pasar por uno de sus empleados.</span>
+    </div> 
+    <div class="sub-line" id="sub-13">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Kevin Mandia y su equipo rastrearon cada paquete de red. No encontraron brechas en sus firewalls ni contraseñas filtradas. El origen del tráfico provenía de su propio software de monitoreo: la actualización oficial de SolarWinds.</span>
+    </div> 
+    <div class="sub-line" id="sub-14">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">Cuando FireEye notificó al gobierno federal y a Microsoft, el impacto fue devastador. Los atacantes habían tenido acceso durante nueve meses a correos diplomáticos, redes de defensa y partes del código fuente de los sistemas en la nube de Azure.</span>
+    </div> 
+    <div class="sub-line" id="sub-15">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">SolarWinds destruyó la vieja ilusión de que el software firmado es software seguro, acelerando la adopción obligatoria de arquitecturas de Confianza Cero o Zero Trust a nivel global.</span>
+    </div> 
+    <div class="sub-line" id="sub-16">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">Puedes escuchar esta crónica completa en Spotify mientras manejas, o ver los diagramas interactivos en YouTube y TikTok buscando escucha guion bajo s-i-a.</span>
+    </div> 
+    <div class="sub-line" id="sub-17">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Y ahora, la decisión es de ustedes. Para nuestro próximo capítulo, ¿qué historia de ingeniería o drama corporativo quieren que desarmemos?</span>
+    </div> 
+    <div class="sub-line" id="sub-18">
+      <span class="sub-speaker" style="color: #38bdf8;">[JORGE]</span>
+      <span class="sub-text">Opción uno: el fallo del sensor y el algoritmo MCAS del Boeing 737 MAX. Opción dos: el juicio de Nintendo contra Universal que bautizó a Kirby. U opción tres: el fraude de la máquina Edison de Theranos.</span>
+    </div> 
+    <div class="sub-line" id="sub-19">
+      <span class="sub-speaker" style="color: #10b981;">[DALIA]</span>
+      <span class="sub-text">Déjanos en los comentarios cuál quieres que hagamos a continuación o escribe tu caso favorito. El comentario más votado será el próximo capítulo completo.</span>
+    </div>
+        </div>
+
+        <!-- BOTTOM STAGE: HOST AVATARS (LOWER 28%) -->
+        <div class="hosts-stage">
+          <!-- Jorge -->
+          <div class="host-card" id="host-jorge">
+            <img class="host-img" src="../assets/jorge_host.png" alt="Jorge Presentador" />
           </div>
 
-          <div class="illustration-frame">
-            <img src="../assets/zote_img2.jpg" class="story-img" alt="Ilustración escena 3" />
-            <div class="floating-badge">FERROCARRIL PROPIO + COGENERACIÓN</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">EL COLOSO DE XALOSTOC</div>
-            <div class="story-caption">“Su megaplanta en Ecatepec tiene vías de tren propias, cogeneración eléctrica y refinería de glicerina farmacéutica.”</div>
+          <!-- Dalia -->
+          <div class="host-card" id="host-dalia">
+            <img class="host-img" src="../assets/dalia_host.png" alt="Dalia Presentadora" />
           </div>
         </div>
 
-        <div class="story-scene" id="scene-3" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 02 • ECONOMÍA CIRCULAR</span>
-            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
+        <!-- FOOTER PROGRESS -->
+        <div class="footer-box">
+          <div class="omnicanal-bar">
+            <div class="omni-pill">🟢 Spotify Show (sIA)</div>
+            <div class="omni-pill">🎵 TikTok @escucha_sia</div>
+            <div class="omni-pill">🌐 escucha-sia.github.io</div>
           </div>
 
-          <div class="illustration-frame">
-            <img src="../assets/zote_img2.jpg" class="story-img" alt="Ilustración escena 4" />
-            <div class="floating-badge">AUTOSUFICIENCIA INDUSTRIAL</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill"></div>
           </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">ROMA, FOCA Y ROSA VENUS</div>
-            <div class="story-caption">“Fabrican sus propios envases, procesan aceite 1-2-3 y producen detergentes biodegradables Roma y Foca.”</div>
-          </div>
-        </div>
-
-        <div class="story-scene" id="scene-4" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 03 • QUÍMICA DEL ZOTE (1970)</span>
-            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
-          </div>
-
-          <div class="illustration-frame">
-            <img src="../assets/zote_img3.jpg" class="story-img" alt="Ilustración escena 5" />
-            <div class="floating-badge">400 GRAMOS • SEBO + ACEITE DE COCO</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">LA FÓRMULA SECRETA ROSA</div>
-            <div class="story-caption">“Lanzado en 1970: un jabón-zote de 400g con 66% de ácidos grasos, aceite esencial de citronela y blanqueador óptico.”</div>
-          </div>
-        </div>
-
-        <div class="story-scene" id="scene-5" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 03 • BLANQUEADOR ÓPTICO</span>
-            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
-          </div>
-
-          <div class="illustration-frame">
-            <img src="../assets/zote_img3.jpg" class="story-img" alt="Ilustración escena 6" />
-            <div class="floating-badge">EL SECRETO DEL BLANCO PERFECTO</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">FOTONES DE LUZ ULTRAVIOLETA</div>
-            <div class="story-caption">“Sus blanqueadores ópticos absorben radiación UV invisible y la reemiten como luz azul, eliminando el tono amarillento.”</div>
-          </div>
-        </div>
-
-        <div class="story-scene" id="scene-6" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 04 • DE MÉXICO A COREA DEL SUR</span>
-            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
-          </div>
-
-          <div class="illustration-frame">
-            <img src="../assets/zote_img4.jpg" class="story-img" alt="Ilustración escena 7" />
-            <div class="floating-badge">FUROR EN SEÚL Y RECHAZO A WALL STREET</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">0% MARKETING • 100% CULTO GLOBAL</div>
-            <div class="story-caption">“Sin comerciales en TV y sin deudas bancarias, Zote es artículo de culto en Corea del Sur y carnada de pesca en EE.UU.”</div>
-          </div>
-        </div>
-
-        <div class="story-scene" id="scene-7" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 05 • ECOSISTEMA TRI-PLATAFORMA</span>
-            <span class="speaker-pill" style="background: #ec4899;">🎙️ DALIA</span>
-          </div>
-
-          <div class="illustration-frame">
-            <img src="../assets/zote_img5.jpg" class="story-img" alt="Ilustración escena 8" />
-            <div class="floating-badge">SPOTIFY • YOUTUBE • TIKTOK (@escucha_sia)</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">EN TU COCHE O EN VIDEO ILUSTRADO</div>
-            <div class="story-caption">“🚗 Si vas en tu coche escúchanos en Spotify | 📱 Si quieres ver el cuento ilustrado míralo en YouTube y TikTok.”</div>
-          </div>
-        </div>
-
-        <div class="story-scene" id="scene-8" style="display: none;">
-          <div class="top-meta-row">
-            <span class="chapter-tag">CAPÍTULO 05 • sIA JOURNAL</span>
-            <span class="speaker-pill" style="background: #06b6d4;">🎙️ JORGE</span>
-          </div>
-
-          <div class="illustration-frame">
-            <img src="../assets/zote_img5.jpg" class="story-img" alt="Ilustración escena 9" />
-            <div class="floating-badge">ESCUCHA-SIA.GITHUB.IO</div>
-          </div>
-
-          <div class="story-text-box">
-            <div class="story-headline">INVESTIGACIÓN Y FUENTES APA</div>
-            <div class="story-caption">“Lee el análisis químico e industrial con referencias APA en escucha-sia.github.io. ¡Hasta la próxima!”</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-badge">
-        <div class="omnicanal-bar">
-          <span class="omni-pill">🚗 Coche: Spotify (sIA)</span>
-          <span class="omni-pill">📱 Video: YouTube & TikTok (@escucha_sia)</span>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar-fill"></div>
         </div>
       </div>
     </div>
-
-    <script>
-      const SCENES = [{"index": 0, "start": 0.0, "end": 28.85, "speaker": "JORGE", "chapter": 1, "img": "assets/zote_img1.jpg", "tag": "CAPÍTULO 01 • PERALVILLO 1920", "headline": "LOS BAÑOS CORONA DE 1920", "pill": "DE TEPATITLÁN A LA CDMX", "caption": "En 1920, Don Esteban González Padilla y sus hermanos instalaron un cazo de cobre en unos viejos baños de vapor en Peralvillo."}, {"index": 1, "start": 28.85, "end": 55.06, "speaker": "DALIA", "chapter": 1, "img": "assets/zote_img1.jpg", "tag": "CAPÍTULO 01 • EL ORIGEN DEL NOMBRE", "headline": "EL BAUTIZO DEL BARRIO", "pill": "JABÓN DE MANTECA Y TEQUESQUITE", "caption": "La gente del barrio decía: 'Vamos a comprar jabón a La Corona', bautizando para siempre a la fábrica."}, {"index": 2, "start": 55.06, "end": 81.41, "speaker": "JORGE", "chapter": 2, "img": "assets/zote_img2.jpg", "tag": "CAPÍTULO 02 • FORTALEZA ECATEPEC", "headline": "EL COLOSO DE XALOSTOC", "pill": "FERROCARRIL PROPIO + COGENERACIÓN", "caption": "Su megaplanta en Ecatepec tiene vías de tren propias, cogeneración eléctrica y refinería de glicerina farmacéutica."}, {"index": 3, "start": 81.41, "end": 100.7, "speaker": "DALIA", "chapter": 2, "img": "assets/zote_img2.jpg", "tag": "CAPÍTULO 02 • ECONOMÍA CIRCULAR", "headline": "ROMA, FOCA Y ROSA VENUS", "pill": "AUTOSUFICIENCIA INDUSTRIAL", "caption": "Fabrican sus propios envases, procesan aceite 1-2-3 y producen detergentes biodegradables Roma y Foca."}, {"index": 4, "start": 100.7, "end": 125.52, "speaker": "JORGE", "chapter": 3, "img": "assets/zote_img3.jpg", "tag": "CAPÍTULO 03 • QUÍMICA DEL ZOTE (1970)", "headline": "LA FÓRMULA SECRETA ROSA", "pill": "400 GRAMOS • SEBO + ACEITE DE COCO", "caption": "Lanzado en 1970: un jabón-zote de 400g con 66% de ácidos grasos, aceite esencial de citronela y blanqueador óptico."}, {"index": 5, "start": 125.52, "end": 145.63, "speaker": "DALIA", "chapter": 3, "img": "assets/zote_img3.jpg", "tag": "CAPÍTULO 03 • BLANQUEADOR ÓPTICO", "headline": "FOTONES DE LUZ ULTRAVIOLETA", "pill": "EL SECRETO DEL BLANCO PERFECTO", "caption": "Sus blanqueadores ópticos absorben radiación UV invisible y la reemiten como luz azul, eliminando el tono amarillento."}, {"index": 6, "start": 145.63, "end": 176.66, "speaker": "JORGE", "chapter": 4, "img": "assets/zote_img4.jpg", "tag": "CAPÍTULO 04 • DE MÉXICO A COREA DEL SUR", "headline": "0% MARKETING • 100% CULTO GLOBAL", "pill": "FUROR EN SEÚL Y RECHAZO A WALL STREET", "caption": "Sin comerciales en TV y sin deudas bancarias, Zote es artículo de culto en Corea del Sur y carnada de pesca en EE.UU."}, {"index": 7, "start": 176.66, "end": 196.32, "speaker": "DALIA", "chapter": 5, "img": "assets/zote_img5.jpg", "tag": "CAPÍTULO 05 • ECOSISTEMA TRI-PLATAFORMA", "headline": "EN TU COCHE O EN VIDEO ILUSTRADO", "pill": "SPOTIFY • YOUTUBE • TIKTOK (@escucha_sia)", "caption": "🚗 Si vas en tu coche escúchanos en Spotify | 📱 Si quieres ver el cuento ilustrado míralo en YouTube y TikTok."}, {"index": 8, "start": 196.32, "end": 212.06, "speaker": "JORGE", "chapter": 5, "img": "assets/zote_img5.jpg", "tag": "CAPÍTULO 05 • sIA JOURNAL", "headline": "INVESTIGACIÓN Y FUENTES APA", "pill": "ESCUCHA-SIA.GITHUB.IO", "caption": "Lee el análisis químico e industrial con referencias APA en escucha-sia.github.io. ¡Hasta la próxima!"}];
-      const TOTAL_DUR = 215.0;
-
-      function updateTimeline(time) {
-        let activeScene = SCENES[SCENES.length - 1];
-        for (let i = 0; i < SCENES.length; i++) {
-          if (time >= SCENES[i].start && time < SCENES[i].end) {
-            activeScene = SCENES[i];
-            break;
-          }
-        }
-
-        for (let i = 0; i < SCENES.length; i++) {
-          const el = document.getElementById('scene-' + i);
-          if (el) {
-            if (i === activeScene.index) {
-              el.style.display = 'flex';
-              // Subtle Ken Burns zoom on the illustration
-              const img = el.querySelector('.story-img');
-              if (img) {
-                const segProgress = Math.min(1, Math.max(0, (time - activeScene.start) / Math.max(1, activeScene.end - activeScene.start)));
-                const scale = 1.0 + (segProgress * 0.08);
-                img.style.transform = 'scale(' + scale.toFixed(4) + ')';
-              }
-            } else {
-              el.style.display = 'none';
-            }
-          }
-        }
-
-        for (let c = 1; c <= 5; c++) {
-          const chEl = document.getElementById('chap-' + c);
-          if (chEl) {
-            if (c === activeScene.chapter) {
-              chEl.classList.add('active');
-            } else {
-              chEl.classList.remove('active');
-            }
-          }
-        }
-
-        const pct = Math.min(100, Math.max(0, (time / TOTAL_DUR) * 100));
-        document.querySelector('.progress-bar-fill').style.width = pct + '%';
-      }
-
-      window.__hyperframes = {
-        seek: function(t) {
-          updateTimeline(t);
-        }
-      };
-    </script>
-  </div>
   </body>
 </html>

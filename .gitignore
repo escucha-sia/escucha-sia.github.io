@@ -16,6 +16,7 @@ sia_tiktok_flash/.hyperframes/
 sia_tiktok_horror/renders/
 sia_tiktok_horror/.hyperframes/
 sia_tiktok_batch_engine/renders/
-sia_tiktok_batch_engine/assets/
 sia_tiktok_batch_engine/temp_audio*/
+temp_audio_stupy*/
 scratch*
+reels/*.mp4
