@@ -38,7 +38,42 @@
 
 ## 📅 Registro Diario de Actividades, Mejoras e Investigaciones
 
-### 🗓️ 2026-11-08 (Hoy)
+### 🗓️ 2026-11-09 (Hoy)
+
+#### 🔬 Qué Investigamos:
+- **Caso Boeing 737 MAX y el Sistema MCAS (Maneuvering Characteristics Augmentation System):** Investigación forense del fallo de ingeniería aeroespacial y de software más costoso de la aviación comercial. Análisis de la presión competitiva frente al Airbus A320neo, la colocación adelantada y elevada de los motores CFM LEAP-1B sobre un fuselaje de 1967, el momento de cabuceo parásito (*pitch-up torque*) y la decisión de implementar un parche de software silencioso para evitar entrenamientos en simuladores clase D.
+- **Pecados Arquitectónicos del MCAS:**
+  1. *Punto Único de Fallo:* Lectura exclusiva de una única veleta de ángulo de ataque (AoA) sin redundancia ni verificación cruzada con el segundo sensor.
+  2. *Cuadruplicación de Autoridad:* Modificación silenciosa de 0.6° a 2.5° de deflexión por activación del estabilizador de cola (*jackscrew*).
+  3. *Bucle Infinito de Reactivación:* Re-disparo automático cada cinco segundos que anulaba repetidamente el esfuerzo manual de los pilotos hasta agotarlos físicamente.
+- **Evolución del Motor Visual: Cero Avatares y Movimiento Continuo (Full-Height Canvas):** Eliminación definitiva de los avatares anfitriones para liberar el 75% central de la pantalla (1080x1400px) exclusivamente para diagramas técnicos. Implementación de cinemática continua mediante código procedural (SVG + CSS `@keyframes`): turbinas girando, líneas de flujo de aire animadas con `stroke-dashoffset`, veleta AoA oscilante con osciloscopio en tiempo real, tornillo sinfín mecánico en movimiento vertical y altímetro en picada continua.
+
+#### 🛠️ Qué Hicimos:
+1. **Producción Completa de sIA Crónicas #11 (Boeing 737 MAX & MCAS):**
+   - Audio maestro: `sIA_Corp_11_Boeing_737_MAX_MCAS_2026-11-09.mp3` (04:30.7 min / 270.70s) con locutores Jorge y Dalia a 24 kHz estéreo normalizado a -16 LUFS.
+   - Medición milimétrica de timestamps de 20 segmentos narrativos en `scratch/boeing_timestamps.json`.
+   - Creación de los 5 diagramas técnicos en movimiento continuo:
+     - *Acto 1:* Silueta del 737 con turbina CFM LEAP-1B giratoria, líneas de flujo aerodinámico perpetuas y vector de fuerza parásita.
+     - *Acto 2:* Veleta AoA en proa oscilando y trabándose a 32°, sensor derecho ignorado con tacha y monitor de osciloscopio trazando lecturas de stall falsas.
+     - *Acto 3:* Mecanismo de cola con motor eléctrico giratorio, tornillo sinfín (*jackscrew*) helicoidal en traslación continua y estabilizador deflectándose a morro abajo.
+     - *Acto 4:* Palanca de mando (*yoke*) vibrando por *stick shaker* con fuerza humana de 45 kg, anillo de pulso MCAS de 5 segundos y perfil telemétrico de picada con altímetro descendente.
+     - *Acto 5:* Manual FCOM con sello rojo de censura deliberada y boleta de votación comunitaria interactiva para el Capítulo #12 (Nintendo vs Universal, Theranos o DeepSeek).
+2. **Renderizado de Video Vertical Maestro Full-Length:**
+   - Renderizado con GPU HyperFrames a 1080x1920 30fps: `reels/sIA_Storybook_17_Boeing_737_MAX_MCAS.mp4` (04:30.68 min / 40.00 MB).
+   - Generación de póster de alta definición: `reels/sIA_Storybook_17_Boeing_737_MAX_MCAS_poster.jpg`.
+   - Respaldo automático en Spotify (`C:\Users\c_a_c\Music\NoticIAs\Reels`) y Google Drive (`G:\Mi unidad\sIA_Hub\01_Reels_Verticales`).
+3. **Publicación y Ecosistema Web:**
+   - Redacción del artículo de investigación forense completo: `articulos/sia-corp-11-boeing-737-max-mcas-fallo-software-sensores.html` con bibliografía APA 7ª.
+   - Actualización de `index.html` con la tarjeta de video protegida y enlaces a Spotify y TikTok.
+   - Despliegue de subida automática a TikTok Studio (`@escucha_sia`).
+
+#### 🚀 Qué Mejoramos:
+- **Experiencia Inmersiva sin Obstrucciones:** El diagrama técnico ocupa todo el tercio medio y superior con legibilidad cristalina para móviles.
+- **Movimiento Cinético Puro:** Cero cuadros congelados o estáticos; cada segundo presenta movimiento físico (aire, engranajes, ondas de datos, altitud).
+
+---
+
+### 🗓️ 2026-11-08
 
 #### 🔬 Qué Investigamos:
 - **Caso Pascual Boing (Cooperativa Obrera y Envasado Aséptico):** Investigamos la génesis de la huelga obrera de mayo de 1982 en la planta de San Rafael tras la devaluación presidencial, la asesoría de Demetrio Vallejo, el apoyo solidario de artistas plásticos (Rufino Tamayo) y el fallo histórico de la Suprema Corte que culminó en la fundación de la Sociedad Cooperativa Trabajadores de Pascual S.C.L. en 1985.
