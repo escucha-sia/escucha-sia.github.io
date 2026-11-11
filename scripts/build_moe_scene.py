@@ -361,6 +361,11 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     /* ANIMACIONES PROCEDURALES CONTINUAS */
+    svg circle {{
+      transform-box: fill-box;
+      transform-origin: center;
+    }}
+
     @keyframes tokenStream {{
       0% {{ stroke-dashoffset: 400; }}
       100% {{ stroke-dashoffset: 0; }}
@@ -648,31 +653,33 @@ html_content = f"""<!DOCTYPE html>
 
           <!-- TOKEN ENTRANTE (PARTÍCULA ANIMADA) -->
           <g transform="translate(470, 150)">
-            <rect x="-110" y="-30" width="220" height="60" rx="14" fill="#1e1b4b" stroke="#38bdf8" stroke-width="3"/>
+            <rect x="-135" y="-30" width="270" height="60" rx="14" fill="#1e1b4b" stroke="#38bdf8" stroke-width="3"/>
             <text x="0" y="8" text-anchor="middle" fill="#38bdf8" font-family="'Montserrat'" font-size="20" font-weight="900">TOKEN: "def solve()"</text>
             <!-- Línea de flujo hacia el Router -->
             <line x1="0" y1="30" x2="0" y2="120" stroke="#38bdf8" stroke-width="4" stroke-dasharray="10 5" style="animation: tokenStream 1s linear infinite;" />
           </g>
 
-          <!-- NÚCLEO CENTRAL DEL GATING ROUTER (HEXÁGONO PULSANTE) -->
-          <g transform="translate(470, 350)" style="animation: routerPulse 2s ease-in-out infinite;">
-            <polygon points="0,-75 65,-37 65,37 0,75 -65,37 -65,-37" fill="#090d1a" stroke="#a855f7" stroke-width="4" />
-            <circle cx="0" cy="0" r="30" fill="#a855f7" opacity="0.3"/>
-            <text x="0" y="-8" text-anchor="middle" fill="#fff" font-family="'Montserrat'" font-size="16" font-weight="900">GATING</text>
-            <text x="0" y="16" text-anchor="middle" fill="#c084fc" font-family="'JetBrains Mono'" font-size="14" font-weight="bold">ROUTER</text>
-            <text x="0" y="36" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono'" font-size="11">SOFTMAX</text>
-          </g>
-
           <!-- RÁFAGAS LÁSER HACIA LOS EXPERTOS ACTIVADOS -->
           <!-- Línea a Experto 1 (Python) -> ACTIVO -->
-          <line x1="410" y1="350" x2="160" y2="350" stroke="#10b981" stroke-width="5" stroke-dasharray="20 10" style="animation: tokenStream 0.6s linear infinite;"/>
+          <line x1="405" y1="350" x2="260" y2="350" stroke="#10b981" stroke-width="5" stroke-dasharray="20 10" style="animation: tokenStream 0.6s linear infinite;"/>
           
           <!-- Línea a Experto 2 (Lógica Math) -> ACTIVO -->
-          <line x1="440" y1="410" x2="260" y2="580" stroke="#10b981" stroke-width="5" stroke-dasharray="20 10" style="animation: tokenStream 0.7s linear infinite;"/>
+          <line x1="440" y1="410" x2="260" y2="560" stroke="#10b981" stroke-width="5" stroke-dasharray="20 10" style="animation: tokenStream 0.7s linear infinite;"/>
 
           <!-- Líneas a Expertos Inactivos (apagadas/punteadas) -->
-          <line x1="530" y1="350" x2="780" y2="350" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.3"/>
-          <line x1="500" y1="410" x2="680" y2="580" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.3"/>
+          <line x1="535" y1="350" x2="680" y2="350" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.35"/>
+          <line x1="500" y1="410" x2="680" y2="560" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.35"/>
+
+          <!-- NÚCLEO CENTRAL DEL GATING ROUTER (HEXÁGONO PULSANTE CENTRADO) -->
+          <g transform="translate(470, 350)">
+            <g style="animation: routerPulse 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center;">
+              <polygon points="0,-75 65,-37 65,37 0,75 -65,37 -65,-37" fill="#090d1a" stroke="#a855f7" stroke-width="4" />
+              <circle cx="0" cy="0" r="30" fill="#a855f7" opacity="0.3"/>
+              <text x="0" y="-8" text-anchor="middle" fill="#fff" font-family="'Montserrat'" font-size="16" font-weight="900">GATING</text>
+              <text x="0" y="16" text-anchor="middle" fill="#c084fc" font-family="'JetBrains Mono'" font-size="14" font-weight="bold">ROUTER</text>
+              <text x="0" y="36" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono'" font-size="11">SOFTMAX</text>
+            </g>
+          </g>
 
           <!-- PODS DE EXPERTOS ESPECIALIZADOS -->
           <!-- EXPERTO 1: PYTHON & CODE (ENCENDIDO EN VERDE) -->
@@ -790,18 +797,17 @@ html_content = f"""<!DOCTYPE html>
 
             <!-- Explicación visual de RoPE desacoplado -->
             <g transform="translate(40, 100)">
-              <rect width="740" height="90" rx="10" fill="#090d1a" stroke="#38bdf8" stroke-width="1.5"/>
-              <text x="25" y="35" fill="#38bdf8" font-family="'Montserrat'" font-size="16" font-weight="bold">DESACOPLAMIENTO DE POSICIÓN ROTACIONAL (RoPE)</text>
-              <text x="25" y="65" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">La posición de los tokens se procesa en un canal independiente de baja dimensión, permitiendo comprimir el contenido semántico sin perder la noción del orden de las palabras.</text>
+              <rect width="740" height="105" rx="10" fill="#090d1a" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="25" y="34" fill="#38bdf8" font-family="'Montserrat'" font-size="16" font-weight="bold">DESACOPLAMIENTO DE POSICIÓN ROTACIONAL (RoPE)</text>
+              <text x="25" y="62" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">La posición de los tokens se procesa en un canal independiente de baja dimensión,</text>
+              <text x="25" y="86" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">comprimiendo el contenido semántico sin perder la noción del orden de las palabras.</text>
             </g>
 
             <!-- Ticker de Ahorro VRAM en Concurrencia -->
-            <g transform="translate(40, 220)">
+            <g transform="translate(40, 235)">
               <text x="0" y="30" fill="#fff" font-family="'Montserrat'" font-size="20" font-weight="bold">Ahorro para 100 Usuarios Simultáneos:</text>
-              <div style="display:flex;">
-                <text x="0" y="70" fill="#f87171" font-family="'JetBrains Mono'" font-size="16">MHA Estándar: 1,280 GB VRAM (16 GPUs H100)</text>
-                <text x="0" y="105" fill="#10b981" font-family="'JetBrains Mono'" font-size="16" font-weight="bold">DeepSeek MLA: 85 GB VRAM (1 Sola GPU H100 / A100)</text>
-              </div>
+              <text x="0" y="70" fill="#f87171" font-family="'JetBrains Mono'" font-size="16">MHA Estándar: 1,280 GB VRAM (16 GPUs H100)</text>
+              <text x="0" y="105" fill="#10b981" font-family="'JetBrains Mono'" font-size="16" font-weight="bold">DeepSeek MLA: 85 GB VRAM (1 Sola GPU H100 / A100)</text>
             </g>
 
             <rect x="40" y="380" width="740" height="150" rx="12" fill="rgba(16, 185, 129, 0.12)" stroke="#10b981" stroke-width="2"/>
@@ -824,6 +830,11 @@ html_content = f"""<!DOCTYPE html>
       </div>
       <div class="canvas-viewport">
         <svg viewBox="0 0 940 1180" width="940" height="1180" style="background:#02050e;">
+          <defs>
+            <clipPath id="dualPipeClip">
+              <rect x="0" y="0" width="740" height="45" rx="8"/>
+            </clipPath>
+          </defs>
           <text x="470" y="65" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono'" font-size="16" letter-spacing="3">EL EFECTO DEEPSEEK EN LOS MERCADOS GLOBALES</text>
 
           <!-- GRÁFICA DE COLAPSO BURSÁTIL DE NVIDIA (ENERO 2025) -->
@@ -862,30 +873,36 @@ html_content = f"""<!DOCTYPE html>
             <g transform="translate(40, 130)">
               <!-- Timeline Forward (Compute) -->
               <rect x="0" y="0" width="740" height="45" rx="8" fill="#090d1a" stroke="#38bdf8" stroke-width="1.5"/>
-              <g style="animation: dualPipeLoop 2s linear infinite;">
-                <rect x="20" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
-                <text x="85" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
+              <g clip-path="url(#dualPipeClip)">
+                <g style="animation: dualPipeLoop 2s linear infinite;">
+                  <rect x="20" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
+                  <text x="85" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
 
-                <rect x="180" y="6" width="130" height="33" rx="6" fill="#a855f7"/>
-                <text x="245" y="27" text-anchor="middle" fill="#fff" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">ALL-TO-ALL</text>
+                  <rect x="180" y="6" width="130" height="33" rx="6" fill="#a855f7"/>
+                  <text x="245" y="27" text-anchor="middle" fill="#fff" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">ALL-TO-ALL</text>
 
-                <rect x="340" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
-                <text x="405" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
+                  <rect x="340" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
+                  <text x="405" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
 
-                <rect x="500" y="6" width="130" height="33" rx="6" fill="#a855f7"/>
-                <text x="565" y="27" text-anchor="middle" fill="#fff" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">ALL-TO-ALL</text>
+                  <rect x="500" y="6" width="130" height="33" rx="6" fill="#a855f7"/>
+                  <text x="565" y="27" text-anchor="middle" fill="#fff" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">ALL-TO-ALL</text>
 
-                <rect x="660" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
-                <text x="725" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
+                  <rect x="660" y="6" width="130" height="33" rx="6" fill="#38bdf8"/>
+                  <text x="725" y="27" text-anchor="middle" fill="#000" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">COMPUTE FWD</text>
+
+                  <rect x="820" y="6" width="130" height="33" rx="6" fill="#a855f7"/>
+                  <text x="885" y="27" text-anchor="middle" fill="#fff" font-family="'JetBrains Mono'" font-size="12" font-weight="bold">ALL-TO-ALL</text>
+                </g>
               </g>
             </g>
 
             <!-- Comparativa FP8 vs FP16 -->
-            <g transform="translate(40, 220)">
-              <rect width="740" height="120" rx="12" fill="#090d1a" stroke="#10b981" stroke-width="1.5"/>
-              <text x="25" y="35" fill="#10b981" font-family="'Montserrat'" font-size="17" font-weight="bold">FORMATO NATIVO FP8 (E4M3): 2X DE ANCHO DE BANDA</text>
-              <text x="25" y="65" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">Los pesos y activaciones se calculan en 8 bits utilizando factores de escala por bloques, reduciendo a la mitad el tráfico en los cables de red sin perder precisión matemática de razonamiento.</text>
-              <text x="25" y="98" fill="#fff" font-family="'JetBrains Mono'" font-size="14" font-weight="bold">Infraestructura: 2,048 GPUs H800 &bull; Costo total: $5.58M USD</text>
+            <g transform="translate(40, 210)">
+              <rect width="740" height="135" rx="12" fill="#090d1a" stroke="#10b981" stroke-width="1.5"/>
+              <text x="25" y="34" fill="#10b981" font-family="'Montserrat'" font-size="17" font-weight="bold">FORMATO NATIVO FP8 (E4M3): 2X DE ANCHO DE BANDA</text>
+              <text x="25" y="62" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">Los pesos se calculan en 8 bits usando factores de escala por bloque de 1x128,</text>
+              <text x="25" y="86" fill="#94a3b8" font-family="'Space Grotesk'" font-size="15">reduciendo a la mitad el tráfico de red sin perder precisión matemática.</text>
+              <text x="25" y="116" fill="#fff" font-family="'JetBrains Mono'" font-size="14" font-weight="bold">Infraestructura: 2,048 GPUs H800 &bull; Costo total: $5.58M USD</text>
             </g>
 
             <rect x="40" y="375" width="740" height="160" rx="12" fill="rgba(244, 63, 94, 0.12)" stroke="#f43f5e" stroke-width="2"/>
