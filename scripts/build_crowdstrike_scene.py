@@ -1,0 +1,750 @@
+import json
+import math
+import sys
+from pathlib import Path
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
+
+ROOT_DIR = Path(r"c:\Carlos\noticias_podcast")
+SCRATCH_DIR = ROOT_DIR / "scratch"
+TIMESTAMPS_FILE = SCRATCH_DIR / "crowdstrike_timestamps.json"
+OUT_HTML = ROOT_DIR / "sia_tiktok_batch_engine" / "compositions" / "crowdstrike_scene.html"
+OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
+
+with open(TIMESTAMPS_FILE, "r", encoding="utf-8") as f:
+    timestamps = json.load(f)
+
+TOTAL_DUR = 231.79
+
+# Group segments by Act
+acts = {1: [], 2: [], 3: [], 4: [], 5: []}
+for seg in timestamps:
+    acts[seg["act"]].append(seg)
+
+act_ranges = {}
+for act_num, segs in acts.items():
+    act_ranges[act_num] = {
+        "start": segs[0]["start"],
+        "end": segs[-1]["end"],
+        "dur": segs[-1]["end"] - segs[0]["start"]
+    }
+
+print("Act ranges:")
+for k, v in act_ranges.items():
+    print(f"  Act {k}: {v['start']:.2f}s -> {v['end']:.2f}s ({v['dur']:.2f}s)")
+
+def build_card_keyframe(act_num, start, end, total):
+    p_start = (start / total) * 100.0
+    p_end = (end / total) * 100.0
+    p_fade_in = min(100.0, p_start + 0.3)
+    p_fade_out = max(0.0, p_end - 0.3)
+    
+    inactive = "opacity: 0; transform: scale(0.96) translateY(25px); pointer-events: none; z-index: 1;"
+    active = "opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; z-index: 10;"
+    
+    if act_num == 1:
+        return f"""
+    @keyframes cardAnim1 {{
+      0%, {p_fade_out:.3f}% {{ {active} }}
+      {p_end:.3f}%, 100% {{ {inactive} }}
+    }}"""
+    elif act_num == 5:
+        return f"""
+    @keyframes cardAnim5 {{
+      0%, {max(0.0, p_start - 0.2):.3f}% {{ {inactive} }}
+      {p_fade_in:.3f}%, 100% {{ {active} }}
+    }}"""
+    else:
+        return f"""
+    @keyframes cardAnim{act_num} {{
+      0%, {max(0.0, p_start - 0.2):.3f}% {{ {inactive} }}
+      {p_fade_in:.3f}%, {p_fade_out:.3f}% {{ {active} }}
+      {p_end:.3f}%, 100% {{ {inactive} }}
+    }}"""
+
+def build_pill_keyframe(act_num, start, end, total, active_bg, active_border):
+    p_start = (start / total) * 100.0
+    p_end = (end / total) * 100.0
+    p_in = min(100.0, p_start + 0.3)
+    p_out = max(0.0, p_end - 0.3)
+    
+    inactive = "background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #94a3b8; transform: scale(1);"
+    active = f"background: {active_bg}; border-color: {active_border}; color: #ffffff; transform: scale(1.05); box-shadow: 0 0 20px {active_border};"
+    
+    if act_num == 1:
+        return f"""
+    @keyframes pillAnim1 {{
+      0%, {p_out:.3f}% {{ {active} }}
+      {p_end:.3f}%, 100% {{ {inactive} }}
+    }}"""
+    elif act_num == 5:
+        return f"""
+    @keyframes pillAnim5 {{
+      0%, {max(0.0, p_start - 0.2):.3f}% {{ {inactive} }}
+      {p_in:.3f}%, 100% {{ {active} }}
+    }}"""
+    else:
+        return f"""
+    @keyframes pillAnim{act_num} {{
+      0%, {max(0.0, p_start - 0.2):.3f}% {{ {inactive} }}
+      {p_in:.3f}%, {p_out:.3f}% {{ {active} }}
+      {p_end:.3f}%, 100% {{ {inactive} }}
+    }}"""
+
+kf_cards = "\n".join([
+    build_card_keyframe(i, act_ranges[i]["start"], act_ranges[i]["end"], TOTAL_DUR)
+    for i in range(1, 6)
+])
+
+kf_pills = "\n".join([
+    build_pill_keyframe(1, act_ranges[1]["start"], act_ranges[1]["end"], TOTAL_DUR, "#0284c7", "#38bdf8"),
+    build_pill_keyframe(2, act_ranges[2]["start"], act_ranges[2]["end"], TOTAL_DUR, "#7c3aed", "#a78bfa"),
+    build_pill_keyframe(3, act_ranges[3]["start"], act_ranges[3]["end"], TOTAL_DUR, "#f59e0b", "#fbbf24"),
+    build_pill_keyframe(4, act_ranges[4]["start"], act_ranges[4]["end"], TOTAL_DUR, "#ef4444", "#f87171"),
+    build_pill_keyframe(5, act_ranges[5]["start"], act_ranges[5]["end"], TOTAL_DUR, "#10b981", "#34d399"),
+])
+
+html_content = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>sIA Sec #04 - CrowdStrike BSOD Kernel Crash</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@700;800;900&display=swap');
+    
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    
+    body {{
+      background: #020617;
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      position: relative;
+    }}
+
+    .halftone-overlay {{
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(#0284c7 1.5px, transparent 1.5px);
+      background-size: 26px 26px;
+      opacity: 0.15;
+      z-index: 1;
+      pointer-events: none;
+    }}
+    .cyber-scanlines {{
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(2, 132, 199, 0.04) 0px,
+        rgba(2, 132, 199, 0.04) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      z-index: 2;
+      pointer-events: none;
+    }}
+    .bg-ticker {{
+      position: absolute;
+      width: 120%;
+      left: -10%;
+      top: 22%;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 82px;
+      color: rgba(2, 132, 199, 0.05);
+      text-transform: uppercase;
+      transform: rotate(-12deg);
+      z-index: 0;
+      line-height: 1.1;
+      white-space: nowrap;
+      pointer-events: none;
+    }}
+
+    .reel-wrapper {{
+      position: relative;
+      z-index: 10;
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 65px 50px 80px 50px;
+    }}
+
+    /* HEADER */
+    .header-box {{ display: flex; flex-direction: column; gap: 14px; }}
+    .brand-row {{ display: flex; align-items: center; justify-content: space-between; }}
+    .brand-pill {{
+      background: #0284c7;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 24px;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 25px rgba(2, 132, 199, 0.6);
+      border: 2px solid #ffffff;
+    }}
+    .tag-pill {{
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 20px;
+      padding: 8px 20px;
+      border-radius: 12px;
+      border: 2px solid #0284c7;
+    }}
+    .chapters-bar {{ display: flex; gap: 8px; width: 100%; margin-top: 10px; }}
+    .chapter-pill {{
+      flex: 1;
+      padding: 12px 4px;
+      border-radius: 12px;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.3s;
+    }}
+
+    #chap-1 {{ animation: pillAnim1 {TOTAL_DUR:.1f}s linear forwards; }}
+    #chap-2 {{ animation: pillAnim2 {TOTAL_DUR:.1f}s linear forwards; }}
+    #chap-3 {{ animation: pillAnim3 {TOTAL_DUR:.1f}s linear forwards; }}
+    #chap-4 {{ animation: pillAnim4 {TOTAL_DUR:.1f}s linear forwards; }}
+    #chap-5 {{ animation: pillAnim5 {TOTAL_DUR:.1f}s linear forwards; }}
+
+    /* TARJETA BLANCA DE ALTO IMPACTO (FORMATO XZ UTILS) */
+    .main-card-container {{
+      position: relative;
+      width: 100%;
+      min-height: 1320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }}
+
+    .scene-card {{
+      position: absolute;
+      inset: 0;
+      background: #ffffff;
+      border-radius: 36px;
+      padding: 36px 34px;
+      color: #0f172a;
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(2, 132, 199, 0.25);
+      border: 6px solid #0284c7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }}
+
+    #card-1 {{ animation: cardAnim1 {TOTAL_DUR:.1f}s linear forwards; border-color: #0284c7; }}
+    #card-2 {{ animation: cardAnim2 {TOTAL_DUR:.1f}s linear forwards; border-color: #7c3aed; }}
+    #card-3 {{ animation: cardAnim3 {TOTAL_DUR:.1f}s linear forwards; border-color: #f59e0b; }}
+    #card-4 {{ animation: cardAnim4 {TOTAL_DUR:.1f}s linear forwards; border-color: #ef4444; }}
+    #card-5 {{ animation: cardAnim5 {TOTAL_DUR:.1f}s linear forwards; border-color: #10b981; }}
+
+    .myth-tag {{
+      display: inline-block;
+      align-self: flex-start;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 900;
+      font-size: 20px;
+      padding: 6px 18px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }}
+    .headline-black {{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 46px;
+      line-height: 1.08;
+      letter-spacing: -1px;
+      color: #09090f;
+      margin-top: 8px;
+    }}
+
+    /* VENTANA TÉCNICA CENTRAL (540px de alto - 100% ANCHO EXPANDIDO) */
+    .figure-container {{
+      width: 100%;
+      height: 540px;
+      border-radius: 24px;
+      background: #0f172a;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.7);
+      border: 3px solid #e2e8f0;
+      padding: 10px;
+    }}
+
+    .punch-pill {{
+      display: inline-block;
+      align-self: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      padding: 10px 26px;
+      border-radius: 16px;
+      line-height: 1.2;
+      border: 3px solid #000;
+      text-align: center;
+    }}
+    .metric-box {{
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: #f8fafc;
+      border: 3px dashed #94a3b8;
+      border-radius: 18px;
+      padding: 18px;
+    }}
+
+    /* FOOTER */
+    .footer-badge {{ display: flex; flex-direction: column; align-items: center; gap: 14px; }}
+    .omnicanal-bar {{ display: flex; gap: 16px; justify-content: center; width: 100%; }}
+    .omni-pill {{
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 19px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.2);
+    }}
+
+    .progress-bar-container {{
+      width: 100%;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }}
+    @keyframes progressFillAnim {{
+      0% {{ width: 0%; }}
+      100% {{ width: 100%; }}
+    }}
+    .progress-bar-fill {{
+      height: 100%;
+      background: linear-gradient(90deg, #0284c7 0%, #7c3aed 30%, #f59e0b 60%, #ef4444 85%, #10b981 100%);
+      width: 0%;
+      animation: progressFillAnim {TOTAL_DUR:.1f}s linear forwards;
+    }}
+
+    /* ANIMACIONES */
+    @keyframes pulseGlow {{
+      0%, 100% {{ opacity: 0.8; filter: drop-shadow(0 0 10px #38bdf8); }}
+      50% {{ opacity: 1; filter: drop-shadow(0 0 25px #0284c7); }}
+    }}
+    @keyframes laserScan {{
+      0% {{ transform: translateY(0px); opacity: 0.2; }}
+      50% {{ opacity: 0.8; }}
+      100% {{ transform: translateY(500px); opacity: 0.2; }}
+    }}
+    @keyframes blinkAlert {{
+      0%, 100% {{ opacity: 1; }}
+      50% {{ opacity: 0.3; }}
+    }}
+    @keyframes rotateRing {{
+      0% {{ transform: rotate(0deg); }}
+      100% {{ transform: rotate(360deg); }}
+    }}
+    @keyframes pointerStrobe {{
+      0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 8px #ef4444); }}
+      50% {{ transform: scale(1.08); filter: drop-shadow(0 0 24px #ff0044); }}
+    }}
+
+    {kf_cards}
+    {kf_pills}
+  </style>
+</head>
+<body>
+  <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
+    <div class="halftone-overlay"></div>
+    <div class="cyber-scanlines"></div>
+    <div class="bg-ticker">CROWDSTRIKE &bull; CSAGENT.SYS &bull; RING 0 &bull; KERNEL PANIC &bull; BSOD &bull; 0x9c NULL POINTER &bull; CHANNEL 291</div>
+
+    <div class="reel-wrapper">
+      <!-- HEADER -->
+      <div class="header-box">
+        <div class="brand-row">
+          <div class="brand-pill">🛡️ sIA Sec #04</div>
+          <div class="tag-pill">CIBERSEGURIDAD FORENSE</div>
+        </div>
+
+        <div class="chapters-bar">
+          <div class="chapter-pill" id="chap-1">01 BSOD Global</div>
+          <div class="chapter-pill" id="chap-2">02 Ring 0 vs 3</div>
+          <div class="chapter-pill" id="chap-3">03 Archivo 291</div>
+          <div class="chapter-pill" id="chap-4">04 Puntero 0x9c</div>
+          <div class="chapter-pill" id="chap-5">05 Gran Debate</div>
+        </div>
+      </div>
+
+      <!-- MAIN CARDS CONTAINER -->
+      <div class="main-card-container">
+        
+        <!-- CARD 1: EL VIERNES DEL FIN DEL MUNDO (BSOD) -->
+        <div class="scene-card" id="card-1">
+          <div>
+            <div class="myth-tag" style="background: #e0f2fe; color: #0284c7;">19 DE JULIO &bull; EL GRAN CRASH</div>
+            <div class="headline-black">8.5 MILLONES DE COMPUTADORAS A PANTALLA AZUL</div>
+          </div>
+
+          <!-- Figure 1: Monitor BSOD Widescreen Expandido (860x480) -->
+          <div class="figure-container" style="background: #0078d7;">
+            <div style="position: absolute; width: 100%; height: 4px; background: rgba(255,255,255,0.7); box-shadow: 0 0 20px #fff; animation: laserScan 2.5s ease-in-out infinite;"></div>
+            
+            <svg width="100%" height="100%" viewBox="0 0 860 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sad face icon -->
+              <text x="60" y="110" font-family="Montserrat" font-weight="900" font-size="105" fill="#ffffff">:(</text>
+              
+              <!-- Error message text -->
+              <text x="60" y="170" font-family="Space Grotesk" font-weight="700" font-size="28" fill="#ffffff">Se ha producido un problema en su PC y necesita reiniciarse.</text>
+              <text x="60" y="205" font-family="Space Grotesk" font-weight="500" font-size="22" fill="rgba(255,255,255,0.85)">Solo estamos recopilando información sobre el error (100% completo)</text>
+              
+              <!-- QR Code Container -->
+              <g transform="translate(60, 240)">
+                <rect x="0" y="0" width="130" height="130" rx="10" fill="#ffffff"/>
+                <!-- QR blocks -->
+                <rect x="12" y="12" width="38" height="38" fill="#0078d7"/>
+                <rect x="20" y="20" width="22" height="22" fill="#ffffff"/>
+                <rect x="80" y="12" width="38" height="38" fill="#0078d7"/>
+                <rect x="88" y="20" width="22" height="22" fill="#ffffff"/>
+                <rect x="12" y="80" width="38" height="38" fill="#0078d7"/>
+                <rect x="20" y="88" width="22" height="22" fill="#ffffff"/>
+                <circle cx="85" cy="85" r="9" fill="#0078d7"/>
+                <rect x="65" y="60" width="16" height="16" fill="#0078d7"/>
+                <rect x="100" y="95" width="16" height="16" fill="#0078d7"/>
+              </g>
+
+              <!-- Technical fault details -->
+              <g transform="translate(220, 245)">
+                <text x="0" y="25" font-family="JetBrains Mono" font-weight="800" font-size="20" fill="#ffffff">Para más información sobre este problema y posibles correcciones:</text>
+                <text x="0" y="58" font-family="JetBrains Mono" font-weight="900" font-size="22" fill="#fef08a">Código de detención: PAGE_FAULT_IN_NONPAGED_AREA</text>
+                <text x="0" y="90" font-family="JetBrains Mono" font-weight="900" font-size="22" fill="#ffffff">Lo que falló: csagent.sys</text>
+                <text x="0" y="120" font-family="JetBrains Mono" font-weight="800" font-size="19" fill="#a7f3d0">Vendor: CrowdStrike Falcon Sensor (Boot-Start Driver)</text>
+              </g>
+
+              <!-- Outage status banner -->
+              <rect x="50" y="405" width="760" height="48" rx="10" fill="rgba(0,0,0,0.4)" stroke="#ef4444" stroke-width="2"/>
+              <circle cx="80" cy="429" r="8" fill="#ef4444" style="animation: blinkAlert 1s infinite;"/>
+              <text x="105" y="436" font-family="JetBrains Mono" font-weight="900" font-size="20" fill="#ffffff">ALERTA ROJA: 8,500 VUELOS CANCELADOS &bull; BANCOS Y HOSPITALES A OSCURAS</text>
+            </svg>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #ffffff; letter-spacing: 1px; margin-top: 2px;">SIN HACKERS &bull; SIN RANSOMWARE &bull; SOLO UN SCRIPT EN RING 0</div>
+          </div>
+
+          <div class="punch-pill" style="background: #e0f2fe; color: #0284c7; border-color: #0284c7;">UN ARCHIVO DE 40 KB APAGÓ AL MUNDO</div>
+
+          <div class="metric-box" style="border-color: #0284c7; background: #f0f9ff;">
+            <div style="font-size: 24px; font-weight: 900; color: #0369a1;">📉 COSTO GLOBAL: +$10,000 MILLONES USD</div>
+            <div style="font-size: 19px; font-weight: 700; color: #334155;">Paralizó terminales de United, Delta, cajeros automáticos y sistemas de salud.</div>
+          </div>
+        </div>
+
+        <!-- CARD 2: LA MURALLA DE LA CPU: RING 3 VS RING 0 -->
+        <div class="scene-card" id="card-2">
+          <div>
+            <div class="myth-tag" style="background: #f3e8ff; color: #7c3aed;">ARQUITECTURA DE HARDWARE x86</div>
+            <div class="headline-black">LOS ANILLOS DE PRIVILEGIO DE LA CPU</div>
+          </div>
+
+          <!-- Figure 2: Concéntricos Widescreen (860x480) -->
+          <div class="figure-container" style="background: #0f172a;">
+            <svg width="100%" height="100%" viewBox="0 0 860 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rings centered at (340, 240) -->
+              <g transform="translate(340, 240)">
+                <!-- Ring 3 Outer -->
+                <circle cx="0" cy="0" r="200" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8 6" opacity="0.6"/>
+                <circle cx="0" cy="0" r="160" fill="rgba(56, 189, 248, 0.08)" stroke="#0284c7" stroke-width="3"/>
+
+                <!-- Ring 1 / 2 Drivers -->
+                <circle cx="0" cy="0" r="115" stroke="#a855f7" stroke-width="3" stroke-dasharray="5 5" fill="rgba(168, 85, 247, 0.06)"/>
+
+                <!-- Ring 0 Core -->
+                <circle cx="0" cy="0" r="75" fill="#ef4444" stroke="#fca5a5" stroke-width="4" style="animation: pulseGlow 2s infinite;"/>
+                <circle cx="0" cy="0" r="30" fill="#7f1d1d"/>
+                <text x="0" y="-5" font-family="Montserrat" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">RING 0</text>
+                <text x="0" y="16" font-family="JetBrains Mono" font-weight="900" font-size="14" fill="#fecaca" text-anchor="middle">KERNEL</text>
+
+                <!-- Rotating scanner beam inside ring 3 -->
+                <g style="animation: rotateRing 6s linear infinite; transform-origin: 0px 0px;">
+                  <line x1="0" y1="0" x2="160" y2="0" stroke="#38bdf8" stroke-width="2" opacity="0.7"/>
+                </g>
+              </g>
+
+              <!-- Left Side Labels: Ring 3 -->
+              <g transform="translate(60, 45)">
+                <rect x="0" y="0" width="560" height="42" rx="8" fill="rgba(56, 189, 248, 0.15)" stroke="#0284c7" stroke-width="2"/>
+                <text x="280" y="27" font-family="Montserrat" font-weight="900" font-size="18" fill="#38bdf8" text-anchor="middle">RING 3: ESPACIO DE USUARIO (CON RED DE SEGURIDAD)</text>
+              </g>
+
+              <!-- Right Side Details Card -->
+              <g transform="translate(560, 110)">
+                <!-- User Space Box -->
+                <rect x="0" y="0" width="260" height="110" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                <text x="130" y="30" font-family="Montserrat" font-weight="900" font-size="16" fill="#38bdf8" text-anchor="middle">MODO USUARIO (RING 3)</text>
+                <text x="130" y="55" font-family="JetBrains Mono" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">Chrome &bull; Spotify &bull; Word</text>
+                <text x="130" y="85" font-family="Space Grotesk" font-weight="700" font-size="13" fill="#86efac" text-anchor="middle">✓ Si falla, el SO sigue vivo</text>
+
+                <!-- Kernel Space Box -->
+                <rect x="0" y="135" width="260" height="160" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+                <text x="130" y="165" font-family="Montserrat" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">MODO NÚCLEO (RING 0)</text>
+                <text x="130" y="195" font-family="JetBrains Mono" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle">csagent.sys (Falcon)</text>
+                <text x="130" y="225" font-family="JetBrains Mono" font-weight="700" font-size="12" fill="#fef08a" text-anchor="middle">Acceso irrestricto a RAM/CPU</text>
+                <text x="130" y="260" font-family="Space Grotesk" font-weight="800" font-size="13" fill="#f87171" text-anchor="middle">⚠️ UN ERROR CONGELA EL SILICIO</text>
+              </g>
+
+              <!-- Bottom rule banner -->
+              <rect x="50" y="420" width="760" height="42" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+              <text x="430" y="447" font-family="JetBrains Mono" font-weight="900" font-size="17" fill="#fca5a5" text-anchor="middle">EN RING 0 NO HAY BARRERAS: NINGÚN PROCESO PUEDE SALVAR EL SISTEMA</text>
+            </svg>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #c084fc; letter-spacing: 1px; margin-top: 2px;">CROWDSTRIKE OPERABA CON EL MÁXIMO PRIVILEGIO DE HARDWARE</div>
+          </div>
+
+          <div class="punch-pill" style="background: #f3e8ff; color: #7c3aed; border-color: #7c3aed;">EL PODER ABSOLUTO DE RING CERO</div>
+
+          <div class="metric-box" style="border-color: #7c3aed; background: #faf5ff;">
+            <div style="font-size: 24px; font-weight: 900; color: #6b21a8;">⚡ SIN RED DE PROTECCIÓN</div>
+            <div style="font-size: 19px; font-weight: 700; color: #334155;">En Ring 3 una app se cierra. En Ring 0 un puntero nulo congela el silicio.</div>
+          </div>
+        </div>
+
+        <!-- CARD 3: EL ARCHIVO FANTASMA 291 -->
+        <div class="scene-card" id="card-3">
+          <div>
+            <div class="myth-tag" style="background: #fef3c7; color: #d97706;">EL SCRIPT DE LA MADRUGADA</div>
+            <div class="headline-black">CHANNEL FILE 291: LA RANURA FANTASMA</div>
+          </div>
+
+          <!-- Figure 3: Channel file array Widescreen (860x480) -->
+          <div class="figure-container" style="background: #0f172a;">
+            <svg width="100%" height="100%" viewBox="0 0 860 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Top header: File name -->
+              <rect x="50" y="25" width="760" height="52" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+              <text x="80" y="58" font-family="JetBrains Mono" font-weight="900" font-size="22" fill="#fbbf24">📄 C-00000291*.sys (40.4 KB)</text>
+              <text x="560" y="58" font-family="JetBrains Mono" font-weight="800" font-size="18" fill="#94a3b8">PUBLICADO: 04:09 UTC &bull; SIN CANARIO</text>
+
+              <text x="60" y="115" font-family="Montserrat" font-weight="900" font-size="19" fill="#ffffff">EL PARSER DE C++ ESPERABA 21 CAMPOS DE ENTRADA EN MEMORIA:</text>
+
+              <!-- Array slots: 7 columns x 3 rows = 21 slots -->
+              <g transform="translate(60, 135)">
+                <!-- Row 1: Slots 1 to 7 -->
+                <rect x="0" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="49" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 01</text>
+                <rect x="106" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="155" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 02</text>
+                <rect x="212" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="261" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 03</text>
+                <rect x="318" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="367" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 04</text>
+                <rect x="424" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="473" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 05</text>
+                <rect x="530" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="579" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 06</text>
+                <rect x="636" y="0" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="685" y="28" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 07</text>
+
+                <!-- Row 2: Slots 8 to 14 -->
+                <rect x="0" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="49" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 08</text>
+                <rect x="106" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="155" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 09</text>
+                <rect x="212" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="261" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 10</text>
+                <rect x="318" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="367" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 11</text>
+                <rect x="424" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="473" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 12</text>
+                <rect x="530" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="579" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 13</text>
+                <rect x="636" y="56" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="685" y="84" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 14</text>
+
+                <!-- Row 3: Slots 15 to 21 -->
+                <rect x="0" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="49" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 15</text>
+                <rect x="106" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="155" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 16</text>
+                <rect x="212" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="261" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 17</text>
+                <rect x="318" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="367" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 18</text>
+                <rect x="424" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="473" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 19</text>
+                <rect x="530" y="112" width="98" height="46" rx="6" fill="#065f46" stroke="#34d399" stroke-width="2"/><text x="579" y="140" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#fff" text-anchor="middle">Slot 20</text>
+
+                <!-- SLOT 21: MISSING / NULL WITH FLASHING RED ALERT -->
+                <rect x="636" y="112" width="98" height="46" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="3" style="animation: pointerStrobe 1.2s infinite;"/>
+                <text x="685" y="135" font-family="JetBrains Mono" font-weight="900" font-size="13" fill="#fca5a5" text-anchor="middle">SLOT 21</text>
+                <text x="685" y="150" font-family="JetBrains Mono" font-weight="900" font-size="11" fill="#fef08a" text-anchor="middle">NULL (0x0)</text>
+              </g>
+
+              <!-- Warning Banner -->
+              <rect x="50" y="380" width="760" height="48" rx="8" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+              <text x="430" y="410" font-family="JetBrains Mono" font-weight="900" font-size="18" fill="#fef08a" text-anchor="middle">REGLA DE ORO DE DEVOPS ROTA: JAMÁS ACTUALIZAR PRODUCCIÓN UN VIERNES</text>
+            </svg>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #fde047; letter-spacing: 1px; margin-top: 2px;">EL ARCHIVO SOLO CONTENÍA 20 RANURAS &bull; LA RANURA 21 DEVOLVIÓ NULL</div>
+          </div>
+
+          <div class="punch-pill" style="background: #fef3c7; color: #d97706; border-color: #d97706;">LA RANURA 21 NUNCA EXISTIÓ</div>
+
+          <div class="metric-box" style="border-color: #d97706; background: #fffbeb;">
+            <div style="font-size: 24px; font-weight: 900; color: #b45309;">⚠️ ERROR DE VALIDACIÓN DE ENTRADA</div>
+            <div style="font-size: 19px; font-weight: 700; color: #334155;">El validador de CrowdStrike dio por bueno el archivo sin verificar los 21 campos.</div>
+          </div>
+        </div>
+
+        <!-- CARD 4: EL CHOQUE DEL PUNTERO NULO 0x9c -->
+        <div class="scene-card" id="card-4">
+          <div>
+            <div class="myth-tag" style="background: #fee2e2; color: #ef4444;">LA AUTOPSIA DEL CRASH</div>
+            <div class="headline-black">PUNTERO NULO: OFFSET 0x9c DESREFERENCIADO</div>
+          </div>
+
+          <!-- Figure 4: Pointer arithmetic Widescreen (860x480) -->
+          <div class="figure-container" style="background: #0f172a;">
+            <svg width="100%" height="100%" viewBox="0 0 860 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Memory math equation -->
+              <rect x="50" y="25" width="760" height="70" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+              <text x="430" y="55" font-family="JetBrains Mono" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">
+                PTR_BASE (<tspan fill="#ef4444">0x00000000</tspan>) + OFFSET (<tspan fill="#fbbf24">0x9c</tspan>)
+              </text>
+              <text x="430" y="82" font-family="JetBrains Mono" font-weight="900" font-size="18" fill="#fca5a5" text-anchor="middle">
+                = INTENTO ILEGAL DE LECTURA EN: 0x0000009c
+              </text>
+
+              <!-- Main diagram: Virtual Memory table vs CPU Crash -->
+              <g transform="translate(60, 115)">
+                <!-- Virtual Memory Page Table -->
+                <rect x="0" y="0" width="340" height="250" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+                <text x="170" y="32" font-family="Montserrat" font-weight="900" font-size="16" fill="#94a3b8" text-anchor="middle">MAPA DE MEMORIA VIRTUAL DEL KERNEL</text>
+                <line x1="20" y1="45" x2="320" y2="45" stroke="#475569" stroke-width="1.5"/>
+
+                <g transform="translate(25, 60)">
+                  <text x="0" y="20" font-family="JetBrains Mono" font-size="14" fill="#64748b">0x00000000 : NULL (Página 0 reservada)</text>
+                  <rect x="-5" y="32" width="295" height="30" rx="4" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444"/>
+                  <text x="0" y="52" font-family="JetBrains Mono" font-size="14" fill="#ef4444" font-weight="900">0x0000009c : [NO MAPEADA / ILEGAL]</text>
+                  <text x="0" y="85" font-family="JetBrains Mono" font-size="14" fill="#22c55e">0x80000000 : Kernel Core (ntoskrnl.exe)</text>
+                  <text x="0" y="115" font-family="JetBrains Mono" font-size="14" fill="#22c55e">0xFFFFF800 : Driver Memory Pool</text>
+                  <text x="0" y="145" font-family="JetBrains Mono" font-size="14" fill="#22c55e">0xFFFFF808 : NonPaged Pool (RAM Fija)</text>
+                </g>
+
+                <!-- Connecting Crash Arrow -->
+                <path d="M 355 110 L 415 110" stroke="#ef4444" stroke-width="5" marker-end="url(#arrow)"/>
+
+                <!-- CPU Hardware Crash Box -->
+                <g transform="translate(420, 20)">
+                  <rect x="0" y="0" width="320" height="210" rx="12" fill="#7f1d1d" stroke="#ef4444" stroke-width="3" style="animation: pointerStrobe 1s infinite;"/>
+                  <text x="160" y="45" font-family="Montserrat" font-weight="900" font-size="22" fill="#fff" text-anchor="middle">CPU EXCEPTION DETECTADA</text>
+                  <rect x="20" y="65" width="280" height="45" rx="6" fill="#991b1b"/>
+                  <text x="160" y="93" font-family="JetBrains Mono" font-weight="900" font-size="16" fill="#fef08a" text-anchor="middle">PAGE_FAULT_IN_NONPAGED_AREA</text>
+                  <text x="160" y="140" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#fca5a5" text-anchor="middle">La MMU detiene los núcleos x86</text>
+                  <text x="160" y="165" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#fca5a5" text-anchor="middle">para evitar corrupción de disco</text>
+                  <text x="160" y="195" font-family="Montserrat" font-weight="900" font-size="18" fill="#fff" text-anchor="middle">💥 ¡KERNEL PANIC IRRECUPERABLE!</text>
+                </g>
+              </g>
+
+              <!-- Bottom Banner -->
+              <rect x="50" y="415" width="760" height="42" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+              <text x="430" y="442" font-family="JetBrains Mono" font-weight="900" font-size="17" fill="#fca5a5" text-anchor="middle">EL BOOT-LOOP: AL REINICIAR, WINDOWS VOLVÍA A CARGAR EL DRIVER ROTO</text>
+            </svg>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #f87171; letter-spacing: 1px; margin-top: 2px;">LA DIRECCIÓN 0x9c NUNCA EXISTIÓ &bull; REINICIO EN BUCLE INFINITO</div>
+          </div>
+
+          <div class="punch-pill" style="background: #fee2e2; color: #ef4444; border-color: #ef4444;">LA DIRECCIÓN 0x9c NO EXISTE</div>
+
+          <div class="metric-box" style="border-color: #ef4444; background: #fef2f2;">
+            <div style="font-size: 24px; font-weight: 900; color: #b91c1c;">💥 EL BOOT-LOOP FATAL</div>
+            <div style="font-size: 19px; font-weight: 700; color: #334155;">Al reiniciar, Windows volvía a cargar el driver defectuoso. Solo se curó con BitLocker y modo seguro.</div>
+          </div>
+        </div>
+
+        <!-- CARD 5: LA GRAN LECCIÓN & DEBATE COMUNITARIO -->
+        <div class="scene-card" id="card-5">
+          <div>
+            <div class="myth-tag" style="background: #d1fae5; color: #059669;">LECCIÓN DE ARQUITECTURA</div>
+            <div class="headline-black">¿DEBE EXPULSARSE EL ANTIVIRUS DE RING 0?</div>
+          </div>
+
+          <!-- Figure 5: Apple vs Windows Widescreen (860x480) -->
+          <div class="figure-container" style="background: #0f172a;">
+            <svg width="100%" height="100%" viewBox="0 0 860 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Left Column: Apple macOS Model -->
+              <g transform="translate(60, 25)">
+                <rect x="0" y="0" width="350" height="250" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="2.5"/>
+                <text x="175" y="40" font-family="Montserrat" font-weight="900" font-size="18" fill="#a7f3d0" text-anchor="middle">MODELO APPLE (macOS)</text>
+                <rect x="25" y="60" width="300" height="42" rx="8" fill="#047857"/>
+                <text x="175" y="87" font-family="JetBrains Mono" font-weight="900" font-size="16" fill="#fff" text-anchor="middle">System Extensions (DriverKit)</text>
+                
+                <text x="175" y="130" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#d1fae5" text-anchor="middle">Aisladas en Ring 3 (User Space)</text>
+                <text x="175" y="160" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#d1fae5" text-anchor="middle">Si el antivirus falla,</text>
+                <text x="175" y="190" font-family="Space Grotesk" font-weight="900" font-size="18" fill="#34d399" text-anchor="middle">¡la Mac NO crashea jamás!</text>
+                
+                <rect x="25" y="205" width="300" height="32" rx="6" fill="#065f46"/>
+                <text x="175" y="227" font-family="JetBrains Mono" font-weight="900" font-size="14" fill="#6ee7b7" text-anchor="middle">✓ ESTABILIDAD TOTAL DEL SISTEMA</text>
+              </g>
+
+              <!-- Right Column: Microsoft Windows Model -->
+              <g transform="translate(450, 25)">
+                <rect x="0" y="0" width="350" height="250" rx="12" fill="#7f1d1d" stroke="#ef4444" stroke-width="2.5"/>
+                <text x="175" y="40" font-family="Montserrat" font-weight="900" font-size="18" fill="#fecaca" text-anchor="middle">MODELO WINDOWS (HISTÓRICO)</text>
+                <rect x="25" y="60" width="300" height="42" rx="8" fill="#b91c1c"/>
+                <text x="175" y="87" font-family="JetBrains Mono" font-weight="900" font-size="16" fill="#fff" text-anchor="middle">Kernel Driver (Ring 0)</text>
+                
+                <text x="175" y="130" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#fee2e2" text-anchor="middle">Controlador absoluto de bajo nivel</text>
+                <text x="175" y="160" font-family="Space Grotesk" font-weight="700" font-size="16" fill="#fee2e2" text-anchor="middle">Si el antivirus falla,</text>
+                <text x="175" y="190" font-family="Space Grotesk" font-weight="900" font-size="18" fill="#f87171" text-anchor="middle">¡Pantalla Azul a 8.5M de PCs!</text>
+                
+                <rect x="25" y="205" width="300" height="32" rx="6" fill="#991b1b"/>
+                <text x="175" y="227" font-family="JetBrains Mono" font-weight="900" font-size="14" fill="#fca5a5" text-anchor="middle">⚠️ RIESGO SISTÉMICO GLOBAL</text>
+              </g>
+
+              <!-- Community Voting Callout (Wide Banner) -->
+              <g transform="translate(60, 295)">
+                <rect x="0" y="0" width="740" height="120" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+                <text x="370" y="38" font-family="Montserrat" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">🗳️ DEBATE: ¿QUÉ DEBE HACER MICROSOFT?</text>
+                
+                <rect x="50" y="55" width="300" height="50" rx="8" fill="#0284c7" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="200" y="87" font-family="JetBrains Mono" font-weight="900" font-size="18" fill="#fff" text-anchor="middle">#Ring3Seguro (Como Apple)</text>
+                
+                <rect x="390" y="55" width="300" height="50" rx="8" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="540" y="87" font-family="JetBrains Mono" font-weight="900" font-size="18" fill="#fff" text-anchor="middle">#Ring0Maximo (Bajo Nivel)</text>
+              </g>
+
+              <text x="430" y="448" font-family="JetBrains Mono" font-weight="800" font-size="15" fill="#34d399" text-anchor="middle">MÁNDALE ESTE VIDEO A TU AMIGO QUE HACE DEPLOYS EN VIERNES</text>
+            </svg>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #34d399; letter-spacing: 1px; margin-top: 2px;">VOTA EN LOS COMENTARIOS &bull; ¿EXPULSAR EL ANTIVIRUS A RING 3?</div>
+          </div>
+
+          <div class="punch-pill" style="background: #d1fae5; color: #059669; border-color: #059669;">¿SEGURIDAD O ESTABILIDAD?</div>
+
+          <div class="metric-box" style="border-color: #059669; background: #ecfdf5;">
+            <div style="font-size: 24px; font-weight: 900; color: #065f46;">💬 ¡COMENTA TU POSTURA!</div>
+            <div style="font-size: 19px; font-weight: 700; color: #334155;">¿Debe prohibirse por ley el acceso a Ring 0 a terceros? Suscríbete a sIA Podcast.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer-badge">
+        <div class="omnicanal-bar">
+          <div class="omni-pill">🎧 SPOTIFY</div>
+          <div class="omni-pill">💻 ESCUCHA-SIA.GITHUB.IO</div>
+          <div class="omni-pill">📱 @ESCUCHA_SIA</div>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+"""
+
+with open(OUT_HTML, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"✅ Escena CrowdStrike compilada con éxito en:")
+print(f"   {OUT_HTML}")
+print(f"   Tamaño: {OUT_HTML.stat().st_size / 1024:.2f} KB")
