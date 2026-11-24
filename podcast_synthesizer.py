@@ -63,6 +63,13 @@ def clean_for_tts(text: str) -> str:
     t = re.sub(r'\bPLA\b', 'P L A', t)
     t = re.sub(r'\bPETG\b', 'P E T G', t)
     t = re.sub(r'\bTPU\b', 'T P U', t)
+    t = re.sub(r'\bSLA\b', 'S L A', t)
+    t = re.sub(r'\bMSLA\b', 'M S L A', t)
+    t = re.sub(r'\bPolyJet\b', 'Póli-yet', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bMaterial Jetting\b', 'Material Yéting', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bStratasys\b', 'Stratásis', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bCMYK\b', 'C M Y K', t)
+    t = re.sub(r'\bShore A\b', 'Shor A', t, flags=re.IGNORECASE)
     # Modelos de Decisión y JEPA / Jev
     t = re.sub(r'\bJEPA\b', 'Yepa', t)
     t = re.sub(r'\bI-JEPA\b', 'I-Yepa', t)

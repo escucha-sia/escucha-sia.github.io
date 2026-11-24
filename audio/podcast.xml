@@ -8,10 +8,24 @@
     <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
     <itunes:category text="Technology"/>
     <itunes:owner>
-      <itunes:name>cacs</itunes:name>
+      <itunes:name>Carlos Corona</itunes:name>
       <itunes:email>escucha.sia@gmail.com</itunes:email>
     </itunes:owner>
     <description>sIA: El podcast diario de Inteligencia Artificial, Cloud, Big Data, Gadgets y Cultura Geek presentado por Jorge y Dalia.</description>
+    <item>
+      <title>sIA Maker #03: Material Jetting (PolyJet): ¿Cómo la inyección de tinta microscópica revoluciona la medicina y el 3D?</title>
+      <link>https://escucha-sia.github.io/articulos/sia-maker-03-material-jetting-polyjet-como-la-inyeccion-de-t.html</link>
+      <description>Análisis técnico y estratégico sobre la tecnología Material Jetting (PolyJet): cabezales piezoeléctricos disparando microgotas de fotopolímeros, curado UV instantáneo, materiales digitales con dureza Shore variable, réplicas quirúrgicas hiperrealistas de órganos y la batalla por la democratización de patentes por cacs.</description>
+      <pubDate>Mon, 23 Nov 2026 17:47:20 GMT</pubDate>
+      <enclosure url="https://escucha-sia.github.io/audio/sIA_Maker_03_Material_Jetting_Impresion3D_2026-11-23.mp3" length="13077509" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://escucha-sia.github.io/audio/sIA_Maker_03_Material_Jetting_Impresion3D_2026-11-23.mp3</guid>
+      <itunes:duration>09:04</itunes:duration>
+      <itunes:author>Jorge y Dalia</itunes:author>
+      <itunes:image href="https://escucha-sia.github.io/cover.jpg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_03_Material_Jetting_Impresion3D_2026-11-23.vtt" type="text/vtt" language="es"/>
+      <podcast:transcript url="https://escucha-sia.github.io/audio/sIA_Maker_03_Material_Jetting_Impresion3D_2026-11-23.srt" type="application/x-subrip" language="es"/>
+    </item>
     <item>
       <title>sIA Crónicas #08: Fábrica de Jabón La Corona y el Imperio del Jabón Zote: De unos Baños de Vapor en 1920 a Conquistar Corea del Sur sin Gastar $1 en Publicidad</title>
       <link>https://escucha-sia.github.io/articulos/sia-corp-08-fabrica-de-jabon-la-corona-y-el-imperio-del-jabon-zote.html</link>

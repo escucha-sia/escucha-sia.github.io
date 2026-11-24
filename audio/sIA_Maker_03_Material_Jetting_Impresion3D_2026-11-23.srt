@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:13,296
+JORGE: ¡Muy buenas tardes a toda nuestra comunidad maker, ingenieros de diseño y apasionados de la tecnología en México y toda Latinoamérica! Bienvenidos a un nuevo episodio de Sia. Soy Jorge.
+
+2
+00:00:13,296 --> 00:00:33,696
+DALIA: ¡Y yo soy Dalia! Hoy es lunes veintitrés de noviembre de dos mil veintiséis. Y hoy vamos a derribar una frontera mental. Jorge, si le preguntas a cualquier persona en la calle cómo funciona una impresora 3D, te dirán que es una máquina derritiendo hilo de plástico o una tina con líquido pegajoso y olor químico.
+
+3
+00:00:33,696 --> 00:01:03,672
+JORGE: Totalmente, Dalia. El noventa y nueve por ciento del mundo piensa exclusivamente en filamento fundido tipo Bambu Lab o en resina tradicional curada con pantalla LCD. Pero esta semana se volvió viral un video en talleres de manufactura mostrando algo que parece de ciencia ficción: un diorama en miniatura donde un volcán expulsa lava incandescente transparente, mientras ríos congelados y rocas ásperas conviven en una sola pieza de plástico sin una sola gota de pintura exterior.
+
+4
+00:01:03,672 --> 00:01:27,192
+DALIA: No fue pintado a mano, ni ensamblado con pegamento. Salió de la bandeja en una sola corrida continua. La tecnología detrás de esa proeza se conoce como Material Yéting, comercializada históricamente bajo el nombre Póli-yet. Y lo más fascinante es su origen conceptual: funciona exactamente igual que la humilde impresora de inyección de tinta que tienes en tu oficina.
+
+5
+00:01:27,192 --> 00:01:49,968
+JORGE: En este episodio vamos a desarmar la física de esta maravilla: cabezales piezoeléctricos disparando microgotas, curado ultravioleta en milisegundos, materiales digitales que mezclan piel de goma con hueso duro, y la forma en que los cirujanos están usando estas máquinas para salvar vidas operando réplicas exactas de tumores antes de tocar al paciente. ¡Comenzamos!
+
+6
+00:01:49,968 --> 00:01:58,248
+DALIA: Para entender por qué el Material Yéting es radicalmente distinto al resto de la industria, tenemos que viajar al interior del cabezal de impresión.
+
+7
+00:01:58,248 --> 00:02:19,392
+JORGE: Imaginen los cabezales térmicos o piezoeléctricos de una impresora de papel Epson o Canon de alta definición. Esos cabezales contienen cientos de micro-boquillas microscópicas capaces de disparar picolitros de líquido. Un picolitro es la billonésima parte de un litro; estamos hablando de gotas más finas que un glóbulo rojo humano.
+
+8
+00:02:19,392 --> 00:02:30,720
+DALIA: Pero aquí viene la genialidad de ingeniería: en lugar de disparar tinta convencional a base de agua o solvente, el cabezal de Material Yéting eyecta microgotas de fotopolímeros líquidos.
+
+9
+00:02:30,720 --> 00:02:51,768
+JORGE: Y pegada al carro del cabezal, viajando a toda velocidad de lado a lado de la bandeja, viaja una lámpara ultravioleta de alta potencia. En el instante microscópico en que la gota toca la plataforma, la luz UV la bombardea, provocando una reacción de polimerización en cadena. El líquido se solidifica al milisegundo.
+
+10
+00:02:51,768 --> 00:03:06,912
+DALIA: Esto elimina por completo el mayor dolor de cabeza de la impresión de resina tradicional en tina: ya no tienes que sumergir una pieza en litros de químicos tóxicos, ni lidiar con fuerzas de succión que deforman capas delgadas al despegarse del fondo de la película de teflón.
+
+11
+00:03:06,912 --> 00:03:29,088
+JORGE: Aquí el material solo se deposita donde el modelo matemático lo exige. Y lo que es más impresionante: la resolución vertical alcanza capas de hasta dieciséis micras. Para ponerlo en perspectiva, un cabello humano mide unas setenta micras. Es una superficie tan lisa que el ojo no puede detectar las líneas de capa a simple vista.
+
+12
+00:03:29,088 --> 00:03:37,223
+DALIA: Pero la verdadera magia no es solo la resolución geométrica, Jorge. Es la capacidad multimaterial simultánea.
+
+13
+00:03:37,223 --> 00:03:54,407
+JORGE: En una impresora de filamento tradicional con sistema multimaterial como el A M S, para cambiar de color la máquina tiene que cortar el hilo, purgar la boquilla en una torre de desperdicio y empujar el nuevo filamento. Tarda minutos y genera montañas de plástico de desecho.
+
+14
+00:03:54,407 --> 00:04:09,263
+DALIA: En Material Yéting, el carro lleva múltiples canales en paralelo. Tienes cabezales dedicados para cian, magenta, amarillo, negro, blanco, resina transparente cristalina y resinas elastoméricas flexibles.
+
+15
+00:04:09,263 --> 00:04:32,903
+JORGE: Esto permite dos cosas que ninguna otra tecnología en el planeta puede igualar. La primera es el color C M Y K fotográfico real. La impresora no solo colorea la superficie: mezcla las microgotas en el aire y en la capa para generar millones de tonos con degradados continuos, emulando texturas de madera, mármol o piel humana con fidelidad milimétrica.
+
+16
+00:04:32,903 --> 00:04:51,527
+DALIA: Y la segunda, y para mí la más revolucionaria, es lo que Stratásis denomina Materiales Digitales. La máquina puede mezclar en proporciones calculadas una resina rígida con una resina flexible. Esto significa que puedes variar la dureza Shore en una misma pieza sin transiciones visibles.
+
+17
+00:04:51,527 --> 00:05:10,463
+JORGE: Imaginen esto: pueden imprimir un zapato o una prótesis donde la suela exterior sea blanda y amortiguada como hule espuma, pero la estructura interna sea rígida como el policarbonato, y la parte superior sea semitransparente como malla técnica. Todo en un solo bloque monolítico sin ensambles.
+
+18
+00:05:10,463 --> 00:05:19,799
+DALIA: Y donde esta tecnología deja de ser un truco de ingeniería fascinante y se convierte en un milagro tangible es en los quirófanos pediátricos y de cardiología.
+
+19
+00:05:19,799 --> 00:05:41,087
+JORGE: Históricamente, cuando un cirujano se enfrentaba a un tumor complejo o a una malformación cardíaca congénita en un bebé, tenía que depender de tomografías axiales y resonancias en pantallas bidimensionales. El cirujano tenía que imaginar en su mente la profundidad espacial antes de hacer la primera incisión en un órgano del tamaño de una nuez.
+
+20
+00:05:41,087 --> 00:05:53,879
+DALIA: Hoy, hospitales de máxima especialidad toman la tomografía del paciente, segmentan el volumen con algoritmos de inteligencia artificial y envían el archivo a una impresora como la Stratásis J850 Digital Anatomy.
+
+21
+00:05:53,879 --> 00:06:13,559
+JORGE: La máquina imprime una copia uno a uno del corazón del paciente. Pero escuchen esto: el tejido muscular tiene la misma elasticidad y resistencia que el miocardio vivo. Las arterias coronarias se imprimen en resina transparente flexible para que el equipo médico pueda ver la sangre pasar o insertar catéteres.
+
+22
+00:06:13,559 --> 00:06:35,927
+DALIA: E incluso se imprimen patologías tumorales con diferente densidad y textura táctil. Los cirujanos pueden cortar el modelo con el bisturí real, coser suturas y practicar el procedimiento tres o cuatro veces la noche anterior a la cirugía. Se ha demostrado que reduce los tiempos de quirófano en más de dos horas y disminuye drásticamente las complicaciones postoperatorias.
+
+23
+00:06:35,927 --> 00:06:44,711
+JORGE: Saber exactamente dónde está anclado el vaso sanguíneo antes de abrir el pecho de una persona marca la diferencia literal entre la vida y la muerte.
+
+24
+00:06:44,711 --> 00:06:55,823
+DALIA: Ahora bien, Jorge, la pregunta del millón que todos nuestros radioescuchas se estarán haciendo en este momento es: ¿por qué no tenemos todos una impresora Póli-yet en nuestra mesa de trabajo?
+
+25
+00:06:55,823 --> 00:07:10,655
+JORGE: La respuesta corta es: patentes y economía corporativa. Una impresora industrial de Material Yéting no baja de los cincuenta mil dólares, y las estaciones médicas de última generación superan los doscientos cincuenta mil dólares.
+
+26
+00:07:10,655 --> 00:07:29,591
+DALIA: Y el modelo de negocio es el clásico monopolio de los cartuchos de impresora llevado al extremo. Mientras un kilo de filamento P L A de excelente calidad cuesta hoy unos quince o dieciocho dólares, un cartucho de resina oficial para estas máquinas puede costar fácilmente entre trescientos y cuatrocientos dólares el kilo.
+
+27
+00:07:29,591 --> 00:07:41,759
+JORGE: Las resinas están fuertemente protegidas por microchips criptográficos propietarios. Si le pones una resina genérica, la máquina simplemente se niega a disparar los cabezales.
+
+28
+00:07:41,759 --> 00:07:56,159
+DALIA: Sin embargo, al igual que ocurrió con las patentes de F D M en dos mil nueve que detonaron la revolución RepRap, el ecosistema de patentes originales de Póli-yet de finales de los noventa y principios de los dos mil ha comenzado a expirar paulatinamente.
+
+29
+00:07:56,159 --> 00:08:15,527
+JORGE: Ya estamos viendo pioneros en Asia y proyectos de investigación en universidades europeas adaptando cabezales piezoeléctricos piezo-inkjet estándar de gran formato con tintas fotocurables de código abierto. La democratización de la inyección de materiales líquidos es la próxima gran frontera que veremos madurar en esta década.
+
+30
+00:08:15,527 --> 00:08:27,791
+DALIA: La frontera entre imprimir una fotografía plana en una hoja de papel y construir un órgano tridimensional complejo está desapareciendo. La materia se está volviendo programable a nivel de picolitros.
+
+31
+00:08:27,791 --> 00:08:35,183
+JORGE: Y con esta radiografía profunda sobre el futuro de la fabricación aditiva cerramos este episodio especial de Sia Maker.
+
+32
+00:08:35,183 --> 00:08:48,479
+DALIA: Como siempre, las notas del programa, los esquemas técnicos del cabezal piezoeléctrico y los enlaces a los estudios clínicos están disponibles en nuestra revista digital en escucha guion sia punto Git-Jab punto io diagonal articulos.
+
+33
+00:08:48,479 --> 00:08:59,591
+JORGE: Y si nos escuchan en Spotify, recuerden calificar el podcast con cinco estrellas y compartir este episodio con sus colegas makers e ingenieros. Soy Jorge.
+
+34
+00:08:59,591 --> 00:09:04,799
+DALIA: Y yo soy Dalia. ¡Hasta la próxima entrega de Sia Podcast!
+

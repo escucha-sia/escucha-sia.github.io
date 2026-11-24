@@ -1,0 +1,25 @@
+{
+  "id": "sIA_Reel_Material_Jetting_3D",
+  "title": "¿Impresora 3D o Inyección de Tinta? La Revolución",
+  "badge_tag": "sIA #46 • MAKER & HARDWARE",
+  "category": "FABRICACIÓN ADITIVA",
+  "theme": "cyan",
+  "dialogue": [
+    {
+      "speaker": "JORGE",
+      "text": "¿Te imaginas que la impresora de tu oficina, en lugar de hojas de papel, pudiera imprimir un volcán con lava transparente y roca sólida en una sola pasada?"
+    },
+    {
+      "speaker": "DALIA",
+      "text": "Se llama Material Jetting. Cabezales piezoeléctricos disparan microgotas de fotopolímeros que una lámpara ultravioleta cura al milisegundo de tocar la bandeja."
+    },
+    {
+      "speaker": "JORGE",
+      "text": "A diferencia del filamento tradicional, combina color CMYK real, transparencias ópticas y elastómeros flexibles con plástico rígido en el mismo bloque monolítico."
+    },
+    {
+      "speaker": "DALIA",
+      "text": "Hoy los cirujanos ensayan operaciones en réplicas exactas de órganos antes de tocar al paciente. Conoce el expediente completo en escucha guion sia punto github punto io y en Sia Podcast."
+    }
+  ]
+}

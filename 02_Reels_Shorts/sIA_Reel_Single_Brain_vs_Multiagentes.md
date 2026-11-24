@@ -1,0 +1,38 @@
+---
+id: sIA_Reel_Single_Brain_vs_Multiagentes
+titulo: "¿Un Solo Modelo o Mil Agentes? La Gran Mentira"
+tipo: reel
+formato: 1080x1920_vertical
+duracion: 45s
+estado: publicado
+video: "sIA_Reel_Single_Brain_vs_Multiagentes.mp4"
+poster: "sIA_Reel_Single_Brain_vs_Multiagentes_poster.jpg"
+tags: [reel, sia_podcast, tiktok, instagram, spotifylocal]
+---
+
+# 🎬 ¿Un Solo Modelo o Mil Agentes? La Gran Mentira
+
+> **Ficha Técnica:** sIA #45 • ARQUITECTURA IA | 45.0s | Edge-TTS (Jorge & Dalia +6%) | Safe Zones TikTok/IG.
+
+## 🎥 Video
+![[sIA_Reel_Single_Brain_vs_Multiagentes.mp4]]
+
+## 🎙️ Guion Canónico
+[
+  {
+    "speaker": "JORGE",
+    "text": "¿Crear un agente de Inteligencia Artificial para cada pequeña tarea te hace más eficiente? Eso es lo que prometen en redes sociales..."
+  },
+  {
+    "speaker": "DALIA",
+    "text": "Pero la realidad en producción es una telaraña rota: cada agente olvida lo que el otro aprendió, duplicas consumo de tokens y terminas corrigiendo el mismo error cinco veces."
+  },
+  {
+    "speaker": "JORGE",
+    "text": "Un solo modelo con esteroides hace más que mil agentes desconectados: en lugar de armar un ejército, dale un manual estricto, una caja de herramientas y una prueba de terminado."
+  },
+  {
+    "speaker": "DALIA",
+    "text": "La regla de oro: si algo sale mal, no crees otro agente; corrige el manual. Aprende arquitectura soberana en escucha guion sia punto github punto io y en Sia Podcast."
+  }
+]
