@@ -118,15 +118,27 @@ def upload_video(video_path: Path, caption: str, dry_run: bool = False):
         if post_btn.is_visible():
             post_btn.click(force=True)
             print("[+] ¡Clic en Publicar realizado con éxito!")
-            time.sleep(15)
+            time.sleep(3)
         else:
             print("[-] Intentando selector alternativo de publicación...")
             btn_alt = page.locator("button[data-e2e='post_video_button'], button.btn-post").first
             if btn_alt.is_visible():
                 btn_alt.click(force=True)
                 print("[+] ¡Clic en Publicar alternativo realizado!")
-                time.sleep(15)
+                time.sleep(3)
 
+        # Manejar modal de confirmación ("Continue to post? We're still checking..." -> "Post now")
+        for attempt in range(8):
+            post_now = page.locator("button:has-text('Post now'), button:has-text('Publicar ahora')").first
+            if post_now.count() > 0 and post_now.is_visible():
+                print("[+] Detectado modal 'Post now'. Confirmando publicación inmediata...")
+                post_now.click(force=True)
+                time.sleep(3)
+                break
+            time.sleep(1)
+
+        print("[*] Esperando a que TikTok procese la publicación...")
+        time.sleep(10)
         screenshot_after = SCRATCH_DIR / f"after_post_{video_path.stem}.png"
         page.screenshot(path=str(screenshot_after))
         print(f"[*] Screenshot tras publicación: {screenshot_after}")
