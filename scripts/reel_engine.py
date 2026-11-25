@@ -370,8 +370,11 @@ def render_video(output_filename: str):
     renders_dir = ENGINE_DIR / "renders"
     if renders_dir.exists():
         for f in renders_dir.glob("*.mp4"):
-            try: f.unlink()
-            except Exception: pass
+            try:
+                f.unlink()
+            except OSError as err:
+                print(f"   [AVISO] No se pudo limpiar archivo previo {f.name}: {err}")
+
 
     cmd = ["cmd.exe", "/c", f"set PATH={NODE_PATH};%PATH% && cd /d {ENGINE_DIR} && npx hyperframes render --gpu"]
     res = subprocess.run(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
