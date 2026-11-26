@@ -4,199 +4,418 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,900&family=Space+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@700;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Space+Grotesk:wght@600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap');
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
         width: 1080px;
         height: 1920px;
-        background: #090b14;
+        background: #060810;
         color: #ffffff;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Space Grotesk', sans-serif;
         overflow: hidden;
         position: relative;
       }
 
-      /* Halftone Matrix Background */
-      .halftone-overlay {
+      /* Background Grid */
+      .bg-grid {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(rgba(255, 255, 255, 0.12) 2px, transparent 2px);
-        background-size: 26px 26px;
-        opacity: 0.85;
+        background-image: 
+          linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
       }
 
-      /* Safe Zones Protection: Top 180px, Bottom 260px */
-      .safe-content {
+      /* Studio Header: Top 150px to 220px */
+      .header-bar {
         position: absolute;
-        top: 180px;
-        bottom: 260px;
+        top: 140px;
         left: 60px;
-        right: 120px;
+        right: 60px;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        z-index: 50;
       }
-
-      .header-badge {
-        display: inline-block;
-        background: #0891b2;
-        color: #ffffff;
-        padding: 12px 28px;
-        font-size: 24px;
-        font-weight: 900;
-        letter-spacing: 2px;
-        border-radius: 8px;
+      .brand-badge {
+        background: #0f172a;
         border: 2px solid #06b6d4;
-        box-shadow: 4px 4px 0px rgba(0,0,0,0.8);
-      }
-
-      .main-title {
-        font-size: 52px;
-        font-weight: 900;
-        line-height: 1.15;
-        margin-top: 24px;
-        color: #ffffff;
-        text-shadow: 2px 2px 0px #000;
-      }
-
-      .main-title .hl {
-        color: #22d3ee;
-      }
-
-      /* Dialogue Card */
-      .dialogue-card {
-        background: rgba(15, 23, 42, 0.94);
-        border: 3px solid #06b6d4;
-        border-radius: 16px;
-        padding: 36px;
-        box-shadow: 8px 8px 0px rgba(0,0,0,0.9);
-        min-height: 480px;
+        padding: 10px 24px;
+        border-radius: 999px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 0 25px rgba(6, 182, 212, 0.35);
+      }
+      .brand-name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 28px;
+        letter-spacing: 1px;
+      }
+      .brand-name span {
+        color: #06b6d4;
+      }
+      .live-tag {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #ef4444;
+      }
+      .live-dot {
+        width: 12px;
+        height: 12px;
+        background: #ef4444;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ef4444;
+      }
+
+      /* ================= TOP HALF: VIRTUAL STUDIO (Y: 220 to 930) ================= */
+      .top-studio {
+        position: absolute;
+        top: 220px;
+        left: 60px;
+        right: 60px;
+        height: 720px;
+        border-radius: 28px;
+        background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #090919 80%);
+        border: 2px solid rgba(168, 85, 247, 0.3);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.7), inset 0 0 60px rgba(168, 85, 247, 0.15);
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
         justify-content: center;
       }
 
-      .speaker-pill {
-        align-self: flex-start;
-        background: #000000;
-        color: #22d3ee;
-        border: 2px solid #06b6d4;
-        padding: 8px 20px;
-        font-size: 22px;
-        font-weight: 900;
-        border-radius: 999px;
-        margin-bottom: 20px;
+      .studio-halo {
+        position: absolute;
+        top: 20px;
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, transparent 70%);
+        filter: blur(40px);
       }
 
-      .dialogue-text {
-        font-size: 38px;
-        font-weight: 800;
-        line-height: 1.35;
-        color: #f8fafc;
-      }
-
-      /* Footer Bar */
-      .footer-cta {
+      .studio-desk {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+        border-top: 3px solid #38bdf8;
+        box-shadow: 0 -10px 25px rgba(56, 189, 248, 0.25);
+        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: #020617;
-        border: 2px solid #334155;
-        border-radius: 12px;
-        padding: 16px 24px;
+        padding: 0 50px;
       }
-
-      .footer-brand {
-        font-size: 26px;
+      .desk-label {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #94a3b8;
+      }
+      .desk-channel {
+        font-size: 22px;
         font-weight: 900;
         color: #38bdf8;
       }
 
-      .footer-sub {
-        font-size: 18px;
-        color: #94a3b8;
-        font-family: 'JetBrains Mono', monospace;
-      }
-
-      .progress-bar {
+      .dalia-avatar {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 10px;
-        background: #06b6d4;
-        width: 100%;
-        animation: progress 45.0s linear forwards;
+        bottom: 30px;
+        height: 640px;
+        z-index: 5;
+        filter: drop-shadow(0 15px 30px rgba(0,0,0,0.85));
+        animation: daliaFloat 4s ease-in-out infinite alternate;
+      }
+      @keyframes daliaFloat {
+        0% { transform: translateY(0px) scale(1); }
+        100% { transform: translateY(-8px) scale(1.008); }
       }
 
-      @keyframes progress {
-        from { width: 0%; }
-        to { width: 100%; }
+      /* ================= CENTER: TICKER / SUBTITLE STRIP (Y: 960 to 1100) ================= */
+      .center-strip {
+        position: absolute;
+        top: 960px;
+        left: 60px;
+        right: 60px;
+        height: 140px;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(16px);
+        border: 2px solid #06b6d4;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(6, 182, 212, 0.2);
+        overflow: hidden;
+        z-index: 30;
+      }
+      .sub-card {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 28px;
+        opacity: 0;
+      }
+      .strip-badge {
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #22d3ee;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .strip-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.3;
+        color: #ffffff;
+      }
+      .strip-text .hl {
+        color: #facc15;
+        text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+      }
+
+      /* ================= BOTTOM HALF: VIDEOWALL EVIDENCE (Y: 1120 to 1660) ================= */
+      .bottom-videowall {
+        position: absolute;
+        top: 1120px;
+        left: 60px;
+        right: 60px;
+        height: 540px;
+        background: #020617;
+        border: 3px solid #1e293b;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.9), inset 0 0 40px rgba(0,0,0,0.8);
+      }
+
+      .videowall-screen {
+        position: absolute;
+        inset: 0;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0;
+      }
+
+      /* Screen 1: Blackwell */
+      #screen-0 {
+        background: linear-gradient(135deg, #091319 0%, #031c26 100%);
+        border: 2px solid #06b6d4;
+        border-radius: 24px;
+      }
+      /* Screen 2: Slopsquatting */
+      #screen-1 {
+        background: linear-gradient(135deg, #1a0b12 0%, #2a0b15 100%);
+        border: 2px solid #f43f5e;
+        border-radius: 24px;
+      }
+      /* Screen 3: MCP */
+      #screen-2 {
+        background: linear-gradient(135deg, #0c1427 0%, #171e3d 100%);
+        border: 2px solid #6366f1;
+        border-radius: 24px;
+      }
+      /* Screen 4: Outro */
+      #screen-3 {
+        background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+        border: 2px solid #10b981;
+        border-radius: 24px;
+      }
+
+      /* ================= KEYFRAME ANIMATIONS (45.0s CLOSED) ================= */
+      @keyframes animCue0 {
+        0%, 26.89% { opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; }
+        27.56%, 100% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+      }
+      @keyframes animCue1 {
+        0%, 26.89% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+        27.56%, 53.56% { opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; }
+        54.22%, 100% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+      }
+      @keyframes animCue2 {
+        0%, 53.56% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+        54.22%, 77.78% { opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; }
+        78.44%, 100% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+      }
+      @keyframes animCue3 {
+        0%, 77.78% { opacity: 0; transform: scale(0.97) translateY(12px); pointer-events: none; }
+        78.44%, 100% { opacity: 1; transform: scale(1) translateY(0); pointer-events: auto; }
+      }
+
+      #screen-0, #sub-card-0 { animation: animCue0 45s linear forwards; }
+      #screen-1, #sub-card-1 { animation: animCue1 45s linear forwards; }
+      #screen-2, #sub-card-2 { animation: animCue2 45s linear forwards; }
+      #screen-3, #sub-card-3 { animation: animCue3 45s linear forwards; }
+
+      .vw-tag {
+        display: inline-block;
+        padding: 8px 18px;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        width: fit-content;
+      }
+      .vw-headline {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 12px 0;
+      }
+      .vw-card-box {
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 20px;
+        border-radius: 16px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      /* Footer Omnichannel: Bottom 1690px */
+      .footer-bar {
+        position: absolute;
+        bottom: 150px;
+        left: 60px;
+        right: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 28px;
+        background: rgba(15, 23, 42, 0.85);
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+      .footer-brand {
+        font-weight: 900;
+        font-size: 22px;
+        color: #ffffff;
+      }
+      .footer-spotify {
+        color: #10b981;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 1px;
       }
     </style>
   </head>
   <body>
-    <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: relative; width: 1080px; height: 1920px; overflow: hidden;">
-    <div class="halftone-overlay"></div>
-    <div class="safe-content">
-      <div>
-        <div class="header-badge">sIA #46 • MAKER & HARDWARE</div>
-        <div class="main-title">¿Impresora 3D o Inyección de Tinta? La Revolución</div>
-      </div>
+    <div id="scene-root" data-composition-id="scene" data-width="1080" data-height="1920" style="position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden;">
+      <div class="bg-grid"></div>
 
-      <div class="dialogue-card" id="card">
-        <div id="p1" style="display: block;">
-          <div class="speaker-pill">🎙️ JORGE • EL GANCHO</div>
-          <p class="dialogue-text">¿Te imaginas que la impresora de tu oficina, en lugar de hojas de papel, pudiera imprimir un volcán con lava transparente y roca sólida en una sola pasada?</p>
+      <!-- Header -->
+      <div class="header-bar">
+        <div class="brand-badge">
+          <span style="font-size: 28px;">⚡</span>
+          <div class="brand-name">noti<span>sIA</span>s</div>
         </div>
-        <div id="p2" style="display: none;">
-          <div class="speaker-pill">🎙️ DALIA • EL DATO DURO</div>
-          <p class="dialogue-text">Se llama Material Jetting. Cabezales piezoeléctricos disparan microgotas de fotopolímeros que una lámpara ultravioleta cura al milisegundo de tocar la bandeja.</p>
-        </div>
-        <div id="p3" style="display: none;">
-          <div class="speaker-pill">🎙️ JORGE • EL DOLOR REAL</div>
-          <p class="dialogue-text">A diferencia del filamento tradicional, combina color CMYK real, transparencias ópticas y elastómeros flexibles con plástico rígido en el mismo bloque monolítico.</p>
-        </div>
-        <div id="p4" style="display: none;">
-          <div class="speaker-pill">🎙️ DALIA • LA REGLA DE ORO</div>
-          <p class="dialogue-text">Hoy los cirujanos ensayan operaciones en réplicas exactas de órganos antes de tocar al paciente. Conoce el expediente completo en escucha guion sia punto github punto io y en Sia Podcast.</p>
+        <div class="live-tag">
+          <div class="live-dot"></div>
+          <span>FLASH DIARIO</span>
         </div>
       </div>
 
-      <div class="footer-cta">
-        <div>
-          <div class="footer-brand">sIA Podcast</div>
-          <div class="footer-sub">escucha-sia.github.io</div>
+      <!-- Top Half: Studio with Dalia -->
+      <div class="top-studio">
+        <div class="studio-halo"></div>
+        <img id="dalia-img" class="dalia-avatar" src="../assets/dalia_host.png" alt="Dalia" />
+        <div class="studio-desk">
+          <div class="desk-label">CONDUCTORA • DALIA</div>
+          <div class="desk-channel">sIA PODCAST</div>
         </div>
-        <div style="font-size: 22px; font-weight: 900; color: #10b981;">DISPONIBLE EN SPOTIFY</div>
       </div>
-    </div>
-    <div class="progress-bar"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-      const tl = gsap.timeline({ paused: true });
-      
-      // Scene switches deterministically aligned with 45s audio
-      tl.to("#p1", { opacity: 0, duration: 0.3 }, 8.5);
-      tl.set("#p1", { display: "none" }, 8.8);
-      tl.set("#p2", { display: "block", opacity: 0 }, 8.8);
-      tl.to("#p2", { opacity: 1, duration: 0.4 }, 8.9);
+      <!-- Center Strip: Dynamic Subtitles (4 Cues) -->
+      <div class="center-strip">
+        <div id="sub-card-0" class="sub-card">
+          <div class="strip-badge">01 • HARDWARE & CLOUD</div>
+          <div class="strip-text">¡Arrancamos con las <span class="hl">notisIAs</span> de hoy! En Hardware: los racks Blackwell de NVIDIA consumen 130 kW...</div>
+        </div>
+        <div id="sub-card-1" class="sub-card">
+          <div class="strip-badge">02 • CIBERSEGURIDAD</div>
+          <div class="strip-text">En Ciberseguridad: estalla el <span class="hl">Slopsquatting</span>. Librerías falsas que la IA alucina durante el Vibe Coding...</div>
+        </div>
+        <div id="sub-card-2" class="sub-card">
+          <div class="strip-badge">03 • ARQUITECTURA & AGENTES</div>
+          <div class="strip-text">Y en Arquitectura: Anthropic donó el <span class="hl">protocolo MCP</span> a la Linux Foundation. El estándar ya adoptado por OpenAI y Google...</div>
+        </div>
+        <div id="sub-card-3" class="sub-card">
+          <div class="strip-badge">DISPONIBLE EN SPOTIFY</div>
+          <div class="strip-text">El análisis a fondo de estas <span class="hl">notisIAs</span> está en Spotify y en <span class="hl">escucha-sia.github.io</span>...</div>
+        </div>
+      </div>
 
-      tl.to("#p2", { opacity: 0, duration: 0.3 }, 20.5);
-      tl.set("#p2", { display: "none" }, 20.8);
-      tl.set("#p3", { display: "block", opacity: 0 }, 20.8);
-      tl.to("#p3", { opacity: 1, duration: 0.4 }, 20.9);
+      <!-- Bottom Half: Videowall Evidence Screens -->
+      <div class="bottom-videowall">
+        <!-- Screen 0: Blackwell -->
+        <div id="screen-0" class="videowall-screen">
+          <div>
+            <div class="vw-tag" style="background: #0891b2; color: #fff;">NVIDIA NVL72 • CRISIS TÉRMICA</div>
+            <div class="vw-headline">130,000 Watts por Rack: El Aire ya no Enfría</div>
+          </div>
+          <div class="vw-card-box" style="border-left: 5px solid #06b6d4;">
+            ⚡ Consumo récord: 130 kW por rack<br/>
+            ❄️ Transición: Direct-to-Chip Liquid Cooling<br/>
+            ⚠️ Riesgo: Fugas de fluido a 100% de carga
+          </div>
+        </div>
 
-      tl.to("#p3", { opacity: 0, duration: 0.3 }, 33.5);
-      tl.set("#p3", { display: "none" }, 33.8);
-      tl.set("#p4", { display: "block", opacity: 0 }, 33.8);
-      tl.to("#p4", { opacity: 1, duration: 0.4 }, 33.9);
+        <!-- Screen 1: Slopsquatting -->
+        <div id="screen-1" class="videowall-screen">
+          <div>
+            <div class="vw-tag" style="background: #be123c; color: #fff;">CIBERSEGURIDAD • VIBE CODING</div>
+            <div class="vw-headline">Slopsquatting: El Veneno de las Alucinaciones</div>
+          </div>
+          <div class="vw-card-box" style="border-left: 5px solid #f43f5e;">
+            🚨 Vector: Paquetes npm/PyPI inexistentes<br/>
+            🎯 Blanco: Desarrolladores en Cursor sin auditar<br/>
+            🛡️ Solución: Guardrails y Zero Trust
+          </div>
+        </div>
 
-      window.__timelines = window.__timelines || {};
-      window.__timelines["scene"] = tl;
-      tl.seek(0);
-    </script>
+        <!-- Screen 2: MCP -->
+        <div id="screen-2" class="videowall-screen">
+          <div>
+            <div class="vw-tag" style="background: #4338ca; color: #fff;">ESTÁNDAR ABIERTO • LINUX FOUNDATION</div>
+            <div class="vw-headline">Model Context Protocol: La Muerte del Caos</div>
+          </div>
+          <div class="vw-card-box" style="border-left: 5px solid #6366f1;">
+            🔌 Arquitectura: Conector universal N+M<br/>
+            🤝 Adopción: Anthropic, OpenAI, Google<br/>
+            🧠 Paradigma: Single-Brain + Modular Tools
+          </div>
+        </div>
+
+        <!-- Screen 3: Outro -->
+        <div id="screen-3" class="videowall-screen">
+          <div>
+            <div class="vw-tag" style="background: #047857; color: #fff;">EPISODIO COMPLETO • SPOTIFY</div>
+            <div class="vw-headline">Escucha el Debate sin Filtro en sIA Podcast</div>
+          </div>
+          <div class="vw-card-box" style="border-left: 5px solid #10b981;">
+            🎧 Disponible en Spotify Archivos Locales<br/>
+            📖 Revista digital: escucha-sia.github.io<br/>
+            🚀 Suscríbete para las notisIAs diarias
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer-bar">
+        <div class="footer-brand">sIA Podcast • México</div>
+        <div class="footer-spotify">DISPONIBLE EN SPOTIFY 🟢</div>
+      </div>
     </div>
   </body>
 </html>
